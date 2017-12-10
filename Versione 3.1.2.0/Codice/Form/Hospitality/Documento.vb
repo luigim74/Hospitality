@@ -1038,7 +1038,7 @@ Public Class frmDocumento
          Dim valTotaleImponibileLordo3 As Decimal
          Dim valTotaleImponibileLordo4 As Decimal
 
-         ' Somma tutti gli importi delle righe del documento.
+         ' Somma tutti gli importi delle righe del documento..
          Dim i As Integer
          For i = 0 To dgvDettagli.Rows.Count - 1
 
