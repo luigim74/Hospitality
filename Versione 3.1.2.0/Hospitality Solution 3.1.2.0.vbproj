@@ -247,10 +247,6 @@
     <Compile Include="..\..\Codice\Classi\Varie\CalcolaIBAN.vb">
       <Link>Codice\Classi\CalcolaIBAN.vb</Link>
     </Compile>
-    <Compile Include="..\..\Codice\Classi\Varie\CellaColorata.vb">
-      <Link>Codice\Classi\CellaColorata.vb</Link>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="..\..\Codice\Classi\Varie\ClsFormatta.vb">
       <Link>Codice\Classi\ClsFormatta.vb</Link>
     </Compile>
@@ -281,6 +277,9 @@
     </Compile>
     <Compile Include="Codice\Classi\CategoriePiatti.vb">
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Codice\Classi\CellaColorata.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Codice\Classi\Class1.vb" />
     <Compile Include="Codice\Classi\CmdTavoliSQLite.vb" />
@@ -881,10 +880,6 @@
     <None Include="Resources\About1.ico" />
     <None Include="Resources\About.ico" />
     <None Include="Resources\Hospitality.ico" />
-    <EmbeddedResource Include="..\..\Codice\Classi\Varie\CellaColorata.resx">
-      <Link>Codice\Classi\CellaColorata.resx</Link>
-      <DependentUpon>CellaColorata.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="bin\Reports\Fattura A4.rdlc" />
     <EmbeddedResource Include="bin\Reports\Fattura A4_Doppia - Centro sportivo.rdlc" />
     <EmbeddedResource Include="bin\Reports\Fattura A4_Doppia.rdlc" />
@@ -896,6 +891,9 @@
     <EmbeddedResource Include="bin\Reports\RFiscale A4_Doppia.rdlc" />
     <EmbeddedResource Include="bin\Reports\RFiscale A5.rdlc" />
     <EmbeddedResource Include="bin\Reports\RFiscale A6.rdlc" />
+    <EmbeddedResource Include="Codice\Classi\CellaColorata.resx">
+      <DependentUpon>CellaColorata.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Codice\Form\Centro sportivo\AccessoriServizi.resx">
       <DependentUpon>AccessoriServizi.vb</DependentUpon>
     </EmbeddedResource>
