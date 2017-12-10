@@ -229,48 +229,19 @@
     <Import Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\Codice\Classi\AnagTab\AnagTab.vb">
-      <Link>Codice\Classi\AnagTab.vb</Link>
-    </Compile>
-    <Compile Include="..\..\Codice\Classi\MSolution\MSolution.vb">
-      <Link>Codice\Classi\MSolution.vb</Link>
-    </Compile>
-    <Compile Include="..\..\Codice\Classi\Varie\Allegati.vb">
-      <Link>Codice\Classi\Allegati.vb</Link>
-    </Compile>
-    <Compile Include="..\..\Codice\Classi\Varie\Buoni.vb">
-      <Link>Codice\Classi\Buoni.vb</Link>
-    </Compile>
-    <Compile Include="..\..\Codice\Classi\Varie\BuoniFatt.vb">
-      <Link>Codice\Classi\BuoniFatt.vb</Link>
-    </Compile>
-    <Compile Include="..\..\Codice\Classi\Varie\CalcolaIBAN.vb">
-      <Link>Codice\Classi\CalcolaIBAN.vb</Link>
-    </Compile>
-    <Compile Include="..\..\Codice\Classi\Varie\ClsFormatta.vb">
-      <Link>Codice\Classi\ClsFormatta.vb</Link>
-    </Compile>
-    <Compile Include="..\..\Codice\Classi\Varie\CodeBar.vb">
-      <Link>Codice\Classi\CodeBar.vb</Link>
-    </Compile>
-    <Compile Include="..\..\Codice\Classi\Varie\ColonnaColorata.vb">
-      <Link>Codice\Classi\ColonnaColorata.vb</Link>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="..\..\Codice\Classi\Varie\ConvalidaKeyPress.vb">
-      <Link>Codice\Classi\ConvalidaKeyPress.vb</Link>
-    </Compile>
-    <Compile Include="..\..\Codice\Moduli\Licenza.vb">
-      <Link>Codice\Moduli\Licenza.vb</Link>
-    </Compile>
     <Compile Include="ApplicationCommands.vb" />
     <Compile Include="ApplicationEvents.vb" />
     <Compile Include="Codice\Classi\Acquisti.vb">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Codice\Classi\Allegati.vb" />
+    <Compile Include="Codice\Classi\AnagTab.vb" />
     <Compile Include="Codice\Classi\Articoli.vb">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Codice\Classi\Buoni.vb" />
+    <Compile Include="Codice\Classi\BuoniFatt.vb" />
+    <Compile Include="Codice\Classi\CalcolaIBAN.vb" />
     <Compile Include="Codice\Classi\Camera.vb" />
     <Compile Include="Codice\Classi\Camerieri.vb">
       <SubType>Code</SubType>
@@ -282,18 +253,25 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Codice\Classi\Class1.vb" />
+    <Compile Include="Codice\Classi\ClsFormatta.vb" />
     <Compile Include="Codice\Classi\CmdTavoliSQLite.vb" />
+    <Compile Include="Codice\Classi\CodeBar.vb" />
+    <Compile Include="Codice\Classi\ColonnaColorata.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Codice\Classi\Comande.vb">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Codice\Classi\CategoriePiattiSQLite.vb" />
     <Compile Include="Codice\Classi\CamerieriSQLite.vb" />
+    <Compile Include="Codice\Classi\ConvalidaKeyPress.vb" />
     <Compile Include="Codice\Classi\DettagliDocumenti.vb" />
     <Compile Include="Codice\Classi\ImpostazioniSQLite.vb" />
     <Compile Include="Codice\Classi\ImpostazioniPiattiPOS.vb" />
     <Compile Include="Codice\Classi\MessaggiSQLite.vb" />
     <Compile Include="Codice\Classi\CmdComandeSQLite.vb" />
     <Compile Include="Codice\Classi\ImpostazioniTavoliPOS.vb" />
+    <Compile Include="Codice\Classi\MSolution.vb" />
     <Compile Include="Codice\Classi\StatoPiattiSQLite.vb" />
     <Compile Include="Codice\Classi\StatoComandeSQLite.vb" />
     <Compile Include="Codice\Classi\StatoTavoliSQLite.vb" />
@@ -693,6 +671,7 @@
     <Compile Include="Codice\Moduli\Dichiarazioni.vb">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Codice\Moduli\Licenza.vb" />
     <Compile Include="Codice\Moduli\MMain.vb">
       <SubType>Code</SubType>
     </Compile>
