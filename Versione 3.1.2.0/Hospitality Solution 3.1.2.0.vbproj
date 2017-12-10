@@ -264,14 +264,8 @@
     <Compile Include="..\..\Codice\Classi\Varie\ConvalidaKeyPress.vb">
       <Link>Codice\Classi\ConvalidaKeyPress.vb</Link>
     </Compile>
-    <Compile Include="..\..\Codice\Moduli\Crittografia.vb">
-      <Link>Codice\Moduli\Crittografia.vb</Link>
-    </Compile>
     <Compile Include="..\..\Codice\Moduli\Licenza.vb">
       <Link>Codice\Moduli\Licenza.vb</Link>
-    </Compile>
-    <Compile Include="..\..\Codice\Moduli\Procedure.vb">
-      <Link>Codice\Moduli\Procedure.vb</Link>
     </Compile>
     <Compile Include="ApplicationCommands.vb" />
     <Compile Include="ApplicationEvents.vb" />
@@ -696,12 +690,14 @@
     <Compile Include="Codice\Form\Ristorante\VCTavoli.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Codice\Moduli\Crittografia.vb" />
     <Compile Include="Codice\Moduli\Dichiarazioni.vb">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Codice\Moduli\MMain.vb">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Codice\Moduli\Procedure.vb" />
     <Compile Include="Dataset1.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
