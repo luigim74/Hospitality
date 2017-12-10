@@ -1,0 +1,231 @@
+;====================================================================================================================================
+; Progetto CIS 2014 (Studio 8.00.10681, CIPEW 4.10.534, Installer 4.09.0994, Extractor 6.10.746, Updater 1.30.358)
+; Pacchetto: "Hospitality Solution 3"
+;====================================================================================================================================
+
+
+>General
+CIStudioVersion = 8.0.0.10681
+AppToInstallTitle = Hospitality Solution 3
+AppVersion = 3.1.0.0
+Author = Montana Software
+ReadOnlyInstall = False
+SilentInstall = False
+MiminumInteractionInstall = False
+UpdateInstall = False
+RollBack = True
+HideDetails = True
+StandAlonePackage = True
+Reboot = False
+HideInfoWindow = False
+AllUsers = False
+UserLocked = False
+<
+
+>MakeExe
+InsertAdditionalFile = True
+AdditionalFilePath = C:\WINDOWS\system32\MSVBVM60.DLL
+<
+
+>Look&Feel
+MoveWindows = True
+Transparency = False
+TransparentBackground = False
+ShowBackground = False
+ShowBackgroundTitles = False
+MainTitleSize = 24
+SubTitleSize = 12
+InstallerBackColor = clWhite
+InstallerBackTitlesColor = clBlack
+ShowLogo = False
+LogoFile = 
+LogoPosition = |%TOP_DX%|
+ShowTiteBarImage = False
+TitleBarImage = 
+TitleBarPosition = |%TOP_DX%|
+ShowWelcomeImage = False
+WelcomeImage = 
+<
+
+>MainFolders
+WorkFolder = C:\Users\LUIGIM~1\AppData\Local\Temp\CyberInstaller_WorkFolder
+DestinationFolder = |$ProgramsPath$|\Montana Software\Hospitality Solution 3
+SourceProjectFolder = C:\Users\Luigi Montana\Documents
+<
+
+>ExtraDestinationFolder
+ExtraDestFolderDescription = 
+ExtraDestFolderPath = 
+ExtraDestFolderVisible = True
+ExtraDestFolderReadOnly = False
+<
+
+>ApplicationData
+<
+
+>Documentation
+ANY:LicenseFile = D:\Montana Software - Progetti\Hospitality Solution\Versione 3.1.0.0\Documenti\Licenza.txt
+ANY:ReadmeFileBefore = 
+ANY:ReadmeFileAfter = 
+IT:LicenseFile = 
+IT:ReadmeFileBefore = 
+IT:ReadmeFileAfter = 
+<
+
+>CustomCredits
+ANY:UseCustomCredits = True
+ANY:LogoImage = 
+ANY:MainTitle = Hospitality Solution 3
+ANY:Copyright = Copyright © 2005-2016 Montana Software. Tutti i diritti riservati.
+ANY:WebDescription = 
+ANY:WebAddress = 
+ANY:EMailDescription = 
+ANY:EMailAddress = 
+ANY:EMailSubject = 
+ANY:EMailBody = 
+ANY:Notes = 
+IT:UseCustomCredits = False
+IT:LogoImage = 
+IT:MainTitle = 
+IT:Copyright = 
+IT:WebDescription = 
+IT:WebAddress = 
+IT:EMailDescription = 
+IT:EMailAddress = 
+IT:EMailSubject = 
+IT:EMailBody = 
+IT:Notes = 
+<
+
+>AppsToRunBefore
+<
+
+>AppsToRunAfter
+<
+
+>WindowsInstaller
+<
+
+>Fonts
+<
+
+>RegKeys
+<
+
+>ExtensionsToAssociate
+<
+
+>AttribsToSet
+<
+
+>LinksToCreate
+Rimuovi Applicazione//|%CreateRemovalLink%|/<|!|>/False/ANY/
+<
+
+>MinimumRequirements
+OperatingSystems = False/|%OS_Win2000%|/|%OS_WinXP%|/|%OS_WinXP_SP2%|/|%OS_WinXP_SP3%|/|%OS_Win2003Server%|/|%OS_WinVista%|/|%OS_WinVista_SP1%|/|%OS_WinVista_SP2%|/|%OS_Win2008Server%|/|%OS_Win2008R2Server%|/|%OS_WinSeven%|/|%OS_Win8%|/|%OS_Unknown%|/
+Platform = xANY
+CPUSpeed = 5/False
+PhysicalRAM = 7/False
+FreeSpaceDestDisk = 0/False
+FreeSpaceWinDisk = 50/False
+VideoResolution = 7/False
+ColorDepth = 6/False
+User = <|!|>/False
+<
+
+>Prerequirements
+<
+
+>SerialBuilder
+UseSerialCode = True
+SerialsKey = 34dv4x_°8_v ¿5sàW½6mâAÏ 5k2IPHïöwDl»lröé
+SerialsNum = 1
+<
+
+>Languages
+italian.lng
+<
+
+>Executable
+CreateExePackage = True
+FileName = HospitalitySolution3Setup.exe
+FilePath = D:\Montana Software - Progetti\Hospitality Solution\Versione 3.1.0.0\Setup
+UseCustomIcon = False
+Icon = 
+<
+
+>OutMedia
+CreateDisk = False
+DiskFolder = 
+DiskAutorun = True
+DiskIcon = 
+CreateWebPage = False
+WebPageFolder = 
+WebPageTitle = Download Hospitality Solution 3
+WebPageFileUrlDescription = Download Hospitality Solution 3
+WebPageStyle = Classic.html
+<
+
+>OnLineUpdater
+Enabled = False
+DefVersionFileUrl = www.server.com/Hospitality Solution 3.def
+FullSuiteUrl = 
+UpgradeSuiteUrl = 
+AutoLicenseRequest = True
+MsgUpdateNotAvailable = 
+MsgUpdateAvailable = 
+MsgLicenseRequired = 
+MsgBeforeDownloading = 
+MsgAfterUpdate = 
+MsgUpdateNotAvailableOnClosing = 
+MsgUpdateAvailableOnClosing = 
+<
+
+>UserNotes
+<
+
+>HistoryNotes
+Modifica identificativo pacchetto Nome software da installare: Hospitality Solution 3*10/02/2016*15:39:02
+Modifica versione software Versione: 3.1.0.0*10/02/2016*15:39:10
+Modifica identificativo pacchetto Produttore o distributore del software: Montana Software*10/02/2016*15:41:08
+Modifica opzione interfaccia installer Visualizza sfondo: sì*10/02/2016*15:41:34
+Modifica opzione interfaccia installer Logo sullo sfondo (se abilitato): sì*10/02/2016*15:41:34
+Modifica opzione interfaccia installer Logo sullo sfondo (se abilitato): no*10/02/2016*15:42:46
+Modifica opzione interfaccia installer Trasparenze: sì*10/02/2016*15:42:49
+Modifica opzione interfaccia installer Immagine sulla barra del titolo (LxA = 150x53 pixel): sì*10/02/2016*15:43:00
+Modifica opzione interfaccia installer Immagine sulla barra del titolo (LxA = 150x53 pixel): no*10/02/2016*15:43:08
+Modifica opzione interfaccia installer Immagine benvenuto (LxA = 162x312 pixel): sì*10/02/2016*15:43:11
+Modifica opzione interfaccia installer Immagine benvenuto (LxA = 162x312 pixel): no*10/02/2016*15:43:15
+Modifica opzione interfaccia installer Visualizza sfondo: no*10/02/2016*15:43:19
+Modifica documento Contratto da approvare per proseguire l'installazione: D:\Montana Software - Progetti\Hospitality Solution\Versione 3.1.0.0\Documenti\Licenza.txt*10/02/2016*15:46:01
+Modifica parametro Utilizza crediti personalizzati: no*10/02/2016*15:47:17
+Modifica parametro Utilizza crediti personalizzati: no*10/02/2016*15:47:56
+Impostazione cartella destinazione: |$ProgramsPath$|\Montana Software\Hospitality Solution 3*10/02/2016*15:51:10
+Eliminazione cartella dal pacchetto: Archivi*10/02/2016*15:55:28
+Modifica requisito minimo 64 bit: no*10/02/2016*15:57:07
+Modifica requisito minimo 64 bit: sì*10/02/2016*15:57:09
+Modifica requisito minimo Sistemi operativi abilitati: bloccante*10/02/2016*15:57:11
+Modifica requisito minimo Sistemi operativi abilitati: non bloccante*10/02/2016*15:57:14
+Modifica requisito minimo Punti risoluzione: bloccante*10/02/2016*15:57:54
+Modifica requisito minimo Punti risoluzione: non bloccante*10/02/2016*15:58:00
+Modifica requisito minimo Punti risoluzione: 1024x768*10/02/2016*15:58:08
+Modifica requisito minimo Profondità di colore: 32 bit*10/02/2016*15:58:19
+Modifica parametro codici seriali Richiesta inserimento numero seriale: sì*10/02/2016*16:02:35
+Modifica parametro codici seriali chiave generatrice: 34dv4x_°8_v ¿5sàW½6mâAÏ 5k2IPHïöwDl»lröé*10/02/2016*16:02:40
+Modifica parametro codici seriali numero di seriali:  1*10/02/2016*16:02:40
+Modifica proprietà pacchetto eseguibile Crea pacchetto eseguibile compresso auto-scompattante: no*10/02/2016*16:03:25
+Modifica proprietà pacchetto eseguibile Crea pacchetto eseguibile compresso auto-scompattante: sì*10/02/2016*16:03:27
+Modifica nome file pacchetto eseguibile: HospitalitySolution3Setup.exe*10/02/2016*16:03:56
+Impostazione cartella destinazione file eseguibile: D:\Montana Software - Progetti\Hospitality Solution\Versione 3.1.0.0\Setup*10/02/2016*16:04:17
+Modifica proprietà pacchetto eseguibile Usa icona personalizzata: no*10/02/2016*16:04:23
+Aggiunta collegamento: Aggiornamenti on-line*10/02/2016*16:04:55
+Attivazione aggiornamento on-line: sì*10/02/2016*16:05:05
+Modifica messaggio personalizzato aggiornamenti on-line Nessun aggiornamento disponibile al momento del controllo*10/02/2016*16:05:52
+Cancellazione modulo updaterCyberUpdater*10/02/2016*16:06:01
+Attivazione aggiornamento on-line: no*10/02/2016*16:06:03
+Eliminazione collegamento: Aggiornamenti on-line*10/02/2016*17:47:53
+Modifica opzione interfaccia installer Trasparenze: no*10/02/2016*17:51:13
+Modifica parametro Utilizza crediti personalizzati - (qualsiasi): sì*10/02/2016*17:59:53
+Modifica crediti pacchetto Copyright: Copyright © 2005-2016 Montana Software. Tutti i diritti riservati.*10/02/2016*18:00:14
+<

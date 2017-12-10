@@ -1,0 +1,908 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Hospitality Solution 3
+</name>
+</assembly>
+<members>
+<member name="M:Hospitality_Solution.frmDocumento.#ctor(System.String,System.String)">
+ <summary>
+ Apre il documento da eleborare.
+ </summary>
+ <param name="nomeWnd">Nome della finestra che richiama il metodo.</param>
+ <param name="documento">Il tipo di documento da aprire.</param>
+</member>
+<member name="T:Hospitality_Solution.Dataset1">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.RisorseDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.StatisticheRisorseDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.PrenRisorseDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.AccessoriServiziDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.ClientiDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.PiattiDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.AcquistiDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.FornitoriDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.PrimaNotaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.CategoriePiattiDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.StatisticheDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.ArticoliDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.MovMagazzinoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.CorrispettiviDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.AziendaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.DettagliDocDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.AziendeDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.DocumentiDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.Comande2DataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.MessaggiDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.ComandeDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.SaleDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.TavoliDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.PrenSaleDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.PrenotazioniDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.GruppiDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.OperatoriDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.OperazioniDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.RisorseRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.StatisticheRisorseRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.PrenRisorseRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.AccessoriServiziRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.ClientiRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.PiattiRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.AcquistiRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.FornitoriRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.PrimaNotaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.CategoriePiattiRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.StatisticheRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.ArticoliRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.MovMagazzinoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.CorrispettiviRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.AziendaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.DettagliDocRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.AziendeRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.DocumentiRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.Comande2Row">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.MessaggiRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.ComandeRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.SaleRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.TavoliRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.PrenSaleRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.PrenotazioniRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.GruppiRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.OperatoriRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.OperazioniRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.RisorseRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.StatisticheRisorseRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.PrenRisorseRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.AccessoriServiziRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.ClientiRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.PiattiRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.AcquistiRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.FornitoriRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.PrimaNotaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.CategoriePiattiRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.StatisticheRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.ArticoliRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.MovMagazzinoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.CorrispettiviRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.AziendaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.DettagliDocRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.AziendeRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.DocumentiRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.Comande2RowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.MessaggiRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.ComandeRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.SaleRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.TavoliRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.PrenSaleRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.PrenotazioniRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.GruppiRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.OperatoriRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.OperazioniRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1TableAdapters.RisorseTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1TableAdapters.StatisticheRisorseTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1TableAdapters.PrenRisorseTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1TableAdapters.AccessoriServiziTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.HospitalityDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.HospitalityDataSet.AziendaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.HospitalityDataSet.DettagliDocDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.HospitalityDataSet.DocumentiDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.HospitalityDataSet.AccessoriServiziDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.HospitalityDataSet.ArticoliDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.HospitalityDataSet.AziendaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.HospitalityDataSet.DettagliDocRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.HospitalityDataSet.DocumentiRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.HospitalityDataSet.AccessoriServiziRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.HospitalityDataSet.ArticoliRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.HospitalityDataSet.AziendaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.HospitalityDataSet.DettagliDocRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.HospitalityDataSet.DocumentiRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.HospitalityDataSet.AccessoriServiziRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.HospitalityDataSet.ArticoliRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.HospitalityDataSetTableAdapters.AziendaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.HospitalityDataSetTableAdapters.DettagliDocTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.HospitalityDataSetTableAdapters.DocumentiTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.HospitalityDataSetTableAdapters.AccessoriServiziTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.HospitalityDataSetTableAdapters.ArticoliTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.HospitalityDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:Hospitality_Solution.HospitalityDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(Hospitality_Solution.HospitalityDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:Hospitality_Solution.HospitalityDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(Hospitality_Solution.HospitalityDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:Hospitality_Solution.HospitalityDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(Hospitality_Solution.HospitalityDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:Hospitality_Solution.HospitalityDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:Hospitality_Solution.HospitalityDataSetTableAdapters.TableAdapterManager.UpdateAll(Hospitality_Solution.HospitalityDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.HospitalityDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:Hospitality_Solution.HospitalityDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:Hospitality_Solution.My.Resources.Resources">
+<summary>
+  Classe di risorse fortemente tipizzata per la ricerca di stringhe localizzate e così via.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.ResourceManager">
+<summary>
+  Restituisce l'istanza di ResourceManager nella cache utilizzata da questa classe.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.Culture">
+<summary>
+  Esegue l'override della proprietà CurrentUICulture del thread corrente per tutte le
+  ricerche di risorse eseguite utilizzando questa classe di risorse fortemente tipizzata.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.bar_Ico">
+<summary>
+  Cerca una risorsa localizzata di tipo System.Drawing.Icon simile a (Icona).
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.beep_1">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.beep_10">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.beep_2">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.beep_21">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.beep_25">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.beep_27">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.beep_28">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.beep_3">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.beep_30">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.beep_6">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.beep_9">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.beep_Esci">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.beep_Lista">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.beep_Normale">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.beep_Piatti">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_10">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_11">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_15">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_16">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_17">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_19">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_21">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_22">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_23">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_24">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_27">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_28">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_29">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_3">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_30">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_34">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_35">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_36">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_37">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_38">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_39">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_4">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_40">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_41">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_42">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_43">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_44">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_45">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_46">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_47">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_48">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_49">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_50">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.chef_Ico">
+<summary>
+  Cerca una risorsa localizzata di tipo System.Drawing.Icon simile a (Icona).
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.Hospitality_Ico">
+<summary>
+  Cerca una risorsa localizzata di tipo System.Drawing.Icon simile a (Icona).
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.notifica_Prenotazioni">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.Splash_screen_ombra_bar">
+<summary>
+  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.Splash_screen_ombra_chef">
+<summary>
+  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.Splash_screen_ombra_hospitality">
+<summary>
+  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.Splash_screen_ombra_sporting">
+<summary>
+  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.sport_Ico">
+<summary>
+  Cerca una risorsa localizzata di tipo System.Drawing.Icon simile a (Icona).
+</summary>
+</member>
+</members>
+</doc>

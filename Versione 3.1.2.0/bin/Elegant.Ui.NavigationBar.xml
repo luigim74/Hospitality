@@ -1,0 +1,3115 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>Elegant.Ui.NavigationBar</name>
+  </assembly>
+  <members>
+    <member name="T:Elegant.Ui.GroupedNavigationBarBehaviorMode">
+      <summary>
+            Defines the possible behavior mode values for the Navigation Bar.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.GroupedNavigationBarBehaviorMode.Normal">
+      <summary>
+            VS Toolbox-like behavior.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.GroupedNavigationBarBehaviorMode.Accordion">
+      <summary>
+            Similar to the Normal, but with the only one group selected at a time.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.GroupedNavigationBarBehaviorMode.Outlook">
+      <summary>
+            MS Outlook-like behavior.
+            </summary>
+    </member>
+    <member name="T:Elegant.Ui.NavigationBarGroupEventArgs">
+      <summary>
+            Handles the event argument data for the navigation bar group - related events.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupEventArgs.#ctor(Elegant.Ui.NavigationBarGroup)">
+      <summary>
+            Initializes an new instance of the NavigationBarGroupEventArgs class.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.NavigationBarGroupEventArgs.Group">
+      <summary>
+            The navigation bar group, related to the event.
+            </summary>
+    </member>
+    <member name="T:Elegant.Ui.GroupedNavigationBarItemDisplayMode">
+      <summary>
+            Defines the possible navigation bar item display modes.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.GroupedNavigationBarItemDisplayMode.LargeImageTextHorizontal">
+      <summary>
+            Items displayed with large image and text arranged horizontally.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.GroupedNavigationBarItemDisplayMode.SmallImageTextHorizontal">
+      <summary>
+            Items displayed with small image and text arranged horizontally.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.GroupedNavigationBarItemDisplayMode.LargeImageTextVertical">
+      <summary>
+            Items displayed with large image and text arranged vertically.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.GroupedNavigationBarItemDisplayMode.SmallImageTextVertical">
+      <summary>
+            Items displayed with small image and text arranged vertically.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.GroupedNavigationBarItemDisplayMode.LargeImage">
+      <summary>
+            Items displayed with large image only.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.GroupedNavigationBarItemDisplayMode.SmallImage">
+      <summary>
+            Items displayed with small image only.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.GroupedNavigationBarItemDisplayMode.TextWithoutImage">
+      <summary>
+            Items displayed with text only.
+            </summary>
+    </member>
+    <member name="T:Elegant.Ui.NavigationBarCaption">
+      <summary>
+            Implements the navigation bar caption.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarCaption.#ctor(Elegant.Ui.GroupedNavigationBar)">
+      <summary>
+            Inititializes a new instance of the NavigationBarCaption class.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.NavigationBarCaption.MinimizeButton">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.NavigationBarCaption.CloseButton">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.NavigationBarCaption.GroupedNavigationBar">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarCaption.PaintBackground(System.Windows.Forms.PaintEventArgs)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarCaption.OnLayout(System.Windows.Forms.LayoutEventArgs)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarCaption.GetPreferredSize(System.Drawing.Size)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarCaption.OnPaintForeground(System.Windows.Forms.PaintEventArgs)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarCaption.FlipContentInRtlMode">
+      <summary>
+            Overrides the method from the base class.
+            </summary>
+    </member>
+    <member name="T:Elegant.Ui.NavigationBarOutlookHeadersSplitter">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookHeadersSplitter.#ctor(Elegant.Ui.GroupedNavigationBar)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.NavigationBarOutlookHeadersSplitter.GroupedNavigationBar">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookHeadersSplitter.GetPreferredSize(System.Drawing.Size)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookHeadersSplitter.PaintBackground(System.Windows.Forms.PaintEventArgs)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookHeadersSplitter.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookHeadersSplitter.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookHeadersSplitter.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="T:Elegant.Ui.NavigationBarCaptionCloseButton">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarCaptionCloseButton.#ctor(Elegant.Ui.GroupedNavigationBar)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarCaptionCloseButton.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarCaptionCloseButton.OnPaintForeground(System.Windows.Forms.PaintEventArgs)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarCaptionCloseButton.GetPreferredSize(System.Drawing.Size)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarCaptionCloseButton.PaintBackground(System.Windows.Forms.PaintEventArgs)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.NavigationBarCaptionCloseButton.GroupedNavigationBar">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="T:Elegant.Ui.NavigationBarItem">
+      <summary>
+            Implements a navigation bar item.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarItem.#ctor(System.String,System.Drawing.Image,System.Drawing.Image)">
+      <summary>
+            Initializes a new instance of the NavigationBarItem class.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarItem.#ctor">
+      <summary>
+            Initializes a new instance of the NavigationBarItem class.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarItem.GetDisplayMode">
+      <summary>
+            Returns effective display mode for this item.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarItem.GetShowExpandTips">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarItem.OnTextChanged(System.EventArgs)">
+      <summary>
+            Overrides the member from the base class.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarItem.OnLargeImagesChanged(Elegant.Ui.ControlImagesChangedEventArgs)">
+      <summary>
+            Overrides the member from the base class.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarItem.OnSmallImagesChanged(Elegant.Ui.ControlImagesChangedEventArgs)">
+      <summary>
+            Overrides the member from the base class.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarItem.GetPadding">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarItem.GetItemsNativeFont">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarItem.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+      <summary>
+            Overrides the member from the base class.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarItem.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+      <summary>
+            Overrides the member from the base class.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarItem.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+      <summary>
+            Overrides the member from the base class.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarItem.OnHoveredChanged(System.EventArgs)">
+      <summary>
+            Overrides the member from the base class.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarItem.DisplayExpandTipIfNeeded">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarItem.OnMouseLeave(System.EventArgs)">
+      <summary>
+            Overrides the member from the base class.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarItem.EnsureVisible">
+      <summary>
+            Scrolls the items into view, if it is not visible already.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarItem.GetPreferredSize(System.Drawing.Size)">
+      <summary>
+            Overrides the member from the base class.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarItem.OnPaintForeground(System.Windows.Forms.PaintEventArgs)">
+      <summary>
+            Overrides the member from the base class.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarItem.PaintBackground(System.Windows.Forms.PaintEventArgs)">
+      <summary>
+            Overrides the member from the base class.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarItem.ItemsContainer">
+      <summary>
+            Gets or sets parent items container.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarItem.GroupedNavigationBar">
+      <summary>
+            Returns parent navigation bar.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarItem.Pressed">
+      <summary>
+            "Pressed" in Action mode (i.e. the mouse button is down)
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarItem.Selected">
+      <summary>
+            Gets or sets the boolean flag that determines if the item is selected.
+            </summary>
+    </member>
+    <member name="E:Elegant.Ui.NavigationBarItem.SelectionChanged">
+      <summary>
+            Occurs when Selected property value changes.
+            </summary>
+    </member>
+    <member name="T:Elegant.Ui.NavigationBarOutlookPopupMenuGroupHeaderButton">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookPopupMenuGroupHeaderButton.#ctor(Elegant.Ui.GroupedNavigationBar,Elegant.Ui.NavigationBarGroup)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookPopupMenuGroupHeaderButton.OnClick(System.EventArgs)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.NavigationBarOutlookPopupMenuGroupHeaderButton.GroupedNavigationBar">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.NavigationBarOutlookPopupMenuGroupHeaderButton.Group">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarOutlookPopupMenuGroupHeaderButton.Pressed">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="T:Elegant.Ui.NavigationBarOutlookMinimizedContentDropDown">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookMinimizedContentDropDown.#ctor(Elegant.Ui.GroupedNavigationBar)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.NavigationBarOutlookMinimizedContentDropDown.GroupedNavigationBar">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookMinimizedContentDropDown.OnPaintForeground(System.Windows.Forms.PaintEventArgs)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookMinimizedContentDropDown.PaintBackground(System.Windows.Forms.PaintEventArgs)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="T:Elegant.Ui.INavigationBarGroupItemsContainerPaintManager">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.INavigationBarGroupItemsContainerPaintManager.PaintContainerBackground(Elegant.Ui.NavigationBarGroupItemsContainer,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.INavigationBarGroupItemsContainerPaintManager.PaintItemBackground(Elegant.Ui.NavigationBarItem,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.INavigationBarGroupItemsContainerPaintManager.PaintItemForeground(Elegant.Ui.NavigationBarItem,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.INavigationBarGroupItemsContainerPaintManager.GetItemPartsBounds(Elegant.Ui.NavigationBarItem,System.Drawing.Graphics,System.Drawing.Rectangle@,System.Drawing.Rectangle@)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.INavigationBarGroupItemsContainerPaintManager.MeasureItem(Elegant.Ui.NavigationBarItem,System.Drawing.Size@)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="T:Elegant.Ui.NavigationBarGroupItemsContainerPaintManagerBase">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupItemsContainerPaintManagerBase.PaintContainerBackground(Elegant.Ui.NavigationBarGroupItemsContainer,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupItemsContainerPaintManagerBase.PaintItemBackground(Elegant.Ui.NavigationBarItem,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupItemsContainerPaintManagerBase.PaintItemForeground(Elegant.Ui.NavigationBarItem,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupItemsContainerPaintManagerBase.GetItemPartsBounds(Elegant.Ui.NavigationBarItem,System.Drawing.Graphics,System.Drawing.Rectangle@,System.Drawing.Rectangle@)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupItemsContainerPaintManagerBase.GetItemPartsBoundsInTextWithoutImageMode(Elegant.Ui.NavigationBarItem,System.Drawing.Graphics,System.Drawing.Rectangle@,System.Drawing.Rectangle@)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupItemsContainerPaintManagerBase.GetItemPartsBoundsInLargeImageTextVerticalMode(Elegant.Ui.NavigationBarItem,System.Drawing.Graphics,System.Drawing.Rectangle@,System.Drawing.Rectangle@)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupItemsContainerPaintManagerBase.GetItemPartsBoundsInSmallImageTextVerticalMode(Elegant.Ui.NavigationBarItem,System.Drawing.Graphics,System.Drawing.Rectangle@,System.Drawing.Rectangle@)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupItemsContainerPaintManagerBase.GetItemPartsBoundsInImageWithTextVerticalMode(Elegant.Ui.NavigationBarItem,System.Drawing.Graphics,System.Drawing.Image,System.Drawing.Rectangle@,System.Drawing.Rectangle@)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupItemsContainerPaintManagerBase.GetItemPartsBoundsInLargeImageTextHorizontalMode(Elegant.Ui.NavigationBarItem,System.Drawing.Graphics,System.Drawing.Rectangle@,System.Drawing.Rectangle@)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupItemsContainerPaintManagerBase.GetItemPartsBoundsInImageWithTextHorizontalMode(Elegant.Ui.NavigationBarItem,System.Drawing.Graphics,System.Drawing.Image,System.Drawing.Rectangle@,System.Drawing.Rectangle@)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupItemsContainerPaintManagerBase.GetItemPartsBoundsInImageMode(Elegant.Ui.NavigationBarItem,System.Drawing.Graphics,System.Drawing.Image,System.Drawing.Rectangle@,System.Drawing.Rectangle@)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupItemsContainerPaintManagerBase.DrawItemText(Elegant.Ui.NavigationBarItem,System.Drawing.Rectangle,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupItemsContainerPaintManagerBase.GetItemPartsBoundInSmallImageTextHorizontalMode(Elegant.Ui.NavigationBarItem,System.Drawing.Graphics,System.Drawing.Rectangle@,System.Drawing.Rectangle@)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupItemsContainerPaintManagerBase.GetItemPartsBoundsInSmallImageMode(Elegant.Ui.NavigationBarItem,System.Drawing.Graphics,System.Drawing.Rectangle@,System.Drawing.Rectangle@)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupItemsContainerPaintManagerBase.GetItemPartsBoundsInLargeImageMode(Elegant.Ui.NavigationBarItem,System.Drawing.Graphics,System.Drawing.Rectangle@,System.Drawing.Rectangle@)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupItemsContainerPaintManagerBase.MeasureItemText(Elegant.Ui.NavigationBarItem)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupItemsContainerPaintManagerBase.MeasureItem(Elegant.Ui.NavigationBarItem,System.Drawing.Size@)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupItemsContainerPaintManagerBase.MeasureItemInTextWithoutImageMode(Elegant.Ui.NavigationBarItem,System.Drawing.Size@)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupItemsContainerPaintManagerBase.MeasureItemInLargeImageTextVerticalMode(Elegant.Ui.NavigationBarItem,System.Drawing.Size@)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupItemsContainerPaintManagerBase.MeasureItemInSmallImageTextVerticalMode(Elegant.Ui.NavigationBarItem,System.Drawing.Size@)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupItemsContainerPaintManagerBase.MeasureItemInImageWithTextVerticalMode(Elegant.Ui.NavigationBarItem,System.Drawing.Image,System.Drawing.Size@)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupItemsContainerPaintManagerBase.MeasureItemInLargeImageTextHorizontalMode(Elegant.Ui.NavigationBarItem,System.Drawing.Size@)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupItemsContainerPaintManagerBase.MeasureItemInImageWithTextHorizontalMode(Elegant.Ui.NavigationBarItem,System.Drawing.Image,System.Drawing.Size@)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupItemsContainerPaintManagerBase.MeasureItemInImageMode(Elegant.Ui.NavigationBarItem,System.Drawing.Image)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupItemsContainerPaintManagerBase.MeasureItemInSmallImageTextHorizontalMode(Elegant.Ui.NavigationBarItem,System.Drawing.Size@)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupItemsContainerPaintManagerBase.MeasureItemInLargeImageMode(Elegant.Ui.NavigationBarItem)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupItemsContainerPaintManagerBase.MeasureItemInSmallImageMode(Elegant.Ui.NavigationBarItem)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupItemsContainerPaintManagerBase.Dispose">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarGroupItemsContainerPaintManagerBase.ItemNormalTextColor">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarGroupItemsContainerPaintManagerBase.ItemSelectedTextColor">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarGroupItemsContainerPaintManagerBase.ItemHoveredTextColor">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarGroupItemsContainerPaintManagerBase.ItemDisabledTextColor">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarGroupItemsContainerPaintManagerBase.ItemImageToTextHorizontalDistance">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarGroupItemsContainerPaintManagerBase.ItemImageToTextVerticalDistance">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="T:Elegant.Ui.IGroupedNavigationBarPaintManager">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.IGroupedNavigationBarPaintManager.PaintCaptionBackground(Elegant.Ui.NavigationBarCaption,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.IGroupedNavigationBarPaintManager.PaintCaptionText(Elegant.Ui.NavigationBarCaption,System.Drawing.Graphics,System.Drawing.Rectangle)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.IGroupedNavigationBarPaintManager.MeasureCaptionText(Elegant.Ui.NavigationBarCaption,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.IGroupedNavigationBarPaintManager.PaintOutlookIconBarBackground(Elegant.Ui.NavigationBarOutlookIconBar,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.IGroupedNavigationBarPaintManager.PaintGroupHeaderBackground(Elegant.Ui.NavigationBarGroupHeader,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.IGroupedNavigationBarPaintManager.PaintGroupHeaderForeground(Elegant.Ui.NavigationBarGroupHeader,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.IGroupedNavigationBarPaintManager.PaintGroupHeaderForegroundMinimized(Elegant.Ui.NavigationBarGroupHeader,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.IGroupedNavigationBarPaintManager.PaintGroupHeaderExpandButton(Elegant.Ui.NavigationBarGroupHeaderExpandButton,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.IGroupedNavigationBarPaintManager.LayoutGroupHeaderExpandButton(Elegant.Ui.NavigationBarGroupHeader,Elegant.Ui.NavigationBarGroupHeaderExpandButton)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.IGroupedNavigationBarPaintManager.MeasureGroupHeaderExpandButton(Elegant.Ui.NavigationBarGroupHeaderExpandButton,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.IGroupedNavigationBarPaintManager.MeasureGroupHeader(Elegant.Ui.NavigationBarGroupHeader)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.IGroupedNavigationBarPaintManager.MeasureGroupHeaderMinimized(Elegant.Ui.NavigationBarGroupHeader)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.IGroupedNavigationBarPaintManager.MeasureGroupHeaderUpperBorderLineHeight(Elegant.Ui.GroupedNavigationBar)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.IGroupedNavigationBarPaintManager.PaintGroupHeaderUpperBorderLine(Elegant.Ui.NavigationBarGroupHeaderUpperBorderLine,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.IGroupedNavigationBarPaintManager.MeasureOutlookHeadersSplitterHeight(Elegant.Ui.GroupedNavigationBar)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.IGroupedNavigationBarPaintManager.PaintOutlookHeadersSplitter(Elegant.Ui.NavigationBarOutlookHeadersSplitter,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.IGroupedNavigationBarPaintManager.PaintOutlookIconBarHeaderButtonBackground(Elegant.Ui.NavigationBarOutlookIconBarHeaderButton,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.IGroupedNavigationBarPaintManager.PaintNavigationBarBackground(Elegant.Ui.GroupedNavigationBar,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.IGroupedNavigationBarPaintManager.PaintNavigationBarForeground(Elegant.Ui.GroupedNavigationBar,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.IGroupedNavigationBarPaintManager.GetOutlookIconBarPadding(Elegant.Ui.NavigationBarOutlookIconBar)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.IGroupedNavigationBarPaintManager.GetOutlookIconBarHeaderButtonPadding(Elegant.Ui.NavigationBarOutlookIconBar)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.IGroupedNavigationBarPaintManager.GetNavigationBarBorderSize(Elegant.Ui.GroupedNavigationBar,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.IGroupedNavigationBarPaintManager.PaintNavigationBarOutlookIconBarDropDownBackground(Elegant.Ui.NavigationBarOutlookIconBarDropDown,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.IGroupedNavigationBarPaintManager.PaintNavigationBarOutlookIconBarDropDownForeground(Elegant.Ui.NavigationBarOutlookIconBarDropDown,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.IGroupedNavigationBarPaintManager.MeasureNavigationBarOutlookIconBarDropDown(Elegant.Ui.NavigationBarOutlookIconBarDropDown,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.IGroupedNavigationBarPaintManager.PaintNavigationBarMinimizeButtonBackground(Elegant.Ui.NavigationBarCaptionMinimizeButton,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.IGroupedNavigationBarPaintManager.PaintNavigationBarMinimizeButtonForeground(Elegant.Ui.NavigationBarCaptionMinimizeButton,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.IGroupedNavigationBarPaintManager.MeasureNavigationBarMinimizeButton(Elegant.Ui.NavigationBarCaptionMinimizeButton,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.IGroupedNavigationBarPaintManager.PaintNavigationBarCloseButtonBackground(Elegant.Ui.NavigationBarCaptionCloseButton,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.IGroupedNavigationBarPaintManager.PaintNavigationBarCloseButtonForeground(Elegant.Ui.NavigationBarCaptionCloseButton,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.IGroupedNavigationBarPaintManager.MeasureNavigationBarCloseButton(Elegant.Ui.NavigationBarCaptionCloseButton,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.IGroupedNavigationBarPaintManager.PaintNavigationBarMinimizedContentDropDownBackground(Elegant.Ui.NavigationBarOutlookMinimizedContentDropDown,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.IGroupedNavigationBarPaintManager.PaintNavigationBarMinimizedContentDropDownForeground(Elegant.Ui.NavigationBarOutlookMinimizedContentDropDown,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.IGroupedNavigationBarPaintManager.MeasureNavigationBarMinimizedContentDropDownWidth(Elegant.Ui.NavigationBarOutlookMinimizedContentDropDown,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.IGroupedNavigationBarPaintManager.PaintNavigationBarMinimizedContentPopupChildControlBackground(Elegant.Ui.NavigationBarOutlookMinimizedContentPopupChildControl,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.IGroupedNavigationBarPaintManager.GetNavigationBarMinimizedContentPopupChildControlPadding(Elegant.Ui.NavigationBarOutlookMinimizedContentPopupChildControl,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.IGroupedNavigationBarPaintManager.PaintNavigationBarMinimizedContentPopupHResizerBackground(Elegant.Ui.NavigationBarOutlookMinimizedContentPopupHResizer,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.IGroupedNavigationBarPaintManager.MeasureNavigationBarMinimizedContentPopupHResizerWidth(Elegant.Ui.NavigationBarOutlookMinimizedContentPopupHResizer,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="T:Elegant.Ui.NavigationBarOutlookPopupMenuButton">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookPopupMenuButton.#ctor(Elegant.Ui.NavigationBarOutlookIconBarDropDown,Elegant.Ui.NavigationBarOutlookIconBarDropDown.PopupMenuButtonAction,System.String,System.Drawing.Image)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookPopupMenuButton.OnClick(System.EventArgs)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.NavigationBarOutlookPopupMenuButton.ParentDropDown">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.NavigationBarOutlookPopupMenuButton.Action">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="T:Elegant.Ui.NavigationBarGroup">
+      <summary>
+            Implements navigation bar group component.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroup.ShouldSerializeSmallImage">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroup.ResetSmallImage">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroup.ShouldSerializeLargeImage">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroup.ResetLargeImage">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarGroup.Title">
+      <summary>
+            Gets or sets title for the group.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarGroup.Tag">
+      <summary>
+            Gets or sets a reference to an object related to this group.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarGroup.ToolTip">
+      <summary>
+            Gets or sets a tool tip text for this group.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarGroup.ContentSizeMode">
+      <summary>
+            Gets or sets the content size mode for this group.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarGroup.GroupedNavigationBar">
+      <summary>
+            Gets or sets the parent navigation bar.
+            </summary>
+    </member>
+    <member name="E:Elegant.Ui.NavigationBarGroup.TitleChanged">
+      <summary>
+            Occurs when Title property value changes.
+            </summary>
+    </member>
+    <member name="E:Elegant.Ui.NavigationBarGroup.ToolTipChanged">
+      <summary>
+            Occurs when ToolTip property value changes.
+            </summary>
+    </member>
+    <member name="E:Elegant.Ui.NavigationBarGroup.ExpandedChanged">
+      <summary>
+            Occurs when Expanded property value changes.
+            </summary>
+    </member>
+    <member name="E:Elegant.Ui.NavigationBarGroup.ContentControlChanged">
+      <summary>
+            Occurs when ContentControl property value changes.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarGroup.ContentControl">
+      <summary>
+            Gets or sets the control that is used as a content control.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarGroup.Visible">
+      <summary>
+            Gets or sets a boolean flag that determines if the group is visible.
+            </summary>
+    </member>
+    <member name="E:Elegant.Ui.NavigationBarGroup.VisibleChanged">
+      <summary>
+            Occurs when Visible property value changes.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarGroup.Expanded">
+      <summary>
+            Gets or sets the boolean flag that indicates if the group is expanded.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarGroup.AllowExpandOrCollapse">
+      <summary>
+            Gets or sets a boolean flag that determines if group can be expanded or collapsed by user.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarGroup.SmallImage">
+      <summary>
+            Gets or sets the small image for the group.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarGroup.LargeImage">
+      <summary>
+            Gets or sets the large image for the group.
+            </summary>
+    </member>
+    <member name="T:Elegant.Ui.NavigationBarHitTestResult">
+      <summary>
+            Handles data for navigation bar hit test detection.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarHitTestResult.#ctor(Elegant.Ui.NavigationBarHitTestResultType,System.Windows.Forms.Control,System.Object)">
+      <summary>
+            Initializes a new instance of NavigationBarHitTestResult class.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.NavigationBarHitTestResult.Type">
+      <summary>
+            Result type.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.NavigationBarHitTestResult.Control">
+      <summary>
+            The hit control.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.NavigationBarHitTestResult.Target">
+      <summary>
+            The target control.
+            </summary>
+    </member>
+    <member name="T:Elegant.Ui.NavigationBarOutlookIconBarHeaderButton">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookIconBarHeaderButton.#ctor(Elegant.Ui.GroupedNavigationBar,Elegant.Ui.NavigationBarOutlookIconBar,Elegant.Ui.NavigationBarGroup)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.NavigationBarOutlookIconBarHeaderButton.IconBar">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookIconBarHeaderButton.OnPaintForeground(System.Windows.Forms.PaintEventArgs)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookIconBarHeaderButton.GetPreferredSize(System.Drawing.Size)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookIconBarHeaderButton.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookIconBarHeaderButton.PaintBackground(System.Windows.Forms.PaintEventArgs)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.NavigationBarOutlookIconBarHeaderButton.Group">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.NavigationBarOutlookIconBarHeaderButton.GroupedNavigationBar">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="T:Elegant.Ui.NavigationBarOutlookIconBarDropDown">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookIconBarDropDown.#ctor(Elegant.Ui.GroupedNavigationBar,Elegant.Ui.NavigationBarOutlookIconBar)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookIconBarDropDown.GetPreferredSize(System.Drawing.Size)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookIconBarDropDown.PaintBackground(System.Windows.Forms.PaintEventArgs)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookIconBarDropDown.OnPaintForeground(System.Windows.Forms.PaintEventArgs)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.NavigationBarOutlookIconBarDropDown.IconBar">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookIconBarDropDown.RebuildShowOrHideButtonsPopupMenu">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookIconBarDropDown.UpdateShowOrHideButtonsState">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookIconBarDropDown.RebuildPopupMenu(System.Boolean)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.NavigationBarOutlookIconBarDropDown.PopupMenu">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.NavigationBarOutlookIconBarDropDown.GroupedNavigationBar">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookIconBarDropDown.ReflectPopupMenuButtonAction(Elegant.Ui.NavigationBarOutlookIconBarDropDown.PopupMenuButtonAction)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookIconBarDropDown.UpdateButtonsPressedState">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="T:Elegant.Ui.NavigationBarOutlookIconBarDropDown.PopupMenuButtonAction">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.NavigationBarOutlookIconBarDropDown.PopupMenuButtonAction.ShowMoreButtons">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.NavigationBarOutlookIconBarDropDown.PopupMenuButtonAction.ShowFewerButtons">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="T:Elegant.Ui.NavigationBarCaptionMinimizeButton">
+      <summary>
+            This class represents a control which is used as minimize/restore button
+            in GroupedNavigationBar caption.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarCaptionMinimizeButton.#ctor(Elegant.Ui.GroupedNavigationBar)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarCaptionMinimizeButton.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarCaptionMinimizeButton.OnPaintForeground(System.Windows.Forms.PaintEventArgs)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarCaptionMinimizeButton.GetPreferredSize(System.Drawing.Size)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarCaptionMinimizeButton.PaintBackground(System.Windows.Forms.PaintEventArgs)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.NavigationBarCaptionMinimizeButton.GroupedNavigationBar">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="T:Elegant.Ui.GroupedNavigationBarItemActionMode">
+      <summary>
+            Defines the possible values for grouped navigation bar item action modes.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.GroupedNavigationBarItemActionMode.Action">
+      <summary>
+            Action - handle item clicks.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.GroupedNavigationBarItemActionMode.RadioSelection">
+      <summary>
+            Radio selection - only one item can be selected at a time in a radio scope.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.GroupedNavigationBarItemActionMode.Selection">
+      <summary>
+            Item selection mode.
+            </summary>
+    </member>
+    <member name="T:Elegant.Ui.GroupedNavigationBarPaintManagerBase">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.GroupedNavigationBarPaintManagerBase.GroupHeaderElementsSpacing">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerBase.PaintGroupHeaderBackground(Elegant.Ui.NavigationBarGroupHeader,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerBase.PaintGroupHeaderForeground(Elegant.Ui.NavigationBarGroupHeader,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerBase.IsHeaderPressed(Elegant.Ui.NavigationBarGroup)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerBase.GetGroupHeaderImage(Elegant.Ui.NavigationBarGroup)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerBase.MeasureGroupHeader(Elegant.Ui.NavigationBarGroupHeader)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerBase.MeasureGroupHeaderMinimized(Elegant.Ui.NavigationBarGroupHeader)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerBase.GetGroupHeaderTitleTextSize(Elegant.Ui.NavigationBarGroup)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerBase.MeasureGroupHeaderUpperBorderLineHeight(Elegant.Ui.GroupedNavigationBar)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerBase.PaintGroupHeaderUpperBorderLine(Elegant.Ui.NavigationBarGroupHeaderUpperBorderLine,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerBase.PaintGroupHeaderForegroundMinimized(Elegant.Ui.NavigationBarGroupHeader,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerBase.PaintGroupHeaderExpandButton(Elegant.Ui.NavigationBarGroupHeaderExpandButton,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerBase.LayoutGroupHeaderExpandButton(Elegant.Ui.NavigationBarGroupHeader,Elegant.Ui.NavigationBarGroupHeaderExpandButton)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerBase.MeasureGroupHeaderExpandButton(Elegant.Ui.NavigationBarGroupHeaderExpandButton,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerBase.PaintOutlookIconBarHeaderButtonBackground(Elegant.Ui.NavigationBarOutlookIconBarHeaderButton,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerBase.PaintNavigationBarBackground(Elegant.Ui.GroupedNavigationBar,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerBase.PaintNavigationBarForeground(Elegant.Ui.GroupedNavigationBar,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerBase.GetNavigationBarBorderSize(Elegant.Ui.GroupedNavigationBar,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerBase.MeasureOutlookHeadersSplitterHeight(Elegant.Ui.GroupedNavigationBar)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerBase.PaintOutlookHeadersSplitter(Elegant.Ui.NavigationBarOutlookHeadersSplitter,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerBase.PaintCaptionBackground(Elegant.Ui.NavigationBarCaption,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerBase.PaintOutlookIconBarBackground(Elegant.Ui.NavigationBarOutlookIconBar,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerBase.PaintCaptionText(Elegant.Ui.NavigationBarCaption,System.Drawing.Graphics,System.Drawing.Rectangle)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerBase.GetOutlookIconBarPadding(Elegant.Ui.NavigationBarOutlookIconBar)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerBase.GetOutlookIconBarHeaderButtonPadding(Elegant.Ui.NavigationBarOutlookIconBar)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerBase.MeasureCaptionText(Elegant.Ui.NavigationBarCaption,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerBase.PaintNavigationBarOutlookIconBarDropDownBackground(Elegant.Ui.NavigationBarOutlookIconBarDropDown,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerBase.PaintNavigationBarOutlookIconBarDropDownForeground(Elegant.Ui.NavigationBarOutlookIconBarDropDown,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerBase.MeasureNavigationBarOutlookIconBarDropDown(Elegant.Ui.NavigationBarOutlookIconBarDropDown,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerBase.PaintNavigationBarMinimizeButtonBackground(Elegant.Ui.NavigationBarCaptionMinimizeButton,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerBase.PaintNavigationBarMinimizeButtonForeground(Elegant.Ui.NavigationBarCaptionMinimizeButton,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerBase.MeasureNavigationBarMinimizeButton(Elegant.Ui.NavigationBarCaptionMinimizeButton,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerBase.PaintNavigationBarCloseButtonBackground(Elegant.Ui.NavigationBarCaptionCloseButton,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerBase.PaintNavigationBarCloseButtonForeground(Elegant.Ui.NavigationBarCaptionCloseButton,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerBase.MeasureNavigationBarCloseButton(Elegant.Ui.NavigationBarCaptionCloseButton,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerBase.PaintNavigationBarMinimizedContentDropDownBackground(Elegant.Ui.NavigationBarOutlookMinimizedContentDropDown,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerBase.PaintNavigationBarMinimizedContentDropDownForeground(Elegant.Ui.NavigationBarOutlookMinimizedContentDropDown,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerBase.MeasureNavigationBarMinimizedContentDropDownWidth(Elegant.Ui.NavigationBarOutlookMinimizedContentDropDown,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerBase.PaintNavigationBarMinimizedContentPopupChildControlBackground(Elegant.Ui.NavigationBarOutlookMinimizedContentPopupChildControl,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerBase.GetNavigationBarMinimizedContentPopupChildControlPadding(Elegant.Ui.NavigationBarOutlookMinimizedContentPopupChildControl,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerBase.PaintNavigationBarMinimizedContentPopupHResizerBackground(Elegant.Ui.NavigationBarOutlookMinimizedContentPopupHResizer,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerBase.MeasureNavigationBarMinimizedContentPopupHResizerWidth(Elegant.Ui.NavigationBarOutlookMinimizedContentPopupHResizer,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerBase.Dispose">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBarPaintManagerBase.GroupHeaderPadding">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBarPaintManagerBase.GroupHeaderMinimizedPadding">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBarPaintManagerBase.CaptionTextColor">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBarPaintManagerBase.MinimizeButtonLeftImage">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBarPaintManagerBase.MinimizeButtonRightImage">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBarPaintManagerBase.MinimizeButtonPadding">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBarPaintManagerBase.CloseButtonImage">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBarPaintManagerBase.CloseButtonPadding">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBarPaintManagerBase.CaptionMinimizedContentDropDownTextColor">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="T:Elegant.Ui.NavigationBarOutlookPopupMenuGroupVisibleButton">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookPopupMenuGroupVisibleButton.#ctor(Elegant.Ui.GroupedNavigationBar,Elegant.Ui.NavigationBarGroup)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookPopupMenuGroupVisibleButton.OnClick(System.EventArgs)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.NavigationBarOutlookPopupMenuGroupVisibleButton.GroupedNavigationBar">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.NavigationBarOutlookPopupMenuGroupVisibleButton.Group">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarOutlookPopupMenuGroupVisibleButton.Pressed">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarOutlookPopupMenuGroupVisibleButton.Text">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="T:Elegant.Ui.NavigationBarHitTestResultType">
+      <summary>
+            Defines the possible navigation bar hit test result types.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.NavigationBarHitTestResultType.Item">
+      <summary>
+            Navigation bar item.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.NavigationBarHitTestResultType.Group">
+      <summary>
+            Navigation bar group.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.NavigationBarHitTestResultType.Other">
+      <summary>
+            Other navigation bar element.
+            </summary>
+    </member>
+    <member name="T:Elegant.Ui.NavigationBarGroupContentSizeMode">
+      <summary>
+            Defines the possible navigation bar group content size modes.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.NavigationBarGroupContentSizeMode.Auto">
+      <summary>
+            Automatic.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.NavigationBarGroupContentSizeMode.UsePreferredSize">
+      <summary>
+            Use control's preferred size.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.NavigationBarGroupContentSizeMode.UseSize">
+      <summary>
+            Use control's size.
+            </summary>
+    </member>
+    <member name="T:Elegant.Ui.NavigationBarOutlookMinimizedContentPopupHResizer">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookMinimizedContentPopupHResizer.#ctor(Elegant.Ui.NavigationBarOutlookMinimizedContentDropDown,Elegant.Ui.NavigationBarOutlookMinimizedContentPopupChildControl)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.NavigationBarOutlookMinimizedContentPopupHResizer.DropDown">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.NavigationBarOutlookMinimizedContentPopupHResizer.PopupChildControl">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookMinimizedContentPopupHResizer.GetPreferredSize(System.Drawing.Size)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookMinimizedContentPopupHResizer.PaintBackground(System.Windows.Forms.PaintEventArgs)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookMinimizedContentPopupHResizer.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookMinimizedContentPopupHResizer.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookMinimizedContentPopupHResizer.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="T:Elegant.Ui.NavigationBarOutlookMinimizedContentPopupChildControl">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookMinimizedContentPopupChildControl.#ctor(Elegant.Ui.NavigationBarOutlookMinimizedContentDropDown,Elegant.Ui.NavigationBarOutlookMinimizedContentPopup)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.NavigationBarOutlookMinimizedContentPopupChildControl.DropDown">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.NavigationBarOutlookMinimizedContentPopupChildControl.Popup">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookMinimizedContentPopupChildControl.OnLayout(System.Windows.Forms.LayoutEventArgs)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookMinimizedContentPopupChildControl.GetPreferredSize(System.Drawing.Size)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookMinimizedContentPopupChildControl.PaintBackground(System.Windows.Forms.PaintEventArgs)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarOutlookMinimizedContentPopupChildControl.FlipContentInRtlMode">
+      <summary>
+            Overrides the method from the base class.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarOutlookMinimizedContentPopupChildControl.HResizer">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarOutlookMinimizedContentPopupChildControl.ContentControl">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarOutlookMinimizedContentPopupChildControl.UserDefinedWidth">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="T:Elegant.Ui.NavigationBarCaptionMinimizeButtonDirection">
+      <summary>
+            This enumeration describes direction of minimize button arrow in <b>normal (not minimized)</b>
+            grouped navigation bar state.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.NavigationBarCaptionMinimizeButtonDirection.Left">
+      <summary>
+            Left direction.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.NavigationBarCaptionMinimizeButtonDirection.Right">
+      <summary>
+            Right direction.
+            </summary>
+    </member>
+    <member name="T:Elegant.Ui.NavigationBarGroupItemsContainer">
+      <summary>
+            Implements the navigation bar group items container.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.NavigationBarGroupItemsContainer.DefaultItemDisplayMode">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.NavigationBarGroupItemsContainer.DefaultShowItemExpandTips">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupItemsContainer.GetPaintManager">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupItemsContainer.GetFirstVisibleItem">
+      <summary>
+            Returns the first visible item.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupItemsContainer.OnItemAdded(Elegant.Ui.NavigationBarItem,Elegant.Ui.NavigationBarItem)">
+      <summary>
+            Overrides the member from the base class.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupItemsContainer.OnItemRemoved(Elegant.Ui.NavigationBarItem,Elegant.Ui.NavigationBarItem)">
+      <summary>
+            Overrides the member from the base class.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupItemsContainer.OnSelectedItemChanged(Elegant.Ui.NavigationBarItem)">
+      <summary>
+            Override this method to handle selected item changes.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupItemsContainer.InvokeItemClick(Elegant.Ui.NavigationBarItem)">
+      <summary>
+            Invokes item click event.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupItemsContainer.OnItemClick(Elegant.Ui.NavigationBarItem)">
+      <summary>
+            Override this method to handle the item clicks in the Action action mode.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupItemsContainer.PaintBackground(System.Windows.Forms.PaintEventArgs)">
+      <summary>
+            Overrides the member from the base class.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupItemsContainer.GetItemActionModeEffective">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.NavigationBarGroupItemsContainer.DefaultItemPadding">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupItemsContainer.ShouldSerializeItemPadding">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupItemsContainer.GetItemPaddingEffective">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupItemsContainer.GetItemDisplayModeEffective">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupItemsContainer.GetShowItemExpandTipsEffective">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupItemsContainer.GetItemsFontEffective">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupItemsContainer.GetItemsNativeFontEffective">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupItemsContainer.GetPreferredSize(System.Drawing.Size)">
+      <summary>
+            Overrides the member from the base class.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupItemsContainer.OnPaintForeground(System.Windows.Forms.PaintEventArgs)">
+      <summary>
+            Overrides the member from the base class.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarGroupItemsContainer.PaintManager">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarGroupItemsContainer.DefaultSize">
+      <summary>
+            Overrides the member from the base class.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarGroupItemsContainer.VisibleItemCount">
+      <summary>
+            Gets visible item count.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarGroupItemsContainer.Group">
+      <summary>
+            Gets parent navigation bar group.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarGroupItemsContainer.GroupedNavigationBar">
+      <summary>
+            Gets parent navigation bar.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarGroupItemsContainer.SelectedItem">
+      <summary>
+            Gets or sets the selected item.
+            </summary>
+    </member>
+    <member name="E:Elegant.Ui.NavigationBarGroupItemsContainer.SelectedItemChanged">
+      <summary>
+            Occurs when the selected item changes.
+            </summary>
+    </member>
+    <member name="E:Elegant.Ui.NavigationBarGroupItemsContainer.ItemClick">
+      <summary>
+            Occurs when an item is clicked in the Action action mode.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarGroupItemsContainer.UseParentActionMode">
+      <summary>
+            Gets or sets the boolean value that determines if the items should use the action from the parent navigation bar.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarGroupItemsContainer.ItemActionMode">
+      <summary>
+            Gets or sets action mode for the items.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarGroupItemsContainer.UseParentAppearanceSettings">
+      <summary>
+            Gets or sets a boolean flag that determines if the items should use appearance settings from the parent navigation bar.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarGroupItemsContainer.UseParentAppearanceSettingsEffective">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarGroupItemsContainer.ItemPadding">
+      <summary>
+            Gets or sets padding for the items.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarGroupItemsContainer.ItemDisplayMode">
+      <summary>
+            Gets or sets display mode for the items.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarGroupItemsContainer.ShowItemExpandTips">
+      <summary>
+            Gets or sets a boolean flag that determines if expand tips should be shown for the items.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarGroupItemsContainer.ItemsFont">
+      <summary>
+            Gets or sets a font for the items.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarGroupItemsContainer.ItemsNativeFont">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarGroupItemsContainer.DisplayRectangle">
+      <summary>
+            Overrides the member from the base class.
+            </summary>
+    </member>
+    <member name="E:Elegant.Ui.NavigationBarGroupItemsContainer.ItemSelectionChanged">
+      <summary>
+            Occurs when selection status of a child item changes.
+            </summary>
+    </member>
+    <member name="T:Elegant.Ui.GroupedNavigationBarItemEventArgs">
+      <summary>
+            Handles the data for the navigation bar item - related events.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarItemEventArgs.#ctor(Elegant.Ui.NavigationBarItem)">
+      <summary>
+            Initializes a new instance of the GroupedNavigationBarItemEventArgs class.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.GroupedNavigationBarItemEventArgs.Item">
+      <summary>
+            The item.
+            </summary>
+    </member>
+    <member name="T:Elegant.Ui.GroupedNavigationBarGroupHeaderImageMode">
+      <summary>
+            Defines the possible navigation bar group header image modes.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.GroupedNavigationBarGroupHeaderImageMode.LargeImages">
+      <summary>
+            Display large images.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.GroupedNavigationBarGroupHeaderImageMode.SmallImages">
+      <summary>
+            Display small images.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.GroupedNavigationBarGroupHeaderImageMode.DontDisplayImages">
+      <summary>
+            Dont display images.
+            </summary>
+    </member>
+    <member name="T:Elegant.Ui.NavigationBarGroupItemsContainerPaintManagerOffice2007ThemeBase">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupItemsContainerPaintManagerOffice2007ThemeBase.PaintContainerBackground(Elegant.Ui.NavigationBarGroupItemsContainer,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupItemsContainerPaintManagerOffice2007ThemeBase.PaintItemBackground(Elegant.Ui.NavigationBarItem,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarGroupItemsContainerPaintManagerOffice2007ThemeBase.ContainerBackgroundGlyph">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarGroupItemsContainerPaintManagerOffice2007ThemeBase.ItemNormalBackgroundGlyph">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarGroupItemsContainerPaintManagerOffice2007ThemeBase.ItemHoveredBackgroundGlyph">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarGroupItemsContainerPaintManagerOffice2007ThemeBase.ItemSelectedBackgroundGlyph">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarGroupItemsContainerPaintManagerOffice2007ThemeBase.ItemSelectedHoveredBackgroundGlyph">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="T:Elegant.Ui.GroupedNavigationBarDefaultPaintManager">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarDefaultPaintManager.PaintGroupHeaderBackground(Elegant.Ui.NavigationBarGroupHeader,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarDefaultPaintManager.PaintGroupHeaderForeground(Elegant.Ui.NavigationBarGroupHeader,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarDefaultPaintManager.PaintGroupHeaderExpandButton(Elegant.Ui.NavigationBarGroupHeaderExpandButton,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarDefaultPaintManager.LayoutGroupHeaderExpandButton(Elegant.Ui.NavigationBarGroupHeader,Elegant.Ui.NavigationBarGroupHeaderExpandButton)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarDefaultPaintManager.MeasureGroupHeaderExpandButton(Elegant.Ui.NavigationBarGroupHeaderExpandButton)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarDefaultPaintManager.MeasureGroupHeader(Elegant.Ui.NavigationBarGroupHeader)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarDefaultPaintManager.PaintNavigationBarBackground(Elegant.Ui.GroupedNavigationBar,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarDefaultPaintManager.PaintNavigationBarForeground(Elegant.Ui.GroupedNavigationBar,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="T:Elegant.Ui.GroupedNavigationBarNormalModeContentContainer">
+      <summary>
+            This control is required to clip handleful controls in content area.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarNormalModeContentContainer.#ctor(Elegant.Ui.GroupedNavigationBar)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.GroupedNavigationBarNormalModeContentContainer.GroupedNavigationBar">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarNormalModeContentContainer.OnLayout(System.Windows.Forms.LayoutEventArgs)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBarNormalModeContentContainer.FlipContentInRtlMode">
+      <summary>
+            Overrides the method from the base class.
+            </summary>
+    </member>
+    <member name="T:Elegant.Ui.INavigationBarPaintManagerFactory">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.INavigationBarPaintManagerFactory.GroupedNavigationBarPaintManager">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.INavigationBarPaintManagerFactory.NavigationBarGroupItemsContainerPaintManager">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="T:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.PaintOutlookIconBarBackground(Elegant.Ui.NavigationBarOutlookIconBar,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.GetOutlookIconBarPadding(Elegant.Ui.NavigationBarOutlookIconBar)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.GetOutlookIconBarHeaderButtonPadding(Elegant.Ui.NavigationBarOutlookIconBar)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.PaintGroupHeaderBackground(Elegant.Ui.NavigationBarGroupHeader,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.PaintGroupHeaderExpandButton(Elegant.Ui.NavigationBarGroupHeaderExpandButton,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.GetGroupHeaderExpandButtonPadding(Elegant.Ui.NavigationBarGroupHeaderExpandButton)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.LayoutGroupHeaderExpandButton(Elegant.Ui.NavigationBarGroupHeader,Elegant.Ui.NavigationBarGroupHeaderExpandButton)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.PaintGroupHeaderForeground(Elegant.Ui.NavigationBarGroupHeader,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.MeasureGroupHeaderExpandButton(Elegant.Ui.NavigationBarGroupHeaderExpandButton,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.PaintOutlookHeadersSplitter(Elegant.Ui.NavigationBarOutlookHeadersSplitter,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.PaintCaptionBackground(Elegant.Ui.NavigationBarCaption,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.PaintOutlookIconBarHeaderButtonBackground(Elegant.Ui.NavigationBarOutlookIconBarHeaderButton,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.PaintNavigationBarBackground(Elegant.Ui.GroupedNavigationBar,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.GetNavigationBarBorderSize(Elegant.Ui.GroupedNavigationBar,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.PaintNavigationBarOutlookIconBarDropDownBackground(Elegant.Ui.NavigationBarOutlookIconBarDropDown,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.PaintNavigationBarOutlookIconBarDropDownForeground(Elegant.Ui.NavigationBarOutlookIconBarDropDown,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.GetOutlookIconBarDropDownPadding(Elegant.Ui.NavigationBarOutlookIconBarDropDown)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.MeasureNavigationBarOutlookIconBarDropDown(Elegant.Ui.NavigationBarOutlookIconBarDropDown,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.PaintNavigationBarMinimizeButtonBackground(Elegant.Ui.NavigationBarCaptionMinimizeButton,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.PaintNavigationBarCloseButtonBackground(Elegant.Ui.NavigationBarCaptionCloseButton,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.PaintNavigationBarMinimizedContentDropDownBackground(Elegant.Ui.NavigationBarOutlookMinimizedContentDropDown,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.PaintNavigationBarMinimizedContentPopupChildControlBackground(Elegant.Ui.NavigationBarOutlookMinimizedContentPopupChildControl,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.GetNavigationBarMinimizedContentPopupChildControlPadding(Elegant.Ui.NavigationBarOutlookMinimizedContentPopupChildControl,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.PaintNavigationBarMinimizedContentPopupHResizerBackground(Elegant.Ui.NavigationBarOutlookMinimizedContentPopupHResizer,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.MeasureNavigationBarMinimizedContentPopupHResizerWidth(Elegant.Ui.NavigationBarOutlookMinimizedContentPopupHResizer,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.MeasureOutlookHeadersSplitterHeight(Elegant.Ui.GroupedNavigationBar)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.MeasureGroupHeaderUpperBorderLineHeight(Elegant.Ui.GroupedNavigationBar)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.PaintGroupHeaderUpperBorderLine(Elegant.Ui.NavigationBarGroupHeaderUpperBorderLine,System.Drawing.Graphics)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.OutlookIconBarBackgroundGlyph">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.GroupHeaderBackgroundNormalGlyph">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.GroupHeaderBackgroundHoveredGlyph">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.GroupHeaderBackgroundPressedGlyph">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.GroupHeaderBackgroundPressedHoveredGlyph">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.OutlookGroupHeaderBackgroundNormalGlyph">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.OutlookGroupHeaderBackgroundHoveredGlyph">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.OutlookGroupHeaderBackgroundPressedGlyph">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.OutlookGroupHeaderBackgroundPressedHoveredGlyph">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.GroupHeaderExpandButtonCollapsedGlyph">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.GroupHeaderExpandButtonExpandedGlyph">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.GroupHeaderTextColor">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.OutlookHeadersSplitterBackgroundGlyph">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.OutlookHeadersSplitterGripperGlyph">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.CaptionBackgroundGlyph">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.OutlookIconBarHeaderButtonBackgroundNormalGlyph">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.OutlookIconBarHeaderButtonBackgroundHoveredGlyph">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.OutlookIconBarHeaderButtonBackgroundPressedGlyph">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.OutlookIconBarHeaderButtonBackgroundPressedHoveredGlyph">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.NavigationBarBackgroundGlyph">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.OutlookIconBarDropDownBackgroundNormalGlyph">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.OutlookIconBarDropDownBackgroundHoveredGlyph">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.OutlookIconBarDropDownBackgroundPressedGlyph">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.NavigationBarOutlookIconBarDropDownForegroundGlyph">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.MinimizeButtonBackgroundNormalGlyph">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.MinimizeButtonBackgroundHoveredGlyph">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.CloseButtonBackgroundNormalGlyph">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.CloseButtonBackgroundHoveredGlyph">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.MinimizedContentDropDownBackgroundNormalGlyph">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.MinimizedContentDropDownBackgroundHoveredGlyph">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.MinimizedContentDropDownBackgroundPressedGlyph">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.MinimizedContentPopupChildControlBackgroundGlyph">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.MinimizedContentPopupHResizerBackgroundGlyph">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBarPaintManagerOffice2007ThemeBase.GroupHeaderUpperBorderLineGlyph">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="T:Elegant.Ui.NavigationBarGroupHeaderUpperBorderLine">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupHeaderUpperBorderLine.#ctor(Elegant.Ui.GroupedNavigationBar)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.NavigationBarGroupHeaderUpperBorderLine.GroupedNavigationBar">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupHeaderUpperBorderLine.GetPreferredSize(System.Drawing.Size)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupHeaderUpperBorderLine.PaintBackground(System.Windows.Forms.PaintEventArgs)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="T:Elegant.Ui.NavigationBarOutlookIconBar">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookIconBar.#ctor(Elegant.Ui.GroupedNavigationBar)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.NavigationBarOutlookIconBar.DropDown">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.NavigationBarOutlookIconBar.GroupedNavigationBar">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookIconBar.RecreateGroupHeaderButtons">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookIconBar.OnSizeChanged(System.EventArgs)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookIconBar.GetPreferredSize(System.Drawing.Size)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookIconBar.GetGroupsThatDontFitInIconsRow">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookIconBar.GetGroupsThatFitInIconsRow">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookIconBar.GetCountOfGroupsThatFitInIconsRow">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookIconBar.OnLayout(System.Windows.Forms.LayoutEventArgs)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookIconBar.PaintBackground(System.Windows.Forms.PaintEventArgs)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarOutlookIconBar.UseLargeGroupHeaderImage">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="T:Elegant.Ui.NavigationBarGroupHeader">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupHeader.#ctor(Elegant.Ui.NavigationBarGroup)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.NavigationBarGroupHeader.Group">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupHeader.GetPreferredSize(System.Drawing.Size)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupHeader.OnLayout(System.Windows.Forms.LayoutEventArgs)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupHeader.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupHeader.OnPaintForeground(System.Windows.Forms.PaintEventArgs)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupHeader.PaintBackground(System.Windows.Forms.PaintEventArgs)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupHeader.HandleLeftMouseButtonDown">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarGroupHeader.Hovered">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.NavigationBarGroupHeader.ExpandButton">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="T:Elegant.Ui.GroupedNavigationBar">
+      <summary>
+            Implements a Grouped Navigation Bar control.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.#ctor">
+      <summary>
+            Initializes a new instance of the GroupedNavigationBar class.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.HitTest(System.Drawing.Point)">
+      <summary>
+            Performs the point hit test on the control.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.ShouldSerializeItemPadding">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.PerformLayout">
+      <summary>
+            Overrides the method from the base class.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.GetMinimizedTitleText">
+      <summary>
+            Returns the minimized title text.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.GroupedNavigationBar.DefaultGroupHeaderFont">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.ShouldSerializeGroupHeaderFont">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.GroupedNavigationBar.DefaultMinimizedTitleFont">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.ShouldSerializeMinimizedTitleFont">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.GroupedNavigationBar.DefaultCaptionFont">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.ShouldSerializeCaptionFont">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.OnMouseWheel(System.Windows.Forms.MouseEventArgs)">
+      <summary>
+            Overrides the method from the base class.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.OnGroupVisibilityChanged(Elegant.Ui.NavigationBarGroup)">
+      <summary>
+            Override this method to handle group visibility changes.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.OnSelectedItemChanged(Elegant.Ui.NavigationBarItem)">
+      <summary>
+            Override this methode to handle the selected item changes.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.InvokeItemClick(Elegant.Ui.NavigationBarItem)">
+      <summary>
+            Invokes ItemClick event.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.OnItemClick(Elegant.Ui.NavigationBarItem)">
+      <summary>
+            Override this methode to handle item clicks.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.GetOutlookGroupHeadersBottom">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.GetShowMoreButtonsItemImage">
+      <summary>
+            Override this method to specify a cusom image for Show More Buttons item.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.GetShowFewerButtonsItemImage">
+      <summary>
+            Override this method to specify a cusom image for Show Fewer Buttons item.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.GetAddOrRemoveButtonsItemImage">
+      <summary>
+            Override this method to specify a cusom image for Add or Remove Buttons item.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.GetShowMoreButtonsItemLabel">
+      <summary>
+            Override this method to specify a cusom label for Show More Buttons item.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.GetShowFewerButtonsItemLabel">
+      <summary>
+            Override this method to specify a cusom label for Show Fewer Buttons item.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.GetAddOrRemoveButtonsItemLabel">
+      <summary>
+            Override this method to specify a cusom label for Add or Remove Buttons item.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.AddCustomOutlookMenuItems(Elegant.Ui.PopupMenu)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.ReflectShowMoreButtonsPopupMenuButtonClick">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.ReflectShowFewerButtonsPopupMenuButtonClick">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.OnPaintChildren(System.Windows.Forms.PaintEventArgs)">
+      <summary>
+            Overrides the method from the base class.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.GetPaintManager">
+      <summary>
+            Overrides the method from the base class.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.NeedToDisplayExpandButton(Elegant.Ui.NavigationBarGroup)">
+      <summary>
+            Returns true if the expand button is required to display for the specified group.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.OnMinimizedChanged">
+      <summary>
+            Override this method to handle Minimized property value changes.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.OnBehaviorChanged">
+      <summary>
+            Override this method to handle BehaviorMode property value changes.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.ReflectGroupPreferredSizeChanged">
+      <summary>
+            Signals that a group preferred size has been changed, and requests to respond to that.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.UpdateVerticalScrollBar">
+      <summary>
+            Updates the vertical scroll bar.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.GetGroupContentControlSize(Elegant.Ui.NavigationBarGroup)">
+      <summary>
+            Returns a group content content control size.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.GetContentControlByGroup(Elegant.Ui.NavigationBarGroup)">
+      <summary>
+            Returns content control by its group.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.GetGroupByContentControl(System.Windows.Forms.Control)">
+      <summary>
+            Returns grouop by its content control.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.ExpandFirstVisibleGroup">
+      <summary>
+            Expands the first visible group.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.GroupedNavigationBar.VScrollBar">
+      <summary>
+            The vertical scroll bar.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.OnExpandedGroupChanged(Elegant.Ui.NavigationBarGroup)">
+      <summary>
+            Override this method to handle expanded group changes.
+            This makes sense only for the Accordion and Outlook modes.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.OnGroupExpansionChanged(Elegant.Ui.NavigationBarGroup)">
+      <summary>
+            Override this method to handle group expansion state changes.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.EnsureGroupVisible(Elegant.Ui.NavigationBarGroup)">
+      <summary>
+            If the specified group is not visible, scrolls it into the view.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.EnsureItemVisible(Elegant.Ui.NavigationBarItem)">
+      <summary>
+            If the specified item is not visible, scrolls it into the view.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.OnVisibleChanged(System.EventArgs)">
+      <summary>
+            Overrides the member from the base class.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.LayoutAccordion">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.OnCloseButtonClick">
+      <summary>
+            This method is called when close caption button is clicked.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.OnMinimizeButtonClick">
+      <summary>
+            This method is called when Minimize caption button is clicked.
+            </summary>
+      <returns>Shild return true if default action (minimize) is not required.</returns>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.OnRestoreButtonClick">
+      <summary>
+            This method is called when Restore caption button is clicked.
+            </summary>
+      <returns>Shild return true if default action (restore) is not required.</returns>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.GetPreferredSize(System.Drawing.Size)">
+      <summary>
+            Overrides the method from the base class.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.GetPreferredSizeNormal">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.GetPreferredSizeAccordion">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.GetPreferredSizeOutlook">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.GetVisibleOutlookGroupHeadersCountByProposedHeadersHeight(System.Int32)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.LayoutOutlook">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.OnSizeChanged(System.EventArgs)">
+      <summary>
+            Overrides the member from the base class.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.OnLayout(System.Windows.Forms.LayoutEventArgs)">
+      <summary>
+            Overrides the member from the base class.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.GetVisibleGroupByIndex(System.Int32)">
+      <summary>
+            Gets a visble group by <b>visible</b> group index.
+            </summary>
+      <param name="index">Index of visible group.</param>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.PaintBackground(System.Windows.Forms.PaintEventArgs)">
+      <summary>
+            Overrides the member from the base class.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.OnPaintForeground(System.Windows.Forms.PaintEventArgs)">
+      <summary>
+            Overrides the member from the base class.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.LayoutContentInNormalMode">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.BeginInit">
+      <summary>
+            Signals the beginning of initialization of the control.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.GroupedNavigationBar.EndInit">
+      <summary>
+            Signals the end of initialization of the control.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.DefaultSize">
+      <summary>
+            Overrides the member from the base class.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.FlipContentInRtlMode">
+      <summary>
+            Overrides the method from the base class.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.ItemsNativeFont">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.ItemsFont">
+      <summary>
+            Gets or sets the font for the items.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.ItemPadding">
+      <summary>
+            Gets or sets the item padding.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.ItemDisplayMode">
+      <summary>
+            Gets or sets the display mode for the items.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.ShowItemExpandTips">
+      <summary>
+            Gets or sets the boolean flag that determines if expand tips are required on the items.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.MinimizedTitleText">
+      <summary>
+            Gets or sets the minimized title text.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.Controls">
+      <summary>
+            We do not need to serialize child controls in designer.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.GroupHeaderNativeFont">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.GroupHeaderFont">
+      <summary>
+            Gets or sets the group header font.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.MinimizedTitleNativeFont">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.MinimizedTitleFont">
+      <summary>
+            Gets or sets the minimized title font.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.CaptionNativeFont">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.CaptionFont">
+      <summary>
+            Gets or sets the caption font.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.CenterGroupHeadersText">
+      <summary>
+            Gets or sets the boolean flag that determines if the group header titles whould be centered horizontally.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.OutlookHeadersSplitterVisible">
+      <summary>
+            Gets or sets the boolean flag that determines if the outlook headers splitter is visible.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.IsOutlookMinimizedContentPopupOpen">
+      <summary>
+            Gets or sets the boolean flag that determines if the outlook minimized content popup is open.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.OutlookMinimizedContentPopupUserDefinedWidth">
+      <summary>
+            Gets or sets the minimized content popup user-defined width.
+            </summary>
+    </member>
+    <member name="E:Elegant.Ui.GroupedNavigationBar.GroupVisibilityChanged">
+      <summary>
+            Occurs when the group visiblility changes.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.SelectedItem">
+      <summary>
+            Gets or sets the selected item.
+            </summary>
+    </member>
+    <member name="E:Elegant.Ui.GroupedNavigationBar.SelectedItemChanged">
+      <summary>
+            Occurs when the selected item changes.
+            </summary>
+    </member>
+    <member name="E:Elegant.Ui.GroupedNavigationBar.ItemClick">
+      <summary>
+            Occurs when the user clicks the item in Action action mode.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.GroupLocalRadioScope">
+      <summary>
+            Gets or sets the boolean flag that determines if items radio group should be restricted by item container scope.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.ShowMoreButtonsItemVisible">
+      <summary>
+            Gets or sets the boolean flag that determines if Show More Buttons item is visible.
+            </summary>
+    </member>
+    <member name="E:Elegant.Ui.GroupedNavigationBar.ShowMoreButtonsItemVisibleChanged">
+      <summary>
+            Occurs when ShowMoreButtonsItemVisible property value changes.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.ShowFewerButtonsItemVisible">
+      <summary>
+            Gets or sets the boolean flag that determines if Show Fewer Buttons item is visible.
+            </summary>
+    </member>
+    <member name="E:Elegant.Ui.GroupedNavigationBar.ShowFewerButtonsItemVisibleChanged">
+      <summary>
+            Occurs when ShowFewerButtonsItemVisible property value changes.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.AddOrRemoveButtonsItemVisible">
+      <summary>
+            Gets or sets the boolean flag that determines if Add or Remove Buttons item is visible.
+            </summary>
+    </member>
+    <member name="E:Elegant.Ui.GroupedNavigationBar.AddOrRemoveButtonsItemVisibleChanged">
+      <summary>
+            Occurs when AddOrRemoveButtonsItemVisible property value changes.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.ShouldCreateHandle">
+      <summary>
+            Overrides the method from the base class.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.PaintManager">
+      <summary>
+            Overrides the method from the base class.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.DisplayOnlySmallImagesInOutlookIconBar">
+      <summary>
+            Gets or sets the boolean flag that determines if only the small images should be displayed in the outlook icon bar.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.ItemActionMode">
+      <summary>
+            Gets or sets the item action mode.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.Minimized">
+      <summary>
+            Gets or sets the boolean flag that determines if the control is minimized in Outlook mode.
+            </summary>
+    </member>
+    <member name="E:Elegant.Ui.GroupedNavigationBar.MinimizedChanged">
+      <summary>
+            Occurs when Minimized property value changes.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.BehaviorMode">
+      <summary>
+            Gets or sets the behavior mode for the control.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.GroupHeaderImageMode">
+      <summary>
+            Gets or sets the group header image mode.
+            </summary>
+    </member>
+    <member name="E:Elegant.Ui.GroupedNavigationBar.BehaviorModeChanged">
+      <summary>
+            Occurs when the BehaviorMode property value changes.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.AllowCollapseAllGroups">
+      <summary>
+            Gets or sets the boolean flag that determines if the control shouldnt
+            allow the user to collapse the last expanded group.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.OnlyOneGroupCanBeExpanded">
+      <summary>
+            Gets or sets the boolean flag that determines if only one group can be expanded at a time.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.ExpandedGroupCount">
+      <summary>
+            Returns the expanded group count.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.ExpandedGroup">
+      <summary>
+            Gets or sets the expanded group.
+            This makes sense only for the Accordion and Outlook modes.
+            </summary>
+    </member>
+    <member name="E:Elegant.Ui.GroupedNavigationBar.ExpandedGroupChanged">
+      <summary>
+            Occurs when the expanded group changes.
+            This makes sense only for the Accordion and Outlook modes.
+            </summary>
+    </member>
+    <member name="E:Elegant.Ui.GroupedNavigationBar.GroupExpansionChanged">
+      <summary>
+            Occurs when a group expansion state changes.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.DoNotExpandOrCollapseGroupsByUserActions">
+      <summary>
+            Gets or sets the boolean flag that determines if the user should
+            not be able to change expansion state of the groups.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.ScaleChildren">
+      <summary>
+            Overrides the member from the base class.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.DisplayRectangle">
+      <summary>
+            Overrides the member from the base class.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.ContentRectangle">
+      <summary>
+            Gets the content rectangle for the control.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.ContentVerticalPadding">
+      <summary>
+            Gets or sets the padding value for the control's content.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.VisibleOutlookGroupHeadersCount">
+      <summary>
+            Gets or sets the number of visible outlook group headers.
+            </summary>
+    </member>
+    <member name="E:Elegant.Ui.GroupedNavigationBar.VisibleOutlookGroupHeadersCountChanged">
+      <summary>
+            Occurs when VisibleOutlookGroupHeadersCount changes.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.OutlookIconBarVisible">
+      <summary>
+            Gets or sets the boolean flag that determines if the outlook icon bar is visible.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.OutlookIconBarDropDownVisible">
+      <summary>
+            Gets or sets the boolean flag that determines if the outlook item bar drop down is visible.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.VisibleGroupCount">
+      <summary>
+            Returns count of child NavigationBarGroup objects from the Groups collection,
+            which have Visible property set to true.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.CaptionVisible">
+      <summary>
+            Gets or sets the boolean flag that determines if the caption is visible.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.MinimizeButtonVisible">
+      <summary>
+            Gets or sets the boolean flag that determines if the minimize button is visible.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.HideOnCloseButtonClick">
+      <summary>
+            Gets or sets a boolean value that determines if the control
+            should hide itself on the close button click.
+            </summary>
+    </member>
+    <member name="E:Elegant.Ui.GroupedNavigationBar.CloseButtonClick">
+      <summary>
+            Occurs when the close button is clicked.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.CloseButtonVisible">
+      <summary>
+            Gets or sets the boolean flag that determines if the close button is visible.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.MinimizeButtonDirection">
+      <summary>
+            Gets or sets the direction for the minimize button.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.Groups">
+      <summary>
+            Returns the collection of the navigation bar groups.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.GroupExpandButtonsVisible">
+      <summary>
+            Gets or sets a boolean flag that determines if the group expand buttons are visible.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.BorderVisible">
+      <summary>
+            Gets or sets a boolean flag that determines if the control should draw border for itself.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.Initializing">
+      <summary>
+            Returns true if the control is currently being initialized.
+            </summary>
+    </member>
+    <member name="P:Elegant.Ui.GroupedNavigationBar.NavigationBarPaintManagerFactory">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="E:Elegant.Ui.GroupedNavigationBar.ItemSelectionChanged">
+      <summary>
+            Occurs when a child item selection changes.
+            </summary>
+    </member>
+    <member name="T:Elegant.Ui.NavigationBarGroupHeaderHeightEventArgs">
+      <summary>
+            Handles the event argument data for the group header height measurement event.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupHeaderHeightEventArgs.#ctor(Elegant.Ui.NavigationBarGroup)">
+      <summary>
+            Initializes an new instance of the NavigationBarGroupHeaderHeightEventArgs class.
+            </summary>
+    </member>
+    <member name="T:Elegant.Ui.NavigationBarGroupHeaderExpandButton">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupHeaderExpandButton.#ctor(Elegant.Ui.NavigationBarGroupHeader)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupHeaderExpandButton.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupHeaderExpandButton.OnPaintForeground(System.Windows.Forms.PaintEventArgs)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupHeaderExpandButton.PaintBackground(System.Windows.Forms.PaintEventArgs)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarGroupHeaderExpandButton.GetPreferredSize(System.Drawing.Size)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.NavigationBarGroupHeaderExpandButton.Header">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="T:Elegant.Ui.NavigationBarOutlookMinimizedContentPopup">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="M:Elegant.Ui.NavigationBarOutlookMinimizedContentPopup.#ctor(Elegant.Ui.NavigationBarOutlookMinimizedContentDropDown)">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+    <member name="F:Elegant.Ui.NavigationBarOutlookMinimizedContentPopup.DropDown">
+      <summary>
+            This item supports the framework infrastructure and is not intended to be used directly from your code.
+            </summary>
+    </member>
+  </members>
+</doc>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="Chef Solution 2.7.0.0">
+</Property><Property Name="File di soluzione" Value="C:\Progetti Software\Chef Solution\Versione 2.8.0.0\Chef Solution 2.7.0.0.sln">
+</Property><Property Name="Date" Value="domenica 4 settembre 2011">
+</Property><Property Name="Time" Value="17:22">
+</Property></Properties><Event ErrorLevel="4" Project="Chef Solution" Source="http://go.microsoft.com/fwlink/?LinkId=159919" Description="Avviso: per questo progetto è necessario Crystal Reports, che non è più incluso in Visual Studio. Per ulteriori informazioni, fare clic qui.">
+</Event><Event ErrorLevel="1" Project="Chef Solution" Source="Chef Solution.vbproj" Description="Il progetto è destinato a .NET Framework 2.0 o 3.0. Sarà impossibile compilare il progetto se utilizza assembly che richiedono versioni più recenti di .NET Framework. Per cambiare la versione di .NET Framework, scegliere Proprietà dal menu Progetto e selezionare una nuova versione nella casella a discesa '.NET Framework'. In Visual Basic questa opzione è disponibile nella scheda Compilazione facendo clic sul pulsante 'Opzioni avanzate del compilatore'.">
+</Event><Event ErrorLevel="0" Project="Chef Solution" Source="Chef Solution.vbproj" Description="Conversione progetto completata">
+</Event><Event ErrorLevel="3" Project="Chef Solution" Source="Chef Solution.vbproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="Chef Solution 2.7.0.0.sln" Description="Soluzione convertita correttamente">
+</Event><Event ErrorLevel="3" Project="" Source="Chef Solution 2.7.0.0.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Chef Solution" Source="Chef Solution.vbproj" Description="Analisi completa: aggiornamento non necessario per i file di progetto.">
+</Event><Event ErrorLevel="0" Project="Chef Setup.vdproj" Source="Setup\Chef Setup.vdproj" Description="Conversione progetto completata">
+</Event><Event ErrorLevel="3" Project="Chef Setup.vdproj" Source="Setup\Chef Setup.vdproj" Description="Converted">
+</Event></UpgradeLog>

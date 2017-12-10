@@ -1,0 +1,16 @@
+HOSPITALITY SOLUTION 3 DATABASE - CRONOLOGIA MODIFICHE:
+
+- VERSIONE 3.0.0.0:
+
+- VERSIONE 3.0.1.0:
+
+- VERSIONE 3.0.2.0:
+
+- VERSIONE 3.0.3.0:
+
+- VERSIONE 3.1.0.0:
+  + Tabella.CategorieProdotti()
+  + Tabella.ArticoliProdotti()
+  + Tabella.Prodotti()
+  		
+
