@@ -302,3 +302,75 @@ D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\obj\Release\Hospita
 D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\obj\Release\Hospitality Solution 3.1.2.0.vbproj.GenerateResource.Cache
 D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\obj\Release\RdlCompile.cache
 D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\obj\Release\RdlCompile.compiled
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Hospitality Solution 3.exe.config
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Hospitality Solution 3.exe
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Hospitality Solution 3.xml
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\it-IT\Hospitality Solution 3.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\af\Hospitality Solution 3.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\fr\Hospitality Solution 3.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\CrystalDecisions.CrystalReports.Engine.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\CrystalDecisions.ReportSource.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\CrystalDecisions.Shared.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\CrystalDecisions.Windows.Forms.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Elegant.Ui.Common.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Elegant.Ui.Common.Theme.Office2010Black.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Elegant.Ui.Grid.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Elegant.Ui.Grid.Theme.Office2010Black.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Elegant.Ui.NavigationBar.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Elegant.Ui.NavigationBar.Theme.Office2010Black.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Elegant.Ui.Ribbon.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Elegant.Ui.Ribbon.Theme.Office2010Black.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.ReportViewer.Common.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.ReportViewer.WinForms.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.SqlServer.Types.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\stdole.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Elegant.Ui.Common.xml
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Elegant.Ui.NavigationBar.xml
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Elegant.Ui.Ribbon.xml
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\da-DK\Elegant.Ui.Common.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\de-DE\Elegant.Ui.Common.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\es-ES\Elegant.Ui.Common.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\fi-FI\Elegant.Ui.Common.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\fr-FR\Elegant.Ui.Common.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\it-IT\Elegant.Ui.Common.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\nb-NO\Elegant.Ui.Common.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\nl-NL\Elegant.Ui.Common.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\pl-PL\Elegant.Ui.Common.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\pt-PT\Elegant.Ui.Common.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\ru-RU\Elegant.Ui.Common.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\sv-SE\Elegant.Ui.Common.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\uk-UA\Elegant.Ui.Common.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\de-DE\Elegant.Ui.Grid.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\it-IT\Elegant.Ui.Grid.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\nb-NO\Elegant.Ui.Grid.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\nl-NL\Elegant.Ui.Grid.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\ru-RU\Elegant.Ui.Grid.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\uk-UA\Elegant.Ui.Grid.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\da-DK\Elegant.Ui.Ribbon.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\de-DE\Elegant.Ui.Ribbon.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\es-ES\Elegant.Ui.Ribbon.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\fi-FI\Elegant.Ui.Ribbon.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\fr-FR\Elegant.Ui.Ribbon.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\it-IT\Elegant.Ui.Ribbon.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\nb-NO\Elegant.Ui.Ribbon.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\nl-NL\Elegant.Ui.Ribbon.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\pl-PL\Elegant.Ui.Ribbon.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\pt-PT\Elegant.Ui.Ribbon.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\ru-RU\Elegant.Ui.Ribbon.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\sv-SE\Elegant.Ui.Ribbon.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\uk-UA\Elegant.Ui.Ribbon.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\de\Microsoft.SqlServer.Types.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\es\Microsoft.SqlServer.Types.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\fr\Microsoft.SqlServer.Types.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\it\Microsoft.SqlServer.Types.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\ja\Microsoft.SqlServer.Types.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\ko\Microsoft.SqlServer.Types.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\pt\Microsoft.SqlServer.Types.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\ru\Microsoft.SqlServer.Types.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Interop.JRO.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\obj\Release\it-IT\Hospitality Solution 3.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\obj\Release\af\Hospitality Solution 3.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\obj\Release\fr\Hospitality Solution 3.resources.dll

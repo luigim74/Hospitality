@@ -932,10 +932,9 @@ Public Class frmDocumento
       End Try
    End Function
 
-   Private Function CalcolaImportoRigaDoc() As Decimal
+   ' TODO: SOSTITUIRE TUTTI I DECIMAL CON I DOUBLE!!!
+   Private Sub CalcolaImportoRigaDoc()
       Try
-         Dim importoLordo As Decimal
-
          ' Quantità.
          Dim qtà As Integer
          If IsNothing(dgvDettagli.CurrentRow.Cells(clnQta.Name).Value) = False Then
@@ -945,47 +944,42 @@ Public Class frmDocumento
          End If
 
          ' Prezzo.
-         Dim prezzo As Decimal
+         Dim prezzo As Double
          If IsNothing(dgvDettagli.CurrentRow.Cells(clnPrezzo.Name).Value) = False Then
             If IsNumeric(dgvDettagli.CurrentRow.Cells(clnPrezzo.Name).Value) = True Then
-               prezzo = Convert.ToDecimal(dgvDettagli.CurrentRow.Cells(clnPrezzo.Name).Value)
+               prezzo = Convert.ToDouble(dgvDettagli.CurrentRow.Cells(clnPrezzo.Name).Value)
             End If
          End If
 
          ' Importo.
-         Dim importo As Decimal = (prezzo * qtà)
-         importoLordo = importo
+         Dim importo As Double = (prezzo * qtà)
 
          ' Sconto.
-         Dim sconto As Decimal
+         Dim sconto As Double
          If IsNothing(dgvDettagli.CurrentRow.Cells(clnSconto.Name).Value) = False Then
             If IsNumeric(dgvDettagli.CurrentRow.Cells(clnSconto.Name).Value) = True Then
-               sconto = Convert.ToDecimal(dgvDettagli.CurrentRow.Cells(clnSconto.Name).Value)
+               sconto = Convert.ToDouble(dgvDettagli.CurrentRow.Cells(clnSconto.Name).Value)
             End If
          End If
 
          ' Calcola il valore dello sconto
-         Dim valSconto As Decimal = CalcolaPercentuale(importo, sconto)
+         Dim valSconto As Double = CalcolaPercentuale(importo, sconto)
 
          ' Sottrae lo sconto al valore dell'importo totale.
          importo = (importo - valSconto)
 
          ' Inserisce l'importo totale nella cella della riga corrente.
-         dgvDettagli.CurrentRow.Cells(clnImporto.Name).Value = CFormatta.FormattaEuro(importo).ToString
-
-         Return importoLordo
+         dgvDettagli.CurrentRow.Cells(clnImporto.Name).Value = CFormatta.FormattaEuro(importo)
 
       Catch ex As FormatException
-         Exit Function
+         Exit Sub
 
       Catch ex As Exception
          ' Visualizza un messaggio di errore e lo registra nell'apposito file.
          err.GestisciErrore(ex.StackTrace, ex.Message)
 
-         Return 0.0
-
       End Try
-   End Function
+   End Sub
 
    Private Sub CalcolaImportoTotaleDoc()
       Try
@@ -1010,7 +1004,7 @@ Public Class frmDocumento
    End Sub
 
    ' TODO: DA VERIFICARE!!!
-   Private Sub CalcolaImportoTotaleIva(ByVal importoLordo As Decimal)
+   Private Sub CalcolaImportoTotaleIva()
       Try
          ' Importo.
          Dim importo1 As Decimal
@@ -1033,12 +1027,12 @@ Public Class frmDocumento
          Dim valTotaleImponibile3 As Decimal
          Dim valTotaleImponibile4 As Decimal
 
-         Dim valTotaleImponibileLordo1 As Decimal
-         Dim valTotaleImponibileLordo2 As Decimal
-         Dim valTotaleImponibileLordo3 As Decimal
-         Dim valTotaleImponibileLordo4 As Decimal
+         'Dim valTotaleImponibileLordo1 As Decimal
+         'Dim valTotaleImponibileLordo2 As Decimal
+         'Dim valTotaleImponibileLordo3 As Decimal
+         'Dim valTotaleImponibileLordo4 As Decimal
 
-         ' Somma tutti gli importi delle righe del documento..
+         ' Somma tutti gli importi delle righe del documento.
          Dim i As Integer
          For i = 0 To dgvDettagli.Rows.Count - 1
 
@@ -1046,15 +1040,15 @@ Public Class frmDocumento
                Case "Reparto 1"
                   importo1 = Convert.ToDecimal(dgvDettagli.Rows(i).Cells(clnImporto.Name).Value)
                   percIva1 = Convert.ToInt32(dgvDettagli.Rows(i).Cells(clnIva.Name).Value)
-                  valTotaleImponibile1 = CalcolaImponibileIva(percIva1.ToString, importo1)
+                  valTotaleImponibile1 = valTotaleImponibile1 + CalcolaImponibileIva(percIva1.ToString, importo1)
                   valTotaleImpostaRep1 = CalcolaPercentuale(valTotaleImponibile1, percIva1)
 
-                  ' In caso di sconto calcola l'imponibile lordo.
-                  If importo1 < importoLordo Then
-                     valTotaleImponibileLordo1 = CalcolaImponibileIva(percIva1.ToString, importoLordo)
-                  Else
-                     valTotaleImponibileLordo1 = 0.0
-                  End If
+                  '' In caso di sconto calcola l'imponibile lordo.
+                  'If importo1 < importoLordo Then
+                  '   valTotaleImponibileLordo1 = valTotaleImponibileLordo1 + CalcolaImponibileIva(percIva1.ToString, importoLordo)
+                  'Else
+                  '   valTotaleImponibileLordo1 = 0.0
+                  'End If
 
                Case "Reparto 2"
                   importo2 = Convert.ToDecimal(dgvDettagli.Rows(i).Cells(clnImporto.Name).Value)
@@ -1062,38 +1056,38 @@ Public Class frmDocumento
                   valTotaleImponibile2 = valTotaleImponibile2 + CalcolaImponibileIva(percIva2.ToString, importo2)
                   valTotaleImpostaRep2 = CalcolaPercentuale(valTotaleImponibile2, percIva2)
 
-                  ' In caso di sconto calcola l'imponibile lordo.
-                  If importo2 < importoLordo Then
-                     valTotaleImponibileLordo2 = valTotaleImponibileLordo2 + CalcolaImponibileIva(percIva2.ToString, importoLordo)
-                  Else
-                     valTotaleImponibileLordo2 = 0.0
-                  End If
+                  '' In caso di sconto calcola l'imponibile lordo.
+                  'If importo2 < importoLordo Then
+                  '   valTotaleImponibileLordo2 = valTotaleImponibileLordo2 + CalcolaImponibileIva(percIva2.ToString, importoLordo)
+                  'Else
+                  '   valTotaleImponibileLordo2 = 0.0
+                  'End If
 
                Case "Reparto 3"
                   importo3 = Convert.ToDecimal(dgvDettagli.Rows(i).Cells(clnImporto.Name).Value)
                   percIva3 = Convert.ToInt32(dgvDettagli.Rows(i).Cells(clnIva.Name).Value)
-                  valTotaleImponibile3 = CalcolaImponibileIva(percIva3.ToString, importo3)
+                  valTotaleImponibile3 = valTotaleImponibile3 + CalcolaImponibileIva(percIva3.ToString, importo3)
                   valTotaleImpostaRep3 = CalcolaPercentuale(valTotaleImponibile3, percIva3)
 
-                  ' In caso di sconto calcola l'imponibile lordo.
-                  If importo3 < importoLordo Then
-                     valTotaleImponibileLordo3 = CalcolaImponibileIva(percIva3.ToString, importoLordo)
-                  Else
-                     valTotaleImponibileLordo3 = 0.0
-                  End If
+                  '' In caso di sconto calcola l'imponibile lordo.
+                  'If importo3 < importoLordo Then
+                  '   valTotaleImponibileLordo3 = valTotaleImponibileLordo3 + CalcolaImponibileIva(percIva3.ToString, importoLordo)
+                  'Else
+                  '   valTotaleImponibileLordo3 = 0.0
+                  'End If
 
                Case "Reparto 4"
                   importo4 = Convert.ToDecimal(dgvDettagli.Rows(i).Cells(clnImporto.Name).Value)
                   percIva4 = Convert.ToInt32(dgvDettagli.Rows(i).Cells(clnIva.Name).Value)
-                  valTotaleImponibile4 = CalcolaImponibileIva(percIva4.ToString, importo4)
+                  valTotaleImponibile4 = valTotaleImponibile4 + CalcolaImponibileIva(percIva4.ToString, importo4)
                   valTotaleImpostaRep4 = CalcolaPercentuale(valTotaleImponibile4, percIva4)
 
-                  ' In caso di sconto calcola l'imponibile lordo.
-                  If importo4 < importoLordo Then
-                     valTotaleImponibileLordo4 = CalcolaImponibileIva(percIva4.ToString, importoLordo)
-                  Else
-                     valTotaleImponibileLordo4 = 0.0
-                  End If
+                  '' In caso di sconto calcola l'imponibile lordo.
+                  'If importo4 < importoLordo Then
+                  '   valTotaleImponibileLordo4 = valTotaleImponibileLordo4 + CalcolaImponibileIva(percIva4.ToString, importoLordo)
+                  'Else
+                  '   valTotaleImponibileLordo4 = 0.0
+                  'End If
             End Select
          Next
 
@@ -1105,31 +1099,31 @@ Public Class frmDocumento
          eui_txtTotaliRep3Aliquota.Text = percIva3.ToString
          eui_txtTotaliRep4Aliquota.Text = percIva4.ToString
 
-         If valTotaleImponibileLordo1 = 0.0 Then
-            ' Imponibile.
-            eui_txtTotaliRep1ImponibileLordo.Text = CFormatta.FormattaEuro(valTotaleImponibile1)
-            eui_txtTotaliRep2ImponibileLordo.Text = CFormatta.FormattaEuro(valTotaleImponibile2)
-            eui_txtTotaliRep3ImponibileLordo.Text = CFormatta.FormattaEuro(valTotaleImponibile3)
-            eui_txtTotaliRep4ImponibileLordo.Text = CFormatta.FormattaEuro(valTotaleImponibile4)
+         'If valTotaleImponibileLordo1 = 0.0 Then
+         ' Imponibile.
+         eui_txtTotaliRep1ImponibileLordo.Text = CFormatta.FormattaEuro(valTotaleImponibile1)
+         eui_txtTotaliRep2ImponibileLordo.Text = CFormatta.FormattaEuro(valTotaleImponibile2)
+         eui_txtTotaliRep3ImponibileLordo.Text = CFormatta.FormattaEuro(valTotaleImponibile3)
+         eui_txtTotaliRep4ImponibileLordo.Text = CFormatta.FormattaEuro(valTotaleImponibile4)
 
-            ' Imponibile scontato.
-            eui_txtTotaliRep1ImponibileScontato.Text = VALORE_ZERO
-            eui_txtTotaliRep2ImponibileScontato.Text = VALORE_ZERO
-            eui_txtTotaliRep3ImponibileScontato.Text = VALORE_ZERO
-            eui_txtTotaliRep4ImponibileScontato.Text = VALORE_ZERO
-         Else
-            ' Imponibile.
-            eui_txtTotaliRep1ImponibileLordo.Text = CFormatta.FormattaEuro(valTotaleImponibileLordo1)
-            eui_txtTotaliRep2ImponibileLordo.Text = CFormatta.FormattaEuro(valTotaleImponibileLordo2)
-            eui_txtTotaliRep3ImponibileLordo.Text = CFormatta.FormattaEuro(valTotaleImponibileLordo3)
-            eui_txtTotaliRep4ImponibileLordo.Text = CFormatta.FormattaEuro(valTotaleImponibileLordo4)
+         '' Imponibile scontato.
+         'eui_txtTotaliRep1ImponibileScontato.Text = VALORE_ZERO
+         'eui_txtTotaliRep2ImponibileScontato.Text = VALORE_ZERO
+         'eui_txtTotaliRep3ImponibileScontato.Text = VALORE_ZERO
+         'eui_txtTotaliRep4ImponibileScontato.Text = VALORE_ZERO
+         'Else
+         '' Imponibile.
+         'eui_txtTotaliRep1ImponibileLordo.Text = CFormatta.FormattaEuro(valTotaleImponibileLordo1)
+         'eui_txtTotaliRep2ImponibileLordo.Text = CFormatta.FormattaEuro(valTotaleImponibileLordo2)
+         'eui_txtTotaliRep3ImponibileLordo.Text = CFormatta.FormattaEuro(valTotaleImponibileLordo3)
+         'eui_txtTotaliRep4ImponibileLordo.Text = CFormatta.FormattaEuro(valTotaleImponibileLordo4)
 
-            ' Imponibile scontato.
-            eui_txtTotaliRep1ImponibileScontato.Text = CFormatta.FormattaEuro(valTotaleImponibile1)
-            eui_txtTotaliRep2ImponibileScontato.Text = CFormatta.FormattaEuro(valTotaleImponibile2)
-            eui_txtTotaliRep3ImponibileScontato.Text = CFormatta.FormattaEuro(valTotaleImponibile3)
-            eui_txtTotaliRep4ImponibileScontato.Text = CFormatta.FormattaEuro(valTotaleImponibile4)
-         End If
+         '' Imponibile scontato.
+         'eui_txtTotaliRep1ImponibileScontato.Text = CFormatta.FormattaEuro(valTotaleImponibile1)
+         'eui_txtTotaliRep2ImponibileScontato.Text = CFormatta.FormattaEuro(valTotaleImponibile2)
+         'eui_txtTotaliRep3ImponibileScontato.Text = CFormatta.FormattaEuro(valTotaleImponibile3)
+         'eui_txtTotaliRep4ImponibileScontato.Text = CFormatta.FormattaEuro(valTotaleImponibile4)
+         'End If
 
          ' Imposte.
          eui_txtTotaliRep1Imposta.Text = CFormatta.FormattaEuro(valTotaleImpostaRep1)
@@ -1572,8 +1566,8 @@ Public Class frmDocumento
          dgvDettagli.Focus()
          g_frmDocumento.dgvDettagli.Rows.Remove(g_frmDocumento.dgvDettagli.CurrentRow)
 
-         Dim importoLordo As Decimal = CalcolaImportoRigaDoc()
-         CalcolaImportoTotaleIva(importoLordo)
+         CalcolaImportoRigaDoc()
+         CalcolaImportoTotaleIva()
          CalcolaImportoTotaleDoc()
 
       Catch ex As InvalidOperationException
@@ -1593,8 +1587,8 @@ Public Class frmDocumento
          g_frmDocumento.dgvDettagli.Rows.Clear()
          g_frmDocumento.dgvDettagli.Rows.Add()
 
-         Dim importoLordo As Decimal = CalcolaImportoRigaDoc()
-         CalcolaImportoTotaleIva(importoLordo)
+         CalcolaImportoRigaDoc()
+         CalcolaImportoTotaleIva()
          CalcolaImportoTotaleDoc()
 
       Catch ex As Exception
@@ -1621,9 +1615,15 @@ Public Class frmDocumento
                End If
             End If
 
-            Dim importoLordo As Decimal = CalcolaImportoRigaDoc()
-            CalcolaImportoTotaleIva(importoLordo)
+            ' Questa riga è necessaria altrimenti non calcola lo sconto inserito. 
+            Dim qtà As Integer = dgvDettagli.CurrentRow.Cells(clnQta.Name).Value
+
+            CalcolaImportoRigaDoc()
+            CalcolaImportoTotaleIva()
             CalcolaImportoTotaleDoc()
+
+            ' Questa riga è necessaria altrimenti non calcola lo sconto inserito. 
+            dgvDettagli.CurrentRow.Cells(clnQta.Name).Value = qtà
 
          End If
 
