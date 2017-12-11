@@ -40,26 +40,21 @@ Partial Class frmDocumento
       Me.eui_txtTotaliRep4Imposta = New Elegant.Ui.TextBox()
       Me.eui_txtTotaliRep4Aliquota = New Elegant.Ui.TextBox()
       Me.eui_txtTotaliRep4ImponibileLordo = New Elegant.Ui.TextBox()
-      Me.eui_txtTotaliRep4ImponibileScontato = New Elegant.Ui.TextBox()
       Me.Label35 = New Elegant.Ui.Label()
       Me.eui_txtTotaliRep3Imposta = New Elegant.Ui.TextBox()
       Me.eui_txtTotaliRep3Aliquota = New Elegant.Ui.TextBox()
       Me.eui_txtTotaliRep3ImponibileLordo = New Elegant.Ui.TextBox()
-      Me.eui_txtTotaliRep3ImponibileScontato = New Elegant.Ui.TextBox()
       Me.Label34 = New Elegant.Ui.Label()
       Me.eui_txtTotaliRep2Imposta = New Elegant.Ui.TextBox()
       Me.eui_txtTotaliRep2Aliquota = New Elegant.Ui.TextBox()
       Me.eui_txtTotaliRep2ImponibileLordo = New Elegant.Ui.TextBox()
-      Me.eui_txtTotaliRep2ImponibileScontato = New Elegant.Ui.TextBox()
       Me.Label33 = New Elegant.Ui.Label()
       Me.eui_txtTotaliRep1Imposta = New Elegant.Ui.TextBox()
       Me.Label29 = New Elegant.Ui.Label()
       Me.eui_txtTotaliRep1Aliquota = New Elegant.Ui.TextBox()
       Me.Label30 = New Elegant.Ui.Label()
       Me.eui_txtTotaliRep1ImponibileLordo = New Elegant.Ui.TextBox()
-      Me.eui_txtTotaliRep1ImponibileScontato = New Elegant.Ui.TextBox()
       Me.Label31 = New Elegant.Ui.Label()
-      Me.Label32 = New Elegant.Ui.Label()
       Me.eui_txtTotaliSospeso = New Elegant.Ui.TextBox()
       Me.Label28 = New Elegant.Ui.Label()
       Me.eui_txtTotaliBuoni = New Elegant.Ui.TextBox()
@@ -138,6 +133,7 @@ Partial Class frmDocumento
       Me.clnImporto = New System.Windows.Forms.DataGridViewTextBoxColumn()
       Me.clnIva = New System.Windows.Forms.DataGridViewTextBoxColumn()
       Me.clnRepartoIva = New System.Windows.Forms.DataGridViewTextBoxColumn()
+      Me.clnValoreSconto = New System.Windows.Forms.DataGridViewTextBoxColumn()
       Me.eui_tpNote = New Elegant.Ui.TabPage()
       Me.eui_txtNote = New Elegant.Ui.TextBox()
       Me.PopupMenu2 = New Elegant.Ui.PopupMenu(Me.components)
@@ -173,8 +169,6 @@ Partial Class frmDocumento
       Me.eui_cmdStampa = New Elegant.Ui.Button()
       Me.eui_cmdEmettiStampa = New Elegant.Ui.Button()
       Me.eui_cmdTastiera = New Elegant.Ui.Button()
-      Me.ArticoliBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-      Me.ArticoliBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
       CType(Me.eui_tpcDocumento, System.ComponentModel.ISupportInitialize).BeginInit()
       Me.eui_tpTotali.SuspendLayout()
       Me.eui_tpGenerale.SuspendLayout()
@@ -190,8 +184,6 @@ Partial Class frmDocumento
       Me.StatusBarPane1.SuspendLayout()
       Me.StatusBarControlsArea1.SuspendLayout()
       Me.StatusBarPane4.SuspendLayout()
-      CType(Me.ArticoliBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-      CType(Me.ArticoliBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
       Me.SuspendLayout()
       '
       'formFrameSkinner
@@ -206,7 +198,7 @@ Partial Class frmDocumento
       Me.eui_tpcDocumento.EqualTabWidth = True
       Me.eui_tpcDocumento.Location = New System.Drawing.Point(9, 9)
       Me.eui_tpcDocumento.Name = "eui_tpcDocumento"
-      Me.eui_tpcDocumento.SelectedTabPage = Me.eui_tpDettagli
+      Me.eui_tpcDocumento.SelectedTabPage = Me.eui_tpTotali
       Me.eui_tpcDocumento.Size = New System.Drawing.Size(661, 479)
       Me.eui_tpcDocumento.TabIndex = 0
       Me.eui_tpcDocumento.TabPages.AddRange(New Elegant.Ui.TabPage() {Me.eui_tpGenerale, Me.eui_tpDettagli, Me.eui_tpTotali, Me.eui_tpNote})
@@ -219,26 +211,21 @@ Partial Class frmDocumento
       Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliRep4Imposta)
       Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliRep4Aliquota)
       Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliRep4ImponibileLordo)
-      Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliRep4ImponibileScontato)
       Me.eui_tpTotali.Controls.Add(Me.Label35)
       Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliRep3Imposta)
       Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliRep3Aliquota)
       Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliRep3ImponibileLordo)
-      Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliRep3ImponibileScontato)
       Me.eui_tpTotali.Controls.Add(Me.Label34)
       Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliRep2Imposta)
       Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliRep2Aliquota)
       Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliRep2ImponibileLordo)
-      Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliRep2ImponibileScontato)
       Me.eui_tpTotali.Controls.Add(Me.Label33)
       Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliRep1Imposta)
       Me.eui_tpTotali.Controls.Add(Me.Label29)
       Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliRep1Aliquota)
       Me.eui_tpTotali.Controls.Add(Me.Label30)
       Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliRep1ImponibileLordo)
-      Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliRep1ImponibileScontato)
       Me.eui_tpTotali.Controls.Add(Me.Label31)
-      Me.eui_tpTotali.Controls.Add(Me.Label32)
       Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliSospeso)
       Me.eui_tpTotali.Controls.Add(Me.Label28)
       Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliBuoni)
@@ -277,7 +264,7 @@ Partial Class frmDocumento
       'eui_txtTotaliRep4Imposta
       '
       Me.eui_txtTotaliRep4Imposta.Id = "ffd83ae2-0ec8-4f14-93b6-d911d0b28d90"
-      Me.eui_txtTotaliRep4Imposta.Location = New System.Drawing.Point(511, 136)
+      Me.eui_txtTotaliRep4Imposta.Location = New System.Drawing.Point(511, 105)
       Me.eui_txtTotaliRep4Imposta.Name = "eui_txtTotaliRep4Imposta"
       Me.eui_txtTotaliRep4Imposta.Size = New System.Drawing.Size(113, 21)
       Me.eui_txtTotaliRep4Imposta.TabIndex = 15
@@ -287,7 +274,7 @@ Partial Class frmDocumento
       'eui_txtTotaliRep4Aliquota
       '
       Me.eui_txtTotaliRep4Aliquota.Id = "4793859a-b23a-42e5-bc1e-07d61a5befb0"
-      Me.eui_txtTotaliRep4Aliquota.Location = New System.Drawing.Point(511, 104)
+      Me.eui_txtTotaliRep4Aliquota.Location = New System.Drawing.Point(511, 73)
       Me.eui_txtTotaliRep4Aliquota.Name = "eui_txtTotaliRep4Aliquota"
       Me.eui_txtTotaliRep4Aliquota.Size = New System.Drawing.Size(113, 21)
       Me.eui_txtTotaliRep4Aliquota.TabIndex = 11
@@ -304,16 +291,6 @@ Partial Class frmDocumento
       Me.eui_txtTotaliRep4ImponibileLordo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
       Me.eui_txtTotaliRep4ImponibileLordo.TextEditorWidth = 107
       '
-      'eui_txtTotaliRep4ImponibileScontato
-      '
-      Me.eui_txtTotaliRep4ImponibileScontato.Id = "203a42d8-f2ec-4585-a357-6c2d9955cea8"
-      Me.eui_txtTotaliRep4ImponibileScontato.Location = New System.Drawing.Point(511, 72)
-      Me.eui_txtTotaliRep4ImponibileScontato.Name = "eui_txtTotaliRep4ImponibileScontato"
-      Me.eui_txtTotaliRep4ImponibileScontato.Size = New System.Drawing.Size(113, 21)
-      Me.eui_txtTotaliRep4ImponibileScontato.TabIndex = 7
-      Me.eui_txtTotaliRep4ImponibileScontato.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-      Me.eui_txtTotaliRep4ImponibileScontato.TextEditorWidth = 107
-      '
       'Label35
       '
       Me.Label35.Location = New System.Drawing.Point(386, 19)
@@ -325,7 +302,7 @@ Partial Class frmDocumento
       'eui_txtTotaliRep3Imposta
       '
       Me.eui_txtTotaliRep3Imposta.Id = "7e17eb03-a692-4531-9565-756b88d062e7"
-      Me.eui_txtTotaliRep3Imposta.Location = New System.Drawing.Point(385, 136)
+      Me.eui_txtTotaliRep3Imposta.Location = New System.Drawing.Point(385, 105)
       Me.eui_txtTotaliRep3Imposta.Name = "eui_txtTotaliRep3Imposta"
       Me.eui_txtTotaliRep3Imposta.Size = New System.Drawing.Size(113, 21)
       Me.eui_txtTotaliRep3Imposta.TabIndex = 14
@@ -335,7 +312,7 @@ Partial Class frmDocumento
       'eui_txtTotaliRep3Aliquota
       '
       Me.eui_txtTotaliRep3Aliquota.Id = "954846f0-094a-4a2c-8db2-3a1f2af6b0e2"
-      Me.eui_txtTotaliRep3Aliquota.Location = New System.Drawing.Point(385, 104)
+      Me.eui_txtTotaliRep3Aliquota.Location = New System.Drawing.Point(385, 73)
       Me.eui_txtTotaliRep3Aliquota.Name = "eui_txtTotaliRep3Aliquota"
       Me.eui_txtTotaliRep3Aliquota.Size = New System.Drawing.Size(113, 21)
       Me.eui_txtTotaliRep3Aliquota.TabIndex = 10
@@ -352,16 +329,6 @@ Partial Class frmDocumento
       Me.eui_txtTotaliRep3ImponibileLordo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
       Me.eui_txtTotaliRep3ImponibileLordo.TextEditorWidth = 107
       '
-      'eui_txtTotaliRep3ImponibileScontato
-      '
-      Me.eui_txtTotaliRep3ImponibileScontato.Id = "50c2a6d1-be51-4261-a51e-68bf046c9a7f"
-      Me.eui_txtTotaliRep3ImponibileScontato.Location = New System.Drawing.Point(385, 72)
-      Me.eui_txtTotaliRep3ImponibileScontato.Name = "eui_txtTotaliRep3ImponibileScontato"
-      Me.eui_txtTotaliRep3ImponibileScontato.Size = New System.Drawing.Size(113, 21)
-      Me.eui_txtTotaliRep3ImponibileScontato.TabIndex = 6
-      Me.eui_txtTotaliRep3ImponibileScontato.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-      Me.eui_txtTotaliRep3ImponibileScontato.TextEditorWidth = 107
-      '
       'Label34
       '
       Me.Label34.Location = New System.Drawing.Point(260, 19)
@@ -373,7 +340,7 @@ Partial Class frmDocumento
       'eui_txtTotaliRep2Imposta
       '
       Me.eui_txtTotaliRep2Imposta.Id = "34118c39-bef2-43b9-810b-7ec2e5d252f3"
-      Me.eui_txtTotaliRep2Imposta.Location = New System.Drawing.Point(259, 136)
+      Me.eui_txtTotaliRep2Imposta.Location = New System.Drawing.Point(259, 105)
       Me.eui_txtTotaliRep2Imposta.Name = "eui_txtTotaliRep2Imposta"
       Me.eui_txtTotaliRep2Imposta.Size = New System.Drawing.Size(113, 21)
       Me.eui_txtTotaliRep2Imposta.TabIndex = 13
@@ -383,7 +350,7 @@ Partial Class frmDocumento
       'eui_txtTotaliRep2Aliquota
       '
       Me.eui_txtTotaliRep2Aliquota.Id = "155cd85a-0031-4f1e-a7b8-c7604228e0d0"
-      Me.eui_txtTotaliRep2Aliquota.Location = New System.Drawing.Point(259, 104)
+      Me.eui_txtTotaliRep2Aliquota.Location = New System.Drawing.Point(259, 73)
       Me.eui_txtTotaliRep2Aliquota.Name = "eui_txtTotaliRep2Aliquota"
       Me.eui_txtTotaliRep2Aliquota.Size = New System.Drawing.Size(113, 21)
       Me.eui_txtTotaliRep2Aliquota.TabIndex = 9
@@ -400,16 +367,6 @@ Partial Class frmDocumento
       Me.eui_txtTotaliRep2ImponibileLordo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
       Me.eui_txtTotaliRep2ImponibileLordo.TextEditorWidth = 107
       '
-      'eui_txtTotaliRep2ImponibileScontato
-      '
-      Me.eui_txtTotaliRep2ImponibileScontato.Id = "0092dcb9-d4f8-408c-9d38-bfb21bb5464a"
-      Me.eui_txtTotaliRep2ImponibileScontato.Location = New System.Drawing.Point(259, 72)
-      Me.eui_txtTotaliRep2ImponibileScontato.Name = "eui_txtTotaliRep2ImponibileScontato"
-      Me.eui_txtTotaliRep2ImponibileScontato.Size = New System.Drawing.Size(113, 21)
-      Me.eui_txtTotaliRep2ImponibileScontato.TabIndex = 5
-      Me.eui_txtTotaliRep2ImponibileScontato.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-      Me.eui_txtTotaliRep2ImponibileScontato.TextEditorWidth = 107
-      '
       'Label33
       '
       Me.Label33.Location = New System.Drawing.Point(135, 19)
@@ -421,7 +378,7 @@ Partial Class frmDocumento
       'eui_txtTotaliRep1Imposta
       '
       Me.eui_txtTotaliRep1Imposta.Id = "dcf1c4f9-95b8-4574-8f2c-52bed74e2876"
-      Me.eui_txtTotaliRep1Imposta.Location = New System.Drawing.Point(134, 136)
+      Me.eui_txtTotaliRep1Imposta.Location = New System.Drawing.Point(134, 105)
       Me.eui_txtTotaliRep1Imposta.Name = "eui_txtTotaliRep1Imposta"
       Me.eui_txtTotaliRep1Imposta.Size = New System.Drawing.Size(113, 21)
       Me.eui_txtTotaliRep1Imposta.TabIndex = 12
@@ -430,7 +387,7 @@ Partial Class frmDocumento
       '
       'Label29
       '
-      Me.Label29.Location = New System.Drawing.Point(24, 136)
+      Me.Label29.Location = New System.Drawing.Point(24, 105)
       Me.Label29.Name = "Label29"
       Me.Label29.Size = New System.Drawing.Size(101, 13)
       Me.Label29.TabIndex = 70
@@ -439,7 +396,7 @@ Partial Class frmDocumento
       'eui_txtTotaliRep1Aliquota
       '
       Me.eui_txtTotaliRep1Aliquota.Id = "ebec8ca3-175b-4e35-86a8-15c4be47759c"
-      Me.eui_txtTotaliRep1Aliquota.Location = New System.Drawing.Point(134, 104)
+      Me.eui_txtTotaliRep1Aliquota.Location = New System.Drawing.Point(134, 73)
       Me.eui_txtTotaliRep1Aliquota.Name = "eui_txtTotaliRep1Aliquota"
       Me.eui_txtTotaliRep1Aliquota.Size = New System.Drawing.Size(113, 21)
       Me.eui_txtTotaliRep1Aliquota.TabIndex = 8
@@ -448,9 +405,9 @@ Partial Class frmDocumento
       '
       'Label30
       '
-      Me.Label30.Location = New System.Drawing.Point(24, 104)
+      Me.Label30.Location = New System.Drawing.Point(24, 73)
       Me.Label30.Name = "Label30"
-      Me.Label30.Size = New System.Drawing.Size(122, 21)
+      Me.Label30.Size = New System.Drawing.Size(94, 21)
       Me.Label30.TabIndex = 68
       Me.Label30.Text = "Aliquota:"
       '
@@ -464,36 +421,18 @@ Partial Class frmDocumento
       Me.eui_txtTotaliRep1ImponibileLordo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
       Me.eui_txtTotaliRep1ImponibileLordo.TextEditorWidth = 107
       '
-      'eui_txtTotaliRep1ImponibileScontato
-      '
-      Me.eui_txtTotaliRep1ImponibileScontato.Id = "cc382173-9e5f-46eb-b1c8-e40ce9c44583"
-      Me.eui_txtTotaliRep1ImponibileScontato.Location = New System.Drawing.Point(134, 72)
-      Me.eui_txtTotaliRep1ImponibileScontato.Name = "eui_txtTotaliRep1ImponibileScontato"
-      Me.eui_txtTotaliRep1ImponibileScontato.Size = New System.Drawing.Size(113, 21)
-      Me.eui_txtTotaliRep1ImponibileScontato.TabIndex = 4
-      Me.eui_txtTotaliRep1ImponibileScontato.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-      Me.eui_txtTotaliRep1ImponibileScontato.TextEditorWidth = 107
-      '
       'Label31
       '
       Me.Label31.Location = New System.Drawing.Point(24, 40)
       Me.Label31.Name = "Label31"
       Me.Label31.Size = New System.Drawing.Size(76, 16)
       Me.Label31.TabIndex = 66
-      Me.Label31.Text = "Imponibile lordo:"
-      '
-      'Label32
-      '
-      Me.Label32.Location = New System.Drawing.Point(24, 72)
-      Me.Label32.Name = "Label32"
-      Me.Label32.Size = New System.Drawing.Size(94, 13)
-      Me.Label32.TabIndex = 65
-      Me.Label32.Text = "Imponibile scontato:"
+      Me.Label31.Text = "Imponibile:"
       '
       'eui_txtTotaliSospeso
       '
       Me.eui_txtTotaliSospeso.Id = "fa047992-05aa-45a2-b111-14b2ffce2ddc"
-      Me.eui_txtTotaliSospeso.Location = New System.Drawing.Point(135, 409)
+      Me.eui_txtTotaliSospeso.Location = New System.Drawing.Point(134, 380)
       Me.eui_txtTotaliSospeso.Name = "eui_txtTotaliSospeso"
       Me.eui_txtTotaliSospeso.Size = New System.Drawing.Size(113, 21)
       Me.eui_txtTotaliSospeso.TabIndex = 22
@@ -502,7 +441,7 @@ Partial Class frmDocumento
       '
       'Label28
       '
-      Me.Label28.Location = New System.Drawing.Point(24, 407)
+      Me.Label28.Location = New System.Drawing.Point(23, 378)
       Me.Label28.Name = "Label28"
       Me.Label28.Size = New System.Drawing.Size(101, 13)
       Me.Label28.TabIndex = 62
@@ -511,7 +450,7 @@ Partial Class frmDocumento
       'eui_txtTotaliBuoni
       '
       Me.eui_txtTotaliBuoni.Id = "f437759b-1a9e-4cf4-9171-a487de788d3a"
-      Me.eui_txtTotaliBuoni.Location = New System.Drawing.Point(135, 373)
+      Me.eui_txtTotaliBuoni.Location = New System.Drawing.Point(134, 344)
       Me.eui_txtTotaliBuoni.Name = "eui_txtTotaliBuoni"
       Me.eui_txtTotaliBuoni.Size = New System.Drawing.Size(113, 21)
       Me.eui_txtTotaliBuoni.TabIndex = 21
@@ -520,7 +459,7 @@ Partial Class frmDocumento
       '
       'Label25
       '
-      Me.Label25.Location = New System.Drawing.Point(24, 373)
+      Me.Label25.Location = New System.Drawing.Point(23, 344)
       Me.Label25.Name = "Label25"
       Me.Label25.Size = New System.Drawing.Size(122, 21)
       Me.Label25.TabIndex = 60
@@ -529,7 +468,7 @@ Partial Class frmDocumento
       'eui_txtTotaliContanti
       '
       Me.eui_txtTotaliContanti.Id = "3b9a5823-baa0-4234-afed-b64c562cc81c"
-      Me.eui_txtTotaliContanti.Location = New System.Drawing.Point(135, 304)
+      Me.eui_txtTotaliContanti.Location = New System.Drawing.Point(134, 275)
       Me.eui_txtTotaliContanti.Name = "eui_txtTotaliContanti"
       Me.eui_txtTotaliContanti.Size = New System.Drawing.Size(113, 21)
       Me.eui_txtTotaliContanti.TabIndex = 19
@@ -539,7 +478,7 @@ Partial Class frmDocumento
       'eui_txtTotaliCarte
       '
       Me.eui_txtTotaliCarte.Id = "bef45986-eec3-404c-bccf-3706932d5729"
-      Me.eui_txtTotaliCarte.Location = New System.Drawing.Point(135, 338)
+      Me.eui_txtTotaliCarte.Location = New System.Drawing.Point(134, 309)
       Me.eui_txtTotaliCarte.Name = "eui_txtTotaliCarte"
       Me.eui_txtTotaliCarte.Size = New System.Drawing.Size(113, 21)
       Me.eui_txtTotaliCarte.TabIndex = 20
@@ -548,7 +487,7 @@ Partial Class frmDocumento
       '
       'Label26
       '
-      Me.Label26.Location = New System.Drawing.Point(24, 304)
+      Me.Label26.Location = New System.Drawing.Point(23, 275)
       Me.Label26.Name = "Label26"
       Me.Label26.Size = New System.Drawing.Size(122, 21)
       Me.Label26.TabIndex = 58
@@ -556,7 +495,7 @@ Partial Class frmDocumento
       '
       'Label27
       '
-      Me.Label27.Location = New System.Drawing.Point(24, 338)
+      Me.Label27.Location = New System.Drawing.Point(23, 309)
       Me.Label27.Name = "Label27"
       Me.Label27.Size = New System.Drawing.Size(122, 21)
       Me.Label27.TabIndex = 57
@@ -565,7 +504,7 @@ Partial Class frmDocumento
       'eui_txtTotaliCoperto
       '
       Me.eui_txtTotaliCoperto.Id = "972e4d3c-d254-40a1-afd3-5079f291dca1"
-      Me.eui_txtTotaliCoperto.Location = New System.Drawing.Point(134, 255)
+      Me.eui_txtTotaliCoperto.Location = New System.Drawing.Point(133, 226)
       Me.eui_txtTotaliCoperto.Name = "eui_txtTotaliCoperto"
       Me.eui_txtTotaliCoperto.Size = New System.Drawing.Size(113, 21)
       Me.eui_txtTotaliCoperto.TabIndex = 18
@@ -574,7 +513,7 @@ Partial Class frmDocumento
       '
       'Label24
       '
-      Me.Label24.Location = New System.Drawing.Point(24, 256)
+      Me.Label24.Location = New System.Drawing.Point(23, 227)
       Me.Label24.Name = "Label24"
       Me.Label24.Size = New System.Drawing.Size(72, 13)
       Me.Label24.TabIndex = 54
@@ -583,7 +522,7 @@ Partial Class frmDocumento
       'eui_txtTotaliSconto
       '
       Me.eui_txtTotaliSconto.Id = "249b0cf7-9686-4ed4-894e-d297f18da089"
-      Me.eui_txtTotaliSconto.Location = New System.Drawing.Point(135, 186)
+      Me.eui_txtTotaliSconto.Location = New System.Drawing.Point(134, 157)
       Me.eui_txtTotaliSconto.Name = "eui_txtTotaliSconto"
       Me.eui_txtTotaliSconto.Size = New System.Drawing.Size(113, 21)
       Me.eui_txtTotaliSconto.TabIndex = 16
@@ -593,7 +532,7 @@ Partial Class frmDocumento
       'eui_txtTotaliServizio
       '
       Me.eui_txtTotaliServizio.Id = "719144b6-18ef-474b-b166-3c2e0bdd5832"
-      Me.eui_txtTotaliServizio.Location = New System.Drawing.Point(134, 220)
+      Me.eui_txtTotaliServizio.Location = New System.Drawing.Point(133, 191)
       Me.eui_txtTotaliServizio.Name = "eui_txtTotaliServizio"
       Me.eui_txtTotaliServizio.Size = New System.Drawing.Size(113, 21)
       Me.eui_txtTotaliServizio.TabIndex = 17
@@ -602,7 +541,7 @@ Partial Class frmDocumento
       '
       'Label22
       '
-      Me.Label22.Location = New System.Drawing.Point(24, 187)
+      Me.Label22.Location = New System.Drawing.Point(23, 158)
       Me.Label22.Name = "Label22"
       Me.Label22.Size = New System.Drawing.Size(68, 16)
       Me.Label22.TabIndex = 52
@@ -610,7 +549,7 @@ Partial Class frmDocumento
       '
       'Label23
       '
-      Me.Label23.Location = New System.Drawing.Point(24, 220)
+      Me.Label23.Location = New System.Drawing.Point(23, 191)
       Me.Label23.Name = "Label23"
       Me.Label23.Size = New System.Drawing.Size(53, 13)
       Me.Label23.TabIndex = 51
@@ -620,7 +559,7 @@ Partial Class frmDocumento
       '
       Me.eui_txtTotaleConto.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.eui_txtTotaleConto.Id = "290ee552-7348-4091-bdbd-8913091330c5"
-      Me.eui_txtTotaleConto.Location = New System.Drawing.Point(512, 409)
+      Me.eui_txtTotaleConto.Location = New System.Drawing.Point(511, 380)
       Me.eui_txtTotaleConto.Name = "eui_txtTotaleConto"
       Me.eui_txtTotaleConto.Size = New System.Drawing.Size(113, 21)
       Me.eui_txtTotaleConto.TabIndex = 25
@@ -630,7 +569,7 @@ Partial Class frmDocumento
       'Label19
       '
       Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.Label19.Location = New System.Drawing.Point(423, 414)
+      Me.Label19.Location = New System.Drawing.Point(422, 385)
       Me.Label19.Name = "Label19"
       Me.Label19.Size = New System.Drawing.Size(76, 16)
       Me.Label19.TabIndex = 48
@@ -639,7 +578,7 @@ Partial Class frmDocumento
       'eui_txtTotaleImposta
       '
       Me.eui_txtTotaleImposta.Id = "1bb48929-aef4-4843-a704-974e9b2bea73"
-      Me.eui_txtTotaleImposta.Location = New System.Drawing.Point(512, 373)
+      Me.eui_txtTotaleImposta.Location = New System.Drawing.Point(511, 344)
       Me.eui_txtTotaleImposta.Name = "eui_txtTotaleImposta"
       Me.eui_txtTotaleImposta.Size = New System.Drawing.Size(113, 21)
       Me.eui_txtTotaleImposta.TabIndex = 24
@@ -649,7 +588,7 @@ Partial Class frmDocumento
       'eui_txtTotaliImponibile
       '
       Me.eui_txtTotaliImponibile.Id = "c3e2b9e8-8aa8-4f15-94cb-bd3c25128c65"
-      Me.eui_txtTotaliImponibile.Location = New System.Drawing.Point(512, 338)
+      Me.eui_txtTotaliImponibile.Location = New System.Drawing.Point(511, 309)
       Me.eui_txtTotaliImponibile.Name = "eui_txtTotaliImponibile"
       Me.eui_txtTotaliImponibile.Size = New System.Drawing.Size(113, 21)
       Me.eui_txtTotaliImponibile.TabIndex = 23
@@ -658,7 +597,7 @@ Partial Class frmDocumento
       '
       'Label20
       '
-      Me.Label20.Location = New System.Drawing.Point(423, 378)
+      Me.Label20.Location = New System.Drawing.Point(422, 349)
       Me.Label20.Name = "Label20"
       Me.Label20.Size = New System.Drawing.Size(56, 16)
       Me.Label20.TabIndex = 47
@@ -666,7 +605,7 @@ Partial Class frmDocumento
       '
       'Label21
       '
-      Me.Label21.Location = New System.Drawing.Point(425, 345)
+      Me.Label21.Location = New System.Drawing.Point(422, 314)
       Me.Label21.Name = "Label21"
       Me.Label21.Size = New System.Drawing.Size(56, 16)
       Me.Label21.TabIndex = 46
@@ -1178,7 +1117,7 @@ Partial Class frmDocumento
       Me.dgvDettagli.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
       Me.dgvDettagli.BorderStyle = System.Windows.Forms.BorderStyle.None
       Me.dgvDettagli.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-      Me.dgvDettagli.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.clnCodice, Me.clnDescrizione, Me.clnUm, Me.clnQta, Me.clnPrezzo, Me.clnSconto, Me.clnImporto, Me.clnIva, Me.clnRepartoIva})
+      Me.dgvDettagli.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.clnCodice, Me.clnDescrizione, Me.clnUm, Me.clnQta, Me.clnPrezzo, Me.clnSconto, Me.clnImporto, Me.clnIva, Me.clnRepartoIva, Me.clnValoreSconto})
       DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
       DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window
       DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1188,7 +1127,7 @@ Partial Class frmDocumento
       DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
       Me.dgvDettagli.DefaultCellStyle = DataGridViewCellStyle9
       Me.dgvDettagli.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
-      Me.dgvDettagli.Location = New System.Drawing.Point(3, 3)
+      Me.dgvDettagli.Location = New System.Drawing.Point(5, 2)
       Me.dgvDettagli.MultiSelect = False
       Me.dgvDettagli.Name = "dgvDettagli"
       Me.dgvDettagli.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -1285,6 +1224,12 @@ Partial Class frmDocumento
       Me.clnRepartoIva.ReadOnly = True
       Me.clnRepartoIva.Visible = False
       '
+      'clnValoreSconto
+      '
+      Me.clnValoreSconto.HeaderText = "Valore Sconto"
+      Me.clnValoreSconto.Name = "clnValoreSconto"
+      Me.clnValoreSconto.Visible = False
+      '
       'eui_tpNote
       '
       Me.eui_tpNote.ActiveControl = Nothing
@@ -1354,10 +1299,10 @@ Partial Class frmDocumento
       Me.StatusBar1.Controls.Add(Me.StatusBarControlsArea1)
       Me.StatusBar1.ControlsArea = Me.StatusBarControlsArea1
       Me.StatusBar1.Dock = System.Windows.Forms.DockStyle.Bottom
-      Me.StatusBar1.Location = New System.Drawing.Point(0, 571)
+      Me.StatusBar1.Location = New System.Drawing.Point(0, 558)
       Me.StatusBar1.Name = "StatusBar1"
       Me.StatusBar1.NotificationsArea = Me.StatusBarNotificationsArea1
-      Me.StatusBar1.Size = New System.Drawing.Size(817, 22)
+      Me.StatusBar1.Size = New System.Drawing.Size(804, 22)
       Me.StatusBar1.TabIndex = 3
       Me.StatusBar1.Text = "StatusBar1"
       '
@@ -1371,7 +1316,7 @@ Partial Class frmDocumento
       Me.StatusBarNotificationsArea1.MaximumSize = New System.Drawing.Size(0, 22)
       Me.StatusBarNotificationsArea1.MinimumSize = New System.Drawing.Size(0, 22)
       Me.StatusBarNotificationsArea1.Name = "StatusBarNotificationsArea1"
-      Me.StatusBarNotificationsArea1.Size = New System.Drawing.Size(683, 22)
+      Me.StatusBarNotificationsArea1.Size = New System.Drawing.Size(670, 22)
       Me.StatusBarNotificationsArea1.TabIndex = 1
       '
       'StatusBarPane2
@@ -1438,7 +1383,7 @@ Partial Class frmDocumento
       '
       Me.StatusBarControlsArea1.Controls.Add(Me.StatusBarPane4)
       Me.StatusBarControlsArea1.Dock = System.Windows.Forms.DockStyle.Right
-      Me.StatusBarControlsArea1.Location = New System.Drawing.Point(683, 0)
+      Me.StatusBarControlsArea1.Location = New System.Drawing.Point(670, 0)
       Me.StatusBarControlsArea1.MaximumSize = New System.Drawing.Size(0, 22)
       Me.StatusBarControlsArea1.MinimumSize = New System.Drawing.Size(0, 22)
       Me.StatusBarControlsArea1.Name = "StatusBarControlsArea1"
@@ -1661,7 +1606,7 @@ Partial Class frmDocumento
       Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
       Me.BackColor = System.Drawing.SystemColors.AppWorkspace
       Me.CancelButton = Me.eui_cmdAnnulla
-      Me.ClientSize = New System.Drawing.Size(817, 593)
+      Me.ClientSize = New System.Drawing.Size(804, 580)
       Me.Controls.Add(Me.eui_cmdTastiera)
       Me.Controls.Add(Me.eui_cmdEmettiStampa)
       Me.Controls.Add(Me.eui_cmdStampa)
@@ -1710,8 +1655,6 @@ Partial Class frmDocumento
       Me.StatusBarControlsArea1.PerformLayout()
       Me.StatusBarPane4.ResumeLayout(False)
       Me.StatusBarPane4.PerformLayout()
-      CType(Me.ArticoliBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-      CType(Me.ArticoliBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
       Me.ResumeLayout(False)
       Me.PerformLayout()
 
@@ -1798,25 +1741,20 @@ Partial Class frmDocumento
    Friend WithEvents eui_txtTotaliRep1Aliquota As Elegant.Ui.TextBox
    Friend WithEvents Label30 As Elegant.Ui.Label
    Friend WithEvents eui_txtTotaliRep1ImponibileLordo As Elegant.Ui.TextBox
-   Friend WithEvents eui_txtTotaliRep1ImponibileScontato As Elegant.Ui.TextBox
    Friend WithEvents Label31 As Elegant.Ui.Label
-   Friend WithEvents Label32 As Elegant.Ui.Label
    Friend WithEvents Label33 As Elegant.Ui.Label
    Friend WithEvents Label36 As Elegant.Ui.Label
    Friend WithEvents eui_txtTotaliRep4Imposta As Elegant.Ui.TextBox
    Friend WithEvents eui_txtTotaliRep4Aliquota As Elegant.Ui.TextBox
    Friend WithEvents eui_txtTotaliRep4ImponibileLordo As Elegant.Ui.TextBox
-   Friend WithEvents eui_txtTotaliRep4ImponibileScontato As Elegant.Ui.TextBox
    Friend WithEvents Label35 As Elegant.Ui.Label
    Friend WithEvents eui_txtTotaliRep3Imposta As Elegant.Ui.TextBox
    Friend WithEvents eui_txtTotaliRep3Aliquota As Elegant.Ui.TextBox
    Friend WithEvents eui_txtTotaliRep3ImponibileLordo As Elegant.Ui.TextBox
-   Friend WithEvents eui_txtTotaliRep3ImponibileScontato As Elegant.Ui.TextBox
    Friend WithEvents Label34 As Elegant.Ui.Label
    Friend WithEvents eui_txtTotaliRep2Imposta As Elegant.Ui.TextBox
    Friend WithEvents eui_txtTotaliRep2Aliquota As Elegant.Ui.TextBox
    Friend WithEvents eui_txtTotaliRep2ImponibileLordo As Elegant.Ui.TextBox
-   Friend WithEvents eui_txtTotaliRep2ImponibileScontato As Elegant.Ui.TextBox
    Friend WithEvents eui_lblStatoNumeroDoc As Elegant.Ui.Label
    Friend WithEvents StatusBarPane5 As Elegant.Ui.StatusBarPane
    Friend WithEvents eui_lblStatoDataDoc As Elegant.Ui.Label
@@ -1833,8 +1771,6 @@ Partial Class frmDocumento
    Friend WithEvents eui_txtCameriere As Elegant.Ui.TextBox
    Friend WithEvents eui_txtTavolo As Elegant.Ui.TextBox
    Friend WithEvents eui_txtNumProgressivo As Elegant.Ui.TextBox
-   Friend WithEvents ArticoliBindingSource As BindingSource
-   Friend WithEvents ArticoliBindingSource1 As BindingSource
    Friend WithEvents DropDown1 As Elegant.Ui.DropDown
    Friend WithEvents PopupMenu2 As Elegant.Ui.PopupMenu
    Friend WithEvents Button1 As Elegant.Ui.Button
@@ -1858,4 +1794,5 @@ Partial Class frmDocumento
    Friend WithEvents clnImporto As DataGridViewTextBoxColumn
    Friend WithEvents clnIva As DataGridViewTextBoxColumn
    Friend WithEvents clnRepartoIva As DataGridViewTextBoxColumn
+   Friend WithEvents clnValoreSconto As DataGridViewTextBoxColumn
 End Class

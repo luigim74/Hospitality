@@ -371,11 +371,6 @@ Public Class frmDocumento
          eui_txtTotaliRep3ImponibileLordo.Text = VALORE_ZERO
          eui_txtTotaliRep4ImponibileLordo.Text = VALORE_ZERO
 
-         eui_txtTotaliRep1ImponibileScontato.Text = VALORE_ZERO
-         eui_txtTotaliRep2ImponibileScontato.Text = VALORE_ZERO
-         eui_txtTotaliRep3ImponibileScontato.Text = VALORE_ZERO
-         eui_txtTotaliRep4ImponibileScontato.Text = VALORE_ZERO
-
          eui_txtTotaliRep1Aliquota.Text = VALORE_ZERO
          eui_txtTotaliRep2Aliquota.Text = VALORE_ZERO
          eui_txtTotaliRep3Aliquota.Text = VALORE_ZERO
@@ -620,11 +615,6 @@ Public Class frmDocumento
          eui_txtTotaliRep2ImponibileLordo.Text = VALORE_ZERO
          eui_txtTotaliRep3ImponibileLordo.Text = VALORE_ZERO
          eui_txtTotaliRep4ImponibileLordo.Text = VALORE_ZERO
-
-         eui_txtTotaliRep1ImponibileScontato.Text = VALORE_ZERO
-         eui_txtTotaliRep2ImponibileScontato.Text = VALORE_ZERO
-         eui_txtTotaliRep3ImponibileScontato.Text = VALORE_ZERO
-         eui_txtTotaliRep4ImponibileScontato.Text = VALORE_ZERO
 
          eui_txtTotaliRep1Aliquota.Text = g_frmContoPos.txtIva.Text
          eui_txtTotaliRep2Aliquota.Text = VALORE_ZERO
@@ -932,7 +922,6 @@ Public Class frmDocumento
       End Try
    End Function
 
-   ' TODO: SOSTITUIRE TUTTI I DECIMAL CON I DOUBLE!!!
    Private Sub CalcolaImportoRigaDoc()
       Try
          ' Quantità.
@@ -971,6 +960,9 @@ Public Class frmDocumento
          ' Inserisce l'importo totale nella cella della riga corrente.
          dgvDettagli.CurrentRow.Cells(clnImporto.Name).Value = CFormatta.FormattaEuro(importo)
 
+         ' Inserisce l'importo totale dello sconto nella cella della riga corrente.
+         dgvDettagli.CurrentRow.Cells(clnValoreSconto.Name).Value = CFormatta.FormattaEuro(valSconto)
+
       Catch ex As FormatException
          Exit Sub
 
@@ -984,12 +976,12 @@ Public Class frmDocumento
    Private Sub CalcolaImportoTotaleDoc()
       Try
          ' Importo.
-         Dim importo As Decimal
+         Dim importo As Double
 
-         ' Somma tutti gli importi delle righe del documento.
          Dim i As Integer
          For i = 0 To dgvDettagli.Rows.Count - 1
-            importo = (importo + Convert.ToDecimal(dgvDettagli.Rows(i).Cells(clnImporto.Name).Value))
+            ' Somma tutti gli importi delle righe del documento.
+            importo = (importo + Convert.ToDouble(dgvDettagli.Rows(i).Cells(clnImporto.Name).Value))
          Next
 
          ' Aggiorna i totali.
@@ -1003,34 +995,28 @@ Public Class frmDocumento
       End Try
    End Sub
 
-   ' TODO: DA VERIFICARE!!!
    Private Sub CalcolaImportoTotaleIva()
       Try
          ' Importo.
-         Dim importo1 As Decimal
-         Dim importo2 As Decimal
-         Dim importo3 As Decimal
-         Dim importo4 As Decimal
+         Dim importo1 As Double
+         Dim importo2 As Double
+         Dim importo3 As Double
+         Dim importo4 As Double
 
          Dim percIva1 As Integer
          Dim percIva2 As Integer
          Dim percIva3 As Integer
          Dim percIva4 As Integer
 
-         Dim valTotaleImpostaRep1 As Decimal
-         Dim valTotaleImpostaRep2 As Decimal
-         Dim valTotaleImpostaRep3 As Decimal
-         Dim valTotaleImpostaRep4 As Decimal
+         Dim valTotaleImpostaRep1 As Double
+         Dim valTotaleImpostaRep2 As Double
+         Dim valTotaleImpostaRep3 As Double
+         Dim valTotaleImpostaRep4 As Double
 
-         Dim valTotaleImponibile1 As Decimal
-         Dim valTotaleImponibile2 As Decimal
-         Dim valTotaleImponibile3 As Decimal
-         Dim valTotaleImponibile4 As Decimal
-
-         'Dim valTotaleImponibileLordo1 As Decimal
-         'Dim valTotaleImponibileLordo2 As Decimal
-         'Dim valTotaleImponibileLordo3 As Decimal
-         'Dim valTotaleImponibileLordo4 As Decimal
+         Dim valTotaleImponibile1 As Double
+         Dim valTotaleImponibile2 As Double
+         Dim valTotaleImponibile3 As Double
+         Dim valTotaleImponibile4 As Double
 
          ' Somma tutti gli importi delle righe del documento.
          Dim i As Integer
@@ -1038,56 +1024,29 @@ Public Class frmDocumento
 
             Select Case dgvDettagli.Rows(i).Cells(clnRepartoIva.Name).Value
                Case "Reparto 1"
-                  importo1 = Convert.ToDecimal(dgvDettagli.Rows(i).Cells(clnImporto.Name).Value)
+                  importo1 = Convert.ToDouble(dgvDettagli.Rows(i).Cells(clnImporto.Name).Value)
                   percIva1 = Convert.ToInt32(dgvDettagli.Rows(i).Cells(clnIva.Name).Value)
                   valTotaleImponibile1 = valTotaleImponibile1 + CalcolaImponibileIva(percIva1.ToString, importo1)
                   valTotaleImpostaRep1 = CalcolaPercentuale(valTotaleImponibile1, percIva1)
 
-                  '' In caso di sconto calcola l'imponibile lordo.
-                  'If importo1 < importoLordo Then
-                  '   valTotaleImponibileLordo1 = valTotaleImponibileLordo1 + CalcolaImponibileIva(percIva1.ToString, importoLordo)
-                  'Else
-                  '   valTotaleImponibileLordo1 = 0.0
-                  'End If
-
                Case "Reparto 2"
-                  importo2 = Convert.ToDecimal(dgvDettagli.Rows(i).Cells(clnImporto.Name).Value)
+                  importo2 = Convert.ToDouble(dgvDettagli.Rows(i).Cells(clnImporto.Name).Value)
                   percIva2 = Convert.ToInt32(dgvDettagli.Rows(i).Cells(clnIva.Name).Value)
                   valTotaleImponibile2 = valTotaleImponibile2 + CalcolaImponibileIva(percIva2.ToString, importo2)
                   valTotaleImpostaRep2 = CalcolaPercentuale(valTotaleImponibile2, percIva2)
 
-                  '' In caso di sconto calcola l'imponibile lordo.
-                  'If importo2 < importoLordo Then
-                  '   valTotaleImponibileLordo2 = valTotaleImponibileLordo2 + CalcolaImponibileIva(percIva2.ToString, importoLordo)
-                  'Else
-                  '   valTotaleImponibileLordo2 = 0.0
-                  'End If
-
                Case "Reparto 3"
-                  importo3 = Convert.ToDecimal(dgvDettagli.Rows(i).Cells(clnImporto.Name).Value)
+                  importo3 = Convert.ToDouble(dgvDettagli.Rows(i).Cells(clnImporto.Name).Value)
                   percIva3 = Convert.ToInt32(dgvDettagli.Rows(i).Cells(clnIva.Name).Value)
                   valTotaleImponibile3 = valTotaleImponibile3 + CalcolaImponibileIva(percIva3.ToString, importo3)
                   valTotaleImpostaRep3 = CalcolaPercentuale(valTotaleImponibile3, percIva3)
 
-                  '' In caso di sconto calcola l'imponibile lordo.
-                  'If importo3 < importoLordo Then
-                  '   valTotaleImponibileLordo3 = valTotaleImponibileLordo3 + CalcolaImponibileIva(percIva3.ToString, importoLordo)
-                  'Else
-                  '   valTotaleImponibileLordo3 = 0.0
-                  'End If
-
                Case "Reparto 4"
-                  importo4 = Convert.ToDecimal(dgvDettagli.Rows(i).Cells(clnImporto.Name).Value)
+                  importo4 = Convert.ToDouble(dgvDettagli.Rows(i).Cells(clnImporto.Name).Value)
                   percIva4 = Convert.ToInt32(dgvDettagli.Rows(i).Cells(clnIva.Name).Value)
                   valTotaleImponibile4 = valTotaleImponibile4 + CalcolaImponibileIva(percIva4.ToString, importo4)
                   valTotaleImpostaRep4 = CalcolaPercentuale(valTotaleImponibile4, percIva4)
 
-                  '' In caso di sconto calcola l'imponibile lordo.
-                  'If importo4 < importoLordo Then
-                  '   valTotaleImponibileLordo4 = valTotaleImponibileLordo4 + CalcolaImponibileIva(percIva4.ToString, importoLordo)
-                  'Else
-                  '   valTotaleImponibileLordo4 = 0.0
-                  'End If
             End Select
          Next
 
@@ -1099,31 +1058,11 @@ Public Class frmDocumento
          eui_txtTotaliRep3Aliquota.Text = percIva3.ToString
          eui_txtTotaliRep4Aliquota.Text = percIva4.ToString
 
-         'If valTotaleImponibileLordo1 = 0.0 Then
          ' Imponibile.
          eui_txtTotaliRep1ImponibileLordo.Text = CFormatta.FormattaEuro(valTotaleImponibile1)
          eui_txtTotaliRep2ImponibileLordo.Text = CFormatta.FormattaEuro(valTotaleImponibile2)
          eui_txtTotaliRep3ImponibileLordo.Text = CFormatta.FormattaEuro(valTotaleImponibile3)
          eui_txtTotaliRep4ImponibileLordo.Text = CFormatta.FormattaEuro(valTotaleImponibile4)
-
-         '' Imponibile scontato.
-         'eui_txtTotaliRep1ImponibileScontato.Text = VALORE_ZERO
-         'eui_txtTotaliRep2ImponibileScontato.Text = VALORE_ZERO
-         'eui_txtTotaliRep3ImponibileScontato.Text = VALORE_ZERO
-         'eui_txtTotaliRep4ImponibileScontato.Text = VALORE_ZERO
-         'Else
-         '' Imponibile.
-         'eui_txtTotaliRep1ImponibileLordo.Text = CFormatta.FormattaEuro(valTotaleImponibileLordo1)
-         'eui_txtTotaliRep2ImponibileLordo.Text = CFormatta.FormattaEuro(valTotaleImponibileLordo2)
-         'eui_txtTotaliRep3ImponibileLordo.Text = CFormatta.FormattaEuro(valTotaleImponibileLordo3)
-         'eui_txtTotaliRep4ImponibileLordo.Text = CFormatta.FormattaEuro(valTotaleImponibileLordo4)
-
-         '' Imponibile scontato.
-         'eui_txtTotaliRep1ImponibileScontato.Text = CFormatta.FormattaEuro(valTotaleImponibile1)
-         'eui_txtTotaliRep2ImponibileScontato.Text = CFormatta.FormattaEuro(valTotaleImponibile2)
-         'eui_txtTotaliRep3ImponibileScontato.Text = CFormatta.FormattaEuro(valTotaleImponibile3)
-         'eui_txtTotaliRep4ImponibileScontato.Text = CFormatta.FormattaEuro(valTotaleImponibile4)
-         'End If
 
          ' Imposte.
          eui_txtTotaliRep1Imposta.Text = CFormatta.FormattaEuro(valTotaleImpostaRep1)
@@ -1138,6 +1077,30 @@ Public Class frmDocumento
          ' Imposta totale.
          eui_txtImposta.Text = CFormatta.FormattaEuro((valTotaleImpostaRep1 + valTotaleImpostaRep2 + valTotaleImpostaRep3 + valTotaleImpostaRep4))
          eui_txtTotaleImposta.Text = eui_txtImposta.Text
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
+   End Sub
+
+   Private Sub CalcolaTotaleSconto()
+      Try
+         Dim valSconto As Double
+
+         Dim i As Integer
+         For i = 0 To dgvDettagli.Rows.Count - 1
+            ' Valore sconto per riga..
+            If IsNothing(dgvDettagli.Rows(i).Cells(clnValoreSconto.Name).Value) = False Then
+               If IsNumeric(dgvDettagli.Rows(i).Cells(clnValoreSconto.Name).Value) = True Then
+                  valSconto = valSconto + Convert.ToDouble(dgvDettagli.Rows(i).Cells(clnValoreSconto.Name).Value)
+               End If
+            End If
+         Next
+
+         ' Totale sconto.
+         eui_txtTotaliSconto.Text = CFormatta.FormattaEuro(valSconto)
 
       Catch ex As Exception
          ' Visualizza un messaggio di errore e lo registra nell'apposito file.
@@ -1537,7 +1500,6 @@ Public Class frmDocumento
                If dgvDettagli.Rows.Count = 1 Then
                   eui_cmdCancellaTutto.PerformClick()
                End If
-
          End Select
 
       Catch ex As Exception
@@ -1567,6 +1529,7 @@ Public Class frmDocumento
          g_frmDocumento.dgvDettagli.Rows.Remove(g_frmDocumento.dgvDettagli.CurrentRow)
 
          CalcolaImportoRigaDoc()
+         CalcolaTotaleSconto()
          CalcolaImportoTotaleIva()
          CalcolaImportoTotaleDoc()
 
@@ -1588,6 +1551,7 @@ Public Class frmDocumento
          g_frmDocumento.dgvDettagli.Rows.Add()
 
          CalcolaImportoRigaDoc()
+         CalcolaTotaleSconto()
          CalcolaImportoTotaleIva()
          CalcolaImportoTotaleDoc()
 
@@ -1619,6 +1583,7 @@ Public Class frmDocumento
             Dim qtà As Integer = dgvDettagli.CurrentRow.Cells(clnQta.Name).Value
 
             CalcolaImportoRigaDoc()
+            CalcolaTotaleSconto()
             CalcolaImportoTotaleIva()
             CalcolaImportoTotaleDoc()
 
@@ -1645,7 +1610,7 @@ Public Class frmDocumento
             Case Else
                ' Tutte le altre colonne da formattare.
 
-               Dim valCell As Decimal
+               Dim valCell As Double
                If IsNothing(e.Value) = False Then
                   If IsNumeric(e.Value) = True Then
                      ' Colonna Iva.
@@ -1677,5 +1642,214 @@ Public Class frmDocumento
       End Try
    End Sub
 
+   Private Sub eui_txtTotaliRep1ImponibileLordo_KeyPress(sender As Object, e As KeyPressEventArgs) Handles eui_txtTotaliRep1ImponibileLordo.KeyPress
+      ' Annulla il carattere premuto. 
+      e.KeyChar = String.Empty
+   End Sub
 
+   Private Sub eui_txtTotaliRep2ImponibileLordo_KeyPress(sender As Object, e As KeyPressEventArgs) Handles eui_txtTotaliRep2ImponibileLordo.KeyPress
+      ' Annulla il carattere premuto. 
+      e.KeyChar = String.Empty
+   End Sub
+
+   Private Sub eui_txtTotaliRep1Aliquota_KeyPress(sender As Object, e As KeyPressEventArgs) Handles eui_txtTotaliRep1Aliquota.KeyPress
+      ' Annulla il carattere premuto. 
+      e.KeyChar = String.Empty
+   End Sub
+
+   Private Sub eui_txtTotaliRep1Imposta_KeyPress(sender As Object, e As KeyPressEventArgs) Handles eui_txtTotaliRep1Imposta.KeyPress
+      ' Annulla il carattere premuto. 
+      e.KeyChar = String.Empty
+   End Sub
+
+   Private Sub eui_txtTotaliRep2Aliquota_KeyPress(sender As Object, e As KeyPressEventArgs) Handles eui_txtTotaliRep2Aliquota.KeyPress
+      ' Annulla il carattere premuto. 
+      e.KeyChar = String.Empty
+   End Sub
+
+   Private Sub eui_txtTotaliRep2Imposta_KeyPress(sender As Object, e As KeyPressEventArgs) Handles eui_txtTotaliRep2Imposta.KeyPress
+      ' Annulla il carattere premuto. 
+      e.KeyChar = String.Empty
+   End Sub
+
+   Private Sub eui_txtTotaliRep3Aliquota_KeyPress(sender As Object, e As KeyPressEventArgs) Handles eui_txtTotaliRep3Aliquota.KeyPress
+      ' Annulla il carattere premuto. 
+      e.KeyChar = String.Empty
+   End Sub
+
+   Private Sub eui_txtTotaliRep3ImponibileLordo_KeyPress(sender As Object, e As KeyPressEventArgs) Handles eui_txtTotaliRep3ImponibileLordo.KeyPress
+      ' Annulla il carattere premuto. 
+      e.KeyChar = String.Empty
+   End Sub
+
+   Private Sub eui_txtTotaliRep3Imposta_KeyPress(sender As Object, e As KeyPressEventArgs) Handles eui_txtTotaliRep3Imposta.KeyPress
+      ' Annulla il carattere premuto. 
+      e.KeyChar = String.Empty
+   End Sub
+
+   Private Sub eui_txtTotaliRep4Aliquota_KeyPress(sender As Object, e As KeyPressEventArgs) Handles eui_txtTotaliRep4Aliquota.KeyPress
+      ' Annulla il carattere premuto. 
+      e.KeyChar = String.Empty
+   End Sub
+
+   Private Sub eui_txtTotaliRep4ImponibileLordo_KeyPress(sender As Object, e As KeyPressEventArgs) Handles eui_txtTotaliRep4ImponibileLordo.KeyPress
+      ' Annulla il carattere premuto. 
+      e.KeyChar = String.Empty
+   End Sub
+
+   Private Sub eui_txtTotaliRep4Imposta_KeyPress(sender As Object, e As KeyPressEventArgs) Handles eui_txtTotaliRep4Imposta.KeyPress
+      ' Annulla il carattere premuto. 
+      e.KeyChar = String.Empty
+   End Sub
+
+   Private Sub eui_txtTotaliSconto_KeyPress(sender As Object, e As KeyPressEventArgs) Handles eui_txtTotaliSconto.KeyPress
+      ' Annulla il carattere premuto. 
+      e.KeyChar = String.Empty
+   End Sub
+
+   Private Sub eui_txtTotaliServizio_KeyPress(sender As Object, e As KeyPressEventArgs) Handles eui_txtTotaliServizio.KeyPress
+      ' Annulla il carattere premuto. 
+      e.KeyChar = String.Empty
+   End Sub
+
+   Private Sub eui_txtTotaliImponibile_KeyPress(sender As Object, e As KeyPressEventArgs) Handles eui_txtTotaliImponibile.KeyPress
+      ' Annulla il carattere premuto. 
+      e.KeyChar = String.Empty
+   End Sub
+
+   Private Sub eui_txtTotaleDocumento_KeyPress(sender As Object, e As KeyPressEventArgs) Handles eui_txtTotaleDocumento.KeyPress
+      ' Annulla il carattere premuto. 
+      e.KeyChar = String.Empty
+   End Sub
+
+   Private Sub eui_txtTotaleImposta_KeyPress(sender As Object, e As KeyPressEventArgs) Handles eui_txtTotaleImposta.KeyPress
+      ' Annulla il carattere premuto. 
+      e.KeyChar = String.Empty
+   End Sub
+
+   Private Sub eui_txtTotaleConto_KeyPress(sender As Object, e As KeyPressEventArgs) Handles eui_txtTotaleConto.KeyPress
+      ' Annulla il carattere premuto. 
+      e.KeyChar = String.Empty
+   End Sub
+
+   Private Sub eui_txtImponibile_KeyPress(sender As Object, e As KeyPressEventArgs) Handles eui_txtImponibile.KeyPress
+      ' Annulla il carattere premuto. 
+      e.KeyChar = String.Empty
+   End Sub
+
+   Private Sub eui_txtImposta_KeyPress(sender As Object, e As KeyPressEventArgs) Handles eui_txtImposta.KeyPress
+      ' Annulla il carattere premuto. 
+      e.KeyChar = String.Empty
+   End Sub
+
+   Private Sub eui_txtTotaliCoperto_KeyPress(sender As Object, e As KeyPressEventArgs) Handles eui_txtTotaliCoperto.KeyPress
+      Try
+         e.Handled = CConvalida.DigitaSoloNumeriPuntegg(e.KeyChar)
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
+   End Sub
+
+   Private Sub eui_txtTotaliContanti_KeyPress(sender As Object, e As KeyPressEventArgs) Handles eui_txtTotaliContanti.KeyPress
+      Try
+         e.Handled = CConvalida.DigitaSoloNumeriPuntegg(e.KeyChar)
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
+
+   End Sub
+
+   Private Sub eui_txtTotaliCarte_KeyPress(sender As Object, e As KeyPressEventArgs) Handles eui_txtTotaliCarte.KeyPress
+      Try
+         e.Handled = CConvalida.DigitaSoloNumeriPuntegg(e.KeyChar)
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
+   End Sub
+
+   Private Sub eui_txtTotaliBuoni_KeyPress(sender As Object, e As KeyPressEventArgs) Handles eui_txtTotaliBuoni.KeyPress
+      Try
+         e.Handled = CConvalida.DigitaSoloNumeriPuntegg(e.KeyChar)
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
+   End Sub
+
+   Private Sub eui_txtTotaliSospeso_KeyPress(sender As Object, e As KeyPressEventArgs) Handles eui_txtTotaliSospeso.KeyPress
+      Try
+         e.Handled = CConvalida.DigitaSoloNumeriPuntegg(e.KeyChar)
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
+   End Sub
+
+
+   Private Sub TextBox1_LostFocus(sender As Object, e As EventArgs)
+      Dim val As String = CFormatta.FormattaNumeroDouble(Convert.ToDouble(sender.text))
+
+      MessageBox.Show(val, NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+      sender.text = val
+   End Sub
+
+
+   Private Sub eui_txtTotaliSospeso_LostFocus(sender As Object, e As EventArgs) Handles eui_txtTotaliSospeso.LostFocus
+      Try
+         Dim sospeso As Double
+         If IsNumeric(sender.Text) = True Then
+            sospeso = Convert.ToDouble(sender.Text)
+         End If
+
+         Dim totaleDoc As Double
+         If IsNumeric(eui_txtTotaleDocumento.Text) = True Then
+            totaleDoc = Convert.ToDouble(eui_txtTotaleDocumento.Text)
+         End If
+
+         If sospeso > totaleDoc Then
+            MessageBox.Show("Il valore sospeso specificato non può essere maggiore dell'importo totale del documento.", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            sender.Text = VALORE_ZERO
+            sender.Focus()
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      Finally
+         sender.Text = CFormatta.FormattaNumeroDouble(Convert.ToDouble(sender.Text))
+
+      End Try
+
+   End Sub
+
+   Private Sub eui_txtTotaliCoperto_LostFocus(sender As Object, e As EventArgs) Handles eui_txtTotaliCoperto.LostFocus
+      sender.Text = CFormatta.FormattaNumeroDouble(Convert.ToDouble(sender.Text))
+   End Sub
+
+   Private Sub eui_txtTotaliContanti_LostFocus(sender As Object, e As EventArgs) Handles eui_txtTotaliContanti.LostFocus
+      sender.Text = CFormatta.FormattaNumeroDouble(Convert.ToDouble(sender.Text))
+   End Sub
+
+   Private Sub eui_txtTotaliBuoni_LostFocus(sender As Object, e As EventArgs) Handles eui_txtTotaliBuoni.LostFocus
+      sender.Text = CFormatta.FormattaNumeroDouble(Convert.ToDouble(sender.Text))
+   End Sub
+
+   Private Sub eui_txtTotaliCarte_LostFocus(sender As Object, e As EventArgs) Handles eui_txtTotaliCarte.LostFocus
+      sender.Text = CFormatta.FormattaNumeroDouble(Convert.ToDouble(sender.Text))
+   End Sub
 End Class
