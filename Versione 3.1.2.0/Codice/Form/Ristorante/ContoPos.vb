@@ -3293,10 +3293,6 @@ Public Class ContoPos
             .ImpLordoRep2 = VALORE_ZERO
             .ImpLordoRep3 = VALORE_ZERO
             .ImpLordoRep4 = VALORE_ZERO
-            .ImpScontatoRep1 = VALORE_ZERO
-            .ImpScontatoRep2 = VALORE_ZERO
-            .ImpScontatoRep3 = VALORE_ZERO
-            .ImpScontatoRep4 = VALORE_ZERO
             .AliquotaIvaRep1 = VALORE_ZERO
             .AliquotaIvaRep2 = VALORE_ZERO
             .AliquotaIvaRep3 = VALORE_ZERO
@@ -3346,6 +3342,7 @@ Public Class ContoPos
                ' Calcola l'IVA.
                Dim valImposta As Double
                Dim valImponibile As Double
+
                If IsNumeric(txtIva.Text) = True Then
 
                   'Dim valCoefficiente As Double
@@ -3563,10 +3560,6 @@ Public Class ContoPos
             .ImpLordoRep2 = VALORE_ZERO
             .ImpLordoRep3 = VALORE_ZERO
             .ImpLordoRep4 = VALORE_ZERO
-            .ImpScontatoRep1 = VALORE_ZERO
-            .ImpScontatoRep2 = VALORE_ZERO
-            .ImpScontatoRep3 = VALORE_ZERO
-            .ImpScontatoRep4 = VALORE_ZERO
             .AliquotaIvaRep1 = VALORE_ZERO
             .AliquotaIvaRep2 = VALORE_ZERO
             .AliquotaIvaRep3 = VALORE_ZERO

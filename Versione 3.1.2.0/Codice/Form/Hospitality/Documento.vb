@@ -219,8 +219,8 @@ Public Class frmDocumento
 
          '.CodAzienda = String.Empty
          '.Coperto = CFormatta.FormattaNumeroDouble(g_frmContoPos.txtCoperto.Text)
-         eui_txtServizio.Text = VALORE_ZERO
-         eui_txtSconto.Text = VALORE_ZERO
+         'eui_txtServizio.Text = VALORE_ZERO
+         'eui_txtSconto.Text = VALORE_ZERO
          '.BuoniPasto = CFormatta.FormattaNumeroDouble(g_frmContoPos.txtBuoni.Text)
          '.BuoniPastoIncassare = CFormatta.FormattaNumeroDouble(g_frmContoPos.txtBuoni.Text)
          '.Chiuso = "No"
@@ -653,6 +653,7 @@ Public Class frmDocumento
       End Try
    End Sub
 
+   ' TODO: DA TERMINARE!!!
    Private Function SalvaDocumento() As Boolean
       Try
          With Doc
@@ -677,7 +678,7 @@ Public Class frmDocumento
                Exit Function
             End If
 
-            .Tipo = tipoDocumento
+            .Tipo = eui_cmbTipoDocumento.Text
             .Anno = eui_txtAnno.Text
             .Data = eui_dtpData.Value.Value.Date
             .Ora = eui_txtOra.Text
@@ -699,30 +700,11 @@ Public Class frmDocumento
             .CodFiscale = eui_txtCodiceFiscale.Text
             .CodAzienda = String.Empty
 
-            .ImpLordoRep1 = VALORE_ZERO
-            .ImpLordoRep2 = VALORE_ZERO
-            .ImpLordoRep3 = VALORE_ZERO
-            .ImpLordoRep4 = VALORE_ZERO
-            .ImpScontatoRep1 = VALORE_ZERO
-            .ImpScontatoRep2 = VALORE_ZERO
-            .ImpScontatoRep3 = VALORE_ZERO
-            .ImpScontatoRep4 = VALORE_ZERO
-            .AliquotaIvaRep1 = eui_txtTotaliRep1Aliquota.Text
-            .AliquotaIvaRep2 = VALORE_ZERO
-            .AliquotaIvaRep3 = VALORE_ZERO
-            .AliquotaIvaRep4 = VALORE_ZERO
-            .ImpostaRep1 = VALORE_ZERO
-            .ImpostaRep2 = VALORE_ZERO
-            .ImpostaRep3 = VALORE_ZERO
-            .ImpostaRep4 = VALORE_ZERO
-
-            ' .PercSconto = eui_txtSconto.Text
-            ' .PerServizio = eui_txtServizio.Text
             .Sconto = eui_txtTotaliSconto.Text
             .TipoSconto = String.Empty
-            .Servizio = eui_txtTotaliServizio.Text
+            .Servizio = VALORE_ZERO
             .TipoServizio = String.Empty
-            .Coperto = eui_txtTotaliCoperto.Text
+            .Coperto = VALORE_ZERO
             .Contanti = eui_txtTotaliContanti.Text
             .Carte = eui_txtTotaliCarte.Text
             .BuoniPasto = eui_txtTotaliBuoni.Text
@@ -731,7 +713,7 @@ Public Class frmDocumento
             .Chiuso = "No"
 
             If eui_txtTotaliCarte.Text <> VALORE_ZERO Then
-               .TipoPagamento = eui_cmbTipoPagamento.Text & ": € " & CFormatta.FormattaNumeroDouble(eui_txtTotaliCarte.Text)
+               .TipoPagamento = eui_cmbTipoPagamento.Text & ": € " & CFormatta.FormattaNumeroDouble(Convert.ToDouble(eui_txtTotaliCarte.Text))
             Else
                If eui_txtTotaliContanti.Text <> VALORE_ZERO Then
                   .TipoPagamento = "Contanti"
@@ -746,46 +728,75 @@ Public Class frmDocumento
             .SospesoIncassare = CFormatta.FormattaNumeroDouble(valSospeso)
             .TotDoc = CFormatta.FormattaNumeroDouble(Convert.ToDouble(valDaPagare))
 
-            If tipoDocumento = TIPO_DOC_FF Then
+            If eui_cmbTipoDocumento.Text = TIPO_DOC_FF Then
                ' Calcola l'IVA.
                Dim valImposta As Double
                Dim valImponibile As Double
 
-               ' TODO: DA MODIFICARE!!!              
-               If IsNumeric(eui_txtTotaliRep1Aliquota.Text) = True Then
+               'If IsNumeric(eui_txtTotaliRep1Aliquota.Text) = True Then
 
-                  Dim valCoefficiente As Double
-                  Select Case eui_txtTotaliRep1Aliquota.Text
-                     Case "22,00"
-                        valCoefficiente = 1.22
-                     Case "21,00"
-                        valCoefficiente = 1.21
-                     Case "20,00"
-                        valCoefficiente = 1.2
-                     Case "10,00"
-                        valCoefficiente = 1.1
-                     Case "4,00"
-                        valCoefficiente = 1.04
-                     Case Else
-                        valCoefficiente = 0.0
-                  End Select
+               'Dim valCoefficiente As Double
+               'Select Case eui_txtTotaliRep1Aliquota.Text
+               '   Case "22,00"
+               '      valCoefficiente = 1.22
+               '   Case "21,00"
+               '      valCoefficiente = 1.21
+               '   Case "20,00"
+               '      valCoefficiente = 1.2
+               '   Case "10,00"
+               '      valCoefficiente = 1.1
+               '   Case "4,00"
+               '      valCoefficiente = 1.04
+               '   Case Else
+               '      valCoefficiente = 0.0
+               'End Select
 
-                  If valCoefficiente <> 0.0 Then
-                     valImponibile = (valDaPagare / valCoefficiente)
-                  Else
-                     valImponibile = 0.0
-                  End If
+               'If valCoefficiente <> 0.0 Then
+               valImponibile = Convert.ToDouble(eui_txtImponibile.Text) '(valDaPagare / valCoefficiente)
+               'Else
+               '   valImponibile = 0.0
+               'End If
 
-                  valImposta = CalcolaPercentuale(valImponibile, Convert.ToDouble(eui_txtTotaliRep1Aliquota.Text))
-               Else
-                  valImposta = 0.0
-                  eui_txtTotaliRep1Aliquota.Text = VALORE_ZERO
-               End If
+               valImposta = Convert.ToDouble(eui_txtImposta.Text) 'CalcolaPercentuale(valImponibile, Convert.ToDouble(eui_txtTotaliRep1Aliquota.Text))
+               'Else
+               '   valImposta = 0.0
+               '   eui_txtTotaliRep1Aliquota.Text = VALORE_ZERO
+               'End If
+
+               .ImpLordoRep1 = eui_txtTotaliRep1ImponibileLordo.Text
+               .ImpLordoRep2 = eui_txtTotaliRep2ImponibileLordo.Text
+               .ImpLordoRep3 = eui_txtTotaliRep3ImponibileLordo.Text
+               .ImpLordoRep4 = eui_txtTotaliRep4ImponibileLordo.Text
+
+               .AliquotaIvaRep1 = eui_txtTotaliRep1Aliquota.Text
+               .AliquotaIvaRep2 = eui_txtTotaliRep2Aliquota.Text
+               .AliquotaIvaRep3 = eui_txtTotaliRep3Aliquota.Text
+               .AliquotaIvaRep4 = eui_txtTotaliRep4Aliquota.Text
+
+               .ImpostaRep1 = eui_txtTotaliRep1Imposta.Text
+               .ImpostaRep2 = eui_txtTotaliRep2Imposta.Text
+               .ImpostaRep3 = eui_txtTotaliRep3Imposta.Text
+               .ImpostaRep4 = eui_txtTotaliRep4Imposta.Text
 
                .Imponibile = CFormatta.FormattaNumeroDouble(valImponibile)
-               .Iva = eui_txtTotaliRep1Aliquota.Text
+               .Iva = VALORE_ZERO
                .Imposta = CFormatta.FormattaNumeroDouble(valImposta)
             Else
+               .ImpLordoRep1 = VALORE_ZERO
+               .ImpLordoRep2 = VALORE_ZERO
+               .ImpLordoRep3 = VALORE_ZERO
+               .ImpLordoRep4 = VALORE_ZERO
+
+               .AliquotaIvaRep1 = VALORE_ZERO
+               .AliquotaIvaRep2 = VALORE_ZERO
+               .AliquotaIvaRep3 = VALORE_ZERO
+               .AliquotaIvaRep4 = VALORE_ZERO
+
+               .ImpostaRep1 = VALORE_ZERO
+               .ImpostaRep2 = VALORE_ZERO
+               .ImpostaRep3 = VALORE_ZERO
+               .ImpostaRep4 = VALORE_ZERO
+
                .Imponibile = VALORE_ZERO
                .Iva = VALORE_ZERO
                .Imposta = VALORE_ZERO
@@ -799,26 +810,26 @@ Public Class frmDocumento
          ' Apre la connessione.
          cn.Open()
 
-         'If eui_cmdTipoConto.Text.ToUpper = "UNICO" Then
-         ' SALVA I DETTAGLI PER IL COPERTO.
-         If Doc.Coperto <> VALORE_ZERO Then
-            ' Avvia una transazione.
-            tr = cn.BeginTransaction(IsolationLevel.ReadCommitted)
-            ' Crea la stringa di inserimento.
-            sql = String.Format("INSERT INTO {0} (RifDoc, Descrizione, Quantità, ImportoNetto) " &
-                                             "VALUES(@RifDoc, @Descrizione, @Quantità, @ImportoNetto)", TAB_DETTAGLI_DOCUMENTI)
-            ' Crea il comando per la connessione corrente.
-            Dim cmdInsert As New OleDbCommand(sql, cn, tr)
-            cmdInsert.Parameters.AddWithValue("@RifDoc", LeggiUltimoRecord(TAB_DOCUMENTI))
-            cmdInsert.Parameters.AddWithValue("@Descrizione", "COPERTO")
-            cmdInsert.Parameters.AddWithValue("@Quantità", NumCopertiRistorante)
-            cmdInsert.Parameters.AddWithValue("@ImportoNetto", Doc.Coperto)
-            ' Esegue il comando.
-            Dim Record As Integer = cmdInsert.ExecuteNonQuery()
-            ' Conferma transazione.
-            tr.Commit()
-         End If
+         ''If eui_cmdTipoConto.Text.ToUpper = "UNICO" Then
+         '' SALVA I DETTAGLI PER IL COPERTO.
+         'If Doc.Coperto <> VALORE_ZERO Then
+         '   ' Avvia una transazione.
+         '   tr = cn.BeginTransaction(IsolationLevel.ReadCommitted)
+         '   ' Crea la stringa di inserimento.
+         '   sql = String.Format("INSERT INTO {0} (RifDoc, Descrizione, Quantità, ImportoNetto) " &
+         '                                    "VALUES(@RifDoc, @Descrizione, @Quantità, @ImportoNetto)", TAB_DETTAGLI_DOCUMENTI)
+         '   ' Crea il comando per la connessione corrente.
+         '   Dim cmdInsert As New OleDbCommand(sql, cn, tr)
+         '   cmdInsert.Parameters.AddWithValue("@RifDoc", LeggiUltimoRecord(TAB_DOCUMENTI))
+         '   cmdInsert.Parameters.AddWithValue("@Descrizione", "COPERTO")
+         '   cmdInsert.Parameters.AddWithValue("@Quantità", NumCopertiRistorante)
+         '   cmdInsert.Parameters.AddWithValue("@ImportoNetto", Doc.Coperto)
+         '   ' Esegue il comando.
+         '   Dim Record As Integer = cmdInsert.ExecuteNonQuery()
+         '   ' Conferma transazione.
+         '   tr.Commit()
          'End If
+         ''End If
 
          ' SALVA I DETTAGLI PER I PIATTI.
          Dim i As Integer
@@ -829,8 +840,8 @@ Public Class frmDocumento
             ' Avvia una transazione.
             tr = cn.BeginTransaction(IsolationLevel.ReadCommitted)
             ' Crea la stringa di eliminazione.
-            sql = String.Format("INSERT INTO {0} (RifDoc, Descrizione, Quantità, ValoreUnitario, ImportoNetto) " &
-                                          "VALUES(@RifDoc, @Descrizione, @Quantità, @ValoreUnitario, @ImportoNetto)", TAB_DETTAGLI_DOCUMENTI)
+            sql = String.Format("INSERT INTO {0} (RifDoc, CodiceArticolo, Descrizione, UnitàMisura, Quantità, ValoreUnitario, Sconto, ImportoNetto, AliquotaIva) " &
+                                          "VALUES(@RifDoc, @CodiceArticolo, @Descrizione, @UnitàMisura, @Quantità, @ValoreUnitario, @Sconto, @ImportoNetto, @AliquotaIva)", TAB_DETTAGLI_DOCUMENTI)
 
             ' Crea il comando per la connessione corrente.
             Dim cmdInsert As New OleDbCommand(sql, cn, tr)
@@ -838,17 +849,21 @@ Public Class frmDocumento
             ' In caso di variante senza una quantità.
             Dim quantità As String
 
-            If dgvDettagli.Rows(i).Cells(clnQta.Name).Value <> String.Empty Then
-               quantità = dgvDettagli.Rows(i).Cells(clnQta.Name).Value
-            Else
-               quantità = VALORE_ZERO
-            End If
+            'If dgvDettagli.Rows(i).Cells(clnQta.Name).Value <> String.Empty Then
+            '   quantità = dgvDettagli.Rows(i).Cells(clnQta.Name).Value
+            'Else
+            '   quantità = VALORE_ZERO
+            'End If
 
             cmdInsert.Parameters.AddWithValue("@RifDoc", LeggiUltimoRecord(TAB_DOCUMENTI))
-            cmdInsert.Parameters.AddWithValue("@Descrizione", FormattaApici(dgvDettagli.Rows(i).Cells(clnDescrizione.Name).Value))
-            cmdInsert.Parameters.AddWithValue("@Quantità", quantità)
-            cmdInsert.Parameters.AddWithValue("@ValoreUnitario", dgvDettagli.Rows(i).Cells(clnPrezzo.Name).Value) ' B_TODO: Modifica per Retail.
-            cmdInsert.Parameters.AddWithValue("@ImportoNetto", dgvDettagli.Rows(i).Cells(clnImporto.Name).Value)
+            cmdInsert.Parameters.AddWithValue("@CodiceArticolo", dgvDettagli.Rows(i).Cells(clnCodice.Name).Value.ToString)
+            cmdInsert.Parameters.AddWithValue("@Descrizione", dgvDettagli.Rows(i).Cells(clnDescrizione.Name).Value.ToString)
+            cmdInsert.Parameters.AddWithValue("@UnitàMisura", dgvDettagli.Rows(i).Cells(clnUm.Name).Value.ToString)
+            cmdInsert.Parameters.AddWithValue("@Quantità", dgvDettagli.Rows(i).Cells(clnQta.Name).Value.ToString)
+            cmdInsert.Parameters.AddWithValue("@ValoreUnitario", dgvDettagli.Rows(i).Cells(clnPrezzo.Name).Value.ToString) ' B_TODO: Modifica per Retail.
+            cmdInsert.Parameters.AddWithValue("@Sconto", dgvDettagli.Rows(i).Cells(clnSconto.Name).Value.ToString)
+            cmdInsert.Parameters.AddWithValue("@ImportoNetto", dgvDettagli.Rows(i).Cells(clnImporto.Name).Value.ToString)
+            cmdInsert.Parameters.AddWithValue("@AliquotaIva", dgvDettagli.Rows(i).Cells(clnIva.Name).Value.ToString)
 
             ' Esegue il comando.
             Dim Record As Integer = cmdInsert.ExecuteNonQuery()
@@ -858,51 +873,50 @@ Public Class frmDocumento
             'End If
          Next
 
-         ' If eui_cmdTipoConto.Text.ToUpper <> "ALLA ROMANA" Then
-         ' SALVA I DETTAGLI PER LO SCONTO.
-         If Doc.Sconto <> VALORE_ZERO Then
-            ' Avvia una transazione.
-            tr = cn.BeginTransaction(IsolationLevel.ReadCommitted)
-            ' Crea la stringa di eliminazione.
-            sql = String.Format("INSERT INTO {0} (RifDoc, Descrizione, Quantità, ImportoNetto) " &
-                                             "VALUES(@RifDoc, @Descrizione, @Quantità, @ImportoNetto)", TAB_DETTAGLI_DOCUMENTI)
-            ' Crea il comando per la connessione corrente.
-            Dim cmdInsert As New OleDbCommand(sql, cn, tr)
-            cmdInsert.Parameters.AddWithValue("@RifDoc", LeggiUltimoRecord(TAB_DOCUMENTI))
-            cmdInsert.Parameters.AddWithValue("@Descrizione", "SCONTO")
-            cmdInsert.Parameters.AddWithValue("@Quantità", VALORE_ZERO)
-            cmdInsert.Parameters.AddWithValue("@ImportoNetto", "-" & Doc.Sconto)
-            ' Esegue il comando.
-            Dim Record As Integer = cmdInsert.ExecuteNonQuery()
-            ' Conferma transazione.
-            tr.Commit()
-         End If
+         '' If eui_cmdTipoConto.Text.ToUpper <> "ALLA ROMANA" Then
+         '' SALVA I DETTAGLI PER LO SCONTO.
+         'If Doc.Sconto <> VALORE_ZERO Then
+         '   ' Avvia una transazione.
+         '   tr = cn.BeginTransaction(IsolationLevel.ReadCommitted)
+         '   ' Crea la stringa di eliminazione.
+         '   sql = String.Format("INSERT INTO {0} (RifDoc, Descrizione, Quantità, ImportoNetto) " &
+         '                                    "VALUES(@RifDoc, @Descrizione, @Quantità, @ImportoNetto)", TAB_DETTAGLI_DOCUMENTI)
+         '   ' Crea il comando per la connessione corrente.
+         '   Dim cmdInsert As New OleDbCommand(sql, cn, tr)
+         '   cmdInsert.Parameters.AddWithValue("@RifDoc", LeggiUltimoRecord(TAB_DOCUMENTI))
+         '   cmdInsert.Parameters.AddWithValue("@Descrizione", "SCONTO")
+         '   cmdInsert.Parameters.AddWithValue("@Quantità", VALORE_ZERO)
+         '   cmdInsert.Parameters.AddWithValue("@ImportoNetto", "-" & Doc.Sconto)
+         '   ' Esegue il comando.
+         '   Dim Record As Integer = cmdInsert.ExecuteNonQuery()
+         '   ' Conferma transazione.
+         '   tr.Commit()
          'End If
+         ''End If
 
-
-         ' If eui_cmdTipoConto.Text.ToUpper <> "ALLA ROMANA" Then
-         ' SALVA I DETTAGLI PER IL SERVIZIO.
-         If Doc.Servizio <> VALORE_ZERO Then
-            ' Avvia una transazione.
-            tr = cn.BeginTransaction(IsolationLevel.ReadCommitted)
-            ' Crea la stringa di eliminazione.
-            sql = String.Format("INSERT INTO {0} (RifDoc, Descrizione, Quantità, ImportoNetto) " &
-                                             "VALUES(@RifDoc, @Descrizione, @Quantità, @ImportoNetto)", TAB_DETTAGLI_DOCUMENTI)
-            ' Crea il comando per la connessione corrente.
-            Dim cmdInsert As New OleDbCommand(sql, cn, tr)
-            cmdInsert.Parameters.AddWithValue("@RifDoc", LeggiUltimoRecord(TAB_DOCUMENTI))
-            cmdInsert.Parameters.AddWithValue("@Descrizione", "SERVIZIO")
-            cmdInsert.Parameters.AddWithValue("@Quantità", VALORE_ZERO)
-            cmdInsert.Parameters.AddWithValue("@ImportoNetto", Doc.Servizio)
-            ' Esegue il comando.
-            Dim Record As Integer = cmdInsert.ExecuteNonQuery()
-            ' Conferma transazione.
-            tr.Commit()
-         End If
-         ' End If
+         '' If eui_cmdTipoConto.Text.ToUpper <> "ALLA ROMANA" Then
+         '' SALVA I DETTAGLI PER IL SERVIZIO.
+         'If Doc.Servizio <> VALORE_ZERO Then
+         '   ' Avvia una transazione.
+         '   tr = cn.BeginTransaction(IsolationLevel.ReadCommitted)
+         '   ' Crea la stringa di eliminazione.
+         '   sql = String.Format("INSERT INTO {0} (RifDoc, Descrizione, Quantità, ImportoNetto) " &
+         '                                    "VALUES(@RifDoc, @Descrizione, @Quantità, @ImportoNetto)", TAB_DETTAGLI_DOCUMENTI)
+         '   ' Crea il comando per la connessione corrente.
+         '   Dim cmdInsert As New OleDbCommand(sql, cn, tr)
+         '   cmdInsert.Parameters.AddWithValue("@RifDoc", LeggiUltimoRecord(TAB_DOCUMENTI))
+         '   cmdInsert.Parameters.AddWithValue("@Descrizione", "SERVIZIO")
+         '   cmdInsert.Parameters.AddWithValue("@Quantità", VALORE_ZERO)
+         '   cmdInsert.Parameters.AddWithValue("@ImportoNetto", Doc.Servizio)
+         '   ' Esegue il comando.
+         '   Dim Record As Integer = cmdInsert.ExecuteNonQuery()
+         '   ' Conferma transazione.
+         '   tr.Commit()
+         'End If
+         '' End If
 
          ' Salva il Numero del prossimo documento da stampare.
-         SalvaNumeroDocFiscaleConfig(TAB_DOCUMENTI, tipoDocumento, Convert.ToInt32(eui_txtNumero.Text))
+         SalvaNumeroDocFiscaleConfig(TAB_DOCUMENTI, eui_cmbTipoDocumento.Text, Convert.ToInt32(eui_txtNumero.Text))
 
          Return True
 
@@ -1797,16 +1811,6 @@ Public Class frmDocumento
 
       End Try
    End Sub
-
-
-   Private Sub TextBox1_LostFocus(sender As Object, e As EventArgs)
-      Dim val As String = CFormatta.FormattaNumeroDouble(Convert.ToDouble(sender.text))
-
-      MessageBox.Show(val, NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Information)
-
-      sender.text = val
-   End Sub
-
 
    Private Sub eui_txtTotaliSospeso_LostFocus(sender As Object, e As EventArgs) Handles eui_txtTotaliSospeso.LostFocus
       Try

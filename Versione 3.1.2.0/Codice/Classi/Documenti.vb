@@ -23,10 +23,6 @@ Public Class Documenti
    Public ImpLordoRep2 As String
    Public ImpLordoRep3 As String
    Public ImpLordoRep4 As String
-   Public ImpScontatoRep1 As String
-   Public ImpScontatoRep2 As String
-   Public ImpScontatoRep3 As String
-   Public ImpScontatoRep4 As String
    Public AliquotaIvaRep1 As String
    Public AliquotaIvaRep2 As String
    Public AliquotaIvaRep3 As String
@@ -183,26 +179,6 @@ Public Class Documenti
             Me.ImpLordoRep4 = ds.Tables(tabella).Rows(0)("ImpLordoRep4").ToString
          Else
             Me.ImpLordoRep4 = VALORE_ZERO
-         End If
-         If IsDBNull(ds.Tables(tabella).Rows(0)("ImpScontatoRep1")) = False Then
-            Me.ImpScontatoRep1 = ds.Tables(tabella).Rows(0)("ImpScontatoRep1").ToString
-         Else
-            Me.ImpScontatoRep1 = VALORE_ZERO
-         End If
-         If IsDBNull(ds.Tables(tabella).Rows(0)("ImpScontatoRep2")) = False Then
-            Me.ImpScontatoRep2 = ds.Tables(tabella).Rows(0)("ImpScontatoRep2").ToString
-         Else
-            Me.ImpScontatoRep2 = VALORE_ZERO
-         End If
-         If IsDBNull(ds.Tables(tabella).Rows(0)("ImpScontatoRep3")) = False Then
-            Me.ImpScontatoRep3 = ds.Tables(tabella).Rows(0)("ImpScontatoRep3").ToString
-         Else
-            Me.ImpScontatoRep3 = VALORE_ZERO
-         End If
-         If IsDBNull(ds.Tables(tabella).Rows(0)("ImpScontatoRep4")) = False Then
-            Me.ImpScontatoRep4 = ds.Tables(tabella).Rows(0)("ImpScontatoRep4").ToString
-         Else
-            Me.ImpScontatoRep4 = VALORE_ZERO
          End If
          If IsDBNull(ds.Tables(tabella).Rows(0)("AliquotaIvaRep1")) = False Then
             Me.AliquotaIvaRep1 = ds.Tables(tabella).Rows(0)("AliquotaIvaRep1").ToString
@@ -376,12 +352,12 @@ Public Class Documenti
          ' Crea la stringa di eliminazione.
          sql = String.Format("INSERT INTO {0} (NumDoc, AnnoDoc, DataDoc, OraDoc, TipoDoc, StatoDoc, CausaleDoc, IdCliente, Cliente, Indirizzo, " &
                                               "Cap, Città, Provincia, Piva, CodFiscale, CodAzienda, Coperto, Sconto, TipoSconto, Servizio, TipoServizio, Contanti, Carte, BuoniPasto, BuoniPastoIncassare, " &
-                                              "ImpLordoRep1, ImpLordoRep2, ImpLordoRep3, ImpLordoRep4, ImpScontatoRep1, ImpScontatoRep2, ImpScontatoRep3, ImpScontatoRep4, " &
+                                              "ImpLordoRep1, ImpLordoRep2, ImpLordoRep3, ImpLordoRep4, " &
                                               "AliquotaIvaRep1, AliquotaIvaRep2, AliquotaIvaRep3, AliquotaIvaRep4, ImpostaRep1, ImpostaRep2, ImpostaRep3, ImpostaRep4, " &
                                               "TipoPagamento, Tavolo, TotDoc, Sospeso, SospesoIncassare, Cameriere, Imponibile, Iva, Imposta, Chiuso, [Note]) " &
                                        "VALUES(@Numero, @AnnoDoc, @Data, @Ora, @Tipo, @StatoDoc, @CausaleDoc, @IdCliente, @Cliente, @Indirizzo, " &
                                               "@Cap, @Città, @Provincia, @PIva, @CodFiscale, @CodAzienda, @Coperto, @Sconto, @TipoSconto, @Servizio, @TipoServizio, @Contanti, @Carte, @BuoniPasto, @BuoniPastoIncassare, " &
-                                              "@ImpLordoRep1, @ImpLordoRep2, @ImpLordoRep3, @ImpLordoRep4, @ImpScontatoRep1, @ImpScontatoRep2, @ImpScontatoRep3, @ImpScontatoRep4, " &
+                                              "@ImpLordoRep1, @ImpLordoRep2, @ImpLordoRep3, @ImpLordoRep4, " &
                                               "@AliquotaIvaRep1, @AliquotaIvaRep2, @AliquotaIvaRep3, @AliquotaIvaRep4, @ImpostaRep1, @ImpostaRep2, @ImpostaRep3, @ImpostaRep4, " &
                                               "@TipoPagamento, @Tavolo, @TotDoc, @Sospeso, @SospesoIncassare, @Cameriere, @Imponibile, @Iva, @Imposta, @Chiuso, @Note)", tabella)
 
@@ -417,10 +393,6 @@ Public Class Documenti
          cmdInsert.Parameters.AddWithValue("@ImpLordoRep2", Me.ImpLordoRep2)
          cmdInsert.Parameters.AddWithValue("@ImpLordoRep3", Me.ImpLordoRep3)
          cmdInsert.Parameters.AddWithValue("@ImpLordoRep4", Me.ImpLordoRep4)
-         cmdInsert.Parameters.AddWithValue("@ImpScontatoRep1", Me.ImpScontatoRep1)
-         cmdInsert.Parameters.AddWithValue("@ImpScontatoRep2", Me.ImpScontatoRep2)
-         cmdInsert.Parameters.AddWithValue("@ImpScontatoRep3", Me.ImpScontatoRep3)
-         cmdInsert.Parameters.AddWithValue("@ImpScontatoRep4", Me.ImpScontatoRep4)
          cmdInsert.Parameters.AddWithValue("@AliquotaIvaRep1", Me.AliquotaIvaRep1)
          cmdInsert.Parameters.AddWithValue("@AliquotaIvaRep2", Me.AliquotaIvaRep2)
          cmdInsert.Parameters.AddWithValue("@AliquotaIvaRep3", Me.AliquotaIvaRep3)
@@ -537,10 +509,6 @@ Public Class Documenti
                              "ImpLordoRep2 = @ImpLordoRep2, " &
                              "ImpLordoRep3 = @ImpLordoRep3, " &
                              "ImpLordoRep4 = @ImpLordoRep4, " &
-                             "ImpScontatoRep1 = @ImpScontatoRep1, " &
-                             "ImpScontatoRep2 = @ImpScontatoRep2, " &
-                             "ImpScontatoRep3 = @ImpScontatoRep3, " &
-                             "ImpScontatoRep4 = @ImpScontatoRep4, " &
                              "AliquotaIvaRep1 = @AliquotaIvaRep1, " &
                              "AliquotaIvaRep2 = @AliquotaIvaRep2, " &
                              "AliquotaIvaRep3 = @AliquotaIvaRep3, " &
@@ -596,10 +564,6 @@ Public Class Documenti
          cmdUpdate.Parameters.AddWithValue("@ImpLordoRep2", Me.ImpLordoRep2)
          cmdUpdate.Parameters.AddWithValue("@ImpLordoRep3", Me.ImpLordoRep3)
          cmdUpdate.Parameters.AddWithValue("@ImpLordoRep4", Me.ImpLordoRep4)
-         cmdUpdate.Parameters.AddWithValue("@ImpScontatoRep1", Me.ImpScontatoRep1)
-         cmdUpdate.Parameters.AddWithValue("@ImpScontatoRep2", Me.ImpScontatoRep2)
-         cmdUpdate.Parameters.AddWithValue("@ImpScontatoRep3", Me.ImpScontatoRep3)
-         cmdUpdate.Parameters.AddWithValue("@ImpScontatoRep4", Me.ImpScontatoRep4)
          cmdUpdate.Parameters.AddWithValue("@AliquotaIvaRep1", Me.AliquotaIvaRep1)
          cmdUpdate.Parameters.AddWithValue("@AliquotaIvaRep2", Me.AliquotaIvaRep2)
          cmdUpdate.Parameters.AddWithValue("@AliquotaIvaRep3", Me.AliquotaIvaRep3)
@@ -626,7 +590,7 @@ Public Class Documenti
          cmdUpdate.Parameters.AddWithValue("@Imponibile", Me.Imponibile)
          cmdUpdate.Parameters.AddWithValue("@Iva", Me.Iva)
          cmdUpdate.Parameters.AddWithValue("@Imposta", Me.Imposta)
-         cmdUpdate.Parameters.AddWithValue("@Imposta", Me.Chiuso)
+         cmdUpdate.Parameters.AddWithValue("@Chiuso", Me.Chiuso)
          cmdUpdate.Parameters.AddWithValue("@Note", Me.Note)
 
          ' Esegue il comando.

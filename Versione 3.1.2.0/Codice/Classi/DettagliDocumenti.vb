@@ -209,13 +209,12 @@ Public Class DettagliDocumenti
          ' Avvia una transazione.
          tr = cn.BeginTransaction(IsolationLevel.ReadCommitted)
          ' Crea la stringa di eliminazione.
-         sql = String.Format("INSERT INTO {0} (Codice, RifDoc, CodiceArticolo, Descrizione, Unit‡Misura, Quantit‡, ValoreUnitario, Sconto, ImportoNetto, AliquotaIva) " &
-                                       "VALUES(@Codice, @RifDoc, @CodiceArticolo, @Descrizione, @Unit‡Misura, @Quantit‡, @ValoreUnitario, @Sconto, @ImportoNetto, @AliquotaIva)", tabella)
+         sql = String.Format("INSERT INTO {0} (RifDoc, CodiceArticolo, Descrizione, Unit‡Misura, Quantit‡, ValoreUnitario, Sconto, ImportoNetto, AliquotaIva) " &
+                                       "VALUES(@RifDoc, @CodiceArticolo, @Descrizione, @Unit‡Misura, @Quantit‡, @ValoreUnitario, @Sconto, @ImportoNetto, @AliquotaIva)", tabella)
 
          ' Crea il comando per la connessione corrente.
          Dim cmdInsert As New OleDbCommand(sql, cn, tr)
 
-         cmdInsert.Parameters.AddWithValue("@Codice", Me.Codice)
          cmdInsert.Parameters.AddWithValue("@RifDoc", Me.RifDoc)
          cmdInsert.Parameters.AddWithValue("@CodiceArticolo", Me.CodiceArticolo)
          cmdInsert.Parameters.AddWithValue("@Descrizione", Me.Descrizione)

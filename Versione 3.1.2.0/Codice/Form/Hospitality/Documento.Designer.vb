@@ -23,15 +23,15 @@ Partial Class frmDocumento
    <System.Diagnostics.DebuggerStepThrough()>
    Private Sub InitializeComponent()
       Me.components = New System.ComponentModel.Container()
-      Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-      Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-      Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-      Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-      Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-      Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-      Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-      Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-      Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+      Dim DataGridViewCellStyle46 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+      Dim DataGridViewCellStyle54 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+      Dim DataGridViewCellStyle47 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+      Dim DataGridViewCellStyle48 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+      Dim DataGridViewCellStyle49 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+      Dim DataGridViewCellStyle50 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+      Dim DataGridViewCellStyle51 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+      Dim DataGridViewCellStyle52 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+      Dim DataGridViewCellStyle53 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
       Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDocumento))
       Me.formFrameSkinner = New Elegant.Ui.FormFrameSkinner()
       Me.eui_tpcDocumento = New Elegant.Ui.TabControl()
@@ -198,7 +198,7 @@ Partial Class frmDocumento
       Me.eui_tpcDocumento.EqualTabWidth = True
       Me.eui_tpcDocumento.Location = New System.Drawing.Point(9, 9)
       Me.eui_tpcDocumento.Name = "eui_tpcDocumento"
-      Me.eui_tpcDocumento.SelectedTabPage = Me.eui_tpTotali
+      Me.eui_tpcDocumento.SelectedTabPage = Me.eui_tpGenerale
       Me.eui_tpcDocumento.Size = New System.Drawing.Size(661, 479)
       Me.eui_tpcDocumento.TabIndex = 0
       Me.eui_tpcDocumento.TabPages.AddRange(New Elegant.Ui.TabPage() {Me.eui_tpGenerale, Me.eui_tpDettagli, Me.eui_tpTotali, Me.eui_tpNote})
@@ -255,7 +255,7 @@ Partial Class frmDocumento
       '
       'Label36
       '
-      Me.Label36.Location = New System.Drawing.Point(512, 19)
+      Me.Label36.Location = New System.Drawing.Point(512, 32)
       Me.Label36.Name = "Label36"
       Me.Label36.Size = New System.Drawing.Size(76, 16)
       Me.Label36.TabIndex = 86
@@ -264,7 +264,7 @@ Partial Class frmDocumento
       'eui_txtTotaliRep4Imposta
       '
       Me.eui_txtTotaliRep4Imposta.Id = "ffd83ae2-0ec8-4f14-93b6-d911d0b28d90"
-      Me.eui_txtTotaliRep4Imposta.Location = New System.Drawing.Point(511, 105)
+      Me.eui_txtTotaliRep4Imposta.Location = New System.Drawing.Point(511, 118)
       Me.eui_txtTotaliRep4Imposta.Name = "eui_txtTotaliRep4Imposta"
       Me.eui_txtTotaliRep4Imposta.Size = New System.Drawing.Size(113, 21)
       Me.eui_txtTotaliRep4Imposta.TabIndex = 15
@@ -274,7 +274,7 @@ Partial Class frmDocumento
       'eui_txtTotaliRep4Aliquota
       '
       Me.eui_txtTotaliRep4Aliquota.Id = "4793859a-b23a-42e5-bc1e-07d61a5befb0"
-      Me.eui_txtTotaliRep4Aliquota.Location = New System.Drawing.Point(511, 73)
+      Me.eui_txtTotaliRep4Aliquota.Location = New System.Drawing.Point(511, 86)
       Me.eui_txtTotaliRep4Aliquota.Name = "eui_txtTotaliRep4Aliquota"
       Me.eui_txtTotaliRep4Aliquota.Size = New System.Drawing.Size(113, 21)
       Me.eui_txtTotaliRep4Aliquota.TabIndex = 11
@@ -284,7 +284,7 @@ Partial Class frmDocumento
       'eui_txtTotaliRep4ImponibileLordo
       '
       Me.eui_txtTotaliRep4ImponibileLordo.Id = "f450f0f3-ca6c-4679-b1e9-6dee97303ddc"
-      Me.eui_txtTotaliRep4ImponibileLordo.Location = New System.Drawing.Point(511, 40)
+      Me.eui_txtTotaliRep4ImponibileLordo.Location = New System.Drawing.Point(511, 53)
       Me.eui_txtTotaliRep4ImponibileLordo.Name = "eui_txtTotaliRep4ImponibileLordo"
       Me.eui_txtTotaliRep4ImponibileLordo.Size = New System.Drawing.Size(113, 21)
       Me.eui_txtTotaliRep4ImponibileLordo.TabIndex = 3
@@ -293,7 +293,7 @@ Partial Class frmDocumento
       '
       'Label35
       '
-      Me.Label35.Location = New System.Drawing.Point(386, 19)
+      Me.Label35.Location = New System.Drawing.Point(386, 32)
       Me.Label35.Name = "Label35"
       Me.Label35.Size = New System.Drawing.Size(76, 16)
       Me.Label35.TabIndex = 81
@@ -302,7 +302,7 @@ Partial Class frmDocumento
       'eui_txtTotaliRep3Imposta
       '
       Me.eui_txtTotaliRep3Imposta.Id = "7e17eb03-a692-4531-9565-756b88d062e7"
-      Me.eui_txtTotaliRep3Imposta.Location = New System.Drawing.Point(385, 105)
+      Me.eui_txtTotaliRep3Imposta.Location = New System.Drawing.Point(385, 118)
       Me.eui_txtTotaliRep3Imposta.Name = "eui_txtTotaliRep3Imposta"
       Me.eui_txtTotaliRep3Imposta.Size = New System.Drawing.Size(113, 21)
       Me.eui_txtTotaliRep3Imposta.TabIndex = 14
@@ -312,7 +312,7 @@ Partial Class frmDocumento
       'eui_txtTotaliRep3Aliquota
       '
       Me.eui_txtTotaliRep3Aliquota.Id = "954846f0-094a-4a2c-8db2-3a1f2af6b0e2"
-      Me.eui_txtTotaliRep3Aliquota.Location = New System.Drawing.Point(385, 73)
+      Me.eui_txtTotaliRep3Aliquota.Location = New System.Drawing.Point(385, 86)
       Me.eui_txtTotaliRep3Aliquota.Name = "eui_txtTotaliRep3Aliquota"
       Me.eui_txtTotaliRep3Aliquota.Size = New System.Drawing.Size(113, 21)
       Me.eui_txtTotaliRep3Aliquota.TabIndex = 10
@@ -322,7 +322,7 @@ Partial Class frmDocumento
       'eui_txtTotaliRep3ImponibileLordo
       '
       Me.eui_txtTotaliRep3ImponibileLordo.Id = "dc250508-4fa8-46ed-9dc1-584c14572782"
-      Me.eui_txtTotaliRep3ImponibileLordo.Location = New System.Drawing.Point(385, 40)
+      Me.eui_txtTotaliRep3ImponibileLordo.Location = New System.Drawing.Point(385, 53)
       Me.eui_txtTotaliRep3ImponibileLordo.Name = "eui_txtTotaliRep3ImponibileLordo"
       Me.eui_txtTotaliRep3ImponibileLordo.Size = New System.Drawing.Size(113, 21)
       Me.eui_txtTotaliRep3ImponibileLordo.TabIndex = 2
@@ -331,7 +331,7 @@ Partial Class frmDocumento
       '
       'Label34
       '
-      Me.Label34.Location = New System.Drawing.Point(260, 19)
+      Me.Label34.Location = New System.Drawing.Point(260, 32)
       Me.Label34.Name = "Label34"
       Me.Label34.Size = New System.Drawing.Size(76, 16)
       Me.Label34.TabIndex = 76
@@ -340,7 +340,7 @@ Partial Class frmDocumento
       'eui_txtTotaliRep2Imposta
       '
       Me.eui_txtTotaliRep2Imposta.Id = "34118c39-bef2-43b9-810b-7ec2e5d252f3"
-      Me.eui_txtTotaliRep2Imposta.Location = New System.Drawing.Point(259, 105)
+      Me.eui_txtTotaliRep2Imposta.Location = New System.Drawing.Point(259, 118)
       Me.eui_txtTotaliRep2Imposta.Name = "eui_txtTotaliRep2Imposta"
       Me.eui_txtTotaliRep2Imposta.Size = New System.Drawing.Size(113, 21)
       Me.eui_txtTotaliRep2Imposta.TabIndex = 13
@@ -350,7 +350,7 @@ Partial Class frmDocumento
       'eui_txtTotaliRep2Aliquota
       '
       Me.eui_txtTotaliRep2Aliquota.Id = "155cd85a-0031-4f1e-a7b8-c7604228e0d0"
-      Me.eui_txtTotaliRep2Aliquota.Location = New System.Drawing.Point(259, 73)
+      Me.eui_txtTotaliRep2Aliquota.Location = New System.Drawing.Point(259, 86)
       Me.eui_txtTotaliRep2Aliquota.Name = "eui_txtTotaliRep2Aliquota"
       Me.eui_txtTotaliRep2Aliquota.Size = New System.Drawing.Size(113, 21)
       Me.eui_txtTotaliRep2Aliquota.TabIndex = 9
@@ -360,7 +360,7 @@ Partial Class frmDocumento
       'eui_txtTotaliRep2ImponibileLordo
       '
       Me.eui_txtTotaliRep2ImponibileLordo.Id = "34790fb5-a700-442f-bbf0-20dfca3f5211"
-      Me.eui_txtTotaliRep2ImponibileLordo.Location = New System.Drawing.Point(259, 40)
+      Me.eui_txtTotaliRep2ImponibileLordo.Location = New System.Drawing.Point(259, 53)
       Me.eui_txtTotaliRep2ImponibileLordo.Name = "eui_txtTotaliRep2ImponibileLordo"
       Me.eui_txtTotaliRep2ImponibileLordo.Size = New System.Drawing.Size(113, 21)
       Me.eui_txtTotaliRep2ImponibileLordo.TabIndex = 1
@@ -369,7 +369,7 @@ Partial Class frmDocumento
       '
       'Label33
       '
-      Me.Label33.Location = New System.Drawing.Point(135, 19)
+      Me.Label33.Location = New System.Drawing.Point(135, 32)
       Me.Label33.Name = "Label33"
       Me.Label33.Size = New System.Drawing.Size(76, 16)
       Me.Label33.TabIndex = 71
@@ -378,7 +378,7 @@ Partial Class frmDocumento
       'eui_txtTotaliRep1Imposta
       '
       Me.eui_txtTotaliRep1Imposta.Id = "dcf1c4f9-95b8-4574-8f2c-52bed74e2876"
-      Me.eui_txtTotaliRep1Imposta.Location = New System.Drawing.Point(134, 105)
+      Me.eui_txtTotaliRep1Imposta.Location = New System.Drawing.Point(134, 118)
       Me.eui_txtTotaliRep1Imposta.Name = "eui_txtTotaliRep1Imposta"
       Me.eui_txtTotaliRep1Imposta.Size = New System.Drawing.Size(113, 21)
       Me.eui_txtTotaliRep1Imposta.TabIndex = 12
@@ -387,7 +387,7 @@ Partial Class frmDocumento
       '
       'Label29
       '
-      Me.Label29.Location = New System.Drawing.Point(24, 105)
+      Me.Label29.Location = New System.Drawing.Point(24, 118)
       Me.Label29.Name = "Label29"
       Me.Label29.Size = New System.Drawing.Size(101, 13)
       Me.Label29.TabIndex = 70
@@ -396,7 +396,7 @@ Partial Class frmDocumento
       'eui_txtTotaliRep1Aliquota
       '
       Me.eui_txtTotaliRep1Aliquota.Id = "ebec8ca3-175b-4e35-86a8-15c4be47759c"
-      Me.eui_txtTotaliRep1Aliquota.Location = New System.Drawing.Point(134, 73)
+      Me.eui_txtTotaliRep1Aliquota.Location = New System.Drawing.Point(134, 86)
       Me.eui_txtTotaliRep1Aliquota.Name = "eui_txtTotaliRep1Aliquota"
       Me.eui_txtTotaliRep1Aliquota.Size = New System.Drawing.Size(113, 21)
       Me.eui_txtTotaliRep1Aliquota.TabIndex = 8
@@ -405,7 +405,7 @@ Partial Class frmDocumento
       '
       'Label30
       '
-      Me.Label30.Location = New System.Drawing.Point(24, 73)
+      Me.Label30.Location = New System.Drawing.Point(24, 86)
       Me.Label30.Name = "Label30"
       Me.Label30.Size = New System.Drawing.Size(94, 21)
       Me.Label30.TabIndex = 68
@@ -414,7 +414,7 @@ Partial Class frmDocumento
       'eui_txtTotaliRep1ImponibileLordo
       '
       Me.eui_txtTotaliRep1ImponibileLordo.Id = "c41e3f0d-73b3-4635-80ff-2ee6acc3cc27"
-      Me.eui_txtTotaliRep1ImponibileLordo.Location = New System.Drawing.Point(134, 40)
+      Me.eui_txtTotaliRep1ImponibileLordo.Location = New System.Drawing.Point(134, 53)
       Me.eui_txtTotaliRep1ImponibileLordo.Name = "eui_txtTotaliRep1ImponibileLordo"
       Me.eui_txtTotaliRep1ImponibileLordo.Size = New System.Drawing.Size(113, 21)
       Me.eui_txtTotaliRep1ImponibileLordo.TabIndex = 0
@@ -423,7 +423,7 @@ Partial Class frmDocumento
       '
       'Label31
       '
-      Me.Label31.Location = New System.Drawing.Point(24, 40)
+      Me.Label31.Location = New System.Drawing.Point(24, 53)
       Me.Label31.Name = "Label31"
       Me.Label31.Size = New System.Drawing.Size(76, 16)
       Me.Label31.TabIndex = 66
@@ -432,7 +432,7 @@ Partial Class frmDocumento
       'eui_txtTotaliSospeso
       '
       Me.eui_txtTotaliSospeso.Id = "fa047992-05aa-45a2-b111-14b2ffce2ddc"
-      Me.eui_txtTotaliSospeso.Location = New System.Drawing.Point(134, 380)
+      Me.eui_txtTotaliSospeso.Location = New System.Drawing.Point(134, 358)
       Me.eui_txtTotaliSospeso.Name = "eui_txtTotaliSospeso"
       Me.eui_txtTotaliSospeso.Size = New System.Drawing.Size(113, 21)
       Me.eui_txtTotaliSospeso.TabIndex = 22
@@ -441,7 +441,7 @@ Partial Class frmDocumento
       '
       'Label28
       '
-      Me.Label28.Location = New System.Drawing.Point(23, 378)
+      Me.Label28.Location = New System.Drawing.Point(23, 356)
       Me.Label28.Name = "Label28"
       Me.Label28.Size = New System.Drawing.Size(101, 13)
       Me.Label28.TabIndex = 62
@@ -450,7 +450,7 @@ Partial Class frmDocumento
       'eui_txtTotaliBuoni
       '
       Me.eui_txtTotaliBuoni.Id = "f437759b-1a9e-4cf4-9171-a487de788d3a"
-      Me.eui_txtTotaliBuoni.Location = New System.Drawing.Point(134, 344)
+      Me.eui_txtTotaliBuoni.Location = New System.Drawing.Point(134, 322)
       Me.eui_txtTotaliBuoni.Name = "eui_txtTotaliBuoni"
       Me.eui_txtTotaliBuoni.Size = New System.Drawing.Size(113, 21)
       Me.eui_txtTotaliBuoni.TabIndex = 21
@@ -459,7 +459,7 @@ Partial Class frmDocumento
       '
       'Label25
       '
-      Me.Label25.Location = New System.Drawing.Point(23, 344)
+      Me.Label25.Location = New System.Drawing.Point(23, 322)
       Me.Label25.Name = "Label25"
       Me.Label25.Size = New System.Drawing.Size(122, 21)
       Me.Label25.TabIndex = 60
@@ -468,7 +468,7 @@ Partial Class frmDocumento
       'eui_txtTotaliContanti
       '
       Me.eui_txtTotaliContanti.Id = "3b9a5823-baa0-4234-afed-b64c562cc81c"
-      Me.eui_txtTotaliContanti.Location = New System.Drawing.Point(134, 275)
+      Me.eui_txtTotaliContanti.Location = New System.Drawing.Point(134, 253)
       Me.eui_txtTotaliContanti.Name = "eui_txtTotaliContanti"
       Me.eui_txtTotaliContanti.Size = New System.Drawing.Size(113, 21)
       Me.eui_txtTotaliContanti.TabIndex = 19
@@ -478,7 +478,7 @@ Partial Class frmDocumento
       'eui_txtTotaliCarte
       '
       Me.eui_txtTotaliCarte.Id = "bef45986-eec3-404c-bccf-3706932d5729"
-      Me.eui_txtTotaliCarte.Location = New System.Drawing.Point(134, 309)
+      Me.eui_txtTotaliCarte.Location = New System.Drawing.Point(134, 287)
       Me.eui_txtTotaliCarte.Name = "eui_txtTotaliCarte"
       Me.eui_txtTotaliCarte.Size = New System.Drawing.Size(113, 21)
       Me.eui_txtTotaliCarte.TabIndex = 20
@@ -487,7 +487,7 @@ Partial Class frmDocumento
       '
       'Label26
       '
-      Me.Label26.Location = New System.Drawing.Point(23, 275)
+      Me.Label26.Location = New System.Drawing.Point(23, 253)
       Me.Label26.Name = "Label26"
       Me.Label26.Size = New System.Drawing.Size(122, 21)
       Me.Label26.TabIndex = 58
@@ -495,7 +495,7 @@ Partial Class frmDocumento
       '
       'Label27
       '
-      Me.Label27.Location = New System.Drawing.Point(23, 309)
+      Me.Label27.Location = New System.Drawing.Point(23, 287)
       Me.Label27.Name = "Label27"
       Me.Label27.Size = New System.Drawing.Size(122, 21)
       Me.Label27.TabIndex = 57
@@ -504,25 +504,27 @@ Partial Class frmDocumento
       'eui_txtTotaliCoperto
       '
       Me.eui_txtTotaliCoperto.Id = "972e4d3c-d254-40a1-afd3-5079f291dca1"
-      Me.eui_txtTotaliCoperto.Location = New System.Drawing.Point(133, 226)
+      Me.eui_txtTotaliCoperto.Location = New System.Drawing.Point(135, 424)
       Me.eui_txtTotaliCoperto.Name = "eui_txtTotaliCoperto"
       Me.eui_txtTotaliCoperto.Size = New System.Drawing.Size(113, 21)
       Me.eui_txtTotaliCoperto.TabIndex = 18
       Me.eui_txtTotaliCoperto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
       Me.eui_txtTotaliCoperto.TextEditorWidth = 107
+      Me.eui_txtTotaliCoperto.Visible = False
       '
       'Label24
       '
-      Me.Label24.Location = New System.Drawing.Point(23, 227)
+      Me.Label24.Location = New System.Drawing.Point(25, 425)
       Me.Label24.Name = "Label24"
       Me.Label24.Size = New System.Drawing.Size(72, 13)
       Me.Label24.TabIndex = 54
       Me.Label24.Text = "Totale coperto:"
+      Me.Label24.Visible = False
       '
       'eui_txtTotaliSconto
       '
       Me.eui_txtTotaliSconto.Id = "249b0cf7-9686-4ed4-894e-d297f18da089"
-      Me.eui_txtTotaliSconto.Location = New System.Drawing.Point(134, 157)
+      Me.eui_txtTotaliSconto.Location = New System.Drawing.Point(135, 189)
       Me.eui_txtTotaliSconto.Name = "eui_txtTotaliSconto"
       Me.eui_txtTotaliSconto.Size = New System.Drawing.Size(113, 21)
       Me.eui_txtTotaliSconto.TabIndex = 16
@@ -532,16 +534,17 @@ Partial Class frmDocumento
       'eui_txtTotaliServizio
       '
       Me.eui_txtTotaliServizio.Id = "719144b6-18ef-474b-b166-3c2e0bdd5832"
-      Me.eui_txtTotaliServizio.Location = New System.Drawing.Point(133, 191)
+      Me.eui_txtTotaliServizio.Location = New System.Drawing.Point(135, 399)
       Me.eui_txtTotaliServizio.Name = "eui_txtTotaliServizio"
       Me.eui_txtTotaliServizio.Size = New System.Drawing.Size(113, 21)
       Me.eui_txtTotaliServizio.TabIndex = 17
       Me.eui_txtTotaliServizio.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
       Me.eui_txtTotaliServizio.TextEditorWidth = 107
+      Me.eui_txtTotaliServizio.Visible = False
       '
       'Label22
       '
-      Me.Label22.Location = New System.Drawing.Point(23, 158)
+      Me.Label22.Location = New System.Drawing.Point(22, 189)
       Me.Label22.Name = "Label22"
       Me.Label22.Size = New System.Drawing.Size(68, 16)
       Me.Label22.TabIndex = 52
@@ -549,17 +552,18 @@ Partial Class frmDocumento
       '
       'Label23
       '
-      Me.Label23.Location = New System.Drawing.Point(23, 191)
+      Me.Label23.Location = New System.Drawing.Point(25, 399)
       Me.Label23.Name = "Label23"
       Me.Label23.Size = New System.Drawing.Size(53, 13)
       Me.Label23.TabIndex = 51
       Me.Label23.Text = "Servizio:"
+      Me.Label23.Visible = False
       '
       'eui_txtTotaleConto
       '
       Me.eui_txtTotaleConto.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.eui_txtTotaleConto.Id = "290ee552-7348-4091-bdbd-8913091330c5"
-      Me.eui_txtTotaleConto.Location = New System.Drawing.Point(511, 380)
+      Me.eui_txtTotaleConto.Location = New System.Drawing.Point(511, 358)
       Me.eui_txtTotaleConto.Name = "eui_txtTotaleConto"
       Me.eui_txtTotaleConto.Size = New System.Drawing.Size(113, 21)
       Me.eui_txtTotaleConto.TabIndex = 25
@@ -569,7 +573,7 @@ Partial Class frmDocumento
       'Label19
       '
       Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.Label19.Location = New System.Drawing.Point(422, 385)
+      Me.Label19.Location = New System.Drawing.Point(422, 363)
       Me.Label19.Name = "Label19"
       Me.Label19.Size = New System.Drawing.Size(76, 16)
       Me.Label19.TabIndex = 48
@@ -578,7 +582,7 @@ Partial Class frmDocumento
       'eui_txtTotaleImposta
       '
       Me.eui_txtTotaleImposta.Id = "1bb48929-aef4-4843-a704-974e9b2bea73"
-      Me.eui_txtTotaleImposta.Location = New System.Drawing.Point(511, 344)
+      Me.eui_txtTotaleImposta.Location = New System.Drawing.Point(511, 322)
       Me.eui_txtTotaleImposta.Name = "eui_txtTotaleImposta"
       Me.eui_txtTotaleImposta.Size = New System.Drawing.Size(113, 21)
       Me.eui_txtTotaleImposta.TabIndex = 24
@@ -588,7 +592,7 @@ Partial Class frmDocumento
       'eui_txtTotaliImponibile
       '
       Me.eui_txtTotaliImponibile.Id = "c3e2b9e8-8aa8-4f15-94cb-bd3c25128c65"
-      Me.eui_txtTotaliImponibile.Location = New System.Drawing.Point(511, 309)
+      Me.eui_txtTotaliImponibile.Location = New System.Drawing.Point(511, 287)
       Me.eui_txtTotaliImponibile.Name = "eui_txtTotaliImponibile"
       Me.eui_txtTotaliImponibile.Size = New System.Drawing.Size(113, 21)
       Me.eui_txtTotaliImponibile.TabIndex = 23
@@ -597,7 +601,7 @@ Partial Class frmDocumento
       '
       'Label20
       '
-      Me.Label20.Location = New System.Drawing.Point(422, 349)
+      Me.Label20.Location = New System.Drawing.Point(422, 327)
       Me.Label20.Name = "Label20"
       Me.Label20.Size = New System.Drawing.Size(56, 16)
       Me.Label20.TabIndex = 47
@@ -605,7 +609,7 @@ Partial Class frmDocumento
       '
       'Label21
       '
-      Me.Label21.Location = New System.Drawing.Point(422, 314)
+      Me.Label21.Location = New System.Drawing.Point(422, 292)
       Me.Label21.Name = "Label21"
       Me.Label21.Size = New System.Drawing.Size(56, 16)
       Me.Label21.TabIndex = 46
@@ -1113,19 +1117,19 @@ Partial Class frmDocumento
       '
       'dgvDettagli
       '
-      DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-      Me.dgvDettagli.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+      DataGridViewCellStyle46.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+      Me.dgvDettagli.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle46
       Me.dgvDettagli.BorderStyle = System.Windows.Forms.BorderStyle.None
       Me.dgvDettagli.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
       Me.dgvDettagli.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.clnCodice, Me.clnDescrizione, Me.clnUm, Me.clnQta, Me.clnPrezzo, Me.clnSconto, Me.clnImporto, Me.clnIva, Me.clnRepartoIva, Me.clnValoreSconto})
-      DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-      DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window
-      DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText
-      DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Orange
-      DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.ControlText
-      DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-      Me.dgvDettagli.DefaultCellStyle = DataGridViewCellStyle9
+      DataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+      DataGridViewCellStyle54.BackColor = System.Drawing.SystemColors.Window
+      DataGridViewCellStyle54.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+      DataGridViewCellStyle54.ForeColor = System.Drawing.SystemColors.ControlText
+      DataGridViewCellStyle54.SelectionBackColor = System.Drawing.Color.Orange
+      DataGridViewCellStyle54.SelectionForeColor = System.Drawing.SystemColors.ControlText
+      DataGridViewCellStyle54.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+      Me.dgvDettagli.DefaultCellStyle = DataGridViewCellStyle54
       Me.dgvDettagli.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
       Me.dgvDettagli.Location = New System.Drawing.Point(5, 2)
       Me.dgvDettagli.MultiSelect = False
@@ -1136,9 +1140,9 @@ Partial Class frmDocumento
       '
       'clnCodice
       '
-      DataGridViewCellStyle2.Format = "N0"
-      DataGridViewCellStyle2.NullValue = Nothing
-      Me.clnCodice.DefaultCellStyle = DataGridViewCellStyle2
+      DataGridViewCellStyle47.Format = "N0"
+      DataGridViewCellStyle47.NullValue = Nothing
+      Me.clnCodice.DefaultCellStyle = DataGridViewCellStyle47
       Me.clnCodice.HeaderText = "Codice"
       Me.clnCodice.Name = "clnCodice"
       Me.clnCodice.ToolTipText = "Codice"
@@ -1146,8 +1150,8 @@ Partial Class frmDocumento
       '
       'clnDescrizione
       '
-      DataGridViewCellStyle3.NullValue = Nothing
-      Me.clnDescrizione.DefaultCellStyle = DataGridViewCellStyle3
+      DataGridViewCellStyle48.NullValue = Nothing
+      Me.clnDescrizione.DefaultCellStyle = DataGridViewCellStyle48
       Me.clnDescrizione.HeaderText = "Descrizione"
       Me.clnDescrizione.Name = "clnDescrizione"
       Me.clnDescrizione.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
@@ -1163,11 +1167,11 @@ Partial Class frmDocumento
       '
       'clnQta
       '
-      DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
-      DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      DataGridViewCellStyle4.Format = "N2"
-      DataGridViewCellStyle4.NullValue = "0,00"
-      Me.clnQta.DefaultCellStyle = DataGridViewCellStyle4
+      DataGridViewCellStyle49.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+      DataGridViewCellStyle49.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+      DataGridViewCellStyle49.Format = "N2"
+      DataGridViewCellStyle49.NullValue = "0,00"
+      Me.clnQta.DefaultCellStyle = DataGridViewCellStyle49
       Me.clnQta.HeaderText = "Q.tà"
       Me.clnQta.Name = "clnQta"
       Me.clnQta.ToolTipText = "Quantità"
@@ -1175,20 +1179,20 @@ Partial Class frmDocumento
       '
       'clnPrezzo
       '
-      DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
-      DataGridViewCellStyle5.Format = "C2"
-      DataGridViewCellStyle5.NullValue = "0,00"
-      Me.clnPrezzo.DefaultCellStyle = DataGridViewCellStyle5
+      DataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+      DataGridViewCellStyle50.Format = "C2"
+      DataGridViewCellStyle50.NullValue = "0,00"
+      Me.clnPrezzo.DefaultCellStyle = DataGridViewCellStyle50
       Me.clnPrezzo.HeaderText = "Prezzo"
       Me.clnPrezzo.Name = "clnPrezzo"
       Me.clnPrezzo.ToolTipText = "Prezzo unitario"
       '
       'clnSconto
       '
-      DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
-      DataGridViewCellStyle6.Format = "N2"
-      DataGridViewCellStyle6.NullValue = "0,00"
-      Me.clnSconto.DefaultCellStyle = DataGridViewCellStyle6
+      DataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+      DataGridViewCellStyle51.Format = "N2"
+      DataGridViewCellStyle51.NullValue = "0,00"
+      Me.clnSconto.DefaultCellStyle = DataGridViewCellStyle51
       Me.clnSconto.HeaderText = "Sconto %"
       Me.clnSconto.Name = "clnSconto"
       Me.clnSconto.ToolTipText = "Sconto"
@@ -1196,11 +1200,11 @@ Partial Class frmDocumento
       '
       'clnImporto
       '
-      DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
-      DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      DataGridViewCellStyle7.Format = "C2"
-      DataGridViewCellStyle7.NullValue = "0,00"
-      Me.clnImporto.DefaultCellStyle = DataGridViewCellStyle7
+      DataGridViewCellStyle52.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+      DataGridViewCellStyle52.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+      DataGridViewCellStyle52.Format = "C2"
+      DataGridViewCellStyle52.NullValue = "0,00"
+      Me.clnImporto.DefaultCellStyle = DataGridViewCellStyle52
       Me.clnImporto.HeaderText = "Importo"
       Me.clnImporto.Name = "clnImporto"
       Me.clnImporto.ReadOnly = True
@@ -1208,10 +1212,10 @@ Partial Class frmDocumento
       '
       'clnIva
       '
-      DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
-      DataGridViewCellStyle8.Format = "N0"
-      DataGridViewCellStyle8.NullValue = "0"
-      Me.clnIva.DefaultCellStyle = DataGridViewCellStyle8
+      DataGridViewCellStyle53.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+      DataGridViewCellStyle53.Format = "N0"
+      DataGridViewCellStyle53.NullValue = "0"
+      Me.clnIva.DefaultCellStyle = DataGridViewCellStyle53
       Me.clnIva.HeaderText = "I.V.A. %"
       Me.clnIva.Name = "clnIva"
       Me.clnIva.ToolTipText = "Aliquota Iva"
@@ -1299,10 +1303,10 @@ Partial Class frmDocumento
       Me.StatusBar1.Controls.Add(Me.StatusBarControlsArea1)
       Me.StatusBar1.ControlsArea = Me.StatusBarControlsArea1
       Me.StatusBar1.Dock = System.Windows.Forms.DockStyle.Bottom
-      Me.StatusBar1.Location = New System.Drawing.Point(0, 558)
+      Me.StatusBar1.Location = New System.Drawing.Point(0, 580)
       Me.StatusBar1.Name = "StatusBar1"
       Me.StatusBar1.NotificationsArea = Me.StatusBarNotificationsArea1
-      Me.StatusBar1.Size = New System.Drawing.Size(804, 22)
+      Me.StatusBar1.Size = New System.Drawing.Size(820, 22)
       Me.StatusBar1.TabIndex = 3
       Me.StatusBar1.Text = "StatusBar1"
       '
@@ -1316,7 +1320,7 @@ Partial Class frmDocumento
       Me.StatusBarNotificationsArea1.MaximumSize = New System.Drawing.Size(0, 22)
       Me.StatusBarNotificationsArea1.MinimumSize = New System.Drawing.Size(0, 22)
       Me.StatusBarNotificationsArea1.Name = "StatusBarNotificationsArea1"
-      Me.StatusBarNotificationsArea1.Size = New System.Drawing.Size(670, 22)
+      Me.StatusBarNotificationsArea1.Size = New System.Drawing.Size(686, 22)
       Me.StatusBarNotificationsArea1.TabIndex = 1
       '
       'StatusBarPane2
@@ -1383,7 +1387,7 @@ Partial Class frmDocumento
       '
       Me.StatusBarControlsArea1.Controls.Add(Me.StatusBarPane4)
       Me.StatusBarControlsArea1.Dock = System.Windows.Forms.DockStyle.Right
-      Me.StatusBarControlsArea1.Location = New System.Drawing.Point(670, 0)
+      Me.StatusBarControlsArea1.Location = New System.Drawing.Point(686, 0)
       Me.StatusBarControlsArea1.MaximumSize = New System.Drawing.Size(0, 22)
       Me.StatusBarControlsArea1.MinimumSize = New System.Drawing.Size(0, 22)
       Me.StatusBarControlsArea1.Name = "StatusBarControlsArea1"
@@ -1476,6 +1480,7 @@ Partial Class frmDocumento
       Me.eui_txtSconto.TabIndex = 1
       Me.eui_txtSconto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
       Me.eui_txtSconto.TextEditorWidth = 58
+      Me.eui_txtSconto.Visible = False
       '
       'eui_txtServizio
       '
@@ -1486,6 +1491,7 @@ Partial Class frmDocumento
       Me.eui_txtServizio.TabIndex = 0
       Me.eui_txtServizio.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
       Me.eui_txtServizio.TextEditorWidth = 90
+      Me.eui_txtServizio.Visible = False
       '
       'Label14
       '
@@ -1494,6 +1500,7 @@ Partial Class frmDocumento
       Me.Label14.Size = New System.Drawing.Size(56, 16)
       Me.Label14.TabIndex = 35
       Me.Label14.Text = "Sconto:"
+      Me.Label14.Visible = False
       '
       'Label15
       '
@@ -1502,6 +1509,7 @@ Partial Class frmDocumento
       Me.Label15.Size = New System.Drawing.Size(53, 13)
       Me.Label15.TabIndex = 34
       Me.Label15.Text = "Servizio:"
+      Me.Label15.Visible = False
       '
       'eui_txtImposta
       '
@@ -1606,7 +1614,7 @@ Partial Class frmDocumento
       Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
       Me.BackColor = System.Drawing.SystemColors.AppWorkspace
       Me.CancelButton = Me.eui_cmdAnnulla
-      Me.ClientSize = New System.Drawing.Size(804, 580)
+      Me.ClientSize = New System.Drawing.Size(820, 602)
       Me.Controls.Add(Me.eui_cmdTastiera)
       Me.Controls.Add(Me.eui_cmdEmettiStampa)
       Me.Controls.Add(Me.eui_cmdStampa)
