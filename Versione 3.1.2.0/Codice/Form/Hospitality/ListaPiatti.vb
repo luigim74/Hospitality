@@ -146,28 +146,28 @@
                   If IsDBNull(dr.Item("Listino1")) = False Then
                      g_frmDocumento.dgvDettagli.CurrentRow.Cells(g_frmDocumento.clnPrezzo.Name).Value = dr.Item("Listino1")
                   Else
-                     g_frmDocumento.dgvDettagli.CurrentRow.Cells(g_frmDocumento.clnPrezzo.Name).Value = String.Empty
+                     g_frmDocumento.dgvDettagli.CurrentRow.Cells(g_frmDocumento.clnPrezzo.Name).Value = VALORE_ZERO
                   End If
 
                Case "Listino 2"
                   If IsDBNull(dr.Item("Listino2")) = False Then
                      g_frmDocumento.dgvDettagli.CurrentRow.Cells(g_frmDocumento.clnPrezzo.Name).Value = dr.Item("Listino2")
                   Else
-                     g_frmDocumento.dgvDettagli.CurrentRow.Cells(g_frmDocumento.clnPrezzo.Name).Value = String.Empty
+                     g_frmDocumento.dgvDettagli.CurrentRow.Cells(g_frmDocumento.clnPrezzo.Name).Value = VALORE_ZERO
                   End If
 
                Case "Listino 3"
                   If IsDBNull(dr.Item("Listino3")) = False Then
                      g_frmDocumento.dgvDettagli.CurrentRow.Cells(g_frmDocumento.clnPrezzo.Name).Value = dr.Item("Listino3")
                   Else
-                     g_frmDocumento.dgvDettagli.CurrentRow.Cells(g_frmDocumento.clnPrezzo.Name).Value = String.Empty
+                     g_frmDocumento.dgvDettagli.CurrentRow.Cells(g_frmDocumento.clnPrezzo.Name).Value = VALORE_ZERO
                   End If
 
                Case "Listino 4"
                   If IsDBNull(dr.Item("Listino4")) = False Then
                      g_frmDocumento.dgvDettagli.CurrentRow.Cells(g_frmDocumento.clnPrezzo.Name).Value = dr.Item("Listino4")
                   Else
-                     g_frmDocumento.dgvDettagli.CurrentRow.Cells(g_frmDocumento.clnPrezzo.Name).Value = String.Empty
+                     g_frmDocumento.dgvDettagli.CurrentRow.Cells(g_frmDocumento.clnPrezzo.Name).Value = VALORE_ZERO
                   End If
 
                Case Else
@@ -204,78 +204,6 @@
          cn.Close()
 
       End Try
-   End Sub
-
-   Public Sub InserisciAccessoriServiziCamera(ByVal tabella As String, ByVal tipologia As String, ByVal id As Integer)
-      '' Dichiara un oggetto connessione.
-      'Dim cn As New OleDbConnection(ConnString)
-      'Dim strDescrizione As String
-      'Dim QTA As Integer = 1
-
-      'Try
-      '   cn.Open()
-
-      '   Dim cmd As New OleDbCommand("SELECT * FROM " & tabella & " WHERE Id = " & id & " ORDER BY Id ASC", cn)
-      '   Dim dr As OleDbDataReader = cmd.ExecuteReader()
-
-
-      '   Do While dr.Read()
-
-      '      ' Indice.
-      '      'g_frmPrenCamera.lvwAddebiti.Items.Add(g_frmPrenCamera.lvwAddebiti.Items.Count)
-
-      '      ' Data.
-      '      g_frmPrenCamera.lvwAddebiti.Items.Add(Today.ToShortDateString)
-
-      '      ' Descrizione.
-      '      If IsDBNull(dr.Item("Descrizione")) = False Then
-      '         g_frmPrenCamera.lvwAddebiti.Items(g_frmPrenCamera.lvwAddebiti.Items.Count - 1).SubItems.Add(dr.Item("Descrizione"))
-      '      Else
-      '         g_frmPrenCamera.lvwAddebiti.Items(g_frmPrenCamera.lvwAddebiti.Items.Count - 1).SubItems.Add("")
-      '      End If
-
-      '      ' Stabilisce il gruppo di appartenenza.
-      '      Dim valGruppo As Short
-      '      Select Case tipologia
-      '         Case "Accessorio"
-      '            valGruppo = 1
-      '         Case "Servizio"
-      '            valGruppo = 2
-      '         Case Else ' Articoli vari
-      '            valGruppo = 0
-      '      End Select
-
-      '      ' Assegna il gruppo.
-      '      g_frmPrenCamera.lvwAddebiti.Items(g_frmPrenCamera.lvwAddebiti.Items.Count - 1).Group = g_frmPrenCamera.lvwAddebiti.Groups.Item(valGruppo)
-      '      g_frmPrenCamera.lvwAddebiti.Items(g_frmPrenCamera.lvwAddebiti.Items.Count - 1).ForeColor = Color.FromArgb(dr.Item("Colore"))
-
-      '      ' Quantità.
-      '      g_frmPrenCamera.lvwAddebiti.Items(g_frmPrenCamera.lvwAddebiti.Items.Count - 1).SubItems.Add(QTA)
-
-      '      ' Costo.
-      '      If IsDBNull(dr.Item("Costo")) = False Then
-      '         Dim val As String = CFormatta.FormattaNumeroDouble(Convert.ToDouble(dr.Item("Costo")))
-      '         g_frmPrenCamera.lvwAddebiti.Items(g_frmPrenCamera.lvwAddebiti.Items.Count - 1).SubItems.Add(val)
-      '      Else
-      '         g_frmPrenCamera.lvwAddebiti.Items(g_frmPrenCamera.lvwAddebiti.Items.Count - 1).SubItems.Add(VALORE_ZERO)
-      '      End If
-
-      '      ' Stringa per registrare loperazione effettuata dall'operatore identificato.
-      '      'strDescrizione = "(" & dr.Item("Descrizione") & ")"
-
-      '   Loop
-
-      '   ' Registra loperazione effettuata dall'operatore identificato.
-      '   'g_frmMain.RegistraOperazione(TipoOperazione.SelezionaPiatto, strDescrizione, MODULO_GESTIONE_POS)
-
-      'Catch ex As Exception
-      '   ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-      '   err.GestisciErrore(ex.StackTrace, ex.Message)
-
-      'Finally
-      '   cn.Close()
-
-      'End Try
    End Sub
 
    Public Function LeggiAliquotaIva(ByVal reparto As String) As String

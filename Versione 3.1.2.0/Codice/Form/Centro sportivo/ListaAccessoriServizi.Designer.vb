@@ -93,7 +93,7 @@ Partial Class ListaAccessoriServizi
       Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
       Me.BackColor = System.Drawing.SystemColors.AppWorkspace
       Me.CancelButton = Me.eui_cmdAnnulla
-      Me.ClientSize = New System.Drawing.Size(413, 417)
+      Me.ClientSize = New System.Drawing.Size(407, 418)
       Me.Controls.Add(Me.eui_cmdInserisci)
       Me.Controls.Add(Me.eui_cmdAnnulla)
       Me.Controls.Add(Me.lvwAccessoriServizi)

@@ -39,6 +39,9 @@
                InserisciAccessoriServizi(NOME_TABELLA, tipologia, id)
                g_frmDatiPrenRisorse.CalcolaTotaleConto()
 
+            Case "Documento"
+               InserisciAccessoriServiziDocumento(NOME_TABELLA, id)
+
          End Select
 
       Catch ex As Exception
@@ -252,5 +255,75 @@
       End Try
    End Sub
 
+   Public Sub InserisciAccessoriServiziDocumento(ByVal tabella As String, ByVal id As Integer)
+      ' Dichiara un oggetto connessione.
+      Dim cn As New OleDbConnection(ConnString)
+      Dim strDescrizione As String
+      Dim QTA As Integer = 1
+
+      Try
+         cn.Open()
+
+         Dim cmd As New OleDbCommand("SELECT * FROM " & tabella & " WHERE Id = " & id & " ORDER BY Id ASC", cn)
+         Dim dr As OleDbDataReader = cmd.ExecuteReader()
+
+         Do While dr.Read()
+            ' Codice.
+            If IsDBNull(dr.Item("Id")) = False Then
+               g_frmDocumento.dgvDettagli.CurrentRow.Cells(g_frmDocumento.clnCodice.Name).Value = dr.Item("Id")
+            Else
+               g_frmDocumento.dgvDettagli.CurrentRow.Cells(g_frmDocumento.clnCodice.Name).Value = String.Empty
+            End If
+
+            ' Descrizione.
+            If IsDBNull(dr.Item("Descrizione")) = False Then
+               g_frmDocumento.dgvDettagli.CurrentRow.Cells(g_frmDocumento.clnDescrizione.Name).Value = dr.Item("Descrizione")
+            Else
+               g_frmDocumento.dgvDettagli.CurrentRow.Cells(g_frmDocumento.clnDescrizione.Name).Value = String.Empty
+            End If
+
+            ' Unità di misura.
+            g_frmDocumento.dgvDettagli.CurrentRow.Cells(g_frmDocumento.clnUm.Name).Value = String.Empty
+
+            ' Quantità.
+            g_frmDocumento.dgvDettagli.CurrentRow.Cells(g_frmDocumento.clnQta.Name).Value = "1,00"
+
+            ' Listino.
+            If IsDBNull(dr.Item("Costo")) = False Then
+               g_frmDocumento.dgvDettagli.CurrentRow.Cells(g_frmDocumento.clnPrezzo.Name).Value = dr.Item("Costo")
+            Else
+               g_frmDocumento.dgvDettagli.CurrentRow.Cells(g_frmDocumento.clnPrezzo.Name).Value = VALORE_ZERO
+            End If
+
+            ' Sconto %.
+            g_frmDocumento.dgvDettagli.CurrentRow.Cells(g_frmDocumento.clnSconto.Name).Value = VALORE_ZERO
+
+            ' Importo.
+            g_frmDocumento.dgvDettagli.CurrentRow.Cells(g_frmDocumento.clnImporto.Name).Value = g_frmDocumento.dgvDettagli.CurrentRow.Cells(g_frmDocumento.clnPrezzo.Name).Value
+
+            ' TODO: Inserire Aliquota Iva.
+            'If IsDBNull(dr.Item("AliquotaIva")) = False Then
+            '   g_frmDocumento.dgvDettagli.CurrentRow.Cells(g_frmDocumento.clnIva.Name).Value = LeggiAliquotaIva(dr.Item("AliquotaIva"))
+            'Else
+            g_frmDocumento.dgvDettagli.CurrentRow.Cells(g_frmDocumento.clnIva.Name).Value = AliquotaIvaCentroSportivo
+            'End If
+
+            ' Stringa per registrare loperazione effettuata dall'operatore identificato.
+            'strDescrizione = "(" & dr.Item("Descrizione") & ")"
+
+         Loop
+
+         ' Registra loperazione effettuata dall'operatore identificato.
+         'g_frmMain.RegistraOperazione(TipoOperazione.SelezionaPiatto, strDescrizione, MODULO_GESTIONE_POS)
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      Finally
+         cn.Close()
+
+      End Try
+   End Sub
 
 End Class

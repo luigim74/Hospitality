@@ -2081,3 +2081,30 @@ Nome parametro: index"
    in Hospitality_Solution.frmDocumento.SalvaDocumento()"
 "
 "
+"*** 24/12/2017 - 15:44:37 ***"
+"- DESCRIZIONE ERRORE: Riferimento a un oggetto non impostato su un'istanza di oggetto."
+"- NOME PROCEDURA:    in Hospitality_Solution.frmDocumento.SalvaDocumento()"
+"
+"
+"*** 25/12/2017 - 14:50:33 ***"
+"- DESCRIZIONE ERRORE: Impossibile aggiungere la quantità di dati desiderata. Inserire o incollare meno dati."
+"- NOME PROCEDURA:    in System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   in System.Data.OleDb.OleDbCommand.ExecuteNonQuery()
+   in Hospitality_Solution.Documenti.InserisciDati(String tabella)"
+"
+"
+"*** 25/12/2017 - 17:00:35 ***"
+"- DESCRIZIONE ERRORE: Riferimento a un oggetto non impostato su un'istanza di oggetto."
+"- NOME PROCEDURA:    in Hospitality_Solution.PlanningCamere.dgvPrenotazioni_CurrentCellChanged(Object sender, EventArgs e) in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Hotel\PlanningCamere.vb:riga 1137
+   in System.Windows.Forms.DataGridView.OnCurrentCellChanged(EventArgs e)
+   in System.Windows.Forms.DataGridView.SetCurrentCellAddressCore(Int32 columnIndex, Int32 rowIndex, Boolean setAnchorCellAddress, Boolean validateCurrentCell, Boolean throughMouseClick)
+   in System.Windows.Forms.DataGridView.set_CurrentCell(DataGridViewCell value)
+   in System.Windows.Forms.DataGridView.OnClearingColumns()
+   in System.Windows.Forms.DataGridViewColumnCollection.Clear()
+   in Hospitality_Solution.PlanningCamere.CaricaCalendario(Int32 anno) in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Hotel\PlanningCamere.vb:riga 331"
+"
+"

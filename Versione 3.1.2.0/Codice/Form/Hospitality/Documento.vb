@@ -180,104 +180,104 @@ Public Class frmDocumento
 
          End Select
 
-         ' TODO: GESTIONE DOCUMENTI - MODIFICARE!
-         'Dim valSospeso As Double = Convert.ToDouble(g_frmContoPos.txtSospeso.Text) + Convert.ToDouble(g_frmContoPos.txtCartaCredito.Text)
-         'Dim valDaPagare As Double = Convert.ToDouble(g_frmContoPos.netBtn_DaPagare.TextButton)
+            ' TODO: GESTIONE DOCUMENTI - MODIFICARE!
+            'Dim valSospeso As Double = Convert.ToDouble(g_frmContoPos.txtSospeso.Text) + Convert.ToDouble(g_frmContoPos.txtCartaCredito.Text)
+            'Dim valDaPagare As Double = Convert.ToDouble(g_frmContoPos.netBtn_DaPagare.TextButton)
 
-         eui_txtNumero.Text = NumeroDocumento.ToString
-         eui_txtAnno.Text = Today.Year.ToString
-         eui_dtpData.Text = Today.ToString
-         eui_txtOra.Text = Today.Hour.ToString
+            eui_txtNumero.Text = NumeroDocumento.ToString
+            eui_txtAnno.Text = Today.Year.ToString
+            eui_dtpData.Text = Today.ToString
+         eui_txtOra.Text = TimeOfDay.Hour.ToString & ":" & TimeOfDay.Minute.ToString
          eui_cmbTipoDocumento.Text = tipoDocumento
 
-         eui_cmbStatoDocumento.Text = "Bozza"
-         eui_cmbCausaleDocumento.Text = "Vendita"
+            eui_cmbStatoDocumento.Text = "Bozza"
+            eui_cmbCausaleDocumento.Text = "Vendita"
 
-         'Select Case tipoCliente
-         '   Case Cliente.Azienda
-         '      ' Viene aggiunta la lettera A per identificare le Aziende.
-         '      ' Codice aggiunto dopo la creazione della nuova anagrafica Aziende.
-         '      .IdCliente = "A" & idCliente
-         '   Case Cliente.Privato
-         '      ' ID normale.
-         '      .IdCliente = idCliente
-         'End Select
-         'If g_frmContoPos.eui_cmdCliente.Text = "Seleziona cliente" Then
-         '   eui_cmbClienteCognome.Text = String.Empty
-         '   eui_txtClienteNome.Text = String.Empty
-         'Else
-         '   eui_cmbClienteCognome.Text = g_frmContoPos.eui_cmdCliente.Text
-         '   eui_txtClienteNome.Text = String.Empty
-         'End If
+            'Select Case tipoCliente
+            '   Case Cliente.Azienda
+            '      ' Viene aggiunta la lettera A per identificare le Aziende.
+            '      ' Codice aggiunto dopo la creazione della nuova anagrafica Aziende.
+            '      .IdCliente = "A" & idCliente
+            '   Case Cliente.Privato
+            '      ' ID normale.
+            '      .IdCliente = idCliente
+            'End Select
+            'If g_frmContoPos.eui_cmdCliente.Text = "Seleziona cliente" Then
+            '   eui_cmbClienteCognome.Text = String.Empty
+            '   eui_txtClienteNome.Text = String.Empty
+            'Else
+            '   eui_cmbClienteCognome.Text = g_frmContoPos.eui_cmdCliente.Text
+            '   eui_txtClienteNome.Text = String.Empty
+            'End If
 
-         'eui_txtIndirizzo.Text = g_frmContoPos.txtIndirizzo.Text
-         'eui_txtCap.Text = FormattaApici(g_frmContoPos.txtCap.Text)
-         'eui_txtCittà.Text = FormattaApici(g_frmContoPos.txtCittà.Text)
-         'eui_txtProvincia.Text = FormattaApici(g_frmContoPos.txtProv.Text)
-         'eui_txtPartitaIva.Text = g_frmContoPos.txtPIva.Text
-         'eui_txtCodiceFiscale.Text = String.Empty
+            'eui_txtIndirizzo.Text = g_frmContoPos.txtIndirizzo.Text
+            'eui_txtCap.Text = FormattaApici(g_frmContoPos.txtCap.Text)
+            'eui_txtCittà.Text = FormattaApici(g_frmContoPos.txtCittà.Text)
+            'eui_txtProvincia.Text = FormattaApici(g_frmContoPos.txtProv.Text)
+            'eui_txtPartitaIva.Text = g_frmContoPos.txtPIva.Text
+            'eui_txtCodiceFiscale.Text = String.Empty
 
-         '.CodAzienda = String.Empty
-         '.Coperto = CFormatta.FormattaNumeroDouble(g_frmContoPos.txtCoperto.Text)
-         'eui_txtServizio.Text = VALORE_ZERO
-         'eui_txtSconto.Text = VALORE_ZERO
-         '.BuoniPasto = CFormatta.FormattaNumeroDouble(g_frmContoPos.txtBuoni.Text)
-         '.BuoniPastoIncassare = CFormatta.FormattaNumeroDouble(g_frmContoPos.txtBuoni.Text)
-         '.Chiuso = "No"
-         '.Note = ""
+            '.CodAzienda = String.Empty
+            '.Coperto = CFormatta.FormattaNumeroDouble(g_frmContoPos.txtCoperto.Text)
+            'eui_txtServizio.Text = VALORE_ZERO
+            'eui_txtSconto.Text = VALORE_ZERO
+            '.BuoniPasto = CFormatta.FormattaNumeroDouble(g_frmContoPos.txtBuoni.Text)
+            '.BuoniPastoIncassare = CFormatta.FormattaNumeroDouble(g_frmContoPos.txtBuoni.Text)
+            '.Chiuso = "No"
+            '.Note = ""
 
-         'If g_frmContoPos.txtCartaCredito.Text <> VALORE_ZERO Then
-         '   eui_cmbTipoPagamento.Text = g_frmContoPos.eui_cmdTipoPagamento.Text ' & ": € " & CFormatta.FormattaNumeroDouble(valSospeso)
-         'Else
-         '   eui_cmbTipoPagamento.Text = "Contanti"
-         'End If
+            'If g_frmContoPos.txtCartaCredito.Text <> VALORE_ZERO Then
+            '   eui_cmbTipoPagamento.Text = g_frmContoPos.eui_cmdTipoPagamento.Text ' & ": € " & CFormatta.FormattaNumeroDouble(valSospeso)
+            'Else
+            '   eui_cmbTipoPagamento.Text = "Contanti"
+            'End If
 
-         '.Tavolo = g_frmContoPos.nomeTavoloDoc
-         '.Cameriere = g_frmContoPos.nomeCameriereDoc
-         '.Sospeso = CFormatta.FormattaNumeroDouble(valSospeso)
-         '.SospesoIncassare = CFormatta.FormattaNumeroDouble(valSospeso)
-         'eui_txtTotaleDocumento.Text = CFormatta.FormattaNumeroDouble(Convert.ToDouble(valDaPagare))
+            '.Tavolo = g_frmContoPos.nomeTavoloDoc
+            '.Cameriere = g_frmContoPos.nomeCameriereDoc
+            '.Sospeso = CFormatta.FormattaNumeroDouble(valSospeso)
+            '.SospesoIncassare = CFormatta.FormattaNumeroDouble(valSospeso)
+            'eui_txtTotaleDocumento.Text = CFormatta.FormattaNumeroDouble(Convert.ToDouble(valDaPagare))
 
-         'If g_frmContoPos.tipoDocumento = TIPO_DOC_FF Then
-         '   ' Calcola l'IVA.
-         '   Dim valImposta As Double
-         '   Dim valImponibile As Double
-         '   If IsNumeric(g_frmContoPos.txtIva.Text) = True Then
+            'If g_frmContoPos.tipoDocumento = TIPO_DOC_FF Then
+            '   ' Calcola l'IVA.
+            '   Dim valImposta As Double
+            '   Dim valImponibile As Double
+            '   If IsNumeric(g_frmContoPos.txtIva.Text) = True Then
 
-         '      Dim valCoefficiente As Double
-         '      Select Case g_frmContoPos.txtIva.Text
-         '         Case "22,00"
-         '            valCoefficiente = 1.22
-         '         Case "21,00"
-         '            valCoefficiente = 1.21
-         '         Case "20,00"
-         '            valCoefficiente = 1.2
-         '         Case "10,00"
-         '            valCoefficiente = 1.1
-         '         Case "4,00"
-         '            valCoefficiente = 1.04
-         '         Case Else
-         '            valCoefficiente = 0.0
-         '      End Select
+            '      Dim valCoefficiente As Double
+            '      Select Case g_frmContoPos.txtIva.Text
+            '         Case "22,00"
+            '            valCoefficiente = 1.22
+            '         Case "21,00"
+            '            valCoefficiente = 1.21
+            '         Case "20,00"
+            '            valCoefficiente = 1.2
+            '         Case "10,00"
+            '            valCoefficiente = 1.1
+            '         Case "4,00"
+            '            valCoefficiente = 1.04
+            '         Case Else
+            '            valCoefficiente = 0.0
+            '      End Select
 
-         '      If valCoefficiente <> 0.0 Then
-         '         valImponibile = (valDaPagare / valCoefficiente)
-         '      Else
-         '         valImponibile = 0.0
-         '      End If
+            '      If valCoefficiente <> 0.0 Then
+            '         valImponibile = (valDaPagare / valCoefficiente)
+            '      Else
+            '         valImponibile = 0.0
+            '      End If
 
-         '      valImposta = CalcolaPercentuale(valImponibile, Convert.ToDouble(g_frmContoPos.txtIva.Text))
-         '   Else
-         '      valImposta = 0.0
-         '      g_frmContoPos.txtIva.Text = VALORE_ZERO
-         '   End If
+            '      valImposta = CalcolaPercentuale(valImponibile, Convert.ToDouble(g_frmContoPos.txtIva.Text))
+            '   Else
+            '      valImposta = 0.0
+            '      g_frmContoPos.txtIva.Text = VALORE_ZERO
+            '   End If
 
-         '   'Dim valImponibile As Double = (valDaPagare - valImposta)
-         '   eui_txtImponibile.Text = CFormatta.FormattaNumeroDouble(valImponibile)
-         '   'eui_txtIva.Text = g_frmContoPos.txtIva.Text
-         '   eui_txtImposta.Text = CFormatta.FormattaNumeroDouble(valImposta)
-         'Else
-         eui_txtImponibile.Text = VALORE_ZERO
+            '   'Dim valImponibile As Double = (valDaPagare - valImposta)
+            '   eui_txtImponibile.Text = CFormatta.FormattaNumeroDouble(valImponibile)
+            '   'eui_txtIva.Text = g_frmContoPos.txtIva.Text
+            '   eui_txtImposta.Text = CFormatta.FormattaNumeroDouble(valImposta)
+            'Else
+            eui_txtImponibile.Text = VALORE_ZERO
          '   '.Iva = VALORE_ZERO
          eui_txtImposta.Text = VALORE_ZERO
          'End If
@@ -653,7 +653,7 @@ Public Class frmDocumento
       End Try
    End Sub
 
-   ' TODO: DA TERMINARE!!!
+   ' TODO! DA TERMINARE!!
    Private Function SalvaDocumento() As Boolean
       Try
          With Doc
@@ -1447,6 +1447,11 @@ Public Class frmDocumento
          ' Salva il documento e chiude la finestra.
          If SalvaDocumento() = True Then
             Me.Close()
+
+            ' Se aperto aggiorna l'elenco documenti.
+            If IsNothing(g_frmDocumenti) = False Then
+               g_frmDocumenti.AggiornaDati()
+            End If
          End If
 
       Catch ex As Exception
@@ -1502,9 +1507,30 @@ Public Class frmDocumento
 
    End Sub
 
-   Private Sub eui_cmdInsAccessoriServizi_Click(sender As Object, e As EventArgs) Handles eui_cmdInsAccessoriServizi.Click
-      'Dim i As Integer = g_frmDocumento.dgvDettagli.Rows.Count
-      'g_frmDocumento.dgvDettagli.Rows.Insert(i - 1, 1)
+   Private Sub eui_cmdInsAccessori_Click(sender As Object, e As EventArgs) Handles eui_cmdInsAccessori.Click
+      Try
+         Dim frm As New ListaAccessoriServizi("Accessorio")
+         frm.Tag = "Documento"
+         frm.ShowDialog()
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
+   End Sub
+
+   Private Sub eui_cmdInsiServizi_Click(sender As Object, e As EventArgs) Handles eui_cmdInsiServizi.Click
+      Try
+         Dim frm As New ListaAccessoriServizi("Servizio")
+         frm.Tag = "Documento"
+         frm.ShowDialog()
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
    End Sub
 
    Private Sub eui_tpcDocumento_SelectedTabPageChanged(sender As Object, e As TabPageChangedEventArgs) Handles eui_tpcDocumento.SelectedTabPageChanged
@@ -1856,4 +1882,10 @@ Public Class frmDocumento
    Private Sub eui_txtTotaliCarte_LostFocus(sender As Object, e As EventArgs) Handles eui_txtTotaliCarte.LostFocus
       sender.Text = CFormatta.FormattaNumeroDouble(Convert.ToDouble(sender.Text))
    End Sub
+
+   Private Sub eui_cmdTastiera_Click(sender As Object, e As EventArgs) Handles eui_cmdTastiera.Click
+      AvviaTastieraVirtuale(Me.Handle)
+   End Sub
+
+
 End Class
