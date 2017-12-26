@@ -301,7 +301,7 @@
             ' Importo.
             g_frmDocumento.dgvDettagli.CurrentRow.Cells(g_frmDocumento.clnImporto.Name).Value = g_frmDocumento.dgvDettagli.CurrentRow.Cells(g_frmDocumento.clnPrezzo.Name).Value
 
-            ' TODO: Inserire Aliquota Iva.
+            ' TODO_A: Inserire Aliquota Iva.
             'If IsDBNull(dr.Item("AliquotaIva")) = False Then
             '   g_frmDocumento.dgvDettagli.CurrentRow.Cells(g_frmDocumento.clnIva.Name).Value = LeggiAliquotaIva(dr.Item("AliquotaIva"))
             'Else

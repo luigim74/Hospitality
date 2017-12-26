@@ -16,6 +16,7 @@ Public Class frmDocumento
    Const TIPO_DOC_PF As String = "Proforma"
    Const TIPO_DOC_CO As String = "Conto"
 
+   Private idDocumento As String
    Private tipoDocumento As String
    Private nomeFinestra As String
 
@@ -40,11 +41,13 @@ Public Class frmDocumento
    ''' </summary>
    ''' <param name="nomeWnd">Nome della finestra che richiama il metodo.</param>
    ''' <param name="documento">Il tipo di documento da aprire.</param>
-   Public Sub New(ByVal nomeWnd As String, ByVal documento As String)
+   ''' <param name="id">Il codice del documento da aprire.</param>
+   Public Sub New(ByVal nomeWnd As String, ByVal documento As String, ByVal id As String)
 
       ' Chiamata richiesta dalla finestra di progettazione.
       InitializeComponent()
 
+      idDocumento = id
       tipoDocumento = documento
       nomeFinestra = nomeWnd
 
@@ -160,12 +163,13 @@ Public Class frmDocumento
       End Try
    End Sub
 
-   ' TODO: Utilizzare per l'apertura dei documenti dall'elenco documenti.
+   ''' <summary>
+   ''' Crea un nuovo documento.
+   ''' </summary>
    Private Sub NuovoDocumento()
       Try
-         ' SHEDA GENERALE.
 
-         ' TODO: GESTIONE DOCUMENTI - MODIFICARE!
+         ' SHEDA GENERALE.
          Dim NumeroDocumento As Integer
 
          Select Case tipoDocumento
@@ -180,190 +184,20 @@ Public Class frmDocumento
 
          End Select
 
-            ' TODO: GESTIONE DOCUMENTI - MODIFICARE!
-            'Dim valSospeso As Double = Convert.ToDouble(g_frmContoPos.txtSospeso.Text) + Convert.ToDouble(g_frmContoPos.txtCartaCredito.Text)
-            'Dim valDaPagare As Double = Convert.ToDouble(g_frmContoPos.netBtn_DaPagare.TextButton)
-
-            eui_txtNumero.Text = NumeroDocumento.ToString
-            eui_txtAnno.Text = Today.Year.ToString
-            eui_dtpData.Text = Today.ToString
+         eui_txtNumero.Text = NumeroDocumento.ToString
+         eui_txtAnno.Text = Today.Year.ToString
+         eui_dtpData.Text = Today.ToString
          eui_txtOra.Text = TimeOfDay.Hour.ToString & ":" & TimeOfDay.Minute.ToString
          eui_cmbTipoDocumento.Text = tipoDocumento
 
-            eui_cmbStatoDocumento.Text = "Bozza"
-            eui_cmbCausaleDocumento.Text = "Vendita"
+         eui_cmbStatoDocumento.Text = "Bozza"
+         eui_cmbCausaleDocumento.Text = "Vendita"
 
-            'Select Case tipoCliente
-            '   Case Cliente.Azienda
-            '      ' Viene aggiunta la lettera A per identificare le Aziende.
-            '      ' Codice aggiunto dopo la creazione della nuova anagrafica Aziende.
-            '      .IdCliente = "A" & idCliente
-            '   Case Cliente.Privato
-            '      ' ID normale.
-            '      .IdCliente = idCliente
-            'End Select
-            'If g_frmContoPos.eui_cmdCliente.Text = "Seleziona cliente" Then
-            '   eui_cmbClienteCognome.Text = String.Empty
-            '   eui_txtClienteNome.Text = String.Empty
-            'Else
-            '   eui_cmbClienteCognome.Text = g_frmContoPos.eui_cmdCliente.Text
-            '   eui_txtClienteNome.Text = String.Empty
-            'End If
-
-            'eui_txtIndirizzo.Text = g_frmContoPos.txtIndirizzo.Text
-            'eui_txtCap.Text = FormattaApici(g_frmContoPos.txtCap.Text)
-            'eui_txtCittà.Text = FormattaApici(g_frmContoPos.txtCittà.Text)
-            'eui_txtProvincia.Text = FormattaApici(g_frmContoPos.txtProv.Text)
-            'eui_txtPartitaIva.Text = g_frmContoPos.txtPIva.Text
-            'eui_txtCodiceFiscale.Text = String.Empty
-
-            '.CodAzienda = String.Empty
-            '.Coperto = CFormatta.FormattaNumeroDouble(g_frmContoPos.txtCoperto.Text)
-            'eui_txtServizio.Text = VALORE_ZERO
-            'eui_txtSconto.Text = VALORE_ZERO
-            '.BuoniPasto = CFormatta.FormattaNumeroDouble(g_frmContoPos.txtBuoni.Text)
-            '.BuoniPastoIncassare = CFormatta.FormattaNumeroDouble(g_frmContoPos.txtBuoni.Text)
-            '.Chiuso = "No"
-            '.Note = ""
-
-            'If g_frmContoPos.txtCartaCredito.Text <> VALORE_ZERO Then
-            '   eui_cmbTipoPagamento.Text = g_frmContoPos.eui_cmdTipoPagamento.Text ' & ": € " & CFormatta.FormattaNumeroDouble(valSospeso)
-            'Else
-            '   eui_cmbTipoPagamento.Text = "Contanti"
-            'End If
-
-            '.Tavolo = g_frmContoPos.nomeTavoloDoc
-            '.Cameriere = g_frmContoPos.nomeCameriereDoc
-            '.Sospeso = CFormatta.FormattaNumeroDouble(valSospeso)
-            '.SospesoIncassare = CFormatta.FormattaNumeroDouble(valSospeso)
-            'eui_txtTotaleDocumento.Text = CFormatta.FormattaNumeroDouble(Convert.ToDouble(valDaPagare))
-
-            'If g_frmContoPos.tipoDocumento = TIPO_DOC_FF Then
-            '   ' Calcola l'IVA.
-            '   Dim valImposta As Double
-            '   Dim valImponibile As Double
-            '   If IsNumeric(g_frmContoPos.txtIva.Text) = True Then
-
-            '      Dim valCoefficiente As Double
-            '      Select Case g_frmContoPos.txtIva.Text
-            '         Case "22,00"
-            '            valCoefficiente = 1.22
-            '         Case "21,00"
-            '            valCoefficiente = 1.21
-            '         Case "20,00"
-            '            valCoefficiente = 1.2
-            '         Case "10,00"
-            '            valCoefficiente = 1.1
-            '         Case "4,00"
-            '            valCoefficiente = 1.04
-            '         Case Else
-            '            valCoefficiente = 0.0
-            '      End Select
-
-            '      If valCoefficiente <> 0.0 Then
-            '         valImponibile = (valDaPagare / valCoefficiente)
-            '      Else
-            '         valImponibile = 0.0
-            '      End If
-
-            '      valImposta = CalcolaPercentuale(valImponibile, Convert.ToDouble(g_frmContoPos.txtIva.Text))
-            '   Else
-            '      valImposta = 0.0
-            '      g_frmContoPos.txtIva.Text = VALORE_ZERO
-            '   End If
-
-            '   'Dim valImponibile As Double = (valDaPagare - valImposta)
-            '   eui_txtImponibile.Text = CFormatta.FormattaNumeroDouble(valImponibile)
-            '   'eui_txtIva.Text = g_frmContoPos.txtIva.Text
-            '   eui_txtImposta.Text = CFormatta.FormattaNumeroDouble(valImposta)
-            'Else
-            eui_txtImponibile.Text = VALORE_ZERO
-         '   '.Iva = VALORE_ZERO
+         eui_txtImponibile.Text = VALORE_ZERO
          eui_txtImposta.Text = VALORE_ZERO
-         'End If
-
          eui_txtTotaleDocumento.Text = VALORE_ZERO
 
-         '.InserisciDati(TAB_DOCUMENTI)
-
          ' SHEDA DETTAGLI.
-
-         'If g_frmContoPos.eui_cmdTipoConto.Text.ToUpper = "UNICO" Then
-         '   ' SALVA I DETTAGLI PER IL COPERTO.
-         '   If g_frmContoPos.txtCoperto.Text <> VALORE_ZERO Then
-         '      ' Codice, Descrizione, Unità di misura, Quantità, Prezzo, Sconto, Totale.
-         '      dgvDettagli.Rows.Insert(dgvDettagli.Rows.Count - 1,
-         '                           String.Empty,
-         '                           "Coperto",
-         '                           String.Empty,
-         '                           NumCopertiRistorante,
-         '                           CopertoRistorante,
-         '                           VALORE_ZERO,
-         '                           CFormatta.FormattaNumeroDouble(g_frmContoPos.txtCoperto.Text))
-
-         '   End If
-         'End If
-
-         'Dim i As Integer
-         'For i = 0 To g_frmContoPos.lstvDettagli.Items.Count - 1
-         '   'Dim colore As Color = lstvDettagli.Items(i).BackColor
-         '   'If colore.Equals(Color.LightCoral) = False Then
-
-         '   ' Codice, Descrizione, Unità di misura, Quantità, Prezzo, Sconto, Totale.
-         '   dgvDettagli.Rows.Insert(dgvDettagli.Rows.Count - 1,
-         '                           String.Empty,
-         '                           FormattaApici(g_frmContoPos.lstvDettagli.Items(i).SubItems(2).Text),
-         '                           String.Empty,
-         '                           g_frmContoPos.lstvDettagli.Items(i).SubItems(1).Text,
-         '                           VALORE_ZERO,
-         '                           VALORE_ZERO,
-         '                           g_frmContoPos.lstvDettagli.Items(i).SubItems(3).Text)
-
-         '   'End If
-         'Next
-
-
-
-         'If g_frmContoPos.eui_cmdTipoConto.Text.ToUpper <> "ALLA ROMANA" Then
-         '   ' SALVA I DETTAGLI PER LO SCONTO.
-         '   If g_frmContoPos.txtValSconto.Text <> VALORE_ZERO Then
-
-         '      ' Codice, Descrizione, Unità di misura, Quantità, Prezzo, Sconto, Totale.
-         '      dgvDettagli.Rows.Insert(dgvDettagli.Rows.Count - 1,
-         '                           String.Empty,
-         '                           "Sconto",
-         '                           String.Empty,
-         '                           "1",
-         '                           VALORE_ZERO,
-         '                           VALORE_ZERO,
-         '                           g_frmContoPos.valSconto)
-
-         'End If
-         'End If
-
-         'If eui_cmdTipoConto.Text.ToUpper <> "ALLA ROMANA" Then
-         '   ' SALVA I DETTAGLI PER IL SERVIZIO.
-         '   If Doc.Servizio <> VALORE_ZERO Then
-         '      ' Avvia una transazione.
-         '      tr = cn.BeginTransaction(IsolationLevel.ReadCommitted)
-         '      ' Crea la stringa di eliminazione.
-         '      sql = String.Format("INSERT INTO {0} (RifDoc, Descrizione, Quantità, ImportoNetto) " &
-         '                                    "VALUES(@RifDoc, @Descrizione, @Quantità, @ImportoNetto)", TAB_DETTAGLI_DOC)
-         '      ' Crea il comando per la connessione corrente.
-         '      Dim cmdInsert As New OleDbCommand(sql, cn, tr)
-         '      cmdInsert.Parameters.Add("@RifDoc", LeggiUltimoRecord(TAB_DOC))
-         '      cmdInsert.Parameters.Add("@Descrizione", "Servizio")
-         '      cmdInsert.Parameters.Add("@Quantità", "1")
-         '      cmdInsert.Parameters.Add("@ImportoNetto", Doc.Servizio)
-         '      ' Esegue il comando.
-         '      Dim Record As Integer = cmdInsert.ExecuteNonQuery()
-         '      ' Conferma transazione.
-         '      tr.Commit()
-         '   End If
-         'End If
-
-         ' Salva il Numero del prossimo documento da stampare.
-         'SalvaNumeroDocFiscaleConfig(TAB_DOC, tipoDocumento, NumeroDocumento)
 
          ' SHEDA TOTALI.
          eui_txtTotaliRep1ImponibileLordo.Text = VALORE_ZERO
@@ -394,7 +228,7 @@ Public Class frmDocumento
          eui_txtTotaleImposta.Text = VALORE_ZERO
          eui_txtTotaleConto.Text = VALORE_ZERO
 
-         ' Note.
+         ' SCHEDA NOTE.
          eui_txtNote.Text = String.Empty
 
       Catch ex As Exception
@@ -404,10 +238,53 @@ Public Class frmDocumento
       End Try
    End Sub
 
-   Private Sub LeggiDatiConto()
+   ''' <summary>
+   ''' Modifica i dati del documento selezionato.
+   ''' </summary>
+   Private Sub ModificaDocumento()
       Try
-         ' SHEDA GENERALE.
+         With Doc
+            ' Visualizza i dati nei rispettivi campi.
+            .LeggiDati(TAB_DOCUMENTI, idDocumento)
 
+            ' Assegna i dati dei campi della classe alle caselle di testo.
+
+            ' Documento.
+            eui_txtNumero.Text = .Numero
+            eui_cmbTipoDocumento.Text = .Tipo
+            eui_txtAnno.Text = .Anno
+            eui_dtpData.Value = .Data
+            eui_txtOra.Text = .Ora
+            eui_cmbStatoDocumento.Text = .Stato
+            eui_cmbCausaleDocumento.Text = .Causale
+
+            ' Cliente.
+            eui_txtIdCliente.Text = .IdCliente
+            eui_cmbClienteCognome.Text = .Cliente
+            eui_txtIndirizzo.Text = .Indirizzo
+            eui_txtCap.Text = .Cap
+            eui_txtCittà.Text = .Città
+            eui_txtProvincia.Text = .Provincia
+            eui_txtPartitaIva.Text = .PIva
+            eui_txtCodiceFiscale.Text = .CodFiscale
+
+            ' Documento
+            eui_txtTotaliSconto.Text = .Sconto
+            eui_txtTotaliContanti.Text = .Contanti
+            eui_txtTotaliCarte.Text = .Carte
+            eui_txtTotaliBuoni.Text = .BuoniPasto
+            eui_txtTotaliBuoni.Text = .BuoniPastoIncassare
+            eui_txtNote.Text = .Note
+            eui_cmbTipoPagamento.Text = .TipoPagamento
+
+            eui_txtTavolo.Text = .Tavolo
+            eui_txtCameriere.Text = .Cameriere
+            eui_txtTotaliSospeso.Text = .Sospeso
+            eui_txtTotaleDocumento.Text = .TotDoc
+
+         End With
+
+         ' SHEDA GENERALE.
          Dim numeroDocumento As Integer
          Dim statoDocumento As String
          Dim causaleDocumento As String
@@ -494,28 +371,7 @@ Public Class frmDocumento
 
             If IsNumeric(g_frmContoPos.txtIva.Text) = True Then
 
-               'Dim valCoefficiente As Double
-               'Select Case g_frmContoPos.txtIva.Text
-               '   Case "22,00"
-               '      valCoefficiente = 1.22
-               '   Case "21,00"
-               '      valCoefficiente = 1.21
-               '   Case "20,00"
-               '      valCoefficiente = 1.2
-               '   Case "10,00"
-               '      valCoefficiente = 1.1
-               '   Case "4,00"
-               '      valCoefficiente = 1.04
-               '   Case Else
-               '      valCoefficiente = 0.0
-               'End Select
-
-               'If valCoefficiente <> 0.0 Then
-               valImponibile = CalcolaImponibileIva(g_frmContoPos.Text, valDaPagare) '(valDaPagare / valCoefficiente)
-               'Else
-               '   valImponibile = 0.0
-               'End If
-
+               valImponibile = CalcolaImponibileIva(g_frmContoPos.Text, valDaPagare)
                valImposta = CalcolaPercentuale(valImponibile, Convert.ToDouble(g_frmContoPos.txtIva.Text))
             Else
                valImposta = 0.0
@@ -653,7 +509,237 @@ Public Class frmDocumento
       End Try
    End Sub
 
-   ' TODO! DA TERMINARE!!
+   Private Sub LeggiDatiConto()
+      Try
+         ' SHEDA GENERALE.
+         Dim numeroDocumento As Integer
+         Dim statoDocumento As String
+         Dim causaleDocumento As String
+
+         Select Case tipoDocumento
+            Case TIPO_DOC_CO, TIPO_DOC_PF
+               numeroDocumento = LeggiNumeroMax(TAB_DOCUMENTI, tipoDocumento) + 1
+               statoDocumento = "Aperto"
+               causaleDocumento = "Conto"
+
+            Case TIPO_DOC_PF
+               numeroDocumento = LeggiNumeroMax(TAB_DOCUMENTI, tipoDocumento) + 1
+               statoDocumento = "Bozza"
+               causaleDocumento = "Conto Proforma"
+
+            Case TIPO_DOC_RF, TIPO_DOC_FF
+               numeroDocumento = LeggiNumeroDocFiscaleConfig(TAB_DOCUMENTI, tipoDocumento)
+               statoDocumento = "Bozza"
+               causaleDocumento = "Vendita"
+
+            Case TIPO_DOC_SF
+               numeroDocumento = LeggiNumeroMax(TAB_DOCUMENTI, tipoDocumento) + 1
+               statoDocumento = "Bozza"
+               causaleDocumento = "Vendita"
+
+         End Select
+
+         Dim valSospeso As Double = Convert.ToDouble(g_frmContoPos.txtSospeso.Text)
+         Dim valDaPagare As Double = Convert.ToDouble(g_frmContoPos.netBtn_DaPagare.TextButton)
+
+         eui_cmbTipoDocumento.Text = tipoDocumento
+         eui_txtNumero.Text = numeroDocumento
+         eui_txtNumProgressivo.Text = numeroDocumento
+         eui_txtAnno.Text = String.Empty
+         eui_dtpData.Text = g_frmPos.dtpData.Value.Date.ToString
+         eui_txtOra.Text = g_frmPos.lblOra.Text
+
+         eui_cmbStatoDocumento.Text = statoDocumento
+         eui_cmbCausaleDocumento.Text = causaleDocumento
+
+         Select Case tipoCliente
+            Case Cliente.Azienda
+               ' Viene aggiunta la lettera A per identificare le Aziende.
+               ' Codice aggiunto dopo la creazione della nuova anagrafica Aziende.
+               eui_txtIdCliente.Text = "A" & g_frmContoPos.txtIdAzienda.Text
+            Case Cliente.Privato
+               ' ID normale.
+               eui_txtIdCliente.Text = g_frmContoPos.txtIdCliente.Text
+         End Select
+
+         If g_frmContoPos.eui_cmdCliente.Text = "Seleziona cliente" Then
+            eui_cmbClienteCognome.Text = String.Empty
+            eui_txtClienteNome.Text = String.Empty
+         Else
+            eui_cmbClienteCognome.Text = g_frmContoPos.txtCognome.Text
+            eui_txtClienteNome.Text = g_frmContoPos.txtNome.Text
+         End If
+
+         eui_txtIndirizzo.Text = g_frmContoPos.txtIndirizzo.Text
+         eui_txtCap.Text = FormattaApici(g_frmContoPos.txtCap.Text)
+         eui_txtCittà.Text = FormattaApici(g_frmContoPos.txtCittà.Text)
+         eui_txtProvincia.Text = FormattaApici(g_frmContoPos.txtProv.Text)
+         eui_txtPartitaIva.Text = g_frmContoPos.txtPIva.Text
+         eui_txtCodiceFiscale.Text = g_frmContoPos.txtCodiceFiscale.Text
+
+         eui_txtServizio.Text = g_frmContoPos.txtServizio.Text
+         eui_txtSconto.Text = g_frmContoPos.txtValSconto.Text
+
+         If g_frmContoPos.txtCartaCredito.Text <> VALORE_ZERO Then
+            eui_cmbTipoPagamento.Text = g_frmContoPos.eui_cmdTipoPagamento.Text
+         Else
+            eui_cmbTipoPagamento.Text = "Contanti"
+         End If
+
+         eui_txtTavolo.Text = g_frmContoPos.nomeTavoloDoc
+         eui_txtCameriere.Text = g_frmContoPos.nomeCameriereDoc
+
+         eui_txtTotaleDocumento.Text = CFormatta.FormattaNumeroDouble(Convert.ToDouble(valDaPagare))
+
+         If g_frmContoPos.tipoDocumento = TIPO_DOC_FF Then
+            ' Calcola l'IVA.
+            Dim valImposta As Double
+            Dim valImponibile As Double
+
+            If IsNumeric(g_frmContoPos.txtIva.Text) = True Then
+
+               valImponibile = CalcolaImponibileIva(g_frmContoPos.Text, valDaPagare)
+               valImposta = CalcolaPercentuale(valImponibile, Convert.ToDouble(g_frmContoPos.txtIva.Text))
+            Else
+               valImposta = 0.0
+               g_frmContoPos.txtIva.Text = VALORE_ZERO
+            End If
+
+            eui_txtImponibile.Text = CFormatta.FormattaNumeroDouble(valImponibile)
+            'eui_txtIva.Text = g_frmContoPos.txtIva.Text
+            eui_txtImposta.Text = CFormatta.FormattaNumeroDouble(valImposta)
+         Else
+            eui_txtImponibile.Text = VALORE_ZERO
+            '.Iva = VALORE_ZERO
+            eui_txtImposta.Text = VALORE_ZERO
+         End If
+
+         ' SHEDA DETTAGLI.
+
+         If g_frmContoPos.eui_cmdTipoConto.Text.ToUpper = "UNICO" Then
+            ' SALVA I DETTAGLI PER IL COPERTO.
+            If g_frmContoPos.txtCoperto.Text <> VALORE_ZERO Then
+               ' Codice, Descrizione, Unità di misura, Quantità, Prezzo, Sconto, Totale.
+               dgvDettagli.Rows.Insert(dgvDettagli.Rows.Count - 1,
+                                    String.Empty,
+                                    "Coperto",
+                                    String.Empty,
+                                    NumCopertiRistorante,
+                                    CopertoRistorante,
+                                    VALORE_ZERO,
+                                    CFormatta.FormattaNumeroDouble(g_frmContoPos.txtCoperto.Text))
+
+            End If
+         End If
+
+         Dim i As Integer
+         For i = 0 To g_frmContoPos.lstvDettagli.Items.Count - 1
+            'Dim colore As Color = lstvDettagli.Items(i).BackColor
+            'If colore.Equals(Color.LightCoral) = False Then
+
+            ' Codice, Descrizione, Unità di misura, Quantità, Prezzo, Sconto, Totale.
+            dgvDettagli.Rows.Insert(dgvDettagli.Rows.Count - 1,
+                                    String.Empty,
+                                    FormattaApici(g_frmContoPos.lstvDettagli.Items(i).SubItems(2).Text),
+                                    String.Empty,
+                                    g_frmContoPos.lstvDettagli.Items(i).SubItems(1).Text,
+                                    VALORE_ZERO,
+                                    VALORE_ZERO,
+                                    g_frmContoPos.lstvDettagli.Items(i).SubItems(3).Text)
+
+            'End If
+         Next
+
+
+
+         'If g_frmContoPos.cmdTipoConto.Text <> "ALLA ROMANA" Then
+         '   ' SALVA I DETTAGLI PER LO SCONTO.
+         '   If g_frmContoPos.txtValSconto.Text <> VALORE_ZERO Then
+
+         '      ' Codice, Descrizione, Unità di misura, Quantità, Prezzo, Sconto, Totale.
+         '      dgvDettagli.Rows.Insert(dgvDettagli.Rows.Count - 1,
+         '                           String.Empty,
+         '                           "Sconto",
+         '                           String.Empty,
+         '                           "1",
+         '                           VALORE_ZERO,
+         '                           VALORE_ZERO,
+         '                           g_frmContoPos.valSconto)
+
+         'End If
+         'End If
+
+         'If cmdTipoConto.Text <> "ALLA ROMANA" Then
+         '   ' SALVA I DETTAGLI PER IL SERVIZIO.
+         '   If Doc.Servizio <> VALORE_ZERO Then
+         '      ' Avvia una transazione.
+         '      tr = cn.BeginTransaction(IsolationLevel.ReadCommitted)
+         '      ' Crea la stringa di eliminazione.
+         '      sql = String.Format("INSERT INTO {0} (RifDoc, Descrizione, Quantità, ImportoNetto) " &
+         '                                    "VALUES(@RifDoc, @Descrizione, @Quantità, @ImportoNetto)", TAB_DETTAGLI_DOC)
+         '      ' Crea il comando per la connessione corrente.
+         '      Dim cmdInsert As New OleDbCommand(sql, cn, tr)
+         '      cmdInsert.Parameters.Add("@RifDoc", LeggiUltimoRecord(TAB_DOC))
+         '      cmdInsert.Parameters.Add("@Descrizione", "Servizio")
+         '      cmdInsert.Parameters.Add("@Quantità", "1")
+         '      cmdInsert.Parameters.Add("@ImportoNetto", Doc.Servizio)
+         '      ' Esegue il comando.
+         '      Dim Record As Integer = cmdInsert.ExecuteNonQuery()
+         '      ' Conferma transazione.
+         '      tr.Commit()
+         '   End If
+         'End If
+
+         ' Salva il Numero del prossimo documento da stampare.
+         'SalvaNumeroDocFiscaleConfig(TAB_DOC, tipoDocumento, NumeroDocumento)
+
+         ' SHEDA TOTALI.
+         eui_txtTotaliRep1ImponibileLordo.Text = VALORE_ZERO
+         eui_txtTotaliRep2ImponibileLordo.Text = VALORE_ZERO
+         eui_txtTotaliRep3ImponibileLordo.Text = VALORE_ZERO
+         eui_txtTotaliRep4ImponibileLordo.Text = VALORE_ZERO
+
+         eui_txtTotaliRep1Aliquota.Text = g_frmContoPos.txtIva.Text
+         eui_txtTotaliRep2Aliquota.Text = VALORE_ZERO
+         eui_txtTotaliRep3Aliquota.Text = VALORE_ZERO
+         eui_txtTotaliRep4Aliquota.Text = VALORE_ZERO
+
+         eui_txtTotaliRep1Imposta.Text = VALORE_ZERO
+         eui_txtTotaliRep2Imposta.Text = VALORE_ZERO
+         eui_txtTotaliRep3Imposta.Text = VALORE_ZERO
+         eui_txtTotaliRep4Imposta.Text = VALORE_ZERO
+
+         eui_txtTotaliSconto.Text = CFormatta.FormattaNumeroDouble(g_frmContoPos.valSconto)
+         eui_txtTotaliServizio.Text = CFormatta.FormattaNumeroDouble(g_frmContoPos.valServizio)
+         eui_txtTotaliCoperto.Text = g_frmContoPos.txtCoperto.Text
+
+         eui_txtTotaliContanti.Text = g_frmContoPos.txtContanti.Text
+         eui_txtTotaliCarte.Text = g_frmContoPos.txtCartaCredito.Text
+         eui_txtTotaliBuoni.Text = g_frmContoPos.txtBuoni.Text
+         eui_txtTotaliSospeso.Text = g_frmContoPos.txtSospeso.Text
+
+         eui_txtTotaliImponibile.Text = eui_txtImponibile.Text
+         eui_txtTotaleImposta.Text = eui_txtImposta.Text
+         eui_txtTotaleConto.Text = eui_txtTotaleDocumento.Text
+
+      Catch ex As Exception
+         ' Annulla transazione.
+         'tr.Rollback()
+
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      Finally
+         ' Chiude la connessione.
+         'cn.Close()
+
+      End Try
+   End Sub
+
+   ''' <summary>
+   ''' Salva i dati per il documento creato.
+   ''' </summary>
+   ''' <returns><c>True</c> Documento salvato, <c>False</c> Documento non salvato.</returns>
    Private Function SalvaDocumento() As Boolean
       Try
          With Doc
@@ -728,40 +814,10 @@ Public Class frmDocumento
             .SospesoIncassare = CFormatta.FormattaNumeroDouble(valSospeso)
             .TotDoc = CFormatta.FormattaNumeroDouble(Convert.ToDouble(valDaPagare))
 
+            ' DA_FARE_A: Continuare a copiare il codice da qui per la procedura ModificaDocumento.
+            ' DA_FARE_A: Valutare se salvare l'iva anche per le ricevute.
+            ' Se fattura salva l'iva...
             If eui_cmbTipoDocumento.Text = TIPO_DOC_FF Then
-               ' Calcola l'IVA.
-               Dim valImposta As Double
-               Dim valImponibile As Double
-
-               'If IsNumeric(eui_txtTotaliRep1Aliquota.Text) = True Then
-
-               'Dim valCoefficiente As Double
-               'Select Case eui_txtTotaliRep1Aliquota.Text
-               '   Case "22,00"
-               '      valCoefficiente = 1.22
-               '   Case "21,00"
-               '      valCoefficiente = 1.21
-               '   Case "20,00"
-               '      valCoefficiente = 1.2
-               '   Case "10,00"
-               '      valCoefficiente = 1.1
-               '   Case "4,00"
-               '      valCoefficiente = 1.04
-               '   Case Else
-               '      valCoefficiente = 0.0
-               'End Select
-
-               'If valCoefficiente <> 0.0 Then
-               valImponibile = Convert.ToDouble(eui_txtImponibile.Text) '(valDaPagare / valCoefficiente)
-               'Else
-               '   valImponibile = 0.0
-               'End If
-
-               valImposta = Convert.ToDouble(eui_txtImposta.Text) 'CalcolaPercentuale(valImponibile, Convert.ToDouble(eui_txtTotaliRep1Aliquota.Text))
-               'Else
-               '   valImposta = 0.0
-               '   eui_txtTotaliRep1Aliquota.Text = VALORE_ZERO
-               'End If
 
                .ImpLordoRep1 = eui_txtTotaliRep1ImponibileLordo.Text
                .ImpLordoRep2 = eui_txtTotaliRep2ImponibileLordo.Text
@@ -778,9 +834,9 @@ Public Class frmDocumento
                .ImpostaRep3 = eui_txtTotaliRep3Imposta.Text
                .ImpostaRep4 = eui_txtTotaliRep4Imposta.Text
 
-               .Imponibile = CFormatta.FormattaNumeroDouble(valImponibile)
+               .Imponibile = eui_txtImponibile.Text
+               .Imposta = eui_txtImposta.Text
                .Iva = VALORE_ZERO
-               .Imposta = CFormatta.FormattaNumeroDouble(valImposta)
             Else
                .ImpLordoRep1 = VALORE_ZERO
                .ImpLordoRep2 = VALORE_ZERO
@@ -810,27 +866,6 @@ Public Class frmDocumento
          ' Apre la connessione.
          cn.Open()
 
-         ''If eui_cmdTipoConto.Text.ToUpper = "UNICO" Then
-         '' SALVA I DETTAGLI PER IL COPERTO.
-         'If Doc.Coperto <> VALORE_ZERO Then
-         '   ' Avvia una transazione.
-         '   tr = cn.BeginTransaction(IsolationLevel.ReadCommitted)
-         '   ' Crea la stringa di inserimento.
-         '   sql = String.Format("INSERT INTO {0} (RifDoc, Descrizione, Quantità, ImportoNetto) " &
-         '                                    "VALUES(@RifDoc, @Descrizione, @Quantità, @ImportoNetto)", TAB_DETTAGLI_DOCUMENTI)
-         '   ' Crea il comando per la connessione corrente.
-         '   Dim cmdInsert As New OleDbCommand(sql, cn, tr)
-         '   cmdInsert.Parameters.AddWithValue("@RifDoc", LeggiUltimoRecord(TAB_DOCUMENTI))
-         '   cmdInsert.Parameters.AddWithValue("@Descrizione", "COPERTO")
-         '   cmdInsert.Parameters.AddWithValue("@Quantità", NumCopertiRistorante)
-         '   cmdInsert.Parameters.AddWithValue("@ImportoNetto", Doc.Coperto)
-         '   ' Esegue il comando.
-         '   Dim Record As Integer = cmdInsert.ExecuteNonQuery()
-         '   ' Conferma transazione.
-         '   tr.Commit()
-         'End If
-         ''End If
-
          ' SALVA I DETTAGLI PER I PIATTI.
          Dim i As Integer
          For i = 0 To dgvDettagli.Rows.Count - 2 ' L'ultima riga è quella di inserimento dati.
@@ -849,12 +884,6 @@ Public Class frmDocumento
             ' In caso di variante senza una quantità.
             Dim quantità As String
 
-            'If dgvDettagli.Rows(i).Cells(clnQta.Name).Value <> String.Empty Then
-            '   quantità = dgvDettagli.Rows(i).Cells(clnQta.Name).Value
-            'Else
-            '   quantità = VALORE_ZERO
-            'End If
-
             cmdInsert.Parameters.AddWithValue("@RifDoc", LeggiUltimoRecord(TAB_DOCUMENTI))
             cmdInsert.Parameters.AddWithValue("@CodiceArticolo", dgvDettagli.Rows(i).Cells(clnCodice.Name).Value.ToString)
             cmdInsert.Parameters.AddWithValue("@Descrizione", dgvDettagli.Rows(i).Cells(clnDescrizione.Name).Value.ToString)
@@ -869,51 +898,7 @@ Public Class frmDocumento
             Dim Record As Integer = cmdInsert.ExecuteNonQuery()
             ' Conferma transazione.
             tr.Commit()
-
-            'End If
          Next
-
-         '' If eui_cmdTipoConto.Text.ToUpper <> "ALLA ROMANA" Then
-         '' SALVA I DETTAGLI PER LO SCONTO.
-         'If Doc.Sconto <> VALORE_ZERO Then
-         '   ' Avvia una transazione.
-         '   tr = cn.BeginTransaction(IsolationLevel.ReadCommitted)
-         '   ' Crea la stringa di eliminazione.
-         '   sql = String.Format("INSERT INTO {0} (RifDoc, Descrizione, Quantità, ImportoNetto) " &
-         '                                    "VALUES(@RifDoc, @Descrizione, @Quantità, @ImportoNetto)", TAB_DETTAGLI_DOCUMENTI)
-         '   ' Crea il comando per la connessione corrente.
-         '   Dim cmdInsert As New OleDbCommand(sql, cn, tr)
-         '   cmdInsert.Parameters.AddWithValue("@RifDoc", LeggiUltimoRecord(TAB_DOCUMENTI))
-         '   cmdInsert.Parameters.AddWithValue("@Descrizione", "SCONTO")
-         '   cmdInsert.Parameters.AddWithValue("@Quantità", VALORE_ZERO)
-         '   cmdInsert.Parameters.AddWithValue("@ImportoNetto", "-" & Doc.Sconto)
-         '   ' Esegue il comando.
-         '   Dim Record As Integer = cmdInsert.ExecuteNonQuery()
-         '   ' Conferma transazione.
-         '   tr.Commit()
-         'End If
-         ''End If
-
-         '' If eui_cmdTipoConto.Text.ToUpper <> "ALLA ROMANA" Then
-         '' SALVA I DETTAGLI PER IL SERVIZIO.
-         'If Doc.Servizio <> VALORE_ZERO Then
-         '   ' Avvia una transazione.
-         '   tr = cn.BeginTransaction(IsolationLevel.ReadCommitted)
-         '   ' Crea la stringa di eliminazione.
-         '   sql = String.Format("INSERT INTO {0} (RifDoc, Descrizione, Quantità, ImportoNetto) " &
-         '                                    "VALUES(@RifDoc, @Descrizione, @Quantità, @ImportoNetto)", TAB_DETTAGLI_DOCUMENTI)
-         '   ' Crea il comando per la connessione corrente.
-         '   Dim cmdInsert As New OleDbCommand(sql, cn, tr)
-         '   cmdInsert.Parameters.AddWithValue("@RifDoc", LeggiUltimoRecord(TAB_DOCUMENTI))
-         '   cmdInsert.Parameters.AddWithValue("@Descrizione", "SERVIZIO")
-         '   cmdInsert.Parameters.AddWithValue("@Quantità", VALORE_ZERO)
-         '   cmdInsert.Parameters.AddWithValue("@ImportoNetto", Doc.Servizio)
-         '   ' Esegue il comando.
-         '   Dim Record As Integer = cmdInsert.ExecuteNonQuery()
-         '   ' Conferma transazione.
-         '   tr.Commit()
-         'End If
-         '' End If
 
          ' Salva il Numero del prossimo documento da stampare.
          SalvaNumeroDocFiscaleConfig(TAB_DOCUMENTI, eui_cmbTipoDocumento.Text, Convert.ToInt32(eui_txtNumero.Text))
@@ -1244,14 +1229,20 @@ Public Class frmDocumento
          CaricaListaClienti(eui_cmbClienteCognome, eui_cmbIdCliente, ANA_CLIENTI)
          CaricaLista(eui_cmbTipoPagamento, TAB_TIPO_PAGAMENTO)
 
-         'Select Case nomeFinestra
-         '   Case "ContoPos"
-         '      LeggiDatiConto()
+         Select Case nomeFinestra
+            Case "ContoPos"
+               LeggiDatiConto()
 
-         '   Case "ElencoDoc"
-         NuovoDocumento()
+            Case "ElencoDoc"
+               ' Se il tipo documento è una stringa vuota apre la finestra per la modifica di un documento,
+               ' altrimenti apre la finestra per un nuovo documento.
+               If idDocumento = String.Empty Then
+                  NuovoDocumento()
+               Else
+                  ModificaDocumento()
+               End If
 
-         'End Select
+         End Select
 
       Catch ex As Exception
          ' Visualizza un messaggio di errore e lo registra nell'apposito file.
@@ -1330,7 +1321,7 @@ Public Class frmDocumento
          eui_txtPartitaIva.Text = AClienti.PIva
          eui_txtCodiceFiscale.Text = AClienti.CodFisc
          eui_txtSconto.Text = AClienti.Sconto
-         ' TODO: Valutare se leggere l'aliquota iva del cliente.
+         ' DA_FARE_A: Valutare se leggere l'aliquota iva del cliente
          'eui_txtIva.Text = AClienti.Iva
 
          If eui_txtClienteNome.Text <> String.Empty Then

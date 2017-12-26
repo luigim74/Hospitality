@@ -47,7 +47,7 @@ Friend Class frmMain
    'Public WithEvents tbMain As AxComctlLib.AxToolbar
    Public WithEvents Timer1 As System.Windows.Forms.Timer
    Private openDocumentsPopupMenu As PopupMenu
-   'NOTA: la routine seguente è richiesta dalla progettazione Windows Form.
+   'NOTE: la routine seguente è richiesta dalla progettazione Windows Form.
    'Può essere modificata utilizzando la finestra di progettazione Windows Form.
    'Non modificarla mediante l'editor di codice.
    Friend WithEvents ImageList1 As System.Windows.Forms.ImageList
@@ -10822,7 +10822,7 @@ Friend Class frmMain
                g_frmListiniCamere.Nuovo()
 
             Case TITOLO_FINESTRA_ELENCO_DOCUMENTI
-               g_frmDocumento = New frmDocumento("ElencoDoc", "Conto")
+               g_frmDocumento = New frmDocumento("ElencoDoc", "Conto", String.Empty)
                g_frmDocumento.ShowDialog()
 
                ' Inserire qui il codice per gestire le altre finestre.
@@ -10848,6 +10848,10 @@ Friend Class frmMain
 
             Case TITOLO_FINESTRA_ELENCO_LISTINI_CAMERE
                g_frmListiniCamere.Modifica()
+
+            Case TITOLO_FINESTRA_ELENCO_DOCUMENTI
+               g_frmDocumento = New frmDocumento("ElencoDoc", String.Empty, "")
+               g_frmDocumento.ShowDialog()
 
                ' Inserire qui il codice per gestire le altre finestre.
 
@@ -10942,7 +10946,6 @@ Friend Class frmMain
    Private Sub eui_Strumenti_Stampa_Elenco_Click(sender As System.Object, e As System.EventArgs) Handles eui_Strumenti_Stampa_Elenco.Click
 
    End Sub
-
 
 #End Region
 
@@ -11886,7 +11889,7 @@ Friend Class frmMain
       End Try
    End Sub
 
-   ' TODO: Non funziona!!! - Versione che scrive sul server remoto -  NON UTILIZZATA.
+   ' DA_FARE_B: Non funziona!!! - Versione che scrive sul server remoto -  NON UTILIZZATA.
    Public Sub ScriviDatiLicenza()
       Try
          If WebCommunication.VerificaConnessione = True Then

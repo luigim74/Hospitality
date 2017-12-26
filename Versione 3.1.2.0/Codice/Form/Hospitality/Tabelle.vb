@@ -64,7 +64,7 @@ Public Class TabelleDati
    'Richiesto da Progettazione Windows Form
    Private components As System.ComponentModel.IContainer
 
-   'NOTA: la procedura che segue è richiesta da Progettazione Windows Form.
+   'NOTE: la procedura che segue è richiesta da Progettazione Windows Form.
    'Può essere modificata in Progettazione Windows Form.  
    'Non modificarla nell'editor del codice.
    Friend WithEvents ImageList1 As System.Windows.Forms.ImageList
@@ -416,7 +416,7 @@ Public Class TabelleDati
                   Elimina.Enabled = True
                End If
 
-            ' TODO: GESTIONE DOCUMENTI - Tipo documenti eliminata dal menu - Sostituire con tabella Causali Documenti.
+            ' DA_FARE_B: GESTIONE DOCUMENTI - Tipo documenti eliminata dal menu - Sostituire con tabella Causali Documenti.
             Case Finestra.CausaliDoc
                If operatore.TabCausaliDoc = VALORE_LETTURA Then
                   Nuovo.Enabled = False
@@ -1000,7 +1000,7 @@ Public Class TabelleDati
                strDescrizione = STR_TABELLA_MSG_REP
                strModulo = MODULO_TABELLA_MSG_REP
 
-            ' TODO: GESTIONE DOCUMENTI - Tipo documenti eliminata dal menu - Sostituire con tabella Causali Documenti.
+            ' DA_FARE_B: GESTIONE DOCUMENTI - Tipo documenti eliminata dal menu - Sostituire con tabella Causali Documenti.
             Case "CausaliDocumento"
                strDescrizione = STR_TABELLA_CAUSALI_DOC
                strModulo = MODULO_TABELLA_CAUSALI_DOC

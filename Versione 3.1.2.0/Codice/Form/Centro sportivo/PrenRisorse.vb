@@ -35,7 +35,7 @@ Public Class frmPrenRisorse
    Public percorsoRep As String = PERCORSO_REP_RF_A4_DOPPIA
    Dim tipoDocumento As String = TIPO_DOC_RF
 
-   ' TODO: VER. FUTURA.
+   ' DA_FARE_B: VER. FUTURA.
    'Public IAllegati As New Allegati
 
    Const ALTEZZA_CELLE As Short = 40
@@ -143,7 +143,7 @@ Public Class frmPrenRisorse
    'Richiesto da Progettazione Windows Form
    Private components As System.ComponentModel.IContainer
 
-   'NOTA: la procedura che segue è richiesta da Progettazione Windows Form.
+   'NOTE: la procedura che segue è richiesta da Progettazione Windows Form.
    'Può essere modificata in Progettazione Windows Form.  
    'Non modificarla nell'editor del codice.
    Public WithEvents ToolBar1 As System.Windows.Forms.ToolBar
@@ -2893,7 +2893,7 @@ Public Class frmPrenRisorse
       End Try
    End Sub
 
-   ' TODO: Non utilizzata!
+   ' DA_FARE_B: Non utilizzata!
    Private Function VerificaEsistenzaPren1(ByVal tabella As String, ByVal data As String, ByVal idRisorsa As String, ByVal oraInizio As String, ByVal oraFine As String) As Boolean
       'Dim closeOnExit As Boolean
       'Dim numRec As Integer

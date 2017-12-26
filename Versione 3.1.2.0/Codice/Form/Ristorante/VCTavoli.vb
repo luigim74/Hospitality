@@ -188,7 +188,7 @@ Public Class frmVCTavoli
    'Richiesto da Progettazione Windows Form
    Private components As System.ComponentModel.IContainer
 
-   'NOTA: la procedura che segue è richiesta da Progettazione Windows Form.
+   'NOTE: la procedura che segue è richiesta da Progettazione Windows Form.
    'Può essere modificata in Progettazione Windows Form.  
    'Non modificarla nell'editor del codice.
    Friend WithEvents ImageList1 As System.Windows.Forms.ImageList

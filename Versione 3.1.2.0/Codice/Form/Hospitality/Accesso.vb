@@ -27,7 +27,7 @@ Public Class frmAccesso
    'Richiesto da Progettazione Windows Form
    Private components As System.ComponentModel.IContainer
 
-   'NOTA: la procedura che segue è richiesta da Progettazione Windows Form.
+   'NOTE: la procedura che segue è richiesta da Progettazione Windows Form.
    'Può essere modificata in Progettazione Windows Form.  
    'Non modificarla nell'editor del codice.
    Public WithEvents label As System.Windows.Forms.Label
@@ -303,7 +303,7 @@ Public Class frmAccesso
             operatore.TabPiani = dr.Item("TabPiani")
             operatore.TabReparti = dr.Item("TabReparti")
             operatore.TabScaffali = dr.Item("TabScaffali")
-            ' TODO: GESTIONE DOCUMENTI - Tipo documenti eliminata dal menu - Sostituire con tabella Causali Documenti.
+            ' DA_FARE_B: GESTIONE DOCUMENTI - Tipo documenti eliminata dal menu - Sostituire con tabella Causali Documenti.
             'operatore.TabTipoDoc = dr.Item("TabTipoDoc")
             operatore.TabUbicazioni = dr.Item("TabUbicazioni")
             operatore.TabUM = dr.Item("TabUM")

@@ -247,7 +247,7 @@ Public Class PrenSale
          ' Apre la connessione.
          cn.Open()
 
-         ' TODO: ULTIMA MODIFICA - Modificare la query per ottenere il codice più alto.
+         ' DA_FARE_B: ULTIMA MODIFICA - Modificare la query per ottenere il codice più alto.
          ' Crea la stringa.
          sql = String.Format("SELECT * FROM {0} WHERE Id = {1}", tabella, codice)
 
