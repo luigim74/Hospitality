@@ -307,12 +307,29 @@ Hospitality Solution 3
   Cerca una risorsa localizzata di tipo System.Drawing.Icon simile a (Icona).
 </summary>
 </member>
-<member name="M:Hospitality_Solution.frmDocumento.#ctor(System.String,System.String)">
+<member name="M:Hospitality_Solution.frmDocumento.#ctor(System.String,System.String,System.String)">
  <summary>
  Apre il documento da eleborare.
  </summary>
  <param name="nomeWnd">Nome della finestra che richiama il metodo.</param>
  <param name="documento">Il tipo di documento da aprire.</param>
+ <param name="id">Il codice del documento da aprire.</param>
+</member>
+<member name="M:Hospitality_Solution.frmDocumento.NuovoDocumento">
+ <summary>
+ Crea un nuovo documento.
+ </summary>
+</member>
+<member name="M:Hospitality_Solution.frmDocumento.ModificaDocumento">
+ <summary>
+ Modifica i dati del documento selezionato.
+ </summary>
+</member>
+<member name="M:Hospitality_Solution.frmDocumento.SalvaDocumento">
+ <summary>
+ Salva i dati per il documento creato.
+ </summary>
+ <returns><c>True</c> Documento salvato, <c>False</c> Documento non salvato.</returns>
 </member>
 <member name="T:Hospitality_Solution.Dataset1">
 <summary>

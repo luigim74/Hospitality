@@ -10850,7 +10850,7 @@ Friend Class frmMain
                g_frmListiniCamere.Modifica()
 
             Case TITOLO_FINESTRA_ELENCO_DOCUMENTI
-               g_frmDocumento = New frmDocumento("ElencoDoc", String.Empty, "")
+               g_frmDocumento = New frmDocumento("ElencoDoc", g_frmDocumenti.DataGrid1.Item(g_frmDocumenti.DataGrid1.CurrentCell.RowNumber, 4), g_frmDocumenti.DataGrid1.Item(g_frmDocumenti.DataGrid1.CurrentCell.RowNumber, 0))
                g_frmDocumento.ShowDialog()
 
                ' Inserire qui il codice per gestire le altre finestre.
