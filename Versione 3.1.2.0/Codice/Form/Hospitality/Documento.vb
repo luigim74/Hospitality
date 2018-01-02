@@ -51,6 +51,8 @@ Public Class frmDocumento
       tipoDocumento = documento
       nomeFinestra = nomeWnd
 
+      Me.Tag = id
+
       ' Aggiungere le eventuali istruzioni di inizializzazione dopo la chiamata a InitializeComponent().
 
    End Sub
@@ -778,52 +780,85 @@ Public Class frmDocumento
                .Imposta = VALORE_ZERO
             End If
 
-            .InserisciDati(TAB_DOCUMENTI)
+            ' Se la proprietà 'Tag' contiene un valore viene richiamata la procedura
+            ' di modifica dati, altrimenti viene richiamata la procedura di inserimento dati.
+            If Me.Tag <> String.Empty Then
+               ' Salva le modifiche effettuate al documento.
+               .ModificaDati(TAB_DOCUMENTI, Me.Tag)
 
-            ' da_fare_A: Inserire codice per gestire la ModificaDati.
+               ' Apre la connessione.
+               cn.Open()
+
+               ' Elimina le righe di dettaglio del documento per salvare quelle nuove.
+               Dim sqlElimina As String
+               Dim trElimina As OleDbTransaction
+
+
+               ' Avvia una transazione.
+               trElimina = cn.BeginTransaction(IsolationLevel.ReadCommitted)
+
+               ' Crea la stringa di eliminazione.
+               sqlElimina = String.Format("DELETE FROM {0} WHERE RifDoc = {1}", TAB_DETTAGLI_DOCUMENTI, Me.Tag)
+
+               ' Crea il comando per la connessione corrente.
+               Dim cmdDelete As New OleDbCommand(sqlElimina, cn, trElimina)
+
+               ' Esegue il comando.
+               Dim Record As Integer = cmdDelete.ExecuteNonQuery()
+
+               ' Conferma la transazione.
+               trElimina.Commit()
+            Else
+               ' Salva i dati del nuovo documento creato.
+               .InserisciDati(TAB_DOCUMENTI)
+            End If
+
+            ' SALVA I DETTAGLI DEL DOCUMENTO.
+            Dim sql As String
+            ' Apre la connessione.
+            If cn.State = ConnectionState.Closed Then
+               cn.Open()
+            End If
+
+            Dim i As Integer
+            For i = 0 To dgvDettagli.Rows.Count - 2 ' L'ultima riga è quella di inserimento dati.
+               ' Avvia una transazione.
+               tr = cn.BeginTransaction(IsolationLevel.ReadCommitted)
+               ' Crea la stringa di eliminazione.
+               sql = String.Format("INSERT INTO {0} (RifDoc, CodiceArticolo, Descrizione, UnitàMisura, Quantità, ValoreUnitario, Sconto, ImportoNetto, AliquotaIva) " &
+                                   "VALUES(@RifDoc, @CodiceArticolo, @Descrizione, @UnitàMisura, @Quantità, @ValoreUnitario, @Sconto, @ImportoNetto, @AliquotaIva)", TAB_DETTAGLI_DOCUMENTI)
+
+               ' Crea il comando per la connessione corrente.
+               Dim cmdInsert As New OleDbCommand(sql, cn, tr)
+
+               ' In caso di variante senza una quantità.
+               Dim quantità As String
+
+               If Me.Tag <> String.Empty Then
+                  cmdInsert.Parameters.AddWithValue("@RifDoc", Me.Tag.ToString)
+               Else
+                  cmdInsert.Parameters.AddWithValue("@RifDoc", LeggiUltimoRecord(TAB_DOCUMENTI))
+               End If
+
+               cmdInsert.Parameters.AddWithValue("@CodiceArticolo", dgvDettagli.Rows(i).Cells(clnCodice.Name).Value.ToString)
+               cmdInsert.Parameters.AddWithValue("@Descrizione", dgvDettagli.Rows(i).Cells(clnDescrizione.Name).Value.ToString)
+               cmdInsert.Parameters.AddWithValue("@UnitàMisura", dgvDettagli.Rows(i).Cells(clnUm.Name).Value.ToString)
+               cmdInsert.Parameters.AddWithValue("@Quantità", dgvDettagli.Rows(i).Cells(clnQta.Name).Value.ToString)
+               cmdInsert.Parameters.AddWithValue("@ValoreUnitario", dgvDettagli.Rows(i).Cells(clnPrezzo.Name).Value.ToString) ' B_TODO: Modifica per Retail.
+               cmdInsert.Parameters.AddWithValue("@Sconto", dgvDettagli.Rows(i).Cells(clnSconto.Name).Value.ToString)
+               cmdInsert.Parameters.AddWithValue("@ImportoNetto", dgvDettagli.Rows(i).Cells(clnImporto.Name).Value.ToString)
+               cmdInsert.Parameters.AddWithValue("@AliquotaIva", dgvDettagli.Rows(i).Cells(clnIva.Name).Value.ToString)
+
+               ' Esegue il comando.
+               Dim Record As Integer = cmdInsert.ExecuteNonQuery()
+                  ' Conferma transazione.
+                  tr.Commit()
+               Next
+
+               ' Salva il Numero del prossimo documento da stampare.
+               SalvaNumeroDocFiscaleConfig(TAB_DOCUMENTI, eui_cmbTipoDocumento.Text, Convert.ToInt32(eui_txtNumero.Text))
+
          End With
-
-         ' SALVA I DETTAGLI DEL DOCUMENTO.
-         Dim sql As String
-         ' Apre la connessione.
-         cn.Open()
-
-         ' SALVA I DETTAGLI PER I PIATTI.
-         Dim i As Integer
-         For i = 0 To dgvDettagli.Rows.Count - 2 ' L'ultima riga è quella di inserimento dati.
-            'Dim colore As Color = lstvDettagli.Items(i).BackColor
-            'If colore.Equals(Color.LightCoral) = False Then
-
-            ' Avvia una transazione.
-            tr = cn.BeginTransaction(IsolationLevel.ReadCommitted)
-            ' Crea la stringa di eliminazione.
-            sql = String.Format("INSERT INTO {0} (RifDoc, CodiceArticolo, Descrizione, UnitàMisura, Quantità, ValoreUnitario, Sconto, ImportoNetto, AliquotaIva) " &
-                                          "VALUES(@RifDoc, @CodiceArticolo, @Descrizione, @UnitàMisura, @Quantità, @ValoreUnitario, @Sconto, @ImportoNetto, @AliquotaIva)", TAB_DETTAGLI_DOCUMENTI)
-
-            ' Crea il comando per la connessione corrente.
-            Dim cmdInsert As New OleDbCommand(sql, cn, tr)
-
-            ' In caso di variante senza una quantità.
-            Dim quantità As String
-
-            cmdInsert.Parameters.AddWithValue("@RifDoc", LeggiUltimoRecord(TAB_DOCUMENTI))
-            cmdInsert.Parameters.AddWithValue("@CodiceArticolo", dgvDettagli.Rows(i).Cells(clnCodice.Name).Value.ToString)
-            cmdInsert.Parameters.AddWithValue("@Descrizione", dgvDettagli.Rows(i).Cells(clnDescrizione.Name).Value.ToString)
-            cmdInsert.Parameters.AddWithValue("@UnitàMisura", dgvDettagli.Rows(i).Cells(clnUm.Name).Value.ToString)
-            cmdInsert.Parameters.AddWithValue("@Quantità", dgvDettagli.Rows(i).Cells(clnQta.Name).Value.ToString)
-            cmdInsert.Parameters.AddWithValue("@ValoreUnitario", dgvDettagli.Rows(i).Cells(clnPrezzo.Name).Value.ToString) ' B_TODO: Modifica per Retail.
-            cmdInsert.Parameters.AddWithValue("@Sconto", dgvDettagli.Rows(i).Cells(clnSconto.Name).Value.ToString)
-            cmdInsert.Parameters.AddWithValue("@ImportoNetto", dgvDettagli.Rows(i).Cells(clnImporto.Name).Value.ToString)
-            cmdInsert.Parameters.AddWithValue("@AliquotaIva", dgvDettagli.Rows(i).Cells(clnIva.Name).Value.ToString)
-
-            ' Esegue il comando.
-            Dim Record As Integer = cmdInsert.ExecuteNonQuery()
-            ' Conferma transazione.
-            tr.Commit()
-         Next
-
-         ' Salva il Numero del prossimo documento da stampare.
-         SalvaNumeroDocFiscaleConfig(TAB_DOCUMENTI, eui_cmbTipoDocumento.Text, Convert.ToInt32(eui_txtNumero.Text))
 
          Return True
 

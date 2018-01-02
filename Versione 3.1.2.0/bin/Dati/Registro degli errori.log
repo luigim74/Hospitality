@@ -2191,3 +2191,89 @@ Nome parametro: index"
 "- NOME PROCEDURA:    in Hospitality_Solution.frmDocumento.InserisciDettagliRiga(String tabella, Int32 id) in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Hospitality\Documento.vb:riga 362"
 "
 "
+"*** 02/01/2018 - 21:09:20 ***"
+"- DESCRIZIONE ERRORE: Errore di sintassi nell'istruzione UPDATE."
+"- NOME PROCEDURA:    in System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   in System.Data.OleDb.OleDbCommand.ExecuteNonQuery()
+   in Hospitality_Solution.Documenti.ModificaDati(String tabella, String codice)"
+"
+"
+"*** 02/01/2018 - 21:09:24 ***"
+"- DESCRIZIONE ERRORE: La OleDbTransaction è completata e non può più essere utilizzata."
+"- NOME PROCEDURA:    in System.Data.OleDb.OleDbTransaction.Rollback()
+   in Hospitality_Solution.frmDocumento.SalvaDocumento()
+   in Hospitality_Solution.frmDocumento.eui_cmdSalva_Click(Object sender, EventArgs e)"
+"
+"
+"*** 02/01/2018 - 21:09:36 ***"
+"- DESCRIZIONE ERRORE: Errore di sintassi nell'istruzione UPDATE."
+"- NOME PROCEDURA:    in System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   in System.Data.OleDb.OleDbCommand.ExecuteNonQuery()
+   in Hospitality_Solution.Documenti.ModificaDati(String tabella, String codice)"
+"
+"
+"*** 02/01/2018 - 21:09:42 ***"
+"- DESCRIZIONE ERRORE: La OleDbTransaction è completata e non può più essere utilizzata."
+"- NOME PROCEDURA:    in System.Data.OleDb.OleDbTransaction.Rollback()
+   in Hospitality_Solution.frmDocumento.SalvaDocumento()
+   in Hospitality_Solution.frmDocumento.eui_cmdSalva_Click(Object sender, EventArgs e)"
+"
+"
+"*** 02/01/2018 - 21:16:09 ***"
+"- DESCRIZIONE ERRORE: Riferimento a un oggetto non impostato su un'istanza di oggetto."
+"- NOME PROCEDURA:    in Hospitality_Solution.frmDocumento.SalvaDocumento() in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Hospitality\Documento.vb:riga 862
+   in Hospitality_Solution.frmDocumento.eui_cmdSalva_Click(Object sender, EventArgs e) in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Hospitality\Documento.vb:riga 1397"
+"
+"
+"*** 02/01/2018 - 21:24:46 ***"
+"- DESCRIZIONE ERRORE: Errore di sintassi nell'istruzione UPDATE."
+"- NOME PROCEDURA:    in System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   in System.Data.OleDb.OleDbCommand.ExecuteNonQuery()
+   in Hospitality_Solution.Documenti.ModificaDati(String tabella, String codice) in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Classi\Documenti.vb:riga 597"
+"
+"
+"*** 02/01/2018 - 21:26:42 ***"
+"- DESCRIZIONE ERRORE: Errore di sintassi nell'istruzione UPDATE."
+"- NOME PROCEDURA:    in System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   in System.Data.OleDb.OleDbCommand.ExecuteNonQuery()
+   in Hospitality_Solution.Documenti.ModificaDati(String tabella, String codice) in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Classi\Documenti.vb:riga 597"
+"
+"
+"*** 02/01/2018 - 21:35:28 ***"
+"- DESCRIZIONE ERRORE: Errore di sintassi nell'istruzione UPDATE."
+"- NOME PROCEDURA:    in System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   in System.Data.OleDb.OleDbCommand.ExecuteNonQuery()
+   in Hospitality_Solution.Documenti.ModificaDati(String tabella, String codice) in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Classi\Documenti.vb:riga 597"
+"
+"
+"*** 02/01/2018 - 21:59:32 ***"
+"- DESCRIZIONE ERRORE: Tipi di dati non corrispondenti nell'espressione criterio."
+"- NOME PROCEDURA:    in System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   in System.Data.OleDb.OleDbCommand.ExecuteNonQuery()
+   in Hospitality_Solution.frmDocumento.SalvaDocumento() in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Hospitality\Documento.vb:riga 855"
+"
+"

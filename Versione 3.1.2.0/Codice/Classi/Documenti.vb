@@ -490,19 +490,19 @@ Public Class Documenti
          ' Crea la stringa di eliminazione.
          sql = String.Format("UPDATE {0} " &
                              "SET NumDoc = @Numero, " &
-                             "AnnoDoc = @Anno, " &
+                             "AnnoDoc = @AnnoDoc, " &
                              "DataDoc = @Data, " &
                              "OraDoc = @Ora, " &
                              "TipoDoc = @Tipo, " &
-                             "StatoDoc = @Stato, " &
-                             "CausaleDoc = @Causale, " &
+                             "StatoDoc = @StatoDoc, " &
+                             "CausaleDoc = @CausaleDoc, " &
                              "IdCliente = @IdCliente, " &
                              "Cliente = @Cliente, " &
                              "Indirizzo = @Indirizzo, " &
                              "Cap = @Cap, " &
                              "Città = @Città, " &
                              "Provincia = @Provincia, " &
-                             "Piva = @Piva, " &
+                             "Piva = @PIva, " &
                              "CodFiscale = @CodFiscale, " &
                              "CodAzienda = @CodAzienda, " &
                              "ImpLordoRep1 = @ImpLordoRep1, " &
@@ -536,7 +536,7 @@ Public Class Documenti
                              "Iva = @Iva, " &
                              "Imposta = @Imposta, " &
                              "Chiuso = @Chiuso, " &
-                             "Note = @Note " &
+                             "[Note] = @Note " &
                              "WHERE Id = {1}",
                               tabella,
                               codice)
@@ -545,7 +545,7 @@ Public Class Documenti
          Dim cmdUpdate As New OleDbCommand(sql, cn, tr)
 
          cmdUpdate.Parameters.AddWithValue("@Numero", Me.Numero)
-         cmdUpdate.Parameters.AddWithValue("@Anno", Me.Anno)
+         cmdUpdate.Parameters.AddWithValue("@AnnoDoc", Me.Anno)
          cmdUpdate.Parameters.AddWithValue("@Data", Me.Data)
          cmdUpdate.Parameters.AddWithValue("@Ora", Me.Ora)
          cmdUpdate.Parameters.AddWithValue("@Tipo", Me.Tipo)
