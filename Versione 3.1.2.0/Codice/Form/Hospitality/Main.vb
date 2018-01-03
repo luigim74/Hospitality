@@ -1,7 +1,7 @@
 ' Nome form:            frmMain
 ' Autore:               Luigi Montana, Montana Software
 ' Data creazione:       04/01/2006
-' Data ultima modifica: 28/02/2006
+' Data ultima modifica: 03/01/2018
 ' Descrizione:          Form MDI principale.
 
 Option Strict Off

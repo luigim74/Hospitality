@@ -1,7 +1,7 @@
-' Nome form:            frmElencoDati
+' Nome form:            frmElencoDoc
 ' Autore:               Luigi Montana, Montana Software
 ' Data creazione:       04/01/2006
-' Data ultima modifica: 15/04/2006
+' Data ultima modifica: 03/01/2018
 ' Descrizione:          Elenco dati riutilizzabile per tutte le anagrafiche.
 
 Option Strict Off
