@@ -1339,6 +1339,27 @@ Public Class ElencoDoc
       End Try
    End Sub
 
+   Public Sub EliminaDatiDocumento()
+      Dim Data As String = DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 2)
+      Dim Documento As String = DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 4)
+      Dim Numero As String = DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 1)
+      Dim Importo As String = DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 7)
+
+      ' Chiede conferma per l'eliminazione.
+      Dim risposta As Integer
+      risposta = MessageBox.Show("Si desidera eliminare il documento """ & Documento & " n. " & Numero & " del " & Data & """? " &
+                                 "Confermando l'operazione Non sarà più possibile recuperare i dati.", NOME_PRODOTTO, MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+      If risposta = vbYes Then
+         EliminaDettagliDocumento()
+         EliminaDocumento()
+
+         ' Registra loperazione effettuata dall'operatore identificato.
+         Dim strDescrizione As String = "(" & Documento & " n. " & Numero & " del " & Data & " - € " & CFormatta.FormattaEuro(Importo) & ")"
+         g_frmMain.RegistraOperazione(TipoOperazione.AnnullaDoc, strDescrizione, MODULO_CONTABILITA_DOCUMENTI)
+
+      End If
+   End Sub
+
    Public Sub LeggiDati(ByVal tabella As String, ByVal sql As String)
       Try
          ' Calcola il numero delle pagine da visualizzare.
@@ -1424,6 +1445,7 @@ Public Class ElencoDoc
       End Try
    End Sub
 
+   ' DA_FARE_A: Procedura da eliminare!
    Public Sub EliminaDati(ByVal tabella As String, ByVal id As Integer)
       ' NON UTILIZZATA.
       'Try
@@ -1933,9 +1955,9 @@ Public Class ElencoDoc
 
       ' Chiede conferma per l'eliminazione.
       Dim risposta As Integer
-      risposta = MessageBox.Show("Si desidera eliminare il documento """ & Documento & " n. " & Numero & " del " & Data & """? " & _
-                                 "Confermando l'operazione verrà eliminato il documento, verranno ripristinati i valori per le " & _
-                                 "giacenze di magazzino degli Articoli e le Statistiche di vendita. Eventuali Buoni pasto contenuti " & _
+      risposta = MessageBox.Show("Si desidera annullare il documento """ & Documento & " n. " & Numero & " del " & Data & """? " &
+                                 "Confermando l'operazione verrà eliminato il documento, verranno ripristinati i valori per le " &
+                                 "giacenze di magazzino degli Articoli e le Statistiche di vendita. Eventuali Buoni pasto contenuti " &
                                  "nel documento non ancora fatturati verranno annullati. Procedere?", NOME_PRODOTTO, MessageBoxButtons.YesNo, MessageBoxIcon.Question)
       If risposta = vbYes Then
          RipristinaIngredientiScaricati()

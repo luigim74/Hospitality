@@ -10899,6 +10899,9 @@ Friend Class frmMain
             Case TITOLO_FINESTRA_ELENCO_LISTINI_CAMERE
                g_frmListiniCamere.EliminaDati(ElencoListiniCamere.TAB_LISTINI, g_frmListiniCamere.DataGrid1.Item(g_frmListiniCamere.DataGrid1.CurrentCell.RowNumber, 0))
 
+            Case TITOLO_FINESTRA_ELENCO_DOCUMENTI
+               g_frmDocumenti.EliminaDatiDocumento()
+
                ' Inserire qui il codice per gestire le altre finestre.
 
          End Select
@@ -10922,6 +10925,9 @@ Friend Class frmMain
 
             Case TITOLO_FINESTRA_ELENCO_LISTINI_CAMERE
                g_frmListiniCamere.AggiornaDati()
+
+            Case TITOLO_FINESTRA_ELENCO_DOCUMENTI
+               g_frmDocumenti.AggiornaDati()
 
                ' Inserire qui il codice per gestire le altre finestre.
 
