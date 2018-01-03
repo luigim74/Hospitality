@@ -10864,6 +10864,7 @@ Friend Class frmMain
       End Try
    End Sub
 
+   ' DA_FARE_A: Aggiungere per l'elenco documenti.
    Private Sub eui_Strumenti_Duplica_Click(sender As System.Object, e As System.EventArgs) Handles eui_Strumenti_Duplica.Click
       Try
          ' Ottiene il form attivo.
