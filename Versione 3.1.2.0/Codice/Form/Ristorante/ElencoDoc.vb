@@ -2153,7 +2153,7 @@ Public Class ElencoDoc
          'Imposta
          Dim impostaStyle As New DataGridTextBoxColumn
          impostaStyle.MappingName = "Imposta"
-         impostaStyle.HeaderText = "IVA"
+         impostaStyle.HeaderText = "Imposta"
          impostaStyle.Width = 80
          impostaStyle.NullText = ""
          impostaStyle.Format = "##,##0.00"
@@ -2561,6 +2561,8 @@ Public Class ElencoDoc
       ' Visualizza i comandi Strumenti di modifica sul Ribbon.
       g_frmMain.rtgStrumentiModifica.Visible = True
       g_frmMain.eui_StrumentiDocumenti.Visible = False
+
+      g_frmMain.eui_Strumenti_Duplica.Visible = False
 
    End Sub
 

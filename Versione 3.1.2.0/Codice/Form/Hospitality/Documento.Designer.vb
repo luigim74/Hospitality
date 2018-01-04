@@ -35,46 +35,6 @@ Partial Class frmDocumento
       Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDocumento))
       Me.formFrameSkinner = New Elegant.Ui.FormFrameSkinner()
       Me.eui_tpcDocumento = New Elegant.Ui.TabControl()
-      Me.eui_tpTotali = New Elegant.Ui.TabPage()
-      Me.Label36 = New Elegant.Ui.Label()
-      Me.eui_txtTotaliRep4Imposta = New Elegant.Ui.TextBox()
-      Me.eui_txtTotaliRep4Aliquota = New Elegant.Ui.TextBox()
-      Me.eui_txtTotaliRep4ImponibileLordo = New Elegant.Ui.TextBox()
-      Me.Label35 = New Elegant.Ui.Label()
-      Me.eui_txtTotaliRep3Imposta = New Elegant.Ui.TextBox()
-      Me.eui_txtTotaliRep3Aliquota = New Elegant.Ui.TextBox()
-      Me.eui_txtTotaliRep3ImponibileLordo = New Elegant.Ui.TextBox()
-      Me.Label34 = New Elegant.Ui.Label()
-      Me.eui_txtTotaliRep2Imposta = New Elegant.Ui.TextBox()
-      Me.eui_txtTotaliRep2Aliquota = New Elegant.Ui.TextBox()
-      Me.eui_txtTotaliRep2ImponibileLordo = New Elegant.Ui.TextBox()
-      Me.Label33 = New Elegant.Ui.Label()
-      Me.eui_txtTotaliRep1Imposta = New Elegant.Ui.TextBox()
-      Me.Label29 = New Elegant.Ui.Label()
-      Me.eui_txtTotaliRep1Aliquota = New Elegant.Ui.TextBox()
-      Me.Label30 = New Elegant.Ui.Label()
-      Me.eui_txtTotaliRep1ImponibileLordo = New Elegant.Ui.TextBox()
-      Me.Label31 = New Elegant.Ui.Label()
-      Me.eui_txtTotaliSospeso = New Elegant.Ui.TextBox()
-      Me.Label28 = New Elegant.Ui.Label()
-      Me.eui_txtTotaliBuoni = New Elegant.Ui.TextBox()
-      Me.Label25 = New Elegant.Ui.Label()
-      Me.eui_txtTotaliContanti = New Elegant.Ui.TextBox()
-      Me.eui_txtTotaliCarte = New Elegant.Ui.TextBox()
-      Me.Label26 = New Elegant.Ui.Label()
-      Me.Label27 = New Elegant.Ui.Label()
-      Me.eui_txtTotaliCoperto = New Elegant.Ui.TextBox()
-      Me.Label24 = New Elegant.Ui.Label()
-      Me.eui_txtTotaliSconto = New Elegant.Ui.TextBox()
-      Me.eui_txtTotaliServizio = New Elegant.Ui.TextBox()
-      Me.Label22 = New Elegant.Ui.Label()
-      Me.Label23 = New Elegant.Ui.Label()
-      Me.eui_txtTotaleConto = New Elegant.Ui.TextBox()
-      Me.Label19 = New Elegant.Ui.Label()
-      Me.eui_txtTotaleImposta = New Elegant.Ui.TextBox()
-      Me.eui_txtTotaliImponibile = New Elegant.Ui.TextBox()
-      Me.Label20 = New Elegant.Ui.Label()
-      Me.Label21 = New Elegant.Ui.Label()
       Me.eui_tpGenerale = New Elegant.Ui.TabPage()
       Me.eui_txtNumProgressivo = New Elegant.Ui.TextBox()
       Me.eui_txtCameriere = New Elegant.Ui.TextBox()
@@ -135,6 +95,46 @@ Partial Class frmDocumento
       Me.clnIva = New System.Windows.Forms.DataGridViewTextBoxColumn()
       Me.clnRepartoIva = New System.Windows.Forms.DataGridViewTextBoxColumn()
       Me.clnValoreSconto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+      Me.eui_tpTotali = New Elegant.Ui.TabPage()
+      Me.Label36 = New Elegant.Ui.Label()
+      Me.eui_txtTotaliRep4Imposta = New Elegant.Ui.TextBox()
+      Me.eui_txtTotaliRep4Aliquota = New Elegant.Ui.TextBox()
+      Me.eui_txtTotaliRep4ImponibileLordo = New Elegant.Ui.TextBox()
+      Me.Label35 = New Elegant.Ui.Label()
+      Me.eui_txtTotaliRep3Imposta = New Elegant.Ui.TextBox()
+      Me.eui_txtTotaliRep3Aliquota = New Elegant.Ui.TextBox()
+      Me.eui_txtTotaliRep3ImponibileLordo = New Elegant.Ui.TextBox()
+      Me.Label34 = New Elegant.Ui.Label()
+      Me.eui_txtTotaliRep2Imposta = New Elegant.Ui.TextBox()
+      Me.eui_txtTotaliRep2Aliquota = New Elegant.Ui.TextBox()
+      Me.eui_txtTotaliRep2ImponibileLordo = New Elegant.Ui.TextBox()
+      Me.Label33 = New Elegant.Ui.Label()
+      Me.eui_txtTotaliRep1Imposta = New Elegant.Ui.TextBox()
+      Me.Label29 = New Elegant.Ui.Label()
+      Me.eui_txtTotaliRep1Aliquota = New Elegant.Ui.TextBox()
+      Me.Label30 = New Elegant.Ui.Label()
+      Me.eui_txtTotaliRep1ImponibileLordo = New Elegant.Ui.TextBox()
+      Me.Label31 = New Elegant.Ui.Label()
+      Me.eui_txtTotaliSospeso = New Elegant.Ui.TextBox()
+      Me.Label28 = New Elegant.Ui.Label()
+      Me.eui_txtTotaliBuoni = New Elegant.Ui.TextBox()
+      Me.Label25 = New Elegant.Ui.Label()
+      Me.eui_txtTotaliContanti = New Elegant.Ui.TextBox()
+      Me.eui_txtTotaliCarte = New Elegant.Ui.TextBox()
+      Me.Label26 = New Elegant.Ui.Label()
+      Me.Label27 = New Elegant.Ui.Label()
+      Me.eui_txtTotaliCoperto = New Elegant.Ui.TextBox()
+      Me.Label24 = New Elegant.Ui.Label()
+      Me.eui_txtTotaliSconto = New Elegant.Ui.TextBox()
+      Me.eui_txtTotaliServizio = New Elegant.Ui.TextBox()
+      Me.Label22 = New Elegant.Ui.Label()
+      Me.Label23 = New Elegant.Ui.Label()
+      Me.eui_txtTotaleConto = New Elegant.Ui.TextBox()
+      Me.Label19 = New Elegant.Ui.Label()
+      Me.eui_txtTotaleImposta = New Elegant.Ui.TextBox()
+      Me.eui_txtTotaliImponibile = New Elegant.Ui.TextBox()
+      Me.Label20 = New Elegant.Ui.Label()
+      Me.Label21 = New Elegant.Ui.Label()
       Me.eui_tpNote = New Elegant.Ui.TabPage()
       Me.eui_txtNote = New Elegant.Ui.TextBox()
       Me.PopupMenu2 = New Elegant.Ui.PopupMenu(Me.components)
@@ -171,11 +171,11 @@ Partial Class frmDocumento
       Me.eui_cmdEmettiStampa = New Elegant.Ui.Button()
       Me.eui_cmdTastiera = New Elegant.Ui.Button()
       CType(Me.eui_tpcDocumento, System.ComponentModel.ISupportInitialize).BeginInit()
-      Me.eui_tpTotali.SuspendLayout()
       Me.eui_tpGenerale.SuspendLayout()
       Me.eui_tpDettagli.SuspendLayout()
       CType(Me.PopupMenu1, System.ComponentModel.ISupportInitialize).BeginInit()
       CType(Me.dgvDettagli, System.ComponentModel.ISupportInitialize).BeginInit()
+      Me.eui_tpTotali.SuspendLayout()
       Me.eui_tpNote.SuspendLayout()
       CType(Me.PopupMenu2, System.ComponentModel.ISupportInitialize).BeginInit()
       Me.StatusBar1.SuspendLayout()
@@ -204,417 +204,6 @@ Partial Class frmDocumento
       Me.eui_tpcDocumento.TabIndex = 0
       Me.eui_tpcDocumento.TabPages.AddRange(New Elegant.Ui.TabPage() {Me.eui_tpGenerale, Me.eui_tpDettagli, Me.eui_tpTotali, Me.eui_tpNote})
       Me.eui_tpcDocumento.Text = " "
-      '
-      'eui_tpTotali
-      '
-      Me.eui_tpTotali.ActiveControl = Nothing
-      Me.eui_tpTotali.Controls.Add(Me.Label36)
-      Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliRep4Imposta)
-      Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliRep4Aliquota)
-      Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliRep4ImponibileLordo)
-      Me.eui_tpTotali.Controls.Add(Me.Label35)
-      Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliRep3Imposta)
-      Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliRep3Aliquota)
-      Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliRep3ImponibileLordo)
-      Me.eui_tpTotali.Controls.Add(Me.Label34)
-      Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliRep2Imposta)
-      Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliRep2Aliquota)
-      Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliRep2ImponibileLordo)
-      Me.eui_tpTotali.Controls.Add(Me.Label33)
-      Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliRep1Imposta)
-      Me.eui_tpTotali.Controls.Add(Me.Label29)
-      Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliRep1Aliquota)
-      Me.eui_tpTotali.Controls.Add(Me.Label30)
-      Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliRep1ImponibileLordo)
-      Me.eui_tpTotali.Controls.Add(Me.Label31)
-      Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliSospeso)
-      Me.eui_tpTotali.Controls.Add(Me.Label28)
-      Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliBuoni)
-      Me.eui_tpTotali.Controls.Add(Me.Label25)
-      Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliContanti)
-      Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliCarte)
-      Me.eui_tpTotali.Controls.Add(Me.Label26)
-      Me.eui_tpTotali.Controls.Add(Me.Label27)
-      Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliCoperto)
-      Me.eui_tpTotali.Controls.Add(Me.Label24)
-      Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliSconto)
-      Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliServizio)
-      Me.eui_tpTotali.Controls.Add(Me.Label22)
-      Me.eui_tpTotali.Controls.Add(Me.Label23)
-      Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaleConto)
-      Me.eui_tpTotali.Controls.Add(Me.Label19)
-      Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaleImposta)
-      Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliImponibile)
-      Me.eui_tpTotali.Controls.Add(Me.Label20)
-      Me.eui_tpTotali.Controls.Add(Me.Label21)
-      Me.eui_tpTotali.Dock = System.Windows.Forms.DockStyle.Fill
-      Me.eui_tpTotali.KeyTip = Nothing
-      Me.eui_tpTotali.Name = "eui_tpTotali"
-      Me.eui_tpTotali.Size = New System.Drawing.Size(659, 458)
-      Me.eui_tpTotali.TabIndex = 3
-      Me.eui_tpTotali.Text = "Totali"
-      '
-      'Label36
-      '
-      Me.Label36.Location = New System.Drawing.Point(512, 32)
-      Me.Label36.Name = "Label36"
-      Me.Label36.Size = New System.Drawing.Size(76, 16)
-      Me.Label36.TabIndex = 86
-      Me.Label36.Text = "Reparto 4"
-      '
-      'eui_txtTotaliRep4Imposta
-      '
-      Me.eui_txtTotaliRep4Imposta.Id = "ffd83ae2-0ec8-4f14-93b6-d911d0b28d90"
-      Me.eui_txtTotaliRep4Imposta.Location = New System.Drawing.Point(511, 118)
-      Me.eui_txtTotaliRep4Imposta.Name = "eui_txtTotaliRep4Imposta"
-      Me.eui_txtTotaliRep4Imposta.Size = New System.Drawing.Size(113, 21)
-      Me.eui_txtTotaliRep4Imposta.TabIndex = 15
-      Me.eui_txtTotaliRep4Imposta.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-      Me.eui_txtTotaliRep4Imposta.TextEditorWidth = 107
-      '
-      'eui_txtTotaliRep4Aliquota
-      '
-      Me.eui_txtTotaliRep4Aliquota.Id = "4793859a-b23a-42e5-bc1e-07d61a5befb0"
-      Me.eui_txtTotaliRep4Aliquota.Location = New System.Drawing.Point(511, 86)
-      Me.eui_txtTotaliRep4Aliquota.Name = "eui_txtTotaliRep4Aliquota"
-      Me.eui_txtTotaliRep4Aliquota.Size = New System.Drawing.Size(113, 21)
-      Me.eui_txtTotaliRep4Aliquota.TabIndex = 11
-      Me.eui_txtTotaliRep4Aliquota.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-      Me.eui_txtTotaliRep4Aliquota.TextEditorWidth = 107
-      '
-      'eui_txtTotaliRep4ImponibileLordo
-      '
-      Me.eui_txtTotaliRep4ImponibileLordo.Id = "f450f0f3-ca6c-4679-b1e9-6dee97303ddc"
-      Me.eui_txtTotaliRep4ImponibileLordo.Location = New System.Drawing.Point(511, 53)
-      Me.eui_txtTotaliRep4ImponibileLordo.Name = "eui_txtTotaliRep4ImponibileLordo"
-      Me.eui_txtTotaliRep4ImponibileLordo.Size = New System.Drawing.Size(113, 21)
-      Me.eui_txtTotaliRep4ImponibileLordo.TabIndex = 3
-      Me.eui_txtTotaliRep4ImponibileLordo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-      Me.eui_txtTotaliRep4ImponibileLordo.TextEditorWidth = 107
-      '
-      'Label35
-      '
-      Me.Label35.Location = New System.Drawing.Point(386, 32)
-      Me.Label35.Name = "Label35"
-      Me.Label35.Size = New System.Drawing.Size(76, 16)
-      Me.Label35.TabIndex = 81
-      Me.Label35.Text = "Reparto 3"
-      '
-      'eui_txtTotaliRep3Imposta
-      '
-      Me.eui_txtTotaliRep3Imposta.Id = "7e17eb03-a692-4531-9565-756b88d062e7"
-      Me.eui_txtTotaliRep3Imposta.Location = New System.Drawing.Point(385, 118)
-      Me.eui_txtTotaliRep3Imposta.Name = "eui_txtTotaliRep3Imposta"
-      Me.eui_txtTotaliRep3Imposta.Size = New System.Drawing.Size(113, 21)
-      Me.eui_txtTotaliRep3Imposta.TabIndex = 14
-      Me.eui_txtTotaliRep3Imposta.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-      Me.eui_txtTotaliRep3Imposta.TextEditorWidth = 107
-      '
-      'eui_txtTotaliRep3Aliquota
-      '
-      Me.eui_txtTotaliRep3Aliquota.Id = "954846f0-094a-4a2c-8db2-3a1f2af6b0e2"
-      Me.eui_txtTotaliRep3Aliquota.Location = New System.Drawing.Point(385, 86)
-      Me.eui_txtTotaliRep3Aliquota.Name = "eui_txtTotaliRep3Aliquota"
-      Me.eui_txtTotaliRep3Aliquota.Size = New System.Drawing.Size(113, 21)
-      Me.eui_txtTotaliRep3Aliquota.TabIndex = 10
-      Me.eui_txtTotaliRep3Aliquota.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-      Me.eui_txtTotaliRep3Aliquota.TextEditorWidth = 107
-      '
-      'eui_txtTotaliRep3ImponibileLordo
-      '
-      Me.eui_txtTotaliRep3ImponibileLordo.Id = "dc250508-4fa8-46ed-9dc1-584c14572782"
-      Me.eui_txtTotaliRep3ImponibileLordo.Location = New System.Drawing.Point(385, 53)
-      Me.eui_txtTotaliRep3ImponibileLordo.Name = "eui_txtTotaliRep3ImponibileLordo"
-      Me.eui_txtTotaliRep3ImponibileLordo.Size = New System.Drawing.Size(113, 21)
-      Me.eui_txtTotaliRep3ImponibileLordo.TabIndex = 2
-      Me.eui_txtTotaliRep3ImponibileLordo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-      Me.eui_txtTotaliRep3ImponibileLordo.TextEditorWidth = 107
-      '
-      'Label34
-      '
-      Me.Label34.Location = New System.Drawing.Point(260, 32)
-      Me.Label34.Name = "Label34"
-      Me.Label34.Size = New System.Drawing.Size(76, 16)
-      Me.Label34.TabIndex = 76
-      Me.Label34.Text = "Reparto 2"
-      '
-      'eui_txtTotaliRep2Imposta
-      '
-      Me.eui_txtTotaliRep2Imposta.Id = "34118c39-bef2-43b9-810b-7ec2e5d252f3"
-      Me.eui_txtTotaliRep2Imposta.Location = New System.Drawing.Point(259, 118)
-      Me.eui_txtTotaliRep2Imposta.Name = "eui_txtTotaliRep2Imposta"
-      Me.eui_txtTotaliRep2Imposta.Size = New System.Drawing.Size(113, 21)
-      Me.eui_txtTotaliRep2Imposta.TabIndex = 13
-      Me.eui_txtTotaliRep2Imposta.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-      Me.eui_txtTotaliRep2Imposta.TextEditorWidth = 107
-      '
-      'eui_txtTotaliRep2Aliquota
-      '
-      Me.eui_txtTotaliRep2Aliquota.Id = "155cd85a-0031-4f1e-a7b8-c7604228e0d0"
-      Me.eui_txtTotaliRep2Aliquota.Location = New System.Drawing.Point(259, 86)
-      Me.eui_txtTotaliRep2Aliquota.Name = "eui_txtTotaliRep2Aliquota"
-      Me.eui_txtTotaliRep2Aliquota.Size = New System.Drawing.Size(113, 21)
-      Me.eui_txtTotaliRep2Aliquota.TabIndex = 9
-      Me.eui_txtTotaliRep2Aliquota.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-      Me.eui_txtTotaliRep2Aliquota.TextEditorWidth = 107
-      '
-      'eui_txtTotaliRep2ImponibileLordo
-      '
-      Me.eui_txtTotaliRep2ImponibileLordo.Id = "34790fb5-a700-442f-bbf0-20dfca3f5211"
-      Me.eui_txtTotaliRep2ImponibileLordo.Location = New System.Drawing.Point(259, 53)
-      Me.eui_txtTotaliRep2ImponibileLordo.Name = "eui_txtTotaliRep2ImponibileLordo"
-      Me.eui_txtTotaliRep2ImponibileLordo.Size = New System.Drawing.Size(113, 21)
-      Me.eui_txtTotaliRep2ImponibileLordo.TabIndex = 1
-      Me.eui_txtTotaliRep2ImponibileLordo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-      Me.eui_txtTotaliRep2ImponibileLordo.TextEditorWidth = 107
-      '
-      'Label33
-      '
-      Me.Label33.Location = New System.Drawing.Point(135, 32)
-      Me.Label33.Name = "Label33"
-      Me.Label33.Size = New System.Drawing.Size(76, 16)
-      Me.Label33.TabIndex = 71
-      Me.Label33.Text = "Reparto 1"
-      '
-      'eui_txtTotaliRep1Imposta
-      '
-      Me.eui_txtTotaliRep1Imposta.Id = "dcf1c4f9-95b8-4574-8f2c-52bed74e2876"
-      Me.eui_txtTotaliRep1Imposta.Location = New System.Drawing.Point(134, 118)
-      Me.eui_txtTotaliRep1Imposta.Name = "eui_txtTotaliRep1Imposta"
-      Me.eui_txtTotaliRep1Imposta.Size = New System.Drawing.Size(113, 21)
-      Me.eui_txtTotaliRep1Imposta.TabIndex = 12
-      Me.eui_txtTotaliRep1Imposta.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-      Me.eui_txtTotaliRep1Imposta.TextEditorWidth = 107
-      '
-      'Label29
-      '
-      Me.Label29.Location = New System.Drawing.Point(24, 118)
-      Me.Label29.Name = "Label29"
-      Me.Label29.Size = New System.Drawing.Size(101, 13)
-      Me.Label29.TabIndex = 70
-      Me.Label29.Text = "Imposta:"
-      '
-      'eui_txtTotaliRep1Aliquota
-      '
-      Me.eui_txtTotaliRep1Aliquota.Id = "ebec8ca3-175b-4e35-86a8-15c4be47759c"
-      Me.eui_txtTotaliRep1Aliquota.Location = New System.Drawing.Point(134, 86)
-      Me.eui_txtTotaliRep1Aliquota.Name = "eui_txtTotaliRep1Aliquota"
-      Me.eui_txtTotaliRep1Aliquota.Size = New System.Drawing.Size(113, 21)
-      Me.eui_txtTotaliRep1Aliquota.TabIndex = 8
-      Me.eui_txtTotaliRep1Aliquota.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-      Me.eui_txtTotaliRep1Aliquota.TextEditorWidth = 107
-      '
-      'Label30
-      '
-      Me.Label30.Location = New System.Drawing.Point(24, 86)
-      Me.Label30.Name = "Label30"
-      Me.Label30.Size = New System.Drawing.Size(94, 21)
-      Me.Label30.TabIndex = 68
-      Me.Label30.Text = "Aliquota:"
-      '
-      'eui_txtTotaliRep1ImponibileLordo
-      '
-      Me.eui_txtTotaliRep1ImponibileLordo.Id = "c41e3f0d-73b3-4635-80ff-2ee6acc3cc27"
-      Me.eui_txtTotaliRep1ImponibileLordo.Location = New System.Drawing.Point(134, 53)
-      Me.eui_txtTotaliRep1ImponibileLordo.Name = "eui_txtTotaliRep1ImponibileLordo"
-      Me.eui_txtTotaliRep1ImponibileLordo.Size = New System.Drawing.Size(113, 21)
-      Me.eui_txtTotaliRep1ImponibileLordo.TabIndex = 0
-      Me.eui_txtTotaliRep1ImponibileLordo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-      Me.eui_txtTotaliRep1ImponibileLordo.TextEditorWidth = 107
-      '
-      'Label31
-      '
-      Me.Label31.Location = New System.Drawing.Point(24, 53)
-      Me.Label31.Name = "Label31"
-      Me.Label31.Size = New System.Drawing.Size(76, 16)
-      Me.Label31.TabIndex = 66
-      Me.Label31.Text = "Imponibile:"
-      '
-      'eui_txtTotaliSospeso
-      '
-      Me.eui_txtTotaliSospeso.Id = "fa047992-05aa-45a2-b111-14b2ffce2ddc"
-      Me.eui_txtTotaliSospeso.Location = New System.Drawing.Point(134, 358)
-      Me.eui_txtTotaliSospeso.Name = "eui_txtTotaliSospeso"
-      Me.eui_txtTotaliSospeso.Size = New System.Drawing.Size(113, 21)
-      Me.eui_txtTotaliSospeso.TabIndex = 22
-      Me.eui_txtTotaliSospeso.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-      Me.eui_txtTotaliSospeso.TextEditorWidth = 107
-      '
-      'Label28
-      '
-      Me.Label28.Location = New System.Drawing.Point(23, 356)
-      Me.Label28.Name = "Label28"
-      Me.Label28.Size = New System.Drawing.Size(101, 13)
-      Me.Label28.TabIndex = 62
-      Me.Label28.Text = "Sospeso:"
-      '
-      'eui_txtTotaliBuoni
-      '
-      Me.eui_txtTotaliBuoni.Id = "f437759b-1a9e-4cf4-9171-a487de788d3a"
-      Me.eui_txtTotaliBuoni.Location = New System.Drawing.Point(134, 322)
-      Me.eui_txtTotaliBuoni.Name = "eui_txtTotaliBuoni"
-      Me.eui_txtTotaliBuoni.Size = New System.Drawing.Size(113, 21)
-      Me.eui_txtTotaliBuoni.TabIndex = 21
-      Me.eui_txtTotaliBuoni.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-      Me.eui_txtTotaliBuoni.TextEditorWidth = 107
-      '
-      'Label25
-      '
-      Me.Label25.Location = New System.Drawing.Point(23, 322)
-      Me.Label25.Name = "Label25"
-      Me.Label25.Size = New System.Drawing.Size(122, 21)
-      Me.Label25.TabIndex = 60
-      Me.Label25.Text = "Buoni Pasto / Ticket:"
-      '
-      'eui_txtTotaliContanti
-      '
-      Me.eui_txtTotaliContanti.Id = "3b9a5823-baa0-4234-afed-b64c562cc81c"
-      Me.eui_txtTotaliContanti.Location = New System.Drawing.Point(134, 253)
-      Me.eui_txtTotaliContanti.Name = "eui_txtTotaliContanti"
-      Me.eui_txtTotaliContanti.Size = New System.Drawing.Size(113, 21)
-      Me.eui_txtTotaliContanti.TabIndex = 19
-      Me.eui_txtTotaliContanti.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-      Me.eui_txtTotaliContanti.TextEditorWidth = 107
-      '
-      'eui_txtTotaliCarte
-      '
-      Me.eui_txtTotaliCarte.Id = "bef45986-eec3-404c-bccf-3706932d5729"
-      Me.eui_txtTotaliCarte.Location = New System.Drawing.Point(134, 287)
-      Me.eui_txtTotaliCarte.Name = "eui_txtTotaliCarte"
-      Me.eui_txtTotaliCarte.Size = New System.Drawing.Size(113, 21)
-      Me.eui_txtTotaliCarte.TabIndex = 20
-      Me.eui_txtTotaliCarte.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-      Me.eui_txtTotaliCarte.TextEditorWidth = 107
-      '
-      'Label26
-      '
-      Me.Label26.Location = New System.Drawing.Point(23, 253)
-      Me.Label26.Name = "Label26"
-      Me.Label26.Size = New System.Drawing.Size(122, 21)
-      Me.Label26.TabIndex = 58
-      Me.Label26.Text = "Contanti:"
-      '
-      'Label27
-      '
-      Me.Label27.Location = New System.Drawing.Point(23, 287)
-      Me.Label27.Name = "Label27"
-      Me.Label27.Size = New System.Drawing.Size(122, 21)
-      Me.Label27.TabIndex = 57
-      Me.Label27.Text = "Carta di credito:"
-      '
-      'eui_txtTotaliCoperto
-      '
-      Me.eui_txtTotaliCoperto.Id = "972e4d3c-d254-40a1-afd3-5079f291dca1"
-      Me.eui_txtTotaliCoperto.Location = New System.Drawing.Point(135, 424)
-      Me.eui_txtTotaliCoperto.Name = "eui_txtTotaliCoperto"
-      Me.eui_txtTotaliCoperto.Size = New System.Drawing.Size(113, 21)
-      Me.eui_txtTotaliCoperto.TabIndex = 18
-      Me.eui_txtTotaliCoperto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-      Me.eui_txtTotaliCoperto.TextEditorWidth = 107
-      Me.eui_txtTotaliCoperto.Visible = False
-      '
-      'Label24
-      '
-      Me.Label24.Location = New System.Drawing.Point(25, 425)
-      Me.Label24.Name = "Label24"
-      Me.Label24.Size = New System.Drawing.Size(72, 13)
-      Me.Label24.TabIndex = 54
-      Me.Label24.Text = "Totale coperto:"
-      Me.Label24.Visible = False
-      '
-      'eui_txtTotaliSconto
-      '
-      Me.eui_txtTotaliSconto.Id = "249b0cf7-9686-4ed4-894e-d297f18da089"
-      Me.eui_txtTotaliSconto.Location = New System.Drawing.Point(135, 189)
-      Me.eui_txtTotaliSconto.Name = "eui_txtTotaliSconto"
-      Me.eui_txtTotaliSconto.Size = New System.Drawing.Size(113, 21)
-      Me.eui_txtTotaliSconto.TabIndex = 16
-      Me.eui_txtTotaliSconto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-      Me.eui_txtTotaliSconto.TextEditorWidth = 107
-      '
-      'eui_txtTotaliServizio
-      '
-      Me.eui_txtTotaliServizio.Id = "719144b6-18ef-474b-b166-3c2e0bdd5832"
-      Me.eui_txtTotaliServizio.Location = New System.Drawing.Point(135, 399)
-      Me.eui_txtTotaliServizio.Name = "eui_txtTotaliServizio"
-      Me.eui_txtTotaliServizio.Size = New System.Drawing.Size(113, 21)
-      Me.eui_txtTotaliServizio.TabIndex = 17
-      Me.eui_txtTotaliServizio.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-      Me.eui_txtTotaliServizio.TextEditorWidth = 107
-      Me.eui_txtTotaliServizio.Visible = False
-      '
-      'Label22
-      '
-      Me.Label22.Location = New System.Drawing.Point(22, 189)
-      Me.Label22.Name = "Label22"
-      Me.Label22.Size = New System.Drawing.Size(68, 16)
-      Me.Label22.TabIndex = 52
-      Me.Label22.Text = "Totale sconto:"
-      '
-      'Label23
-      '
-      Me.Label23.Location = New System.Drawing.Point(25, 399)
-      Me.Label23.Name = "Label23"
-      Me.Label23.Size = New System.Drawing.Size(53, 13)
-      Me.Label23.TabIndex = 51
-      Me.Label23.Text = "Servizio:"
-      Me.Label23.Visible = False
-      '
-      'eui_txtTotaleConto
-      '
-      Me.eui_txtTotaleConto.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.eui_txtTotaleConto.Id = "290ee552-7348-4091-bdbd-8913091330c5"
-      Me.eui_txtTotaleConto.Location = New System.Drawing.Point(511, 358)
-      Me.eui_txtTotaleConto.Name = "eui_txtTotaleConto"
-      Me.eui_txtTotaleConto.Size = New System.Drawing.Size(113, 21)
-      Me.eui_txtTotaleConto.TabIndex = 25
-      Me.eui_txtTotaleConto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-      Me.eui_txtTotaleConto.TextEditorWidth = 107
-      '
-      'Label19
-      '
-      Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.Label19.Location = New System.Drawing.Point(422, 363)
-      Me.Label19.Name = "Label19"
-      Me.Label19.Size = New System.Drawing.Size(76, 16)
-      Me.Label19.TabIndex = 48
-      Me.Label19.Text = "Totale:"
-      '
-      'eui_txtTotaleImposta
-      '
-      Me.eui_txtTotaleImposta.Id = "1bb48929-aef4-4843-a704-974e9b2bea73"
-      Me.eui_txtTotaleImposta.Location = New System.Drawing.Point(511, 322)
-      Me.eui_txtTotaleImposta.Name = "eui_txtTotaleImposta"
-      Me.eui_txtTotaleImposta.Size = New System.Drawing.Size(113, 21)
-      Me.eui_txtTotaleImposta.TabIndex = 24
-      Me.eui_txtTotaleImposta.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-      Me.eui_txtTotaleImposta.TextEditorWidth = 107
-      '
-      'eui_txtTotaliImponibile
-      '
-      Me.eui_txtTotaliImponibile.Id = "c3e2b9e8-8aa8-4f15-94cb-bd3c25128c65"
-      Me.eui_txtTotaliImponibile.Location = New System.Drawing.Point(511, 287)
-      Me.eui_txtTotaliImponibile.Name = "eui_txtTotaliImponibile"
-      Me.eui_txtTotaliImponibile.Size = New System.Drawing.Size(113, 21)
-      Me.eui_txtTotaliImponibile.TabIndex = 23
-      Me.eui_txtTotaliImponibile.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-      Me.eui_txtTotaliImponibile.TextEditorWidth = 107
-      '
-      'Label20
-      '
-      Me.Label20.Location = New System.Drawing.Point(422, 327)
-      Me.Label20.Name = "Label20"
-      Me.Label20.Size = New System.Drawing.Size(56, 16)
-      Me.Label20.TabIndex = 47
-      Me.Label20.Text = "Imposta:"
-      '
-      'Label21
-      '
-      Me.Label21.Location = New System.Drawing.Point(422, 292)
-      Me.Label21.Name = "Label21"
-      Me.Label21.Size = New System.Drawing.Size(56, 16)
-      Me.Label21.TabIndex = 46
-      Me.Label21.Text = "Imponibile:"
       '
       'eui_tpGenerale
       '
@@ -1244,6 +833,417 @@ Partial Class frmDocumento
       Me.clnValoreSconto.Name = "clnValoreSconto"
       Me.clnValoreSconto.Visible = False
       '
+      'eui_tpTotali
+      '
+      Me.eui_tpTotali.ActiveControl = Nothing
+      Me.eui_tpTotali.Controls.Add(Me.Label36)
+      Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliRep4Imposta)
+      Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliRep4Aliquota)
+      Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliRep4ImponibileLordo)
+      Me.eui_tpTotali.Controls.Add(Me.Label35)
+      Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliRep3Imposta)
+      Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliRep3Aliquota)
+      Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliRep3ImponibileLordo)
+      Me.eui_tpTotali.Controls.Add(Me.Label34)
+      Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliRep2Imposta)
+      Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliRep2Aliquota)
+      Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliRep2ImponibileLordo)
+      Me.eui_tpTotali.Controls.Add(Me.Label33)
+      Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliRep1Imposta)
+      Me.eui_tpTotali.Controls.Add(Me.Label29)
+      Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliRep1Aliquota)
+      Me.eui_tpTotali.Controls.Add(Me.Label30)
+      Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliRep1ImponibileLordo)
+      Me.eui_tpTotali.Controls.Add(Me.Label31)
+      Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliSospeso)
+      Me.eui_tpTotali.Controls.Add(Me.Label28)
+      Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliBuoni)
+      Me.eui_tpTotali.Controls.Add(Me.Label25)
+      Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliContanti)
+      Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliCarte)
+      Me.eui_tpTotali.Controls.Add(Me.Label26)
+      Me.eui_tpTotali.Controls.Add(Me.Label27)
+      Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliCoperto)
+      Me.eui_tpTotali.Controls.Add(Me.Label24)
+      Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliSconto)
+      Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliServizio)
+      Me.eui_tpTotali.Controls.Add(Me.Label22)
+      Me.eui_tpTotali.Controls.Add(Me.Label23)
+      Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaleConto)
+      Me.eui_tpTotali.Controls.Add(Me.Label19)
+      Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaleImposta)
+      Me.eui_tpTotali.Controls.Add(Me.eui_txtTotaliImponibile)
+      Me.eui_tpTotali.Controls.Add(Me.Label20)
+      Me.eui_tpTotali.Controls.Add(Me.Label21)
+      Me.eui_tpTotali.Dock = System.Windows.Forms.DockStyle.Fill
+      Me.eui_tpTotali.KeyTip = Nothing
+      Me.eui_tpTotali.Name = "eui_tpTotali"
+      Me.eui_tpTotali.Size = New System.Drawing.Size(659, 458)
+      Me.eui_tpTotali.TabIndex = 3
+      Me.eui_tpTotali.Text = "Totali"
+      '
+      'Label36
+      '
+      Me.Label36.Location = New System.Drawing.Point(512, 32)
+      Me.Label36.Name = "Label36"
+      Me.Label36.Size = New System.Drawing.Size(76, 16)
+      Me.Label36.TabIndex = 86
+      Me.Label36.Text = "Reparto 4"
+      '
+      'eui_txtTotaliRep4Imposta
+      '
+      Me.eui_txtTotaliRep4Imposta.Id = "ffd83ae2-0ec8-4f14-93b6-d911d0b28d90"
+      Me.eui_txtTotaliRep4Imposta.Location = New System.Drawing.Point(511, 118)
+      Me.eui_txtTotaliRep4Imposta.Name = "eui_txtTotaliRep4Imposta"
+      Me.eui_txtTotaliRep4Imposta.Size = New System.Drawing.Size(113, 21)
+      Me.eui_txtTotaliRep4Imposta.TabIndex = 15
+      Me.eui_txtTotaliRep4Imposta.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+      Me.eui_txtTotaliRep4Imposta.TextEditorWidth = 107
+      '
+      'eui_txtTotaliRep4Aliquota
+      '
+      Me.eui_txtTotaliRep4Aliquota.Id = "4793859a-b23a-42e5-bc1e-07d61a5befb0"
+      Me.eui_txtTotaliRep4Aliquota.Location = New System.Drawing.Point(511, 86)
+      Me.eui_txtTotaliRep4Aliquota.Name = "eui_txtTotaliRep4Aliquota"
+      Me.eui_txtTotaliRep4Aliquota.Size = New System.Drawing.Size(113, 21)
+      Me.eui_txtTotaliRep4Aliquota.TabIndex = 11
+      Me.eui_txtTotaliRep4Aliquota.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+      Me.eui_txtTotaliRep4Aliquota.TextEditorWidth = 107
+      '
+      'eui_txtTotaliRep4ImponibileLordo
+      '
+      Me.eui_txtTotaliRep4ImponibileLordo.Id = "f450f0f3-ca6c-4679-b1e9-6dee97303ddc"
+      Me.eui_txtTotaliRep4ImponibileLordo.Location = New System.Drawing.Point(511, 53)
+      Me.eui_txtTotaliRep4ImponibileLordo.Name = "eui_txtTotaliRep4ImponibileLordo"
+      Me.eui_txtTotaliRep4ImponibileLordo.Size = New System.Drawing.Size(113, 21)
+      Me.eui_txtTotaliRep4ImponibileLordo.TabIndex = 3
+      Me.eui_txtTotaliRep4ImponibileLordo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+      Me.eui_txtTotaliRep4ImponibileLordo.TextEditorWidth = 107
+      '
+      'Label35
+      '
+      Me.Label35.Location = New System.Drawing.Point(386, 32)
+      Me.Label35.Name = "Label35"
+      Me.Label35.Size = New System.Drawing.Size(76, 16)
+      Me.Label35.TabIndex = 81
+      Me.Label35.Text = "Reparto 3"
+      '
+      'eui_txtTotaliRep3Imposta
+      '
+      Me.eui_txtTotaliRep3Imposta.Id = "7e17eb03-a692-4531-9565-756b88d062e7"
+      Me.eui_txtTotaliRep3Imposta.Location = New System.Drawing.Point(385, 118)
+      Me.eui_txtTotaliRep3Imposta.Name = "eui_txtTotaliRep3Imposta"
+      Me.eui_txtTotaliRep3Imposta.Size = New System.Drawing.Size(113, 21)
+      Me.eui_txtTotaliRep3Imposta.TabIndex = 14
+      Me.eui_txtTotaliRep3Imposta.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+      Me.eui_txtTotaliRep3Imposta.TextEditorWidth = 107
+      '
+      'eui_txtTotaliRep3Aliquota
+      '
+      Me.eui_txtTotaliRep3Aliquota.Id = "954846f0-094a-4a2c-8db2-3a1f2af6b0e2"
+      Me.eui_txtTotaliRep3Aliquota.Location = New System.Drawing.Point(385, 86)
+      Me.eui_txtTotaliRep3Aliquota.Name = "eui_txtTotaliRep3Aliquota"
+      Me.eui_txtTotaliRep3Aliquota.Size = New System.Drawing.Size(113, 21)
+      Me.eui_txtTotaliRep3Aliquota.TabIndex = 10
+      Me.eui_txtTotaliRep3Aliquota.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+      Me.eui_txtTotaliRep3Aliquota.TextEditorWidth = 107
+      '
+      'eui_txtTotaliRep3ImponibileLordo
+      '
+      Me.eui_txtTotaliRep3ImponibileLordo.Id = "dc250508-4fa8-46ed-9dc1-584c14572782"
+      Me.eui_txtTotaliRep3ImponibileLordo.Location = New System.Drawing.Point(385, 53)
+      Me.eui_txtTotaliRep3ImponibileLordo.Name = "eui_txtTotaliRep3ImponibileLordo"
+      Me.eui_txtTotaliRep3ImponibileLordo.Size = New System.Drawing.Size(113, 21)
+      Me.eui_txtTotaliRep3ImponibileLordo.TabIndex = 2
+      Me.eui_txtTotaliRep3ImponibileLordo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+      Me.eui_txtTotaliRep3ImponibileLordo.TextEditorWidth = 107
+      '
+      'Label34
+      '
+      Me.Label34.Location = New System.Drawing.Point(260, 32)
+      Me.Label34.Name = "Label34"
+      Me.Label34.Size = New System.Drawing.Size(76, 16)
+      Me.Label34.TabIndex = 76
+      Me.Label34.Text = "Reparto 2"
+      '
+      'eui_txtTotaliRep2Imposta
+      '
+      Me.eui_txtTotaliRep2Imposta.Id = "34118c39-bef2-43b9-810b-7ec2e5d252f3"
+      Me.eui_txtTotaliRep2Imposta.Location = New System.Drawing.Point(259, 118)
+      Me.eui_txtTotaliRep2Imposta.Name = "eui_txtTotaliRep2Imposta"
+      Me.eui_txtTotaliRep2Imposta.Size = New System.Drawing.Size(113, 21)
+      Me.eui_txtTotaliRep2Imposta.TabIndex = 13
+      Me.eui_txtTotaliRep2Imposta.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+      Me.eui_txtTotaliRep2Imposta.TextEditorWidth = 107
+      '
+      'eui_txtTotaliRep2Aliquota
+      '
+      Me.eui_txtTotaliRep2Aliquota.Id = "155cd85a-0031-4f1e-a7b8-c7604228e0d0"
+      Me.eui_txtTotaliRep2Aliquota.Location = New System.Drawing.Point(259, 86)
+      Me.eui_txtTotaliRep2Aliquota.Name = "eui_txtTotaliRep2Aliquota"
+      Me.eui_txtTotaliRep2Aliquota.Size = New System.Drawing.Size(113, 21)
+      Me.eui_txtTotaliRep2Aliquota.TabIndex = 9
+      Me.eui_txtTotaliRep2Aliquota.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+      Me.eui_txtTotaliRep2Aliquota.TextEditorWidth = 107
+      '
+      'eui_txtTotaliRep2ImponibileLordo
+      '
+      Me.eui_txtTotaliRep2ImponibileLordo.Id = "34790fb5-a700-442f-bbf0-20dfca3f5211"
+      Me.eui_txtTotaliRep2ImponibileLordo.Location = New System.Drawing.Point(259, 53)
+      Me.eui_txtTotaliRep2ImponibileLordo.Name = "eui_txtTotaliRep2ImponibileLordo"
+      Me.eui_txtTotaliRep2ImponibileLordo.Size = New System.Drawing.Size(113, 21)
+      Me.eui_txtTotaliRep2ImponibileLordo.TabIndex = 1
+      Me.eui_txtTotaliRep2ImponibileLordo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+      Me.eui_txtTotaliRep2ImponibileLordo.TextEditorWidth = 107
+      '
+      'Label33
+      '
+      Me.Label33.Location = New System.Drawing.Point(135, 32)
+      Me.Label33.Name = "Label33"
+      Me.Label33.Size = New System.Drawing.Size(76, 16)
+      Me.Label33.TabIndex = 71
+      Me.Label33.Text = "Reparto 1"
+      '
+      'eui_txtTotaliRep1Imposta
+      '
+      Me.eui_txtTotaliRep1Imposta.Id = "dcf1c4f9-95b8-4574-8f2c-52bed74e2876"
+      Me.eui_txtTotaliRep1Imposta.Location = New System.Drawing.Point(134, 118)
+      Me.eui_txtTotaliRep1Imposta.Name = "eui_txtTotaliRep1Imposta"
+      Me.eui_txtTotaliRep1Imposta.Size = New System.Drawing.Size(113, 21)
+      Me.eui_txtTotaliRep1Imposta.TabIndex = 12
+      Me.eui_txtTotaliRep1Imposta.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+      Me.eui_txtTotaliRep1Imposta.TextEditorWidth = 107
+      '
+      'Label29
+      '
+      Me.Label29.Location = New System.Drawing.Point(24, 118)
+      Me.Label29.Name = "Label29"
+      Me.Label29.Size = New System.Drawing.Size(101, 13)
+      Me.Label29.TabIndex = 70
+      Me.Label29.Text = "Imposta:"
+      '
+      'eui_txtTotaliRep1Aliquota
+      '
+      Me.eui_txtTotaliRep1Aliquota.Id = "ebec8ca3-175b-4e35-86a8-15c4be47759c"
+      Me.eui_txtTotaliRep1Aliquota.Location = New System.Drawing.Point(134, 86)
+      Me.eui_txtTotaliRep1Aliquota.Name = "eui_txtTotaliRep1Aliquota"
+      Me.eui_txtTotaliRep1Aliquota.Size = New System.Drawing.Size(113, 21)
+      Me.eui_txtTotaliRep1Aliquota.TabIndex = 8
+      Me.eui_txtTotaliRep1Aliquota.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+      Me.eui_txtTotaliRep1Aliquota.TextEditorWidth = 107
+      '
+      'Label30
+      '
+      Me.Label30.Location = New System.Drawing.Point(24, 86)
+      Me.Label30.Name = "Label30"
+      Me.Label30.Size = New System.Drawing.Size(94, 21)
+      Me.Label30.TabIndex = 68
+      Me.Label30.Text = "Aliquota:"
+      '
+      'eui_txtTotaliRep1ImponibileLordo
+      '
+      Me.eui_txtTotaliRep1ImponibileLordo.Id = "c41e3f0d-73b3-4635-80ff-2ee6acc3cc27"
+      Me.eui_txtTotaliRep1ImponibileLordo.Location = New System.Drawing.Point(134, 53)
+      Me.eui_txtTotaliRep1ImponibileLordo.Name = "eui_txtTotaliRep1ImponibileLordo"
+      Me.eui_txtTotaliRep1ImponibileLordo.Size = New System.Drawing.Size(113, 21)
+      Me.eui_txtTotaliRep1ImponibileLordo.TabIndex = 0
+      Me.eui_txtTotaliRep1ImponibileLordo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+      Me.eui_txtTotaliRep1ImponibileLordo.TextEditorWidth = 107
+      '
+      'Label31
+      '
+      Me.Label31.Location = New System.Drawing.Point(24, 53)
+      Me.Label31.Name = "Label31"
+      Me.Label31.Size = New System.Drawing.Size(76, 16)
+      Me.Label31.TabIndex = 66
+      Me.Label31.Text = "Imponibile:"
+      '
+      'eui_txtTotaliSospeso
+      '
+      Me.eui_txtTotaliSospeso.Id = "fa047992-05aa-45a2-b111-14b2ffce2ddc"
+      Me.eui_txtTotaliSospeso.Location = New System.Drawing.Point(134, 358)
+      Me.eui_txtTotaliSospeso.Name = "eui_txtTotaliSospeso"
+      Me.eui_txtTotaliSospeso.Size = New System.Drawing.Size(113, 21)
+      Me.eui_txtTotaliSospeso.TabIndex = 22
+      Me.eui_txtTotaliSospeso.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+      Me.eui_txtTotaliSospeso.TextEditorWidth = 107
+      '
+      'Label28
+      '
+      Me.Label28.Location = New System.Drawing.Point(23, 356)
+      Me.Label28.Name = "Label28"
+      Me.Label28.Size = New System.Drawing.Size(101, 13)
+      Me.Label28.TabIndex = 62
+      Me.Label28.Text = "Sospeso:"
+      '
+      'eui_txtTotaliBuoni
+      '
+      Me.eui_txtTotaliBuoni.Id = "f437759b-1a9e-4cf4-9171-a487de788d3a"
+      Me.eui_txtTotaliBuoni.Location = New System.Drawing.Point(134, 322)
+      Me.eui_txtTotaliBuoni.Name = "eui_txtTotaliBuoni"
+      Me.eui_txtTotaliBuoni.Size = New System.Drawing.Size(113, 21)
+      Me.eui_txtTotaliBuoni.TabIndex = 21
+      Me.eui_txtTotaliBuoni.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+      Me.eui_txtTotaliBuoni.TextEditorWidth = 107
+      '
+      'Label25
+      '
+      Me.Label25.Location = New System.Drawing.Point(23, 322)
+      Me.Label25.Name = "Label25"
+      Me.Label25.Size = New System.Drawing.Size(122, 21)
+      Me.Label25.TabIndex = 60
+      Me.Label25.Text = "Buoni Pasto / Ticket:"
+      '
+      'eui_txtTotaliContanti
+      '
+      Me.eui_txtTotaliContanti.Id = "3b9a5823-baa0-4234-afed-b64c562cc81c"
+      Me.eui_txtTotaliContanti.Location = New System.Drawing.Point(134, 253)
+      Me.eui_txtTotaliContanti.Name = "eui_txtTotaliContanti"
+      Me.eui_txtTotaliContanti.Size = New System.Drawing.Size(113, 21)
+      Me.eui_txtTotaliContanti.TabIndex = 19
+      Me.eui_txtTotaliContanti.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+      Me.eui_txtTotaliContanti.TextEditorWidth = 107
+      '
+      'eui_txtTotaliCarte
+      '
+      Me.eui_txtTotaliCarte.Id = "bef45986-eec3-404c-bccf-3706932d5729"
+      Me.eui_txtTotaliCarte.Location = New System.Drawing.Point(134, 287)
+      Me.eui_txtTotaliCarte.Name = "eui_txtTotaliCarte"
+      Me.eui_txtTotaliCarte.Size = New System.Drawing.Size(113, 21)
+      Me.eui_txtTotaliCarte.TabIndex = 20
+      Me.eui_txtTotaliCarte.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+      Me.eui_txtTotaliCarte.TextEditorWidth = 107
+      '
+      'Label26
+      '
+      Me.Label26.Location = New System.Drawing.Point(23, 253)
+      Me.Label26.Name = "Label26"
+      Me.Label26.Size = New System.Drawing.Size(122, 21)
+      Me.Label26.TabIndex = 58
+      Me.Label26.Text = "Contanti:"
+      '
+      'Label27
+      '
+      Me.Label27.Location = New System.Drawing.Point(23, 287)
+      Me.Label27.Name = "Label27"
+      Me.Label27.Size = New System.Drawing.Size(122, 21)
+      Me.Label27.TabIndex = 57
+      Me.Label27.Text = "Carta di credito:"
+      '
+      'eui_txtTotaliCoperto
+      '
+      Me.eui_txtTotaliCoperto.Id = "972e4d3c-d254-40a1-afd3-5079f291dca1"
+      Me.eui_txtTotaliCoperto.Location = New System.Drawing.Point(135, 424)
+      Me.eui_txtTotaliCoperto.Name = "eui_txtTotaliCoperto"
+      Me.eui_txtTotaliCoperto.Size = New System.Drawing.Size(113, 21)
+      Me.eui_txtTotaliCoperto.TabIndex = 18
+      Me.eui_txtTotaliCoperto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+      Me.eui_txtTotaliCoperto.TextEditorWidth = 107
+      Me.eui_txtTotaliCoperto.Visible = False
+      '
+      'Label24
+      '
+      Me.Label24.Location = New System.Drawing.Point(25, 425)
+      Me.Label24.Name = "Label24"
+      Me.Label24.Size = New System.Drawing.Size(72, 13)
+      Me.Label24.TabIndex = 54
+      Me.Label24.Text = "Totale coperto:"
+      Me.Label24.Visible = False
+      '
+      'eui_txtTotaliSconto
+      '
+      Me.eui_txtTotaliSconto.Id = "249b0cf7-9686-4ed4-894e-d297f18da089"
+      Me.eui_txtTotaliSconto.Location = New System.Drawing.Point(135, 189)
+      Me.eui_txtTotaliSconto.Name = "eui_txtTotaliSconto"
+      Me.eui_txtTotaliSconto.Size = New System.Drawing.Size(113, 21)
+      Me.eui_txtTotaliSconto.TabIndex = 16
+      Me.eui_txtTotaliSconto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+      Me.eui_txtTotaliSconto.TextEditorWidth = 107
+      '
+      'eui_txtTotaliServizio
+      '
+      Me.eui_txtTotaliServizio.Id = "719144b6-18ef-474b-b166-3c2e0bdd5832"
+      Me.eui_txtTotaliServizio.Location = New System.Drawing.Point(135, 399)
+      Me.eui_txtTotaliServizio.Name = "eui_txtTotaliServizio"
+      Me.eui_txtTotaliServizio.Size = New System.Drawing.Size(113, 21)
+      Me.eui_txtTotaliServizio.TabIndex = 17
+      Me.eui_txtTotaliServizio.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+      Me.eui_txtTotaliServizio.TextEditorWidth = 107
+      Me.eui_txtTotaliServizio.Visible = False
+      '
+      'Label22
+      '
+      Me.Label22.Location = New System.Drawing.Point(22, 189)
+      Me.Label22.Name = "Label22"
+      Me.Label22.Size = New System.Drawing.Size(68, 16)
+      Me.Label22.TabIndex = 52
+      Me.Label22.Text = "Totale sconto:"
+      '
+      'Label23
+      '
+      Me.Label23.Location = New System.Drawing.Point(25, 399)
+      Me.Label23.Name = "Label23"
+      Me.Label23.Size = New System.Drawing.Size(53, 13)
+      Me.Label23.TabIndex = 51
+      Me.Label23.Text = "Servizio:"
+      Me.Label23.Visible = False
+      '
+      'eui_txtTotaleConto
+      '
+      Me.eui_txtTotaleConto.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+      Me.eui_txtTotaleConto.Id = "290ee552-7348-4091-bdbd-8913091330c5"
+      Me.eui_txtTotaleConto.Location = New System.Drawing.Point(511, 358)
+      Me.eui_txtTotaleConto.Name = "eui_txtTotaleConto"
+      Me.eui_txtTotaleConto.Size = New System.Drawing.Size(113, 21)
+      Me.eui_txtTotaleConto.TabIndex = 25
+      Me.eui_txtTotaleConto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+      Me.eui_txtTotaleConto.TextEditorWidth = 107
+      '
+      'Label19
+      '
+      Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+      Me.Label19.Location = New System.Drawing.Point(422, 363)
+      Me.Label19.Name = "Label19"
+      Me.Label19.Size = New System.Drawing.Size(76, 16)
+      Me.Label19.TabIndex = 48
+      Me.Label19.Text = "Totale:"
+      '
+      'eui_txtTotaleImposta
+      '
+      Me.eui_txtTotaleImposta.Id = "1bb48929-aef4-4843-a704-974e9b2bea73"
+      Me.eui_txtTotaleImposta.Location = New System.Drawing.Point(511, 322)
+      Me.eui_txtTotaleImposta.Name = "eui_txtTotaleImposta"
+      Me.eui_txtTotaleImposta.Size = New System.Drawing.Size(113, 21)
+      Me.eui_txtTotaleImposta.TabIndex = 24
+      Me.eui_txtTotaleImposta.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+      Me.eui_txtTotaleImposta.TextEditorWidth = 107
+      '
+      'eui_txtTotaliImponibile
+      '
+      Me.eui_txtTotaliImponibile.Id = "c3e2b9e8-8aa8-4f15-94cb-bd3c25128c65"
+      Me.eui_txtTotaliImponibile.Location = New System.Drawing.Point(511, 287)
+      Me.eui_txtTotaliImponibile.Name = "eui_txtTotaliImponibile"
+      Me.eui_txtTotaliImponibile.Size = New System.Drawing.Size(113, 21)
+      Me.eui_txtTotaliImponibile.TabIndex = 23
+      Me.eui_txtTotaliImponibile.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+      Me.eui_txtTotaliImponibile.TextEditorWidth = 107
+      '
+      'Label20
+      '
+      Me.Label20.Location = New System.Drawing.Point(422, 327)
+      Me.Label20.Name = "Label20"
+      Me.Label20.Size = New System.Drawing.Size(56, 16)
+      Me.Label20.TabIndex = 47
+      Me.Label20.Text = "Imposta:"
+      '
+      'Label21
+      '
+      Me.Label21.Location = New System.Drawing.Point(422, 292)
+      Me.Label21.Name = "Label21"
+      Me.Label21.Size = New System.Drawing.Size(56, 16)
+      Me.Label21.TabIndex = 46
+      Me.Label21.Text = "Imponibile:"
+      '
       'eui_tpNote
       '
       Me.eui_tpNote.ActiveControl = Nothing
@@ -1313,10 +1313,10 @@ Partial Class frmDocumento
       Me.StatusBar1.Controls.Add(Me.StatusBarControlsArea1)
       Me.StatusBar1.ControlsArea = Me.StatusBarControlsArea1
       Me.StatusBar1.Dock = System.Windows.Forms.DockStyle.Bottom
-      Me.StatusBar1.Location = New System.Drawing.Point(0, 611)
+      Me.StatusBar1.Location = New System.Drawing.Point(0, 622)
       Me.StatusBar1.Name = "StatusBar1"
       Me.StatusBar1.NotificationsArea = Me.StatusBarNotificationsArea1
-      Me.StatusBar1.Size = New System.Drawing.Size(842, 22)
+      Me.StatusBar1.Size = New System.Drawing.Size(850, 22)
       Me.StatusBar1.TabIndex = 3
       Me.StatusBar1.Text = "StatusBar1"
       '
@@ -1330,7 +1330,7 @@ Partial Class frmDocumento
       Me.StatusBarNotificationsArea1.MaximumSize = New System.Drawing.Size(0, 22)
       Me.StatusBarNotificationsArea1.MinimumSize = New System.Drawing.Size(0, 22)
       Me.StatusBarNotificationsArea1.Name = "StatusBarNotificationsArea1"
-      Me.StatusBarNotificationsArea1.Size = New System.Drawing.Size(708, 22)
+      Me.StatusBarNotificationsArea1.Size = New System.Drawing.Size(716, 22)
       Me.StatusBarNotificationsArea1.TabIndex = 1
       '
       'StatusBarPane2
@@ -1397,7 +1397,7 @@ Partial Class frmDocumento
       '
       Me.StatusBarControlsArea1.Controls.Add(Me.StatusBarPane4)
       Me.StatusBarControlsArea1.Dock = System.Windows.Forms.DockStyle.Right
-      Me.StatusBarControlsArea1.Location = New System.Drawing.Point(708, 0)
+      Me.StatusBarControlsArea1.Location = New System.Drawing.Point(716, 0)
       Me.StatusBarControlsArea1.MaximumSize = New System.Drawing.Size(0, 22)
       Me.StatusBarControlsArea1.MinimumSize = New System.Drawing.Size(0, 22)
       Me.StatusBarControlsArea1.Name = "StatusBarControlsArea1"
@@ -1624,7 +1624,7 @@ Partial Class frmDocumento
       Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
       Me.BackColor = System.Drawing.SystemColors.AppWorkspace
       Me.CancelButton = Me.eui_cmdAnnulla
-      Me.ClientSize = New System.Drawing.Size(842, 633)
+      Me.ClientSize = New System.Drawing.Size(850, 644)
       Me.Controls.Add(Me.eui_cmdTastiera)
       Me.Controls.Add(Me.eui_cmdEmettiStampa)
       Me.Controls.Add(Me.eui_cmdStampa)
@@ -1649,13 +1649,13 @@ Partial Class frmDocumento
       Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
       Me.Text = "Conto"
       CType(Me.eui_tpcDocumento, System.ComponentModel.ISupportInitialize).EndInit()
-      Me.eui_tpTotali.ResumeLayout(False)
-      Me.eui_tpTotali.PerformLayout()
       Me.eui_tpGenerale.ResumeLayout(False)
       Me.eui_tpGenerale.PerformLayout()
       Me.eui_tpDettagli.ResumeLayout(False)
       CType(Me.PopupMenu1, System.ComponentModel.ISupportInitialize).EndInit()
       CType(Me.dgvDettagli, System.ComponentModel.ISupportInitialize).EndInit()
+      Me.eui_tpTotali.ResumeLayout(False)
+      Me.eui_tpTotali.PerformLayout()
       Me.eui_tpNote.ResumeLayout(False)
       Me.eui_tpNote.PerformLayout()
       CType(Me.PopupMenu2, System.ComponentModel.ISupportInitialize).EndInit()
