@@ -17,16 +17,17 @@ Public Class ElencoDoc
    Const COLONNA_ID_DOC As Short = 0
    Const COLONNA_NUMERO_DOC As Short = 1
    Const COLONNA_TIPO_DOC As Short = 4
-   Const COLONNA_IMPORTO_TOTALE As Short = 7
-   Const COLONNA_IMPORTO_SOSPESO As Short = 8
+   Const COLONNA_IMPORTO_TOTALE As Short = 9 '6 '7
+   Const COLONNA_IMPORTO_SOSPESO As Short = 10 '7 '8
    Const COLONNA_IMPORTO_SOSPESO_INC As Short = 14
-   Const COLONNA_IMPORTO_BUONI As Short = 11
+   Const COLONNA_IMPORTO_BUONI As Short = 13 '10 '11
    Const COLONNA_IMPORTO_BUONI_INC As Short = 15
 
    Const TIPO_DOC_RF As String = "Ricevuta Fiscale"
    Const TIPO_DOC_FF As String = "Fattura"
    Const TIPO_DOC_SF As String = "Scontrino"
    Const TIPO_DOC_PF As String = "Proforma"
+   Const TIPO_DOC_CO As String = "Conto"
 
    ' Dichiara un oggetto connessione.
    Dim cn As New OleDbConnection(ConnString)
@@ -51,7 +52,7 @@ Public Class ElencoDoc
    Private CFormatta As New ClsFormatta
    Private AArticoli As New Articoli
    Friend WithEvents formFrameSkinner As Elegant.Ui.FormFrameSkinner
-   Dim filtroDati As String
+   Public filtroDati As String
 
 #Region " Codice generato da Progettazione Windows Form "
 
@@ -196,7 +197,7 @@ Public Class ElencoDoc
       Me.ToolBar1.Location = New System.Drawing.Point(0, 0)
       Me.ToolBar1.Name = "ToolBar1"
       Me.ToolBar1.ShowToolTips = True
-      Me.ToolBar1.Size = New System.Drawing.Size(864, 26)
+      Me.ToolBar1.Size = New System.Drawing.Size(872, 26)
       Me.ToolBar1.TabIndex = 2
       Me.ToolBar1.TextAlign = System.Windows.Forms.ToolBarTextAlign.Right
       Me.ToolBar1.Wrappable = False
@@ -442,7 +443,7 @@ Public Class ElencoDoc
       Me.DataGrid1.Location = New System.Drawing.Point(0, 56)
       Me.DataGrid1.Name = "DataGrid1"
       Me.DataGrid1.ReadOnly = True
-      Me.DataGrid1.Size = New System.Drawing.Size(864, 254)
+      Me.DataGrid1.Size = New System.Drawing.Size(872, 263)
       Me.DataGrid1.TabIndex = 0
       '
       'Panel1
@@ -459,14 +460,14 @@ Public Class ElencoDoc
       Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
       Me.Panel1.Location = New System.Drawing.Point(0, 26)
       Me.Panel1.Name = "Panel1"
-      Me.Panel1.Size = New System.Drawing.Size(864, 30)
+      Me.Panel1.Size = New System.Drawing.Size(872, 30)
       Me.Panel1.TabIndex = 0
       '
       'dtpAl
       '
       Me.dtpAl.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.dtpAl.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.dtpAl.Location = New System.Drawing.Point(680, 40)
+      Me.dtpAl.Location = New System.Drawing.Point(688, 40)
       Me.dtpAl.Name = "dtpAl"
       Me.dtpAl.Size = New System.Drawing.Size(174, 20)
       Me.dtpAl.TabIndex = 55670
@@ -477,7 +478,7 @@ Public Class ElencoDoc
       '
       Me.dtpDal.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.dtpDal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.dtpDal.Location = New System.Drawing.Point(464, 40)
+      Me.dtpDal.Location = New System.Drawing.Point(472, 40)
       Me.dtpDal.MaxDate = New Date(9998, 12, 1, 0, 0, 0, 0)
       Me.dtpDal.Name = "dtpDal"
       Me.dtpDal.Size = New System.Drawing.Size(174, 20)
@@ -491,7 +492,7 @@ Public Class ElencoDoc
       Me.lblAl.AutoSize = True
       Me.lblAl.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.lblAl.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-      Me.lblAl.Location = New System.Drawing.Point(656, 40)
+      Me.lblAl.Location = New System.Drawing.Point(664, 40)
       Me.lblAl.Name = "lblAl"
       Me.lblAl.Size = New System.Drawing.Size(23, 15)
       Me.lblAl.TabIndex = 55672
@@ -505,7 +506,7 @@ Public Class ElencoDoc
       Me.lblDal.AutoSize = True
       Me.lblDal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.lblDal.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-      Me.lblDal.Location = New System.Drawing.Point(432, 40)
+      Me.lblDal.Location = New System.Drawing.Point(440, 40)
       Me.lblDal.Name = "lblDal"
       Me.lblDal.Size = New System.Drawing.Size(33, 15)
       Me.lblDal.TabIndex = 55671
@@ -517,7 +518,7 @@ Public Class ElencoDoc
       '
       Me.CampoRicerca.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.CampoRicerca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-      Me.CampoRicerca.Location = New System.Drawing.Point(722, 8)
+      Me.CampoRicerca.Location = New System.Drawing.Point(730, 8)
       Me.CampoRicerca.Name = "CampoRicerca"
       Me.CampoRicerca.Size = New System.Drawing.Size(136, 21)
       Me.CampoRicerca.TabIndex = 1
@@ -528,7 +529,7 @@ Public Class ElencoDoc
       Me.lblCampo.AutoSize = True
       Me.lblCampo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.lblCampo.ForeColor = System.Drawing.Color.White
-      Me.lblCampo.Location = New System.Drawing.Point(640, 8)
+      Me.lblCampo.Location = New System.Drawing.Point(648, 8)
       Me.lblCampo.Name = "lblCampo"
       Me.lblCampo.Size = New System.Drawing.Size(85, 15)
       Me.lblCampo.TabIndex = 8
@@ -551,7 +552,7 @@ Public Class ElencoDoc
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.TestoRicerca.Location = New System.Drawing.Point(112, 8)
       Me.TestoRicerca.Name = "TestoRicerca"
-      Me.TestoRicerca.Size = New System.Drawing.Size(519, 20)
+      Me.TestoRicerca.Size = New System.Drawing.Size(527, 20)
       Me.TestoRicerca.TabIndex = 0
       '
       'PrintDialog1
@@ -572,9 +573,9 @@ Public Class ElencoDoc
       Me.Panel2.Controls.Add(Me.txtTotImporto)
       Me.Panel2.Controls.Add(Me.Label6)
       Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
-      Me.Panel2.Location = New System.Drawing.Point(0, 310)
+      Me.Panel2.Location = New System.Drawing.Point(0, 318)
       Me.Panel2.Name = "Panel2"
-      Me.Panel2.Size = New System.Drawing.Size(864, 32)
+      Me.Panel2.Size = New System.Drawing.Size(872, 32)
       Me.Panel2.TabIndex = 13
       '
       'txtBuoni
@@ -585,7 +586,7 @@ Public Class ElencoDoc
       Me.txtBuoni.Cursor = System.Windows.Forms.Cursors.IBeam
       Me.txtBuoni.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.txtBuoni.ForeColor = System.Drawing.Color.Red
-      Me.txtBuoni.Location = New System.Drawing.Point(744, 7)
+      Me.txtBuoni.Location = New System.Drawing.Point(752, 7)
       Me.txtBuoni.MaxLength = 0
       Me.txtBuoni.Name = "txtBuoni"
       Me.txtBuoni.ReadOnly = True
@@ -600,7 +601,7 @@ Public Class ElencoDoc
       Me.Label1.AutoSize = True
       Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.Label1.ForeColor = System.Drawing.Color.White
-      Me.Label1.Location = New System.Drawing.Point(664, 7)
+      Me.Label1.Location = New System.Drawing.Point(672, 7)
       Me.Label1.Name = "Label1"
       Me.Label1.Size = New System.Drawing.Size(87, 15)
       Me.Label1.TabIndex = 238
@@ -614,7 +615,7 @@ Public Class ElencoDoc
       Me.txtSospeso.Cursor = System.Windows.Forms.Cursors.IBeam
       Me.txtSospeso.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.txtSospeso.ForeColor = System.Drawing.Color.Red
-      Me.txtSospeso.Location = New System.Drawing.Point(544, 8)
+      Me.txtSospeso.Location = New System.Drawing.Point(552, 8)
       Me.txtSospeso.MaxLength = 0
       Me.txtSospeso.Name = "txtSospeso"
       Me.txtSospeso.ReadOnly = True
@@ -629,7 +630,7 @@ Public Class ElencoDoc
       Me.Label3.AutoSize = True
       Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.Label3.ForeColor = System.Drawing.Color.White
-      Me.Label3.Location = New System.Drawing.Point(480, 8)
+      Me.Label3.Location = New System.Drawing.Point(488, 8)
       Me.Label3.Name = "Label3"
       Me.Label3.Size = New System.Drawing.Size(66, 15)
       Me.Label3.TabIndex = 236
@@ -643,7 +644,7 @@ Public Class ElencoDoc
       Me.txtTotImporto.Cursor = System.Windows.Forms.Cursors.IBeam
       Me.txtTotImporto.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.txtTotImporto.ForeColor = System.Drawing.Color.Red
-      Me.txtTotImporto.Location = New System.Drawing.Point(360, 8)
+      Me.txtTotImporto.Location = New System.Drawing.Point(368, 8)
       Me.txtTotImporto.MaxLength = 0
       Me.txtTotImporto.Name = "txtTotImporto"
       Me.txtTotImporto.ReadOnly = True
@@ -658,7 +659,7 @@ Public Class ElencoDoc
       Me.Label6.AutoSize = True
       Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.Label6.ForeColor = System.Drawing.Color.White
-      Me.Label6.Location = New System.Drawing.Point(312, 8)
+      Me.Label6.Location = New System.Drawing.Point(320, 8)
       Me.Label6.Name = "Label6"
       Me.Label6.Size = New System.Drawing.Size(51, 15)
       Me.Label6.TabIndex = 16
@@ -673,7 +674,7 @@ Public Class ElencoDoc
       '
       Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
       Me.BackColor = System.Drawing.SystemColors.AppWorkspace
-      Me.ClientSize = New System.Drawing.Size(864, 342)
+      Me.ClientSize = New System.Drawing.Size(872, 350)
       Me.Controls.Add(Me.Panel2)
       Me.Controls.Add(Me.Panel1)
       Me.Controls.Add(Me.DataGrid1)
@@ -1445,88 +1446,6 @@ Public Class ElencoDoc
       End Try
    End Sub
 
-   ' DA_FARE_A: Procedura da eliminare!
-   Public Sub EliminaDati(ByVal tabella As String, ByVal id As Integer)
-      ' NON UTILIZZATA.
-      'Try
-      '   Dim Risposta As Short
-      '   Dim sql As String
-
-      '   Dim Data As String = DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 2)
-      '   Dim Documento As String = DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 4)
-      '   Dim Numero As String = DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 1)
-
-      '   ' Chiede conferma per l'eliminazione.
-      '   Risposta = MsgBox("Si desidera eliminare il documento """ & Documento & " n. " & Numero & " del " & Data & """?" & _
-      '                     vbCrLf & vbCrLf & "Non sarà più possibile recuperare i dati.", MsgBoxStyle.YesNo + MsgBoxStyle.Question, "Conferma eliminazione")
-
-      '   If Risposta = MsgBoxResult.Yes Then
-      '      ' Apre la connessione.
-      '      cn.Open()
-
-      '      ' Avvia una transazione.
-      '      tr = cn.BeginTransaction(IsolationLevel.ReadCommitted)
-
-      '      ' Crea la stringa di eliminazione.
-      '      sql = String.Format("DELETE FROM {0} WHERE Id = {1}", tabella, id)
-
-      '      ' Crea il comando per la connessione corrente.
-      '      Dim cmdDelete As New OleDbCommand(sql, cn, tr)
-
-      '      ' Esegue il comando.
-      '      Dim Record As Integer = cmdDelete.ExecuteNonQuery()
-
-      '      ' A_TODO: Modifica per Retail.
-      '      '--------------------------------------------------------------------------
-      '      ' Elimina i dati dei dettaglie relativi al documento.
-      '      ' Crea la stringa di eliminazione.
-      '      sql = String.Format("DELETE FROM DettagliDoc WHERE RifDoc = {0}", id)
-
-      '      ' Crea il comando per la connessione corrente.
-      '      Dim cmdDelete1 As New OleDbCommand(sql, cn, tr)
-
-      '      ' Esegue il comando.
-      '      Dim Record1 As Integer = cmdDelete1.ExecuteNonQuery()
-      '      '--------------------------------------------------------------------------
-
-      '   ' Conferma la transazione.
-      '   tr.Commit()
-
-      '   End If
-
-      'Catch ex As Exception
-      '   ' Annulla la transazione.
-      '   tr.Rollback()
-
-      '   ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-      '   err.GestisciErrore(ex.StackTrace, ex.Message)
-
-      'Finally
-      '   ' Chiude la connessione.
-      '   cn.Close()
-
-      '   If tbrSospesi.Pushed = True Then
-      '      ' Aggiorna la griglia dati.
-      '      AggiornaDatiSospesi()
-      '   ElseIf tbrMese.Pushed = True Then
-      '      ' Aggiorna la griglia dati.
-      '      AggiornaDatiMese()
-      '   ElseIf tbrAnno.Pushed = True Then
-      '      ' Aggiorna la griglia dati.
-      '      AggiornaDatiAnno()
-      '   ElseIf tbrPeriodo.Pushed = True Then
-      '      ' Aggiorna la griglia dati.
-      '      AggiornaDatiPeriodo()
-      '   Else
-      '      ' Aggiorna la griglia dati.
-      '      AggiornaDati()
-      '   End If
-
-      '   ' Se nella tabella non ci sono record disattiva i pulsanti.
-      '   ConvalidaDati()
-      'End Try
-   End Sub
-
    Public Sub AggiornaDati()
       Try
          If TestoRicerca.Text <> "" Then
@@ -1587,7 +1506,7 @@ Public Class ElencoDoc
       CampoRicerca.Visible = False
    End Sub
 
-   Private Sub NascondiDate()
+   Public Sub NascondiDate()
       lblAl.Visible = False
       lblDal.Visible = False
       dtpAl.Visible = False
@@ -1835,17 +1754,25 @@ Public Class ElencoDoc
 
    Public Sub AttivaDisattivaSospeso()
       Try
-         If tbrModifica.Enabled = True Then
-            If numRecord <> 0 Then
-               ' Attiva/disattiva il pulsante per l'incasso dei sospesi.
-               If DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, COLONNA_IMPORTO_SOSPESO_INC) = VALORE_ZERO Then
-                  tbrSospeso.Enabled = False
-               Else
-                  tbrSospeso.Enabled = True
-               End If
-            Else
-               tbrSospeso.Enabled = False
-            End If
+         ' Attiva/disattiva il pulsante per l'incasso dei sospesi.
+         If numRecord <> 0 Then
+            Select Case DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, COLONNA_TIPO_DOC)
+
+               Case TIPO_DOC_RF, TIPO_DOC_FF
+
+                  If DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, COLONNA_IMPORTO_SOSPESO_INC) = VALORE_ZERO Then
+                     g_frmMain.eui_Strumenti_Sospesi_Incassa.Enabled = False
+                  Else
+                     g_frmMain.eui_Strumenti_Sospesi_Incassa.Enabled = True
+                  End If
+
+               Case TIPO_DOC_CO, TIPO_DOC_PF, TIPO_DOC_SF
+
+                  g_frmMain.eui_Strumenti_Sospesi_Incassa.Enabled = False
+
+            End Select
+         Else
+            g_frmMain.eui_Strumenti_Sospesi_Incassa.Enabled = False
          End If
 
       Catch ex As Exception
@@ -1857,17 +1784,25 @@ Public Class ElencoDoc
 
    Public Sub AttivaDisattivaAnnullaSospeso()
       Try
-         If tbrModifica.Enabled = True Then
-            If numRecord <> 0 Then
-               ' Attiva/disattiva il pulsante per l'incasso dei sospesi.
-               If DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, COLONNA_IMPORTO_SOSPESO_INC) = VALORE_ZERO Then
-                  tbrAnnullaSospeso.Enabled = False
-               Else
-                  tbrAnnullaSospeso.Enabled = True
-               End If
-            Else
-               tbrAnnullaSospeso.Enabled = False
-            End If
+         ' Attiva/disattiva il pulsante per l'incasso dei sospesi.
+         If numRecord <> 0 Then
+            Select Case DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, COLONNA_TIPO_DOC)
+
+               Case TIPO_DOC_RF, TIPO_DOC_FF
+
+                  If DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, COLONNA_IMPORTO_SOSPESO_INC) = VALORE_ZERO Then
+                     g_frmMain.eui_Strumenti_Sospesi_Annulla.Enabled = False
+                  Else
+                     g_frmMain.eui_Strumenti_Sospesi_Annulla.Enabled = True
+                  End If
+
+               Case TIPO_DOC_CO, TIPO_DOC_PF, TIPO_DOC_SF
+
+                  g_frmMain.eui_Strumenti_Sospesi_Annulla.Enabled = False
+
+            End Select
+         Else
+            g_frmMain.eui_Strumenti_Sospesi_Annulla.Enabled = False
          End If
 
       Catch ex As Exception
@@ -1879,17 +1814,25 @@ Public Class ElencoDoc
 
    Public Sub AttivaDisattivaPassaSospeso()
       Try
-         If tbrModifica.Enabled = True Then
-            If numRecord <> 0 Then
-               ' Attiva/disattiva il pulsante per l'incasso dei sospesi.
-               If DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, COLONNA_IMPORTO_TOTALE) = DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, COLONNA_IMPORTO_SOSPESO_INC) Then
-                  tbrPassaSospeso.Enabled = False
-               Else
-                  tbrPassaSospeso.Enabled = True
-               End If
-            Else
-               tbrPassaSospeso.Enabled = False
-            End If
+         ' Attiva/disattiva il pulsante per l'incasso dei sospesi.
+         If numRecord <> 0 Then
+            Select Case DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, COLONNA_TIPO_DOC)
+
+               Case TIPO_DOC_RF, TIPO_DOC_FF
+
+                  If DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, COLONNA_IMPORTO_TOTALE) = DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, COLONNA_IMPORTO_SOSPESO_INC) Then
+                     g_frmMain.eui_Strumenti_Sospesi_Passa.Enabled = False
+                  Else
+                     g_frmMain.eui_Strumenti_Sospesi_Passa.Enabled = True
+                  End If
+
+               Case TIPO_DOC_CO, TIPO_DOC_PF, TIPO_DOC_SF
+
+                  g_frmMain.eui_Strumenti_Sospesi_Passa.Enabled = False
+
+            End Select
+         Else
+            g_frmMain.eui_Strumenti_Sospesi_Passa.Enabled = False
          End If
 
       Catch ex As Exception
@@ -1901,17 +1844,16 @@ Public Class ElencoDoc
 
    Public Sub AttivaDisattivaBuoni()
       Try
-         If tbrModifica.Enabled = True Then
-            If numRecord <> 0 Then
-               ' Attiva/disattiva il pulsante per visualizzare l'elenco dei Buoni pasto.
-               If DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, COLONNA_IMPORTO_BUONI_INC) = VALORE_ZERO Then
-                  tbrBuoni.Enabled = False
-               Else
-                  tbrBuoni.Enabled = True
-               End If
+         If numRecord <> 0 Then
+            ' Attiva/disattiva il pulsante per visualizzare l'elenco dei Buoni pasto.
+            If DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, COLONNA_IMPORTO_BUONI_INC) = VALORE_ZERO Then
+
+               g_frmMain.eui_Strumenti_Buoni_Pasto.Enabled = False
             Else
-               tbrBuoni.Enabled = False
+               g_frmMain.eui_Strumenti_Buoni_Pasto.Enabled = True
             End If
+         Else
+            g_frmMain.eui_Strumenti_Buoni_Pasto.Enabled = False
          End If
 
       Catch ex As Exception
@@ -1947,6 +1889,7 @@ Public Class ElencoDoc
       End Try
    End Sub
 
+   ' DA_FARE_A: Modificare la procedura verificando il tipo di doc e chiedendo se si vuole anche eliminare il doc.
    Public Sub AnnullaDocumento()
       Dim Data As String = DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 2)
       Dim Documento As String = DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 4)
@@ -2112,14 +2055,30 @@ Public Class ElencoDoc
          clienteStyle.NullText = ""
          clienteStyle.TextBox.BackColor = Color.White
          gridStyle.GridColumnStyles.Add(clienteStyle)
-         ' Tavolo
-         Dim tavoloStyle As New DataGridTextBoxColumn
-         tavoloStyle.MappingName = "Tavolo"
-         tavoloStyle.HeaderText = "Tavolo"
-         tavoloStyle.Width = 70
-         tavoloStyle.NullText = ""
-         tavoloStyle.TextBox.BackColor = Color.White
-         gridStyle.GridColumnStyles.Add(tavoloStyle)
+         ' Stato
+         Dim statoStyle As New DataGridTextBoxColumn
+         statoStyle.MappingName = "StatoDoc"
+         statoStyle.HeaderText = "Stato"
+         statoStyle.Width = 120
+         statoStyle.NullText = ""
+         statoStyle.TextBox.BackColor = Color.White
+         gridStyle.GridColumnStyles.Add(statoStyle)
+         ' Causale
+         Dim causaleStyle As New DataGridTextBoxColumn
+         causaleStyle.MappingName = "CausaleDoc"
+         causaleStyle.HeaderText = "Causale"
+         causaleStyle.Width = 120
+         causaleStyle.NullText = ""
+         causaleStyle.TextBox.BackColor = Color.White
+         gridStyle.GridColumnStyles.Add(causaleStyle)
+         ' Tipo pagamento
+         Dim tipoPagStyle As New DataGridTextBoxColumn
+         tipoPagStyle.MappingName = "TipoPagamento"
+         tipoPagStyle.HeaderText = "Tipo pagamento"
+         tipoPagStyle.Width = 100
+         tipoPagStyle.NullText = ""
+         tipoPagStyle.TextBox.BackColor = Color.White
+         gridStyle.GridColumnStyles.Add(tipoPagStyle)
          ' Totale documento
          Dim totDocStyle As New ColonnaColorata(DataGrid1, Color.White, Color.Red)
          totDocStyle.MappingName = "TotDoc"
@@ -2170,29 +2129,12 @@ Public Class ElencoDoc
          buoniStyle.Alignment = HorizontalAlignment.Right
          buoniStyle.TextBox.BackColor = Color.White
          gridStyle.GridColumnStyles.Add(buoniStyle)
-         ' Tipo pagamento
-         Dim tipoPagStyle As New DataGridTextBoxColumn
-         tipoPagStyle.MappingName = "TipoPagamento"
-         tipoPagStyle.HeaderText = "Tipo pagamento"
-         tipoPagStyle.Width = 100
-         tipoPagStyle.NullText = ""
-         tipoPagStyle.TextBox.BackColor = Color.White
-         gridStyle.GridColumnStyles.Add(tipoPagStyle)
-         ' Cameriere
-         Dim cameriereStyle As New DataGridTextBoxColumn
-         cameriereStyle.MappingName = "Cameriere"
-         cameriereStyle.HeaderText = "Cameriere"
-         cameriereStyle.Width = 150
-         cameriereStyle.NullText = ""
-         cameriereStyle.TextBox.BackColor = Color.White
-         gridStyle.GridColumnStyles.Add(cameriereStyle)
          ' Sospeso da incassare
          Dim sospesoIncStyle As New DataGridTextBoxColumn
          sospesoIncStyle.MappingName = "SospesoIncassare"
          sospesoIncStyle.HeaderText = ""
          sospesoIncStyle.Width = 0
          sospesoIncStyle.NullText = ""
-         'sospesoIncStyle.Format = "##,##0.00"
          sospesoIncStyle.Alignment = HorizontalAlignment.Right
          sospesoIncStyle.TextBox.BackColor = Color.White
          gridStyle.GridColumnStyles.Add(sospesoIncStyle)
@@ -2202,10 +2144,28 @@ Public Class ElencoDoc
          buoniIncStyle.HeaderText = ""
          buoniIncStyle.Width = 0
          buoniIncStyle.NullText = ""
-         'buoniIncStyle.Format = "##,##0.00"
          buoniIncStyle.Alignment = HorizontalAlignment.Right
          buoniIncStyle.TextBox.BackColor = Color.White
          gridStyle.GridColumnStyles.Add(buoniIncStyle)
+
+         '' Tavolo
+         'Dim tavoloStyle As New DataGridTextBoxColumn
+         'tavoloStyle.MappingName = "Tavolo"
+         'tavoloStyle.HeaderText = "Tavolo"
+         'tavoloStyle.Width = 70
+         'tavoloStyle.NullText = ""
+         'tavoloStyle.TextBox.BackColor = Color.White
+         'gridStyle.GridColumnStyles.Add(tavoloStyle)
+
+         '' Cameriere
+         'Dim cameriereStyle As New DataGridTextBoxColumn
+         'cameriereStyle.MappingName = "Cameriere"
+         'cameriereStyle.HeaderText = "Cameriere"
+         'cameriereStyle.Width = 150
+         'cameriereStyle.NullText = ""
+         'cameriereStyle.TextBox.BackColor = Color.White
+         'gridStyle.GridColumnStyles.Add(cameriereStyle)
+         ' Sospeso da incassare
 
          DataGrid1.TableStyles.Clear()
          DataGrid1.TableStyles.Add(gridStyle)
@@ -2217,7 +2177,7 @@ Public Class ElencoDoc
       End Try
    End Sub
 
-   Private Sub FiltraDati(ByVal testoRicerca As String, ByVal campoRicerca As String)
+   Public Sub FiltraDati(ByVal testoRicerca As String, ByVal campoRicerca As String)
       Try
          Dim sql As String
 
@@ -2371,8 +2331,8 @@ Public Class ElencoDoc
 
             rep.SetDataSource(ds)
 
-            rep.PrintToPrinter(PrintDialog1.PrinterSettings.Copies, True, _
-                               PrintDialog1.PrinterSettings.FromPage, _
+            rep.PrintToPrinter(PrintDialog1.PrinterSettings.Copies, True,
+                               PrintDialog1.PrinterSettings.FromPage,
                                PrintDialog1.PrinterSettings.ToPage)
 
             cn.Close()
@@ -2385,7 +2345,26 @@ Public Class ElencoDoc
       End Try
    End Sub
 
-   Private Sub PassaSospeso(ByVal id As Integer, ByVal totale As String)
+   Public Sub IncassaSospeso()
+      Try
+         ' Apre la finestra per l'incasso del sospeso.
+         Dim frm As New IncassaSospeso(DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 0),
+                                          DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 1),
+                                          DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 2),
+                                          DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 4),
+                                          DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 5),
+                                          DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 8))
+         frm.ShowDialog()
+
+      Catch ex As Exception
+
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
+   End Sub
+
+   Public Sub PassaSospeso(ByVal id As Integer, ByVal totale As String)
       Try
          Dim risposta As Integer
          risposta = MsgBox("Il totale del documento verrà passato in sospeso. Procedere?", MsgBoxStyle.YesNo + MsgBoxStyle.Question, NOME_PRODOTTO)
@@ -2458,7 +2437,7 @@ Public Class ElencoDoc
       End Try
    End Sub
 
-   Private Sub AnnullaSospeso(ByVal id As Integer)
+   Public Sub AnnullaSospeso(ByVal id As Integer)
       Try
          Dim risposta As Integer
          risposta = MsgBox("Il valore sospeso del documento verrà azzerato. Procedere?", MsgBoxStyle.YesNo + MsgBoxStyle.Question, NOME_PRODOTTO)
@@ -2531,7 +2510,7 @@ Public Class ElencoDoc
       End Try
    End Sub
 
-   Private Sub ApriElencoBuoni()
+   Public Sub ApriElencoBuoni()
       Try
          ' Modifica il cursore del mouse.
          Cursor.Current = Cursors.AppStarting
@@ -2563,7 +2542,10 @@ Public Class ElencoDoc
       g_frmMain.eui_StrumentiDocumenti.Visible = False
 
       g_frmMain.eui_Strumenti_Duplica.Visible = False
-
+      g_frmMain.eui_Strumenti_Periodo_Arrivo.Visible = False
+      g_frmMain.eui_Strumenti_Periodo_Partenza.Visible = False
+      g_frmMain.eui_Strumenti_Periodo_Sep1.Visible = False
+      g_frmMain.eui_rib_Visualizza.Visible = False
    End Sub
 
    Private Sub ElencoDoc_FormClosed(sender As Object, e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
