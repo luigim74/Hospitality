@@ -16,7 +16,9 @@ Public Class ElencoDoc
    Const TITOLO_FINESTRA As String = "Elenco Documenti"
    Const COLONNA_ID_DOC As Short = 0
    Const COLONNA_NUMERO_DOC As Short = 1
+   Const COLONNA_DATA_DOC As Short = 2
    Const COLONNA_TIPO_DOC As Short = 4
+   Const COLONNA_STATO_DOC As Short = 6
    Const COLONNA_IMPORTO_TOTALE As Short = 9 '6 '7
    Const COLONNA_IMPORTO_SOSPESO As Short = 10 '7 '8
    Const COLONNA_IMPORTO_SOSPESO_INC As Short = 14
@@ -28,6 +30,10 @@ Public Class ElencoDoc
    Const TIPO_DOC_SF As String = "Scontrino"
    Const TIPO_DOC_PF As String = "Proforma"
    Const TIPO_DOC_CO As String = "Conto"
+
+   Const STATO_DOC_EMESSO As String = "Emesso"
+   Const STATO_DOC_EMESSO_STAMPATO As String = "Emesso e stampato"
+   Const STATO_DOC_ANNULLATO As String = "Annullato"
 
    ' Dichiara un oggetto connessione.
    Dim cn As New OleDbConnection(ConnString)
@@ -1865,21 +1871,30 @@ Public Class ElencoDoc
 
    Public Sub AttivaDisattivaAnnullaDoc()
       Try
-         If tbrModifica.Enabled = True Then
-            If numRecord <> 0 Then
+         ' Attiva/disattiva il pulsante per annullare un documento.
+         If numRecord <> 0 Then
 
-               Dim tipoDoc As String = DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, COLONNA_TIPO_DOC)
-               Dim ultimoNumeroDoc As Integer = LeggiNumeroMax(TAB_DOCUMENTI, tipoDoc)
+            Dim tipoDoc As String = DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, COLONNA_TIPO_DOC)
+            Dim statoDoc As String = DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, COLONNA_STATO_DOC)
+            'Dim ultimoNumeroDoc As Integer = LeggiNumeroMax(TAB_DOCUMENTI, tipoDoc)
 
-               ' Attiva/disattiva il pulsante per annullare un documento.
-               If DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, COLONNA_NUMERO_DOC) <> ultimoNumeroDoc Then
-                  tbrAnnulla.Enabled = False
-               Else
-                  tbrAnnulla.Enabled = True
-               End If
-            Else
-               tbrAnnulla.Enabled = False
-            End If
+            Select Case tipoDoc
+               Case TIPO_DOC_RF, TIPO_DOC_FF, TIPO_DOC_SF
+
+                  Select Case statoDoc
+                     Case STATO_DOC_EMESSO, STATO_DOC_EMESSO_STAMPATO
+                        g_frmMain.eui_Strumenti_Annulla.Enabled = True
+
+                     Case Else
+                        g_frmMain.eui_Strumenti_Annulla.Enabled = False
+
+                  End Select
+
+               Case Else
+                  g_frmMain.eui_Strumenti_Annulla.Enabled = False
+
+
+            End Select
          End If
 
       Catch ex As Exception
@@ -1891,15 +1906,16 @@ Public Class ElencoDoc
 
    ' DA_FARE_A: Modificare la procedura verificando il tipo di doc e chiedendo se si vuole anche eliminare il doc.
    Public Sub AnnullaDocumento()
-      Dim Data As String = DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 2)
-      Dim Documento As String = DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 4)
-      Dim Numero As String = DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 1)
-      Dim Importo As String = DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 7)
+      Dim Id As String = DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, COLONNA_ID_DOC)
+      Dim Data As String = DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, COLONNA_DATA_DOC)
+      Dim Documento As String = DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, COLONNA_TIPO_DOC)
+      Dim Numero As String = DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, COLONNA_NUMERO_DOC)
+      Dim Importo As String = DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, COLONNA_IMPORTO_TOTALE)
 
-      ' Chiede conferma per l'eliminazione.
+      ' Chiede conferma per l'annullamento.
       Dim risposta As Integer
-      risposta = MessageBox.Show("Si desidera annullare il documento """ & Documento & " n. " & Numero & " del " & Data & """? " &
-                                 "Confermando l'operazione verrà eliminato il documento, verranno ripristinati i valori per le " &
+      risposta = MessageBox.Show("Si desidera annullare il documento """ & Documento & " n. " & Numero & " del " & Data & """? " & vbCrLf & vbCrLf &
+                                 "Confermando l'operazione verranno ripristinati i valori per le " &
                                  "giacenze di magazzino degli Articoli e le Statistiche di vendita. Eventuali Buoni pasto contenuti " &
                                  "nel documento non ancora fatturati verranno annullati. Procedere?", NOME_PRODOTTO, MessageBoxButtons.YesNo, MessageBoxIcon.Question)
       If risposta = vbYes Then
@@ -1912,19 +1928,80 @@ Public Class ElencoDoc
                EliminaBuoniPasto()
             End If
          End If
+      Else
+         Exit Sub
+      End If
 
+      ' Chiede conferma per l'eliminazione.
+      risposta = MessageBox.Show("Il documento """ & Documento & " n. " & Numero & " del " & Data & """ è stato annullato! " & vbCrLf & vbCrLf &
+                           "Si desidera mantenere il documento nell'elenco documenti per eventuali consultazioni? ", NOME_PRODOTTO, MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+      If risposta = vbNo Then
          EliminaDettagliDocumento()
          EliminaDocumento()
-
-         ' Salva il Numero del documento annullato come prossimo numero da stampare rendendolo nuovamente disponibile.
-         RipristinaNumeroDocFiscaleConfig(TAB_DOCUMENTI, Documento, Numero)
-
-         ' Registra loperazione effettuata dall'operatore identificato.
-         Dim strDescrizione As String = "(" & Documento & " n. " & Numero & " del " & Data & " - € " & CFormatta.FormattaEuro(Importo) & ")"
-         g_frmMain.RegistraOperazione(TipoOperazione.AnnullaDoc, strDescrizione, MODULO_CONTABILITA_DOCUMENTI)
-
+      Else
+         ModificaStatoDoc(TAB_DOCUMENTI, Id, STATO_DOC_ANNULLATO)
       End If
+
+      ' QUESTA PROCEDURA NON E' PIU' NECESSARIA. 
+      ' Salva il Numero del documento annullato come prossimo numero da stampare rendendolo nuovamente disponibile.
+      'RipristinaNumeroDocFiscaleConfig(TAB_DOCUMENTI, Documento, Numero)
+
+      AttivaDisattivaAnnullaDoc()
+
+      ' Registra loperazione effettuata dall'operatore identificato.
+      Dim strDescrizione As String = "(" & Documento & " n. " & Numero & " del " & Data & " - € " & CFormatta.FormattaEuro(Importo) & ")"
+      g_frmMain.RegistraOperazione(TipoOperazione.AnnullaDoc, strDescrizione, MODULO_CONTABILITA_DOCUMENTI)
+
    End Sub
+
+   Public Function ModificaStatoDoc(ByVal tabella As String, ByVal codice As String, ByVal statoDoc As String) As Boolean
+      Dim sql As String
+
+      Try
+         ' Apre la connessione.
+         cn.Open()
+
+         ' Avvia una transazione.
+         tr = cn.BeginTransaction(IsolationLevel.ReadCommitted)
+
+         ' Crea la stringa di eliminazione.
+         sql = String.Format("UPDATE {0} " &
+                             "SET StatoDoc = @StatoDoc " &
+                             "WHERE Id = {1}",
+                              tabella,
+                              codice)
+
+         ' Crea il comando per la connessione corrente.
+         Dim cmdUpdate As New OleDbCommand(sql, cn, tr)
+
+         cmdUpdate.Parameters.AddWithValue("@StatoDoc", statoDoc)
+
+         ' Esegue il comando.
+         Dim Record As Integer = cmdUpdate.ExecuteNonQuery()
+
+         ' Conferma transazione.
+         tr.Commit()
+
+         ' Aggiorna la lista dati.
+         AggiornaDati()
+
+         Return True
+
+      Catch ex As Exception
+         ' Annulla transazione.
+         tr.Rollback()
+
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+         Return False
+
+      Finally
+         ' Chiude la connessione.
+         cn.Close()
+      End Try
+
+   End Function
 
    Private Sub RipristinaNumeroDocFiscaleConfig(ByVal tabella As String, ByVal tipoDoc As String, ByVal numDoc As Integer)
       Try
