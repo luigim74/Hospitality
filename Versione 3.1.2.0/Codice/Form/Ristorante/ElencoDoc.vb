@@ -12,7 +12,7 @@ Imports System.Data.OleDb
 Public Class ElencoDoc
    Inherits System.Windows.Forms.Form
 
-   Const TAB_DOCUMENTI As String = "Documenti"
+   Public Const TAB_DOCUMENTI As String = "Documenti"
    Const TITOLO_FINESTRA As String = "Elenco Documenti"
    Const COLONNA_ID_DOC As Short = 0
    Const COLONNA_NUMERO_DOC As Short = 1
@@ -52,7 +52,7 @@ Public Class ElencoDoc
    Dim ds As New DataSet
    Dim dt As DataTable
    Dim sql As String
-   Dim repSql As String
+   Public repSql As String
 
    Private DatiConfig As AppConfig
    Private CFormatta As New ClsFormatta
@@ -89,21 +89,10 @@ Public Class ElencoDoc
    'Può essere modificata in Progettazione Windows Form.  
    'Non modificarla nell'editor del codice.
    Friend WithEvents ImageList1 As System.Windows.Forms.ImageList
-   Friend WithEvents ToolBarButton4 As System.Windows.Forms.ToolBarButton
-   Friend WithEvents ToolBarButton7 As System.Windows.Forms.ToolBarButton
-   Friend WithEvents Elimina As System.Windows.Forms.ToolBarButton
-   Friend WithEvents Primo As System.Windows.Forms.ToolBarButton
-   Friend WithEvents Precedente As System.Windows.Forms.ToolBarButton
-   Friend WithEvents Successivo As System.Windows.Forms.ToolBarButton
-   Friend WithEvents Ultimo As System.Windows.Forms.ToolBarButton
-   Public WithEvents ToolBar1 As System.Windows.Forms.ToolBar
    Public WithEvents DataGrid1 As System.Windows.Forms.DataGrid
-   Friend WithEvents ToolBarButton1 As System.Windows.Forms.ToolBarButton
    Friend WithEvents Panel1 As System.Windows.Forms.Panel
    Friend WithEvents CampoRicerca As System.Windows.Forms.ComboBox
    Friend WithEvents TestoRicerca As System.Windows.Forms.TextBox
-   Friend WithEvents tbNuovo As System.Windows.Forms.ToolBarButton
-   Friend WithEvents Sep13 As System.Windows.Forms.ToolBarButton
    Friend WithEvents PrintDialog1 As System.Windows.Forms.PrintDialog
    Friend WithEvents PrintDocument1 As System.Drawing.Printing.PrintDocument
    Friend WithEvents Panel2 As System.Windows.Forms.Panel
@@ -111,62 +100,17 @@ Public Class ElencoDoc
    Friend WithEvents Label6 As System.Windows.Forms.Label
    Friend WithEvents Label3 As System.Windows.Forms.Label
    Public WithEvents txtSospeso As System.Windows.Forms.TextBox
-   Friend WithEvents Ripristina As System.Windows.Forms.ToolBarButton
-   Friend WithEvents tbrTutti As System.Windows.Forms.ToolBarButton
-   Friend WithEvents tbrSospesi As System.Windows.Forms.ToolBarButton
-   Friend WithEvents ToolBarButton2 As System.Windows.Forms.ToolBarButton
-   Friend WithEvents tbrPassaSospeso As System.Windows.Forms.ToolBarButton
-   Friend WithEvents tbrAnnullaSospeso As System.Windows.Forms.ToolBarButton
-   Friend WithEvents tbrMese As System.Windows.Forms.ToolBarButton
-   Friend WithEvents tbrAnno As System.Windows.Forms.ToolBarButton
    Friend WithEvents dtpAl As System.Windows.Forms.DateTimePicker
    Friend WithEvents dtpDal As System.Windows.Forms.DateTimePicker
    Friend WithEvents lblAl As System.Windows.Forms.Label
    Friend WithEvents lblDal As System.Windows.Forms.Label
    Friend WithEvents lblCampo As System.Windows.Forms.Label
    Friend WithEvents lblTesto As System.Windows.Forms.Label
-   Friend WithEvents tbrPeriodo As System.Windows.Forms.ToolBarButton
    Public WithEvents txtBuoni As System.Windows.Forms.TextBox
    Friend WithEvents Label1 As System.Windows.Forms.Label
-   Friend WithEvents tbrAnnulla As System.Windows.Forms.ToolBarButton
-   Friend WithEvents tbrSospeso As System.Windows.Forms.ToolBarButton
-   Friend WithEvents tbrBuoni As System.Windows.Forms.ToolBarButton
-   Friend WithEvents tbrAggiorna As System.Windows.Forms.ToolBarButton
-   Friend WithEvents tbrAnteprima As System.Windows.Forms.ToolBarButton
-   Friend WithEvents tbrStampa As System.Windows.Forms.ToolBarButton
-   Friend WithEvents tbrInserisci As System.Windows.Forms.ToolBarButton
-   Friend WithEvents tbrModifica As System.Windows.Forms.ToolBarButton
    <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
       Me.components = New System.ComponentModel.Container()
       Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ElencoDoc))
-      Me.ToolBar1 = New System.Windows.Forms.ToolBar()
-      Me.tbrTutti = New System.Windows.Forms.ToolBarButton()
-      Me.tbrMese = New System.Windows.Forms.ToolBarButton()
-      Me.tbrAnno = New System.Windows.Forms.ToolBarButton()
-      Me.tbrPeriodo = New System.Windows.Forms.ToolBarButton()
-      Me.tbrSospesi = New System.Windows.Forms.ToolBarButton()
-      Me.ToolBarButton2 = New System.Windows.Forms.ToolBarButton()
-      Me.tbrAnnulla = New System.Windows.Forms.ToolBarButton()
-      Me.Sep13 = New System.Windows.Forms.ToolBarButton()
-      Me.Ripristina = New System.Windows.Forms.ToolBarButton()
-      Me.tbrModifica = New System.Windows.Forms.ToolBarButton()
-      Me.tbrSospeso = New System.Windows.Forms.ToolBarButton()
-      Me.tbrPassaSospeso = New System.Windows.Forms.ToolBarButton()
-      Me.tbrAnnullaSospeso = New System.Windows.Forms.ToolBarButton()
-      Me.ToolBarButton7 = New System.Windows.Forms.ToolBarButton()
-      Me.Elimina = New System.Windows.Forms.ToolBarButton()
-      Me.tbrBuoni = New System.Windows.Forms.ToolBarButton()
-      Me.ToolBarButton4 = New System.Windows.Forms.ToolBarButton()
-      Me.tbNuovo = New System.Windows.Forms.ToolBarButton()
-      Me.Primo = New System.Windows.Forms.ToolBarButton()
-      Me.Precedente = New System.Windows.Forms.ToolBarButton()
-      Me.Successivo = New System.Windows.Forms.ToolBarButton()
-      Me.Ultimo = New System.Windows.Forms.ToolBarButton()
-      Me.tbrAggiorna = New System.Windows.Forms.ToolBarButton()
-      Me.ToolBarButton1 = New System.Windows.Forms.ToolBarButton()
-      Me.tbrAnteprima = New System.Windows.Forms.ToolBarButton()
-      Me.tbrStampa = New System.Windows.Forms.ToolBarButton()
-      Me.tbrInserisci = New System.Windows.Forms.ToolBarButton()
       Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
       Me.DataGrid1 = New System.Windows.Forms.DataGrid()
       Me.Panel1 = New System.Windows.Forms.Panel()
@@ -192,224 +136,6 @@ Public Class ElencoDoc
       Me.Panel1.SuspendLayout()
       Me.Panel2.SuspendLayout()
       Me.SuspendLayout()
-      '
-      'ToolBar1
-      '
-      Me.ToolBar1.Appearance = System.Windows.Forms.ToolBarAppearance.Flat
-      Me.ToolBar1.Buttons.AddRange(New System.Windows.Forms.ToolBarButton() {Me.tbrTutti, Me.tbrMese, Me.tbrAnno, Me.tbrPeriodo, Me.tbrSospesi, Me.ToolBarButton2, Me.tbrAnnulla, Me.Sep13, Me.Ripristina, Me.tbrModifica, Me.tbrSospeso, Me.tbrPassaSospeso, Me.tbrAnnullaSospeso, Me.ToolBarButton7, Me.Elimina, Me.tbrBuoni, Me.ToolBarButton4, Me.tbNuovo, Me.Primo, Me.Precedente, Me.Successivo, Me.Ultimo, Me.tbrAggiorna, Me.ToolBarButton1, Me.tbrAnteprima, Me.tbrStampa, Me.tbrInserisci})
-      Me.ToolBar1.Divider = False
-      Me.ToolBar1.DropDownArrows = True
-      Me.ToolBar1.ImageList = Me.ImageList1
-      Me.ToolBar1.Location = New System.Drawing.Point(0, 0)
-      Me.ToolBar1.Name = "ToolBar1"
-      Me.ToolBar1.ShowToolTips = True
-      Me.ToolBar1.Size = New System.Drawing.Size(872, 26)
-      Me.ToolBar1.TabIndex = 2
-      Me.ToolBar1.TextAlign = System.Windows.Forms.ToolBarTextAlign.Right
-      Me.ToolBar1.Wrappable = False
-      '
-      'tbrTutti
-      '
-      Me.tbrTutti.ImageIndex = 13
-      Me.tbrTutti.Name = "tbrTutti"
-      Me.tbrTutti.Style = System.Windows.Forms.ToolBarButtonStyle.ToggleButton
-      Me.tbrTutti.Tag = "Tutti"
-      Me.tbrTutti.Text = "Tutti"
-      Me.tbrTutti.ToolTipText = "Visualizza tutti i documenti"
-      '
-      'tbrMese
-      '
-      Me.tbrMese.ImageIndex = 15
-      Me.tbrMese.Name = "tbrMese"
-      Me.tbrMese.Style = System.Windows.Forms.ToolBarButtonStyle.ToggleButton
-      Me.tbrMese.Tag = "Mese"
-      Me.tbrMese.Text = "Mese"
-      Me.tbrMese.ToolTipText = "Visualizza documenti del mese corrente"
-      '
-      'tbrAnno
-      '
-      Me.tbrAnno.ImageIndex = 16
-      Me.tbrAnno.Name = "tbrAnno"
-      Me.tbrAnno.Style = System.Windows.Forms.ToolBarButtonStyle.ToggleButton
-      Me.tbrAnno.Tag = "Anno"
-      Me.tbrAnno.Text = "Anno"
-      Me.tbrAnno.ToolTipText = "Visualizza documenti dell'anno corrente"
-      '
-      'tbrPeriodo
-      '
-      Me.tbrPeriodo.ImageIndex = 14
-      Me.tbrPeriodo.Name = "tbrPeriodo"
-      Me.tbrPeriodo.Style = System.Windows.Forms.ToolBarButtonStyle.ToggleButton
-      Me.tbrPeriodo.Tag = "Periodo"
-      Me.tbrPeriodo.Text = "Periodo"
-      Me.tbrPeriodo.ToolTipText = "Visualizza documenti del periodo selezionato"
-      '
-      'tbrSospesi
-      '
-      Me.tbrSospesi.ImageIndex = 10
-      Me.tbrSospesi.Name = "tbrSospesi"
-      Me.tbrSospesi.Style = System.Windows.Forms.ToolBarButtonStyle.ToggleButton
-      Me.tbrSospesi.Tag = "Sospesi"
-      Me.tbrSospesi.Text = "Sospesi"
-      Me.tbrSospesi.ToolTipText = "Visualizza solo documenti sospesi"
-      '
-      'ToolBarButton2
-      '
-      Me.ToolBarButton2.Name = "ToolBarButton2"
-      Me.ToolBarButton2.Style = System.Windows.Forms.ToolBarButtonStyle.Separator
-      '
-      'tbrAnnulla
-      '
-      Me.tbrAnnulla.ImageIndex = 2
-      Me.tbrAnnulla.Name = "tbrAnnulla"
-      Me.tbrAnnulla.Tag = "Annulla"
-      Me.tbrAnnulla.Text = "Annulla"
-      Me.tbrAnnulla.ToolTipText = "Annulla documento"
-      '
-      'Sep13
-      '
-      Me.Sep13.Name = "Sep13"
-      Me.Sep13.Style = System.Windows.Forms.ToolBarButtonStyle.Separator
-      '
-      'Ripristina
-      '
-      Me.Ripristina.ImageIndex = 5
-      Me.Ripristina.Name = "Ripristina"
-      Me.Ripristina.Tag = "Ripristina"
-      Me.Ripristina.Text = "Ripristina"
-      Me.Ripristina.ToolTipText = "Ripristina documento annullato"
-      Me.Ripristina.Visible = False
-      '
-      'tbrModifica
-      '
-      Me.tbrModifica.ImageIndex = 1
-      Me.tbrModifica.Name = "tbrModifica"
-      Me.tbrModifica.Tag = "Modifica"
-      Me.tbrModifica.Text = "Apri"
-      Me.tbrModifica.ToolTipText = "Apri"
-      Me.tbrModifica.Visible = False
-      '
-      'tbrSospeso
-      '
-      Me.tbrSospeso.ImageIndex = 11
-      Me.tbrSospeso.Name = "tbrSospeso"
-      Me.tbrSospeso.Tag = "Sospeso"
-      Me.tbrSospeso.Text = "Incassa sospeso"
-      Me.tbrSospeso.ToolTipText = "Incassa documento sospeso"
-      '
-      'tbrPassaSospeso
-      '
-      Me.tbrPassaSospeso.ImageIndex = 10
-      Me.tbrPassaSospeso.Name = "tbrPassaSospeso"
-      Me.tbrPassaSospeso.Tag = "PassaSospeso"
-      Me.tbrPassaSospeso.ToolTipText = "Passa il documento in sospeso"
-      '
-      'tbrAnnullaSospeso
-      '
-      Me.tbrAnnullaSospeso.ImageIndex = 12
-      Me.tbrAnnullaSospeso.Name = "tbrAnnullaSospeso"
-      Me.tbrAnnullaSospeso.Tag = "AnnullaSospeso"
-      Me.tbrAnnullaSospeso.ToolTipText = "Annulla il sospeso di un documento"
-      '
-      'ToolBarButton7
-      '
-      Me.ToolBarButton7.Name = "ToolBarButton7"
-      Me.ToolBarButton7.Style = System.Windows.Forms.ToolBarButtonStyle.Separator
-      '
-      'Elimina
-      '
-      Me.Elimina.ImageIndex = 2
-      Me.Elimina.Name = "Elimina"
-      Me.Elimina.Tag = "Elimina"
-      Me.Elimina.Text = "Elimina"
-      Me.Elimina.ToolTipText = "Elimina"
-      Me.Elimina.Visible = False
-      '
-      'tbrBuoni
-      '
-      Me.tbrBuoni.ImageIndex = 17
-      Me.tbrBuoni.Name = "tbrBuoni"
-      Me.tbrBuoni.Tag = "Buoni"
-      Me.tbrBuoni.Text = "Buoni pasto"
-      Me.tbrBuoni.ToolTipText = "Elenco Buoni pasto "
-      '
-      'ToolBarButton4
-      '
-      Me.ToolBarButton4.Name = "ToolBarButton4"
-      Me.ToolBarButton4.Style = System.Windows.Forms.ToolBarButtonStyle.Separator
-      '
-      'tbNuovo
-      '
-      Me.tbNuovo.ImageIndex = 0
-      Me.tbNuovo.Name = "tbNuovo"
-      Me.tbNuovo.Tag = "Nuovo"
-      Me.tbNuovo.Text = "Nuovo"
-      Me.tbNuovo.ToolTipText = "Nuovo"
-      Me.tbNuovo.Visible = False
-      '
-      'Primo
-      '
-      Me.Primo.ImageIndex = 3
-      Me.Primo.Name = "Primo"
-      Me.Primo.Tag = "Primo"
-      Me.Primo.ToolTipText = "Prima pagina"
-      Me.Primo.Visible = False
-      '
-      'Precedente
-      '
-      Me.Precedente.ImageIndex = 4
-      Me.Precedente.Name = "Precedente"
-      Me.Precedente.Tag = "Precedente"
-      Me.Precedente.ToolTipText = "Pagina precedente "
-      Me.Precedente.Visible = False
-      '
-      'Successivo
-      '
-      Me.Successivo.ImageIndex = 5
-      Me.Successivo.Name = "Successivo"
-      Me.Successivo.Tag = "Successivo"
-      Me.Successivo.ToolTipText = "Pagina successiva"
-      Me.Successivo.Visible = False
-      '
-      'Ultimo
-      '
-      Me.Ultimo.ImageIndex = 6
-      Me.Ultimo.Name = "Ultimo"
-      Me.Ultimo.Tag = "Ultimo"
-      Me.Ultimo.ToolTipText = "Ultima pagina"
-      Me.Ultimo.Visible = False
-      '
-      'tbrAggiorna
-      '
-      Me.tbrAggiorna.ImageIndex = 7
-      Me.tbrAggiorna.Name = "tbrAggiorna"
-      Me.tbrAggiorna.Tag = "Aggiorna"
-      Me.tbrAggiorna.ToolTipText = "Aggiorna"
-      '
-      'ToolBarButton1
-      '
-      Me.ToolBarButton1.Name = "ToolBarButton1"
-      Me.ToolBarButton1.Style = System.Windows.Forms.ToolBarButtonStyle.Separator
-      '
-      'tbrAnteprima
-      '
-      Me.tbrAnteprima.ImageIndex = 8
-      Me.tbrAnteprima.Name = "tbrAnteprima"
-      Me.tbrAnteprima.Tag = "Anteprima"
-      Me.tbrAnteprima.ToolTipText = "Anteprima di stampa"
-      '
-      'tbrStampa
-      '
-      Me.tbrStampa.ImageIndex = 9
-      Me.tbrStampa.Name = "tbrStampa"
-      Me.tbrStampa.Tag = "Stampa"
-      Me.tbrStampa.ToolTipText = "Stampa"
-      '
-      'tbrInserisci
-      '
-      Me.tbrInserisci.Name = "tbrInserisci"
-      Me.tbrInserisci.Tag = ""
-      Me.tbrInserisci.Visible = False
       '
       'ImageList1
       '
@@ -446,10 +172,10 @@ Public Class ElencoDoc
       Me.DataGrid1.CaptionForeColor = System.Drawing.Color.White
       Me.DataGrid1.DataMember = ""
       Me.DataGrid1.HeaderForeColor = System.Drawing.SystemColors.ControlText
-      Me.DataGrid1.Location = New System.Drawing.Point(0, 56)
+      Me.DataGrid1.Location = New System.Drawing.Point(0, 34)
       Me.DataGrid1.Name = "DataGrid1"
       Me.DataGrid1.ReadOnly = True
-      Me.DataGrid1.Size = New System.Drawing.Size(872, 263)
+      Me.DataGrid1.Size = New System.Drawing.Size(880, 290)
       Me.DataGrid1.TabIndex = 0
       '
       'Panel1
@@ -464,16 +190,16 @@ Public Class ElencoDoc
       Me.Panel1.Controls.Add(Me.lblTesto)
       Me.Panel1.Controls.Add(Me.TestoRicerca)
       Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-      Me.Panel1.Location = New System.Drawing.Point(0, 26)
+      Me.Panel1.Location = New System.Drawing.Point(0, 0)
       Me.Panel1.Name = "Panel1"
-      Me.Panel1.Size = New System.Drawing.Size(872, 30)
+      Me.Panel1.Size = New System.Drawing.Size(880, 34)
       Me.Panel1.TabIndex = 0
       '
       'dtpAl
       '
       Me.dtpAl.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.dtpAl.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.dtpAl.Location = New System.Drawing.Point(688, 40)
+      Me.dtpAl.Location = New System.Drawing.Point(696, 40)
       Me.dtpAl.Name = "dtpAl"
       Me.dtpAl.Size = New System.Drawing.Size(174, 20)
       Me.dtpAl.TabIndex = 55670
@@ -484,7 +210,7 @@ Public Class ElencoDoc
       '
       Me.dtpDal.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.dtpDal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.dtpDal.Location = New System.Drawing.Point(472, 40)
+      Me.dtpDal.Location = New System.Drawing.Point(480, 40)
       Me.dtpDal.MaxDate = New Date(9998, 12, 1, 0, 0, 0, 0)
       Me.dtpDal.Name = "dtpDal"
       Me.dtpDal.Size = New System.Drawing.Size(174, 20)
@@ -498,7 +224,7 @@ Public Class ElencoDoc
       Me.lblAl.AutoSize = True
       Me.lblAl.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.lblAl.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-      Me.lblAl.Location = New System.Drawing.Point(664, 40)
+      Me.lblAl.Location = New System.Drawing.Point(672, 40)
       Me.lblAl.Name = "lblAl"
       Me.lblAl.Size = New System.Drawing.Size(23, 15)
       Me.lblAl.TabIndex = 55672
@@ -512,7 +238,7 @@ Public Class ElencoDoc
       Me.lblDal.AutoSize = True
       Me.lblDal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.lblDal.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-      Me.lblDal.Location = New System.Drawing.Point(440, 40)
+      Me.lblDal.Location = New System.Drawing.Point(448, 40)
       Me.lblDal.Name = "lblDal"
       Me.lblDal.Size = New System.Drawing.Size(33, 15)
       Me.lblDal.TabIndex = 55671
@@ -524,7 +250,7 @@ Public Class ElencoDoc
       '
       Me.CampoRicerca.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.CampoRicerca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-      Me.CampoRicerca.Location = New System.Drawing.Point(730, 8)
+      Me.CampoRicerca.Location = New System.Drawing.Point(738, 8)
       Me.CampoRicerca.Name = "CampoRicerca"
       Me.CampoRicerca.Size = New System.Drawing.Size(136, 21)
       Me.CampoRicerca.TabIndex = 1
@@ -535,7 +261,7 @@ Public Class ElencoDoc
       Me.lblCampo.AutoSize = True
       Me.lblCampo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.lblCampo.ForeColor = System.Drawing.Color.White
-      Me.lblCampo.Location = New System.Drawing.Point(648, 8)
+      Me.lblCampo.Location = New System.Drawing.Point(656, 8)
       Me.lblCampo.Name = "lblCampo"
       Me.lblCampo.Size = New System.Drawing.Size(85, 15)
       Me.lblCampo.TabIndex = 8
@@ -558,7 +284,7 @@ Public Class ElencoDoc
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.TestoRicerca.Location = New System.Drawing.Point(112, 8)
       Me.TestoRicerca.Name = "TestoRicerca"
-      Me.TestoRicerca.Size = New System.Drawing.Size(527, 20)
+      Me.TestoRicerca.Size = New System.Drawing.Size(535, 20)
       Me.TestoRicerca.TabIndex = 0
       '
       'PrintDialog1
@@ -579,9 +305,9 @@ Public Class ElencoDoc
       Me.Panel2.Controls.Add(Me.txtTotImporto)
       Me.Panel2.Controls.Add(Me.Label6)
       Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
-      Me.Panel2.Location = New System.Drawing.Point(0, 318)
+      Me.Panel2.Location = New System.Drawing.Point(0, 326)
       Me.Panel2.Name = "Panel2"
-      Me.Panel2.Size = New System.Drawing.Size(872, 32)
+      Me.Panel2.Size = New System.Drawing.Size(880, 32)
       Me.Panel2.TabIndex = 13
       '
       'txtBuoni
@@ -592,7 +318,7 @@ Public Class ElencoDoc
       Me.txtBuoni.Cursor = System.Windows.Forms.Cursors.IBeam
       Me.txtBuoni.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.txtBuoni.ForeColor = System.Drawing.Color.Red
-      Me.txtBuoni.Location = New System.Drawing.Point(752, 7)
+      Me.txtBuoni.Location = New System.Drawing.Point(756, 7)
       Me.txtBuoni.MaxLength = 0
       Me.txtBuoni.Name = "txtBuoni"
       Me.txtBuoni.ReadOnly = True
@@ -607,7 +333,7 @@ Public Class ElencoDoc
       Me.Label1.AutoSize = True
       Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.Label1.ForeColor = System.Drawing.Color.White
-      Me.Label1.Location = New System.Drawing.Point(672, 7)
+      Me.Label1.Location = New System.Drawing.Point(666, 7)
       Me.Label1.Name = "Label1"
       Me.Label1.Size = New System.Drawing.Size(87, 15)
       Me.Label1.TabIndex = 238
@@ -621,7 +347,7 @@ Public Class ElencoDoc
       Me.txtSospeso.Cursor = System.Windows.Forms.Cursors.IBeam
       Me.txtSospeso.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.txtSospeso.ForeColor = System.Drawing.Color.Red
-      Me.txtSospeso.Location = New System.Drawing.Point(552, 8)
+      Me.txtSospeso.Location = New System.Drawing.Point(546, 8)
       Me.txtSospeso.MaxLength = 0
       Me.txtSospeso.Name = "txtSospeso"
       Me.txtSospeso.ReadOnly = True
@@ -636,7 +362,7 @@ Public Class ElencoDoc
       Me.Label3.AutoSize = True
       Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.Label3.ForeColor = System.Drawing.Color.White
-      Me.Label3.Location = New System.Drawing.Point(488, 8)
+      Me.Label3.Location = New System.Drawing.Point(482, 8)
       Me.Label3.Name = "Label3"
       Me.Label3.Size = New System.Drawing.Size(66, 15)
       Me.Label3.TabIndex = 236
@@ -650,7 +376,7 @@ Public Class ElencoDoc
       Me.txtTotImporto.Cursor = System.Windows.Forms.Cursors.IBeam
       Me.txtTotImporto.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.txtTotImporto.ForeColor = System.Drawing.Color.Red
-      Me.txtTotImporto.Location = New System.Drawing.Point(368, 8)
+      Me.txtTotImporto.Location = New System.Drawing.Point(362, 8)
       Me.txtTotImporto.MaxLength = 0
       Me.txtTotImporto.Name = "txtTotImporto"
       Me.txtTotImporto.ReadOnly = True
@@ -665,7 +391,7 @@ Public Class ElencoDoc
       Me.Label6.AutoSize = True
       Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.Label6.ForeColor = System.Drawing.Color.White
-      Me.Label6.Location = New System.Drawing.Point(320, 8)
+      Me.Label6.Location = New System.Drawing.Point(314, 8)
       Me.Label6.Name = "Label6"
       Me.Label6.Size = New System.Drawing.Size(51, 15)
       Me.Label6.TabIndex = 16
@@ -680,11 +406,10 @@ Public Class ElencoDoc
       '
       Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
       Me.BackColor = System.Drawing.SystemColors.AppWorkspace
-      Me.ClientSize = New System.Drawing.Size(872, 350)
+      Me.ClientSize = New System.Drawing.Size(880, 358)
       Me.Controls.Add(Me.Panel2)
       Me.Controls.Add(Me.Panel1)
       Me.Controls.Add(Me.DataGrid1)
-      Me.Controls.Add(Me.ToolBar1)
       Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
       Me.Name = "ElencoDoc"
       Me.ShowInTaskbar = False
@@ -695,7 +420,6 @@ Public Class ElencoDoc
       Me.Panel2.ResumeLayout(False)
       Me.Panel2.PerformLayout()
       Me.ResumeLayout(False)
-      Me.PerformLayout()
 
    End Sub
 
@@ -703,9 +427,9 @@ Public Class ElencoDoc
 
 #Region "Scarico ingredienti"
 
-   Private Function SalvaDati(ByVal tabella As String, ByVal id As Integer, ByVal giacenza As Double, _
-                              ByVal carico As Double, ByVal scarico As Double, _
-                              ByVal situazione As Double, ByVal prezzo As String, _
+   Private Function SalvaDati(ByVal tabella As String, ByVal id As Integer, ByVal giacenza As Double,
+                              ByVal carico As Double, ByVal scarico As Double,
+                              ByVal situazione As Double, ByVal prezzo As String,
                               ByVal valCarico As Double, ByVal valScarico As Double, ByVal valAttuale As Double) As Boolean
 
       Dim cn As New OleDbConnection(ConnString)
@@ -719,17 +443,17 @@ Public Class ElencoDoc
          tr = cn.BeginTransaction(IsolationLevel.ReadCommitted)
 
          ' Crea la stringa di eliminazione.
-         sql = String.Format("UPDATE {0} " & _
-                             "SET Giacenza = @Giacenza, " & _
-                             "Carico = @Carico, " & _
-                             "Scarico = @Scarico, " & _
-                             "SituazioneScorta = @SituazioneScorta, " & _
-                             "ValCarico = @ValCarico, " & _
-                             "valScarico = @ValScarico, " & _
-                             "ValAttuale = @ValAttuale, " & _
-                             "PrezzoAcquisto = @Prezzo " & _
-                             "WHERE Id = {1}", _
-                              tabella, _
+         sql = String.Format("UPDATE {0} " &
+                             "SET Giacenza = @Giacenza, " &
+                             "Carico = @Carico, " &
+                             "Scarico = @Scarico, " &
+                             "SituazioneScorta = @SituazioneScorta, " &
+                             "ValCarico = @ValCarico, " &
+                             "valScarico = @ValScarico, " &
+                             "ValAttuale = @ValAttuale, " &
+                             "PrezzoAcquisto = @Prezzo " &
+                             "WHERE Id = {1}",
+                              tabella,
                               id)
 
          ' Crea il comando per la connessione corrente.
@@ -767,10 +491,10 @@ Public Class ElencoDoc
       End Try
    End Function
 
-   Private Function SalvaMovimentiMag(ByVal tabella As String, ByVal id_Articolo As Integer, ByVal data As String, _
-                                      ByVal codice As String, ByVal descrizione As String, _
-                                      ByVal carico As Double, ByVal scarico As Double, _
-                                      ByVal causale As String, ByVal prezzo As String, _
+   Private Function SalvaMovimentiMag(ByVal tabella As String, ByVal id_Articolo As Integer, ByVal data As String,
+                                      ByVal codice As String, ByVal descrizione As String,
+                                      ByVal carico As Double, ByVal scarico As Double,
+                                      ByVal causale As String, ByVal prezzo As String,
                                       ByVal fornitore As String, ByVal magazzino As String) As Boolean
 
       Dim cn As New OleDbConnection(ConnString)
@@ -784,9 +508,9 @@ Public Class ElencoDoc
          tr = cn.BeginTransaction(IsolationLevel.ReadCommitted)
 
          ' Crea la stringa di eliminazione.
-         sql = String.Format("INSERT INTO {0} (Id_Articolo, Data, Codice, Descrizione, PrezzoAcquisto, " & _
-                                              "Carico, Scarico, Causale, Fornitore, Magazzino) " & _
-                                       "VALUES(@Id_Articolo, @Data, @Codice, @Descrizione, @PrezzoAcquisto, " & _
+         sql = String.Format("INSERT INTO {0} (Id_Articolo, Data, Codice, Descrizione, PrezzoAcquisto, " &
+                                              "Carico, Scarico, Causale, Fornitore, Magazzino) " &
+                                       "VALUES(@Id_Articolo, @Data, @Codice, @Descrizione, @PrezzoAcquisto, " &
                                               "@Carico, @Scarico, @Causale, @Fornitore, @Magazzino)", tabella)
 
          ' Crea il comando per la connessione corrente.
@@ -949,8 +673,8 @@ Public Class ElencoDoc
                End If
 
                ' Aggiorna i dati della tabella Articoli.
-               SalvaDati("Articoli", idArticolo, nuovaGiacenza, _
-                          Carico, Scarico, situazioneScorta, AArticoli.PrezzoAcquisto, _
+               SalvaDati("Articoli", idArticolo, nuovaGiacenza,
+                          Carico, Scarico, situazioneScorta, AArticoli.PrezzoAcquisto,
                           valCarico, valScarico, valAttuale)
 
                ' Verifica se è un carico o scarico.
@@ -962,8 +686,8 @@ Public Class ElencoDoc
                Dim data As Date = Now.Today
 
                ' Salva i dati per i movimenti di magazzino.
-               SalvaMovimentiMag("MovMagazzino", idArticolo, data.ToShortDateString, AArticoli.Codice, AArticoli.Descrizione, _
-                                  qtàCaricata, qtàScaricata, CausaleMovMag, AArticoli.PrezzoAcquisto, _
+               SalvaMovimentiMag("MovMagazzino", idArticolo, data.ToShortDateString, AArticoli.Codice, AArticoli.Descrizione,
+                                  qtàCaricata, qtàScaricata, CausaleMovMag, AArticoli.PrezzoAcquisto,
                                   AArticoli.Fornitore, AArticoli.Magazzino)
 
                If IsNothing(g_frmArticoli) = False Then
@@ -1360,6 +1084,13 @@ Public Class ElencoDoc
          EliminaDettagliDocumento()
          EliminaDocumento()
 
+         ' Attiva/disattiva il pulsanti per i sospesi, i buoni e annulla.
+         AttivaDisattivaSospeso()
+         AttivaDisattivaPassaSospeso()
+         AttivaDisattivaAnnullaSospeso()
+         AttivaDisattivaBuoni()
+         AttivaDisattivaAnnullaDoc()
+
          ' Registra loperazione effettuata dall'operatore identificato.
          Dim strDescrizione As String = "(" & Documento & " n. " & Numero & " del " & Data & " - € " & CFormatta.FormattaEuro(Importo) & ")"
          g_frmMain.RegistraOperazione(TipoOperazione.AnnullaDoc, strDescrizione, MODULO_CONTABILITA_DOCUMENTI)
@@ -1436,10 +1167,10 @@ Public Class ElencoDoc
          pagCorrente = n
 
          ' Abilita/disabilita i pulsanti.
-         Primo.Enabled = (n > 1)
-         Precedente.Enabled = (n > 1)
-         Successivo.Enabled = (n < numPagine)
-         Ultimo.Enabled = (n < numPagine)
+         'Primo.Enabled = (n > 1)
+         'Precedente.Enabled = (n > 1)
+         'Successivo.Enabled = (n < numPagine)
+         'Ultimo.Enabled = (n < numPagine)
 
       Catch ex As Exception
          ' Visualizza un messaggio di errore e lo registra nell'apposito file.
@@ -1496,32 +1227,34 @@ Public Class ElencoDoc
       End Try
    End Sub
 
+   ' DA_FARE_B: Non più utilizzata. DA CANCELLARE!
    Private Sub VisualizzaDate()
-      lblAl.Location = New Point(lblAl.Location.X, 8)
-      lblDal.Location = New Point(lblDal.Location.X, 8)
-      dtpAl.Location = New Point(dtpAl.Location.X, 8)
-      dtpDal.Location = New Point(dtpDal.Location.X, 8)
-      lblAl.Visible = True
-      lblDal.Visible = True
-      dtpAl.Visible = True
-      dtpDal.Visible = True
+      'lblAl.Location = New Point(lblAl.Location.X, 8)
+      'lblDal.Location = New Point(lblDal.Location.X, 8)
+      'dtpAl.Location = New Point(dtpAl.Location.X, 8)
+      'dtpDal.Location = New Point(dtpDal.Location.X, 8)
+      'lblAl.Visible = True
+      'lblDal.Visible = True
+      'dtpAl.Visible = True
+      'dtpDal.Visible = True
 
-      lblTesto.Visible = False
-      lblCampo.Visible = False
-      TestoRicerca.Visible = False
-      CampoRicerca.Visible = False
+      'lblTesto.Visible = False
+      'lblCampo.Visible = False
+      'TestoRicerca.Visible = False
+      'CampoRicerca.Visible = False
    End Sub
 
+   ' DA_FARE_B: Non più utilizzata. DA CANCELLARE!
    Public Sub NascondiDate()
-      lblAl.Visible = False
-      lblDal.Visible = False
-      dtpAl.Visible = False
-      dtpDal.Visible = False
+      'lblAl.Visible = False
+      'lblDal.Visible = False
+      'dtpAl.Visible = False
+      'dtpDal.Visible = False
 
-      lblTesto.Visible = True
-      lblCampo.Visible = True
-      TestoRicerca.Visible = True
-      CampoRicerca.Visible = True
+      'lblTesto.Visible = True
+      'lblCampo.Visible = True
+      'TestoRicerca.Visible = True
+      'CampoRicerca.Visible = True
    End Sub
 
    Public Sub AggiornaDatiSospesi()
@@ -1531,10 +1264,12 @@ Public Class ElencoDoc
          repSql = sql
          LeggiDati("(" & sql & ")", sql)
 
-         ' Attiva/disattiva il pulsanti per i sospesi.
+         ' Attiva/disattiva il pulsanti per i sospesi, i buoni e annulla.
          AttivaDisattivaSospeso()
          AttivaDisattivaPassaSospeso()
          AttivaDisattivaAnnullaSospeso()
+         AttivaDisattivaBuoni()
+         AttivaDisattivaAnnullaDoc()
 
          ' Se nella tabella non ci sono record disattiva i pulsanti.
          ConvalidaDati()
@@ -1557,29 +1292,38 @@ Public Class ElencoDoc
 
    Public Sub AggiornaDatiPeriodo()
       Try
-         ' Crea la stringa di selezione dei dati.
-         Dim Appo1 As String = CFormatta.FormattaData(dtpDal.Text)
-         Dim Appo2 As String = CFormatta.FormattaData(dtpAl.Text)
-         sql = String.Format("SELECT TOP {0} * FROM {1} WHERE DataDoc BETWEEN #{2}# AND #{3}# ORDER BY DataDoc ASC", DIM_PAGINA_GRANDE, TAB_DOCUMENTI, Appo1, Appo2)
-         repSql = sql
-         LeggiDati("(" & sql & ")", sql)
+         ' Rimuove i dati di un'eventuale ricerca.
+         TestoRicerca.Text = String.Empty
 
-         ' Attiva/disattiva il pulsanti per i sospesi.
-         AttivaDisattivaSospeso()
-         AttivaDisattivaPassaSospeso()
-         AttivaDisattivaAnnullaSospeso()
+         Dim frmFiltroPerido As New FiltroPeriodo
+         If frmFiltroPerido.ShowDialog = Windows.Forms.DialogResult.OK Then
 
-         ' Se nella tabella non ci sono record disattiva i pulsanti.
-         ConvalidaDati()
+            ' Crea la stringa di selezione dei dati.
+            Dim dataDal As String = CFormatta.FormattaData(frmFiltroPerido.eui_dtpDataDal.Value.GetValueOrDefault.ToShortDateString)
+            Dim dataAl As String = CFormatta.FormattaData(frmFiltroPerido.eui_dtpDataAl.Value.GetValueOrDefault.ToShortDateString)
+            sql = String.Format("SELECT TOP {0} * FROM {1} WHERE DataDoc BETWEEN #{2}# AND #{3}# ORDER BY DataDoc ASC", DIM_PAGINA_GRANDE, TAB_DOCUMENTI, dataDal, dataAl)
+            repSql = sql
+            LeggiDati("(" & sql & ")", sql)
 
-         ' Aggiorna l'intestazione della griglia dati.
-         AggIntGriglia()
+            ' Attiva/disattiva il pulsanti per i sospesi, i buoni e annulla.
+            AttivaDisattivaSospeso()
+            AttivaDisattivaPassaSospeso()
+            AttivaDisattivaAnnullaSospeso()
+            AttivaDisattivaBuoni()
+            AttivaDisattivaAnnullaDoc()
 
-         ' Aggiorna il titolo della finestra.
-         AggTitoloFinestra(TITOLO_FINESTRA)
+            ' Se nella tabella non ci sono record disattiva i pulsanti.
+            ConvalidaDati()
 
-         ' Somma i valori della colonna Importo.
-         SommaImporti()
+            ' Aggiorna l'intestazione della griglia dati.
+            AggIntGriglia()
+
+            ' Aggiorna il titolo della finestra.
+            AggTitoloFinestra(TITOLO_FINESTRA)
+
+            ' Somma i valori della colonna Importo.
+            SommaImporti()
+         End If
 
       Catch ex As Exception
          ' Visualizza un messaggio di errore e lo registra nell'apposito file.
@@ -1604,10 +1348,12 @@ Public Class ElencoDoc
          ' Se nella tabella non ci sono record disattiva i pulsanti.
          ConvalidaDati()
 
-         ' Attiva/disattiva il pulsanti per i sospesi.
+         ' Attiva/disattiva il pulsanti per i sospesi, i buoni e annulla.
          AttivaDisattivaSospeso()
          AttivaDisattivaPassaSospeso()
          AttivaDisattivaAnnullaSospeso()
+         AttivaDisattivaBuoni()
+         AttivaDisattivaAnnullaDoc()
 
          ' Aggiorna l'intestazione della griglia dati.
          AggIntGriglia()
@@ -1640,10 +1386,12 @@ Public Class ElencoDoc
          ' Se nella tabella non ci sono record disattiva i pulsanti.
          ConvalidaDati()
 
-         ' Attiva/disattiva il pulsanti per i sospesi.
+         ' Attiva/disattiva il pulsanti per i sospesi, i buoni e annulla.
          AttivaDisattivaSospeso()
          AttivaDisattivaPassaSospeso()
          AttivaDisattivaAnnullaSospeso()
+         AttivaDisattivaBuoni()
+         AttivaDisattivaAnnullaDoc()
 
          ' Aggiorna l'intestazione della griglia dati.
          AggIntGriglia()
@@ -1680,30 +1428,41 @@ Public Class ElencoDoc
    Public Sub ImpostaComandi()
       If numRecord = 0 Then
          ' Disattiva i pulsanti appropriati.
-         tbrAnnulla.Enabled = False
-         'tbrSospesi.Enabled = False
-         tbrSospeso.Enabled = False
-         tbrPassaSospeso.Enabled = False
-         tbrAnnullaSospeso.Enabled = False
-         tbrBuoni.Enabled = False
-         tbrAggiorna.Enabled = False
-         tbrModifica.Enabled = False
-         'Elimina.Enabled = False
-         'Primo.Enabled = False
-         'Precedente.Enabled = False
-         'Successivo.Enabled = False
-         'Ultimo.Enabled = False
+         ' Modifica.
+         g_frmMain.eui_Strumenti_Modifica.Enabled = False
+         'g_frmMain.eui_Strumenti_Duplica.Enabled = False
+         g_frmMain.eui_Strumenti_Elimina.Enabled = False
+         g_frmMain.eui_Strumenti_Annulla.Enabled = False
+         g_frmMain.eui_Strumenti_Aggiorna.Enabled = False
+         g_frmMain.eui_Strumenti_Esporta.Enabled = False
+         g_frmMain.eui_Strumenti_Stampa_Anteprima.Enabled = False
+         g_frmMain.eui_Strumenti_Stampa_Elenco.Enabled = False
+
+         ' Sospesi.
+         g_frmMain.eui_Strumenti_Sospesi_Filtra.Enabled = False
+         g_frmMain.eui_Strumenti_Sospesi_Incassa.Enabled = False
+         g_frmMain.eui_Strumenti_Sospesi_Annulla.Enabled = False
+         g_frmMain.eui_Strumenti_Sospesi_Passa.Enabled = False
+         g_frmMain.eui_Strumenti_Buoni_Pasto.Enabled = False
       Else
-         ' Attiva i pulsanti appropriati.
-         tbrAnnulla.Enabled = True
-         'tbrSospesi.Enabled = True
-         tbrSospeso.Enabled = False
-         tbrPassaSospeso.Enabled = True
-         tbrAnnullaSospeso.Enabled = True
-         tbrBuoni.Enabled = True
-         tbrAggiorna.Enabled = True
-         tbrModifica.Enabled = True
-         'Elimina.Enabled = True
+         ' Disattiva i pulsanti appropriati.
+         ' Modifica.
+         g_frmMain.eui_Strumenti_Modifica.Enabled = True
+         'g_frmMain.eui_Strumenti_Duplica.Enabled = True
+         g_frmMain.eui_Strumenti_Elimina.Enabled = True
+         'g_frmMain.eui_Strumenti_Annulla.Enabled = True
+         g_frmMain.eui_Strumenti_Aggiorna.Enabled = True
+         g_frmMain.eui_Strumenti_Esporta.Enabled = True
+         g_frmMain.eui_Strumenti_Stampa_Anteprima.Enabled = True
+         g_frmMain.eui_Strumenti_Stampa_Elenco.Enabled = True
+
+         ' Sospesi.
+         g_frmMain.eui_Strumenti_Sospesi_Filtra.Enabled = True
+         'g_frmMain.eui_Strumenti_Sospesi_Incassa.Enabled = True
+         'g_frmMain.eui_Strumenti_Sospesi_Annulla.Enabled = True
+         'g_frmMain.eui_Strumenti_Sospesi_Passa.Enabled = True
+         'g_frmMain.eui_Strumenti_Buoni_Pasto.Enabled = True
+
       End If
    End Sub
 
@@ -1743,9 +1502,9 @@ Public Class ElencoDoc
    Public Sub AggIntGriglia()
       Try
          If numRecord <> 0 Then
-            DataGrid1.CaptionText = Strings.UCase(DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 5) & " - " & _
-                                                  DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 4) & " n. " & _
-                                                  DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 1) & " del " & _
+            DataGrid1.CaptionText = Strings.UCase(DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 5) & " - " &
+                                                  DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 4) & " n. " &
+                                                  DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 1) & " del " &
                                                   DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 2))
          Else
             DataGrid1.CaptionText = ""
@@ -1904,7 +1663,6 @@ Public Class ElencoDoc
       End Try
    End Sub
 
-   ' DA_FARE_A: Modificare la procedura verificando il tipo di doc e chiedendo se si vuole anche eliminare il doc.
    Public Sub AnnullaDocumento()
       Dim Id As String = DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, COLONNA_ID_DOC)
       Dim Data As String = DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, COLONNA_DATA_DOC)
@@ -1938,6 +1696,7 @@ Public Class ElencoDoc
       If risposta = vbNo Then
          EliminaDettagliDocumento()
          EliminaDocumento()
+
       Else
          ModificaStatoDoc(TAB_DOCUMENTI, Id, STATO_DOC_ANNULLATO)
       End If
@@ -1946,6 +1705,11 @@ Public Class ElencoDoc
       ' Salva il Numero del documento annullato come prossimo numero da stampare rendendolo nuovamente disponibile.
       'RipristinaNumeroDocFiscaleConfig(TAB_DOCUMENTI, Documento, Numero)
 
+      ' Attiva/disattiva il pulsanti per i sospesi, i buoni e annulla.
+      AttivaDisattivaSospeso()
+      AttivaDisattivaPassaSospeso()
+      AttivaDisattivaAnnullaSospeso()
+      AttivaDisattivaBuoni()
       AttivaDisattivaAnnullaDoc()
 
       ' Registra loperazione effettuata dall'operatore identificato.
@@ -2271,14 +2035,16 @@ Public Class ElencoDoc
                campoRicerca = "TipoDoc"
             Case "Intestatario"
                campoRicerca = "Cliente"
+            Case "Stato documento"
+               campoRicerca = "StatoDoc"
+            Case "Causale"
+               campoRicerca = "CausaleDoc"
             Case "Totale"
                campoRicerca = "TotDoc"
             Case "Buoni pasto"
                campoRicerca = "BuoniPasto"
             Case "Tipo pagamento"
                campoRicerca = "TipoPagamento"
-            Case "IVA"
-               campoRicerca = "Imposta"
          End Select
 
          If testoRicerca <> "" Then
@@ -2314,10 +2080,12 @@ Public Class ElencoDoc
          ' Se nella tabella non ci sono record disattiva i pulsanti.
          ConvalidaDati()
 
-         ' Attiva/disattiva il pulsanti per i sospesi.
+         ' Attiva/disattiva il pulsanti per i sospesi, i buoni e annulla.
          AttivaDisattivaSospeso()
          AttivaDisattivaPassaSospeso()
          AttivaDisattivaAnnullaSospeso()
+         AttivaDisattivaBuoni()
+         AttivaDisattivaAnnullaDoc()
 
          ' Aggiorna l'intestazione della griglia dati.
          AggIntGriglia()
@@ -2339,14 +2107,14 @@ Public Class ElencoDoc
          CampoRicerca.Items.Add("Ora")
          CampoRicerca.Items.Add("Tipo documento")
          CampoRicerca.Items.Add("Intestatario")
-         CampoRicerca.Items.Add("Tavolo")
+         CampoRicerca.Items.Add("Stato documento")
+         CampoRicerca.Items.Add("Causale")
+         CampoRicerca.Items.Add("Tipo pagamento")
          CampoRicerca.Items.Add("Totale")
          CampoRicerca.Items.Add("Sospeso")
          CampoRicerca.Items.Add("Imponibile")
-         CampoRicerca.Items.Add("IVA")
+         CampoRicerca.Items.Add("Imposta")
          CampoRicerca.Items.Add("Buoni pasto")
-         CampoRicerca.Items.Add("Tipo pagamento")
-         CampoRicerca.Items.Add("Cameriere")
 
       Catch ex As Exception
          ' Visualizza un messaggio di errore e lo registra nell'apposito file.
@@ -2382,7 +2150,7 @@ Public Class ElencoDoc
       End Try
    End Function
 
-   Private Sub StampaDocumento(ByVal nomeDoc As String, ByVal tabella As String, ByVal sqlRep As String)
+   Public Sub StampaDocumento(ByVal nomeDoc As String, ByVal tabella As String, ByVal sqlRep As String)
       Try
 
          If PrintDialog1.ShowDialog() = DialogResult.OK Then
@@ -2768,7 +2536,7 @@ Public Class ElencoDoc
       AttivaDisattivaBuoni()
    End Sub
 
-   Private Sub ToolBar1_ButtonClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ToolBarButtonClickEventArgs) Handles ToolBar1.ButtonClick
+   Private Sub ToolBar1_ButtonClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ToolBarButtonClickEventArgs)
       Select Case e.Button.Tag
          Case "Tutti"
             tbrPeriodo.Pushed = False
@@ -2847,17 +2615,17 @@ Public Class ElencoDoc
 
          Case "Sospeso"
             ' Apre la finestra per l'incasso del sospeso.
-            Dim frm As New IncassaSospeso(DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 0), _
-                                          DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 1), _
-                                          DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 2), _
-                                          DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 4), _
-                                          DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 5), _
+            Dim frm As New IncassaSospeso(DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 0),
+                                          DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 1),
+                                          DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 2),
+                                          DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 4),
+                                          DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 5),
                                           DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 8))
             frm.ShowDialog()
 
          Case "PassaSospeso"
             ' Apre la finestra per l'incasso del sospeso.
-            PassaSospeso(DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 0), _
+            PassaSospeso(DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 0),
                          DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 7))
 
          Case "AnnullaSospeso"
