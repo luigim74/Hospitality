@@ -4188,19 +4188,19 @@ Public Class frmPos
                ' B_TODO: Modifica per Retail.
                If IsNothing(g_frmDocumenti) = False Then
                   With g_frmDocumenti
-                     If .tbrSospesi.Pushed = True Then
+                     If g_frmMain.eui_Strumenti_Sospesi_Filtra.Pressed = True Then
                         ' Aggiorna la griglia dati.
                         .AggiornaDatiSospesi()
                         Exit Sub
-                     ElseIf .tbrMese.Pushed = True Then
+                     ElseIf g_frmMain.eui_Strumenti_Periodo_Mese.Pressed = True Then
                         ' Aggiorna la griglia dati.
                         .AggiornaDatiMese()
                         Exit Sub
-                     ElseIf .tbrAnno.Pushed = True Then
+                     ElseIf g_frmMain.eui_Strumenti_Periodo_Anno.Pressed = True Then
                         ' Aggiorna la griglia dati.
                         .AggiornaDatiAnno()
                         Exit Sub
-                     ElseIf .tbrPeriodo.Pushed = True Then
+                     ElseIf g_frmMain.eui_Strumenti_Periodo_DalAl.Pressed = True Then
                         ' Aggiorna la griglia dati.
                         .AggiornaDatiPeriodo()
                         Exit Sub

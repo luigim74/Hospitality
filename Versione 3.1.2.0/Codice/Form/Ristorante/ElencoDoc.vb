@@ -58,6 +58,7 @@ Public Class ElencoDoc
    Private CFormatta As New ClsFormatta
    Private AArticoli As New Articoli
    Friend WithEvents formFrameSkinner As Elegant.Ui.FormFrameSkinner
+   Friend WithEvents eui_txtTestoRicerca As Elegant.Ui.TextBox
    Public filtroDati As String
 
 #Region " Codice generato da Progettazione Windows Form "
@@ -132,6 +133,7 @@ Public Class ElencoDoc
       Me.txtTotImporto = New System.Windows.Forms.TextBox()
       Me.Label6 = New System.Windows.Forms.Label()
       Me.formFrameSkinner = New Elegant.Ui.FormFrameSkinner()
+      Me.eui_txtTestoRicerca = New Elegant.Ui.TextBox()
       CType(Me.DataGrid1, System.ComponentModel.ISupportInitialize).BeginInit()
       Me.Panel1.SuspendLayout()
       Me.Panel2.SuspendLayout()
@@ -175,12 +177,13 @@ Public Class ElencoDoc
       Me.DataGrid1.Location = New System.Drawing.Point(0, 34)
       Me.DataGrid1.Name = "DataGrid1"
       Me.DataGrid1.ReadOnly = True
-      Me.DataGrid1.Size = New System.Drawing.Size(880, 290)
+      Me.DataGrid1.Size = New System.Drawing.Size(880, 291)
       Me.DataGrid1.TabIndex = 0
       '
       'Panel1
       '
       Me.Panel1.BackColor = System.Drawing.Color.Gray
+      Me.Panel1.Controls.Add(Me.eui_txtTestoRicerca)
       Me.Panel1.Controls.Add(Me.dtpAl)
       Me.Panel1.Controls.Add(Me.dtpDal)
       Me.Panel1.Controls.Add(Me.lblAl)
@@ -282,10 +285,11 @@ Public Class ElencoDoc
       '
       Me.TestoRicerca.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-      Me.TestoRicerca.Location = New System.Drawing.Point(112, 8)
+      Me.TestoRicerca.Location = New System.Drawing.Point(587, 7)
       Me.TestoRicerca.Name = "TestoRicerca"
-      Me.TestoRicerca.Size = New System.Drawing.Size(535, 20)
+      Me.TestoRicerca.Size = New System.Drawing.Size(63, 20)
       Me.TestoRicerca.TabIndex = 0
+      Me.TestoRicerca.Visible = False
       '
       'PrintDialog1
       '
@@ -401,6 +405,17 @@ Public Class ElencoDoc
       '
       Me.formFrameSkinner.AllowGlass = False
       Me.formFrameSkinner.Form = Me
+      '
+      'eui_txtTestoRicerca
+      '
+      Me.eui_txtTestoRicerca.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+      Me.eui_txtTestoRicerca.Id = "bb5a861b-2fcf-4573-8803-b69d17c915f7"
+      Me.eui_txtTestoRicerca.Location = New System.Drawing.Point(114, 7)
+      Me.eui_txtTestoRicerca.Name = "eui_txtTestoRicerca"
+      Me.eui_txtTestoRicerca.Size = New System.Drawing.Size(538, 21)
+      Me.eui_txtTestoRicerca.TabIndex = 55674
+      Me.eui_txtTestoRicerca.TextEditorWidth = 532
       '
       'ElencoDoc
       '
@@ -797,26 +812,46 @@ Public Class ElencoDoc
          Select Case wnd
             Case Finestra.Documenti
                If operatore.ContDoc = VALORE_LETTURA Then
-                  tbrAnnulla.Enabled = False
-                  tbrSospeso.Enabled = False
-                  tbrPassaSospeso.Enabled = False
-                  tbrAnnullaSospeso.Enabled = False
-                  tbrBuoni.Enabled = False
-                  tbrModifica.Enabled = False
-                  tbrAggiorna.Enabled = False
+
+                  ' Modifica.
+                  g_frmMain.eui_Strumenti_Nuovo.Enabled = False
+                  g_frmMain.eui_Strumenti_Modifica.Enabled = False
+                  g_frmMain.eui_Strumenti_Duplica.Enabled = False
+                  g_frmMain.eui_Strumenti_Elimina.Enabled = False
+                  g_frmMain.eui_Strumenti_Annulla.Enabled = False
+                  g_frmMain.eui_Strumenti_Aggiorna.Enabled = False
+                  g_frmMain.eui_Strumenti_Esporta.Enabled = False
+                  g_frmMain.eui_Strumenti_Stampa_Anteprima.Enabled = False
+                  g_frmMain.eui_Strumenti_Stampa_Elenco.Enabled = False
+
+                  ' Sospesi.
+                  g_frmMain.eui_Strumenti_Sospesi_Incassa.Enabled = False
+                  g_frmMain.eui_Strumenti_Sospesi_Annulla.Enabled = False
+                  g_frmMain.eui_Strumenti_Sospesi_Passa.Enabled = False
+                  g_frmMain.eui_Strumenti_Buoni_Pasto.Enabled = False
+
                Else
-                  tbrAnnulla.Enabled = True
-                  tbrSospeso.Enabled = True
-                  tbrPassaSospeso.Enabled = True
-                  tbrAnnullaSospeso.Enabled = True
-                  tbrBuoni.Enabled = True
-                  tbrModifica.Enabled = True
-                  tbrAggiorna.Enabled = True
+                  ' Modifica.
+                  g_frmMain.eui_Strumenti_Nuovo.Enabled = True
+                  g_frmMain.eui_Strumenti_Modifica.Enabled = True
+                  g_frmMain.eui_Strumenti_Duplica.Enabled = True
+                  g_frmMain.eui_Strumenti_Elimina.Enabled = True
+                  g_frmMain.eui_Strumenti_Annulla.Enabled = True
+                  g_frmMain.eui_Strumenti_Aggiorna.Enabled = True
+                  g_frmMain.eui_Strumenti_Esporta.Enabled = True
+                  g_frmMain.eui_Strumenti_Stampa_Anteprima.Enabled = True
+                  g_frmMain.eui_Strumenti_Stampa_Elenco.Enabled = True
+
+                  ' Sospesi.
+                  g_frmMain.eui_Strumenti_Sospesi_Incassa.Enabled = True
+                  g_frmMain.eui_Strumenti_Sospesi_Annulla.Enabled = True
+                  g_frmMain.eui_Strumenti_Sospesi_Passa.Enabled = True
+                  g_frmMain.eui_Strumenti_Buoni_Pasto.Enabled = True
                End If
 
          End Select
 
-         Return tbrModifica.Enabled
+         Return g_frmMain.eui_Strumenti_Modifica.Enabled
 
       Catch ex As Exception
          ' Visualizza un messaggio di errore e lo registra nell'apposito file.
@@ -2047,12 +2082,13 @@ Public Class ElencoDoc
                campoRicerca = "TipoPagamento"
          End Select
 
-         If testoRicerca <> "" Then
-            tbrTutti.Pushed = False
-            tbrPeriodo.Pushed = False
-            tbrMese.Pushed = False
-            tbrAnno.Pushed = False
-            tbrSospesi.Pushed = False
+         If testoRicerca <> String.Empty Then
+            g_frmMain.eui_Strumenti_Periodo_Tutte.Pressed = False
+            g_frmMain.eui_Strumenti_Periodo_DalAl.Pressed = False
+            g_frmMain.eui_Strumenti_Periodo_Mese.Pressed = False
+            g_frmMain.eui_Strumenti_Periodo_Anno.Pressed = False
+            g_frmMain.eui_Strumenti_Sospesi_Filtra.Pressed = False
+            g_frmMain.eui_Strumenti_Periodo_DalAl.Text = g_frmMain.TESTO_FILTRO_PERIODO
 
             ' Crea la stringa sql.
             sql = String.Format("SELECT * FROM {0} WHERE {1} LIKE '" & testoRicerca & "%' ORDER BY {2} ASC", TAB_DOCUMENTI, campoRicerca, campoRicerca)
@@ -2061,11 +2097,12 @@ Public Class ElencoDoc
             ' Legge i dati e ottiene il numero totale dei record.
             LeggiDati("(" & sql & ")", sql)
          Else
-            tbrTutti.Pushed = True
-            tbrPeriodo.Pushed = False
-            tbrMese.Pushed = False
-            tbrAnno.Pushed = False
-            tbrSospesi.Pushed = False
+            g_frmMain.eui_Strumenti_Periodo_Tutte.Pressed = True
+            g_frmMain.eui_Strumenti_Periodo_DalAl.Pressed = False
+            g_frmMain.eui_Strumenti_Periodo_Mese.Pressed = False
+            g_frmMain.eui_Strumenti_Periodo_Anno.Pressed = False
+            g_frmMain.eui_Strumenti_Sospesi_Filtra.Pressed = False
+            g_frmMain.eui_Strumenti_Periodo_DalAl.Text = g_frmMain.TESTO_FILTRO_PERIODO
 
             sql = String.Format("SELECT TOP {0} * FROM {1} ORDER BY DataDoc ASC", DIM_PAGINA_GRANDE, TAB_DOCUMENTI)
             repSql = String.Format("SELECT * FROM {0} ORDER BY DataDoc ASC", TAB_DOCUMENTI)
@@ -2245,19 +2282,19 @@ Public Class ElencoDoc
             Dim strDescrizione As String = "(" & Documento & " n. " & Numero & " del " & Data & " - € " & Importo & ")"
             g_frmMain.RegistraOperazione(TipoOperazione.PassaSospeso, strDescrizione, MODULO_CONTABILITA_DOCUMENTI)
 
-            If tbrSospesi.Pushed = True Then
+            If g_frmMain.eui_Strumenti_Sospesi_Filtra.Pressed = True Then
                ' Aggiorna la griglia dati.
                AggiornaDatiSospesi()
                Exit Sub
-            ElseIf tbrMese.Pushed = True Then
+            ElseIf g_frmMain.eui_Strumenti_Periodo_Mese.Pressed = True Then
                ' Aggiorna la griglia dati.
                AggiornaDatiMese()
                Exit Sub
-            ElseIf tbrAnno.Pushed = True Then
+            ElseIf g_frmMain.eui_Strumenti_Periodo_Anno.Pressed = True Then
                ' Aggiorna la griglia dati.
                AggiornaDatiAnno()
                Exit Sub
-            ElseIf tbrPeriodo.Pushed = True Then
+            ElseIf g_frmMain.eui_Strumenti_Periodo_DalAl.Pressed = True Then
                ' Aggiorna la griglia dati.
                AggiornaDatiPeriodo()
                Exit Sub
@@ -2318,19 +2355,19 @@ Public Class ElencoDoc
             Dim strDescrizione As String = "(" & Documento & " n. " & Numero & " del " & Data & " - € " & Importo & ")"
             g_frmMain.RegistraOperazione(TipoOperazione.AnnullaSospeso, strDescrizione, MODULO_CONTABILITA_DOCUMENTI)
 
-            If tbrSospesi.Pushed = True Then
+            If g_frmMain.eui_Strumenti_Sospesi_Filtra.Pressed = True Then
                ' Aggiorna la griglia dati.
                AggiornaDatiSospesi()
                Exit Sub
-            ElseIf tbrMese.Pushed = True Then
+            ElseIf g_frmMain.eui_Strumenti_Periodo_Mese.Pressed = True Then
                ' Aggiorna la griglia dati.
                AggiornaDatiMese()
                Exit Sub
-            ElseIf tbrAnno.Pushed = True Then
+            ElseIf g_frmMain.eui_Strumenti_Periodo_Anno.Pressed = True Then
                ' Aggiorna la griglia dati.
                AggiornaDatiAnno()
                Exit Sub
-            ElseIf tbrPeriodo.Pushed = True Then
+            ElseIf g_frmMain.eui_Strumenti_Periodo_DalAl.Pressed = True Then
                ' Aggiorna la griglia dati.
                AggiornaDatiPeriodo()
                Exit Sub
@@ -2442,48 +2479,53 @@ Public Class ElencoDoc
 
          Select Case filtroDati
             Case "Tutti"
-               tbrTutti.Pushed = True
-               tbrPeriodo.Pushed = False
-               tbrMese.Pushed = False
-               tbrAnno.Pushed = False
-               tbrSospesi.Pushed = False
-               NascondiDate()
+               g_frmMain.eui_Strumenti_Periodo_Tutte.Pressed = True
+               g_frmMain.eui_Strumenti_Periodo_DalAl.Pressed = False
+               g_frmMain.eui_Strumenti_Periodo_Mese.Pressed = False
+               g_frmMain.eui_Strumenti_Periodo_Anno.Pressed = False
+               g_frmMain.eui_Strumenti_Sospesi_Filtra.Pressed = False
+               g_frmMain.eui_Strumenti_Periodo_DalAl.Text = g_frmMain.TESTO_FILTRO_PERIODO
                ' Filtra i dati in base al testo digitato.
                FiltraDati(TestoRicerca.Text, CampoRicerca.Text)
+
             Case "Mese"
-               tbrMese.Pushed = True
-               tbrTutti.Pushed = False
-               tbrPeriodo.Pushed = False
-               tbrAnno.Pushed = False
-               tbrSospesi.Pushed = False
-               NascondiDate()
+               g_frmMain.eui_Strumenti_Periodo_Tutte.Pressed = False
+               g_frmMain.eui_Strumenti_Periodo_DalAl.Pressed = False
+               g_frmMain.eui_Strumenti_Periodo_Mese.Pressed = True
+               g_frmMain.eui_Strumenti_Periodo_Anno.Pressed = False
+               g_frmMain.eui_Strumenti_Sospesi_Filtra.Pressed = False
+               g_frmMain.eui_Strumenti_Periodo_DalAl.Text = g_frmMain.TESTO_FILTRO_PERIODO
                ' Aggiorna la griglia dati.
                AggiornaDatiMese()
+
             Case "Anno"
-               tbrAnno.Pushed = True
-               tbrTutti.Pushed = False
-               tbrPeriodo.Pushed = False
-               tbrMese.Pushed = False
-               tbrSospesi.Pushed = False
-               NascondiDate()
+               g_frmMain.eui_Strumenti_Periodo_Tutte.Pressed = False
+               g_frmMain.eui_Strumenti_Periodo_DalAl.Pressed = False
+               g_frmMain.eui_Strumenti_Periodo_Mese.Pressed = False
+               g_frmMain.eui_Strumenti_Periodo_Anno.Pressed = True
+               g_frmMain.eui_Strumenti_Sospesi_Filtra.Pressed = False
+               g_frmMain.eui_Strumenti_Periodo_DalAl.Text = g_frmMain.TESTO_FILTRO_PERIODO
                ' Aggiorna la griglia dati.
                AggiornaDatiAnno()
+
             Case "Periodo"
-               tbrPeriodo.Pushed = True
-               tbrTutti.Pushed = False
-               tbrMese.Pushed = False
-               tbrAnno.Pushed = False
-               tbrSospesi.Pushed = False
-               VisualizzaDate()
+               g_frmMain.eui_Strumenti_Periodo_Tutte.Pressed = False
+               g_frmMain.eui_Strumenti_Periodo_DalAl.Pressed = True
+               g_frmMain.eui_Strumenti_Periodo_Mese.Pressed = False
+               g_frmMain.eui_Strumenti_Periodo_Anno.Pressed = False
+               g_frmMain.eui_Strumenti_Sospesi_Filtra.Pressed = False
+               ' DA_FARE_A: Salvare stringa di ricerca date.
+               g_frmMain.eui_Strumenti_Periodo_DalAl.Text = g_frmMain.TESTO_FILTRO_PERIODO
                ' Aggiorna la griglia dati.
                AggiornaDatiPeriodo()
+
             Case "Sospesi"
-               tbrSospesi.Pushed = True
-               tbrTutti.Pushed = False
-               tbrMese.Pushed = False
-               tbrAnno.Pushed = False
-               tbrPeriodo.Pushed = False
-               NascondiDate()
+               g_frmMain.eui_Strumenti_Periodo_Tutte.Pressed = False
+               g_frmMain.eui_Strumenti_Periodo_DalAl.Pressed = False
+               g_frmMain.eui_Strumenti_Periodo_Mese.Pressed = False
+               g_frmMain.eui_Strumenti_Periodo_Anno.Pressed = False
+               g_frmMain.eui_Strumenti_Sospesi_Filtra.Pressed = True
+               g_frmMain.eui_Strumenti_Periodo_DalAl.Text = g_frmMain.TESTO_FILTRO_PERIODO
                ' Aggiorna la griglia dati.
                AggiornaDatiSospesi()
          End Select
@@ -2491,7 +2533,7 @@ Public Class ElencoDoc
          ' Se nella tabella non ci sono record disattiva i pulsanti.
          ConvalidaDati()
 
-         If tbrModifica.Enabled = True Then
+         If g_frmMain.eui_Strumenti_Modifica.Enabled = True Then
             ' Attiva/disattiva il pulsante per annullare un documento.
             AttivaDisattivaAnnullaDoc()
 
@@ -2534,184 +2576,6 @@ Public Class ElencoDoc
 
       ' Attiva/Disattiva il pulsante per i Buoni.
       AttivaDisattivaBuoni()
-   End Sub
-
-   Private Sub ToolBar1_ButtonClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ToolBarButtonClickEventArgs)
-      Select Case e.Button.Tag
-         Case "Tutti"
-            tbrPeriodo.Pushed = False
-            tbrMese.Pushed = False
-            tbrAnno.Pushed = False
-            tbrSospesi.Pushed = False
-            filtroDati = "Tutti"
-            NascondiDate()
-            TestoRicerca.Text = ""
-            ' Filtra i dati in base al testo digitato.
-            FiltraDati(TestoRicerca.Text, CampoRicerca.Text)
-
-         Case "Sospesi"
-            tbrTutti.Pushed = False
-            tbrPeriodo.Pushed = False
-            tbrMese.Pushed = False
-            tbrAnno.Pushed = False
-            filtroDati = "Sospesi"
-            NascondiDate()
-            TestoRicerca.Text = ""
-            AggiornaDatiSospesi()
-
-         Case "Periodo"
-            tbrTutti.Pushed = False
-            tbrMese.Pushed = False
-            tbrAnno.Pushed = False
-            tbrSospesi.Pushed = False
-            filtroDati = "Periodo"
-            VisualizzaDate()
-            TestoRicerca.Text = ""
-            AggiornaDatiPeriodo()
-
-         Case "Mese"
-            tbrTutti.Pushed = False
-            tbrPeriodo.Pushed = False
-            tbrAnno.Pushed = False
-            tbrSospesi.Pushed = False
-            filtroDati = "Mese"
-            NascondiDate()
-            TestoRicerca.Text = ""
-            AggiornaDatiMese()
-
-         Case "Anno"
-            tbrTutti.Pushed = False
-            tbrPeriodo.Pushed = False
-            tbrMese.Pushed = False
-            tbrSospesi.Pushed = False
-            filtroDati = "Anno"
-            NascondiDate()
-            TestoRicerca.Text = ""
-            AggiornaDatiAnno()
-
-         Case "Annulla"
-            ' Annulla l'ultimo documento selezionato.
-            AnnullaDocumento()
-
-         Case "Nuovo"
-            '' Apre la finestra per l'inserimento di nuovi dati.
-            'ApriDati("")
-
-            '' Se nella tabella non ci sono record disattiva i pulsanti.
-            'ConvalidaDati()
-
-         Case "Modifica"
-            '' Apre la finestra per l'inserimento di nuovi dati.
-            'ApriDati(CStr(DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 0)))
-
-         Case "Elimina"
-            ' NON UTILIZZATA.
-            ' Elimina il valore selezionato.
-            'EliminaDati(TAB_DOCUMENTI, DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 0))
-
-         Case "Buoni"
-            ' Apre l'elenco dei buoni contenuti nel documento selezionato.
-            ApriElencoBuoni()
-
-         Case "Sospeso"
-            ' Apre la finestra per l'incasso del sospeso.
-            Dim frm As New IncassaSospeso(DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 0),
-                                          DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 1),
-                                          DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 2),
-                                          DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 4),
-                                          DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 5),
-                                          DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 8))
-            frm.ShowDialog()
-
-         Case "PassaSospeso"
-            ' Apre la finestra per l'incasso del sospeso.
-            PassaSospeso(DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 0),
-                         DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 7))
-
-         Case "AnnullaSospeso"
-            ' Apre la finestra per l'incasso del sospeso.
-            AnnullaSospeso(DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 0))
-
-         Case "Stampa"
-            ' Registra loperazione effettuata dall'operatore identificato.
-            g_frmMain.RegistraOperazione(TipoOperazione.Stampa, STR_CONTABILITA_DOCUMENTI, MODULO_CONTABILITA_DOCUMENTI)
-
-            StampaDocumento(PERCORSO_REP_DOC, TAB_DOCUMENTI, repSql)
-
-         Case "Anteprima"
-            ' Registra loperazione effettuata dall'operatore identificato.
-            g_frmMain.RegistraOperazione(TipoOperazione.Anteprima, STR_CONTABILITA_DOCUMENTI, MODULO_CONTABILITA_DOCUMENTI)
-
-            g_frmMain.ApriReports(repSql, TAB_DOCUMENTI, PERCORSO_REP_DOC)
-
-         Case "Primo"
-            '' Crea la stringa sql.
-            'sql = String.Format("SELECT TOP {0} * FROM {1} ORDER BY Id", dimPagina, TAB_ACQUISTI)
-
-            '' Visualizza la prima pagina di dati.
-            'VisualizzaPagina(1, sql)
-
-            '' Visualizza un'intestazione per la griglia dati.
-            'AggIntGriglia()
-
-         Case "Precedente"
-            '' Crea la stringa sql.
-            'sql = String.Format("SELECT * FROM {0} WHERE Id IN (SELECT TOP {1} Id FROM {2} WHERE Id < {3} ORDER BY Id DESC) ORDER BY Id", TAB_ACQUISTI, dimPagina, TAB_ACQUISTI, dt.Rows(0)("Id"))
-
-            '' Visualizza la pagina di dati precedente.
-            'VisualizzaPagina(pagCorrente - 1, sql)
-
-            '' Visualizza un'intestazione per la griglia dati.
-            'AggIntGriglia()
-
-         Case "Successivo"
-            '' Crea la stringa sql.
-            'sql = String.Format("SELECT TOP {0} * FROM {1} WHERE Id > {2} ORDER BY Id", dimPagina, TAB_ACQUISTI, dt.Rows(dt.Rows.Count - 1)("Id"))
-
-            '' Visualizza la pagina di dati successiva.
-            'VisualizzaPagina(pagCorrente + 1, sql)
-
-            '' Visualizza un'intestazione per la griglia dati.
-            'AggIntGriglia()
-
-         Case "Ultimo"
-            'Dim num As Integer = numRecord - dimPagina * (numPagine - 1)
-
-            '' Crea la stringa sql.
-            'sql = String.Format("SELECT * FROM {0} WHERE Id IN (SELECT TOP {1} Id FROM {2} ORDER BY Id DESC) ORDER BY Id", TAB_ACQUISTI, num, TAB_ACQUISTI)
-
-            '' Visualizza l'ultima pagina di dati.
-            'VisualizzaPagina(numPagine, sql)
-
-            '' Visualizza un'intestazione per la griglia dati.
-            'AggIntGriglia()
-
-         Case "Aggiorna"
-            ' Registra loperazione effettuata dall'operatore identificato.
-            g_frmMain.RegistraOperazione(TipoOperazione.Aggiorna, STR_CONTABILITA_DOCUMENTI, MODULO_CONTABILITA_DOCUMENTI)
-
-            If tbrSospesi.Pushed = True Then
-               ' Aggiorna la griglia dati.
-               AggiornaDatiSospesi()
-               Exit Sub
-            ElseIf tbrMese.Pushed = True Then
-               ' Aggiorna la griglia dati.
-               AggiornaDatiMese()
-               Exit Sub
-            ElseIf tbrAnno.Pushed = True Then
-               ' Aggiorna la griglia dati.
-               AggiornaDatiAnno()
-               Exit Sub
-            ElseIf tbrPeriodo.Pushed = True Then
-               ' Aggiorna la griglia dati.
-               AggiornaDatiPeriodo()
-               Exit Sub
-            Else
-               ' Aggiorna la griglia dati.
-               AggiornaDati()
-               Exit Sub
-            End If
-      End Select
    End Sub
 
    Private Sub TestoRicerca_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TestoRicerca.TextChanged
