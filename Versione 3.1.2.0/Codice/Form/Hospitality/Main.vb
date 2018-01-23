@@ -11249,8 +11249,8 @@ Friend Class frmMain
                eui_Strumenti_Sospesi_Filtra.Pressed = False
                g_frmDocumenti.filtroDati = "Tutti"
                g_frmDocumenti.NascondiDate()
-               g_frmDocumenti.TestoRicerca.Text = String.Empty
-               g_frmDocumenti.FiltraDati(g_frmDocumenti.TestoRicerca.Text, g_frmDocumenti.CampoRicerca.Text)
+               g_frmDocumenti.eui_txtTestoRicerca.Text = String.Empty
+               g_frmDocumenti.FiltraDati(g_frmDocumenti.eui_txtTestoRicerca.Text, g_frmDocumenti.eui_cmbCampoRicerca.Text)
 
                ' Inserire qui il codice per gestire le altre finestre.
 
@@ -11289,7 +11289,7 @@ Friend Class frmMain
                eui_Strumenti_Sospesi_Filtra.Pressed = False
                g_frmDocumenti.filtroDati = "Anno"
                g_frmDocumenti.NascondiDate()
-               g_frmDocumenti.TestoRicerca.Text = String.Empty
+               g_frmDocumenti.eui_txtTestoRicerca.Text = String.Empty
                g_frmDocumenti.AggiornaDatiAnno()
 
                ' Inserire qui il codice per gestire le altre finestre.
@@ -11329,7 +11329,7 @@ Friend Class frmMain
                eui_Strumenti_Sospesi_Filtra.Pressed = False
                g_frmDocumenti.filtroDati = "Mese"
                g_frmDocumenti.NascondiDate()
-               g_frmDocumenti.TestoRicerca.Text = String.Empty
+               g_frmDocumenti.eui_txtTestoRicerca.Text = String.Empty
                g_frmDocumenti.AggiornaDatiMese()
 
                ' Inserire qui il codice per gestire le altre finestre.
@@ -11367,7 +11367,7 @@ Friend Class frmMain
                eui_Strumenti_Sospesi_Filtra.Pressed = False
                g_frmDocumenti.filtroDati = "Periodo"
                g_frmDocumenti.NascondiDate()
-               g_frmDocumenti.TestoRicerca.Text = String.Empty
+               g_frmDocumenti.eui_txtTestoRicerca.Text = String.Empty
                g_frmDocumenti.AggiornaDatiPeriodo()
 
 
@@ -11464,7 +11464,7 @@ Friend Class frmMain
                eui_Strumenti_Periodo_Anno.Pressed = False
                g_frmDocumenti.filtroDati = "Tutti"
                g_frmDocumenti.NascondiDate()
-               g_frmDocumenti.TestoRicerca.Text = String.Empty
+               g_frmDocumenti.eui_txtTestoRicerca.Text = String.Empty
                g_frmDocumenti.AggiornaDatiSospesi()
 
                ' Inserire qui il codice per gestire le altre finestre.

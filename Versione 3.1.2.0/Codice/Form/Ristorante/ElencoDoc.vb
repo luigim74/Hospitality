@@ -21,6 +21,8 @@ Public Class ElencoDoc
    Const COLONNA_STATO_DOC As Short = 6
    Const COLONNA_IMPORTO_TOTALE As Short = 9 '6 '7
    Const COLONNA_IMPORTO_SOSPESO As Short = 10 '7 '8
+   Const COLONNA_IMPORTO_IMPONIBILE As Short = 11 '7 '8
+   Const COLONNA_IMPORTO_IMPOSTA As Short = 12 '7 '8
    Const COLONNA_IMPORTO_SOSPESO_INC As Short = 14
    Const COLONNA_IMPORTO_BUONI As Short = 13 '10 '11
    Const COLONNA_IMPORTO_BUONI_INC As Short = 15
@@ -59,6 +61,14 @@ Public Class ElencoDoc
    Private AArticoli As New Articoli
    Friend WithEvents formFrameSkinner As Elegant.Ui.FormFrameSkinner
    Friend WithEvents eui_txtTestoRicerca As Elegant.Ui.TextBox
+   Friend WithEvents eui_cmbCampoRicerca As Elegant.Ui.ComboBox
+   Friend WithEvents Label4 As Label
+   Friend WithEvents eui_txtImposta As Elegant.Ui.TextBox
+   Friend WithEvents Label2 As Label
+   Friend WithEvents eui_txtImponibile As Elegant.Ui.TextBox
+   Friend WithEvents eui_txtBuoni As Elegant.Ui.TextBox
+   Friend WithEvents eui_txtSospeso As Elegant.Ui.TextBox
+   Friend WithEvents eui_txtTotale As Elegant.Ui.TextBox
    Public filtroDati As String
 
 #Region " Codice generato da Progettazione Windows Form "
@@ -92,22 +102,17 @@ Public Class ElencoDoc
    Friend WithEvents ImageList1 As System.Windows.Forms.ImageList
    Public WithEvents DataGrid1 As System.Windows.Forms.DataGrid
    Friend WithEvents Panel1 As System.Windows.Forms.Panel
-   Friend WithEvents CampoRicerca As System.Windows.Forms.ComboBox
-   Friend WithEvents TestoRicerca As System.Windows.Forms.TextBox
    Friend WithEvents PrintDialog1 As System.Windows.Forms.PrintDialog
    Friend WithEvents PrintDocument1 As System.Drawing.Printing.PrintDocument
    Friend WithEvents Panel2 As System.Windows.Forms.Panel
-   Public WithEvents txtTotImporto As System.Windows.Forms.TextBox
    Friend WithEvents Label6 As System.Windows.Forms.Label
    Friend WithEvents Label3 As System.Windows.Forms.Label
-   Public WithEvents txtSospeso As System.Windows.Forms.TextBox
    Friend WithEvents dtpAl As System.Windows.Forms.DateTimePicker
    Friend WithEvents dtpDal As System.Windows.Forms.DateTimePicker
    Friend WithEvents lblAl As System.Windows.Forms.Label
    Friend WithEvents lblDal As System.Windows.Forms.Label
    Friend WithEvents lblCampo As System.Windows.Forms.Label
    Friend WithEvents lblTesto As System.Windows.Forms.Label
-   Public WithEvents txtBuoni As System.Windows.Forms.TextBox
    Friend WithEvents Label1 As System.Windows.Forms.Label
    <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
       Me.components = New System.ComponentModel.Container()
@@ -115,25 +120,28 @@ Public Class ElencoDoc
       Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
       Me.DataGrid1 = New System.Windows.Forms.DataGrid()
       Me.Panel1 = New System.Windows.Forms.Panel()
+      Me.eui_cmbCampoRicerca = New Elegant.Ui.ComboBox()
+      Me.eui_txtTestoRicerca = New Elegant.Ui.TextBox()
       Me.dtpAl = New System.Windows.Forms.DateTimePicker()
       Me.dtpDal = New System.Windows.Forms.DateTimePicker()
       Me.lblAl = New System.Windows.Forms.Label()
       Me.lblDal = New System.Windows.Forms.Label()
-      Me.CampoRicerca = New System.Windows.Forms.ComboBox()
       Me.lblCampo = New System.Windows.Forms.Label()
       Me.lblTesto = New System.Windows.Forms.Label()
-      Me.TestoRicerca = New System.Windows.Forms.TextBox()
       Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
       Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
       Me.Panel2 = New System.Windows.Forms.Panel()
-      Me.txtBuoni = New System.Windows.Forms.TextBox()
       Me.Label1 = New System.Windows.Forms.Label()
-      Me.txtSospeso = New System.Windows.Forms.TextBox()
       Me.Label3 = New System.Windows.Forms.Label()
-      Me.txtTotImporto = New System.Windows.Forms.TextBox()
       Me.Label6 = New System.Windows.Forms.Label()
       Me.formFrameSkinner = New Elegant.Ui.FormFrameSkinner()
-      Me.eui_txtTestoRicerca = New Elegant.Ui.TextBox()
+      Me.eui_txtImponibile = New Elegant.Ui.TextBox()
+      Me.Label2 = New System.Windows.Forms.Label()
+      Me.Label4 = New System.Windows.Forms.Label()
+      Me.eui_txtImposta = New Elegant.Ui.TextBox()
+      Me.eui_txtTotale = New Elegant.Ui.TextBox()
+      Me.eui_txtSospeso = New Elegant.Ui.TextBox()
+      Me.eui_txtBuoni = New Elegant.Ui.TextBox()
       CType(Me.DataGrid1, System.ComponentModel.ISupportInitialize).BeginInit()
       Me.Panel1.SuspendLayout()
       Me.Panel2.SuspendLayout()
@@ -177,32 +185,54 @@ Public Class ElencoDoc
       Me.DataGrid1.Location = New System.Drawing.Point(0, 34)
       Me.DataGrid1.Name = "DataGrid1"
       Me.DataGrid1.ReadOnly = True
-      Me.DataGrid1.Size = New System.Drawing.Size(880, 291)
+      Me.DataGrid1.Size = New System.Drawing.Size(1011, 292)
       Me.DataGrid1.TabIndex = 0
       '
       'Panel1
       '
       Me.Panel1.BackColor = System.Drawing.Color.Gray
+      Me.Panel1.Controls.Add(Me.eui_cmbCampoRicerca)
       Me.Panel1.Controls.Add(Me.eui_txtTestoRicerca)
       Me.Panel1.Controls.Add(Me.dtpAl)
       Me.Panel1.Controls.Add(Me.dtpDal)
       Me.Panel1.Controls.Add(Me.lblAl)
       Me.Panel1.Controls.Add(Me.lblDal)
-      Me.Panel1.Controls.Add(Me.CampoRicerca)
       Me.Panel1.Controls.Add(Me.lblCampo)
       Me.Panel1.Controls.Add(Me.lblTesto)
-      Me.Panel1.Controls.Add(Me.TestoRicerca)
       Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
       Me.Panel1.Location = New System.Drawing.Point(0, 0)
       Me.Panel1.Name = "Panel1"
-      Me.Panel1.Size = New System.Drawing.Size(880, 34)
+      Me.Panel1.Size = New System.Drawing.Size(1011, 34)
       Me.Panel1.TabIndex = 0
+      '
+      'eui_cmbCampoRicerca
+      '
+      Me.eui_cmbCampoRicerca.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+      Me.eui_cmbCampoRicerca.Editable = False
+      Me.eui_cmbCampoRicerca.FormattingEnabled = False
+      Me.eui_cmbCampoRicerca.Id = "6e85627c-5d62-4010-971d-8de73ae45222"
+      Me.eui_cmbCampoRicerca.Location = New System.Drawing.Point(867, 7)
+      Me.eui_cmbCampoRicerca.Name = "eui_cmbCampoRicerca"
+      Me.eui_cmbCampoRicerca.Size = New System.Drawing.Size(134, 21)
+      Me.eui_cmbCampoRicerca.TabIndex = 1
+      Me.eui_cmbCampoRicerca.TextEditorWidth = 115
+      '
+      'eui_txtTestoRicerca
+      '
+      Me.eui_txtTestoRicerca.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+      Me.eui_txtTestoRicerca.Id = "bb5a861b-2fcf-4573-8803-b69d17c915f7"
+      Me.eui_txtTestoRicerca.Location = New System.Drawing.Point(114, 7)
+      Me.eui_txtTestoRicerca.Name = "eui_txtTestoRicerca"
+      Me.eui_txtTestoRicerca.Size = New System.Drawing.Size(650, 21)
+      Me.eui_txtTestoRicerca.TabIndex = 0
+      Me.eui_txtTestoRicerca.TextEditorWidth = 529
       '
       'dtpAl
       '
       Me.dtpAl.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.dtpAl.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.dtpAl.Location = New System.Drawing.Point(696, 40)
+      Me.dtpAl.Location = New System.Drawing.Point(827, 40)
       Me.dtpAl.Name = "dtpAl"
       Me.dtpAl.Size = New System.Drawing.Size(174, 20)
       Me.dtpAl.TabIndex = 55670
@@ -213,7 +243,7 @@ Public Class ElencoDoc
       '
       Me.dtpDal.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.dtpDal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.dtpDal.Location = New System.Drawing.Point(480, 40)
+      Me.dtpDal.Location = New System.Drawing.Point(611, 40)
       Me.dtpDal.MaxDate = New Date(9998, 12, 1, 0, 0, 0, 0)
       Me.dtpDal.Name = "dtpDal"
       Me.dtpDal.Size = New System.Drawing.Size(174, 20)
@@ -227,7 +257,7 @@ Public Class ElencoDoc
       Me.lblAl.AutoSize = True
       Me.lblAl.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.lblAl.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-      Me.lblAl.Location = New System.Drawing.Point(672, 40)
+      Me.lblAl.Location = New System.Drawing.Point(803, 40)
       Me.lblAl.Name = "lblAl"
       Me.lblAl.Size = New System.Drawing.Size(23, 15)
       Me.lblAl.TabIndex = 55672
@@ -241,7 +271,7 @@ Public Class ElencoDoc
       Me.lblDal.AutoSize = True
       Me.lblDal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.lblDal.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-      Me.lblDal.Location = New System.Drawing.Point(448, 40)
+      Me.lblDal.Location = New System.Drawing.Point(579, 40)
       Me.lblDal.Name = "lblDal"
       Me.lblDal.Size = New System.Drawing.Size(33, 15)
       Me.lblDal.TabIndex = 55671
@@ -249,22 +279,13 @@ Public Class ElencoDoc
       Me.lblDal.Text = "Dal:"
       Me.lblDal.Visible = False
       '
-      'CampoRicerca
-      '
-      Me.CampoRicerca.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-      Me.CampoRicerca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-      Me.CampoRicerca.Location = New System.Drawing.Point(738, 8)
-      Me.CampoRicerca.Name = "CampoRicerca"
-      Me.CampoRicerca.Size = New System.Drawing.Size(136, 21)
-      Me.CampoRicerca.TabIndex = 1
-      '
       'lblCampo
       '
       Me.lblCampo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.lblCampo.AutoSize = True
       Me.lblCampo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.lblCampo.ForeColor = System.Drawing.Color.White
-      Me.lblCampo.Location = New System.Drawing.Point(656, 8)
+      Me.lblCampo.Location = New System.Drawing.Point(778, 8)
       Me.lblCampo.Name = "lblCampo"
       Me.lblCampo.Size = New System.Drawing.Size(85, 15)
       Me.lblCampo.TabIndex = 8
@@ -281,16 +302,6 @@ Public Class ElencoDoc
       Me.lblTesto.TabIndex = 6
       Me.lblTesto.Text = "Testo di ricerca:"
       '
-      'TestoRicerca
-      '
-      Me.TestoRicerca.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-      Me.TestoRicerca.Location = New System.Drawing.Point(587, 7)
-      Me.TestoRicerca.Name = "TestoRicerca"
-      Me.TestoRicerca.Size = New System.Drawing.Size(63, 20)
-      Me.TestoRicerca.TabIndex = 0
-      Me.TestoRicerca.Visible = False
-      '
       'PrintDialog1
       '
       Me.PrintDialog1.Document = Me.PrintDocument1
@@ -302,34 +313,21 @@ Public Class ElencoDoc
       'Panel2
       '
       Me.Panel2.BackColor = System.Drawing.Color.Gray
-      Me.Panel2.Controls.Add(Me.txtBuoni)
+      Me.Panel2.Controls.Add(Me.eui_txtBuoni)
+      Me.Panel2.Controls.Add(Me.eui_txtSospeso)
+      Me.Panel2.Controls.Add(Me.eui_txtTotale)
+      Me.Panel2.Controls.Add(Me.Label4)
+      Me.Panel2.Controls.Add(Me.eui_txtImposta)
+      Me.Panel2.Controls.Add(Me.Label2)
+      Me.Panel2.Controls.Add(Me.eui_txtImponibile)
       Me.Panel2.Controls.Add(Me.Label1)
-      Me.Panel2.Controls.Add(Me.txtSospeso)
       Me.Panel2.Controls.Add(Me.Label3)
-      Me.Panel2.Controls.Add(Me.txtTotImporto)
       Me.Panel2.Controls.Add(Me.Label6)
       Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
       Me.Panel2.Location = New System.Drawing.Point(0, 326)
       Me.Panel2.Name = "Panel2"
-      Me.Panel2.Size = New System.Drawing.Size(880, 32)
+      Me.Panel2.Size = New System.Drawing.Size(1011, 32)
       Me.Panel2.TabIndex = 13
-      '
-      'txtBuoni
-      '
-      Me.txtBuoni.AcceptsReturn = True
-      Me.txtBuoni.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-      Me.txtBuoni.BackColor = System.Drawing.SystemColors.Window
-      Me.txtBuoni.Cursor = System.Windows.Forms.Cursors.IBeam
-      Me.txtBuoni.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.txtBuoni.ForeColor = System.Drawing.Color.Red
-      Me.txtBuoni.Location = New System.Drawing.Point(756, 7)
-      Me.txtBuoni.MaxLength = 0
-      Me.txtBuoni.Name = "txtBuoni"
-      Me.txtBuoni.ReadOnly = True
-      Me.txtBuoni.RightToLeft = System.Windows.Forms.RightToLeft.No
-      Me.txtBuoni.Size = New System.Drawing.Size(112, 20)
-      Me.txtBuoni.TabIndex = 2
-      Me.txtBuoni.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
       '
       'Label1
       '
@@ -337,28 +335,11 @@ Public Class ElencoDoc
       Me.Label1.AutoSize = True
       Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.Label1.ForeColor = System.Drawing.Color.White
-      Me.Label1.Location = New System.Drawing.Point(666, 7)
+      Me.Label1.Location = New System.Drawing.Point(818, 8)
       Me.Label1.Name = "Label1"
       Me.Label1.Size = New System.Drawing.Size(87, 15)
       Me.Label1.TabIndex = 238
       Me.Label1.Text = "Buoni pasto:"
-      '
-      'txtSospeso
-      '
-      Me.txtSospeso.AcceptsReturn = True
-      Me.txtSospeso.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-      Me.txtSospeso.BackColor = System.Drawing.SystemColors.Window
-      Me.txtSospeso.Cursor = System.Windows.Forms.Cursors.IBeam
-      Me.txtSospeso.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.txtSospeso.ForeColor = System.Drawing.Color.Red
-      Me.txtSospeso.Location = New System.Drawing.Point(546, 8)
-      Me.txtSospeso.MaxLength = 0
-      Me.txtSospeso.Name = "txtSospeso"
-      Me.txtSospeso.ReadOnly = True
-      Me.txtSospeso.RightToLeft = System.Windows.Forms.RightToLeft.No
-      Me.txtSospeso.Size = New System.Drawing.Size(112, 20)
-      Me.txtSospeso.TabIndex = 1
-      Me.txtSospeso.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
       '
       'Label3
       '
@@ -366,28 +347,11 @@ Public Class ElencoDoc
       Me.Label3.AutoSize = True
       Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.Label3.ForeColor = System.Drawing.Color.White
-      Me.Label3.Location = New System.Drawing.Point(482, 8)
+      Me.Label3.Location = New System.Drawing.Point(317, 8)
       Me.Label3.Name = "Label3"
       Me.Label3.Size = New System.Drawing.Size(66, 15)
       Me.Label3.TabIndex = 236
       Me.Label3.Text = "Sospeso:"
-      '
-      'txtTotImporto
-      '
-      Me.txtTotImporto.AcceptsReturn = True
-      Me.txtTotImporto.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-      Me.txtTotImporto.BackColor = System.Drawing.SystemColors.Window
-      Me.txtTotImporto.Cursor = System.Windows.Forms.Cursors.IBeam
-      Me.txtTotImporto.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.txtTotImporto.ForeColor = System.Drawing.Color.Red
-      Me.txtTotImporto.Location = New System.Drawing.Point(362, 8)
-      Me.txtTotImporto.MaxLength = 0
-      Me.txtTotImporto.Name = "txtTotImporto"
-      Me.txtTotImporto.ReadOnly = True
-      Me.txtTotImporto.RightToLeft = System.Windows.Forms.RightToLeft.No
-      Me.txtTotImporto.Size = New System.Drawing.Size(112, 20)
-      Me.txtTotImporto.TabIndex = 0
-      Me.txtTotImporto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
       '
       'Label6
       '
@@ -395,7 +359,7 @@ Public Class ElencoDoc
       Me.Label6.AutoSize = True
       Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.Label6.ForeColor = System.Drawing.Color.White
-      Me.Label6.Location = New System.Drawing.Point(314, 8)
+      Me.Label6.Location = New System.Drawing.Point(168, 8)
       Me.Label6.Name = "Label6"
       Me.Label6.Size = New System.Drawing.Size(51, 15)
       Me.Label6.TabIndex = 16
@@ -406,22 +370,105 @@ Public Class ElencoDoc
       Me.formFrameSkinner.AllowGlass = False
       Me.formFrameSkinner.Form = Me
       '
-      'eui_txtTestoRicerca
+      'eui_txtImponibile
       '
-      Me.eui_txtTestoRicerca.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-      Me.eui_txtTestoRicerca.Id = "bb5a861b-2fcf-4573-8803-b69d17c915f7"
-      Me.eui_txtTestoRicerca.Location = New System.Drawing.Point(114, 7)
-      Me.eui_txtTestoRicerca.Name = "eui_txtTestoRicerca"
-      Me.eui_txtTestoRicerca.Size = New System.Drawing.Size(538, 21)
-      Me.eui_txtTestoRicerca.TabIndex = 55674
-      Me.eui_txtTestoRicerca.TextEditorWidth = 532
+      Me.eui_txtImponibile.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+      Me.eui_txtImponibile.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+      Me.eui_txtImponibile.Id = "dcf69703-40b2-49ff-89bd-3697977a0492"
+      Me.eui_txtImponibile.Location = New System.Drawing.Point(564, 6)
+      Me.eui_txtImponibile.Name = "eui_txtImponibile"
+      Me.eui_txtImponibile.ReadOnly = True
+      Me.eui_txtImponibile.Size = New System.Drawing.Size(90, 21)
+      Me.eui_txtImponibile.TabIndex = 2
+      Me.eui_txtImponibile.Text = "1.000"
+      Me.eui_txtImponibile.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+      Me.eui_txtImponibile.TextEditorWidth = 84
+      '
+      'Label2
+      '
+      Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+      Me.Label2.AutoSize = True
+      Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+      Me.Label2.ForeColor = System.Drawing.Color.White
+      Me.Label2.Location = New System.Drawing.Point(481, 8)
+      Me.Label2.Name = "Label2"
+      Me.Label2.Size = New System.Drawing.Size(79, 15)
+      Me.Label2.TabIndex = 240
+      Me.Label2.Text = "Imponibile:"
+      '
+      'Label4
+      '
+      Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+      Me.Label4.AutoSize = True
+      Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+      Me.Label4.ForeColor = System.Drawing.Color.White
+      Me.Label4.Location = New System.Drawing.Point(658, 8)
+      Me.Label4.Name = "Label4"
+      Me.Label4.Size = New System.Drawing.Size(62, 15)
+      Me.Label4.TabIndex = 242
+      Me.Label4.Text = "Imposta:"
+      '
+      'eui_txtImposta
+      '
+      Me.eui_txtImposta.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+      Me.eui_txtImposta.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+      Me.eui_txtImposta.Id = "fa3b517a-f528-4af1-9a37-995fbf6c2301"
+      Me.eui_txtImposta.Location = New System.Drawing.Point(724, 6)
+      Me.eui_txtImposta.Name = "eui_txtImposta"
+      Me.eui_txtImposta.ReadOnly = True
+      Me.eui_txtImposta.Size = New System.Drawing.Size(90, 21)
+      Me.eui_txtImposta.TabIndex = 3
+      Me.eui_txtImposta.Text = "1.300.000.000"
+      Me.eui_txtImposta.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+      Me.eui_txtImposta.TextEditorWidth = 84
+      '
+      'eui_txtTotale
+      '
+      Me.eui_txtTotale.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+      Me.eui_txtTotale.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+      Me.eui_txtTotale.Id = "0d65cebb-55d0-4baf-aa53-aa5d7ed71ce2"
+      Me.eui_txtTotale.Location = New System.Drawing.Point(223, 6)
+      Me.eui_txtTotale.Name = "eui_txtTotale"
+      Me.eui_txtTotale.ReadOnly = True
+      Me.eui_txtTotale.Size = New System.Drawing.Size(90, 21)
+      Me.eui_txtTotale.TabIndex = 0
+      Me.eui_txtTotale.Text = "1.000"
+      Me.eui_txtTotale.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+      Me.eui_txtTotale.TextEditorWidth = 84
+      '
+      'eui_txtSospeso
+      '
+      Me.eui_txtSospeso.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+      Me.eui_txtSospeso.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+      Me.eui_txtSospeso.Id = "3c2ab487-6393-4c7f-a14d-7837bbdae6d6"
+      Me.eui_txtSospeso.Location = New System.Drawing.Point(387, 6)
+      Me.eui_txtSospeso.Name = "eui_txtSospeso"
+      Me.eui_txtSospeso.ReadOnly = True
+      Me.eui_txtSospeso.Size = New System.Drawing.Size(90, 21)
+      Me.eui_txtSospeso.TabIndex = 1
+      Me.eui_txtSospeso.Text = "1.000"
+      Me.eui_txtSospeso.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+      Me.eui_txtSospeso.TextEditorWidth = 84
+      '
+      'eui_txtBuoni
+      '
+      Me.eui_txtBuoni.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+      Me.eui_txtBuoni.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+      Me.eui_txtBuoni.Id = "b350a5b8-b563-4150-b00a-eab48f81095a"
+      Me.eui_txtBuoni.Location = New System.Drawing.Point(909, 6)
+      Me.eui_txtBuoni.Name = "eui_txtBuoni"
+      Me.eui_txtBuoni.ReadOnly = True
+      Me.eui_txtBuoni.Size = New System.Drawing.Size(90, 21)
+      Me.eui_txtBuoni.TabIndex = 4
+      Me.eui_txtBuoni.Text = "1.000"
+      Me.eui_txtBuoni.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+      Me.eui_txtBuoni.TextEditorWidth = 84
       '
       'ElencoDoc
       '
       Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
       Me.BackColor = System.Drawing.SystemColors.AppWorkspace
-      Me.ClientSize = New System.Drawing.Size(880, 358)
+      Me.ClientSize = New System.Drawing.Size(1011, 358)
       Me.Controls.Add(Me.Panel2)
       Me.Controls.Add(Me.Panel1)
       Me.Controls.Add(Me.DataGrid1)
@@ -1166,7 +1213,7 @@ Public Class ElencoDoc
          ' Chiude la connessione se è da chiudere.
          If closeOnExit Then cn.Close()
 
-         If TestoRicerca.Text <> "" Then
+         If eui_txtTestoRicerca.Text <> "" Then
             numPagine = 1
          Else
             ' Ottiene il numero di pagine.
@@ -1220,11 +1267,11 @@ Public Class ElencoDoc
 
    Public Sub AggiornaDati()
       Try
-         If TestoRicerca.Text <> "" Then
+         If eui_txtTestoRicerca.Text <> "" Then
             ' Collega la tabella clienti al controllo griglia dati.
             DataGrid1.DataSource = dt
 
-            FiltraDati(TestoRicerca.Text, CampoRicerca.Text)
+            FiltraDati(eui_txtTestoRicerca.Text, eui_cmbCampoRicerca.Text)
          Else
             ' Calcola il numero delle pagine da visualizzare.
             LeggiNumPagine(TAB_DOCUMENTI)
@@ -1235,7 +1282,7 @@ Public Class ElencoDoc
             Select Case filtroDati
                Case "Tutti"
                   ' Filtra i dati in base al testo digitato.
-                  FiltraDati(TestoRicerca.Text, CampoRicerca.Text)
+                  FiltraDati(eui_txtTestoRicerca.Text, eui_cmbCampoRicerca.Text)
 
                Case "Mese"
                   ' Aggiorna la griglia dati.
@@ -1275,7 +1322,7 @@ Public Class ElencoDoc
 
       'lblTesto.Visible = False
       'lblCampo.Visible = False
-      'TestoRicerca.Visible = False
+      'eui_txtTestoRicerca.Visible = False
       'CampoRicerca.Visible = False
    End Sub
 
@@ -1288,7 +1335,7 @@ Public Class ElencoDoc
 
       'lblTesto.Visible = True
       'lblCampo.Visible = True
-      'TestoRicerca.Visible = True
+      'eui_txtTestoRicerca.Visible = True
       'CampoRicerca.Visible = True
    End Sub
 
@@ -1328,7 +1375,7 @@ Public Class ElencoDoc
    Public Sub AggiornaDatiPeriodo()
       Try
          ' Rimuove i dati di un'eventuale ricerca.
-         TestoRicerca.Text = String.Empty
+         eui_txtTestoRicerca.Text = String.Empty
 
          Dim frmFiltroPerido As New FiltroPeriodo
          If frmFiltroPerido.ShowDialog = Windows.Forms.DialogResult.OK Then
@@ -1445,19 +1492,35 @@ Public Class ElencoDoc
    End Sub
 
    Private Sub SommaImporti()
-      Dim importo As Decimal = SommaColonna(DataGrid1, COLONNA_IMPORTO_TOTALE, numRecord)
-      Dim sospeso As Decimal = SommaColonna(DataGrid1, COLONNA_IMPORTO_SOSPESO, numRecord)
-      Dim buoni As Decimal = SommaColonna(DataGrid1, COLONNA_IMPORTO_BUONI, numRecord)
+      Try
+         'Dim importo As Decimal = SommaColonna(DataGrid1, COLONNA_IMPORTO_TOTALE, numRecord)
+         'Dim sospeso As Decimal = SommaColonna(DataGrid1, COLONNA_IMPORTO_SOSPESO, numRecord)
+         'Dim buoni As Decimal = SommaColonna(DataGrid1, COLONNA_IMPORTO_BUONI, numRecord)
 
-      ' Sottrae dal totale dei documenti i valori sospesi e i buoni non fatturati.
-      Dim totImporto As Decimal = importo - sospeso - buoni
+         ' Sottrae dal totale dei documenti i valori sospesi e i buoni non fatturati.
+         'Dim totImporto As Decimal = importo - sospeso - buoni
 
-      ' Somma i valori della colonna Totale.
-      txtTotImporto.Text = CFormatta.FormattaEuro(totImporto)
-      ' Somma i valori della colonna Sospeso.
-      txtSospeso.Text = CFormatta.FormattaEuro(SommaColonna(DataGrid1, COLONNA_IMPORTO_SOSPESO_INC, numRecord))
-      ' Somma i valori della colonna Buoni pasto.
-      txtBuoni.Text = CFormatta.FormattaEuro(SommaColonna(DataGrid1, COLONNA_IMPORTO_BUONI_INC, numRecord))
+         ' Somma i valori della colonna Totale.
+         'eui_txtTotale.Text = CFormatta.FormattaEuro(totImporto)
+         eui_txtTotale.Text = CFormatta.FormattaEuro(SommaColonna(DataGrid1, COLONNA_IMPORTO_TOTALE, numRecord))
+
+         ' Somma i valori della colonna Sospeso.
+         eui_txtSospeso.Text = CFormatta.FormattaEuro(SommaColonna(DataGrid1, COLONNA_IMPORTO_SOSPESO_INC, numRecord))
+
+         ' Somma i valori della colonna Imponibile.
+         eui_txtImponibile.Text = CFormatta.FormattaEuro(SommaColonna(DataGrid1, COLONNA_IMPORTO_IMPONIBILE, numRecord))
+
+         ' Somma i valori della colonna Imposta.
+         eui_txtImposta.Text = CFormatta.FormattaEuro(SommaColonna(DataGrid1, COLONNA_IMPORTO_IMPOSTA, numRecord))
+
+         ' Somma i valori della colonna Buoni pasto.
+         eui_txtBuoni.Text = CFormatta.FormattaEuro(SommaColonna(DataGrid1, COLONNA_IMPORTO_BUONI_INC, numRecord))
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
    End Sub
 
    Public Sub ImpostaComandi()
@@ -2139,19 +2202,19 @@ Public Class ElencoDoc
 
    Private Sub CaricaCampiRic()
       Try
-         CampoRicerca.Items.Add("Numero")
-         CampoRicerca.Items.Add("Data")
-         CampoRicerca.Items.Add("Ora")
-         CampoRicerca.Items.Add("Tipo documento")
-         CampoRicerca.Items.Add("Intestatario")
-         CampoRicerca.Items.Add("Stato documento")
-         CampoRicerca.Items.Add("Causale")
-         CampoRicerca.Items.Add("Tipo pagamento")
-         CampoRicerca.Items.Add("Totale")
-         CampoRicerca.Items.Add("Sospeso")
-         CampoRicerca.Items.Add("Imponibile")
-         CampoRicerca.Items.Add("Imposta")
-         CampoRicerca.Items.Add("Buoni pasto")
+         eui_cmbCampoRicerca.Items.Add("Numero")
+         eui_cmbCampoRicerca.Items.Add("Data")
+         eui_cmbCampoRicerca.Items.Add("Ora")
+         eui_cmbCampoRicerca.Items.Add("Tipo documento")
+         eui_cmbCampoRicerca.Items.Add("Intestatario")
+         eui_cmbCampoRicerca.Items.Add("Stato documento")
+         eui_cmbCampoRicerca.Items.Add("Causale")
+         eui_cmbCampoRicerca.Items.Add("Tipo pagamento")
+         eui_cmbCampoRicerca.Items.Add("Totale")
+         eui_cmbCampoRicerca.Items.Add("Sospeso")
+         eui_cmbCampoRicerca.Items.Add("Imponibile")
+         eui_cmbCampoRicerca.Items.Add("Imposta")
+         eui_cmbCampoRicerca.Items.Add("Buoni pasto")
 
       Catch ex As Exception
          ' Visualizza un messaggio di errore e lo registra nell'apposito file.
@@ -2475,7 +2538,7 @@ Public Class ElencoDoc
          CaricaCampiRic()
 
          ' Imposta l'elenco dei campi di ricerca sul valore predefinito.
-         CampoRicerca.SelectedIndex = 0
+         eui_cmbCampoRicerca.SelectedIndex = 0
 
          Select Case filtroDati
             Case "Tutti"
@@ -2486,7 +2549,7 @@ Public Class ElencoDoc
                g_frmMain.eui_Strumenti_Sospesi_Filtra.Pressed = False
                g_frmMain.eui_Strumenti_Periodo_DalAl.Text = g_frmMain.TESTO_FILTRO_PERIODO
                ' Filtra i dati in base al testo digitato.
-               FiltraDati(TestoRicerca.Text, CampoRicerca.Text)
+               FiltraDati(eui_txtTestoRicerca.Text, eui_cmbCampoRicerca.Text)
 
             Case "Mese"
                g_frmMain.eui_Strumenti_Periodo_Tutte.Pressed = False
@@ -2578,14 +2641,14 @@ Public Class ElencoDoc
       AttivaDisattivaBuoni()
    End Sub
 
-   Private Sub TestoRicerca_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TestoRicerca.TextChanged
+   Private Sub TestoRicerca_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles eui_txtTestoRicerca.TextChanged
       ' Filtra i dati in base al testo digitato.
-      FiltraDati(TestoRicerca.Text, CampoRicerca.Text)
+      FiltraDati(eui_txtTestoRicerca.Text, eui_cmbCampoRicerca.Text)
    End Sub
 
-   Private Sub CampoRicerca_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CampoRicerca.SelectedIndexChanged
+   Private Sub CampoRicerca_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles eui_cmbCampoRicerca.SelectedIndexChanged
       ' Filtra i dati in base al testo digitato.
-      FiltraDati(TestoRicerca.Text, CampoRicerca.Text)
+      FiltraDati(eui_txtTestoRicerca.Text, eui_cmbCampoRicerca.Text)
    End Sub
 
    Private Sub DataGrid1_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles DataGrid1.DoubleClick
