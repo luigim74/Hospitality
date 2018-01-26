@@ -1521,6 +1521,15 @@ Module Procedure
       End If
    End Function
 
+   Public Function FormattaMinuti(ByVal minuti As String) As String
+      ' Aggiunge uno zero davanti ai minuti in caso di singola cifra.
+      If minuti.Length = 1 Then
+         Return "0" & minuti
+      Else
+         Return minuti
+      End If
+   End Function
+
    Public Function CalcolaNumGiorni(ByVal dataInizio As Date, ByVal dataFine As Date) As String
       Try
          Dim numGiorni As TimeSpan = (dataFine - dataInizio)

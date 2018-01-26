@@ -25,6 +25,10 @@ Public Class frmDocumento
    Private CConvalida As New ConvalidaKeyPress
    Private DatiConfig As AppConfig
 
+   Const STATO_DOC_NUOVO As String = " (Nuovo)"
+   Const STATO_DOC_MODIFICA As String = " (Modifica)"
+   Private statoDoc As String
+
    ' Dichiara un oggetto connessione.
    Dim cn As New OleDbConnection(ConnString)
    ' Dichiara un oggetto transazione.
@@ -170,8 +174,11 @@ Public Class frmDocumento
    ''' </summary>
    Private Sub NuovoDocumento()
       Try
+         ' Assegna lo stato del documento.
+         statoDoc = STATO_DOC_NUOVO
+
          ' Assegna il tipo del documento al titolo della finestra.
-         Me.Text = tipoDocumento
+         Me.Text = tipoDocumento & statoDoc
 
          ' SHEDA GENERALE.
          Dim NumeroDocumento As Integer
@@ -191,7 +198,7 @@ Public Class frmDocumento
          eui_txtNumero.Text = NumeroDocumento.ToString
          eui_txtAnno.Text = Today.Year.ToString
          eui_dtpData.Text = Today.ToString
-         eui_txtOra.Text = TimeOfDay.Hour.ToString & ":" & TimeOfDay.Minute.ToString
+         eui_txtOra.Text = TimeOfDay.Hour.ToString & ":" & FormattaMinuti(TimeOfDay.Minute.ToString)
          eui_cmbTipoDocumento.Text = tipoDocumento
 
          eui_cmbStatoDocumento.Text = "Bozza"
@@ -251,8 +258,11 @@ Public Class frmDocumento
             ' Visualizza i dati nei rispettivi campi.
             .LeggiDati(TAB_DOCUMENTI, idDocumento)
 
+            ' Assegna lo stato del documento.
+            statoDoc = STATO_DOC_MODIFICA
+
             ' Assegna il tipo del documento al titolo della finestra.
-            Me.Text = .Tipo
+            Me.Text = .Tipo & statoDoc
 
             ' Assegna i dati dei campi della classe alle caselle di testo.
 
@@ -1205,6 +1215,10 @@ Public Class frmDocumento
          ' Visualizza un messaggio di errore e lo registra nell'apposito file.
          err.GestisciErrore(ex.StackTrace, ex.Message)
 
+      Finally
+         ' Modifica il cursore del mouse.
+         Cursor.Current = Cursors.Default
+
       End Try
    End Sub
 
@@ -1318,7 +1332,7 @@ Public Class frmDocumento
          End Select
 
          eui_txtNumero.Text = NumeroDocumento.ToString
-         Me.Text = eui_cmbTipoDocumento.Text
+         Me.Text = eui_cmbTipoDocumento.Text & statoDoc
 
       Catch ex As Exception
          ' Visualizza un messaggio di errore e lo registra nell'apposito file.

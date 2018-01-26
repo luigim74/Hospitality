@@ -1248,6 +1248,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Interop.HSS.dll" />
     <Content Include="bin\Reports\ComandaClientiKubeII.rpt.txt" />
     <Content Include="bin\Reports\ComandaRepartiKubeII.rpt.txt" />
     <Content Include="bin\Reports\ProformaKubeII.rpt.txt" />

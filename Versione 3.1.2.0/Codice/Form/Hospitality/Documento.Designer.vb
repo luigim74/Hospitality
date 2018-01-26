@@ -1318,10 +1318,10 @@ Partial Class frmDocumento
       Me.StatusBar1.Controls.Add(Me.StatusBarControlsArea1)
       Me.StatusBar1.ControlsArea = Me.StatusBarControlsArea1
       Me.StatusBar1.Dock = System.Windows.Forms.DockStyle.Bottom
-      Me.StatusBar1.Location = New System.Drawing.Point(0, 615)
+      Me.StatusBar1.Location = New System.Drawing.Point(0, 626)
       Me.StatusBar1.Name = "StatusBar1"
       Me.StatusBar1.NotificationsArea = Me.StatusBarNotificationsArea1
-      Me.StatusBar1.Size = New System.Drawing.Size(809, 22)
+      Me.StatusBar1.Size = New System.Drawing.Size(817, 22)
       Me.StatusBar1.TabIndex = 3
       Me.StatusBar1.Text = "StatusBar1"
       '
@@ -1335,7 +1335,7 @@ Partial Class frmDocumento
       Me.StatusBarNotificationsArea1.MaximumSize = New System.Drawing.Size(0, 22)
       Me.StatusBarNotificationsArea1.MinimumSize = New System.Drawing.Size(0, 22)
       Me.StatusBarNotificationsArea1.Name = "StatusBarNotificationsArea1"
-      Me.StatusBarNotificationsArea1.Size = New System.Drawing.Size(675, 22)
+      Me.StatusBarNotificationsArea1.Size = New System.Drawing.Size(683, 22)
       Me.StatusBarNotificationsArea1.TabIndex = 1
       '
       'StatusBarPane2
@@ -1402,7 +1402,7 @@ Partial Class frmDocumento
       '
       Me.StatusBarControlsArea1.Controls.Add(Me.StatusBarPane4)
       Me.StatusBarControlsArea1.Dock = System.Windows.Forms.DockStyle.Right
-      Me.StatusBarControlsArea1.Location = New System.Drawing.Point(675, 0)
+      Me.StatusBarControlsArea1.Location = New System.Drawing.Point(683, 0)
       Me.StatusBarControlsArea1.MaximumSize = New System.Drawing.Size(0, 22)
       Me.StatusBarControlsArea1.MinimumSize = New System.Drawing.Size(0, 22)
       Me.StatusBarControlsArea1.Name = "StatusBarControlsArea1"
@@ -1630,7 +1630,7 @@ Partial Class frmDocumento
       Me.eui_cmdImportaDoc.ScreenTip.Caption = "Stampa"
       Me.eui_cmdImportaDoc.ScreenTip.Text = "Salva e stampa il documento."
       Me.eui_cmdImportaDoc.Size = New System.Drawing.Size(118, 65)
-      Me.eui_cmdImportaDoc.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("Button5.SmallImages.Images"), System.Drawing.Image))})
+      Me.eui_cmdImportaDoc.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_cmdImportaDoc.SmallImages.Images"), System.Drawing.Image))})
       Me.eui_cmdImportaDoc.TabIndex = 43
       Me.eui_cmdImportaDoc.Text = "Importa documento..."
       Me.eui_cmdImportaDoc.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -1642,7 +1642,7 @@ Partial Class frmDocumento
       Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
       Me.BackColor = System.Drawing.SystemColors.AppWorkspace
       Me.CancelButton = Me.eui_cmdAnnulla
-      Me.ClientSize = New System.Drawing.Size(809, 637)
+      Me.ClientSize = New System.Drawing.Size(817, 648)
       Me.Controls.Add(Me.eui_cmdImportaDoc)
       Me.Controls.Add(Me.eui_cmdTastiera)
       Me.Controls.Add(Me.eui_cmdEmettiStampa)

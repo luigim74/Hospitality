@@ -13,6 +13,7 @@ Public Class ElencoDoc
    Inherits System.Windows.Forms.Form
 
    Public Const TAB_DOCUMENTI As String = "Documenti"
+   Const TAB_DETTAGLI_DOC As String = "DettagliDoc"
    Const TITOLO_FINESTRA As String = "Elenco Documenti"
    Const COLONNA_ID_DOC As Short = 0
    Const COLONNA_NUMERO_DOC As Short = 1
@@ -131,17 +132,17 @@ Public Class ElencoDoc
       Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
       Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
       Me.Panel2 = New System.Windows.Forms.Panel()
+      Me.eui_txtBuoni = New Elegant.Ui.TextBox()
+      Me.eui_txtSospeso = New Elegant.Ui.TextBox()
+      Me.eui_txtTotale = New Elegant.Ui.TextBox()
+      Me.Label4 = New System.Windows.Forms.Label()
+      Me.eui_txtImposta = New Elegant.Ui.TextBox()
+      Me.Label2 = New System.Windows.Forms.Label()
+      Me.eui_txtImponibile = New Elegant.Ui.TextBox()
       Me.Label1 = New System.Windows.Forms.Label()
       Me.Label3 = New System.Windows.Forms.Label()
       Me.Label6 = New System.Windows.Forms.Label()
       Me.formFrameSkinner = New Elegant.Ui.FormFrameSkinner()
-      Me.eui_txtImponibile = New Elegant.Ui.TextBox()
-      Me.Label2 = New System.Windows.Forms.Label()
-      Me.Label4 = New System.Windows.Forms.Label()
-      Me.eui_txtImposta = New Elegant.Ui.TextBox()
-      Me.eui_txtTotale = New Elegant.Ui.TextBox()
-      Me.eui_txtSospeso = New Elegant.Ui.TextBox()
-      Me.eui_txtBuoni = New Elegant.Ui.TextBox()
       CType(Me.DataGrid1, System.ComponentModel.ISupportInitialize).BeginInit()
       Me.Panel1.SuspendLayout()
       Me.Panel2.SuspendLayout()
@@ -185,7 +186,7 @@ Public Class ElencoDoc
       Me.DataGrid1.Location = New System.Drawing.Point(0, 34)
       Me.DataGrid1.Name = "DataGrid1"
       Me.DataGrid1.ReadOnly = True
-      Me.DataGrid1.Size = New System.Drawing.Size(1011, 292)
+      Me.DataGrid1.Size = New System.Drawing.Size(869, 284)
       Me.DataGrid1.TabIndex = 0
       '
       'Panel1
@@ -202,7 +203,7 @@ Public Class ElencoDoc
       Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
       Me.Panel1.Location = New System.Drawing.Point(0, 0)
       Me.Panel1.Name = "Panel1"
-      Me.Panel1.Size = New System.Drawing.Size(1011, 34)
+      Me.Panel1.Size = New System.Drawing.Size(869, 34)
       Me.Panel1.TabIndex = 0
       '
       'eui_cmbCampoRicerca
@@ -211,7 +212,7 @@ Public Class ElencoDoc
       Me.eui_cmbCampoRicerca.Editable = False
       Me.eui_cmbCampoRicerca.FormattingEnabled = False
       Me.eui_cmbCampoRicerca.Id = "6e85627c-5d62-4010-971d-8de73ae45222"
-      Me.eui_cmbCampoRicerca.Location = New System.Drawing.Point(867, 7)
+      Me.eui_cmbCampoRicerca.Location = New System.Drawing.Point(725, 7)
       Me.eui_cmbCampoRicerca.Name = "eui_cmbCampoRicerca"
       Me.eui_cmbCampoRicerca.Size = New System.Drawing.Size(134, 21)
       Me.eui_cmbCampoRicerca.TabIndex = 1
@@ -224,7 +225,7 @@ Public Class ElencoDoc
       Me.eui_txtTestoRicerca.Id = "bb5a861b-2fcf-4573-8803-b69d17c915f7"
       Me.eui_txtTestoRicerca.Location = New System.Drawing.Point(114, 7)
       Me.eui_txtTestoRicerca.Name = "eui_txtTestoRicerca"
-      Me.eui_txtTestoRicerca.Size = New System.Drawing.Size(650, 21)
+      Me.eui_txtTestoRicerca.Size = New System.Drawing.Size(508, 21)
       Me.eui_txtTestoRicerca.TabIndex = 0
       Me.eui_txtTestoRicerca.TextEditorWidth = 529
       '
@@ -232,7 +233,7 @@ Public Class ElencoDoc
       '
       Me.dtpAl.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.dtpAl.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.dtpAl.Location = New System.Drawing.Point(827, 40)
+      Me.dtpAl.Location = New System.Drawing.Point(685, 40)
       Me.dtpAl.Name = "dtpAl"
       Me.dtpAl.Size = New System.Drawing.Size(174, 20)
       Me.dtpAl.TabIndex = 55670
@@ -243,7 +244,7 @@ Public Class ElencoDoc
       '
       Me.dtpDal.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.dtpDal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.dtpDal.Location = New System.Drawing.Point(611, 40)
+      Me.dtpDal.Location = New System.Drawing.Point(469, 40)
       Me.dtpDal.MaxDate = New Date(9998, 12, 1, 0, 0, 0, 0)
       Me.dtpDal.Name = "dtpDal"
       Me.dtpDal.Size = New System.Drawing.Size(174, 20)
@@ -257,7 +258,7 @@ Public Class ElencoDoc
       Me.lblAl.AutoSize = True
       Me.lblAl.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.lblAl.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-      Me.lblAl.Location = New System.Drawing.Point(803, 40)
+      Me.lblAl.Location = New System.Drawing.Point(661, 40)
       Me.lblAl.Name = "lblAl"
       Me.lblAl.Size = New System.Drawing.Size(23, 15)
       Me.lblAl.TabIndex = 55672
@@ -271,7 +272,7 @@ Public Class ElencoDoc
       Me.lblDal.AutoSize = True
       Me.lblDal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.lblDal.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-      Me.lblDal.Location = New System.Drawing.Point(579, 40)
+      Me.lblDal.Location = New System.Drawing.Point(437, 40)
       Me.lblDal.Name = "lblDal"
       Me.lblDal.Size = New System.Drawing.Size(33, 15)
       Me.lblDal.TabIndex = 55671
@@ -285,7 +286,7 @@ Public Class ElencoDoc
       Me.lblCampo.AutoSize = True
       Me.lblCampo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.lblCampo.ForeColor = System.Drawing.Color.White
-      Me.lblCampo.Location = New System.Drawing.Point(778, 8)
+      Me.lblCampo.Location = New System.Drawing.Point(636, 8)
       Me.lblCampo.Name = "lblCampo"
       Me.lblCampo.Size = New System.Drawing.Size(85, 15)
       Me.lblCampo.TabIndex = 8
@@ -316,18 +317,112 @@ Public Class ElencoDoc
       Me.Panel2.Controls.Add(Me.eui_txtBuoni)
       Me.Panel2.Controls.Add(Me.eui_txtSospeso)
       Me.Panel2.Controls.Add(Me.eui_txtTotale)
-      Me.Panel2.Controls.Add(Me.Label4)
       Me.Panel2.Controls.Add(Me.eui_txtImposta)
-      Me.Panel2.Controls.Add(Me.Label2)
       Me.Panel2.Controls.Add(Me.eui_txtImponibile)
       Me.Panel2.Controls.Add(Me.Label1)
+      Me.Panel2.Controls.Add(Me.Label4)
+      Me.Panel2.Controls.Add(Me.Label2)
       Me.Panel2.Controls.Add(Me.Label3)
       Me.Panel2.Controls.Add(Me.Label6)
       Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
-      Me.Panel2.Location = New System.Drawing.Point(0, 326)
+      Me.Panel2.Location = New System.Drawing.Point(0, 316)
       Me.Panel2.Name = "Panel2"
-      Me.Panel2.Size = New System.Drawing.Size(1011, 32)
+      Me.Panel2.Size = New System.Drawing.Size(869, 50)
       Me.Panel2.TabIndex = 13
+      '
+      'eui_txtBuoni
+      '
+      Me.eui_txtBuoni.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+      Me.eui_txtBuoni.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+      Me.eui_txtBuoni.Id = "b350a5b8-b563-4150-b00a-eab48f81095a"
+      Me.eui_txtBuoni.Location = New System.Drawing.Point(757, 20)
+      Me.eui_txtBuoni.Name = "eui_txtBuoni"
+      Me.eui_txtBuoni.ReadOnly = True
+      Me.eui_txtBuoni.Size = New System.Drawing.Size(102, 21)
+      Me.eui_txtBuoni.TabIndex = 4
+      Me.eui_txtBuoni.Text = "1.000"
+      Me.eui_txtBuoni.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+      Me.eui_txtBuoni.TextEditorWidth = 96
+      '
+      'eui_txtSospeso
+      '
+      Me.eui_txtSospeso.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+      Me.eui_txtSospeso.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+      Me.eui_txtSospeso.Id = "3c2ab487-6393-4c7f-a14d-7837bbdae6d6"
+      Me.eui_txtSospeso.Location = New System.Drawing.Point(445, 20)
+      Me.eui_txtSospeso.Name = "eui_txtSospeso"
+      Me.eui_txtSospeso.ReadOnly = True
+      Me.eui_txtSospeso.Size = New System.Drawing.Size(102, 21)
+      Me.eui_txtSospeso.TabIndex = 1
+      Me.eui_txtSospeso.Text = "1.000"
+      Me.eui_txtSospeso.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+      Me.eui_txtSospeso.TextEditorWidth = 96
+      '
+      'eui_txtTotale
+      '
+      Me.eui_txtTotale.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+      Me.eui_txtTotale.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+      Me.eui_txtTotale.Id = "0d65cebb-55d0-4baf-aa53-aa5d7ed71ce2"
+      Me.eui_txtTotale.Location = New System.Drawing.Point(341, 20)
+      Me.eui_txtTotale.Name = "eui_txtTotale"
+      Me.eui_txtTotale.ReadOnly = True
+      Me.eui_txtTotale.Size = New System.Drawing.Size(102, 21)
+      Me.eui_txtTotale.TabIndex = 0
+      Me.eui_txtTotale.Text = "1.000"
+      Me.eui_txtTotale.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+      Me.eui_txtTotale.TextEditorWidth = 96
+      '
+      'Label4
+      '
+      Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+      Me.Label4.AutoSize = True
+      Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+      Me.Label4.ForeColor = System.Drawing.Color.White
+      Me.Label4.Location = New System.Drawing.Point(650, 5)
+      Me.Label4.Name = "Label4"
+      Me.Label4.Size = New System.Drawing.Size(62, 15)
+      Me.Label4.TabIndex = 242
+      Me.Label4.Text = "Imposta:"
+      '
+      'eui_txtImposta
+      '
+      Me.eui_txtImposta.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+      Me.eui_txtImposta.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+      Me.eui_txtImposta.Id = "fa3b517a-f528-4af1-9a37-995fbf6c2301"
+      Me.eui_txtImposta.Location = New System.Drawing.Point(653, 20)
+      Me.eui_txtImposta.Name = "eui_txtImposta"
+      Me.eui_txtImposta.ReadOnly = True
+      Me.eui_txtImposta.Size = New System.Drawing.Size(102, 21)
+      Me.eui_txtImposta.TabIndex = 3
+      Me.eui_txtImposta.Text = "1.300.000.000"
+      Me.eui_txtImposta.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+      Me.eui_txtImposta.TextEditorWidth = 96
+      '
+      'Label2
+      '
+      Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+      Me.Label2.AutoSize = True
+      Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+      Me.Label2.ForeColor = System.Drawing.Color.White
+      Me.Label2.Location = New System.Drawing.Point(546, 5)
+      Me.Label2.Name = "Label2"
+      Me.Label2.Size = New System.Drawing.Size(79, 15)
+      Me.Label2.TabIndex = 240
+      Me.Label2.Text = "Imponibile:"
+      '
+      'eui_txtImponibile
+      '
+      Me.eui_txtImponibile.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+      Me.eui_txtImponibile.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+      Me.eui_txtImponibile.Id = "dcf69703-40b2-49ff-89bd-3697977a0492"
+      Me.eui_txtImponibile.Location = New System.Drawing.Point(549, 20)
+      Me.eui_txtImponibile.Name = "eui_txtImponibile"
+      Me.eui_txtImponibile.ReadOnly = True
+      Me.eui_txtImponibile.Size = New System.Drawing.Size(102, 21)
+      Me.eui_txtImponibile.TabIndex = 2
+      Me.eui_txtImponibile.Text = "1.000"
+      Me.eui_txtImponibile.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+      Me.eui_txtImponibile.TextEditorWidth = 96
       '
       'Label1
       '
@@ -335,7 +430,7 @@ Public Class ElencoDoc
       Me.Label1.AutoSize = True
       Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.Label1.ForeColor = System.Drawing.Color.White
-      Me.Label1.Location = New System.Drawing.Point(818, 8)
+      Me.Label1.Location = New System.Drawing.Point(754, 5)
       Me.Label1.Name = "Label1"
       Me.Label1.Size = New System.Drawing.Size(87, 15)
       Me.Label1.TabIndex = 238
@@ -347,7 +442,7 @@ Public Class ElencoDoc
       Me.Label3.AutoSize = True
       Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.Label3.ForeColor = System.Drawing.Color.White
-      Me.Label3.Location = New System.Drawing.Point(317, 8)
+      Me.Label3.Location = New System.Drawing.Point(442, 5)
       Me.Label3.Name = "Label3"
       Me.Label3.Size = New System.Drawing.Size(66, 15)
       Me.Label3.TabIndex = 236
@@ -359,7 +454,7 @@ Public Class ElencoDoc
       Me.Label6.AutoSize = True
       Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.Label6.ForeColor = System.Drawing.Color.White
-      Me.Label6.Location = New System.Drawing.Point(168, 8)
+      Me.Label6.Location = New System.Drawing.Point(338, 5)
       Me.Label6.Name = "Label6"
       Me.Label6.Size = New System.Drawing.Size(51, 15)
       Me.Label6.TabIndex = 16
@@ -370,105 +465,11 @@ Public Class ElencoDoc
       Me.formFrameSkinner.AllowGlass = False
       Me.formFrameSkinner.Form = Me
       '
-      'eui_txtImponibile
-      '
-      Me.eui_txtImponibile.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-      Me.eui_txtImponibile.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.eui_txtImponibile.Id = "dcf69703-40b2-49ff-89bd-3697977a0492"
-      Me.eui_txtImponibile.Location = New System.Drawing.Point(564, 6)
-      Me.eui_txtImponibile.Name = "eui_txtImponibile"
-      Me.eui_txtImponibile.ReadOnly = True
-      Me.eui_txtImponibile.Size = New System.Drawing.Size(90, 21)
-      Me.eui_txtImponibile.TabIndex = 2
-      Me.eui_txtImponibile.Text = "1.000"
-      Me.eui_txtImponibile.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-      Me.eui_txtImponibile.TextEditorWidth = 84
-      '
-      'Label2
-      '
-      Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-      Me.Label2.AutoSize = True
-      Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.Label2.ForeColor = System.Drawing.Color.White
-      Me.Label2.Location = New System.Drawing.Point(481, 8)
-      Me.Label2.Name = "Label2"
-      Me.Label2.Size = New System.Drawing.Size(79, 15)
-      Me.Label2.TabIndex = 240
-      Me.Label2.Text = "Imponibile:"
-      '
-      'Label4
-      '
-      Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-      Me.Label4.AutoSize = True
-      Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.Label4.ForeColor = System.Drawing.Color.White
-      Me.Label4.Location = New System.Drawing.Point(658, 8)
-      Me.Label4.Name = "Label4"
-      Me.Label4.Size = New System.Drawing.Size(62, 15)
-      Me.Label4.TabIndex = 242
-      Me.Label4.Text = "Imposta:"
-      '
-      'eui_txtImposta
-      '
-      Me.eui_txtImposta.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-      Me.eui_txtImposta.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.eui_txtImposta.Id = "fa3b517a-f528-4af1-9a37-995fbf6c2301"
-      Me.eui_txtImposta.Location = New System.Drawing.Point(724, 6)
-      Me.eui_txtImposta.Name = "eui_txtImposta"
-      Me.eui_txtImposta.ReadOnly = True
-      Me.eui_txtImposta.Size = New System.Drawing.Size(90, 21)
-      Me.eui_txtImposta.TabIndex = 3
-      Me.eui_txtImposta.Text = "1.300.000.000"
-      Me.eui_txtImposta.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-      Me.eui_txtImposta.TextEditorWidth = 84
-      '
-      'eui_txtTotale
-      '
-      Me.eui_txtTotale.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-      Me.eui_txtTotale.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.eui_txtTotale.Id = "0d65cebb-55d0-4baf-aa53-aa5d7ed71ce2"
-      Me.eui_txtTotale.Location = New System.Drawing.Point(223, 6)
-      Me.eui_txtTotale.Name = "eui_txtTotale"
-      Me.eui_txtTotale.ReadOnly = True
-      Me.eui_txtTotale.Size = New System.Drawing.Size(90, 21)
-      Me.eui_txtTotale.TabIndex = 0
-      Me.eui_txtTotale.Text = "1.000"
-      Me.eui_txtTotale.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-      Me.eui_txtTotale.TextEditorWidth = 84
-      '
-      'eui_txtSospeso
-      '
-      Me.eui_txtSospeso.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-      Me.eui_txtSospeso.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.eui_txtSospeso.Id = "3c2ab487-6393-4c7f-a14d-7837bbdae6d6"
-      Me.eui_txtSospeso.Location = New System.Drawing.Point(387, 6)
-      Me.eui_txtSospeso.Name = "eui_txtSospeso"
-      Me.eui_txtSospeso.ReadOnly = True
-      Me.eui_txtSospeso.Size = New System.Drawing.Size(90, 21)
-      Me.eui_txtSospeso.TabIndex = 1
-      Me.eui_txtSospeso.Text = "1.000"
-      Me.eui_txtSospeso.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-      Me.eui_txtSospeso.TextEditorWidth = 84
-      '
-      'eui_txtBuoni
-      '
-      Me.eui_txtBuoni.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-      Me.eui_txtBuoni.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.eui_txtBuoni.Id = "b350a5b8-b563-4150-b00a-eab48f81095a"
-      Me.eui_txtBuoni.Location = New System.Drawing.Point(909, 6)
-      Me.eui_txtBuoni.Name = "eui_txtBuoni"
-      Me.eui_txtBuoni.ReadOnly = True
-      Me.eui_txtBuoni.Size = New System.Drawing.Size(90, 21)
-      Me.eui_txtBuoni.TabIndex = 4
-      Me.eui_txtBuoni.Text = "1.000"
-      Me.eui_txtBuoni.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-      Me.eui_txtBuoni.TextEditorWidth = 84
-      '
       'ElencoDoc
       '
       Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
       Me.BackColor = System.Drawing.SystemColors.AppWorkspace
-      Me.ClientSize = New System.Drawing.Size(1011, 358)
+      Me.ClientSize = New System.Drawing.Size(869, 366)
       Me.Controls.Add(Me.Panel2)
       Me.Controls.Add(Me.Panel1)
       Me.Controls.Add(Me.DataGrid1)
@@ -1180,6 +1181,128 @@ Public Class ElencoDoc
       End If
    End Sub
 
+   Public Sub DuplicaDocumento()
+      Try
+         Dim Risposta As Short
+         Dim id As String = DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 0)
+         Dim numero As String = DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, COLONNA_NUMERO_DOC)
+         Dim data As String = DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, COLONNA_DATA_DOC)
+         Dim tipoDoc As String = DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, COLONNA_TIPO_DOC)
+
+         ' Chiede conferma per l'eliminazione.
+         Risposta = MessageBox.Show("Si desidera duplicare il documento """ & tipoDoc & " N. " & numero & " del " & data & """?", NOME_PRODOTTO, MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+         If Risposta = MsgBoxResult.Yes Then
+
+            ' Dati documento.
+            Dim Doc As New Documenti
+            With Doc
+               ' Legge i dati del record selezionato nella lista.
+               .LeggiDati(TAB_DOCUMENTI, id)
+
+               .Ora = TimeOfDay.Hour.ToString & ":" & FormattaMinuti(TimeOfDay.Minute.ToString)
+               .Stato = "Bozza"
+               .Chiuso = "No"
+
+               ' Crea il nuovo record (duplicato) con i dati del record selezionato nella lista.
+               .InserisciDati(TAB_DOCUMENTI)
+            End With
+
+            ' Leggo l'ultimo id del documento duplicato.
+            Dim ultimoId As Integer = LeggiUltimoRecord(TAB_DOCUMENTI)
+
+            ' Dati dettagli documento.
+            Dim DettagliDoc As New DettagliDocumenti
+            With DettagliDoc
+               ' Dichiara un oggetto connessione.
+               Dim cn As New OleDbConnection(ConnString)
+               cn.Open()
+
+               Dim cmd As New OleDbCommand("SELECT * FROM " & TAB_DETTAGLI_DOC & " WHERE RifDoc = " & id & " ORDER BY Id ASC", cn)
+               Dim dr As OleDbDataReader = cmd.ExecuteReader()
+
+               ' Legge i dati del record selezionato nella lista.
+               Do While dr.Read()
+                  .RifDoc = ultimoId
+
+                  ' Codice.
+                  If IsDBNull(dr.Item("CodiceArticolo")) = False Then
+                     .CodiceArticolo = dr.Item("CodiceArticolo")
+                  Else
+                     .CodiceArticolo = String.Empty
+                  End If
+
+                  ' Descrizione.
+                  If IsDBNull(dr.Item("Descrizione")) = False Then
+                     .Descrizione = dr.Item("Descrizione")
+                  Else
+                     .Descrizione = String.Empty
+                  End If
+
+                  ' Unit‡ di misura.
+                  If IsDBNull(dr.Item("Unit‡Misura")) = False Then
+                     .Unit‡Misura = dr.Item("Unit‡Misura")
+                  Else
+                     .Unit‡Misura = String.Empty
+                  End If
+
+                  ' Quantit‡.
+                  If IsDBNull(dr.Item("Quantit‡")) = False Then
+                     .Quantit‡ = dr.Item("Quantit‡")
+                  Else
+                     .Quantit‡ = VALORE_ZERO
+                  End If
+
+                  ' Valore Unitario.
+                  If IsDBNull(dr.Item("ValoreUnitario")) = False Then
+                     .ValoreUnitario = dr.Item("ValoreUnitario")
+                  Else
+                     .ValoreUnitario = VALORE_ZERO
+                  End If
+
+                  ' Sconto %.
+                  If IsDBNull(dr.Item("Sconto")) = False Then
+                     .Sconto = dr.Item("Sconto")
+                  Else
+                     .Sconto = VALORE_ZERO
+                  End If
+
+                  ' Importo.
+                  If IsDBNull(dr.Item("ImportoNetto")) = False Then
+                     .ImportoNetto = dr.Item("ImportoNetto")
+                  Else
+                     .ImportoNetto = VALORE_ZERO
+                  End If
+
+                  ' Aliquota Iva.
+                  If IsDBNull(dr.Item("AliquotaIva")) = False Then
+                     .AliquotaIva = dr.Item("AliquotaIva")
+                  Else
+                     .AliquotaIva = "0"
+                  End If
+
+                  ' Crea il nuovo record (duplicato) con i dati del record selezionato nella lista.
+                  .InserisciDati(TAB_DETTAGLI_DOC)
+               Loop
+            End With
+
+            ' Aggiorna l'elenco dati con il record nuovo.
+            AggiornaDati()
+
+            ' Registra loperazione effettuata dall'operatore identificato.
+            'g_frmMain.RegistraOperazione(TipoOperazione.Aggiorna, STR_CONTABILITA_DOCUMENTI, MODULO_CONTABILITA_DOCUMENTI)
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      Finally
+         cn.Close()
+
+      End Try
+   End Sub
+
    Public Sub LeggiDati(ByVal tabella As String, ByVal sql As String)
       Try
          ' Calcola il numero delle pagine da visualizzare.
@@ -1207,7 +1330,7 @@ Public Class ElencoDoc
          End If
 
          ' Ottiene il numero di record.
-         cmd.CommandText = String.Format("SELECT COUNT(*) FROM {0}", tabella)
+         cmd.CommandText = String.Format("Select COUNT(*) FROM {0}", tabella)
          numRecord = CInt(cmd.ExecuteScalar())
 
          ' Chiude la connessione se Ë da chiudere.
@@ -1342,7 +1465,7 @@ Public Class ElencoDoc
    Public Sub AggiornaDatiSospesi()
       Try
          ' Crea la stringa di selezione dei dati..
-         sql = String.Format("SELECT TOP {0} * FROM {1} WHERE SospesoIncassare <> 0 ORDER BY DataDoc", DIM_PAGINA_GRANDE, TAB_DOCUMENTI)
+         sql = String.Format("Select TOP {0} * FROM {1} WHERE SospesoIncassare <> 0 ORDER BY DataDoc", DIM_PAGINA_GRANDE, TAB_DOCUMENTI)
          repSql = sql
          LeggiDati("(" & sql & ")", sql)
 
@@ -1383,7 +1506,7 @@ Public Class ElencoDoc
             ' Crea la stringa di selezione dei dati.
             Dim dataDal As String = CFormatta.FormattaData(frmFiltroPerido.eui_dtpDataDal.Value.GetValueOrDefault.ToShortDateString)
             Dim dataAl As String = CFormatta.FormattaData(frmFiltroPerido.eui_dtpDataAl.Value.GetValueOrDefault.ToShortDateString)
-            sql = String.Format("SELECT TOP {0} * FROM {1} WHERE DataDoc BETWEEN #{2}# AND #{3}# ORDER BY DataDoc ASC", DIM_PAGINA_GRANDE, TAB_DOCUMENTI, dataDal, dataAl)
+            sql = String.Format("Select TOP {0} * FROM {1} WHERE DataDoc BETWEEN #{2}# And #{3}# ORDER BY DataDoc ASC", DIM_PAGINA_GRANDE, TAB_DOCUMENTI, dataDal, dataAl)
             repSql = sql
             LeggiDati("(" & sql & ")", sql)
 
@@ -1422,7 +1545,7 @@ Public Class ElencoDoc
          Dim Appo1 As String = CFormatta.FormattaData("01/" & Mese & "/" & Anno)
          Dim UltimoGiornoAnno As String = DateTime.DaysInMonth(Anno, Mese)
          Dim Appo2 As String = CFormatta.FormattaData(UltimoGiornoAnno & "/" & Mese & "/" & Anno)
-         sql = String.Format("SELECT TOP {0} * FROM {1} WHERE DataDoc BETWEEN #{2}# AND #{3}# ORDER BY DataDoc ASC", DIM_PAGINA_GRANDE, TAB_DOCUMENTI, Appo1, Appo2)
+         sql = String.Format("Select TOP {0} * FROM {1} WHERE DataDoc BETWEEN #{2}# And #{3}# ORDER BY DataDoc ASC", DIM_PAGINA_GRANDE, TAB_DOCUMENTI, Appo1, Appo2)
 
          repSql = sql
          LeggiDati("(" & sql & ")", sql)
@@ -1460,7 +1583,7 @@ Public Class ElencoDoc
          Dim Appo1 As String = CFormatta.FormattaData("01/01/" & Anno)
          Dim UltimoGiornoAnno As String = DateTime.DaysInMonth(Anno, 12)
          Dim Appo2 As String = CFormatta.FormattaData(UltimoGiornoAnno & "/12/" & Anno)
-         sql = String.Format("SELECT TOP {0} * FROM {1} WHERE DataDoc BETWEEN #{2}# AND #{3}# ORDER BY DataDoc ASC", DIM_PAGINA_GRANDE, TAB_DOCUMENTI, Appo1, Appo2)
+         sql = String.Format("Select TOP {0} * FROM {1} WHERE DataDoc BETWEEN #{2}# And #{3}# ORDER BY DataDoc ASC", DIM_PAGINA_GRANDE, TAB_DOCUMENTI, Appo1, Appo2)
 
          repSql = sql
          LeggiDati("(" & sql & ")", sql)
@@ -1528,7 +1651,7 @@ Public Class ElencoDoc
          ' Disattiva i pulsanti appropriati.
          ' Modifica.
          g_frmMain.eui_Strumenti_Modifica.Enabled = False
-         'g_frmMain.eui_Strumenti_Duplica.Enabled = False
+         g_frmMain.eui_Strumenti_Duplica.Enabled = False
          g_frmMain.eui_Strumenti_Elimina.Enabled = False
          g_frmMain.eui_Strumenti_Annulla.Enabled = False
          g_frmMain.eui_Strumenti_Aggiorna.Enabled = False
@@ -1543,10 +1666,10 @@ Public Class ElencoDoc
          g_frmMain.eui_Strumenti_Sospesi_Passa.Enabled = False
          g_frmMain.eui_Strumenti_Buoni_Pasto.Enabled = False
       Else
-         ' Disattiva i pulsanti appropriati.
+         ' Attiva i pulsanti appropriati.
          ' Modifica.
          g_frmMain.eui_Strumenti_Modifica.Enabled = True
-         'g_frmMain.eui_Strumenti_Duplica.Enabled = True
+         g_frmMain.eui_Strumenti_Duplica.Enabled = True
          g_frmMain.eui_Strumenti_Elimina.Enabled = True
          'g_frmMain.eui_Strumenti_Annulla.Enabled = True
          g_frmMain.eui_Strumenti_Aggiorna.Enabled = True
@@ -1560,7 +1683,6 @@ Public Class ElencoDoc
          'g_frmMain.eui_Strumenti_Sospesi_Annulla.Enabled = True
          'g_frmMain.eui_Strumenti_Sospesi_Passa.Enabled = True
          'g_frmMain.eui_Strumenti_Buoni_Pasto.Enabled = True
-
       End If
    End Sub
 
@@ -1570,6 +1692,7 @@ Public Class ElencoDoc
       End If
    End Sub
 
+   ' DA_FARE_B: NON UTILIZZATA!
    Private Sub ApriDati(ByVal val As String)
       Try
          ' Modifica il cursore del mouse.
@@ -1953,7 +2076,7 @@ Public Class ElencoDoc
          ' Numero documento
          Dim numeroStyle As New ColonnaColorata(DataGrid1, Color.FromArgb(COLORE_ROSA), Color.Black)
          numeroStyle.MappingName = "NumDoc"
-         numeroStyle.HeaderText = "Numero"
+         numeroStyle.HeaderText = "Numero."
          numeroStyle.Width = 50
          numeroStyle.NullText = ""
          numeroStyle.Format = "##,##0"
@@ -2021,7 +2144,7 @@ Public Class ElencoDoc
          ' Totale documento
          Dim totDocStyle As New ColonnaColorata(DataGrid1, Color.White, Color.Red)
          totDocStyle.MappingName = "TotDoc"
-         totDocStyle.HeaderText = "Totale"
+         totDocStyle.HeaderText = "Totale."
          totDocStyle.Width = 80
          totDocStyle.NullText = ""
          totDocStyle.Format = "##,##0.00"
@@ -2031,7 +2154,7 @@ Public Class ElencoDoc
          ' Sospeso
          Dim sospesoStyle As New DataGridTextBoxColumn
          sospesoStyle.MappingName = "Sospeso"
-         sospesoStyle.HeaderText = "Sospeso"
+         sospesoStyle.HeaderText = "Sospeso."
          sospesoStyle.Width = 80
          sospesoStyle.NullText = ""
          sospesoStyle.Format = "##,##0.00"
@@ -2041,7 +2164,7 @@ Public Class ElencoDoc
          ' Imponibile
          Dim imponibileStyle As New DataGridTextBoxColumn
          imponibileStyle.MappingName = "Imponibile"
-         imponibileStyle.HeaderText = "Imponibile"
+         imponibileStyle.HeaderText = "Imponibile."
          imponibileStyle.Width = 80
          imponibileStyle.NullText = ""
          imponibileStyle.Format = "##,##0.00"
@@ -2051,7 +2174,7 @@ Public Class ElencoDoc
          'Imposta
          Dim impostaStyle As New DataGridTextBoxColumn
          impostaStyle.MappingName = "Imposta"
-         impostaStyle.HeaderText = "Imposta"
+         impostaStyle.HeaderText = "Imposta. "
          impostaStyle.Width = 80
          impostaStyle.NullText = ""
          impostaStyle.Format = "##,##0.00"
@@ -2061,7 +2184,7 @@ Public Class ElencoDoc
          ' Buoni pasto
          Dim buoniStyle As New DataGridTextBoxColumn
          buoniStyle.MappingName = "BuoniPasto"
-         buoniStyle.HeaderText = "Buoni pasto"
+         buoniStyle.HeaderText = "Buoni pasto."
          buoniStyle.Width = 80
          buoniStyle.NullText = ""
          buoniStyle.Format = "##,##0.00"
@@ -2486,7 +2609,7 @@ Public Class ElencoDoc
       g_frmMain.rtgStrumentiModifica.Visible = True
       g_frmMain.eui_StrumentiDocumenti.Visible = False
 
-      g_frmMain.eui_Strumenti_Duplica.Visible = False
+      'g_frmMain.eui_Strumenti_Duplica.Visible = False
       g_frmMain.eui_Strumenti_Periodo_Arrivo.Visible = False
       g_frmMain.eui_Strumenti_Periodo_Partenza.Visible = False
       g_frmMain.eui_Strumenti_Periodo_Sep1.Visible = False

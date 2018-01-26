@@ -2347,3 +2347,69 @@ Nome parametro: index"
 "- NOME PROCEDURA:    in Hospitality_Solution.frmMain.eui_Strumenti_Periodo_Tutte_Click(Object sender, EventArgs e)"
 "
 "
+"*** 26/01/2018 - 17:54:48 ***"
+"- DESCRIZIONE ERRORE: Nessun valore predefinito per il parametro @CodiceArticolo."
+"- NOME PROCEDURA:    in System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   in System.Data.OleDb.OleDbCommand.ExecuteNonQuery()
+   in Hospitality_Solution.DettagliDocumenti.InserisciDati(String tabella)"
+"
+"
+"*** 26/01/2018 - 17:54:56 ***"
+"- DESCRIZIONE ERRORE: Nessun valore predefinito per il parametro @CodiceArticolo."
+"- NOME PROCEDURA:    in System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   in System.Data.OleDb.OleDbCommand.ExecuteNonQuery()
+   in Hospitality_Solution.DettagliDocumenti.InserisciDati(String tabella)"
+"
+"
+"*** 26/01/2018 - 17:54:58 ***"
+"- DESCRIZIONE ERRORE: Nessun valore predefinito per il parametro @CodiceArticolo."
+"- NOME PROCEDURA:    in System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   in System.Data.OleDb.OleDbCommand.ExecuteNonQuery()
+   in Hospitality_Solution.DettagliDocumenti.InserisciDati(String tabella)"
+"
+"
+"*** 26/01/2018 - 18:03:14 ***"
+"- DESCRIZIONE ERRORE: L'istruzione INSERT INTO contiene il seguente nome campo sconosciuto: ""RifDoc"". Verificare di averlo digitato correttamente, quindi ritentare l'operazione."
+"- NOME PROCEDURA:    in System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   in System.Data.OleDb.OleDbCommand.ExecuteNonQuery()
+   in Hospitality_Solution.DettagliDocumenti.InserisciDati(String tabella)"
+"
+"
+"*** 26/01/2018 - 18:03:22 ***"
+"- DESCRIZIONE ERRORE: L'istruzione INSERT INTO contiene il seguente nome campo sconosciuto: ""RifDoc"". Verificare di averlo digitato correttamente, quindi ritentare l'operazione."
+"- NOME PROCEDURA:    in System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   in System.Data.OleDb.OleDbCommand.ExecuteNonQuery()
+   in Hospitality_Solution.DettagliDocumenti.InserisciDati(String tabella)"
+"
+"
+"*** 26/01/2018 - 18:03:23 ***"
+"- DESCRIZIONE ERRORE: L'istruzione INSERT INTO contiene il seguente nome campo sconosciuto: ""RifDoc"". Verificare di averlo digitato correttamente, quindi ritentare l'operazione."
+"- NOME PROCEDURA:    in System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   in System.Data.OleDb.OleDbCommand.ExecuteNonQuery()
+   in Hospitality_Solution.DettagliDocumenti.InserisciDati(String tabella)"
+"
+"
