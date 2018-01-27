@@ -15,7 +15,6 @@
    End Sub
 
    Private Sub ListaPiatti_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-
       If CaricaLista(NOME_TABELLA) = True Then
          Exit Sub
       End If
@@ -32,7 +31,6 @@
          g_frmDocumento.dgvDettagli.Focus()
 
          InserisciElementi(NOME_TABELLA, id)
-         'g_frmDatiPrenRisorse.CalcolaTotaleConto()
 
       Catch ex As Exception
          ' Visualizza un messaggio di errore e lo registra nell'apposito file.
@@ -57,7 +55,7 @@
       Try
          cn.Open()
 
-         Dim cmd As New OleDbCommand("SELECT * FROM " & tabella & "' ORDER BY Descrizione ASC", cn)
+         Dim cmd As New OleDbCommand("SELECT * FROM " & tabella & " ORDER BY Descrizione ASC", cn)
          Dim dr As OleDbDataReader = cmd.ExecuteReader()
 
          Do While dr.Read()
@@ -69,12 +67,36 @@
             If IsDBNull(dr.Item("Descrizione")) = False Then
                lvwPiatti.Items(lvwPiatti.Items.Count - 1).SubItems.Add(dr.Item("Descrizione"))
             Else
-               lvwPiatti.Items(lvwPiatti.Items.Count - 1).SubItems.Add("")
+               lvwPiatti.Items(lvwPiatti.Items.Count - 1).SubItems.Add(String.Empty)
             End If
 
-            ' Costo.
+            ' Listino 1.
             If IsDBNull(dr.Item("Listino1")) = False Then
                Dim val As String = CFormatta.FormattaNumeroDouble(Convert.ToDouble(dr.Item("Listino1")))
+               lvwPiatti.Items(lvwPiatti.Items.Count - 1).SubItems.Add(val)
+            Else
+               lvwPiatti.Items(lvwPiatti.Items.Count - 1).SubItems.Add(VALORE_ZERO)
+            End If
+
+            ' Listino 2.
+            If IsDBNull(dr.Item("Listino2")) = False Then
+               Dim val As String = CFormatta.FormattaNumeroDouble(Convert.ToDouble(dr.Item("Listino2")))
+               lvwPiatti.Items(lvwPiatti.Items.Count - 1).SubItems.Add(val)
+            Else
+               lvwPiatti.Items(lvwPiatti.Items.Count - 1).SubItems.Add(VALORE_ZERO)
+            End If
+
+            ' Listino 3.
+            If IsDBNull(dr.Item("Listino3")) = False Then
+               Dim val As String = CFormatta.FormattaNumeroDouble(Convert.ToDouble(dr.Item("Listino3")))
+               lvwPiatti.Items(lvwPiatti.Items.Count - 1).SubItems.Add(val)
+            Else
+               lvwPiatti.Items(lvwPiatti.Items.Count - 1).SubItems.Add(VALORE_ZERO)
+            End If
+
+            ' Listino 4.
+            If IsDBNull(dr.Item("Listino4")) = False Then
+               Dim val As String = CFormatta.FormattaNumeroDouble(Convert.ToDouble(dr.Item("Listino4")))
                lvwPiatti.Items(lvwPiatti.Items.Count - 1).SubItems.Add(val)
             Else
                lvwPiatti.Items(lvwPiatti.Items.Count - 1).SubItems.Add(VALORE_ZERO)

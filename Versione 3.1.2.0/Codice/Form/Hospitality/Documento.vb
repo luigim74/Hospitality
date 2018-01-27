@@ -1410,6 +1410,18 @@ Public Class frmDocumento
       End Try
    End Sub
 
+   Private Sub eui_cmdImportaDoc_Click(sender As Object, e As EventArgs) Handles eui_cmdImportaDoc.Click
+      Try
+         Dim frm As New ListaDocumenti(eui_cmbClienteCognome.Text)
+         frm.ShowDialog()
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
+   End Sub
+
    Private Sub eui_cmdSalva_Click(sender As Object, e As EventArgs) Handles eui_cmdSalva.Click
       Try
          ' Salva il documento e chiude la finestra.
@@ -1854,5 +1866,6 @@ Public Class frmDocumento
    Private Sub eui_cmdTastiera_Click(sender As Object, e As EventArgs) Handles eui_cmdTastiera.Click
       AvviaTastieraVirtuale(Me.Handle)
    End Sub
+
 
 End Class

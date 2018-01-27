@@ -2413,3 +2413,100 @@ Nome parametro: index"
    in Hospitality_Solution.DettagliDocumenti.InserisciDati(String tabella)"
 "
 "
+"*** 27/01/2018 - 16:12:47 ***"
+"- DESCRIZIONE ERRORE: Stringa non riconosciuta come valore DateTime valido."
+"- NOME PROCEDURA:    in System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   in System.Convert.ToDateTime(String value, IFormatProvider provider)
+   in System.String.System.IConvertible.ToDateTime(IFormatProvider provider)
+   in System.Convert.ToDateTime(Object value)
+   in Hospitality_Solution.ElencoContiPos.CaricaListaConti(ListView lstv, String tabella, String sql, Boolean cliente)"
+"
+"
+"*** 27/01/2018 - 16:14:34 ***"
+"- DESCRIZIONE ERRORE: Stringa non riconosciuta come valore DateTime valido."
+"- NOME PROCEDURA:    in System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   in System.Convert.ToDateTime(String value, IFormatProvider provider)
+   in System.String.System.IConvertible.ToDateTime(IFormatProvider provider)
+   in System.Convert.ToDateTime(Object value)
+   in Hospitality_Solution.ElencoContiPos.CaricaListaConti(ListView lstv, String tabella, String sql, Boolean cliente)"
+"
+"
+"*** 27/01/2018 - 16:15:21 ***"
+"- DESCRIZIONE ERRORE: Stringa non riconosciuta come valore DateTime valido."
+"- NOME PROCEDURA:    in System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   in System.Convert.ToDateTime(String value, IFormatProvider provider)
+   in System.String.System.IConvertible.ToDateTime(IFormatProvider provider)
+   in System.Convert.ToDateTime(Object value)
+   in Hospitality_Solution.ElencoContiPos.CaricaListaConti(ListView lstv, String tabella, String sql, Boolean cliente)"
+"
+"
+"*** 27/01/2018 - 16:44:53 ***"
+"- DESCRIZIONE ERRORE: Formato della stringa di input non corretto."
+"- NOME PROCEDURA:    in System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   in System.String.System.IConvertible.ToDouble(IFormatProvider provider)
+   in System.Convert.ToDouble(Object value)
+   in Hospitality_Solution.ListaDocumenti.CaricaLista(String tabella)"
+"
+"
+"*** 27/01/2018 - 17:16:54 ***"
+"- DESCRIZIONE ERRORE: Errore di sintassi nella proposizione FROM."
+"- NOME PROCEDURA:    in System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   in System.Data.OleDb.OleDbCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.OleDb.OleDbCommand.ExecuteReader()
+   in Hospitality_Solution.ListaDocumenti.CaricaLista(String tabella)"
+"
+"
+"*** 27/01/2018 - 17:20:04 ***"
+"- DESCRIZIONE ERRORE: Errore di sintassi (operatore mancante) nell'espressione della query 'Cliente = '' TipoDoc = 'Conto' OR TipoDoc = 'Proforma''."
+"- NOME PROCEDURA:    in System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   in System.Data.OleDb.OleDbCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.OleDb.OleDbCommand.ExecuteReader()
+   in Hospitality_Solution.ListaDocumenti.CaricaLista(String tabella)"
+"
+"
+"*** 27/01/2018 - 17:26:51 ***"
+"- DESCRIZIONE ERRORE: Errore di sintassi (operatore mancante) nell'espressione della query 'Cliente = '' TipoDoc = 'Conto' OR TipoDoc = 'Proforma''."
+"- NOME PROCEDURA:    in System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   in System.Data.OleDb.OleDbCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.OleDb.OleDbCommand.ExecuteReader()
+   in Hospitality_Solution.ListaDocumenti.CaricaLista(String tabella)"
+"
+"
+"*** 27/01/2018 - 17:27:10 ***"
+"- DESCRIZIONE ERRORE: Errore di sintassi (operatore mancante) nell'espressione della query 'Cliente = 'Colombo' TipoDoc = 'Conto' OR TipoDoc = 'Proforma''."
+"- NOME PROCEDURA:    in System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   in System.Data.OleDb.OleDbCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.OleDb.OleDbCommand.ExecuteReader()
+   in Hospitality_Solution.ListaDocumenti.CaricaLista(String tabella)"
+"
+"
+"*** 27/01/2018 - 17:31:32 ***"
+"- DESCRIZIONE ERRORE: InvalidArgument=Valore di '-1' non valido per 'index'.
+Nome parametro: index"
+"- NOME PROCEDURA:    in System.Windows.Forms.ListView.ListViewItemCollection.get_Item(Int32 index)
+   in Hospitality_Solution.ListaDocumenti.CaricaLista(String tabella)"
+"
+"
+"*** 27/01/2018 - 17:31:51 ***"
+"- DESCRIZIONE ERRORE: InvalidArgument=Valore di '-1' non valido per 'index'.
+Nome parametro: index"
+"- NOME PROCEDURA:    in System.Windows.Forms.ListView.ListViewItemCollection.get_Item(Int32 index)
+   in Hospitality_Solution.ListaDocumenti.CaricaLista(String tabella)"
+"
+"

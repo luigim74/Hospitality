@@ -1170,7 +1170,7 @@ Friend Class frmMain
       Me.eui_File.Name = "eui_File"
       Me.eui_File.QuickAccessToolbarCustomizationDialogEnabled = False
       Me.eui_File.QuickAccessToolbarCustomizationEnabled = False
-      Me.eui_File.Size = New System.Drawing.Size(1204, 154)
+      Me.eui_File.Size = New System.Drawing.Size(1212, 154)
       Me.eui_File.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_File.SmallImages.Images"), System.Drawing.Image))})
       Me.eui_File.TabIndex = 15
       Me.eui_File.TabPages.AddRange(New Elegant.Ui.RibbonTabPage() {Me.eui_Gestione, Me.eui_Archivi, Me.eui_Contabilità, Me.eui_Magazzino, Me.eui_Visualizza, Me.eui_Strumenti, Me.eui_Finestra})
@@ -2180,7 +2180,7 @@ Friend Class frmMain
       Me.eui_StrumentiModifica.KeyTip = Nothing
       Me.eui_StrumentiModifica.Location = New System.Drawing.Point(0, 0)
       Me.eui_StrumentiModifica.Name = "eui_StrumentiModifica"
-      Me.eui_StrumentiModifica.Size = New System.Drawing.Size(1204, 99)
+      Me.eui_StrumentiModifica.Size = New System.Drawing.Size(1212, 99)
       Me.eui_StrumentiModifica.TabIndex = 0
       Me.eui_StrumentiModifica.Text = "Modifica"
       '
@@ -2385,7 +2385,7 @@ Friend Class frmMain
       Me.RibbonGroup26.Dock = System.Windows.Forms.DockStyle.Fill
       Me.RibbonGroup26.Location = New System.Drawing.Point(5, 1)
       Me.RibbonGroup26.Name = "RibbonGroup26"
-      Me.RibbonGroup26.Size = New System.Drawing.Size(319, 94)
+      Me.RibbonGroup26.Size = New System.Drawing.Size(319, 0)
       Me.RibbonGroup26.TabIndex = 3
       Me.RibbonGroup26.Text = "Periodo"
       '
@@ -2481,7 +2481,7 @@ Friend Class frmMain
       Me.eui_rib_Visualizza.Dock = System.Windows.Forms.DockStyle.Fill
       Me.eui_rib_Visualizza.Location = New System.Drawing.Point(324, 1)
       Me.eui_rib_Visualizza.Name = "eui_rib_Visualizza"
-      Me.eui_rib_Visualizza.Size = New System.Drawing.Size(70, 94)
+      Me.eui_rib_Visualizza.Size = New System.Drawing.Size(70, 0)
       Me.eui_rib_Visualizza.TabIndex = 5
       Me.eui_rib_Visualizza.Text = "Visualizza"
       '
@@ -2518,7 +2518,7 @@ Friend Class frmMain
       Me.RibbonGroup29.Dock = System.Windows.Forms.DockStyle.Fill
       Me.RibbonGroup29.Location = New System.Drawing.Point(5, 1)
       Me.RibbonGroup29.Name = "RibbonGroup29"
-      Me.RibbonGroup29.Size = New System.Drawing.Size(163, 94)
+      Me.RibbonGroup29.Size = New System.Drawing.Size(163, 0)
       Me.RibbonGroup29.TabIndex = 6
       Me.RibbonGroup29.Text = "Stampa"
       '
@@ -2593,7 +2593,7 @@ Friend Class frmMain
       Me.RibbonGroup20.Dock = System.Windows.Forms.DockStyle.Fill
       Me.RibbonGroup20.Location = New System.Drawing.Point(5, 1)
       Me.RibbonGroup20.Name = "RibbonGroup20"
-      Me.RibbonGroup20.Size = New System.Drawing.Size(198, 94)
+      Me.RibbonGroup20.Size = New System.Drawing.Size(198, 0)
       Me.RibbonGroup20.TabIndex = 0
       Me.RibbonGroup20.Text = "Sospesi"
       '
@@ -2665,7 +2665,7 @@ Friend Class frmMain
       Me.RibbonGroup25.DialogLauncherButtonVisible = False
       Me.RibbonGroup25.Location = New System.Drawing.Point(203, 1)
       Me.RibbonGroup25.Name = "RibbonGroup25"
-      Me.RibbonGroup25.Size = New System.Drawing.Size(83, 94)
+      Me.RibbonGroup25.Size = New System.Drawing.Size(83, 0)
       Me.RibbonGroup25.TabIndex = 1
       Me.RibbonGroup25.Text = "Buoni pasto"
       '
@@ -2771,7 +2771,7 @@ Friend Class frmMain
       Me.RibbonGroup13.Dock = System.Windows.Forms.DockStyle.Fill
       Me.RibbonGroup13.Location = New System.Drawing.Point(5, 1)
       Me.RibbonGroup13.Name = "RibbonGroup13"
-      Me.RibbonGroup13.Size = New System.Drawing.Size(289, 94)
+      Me.RibbonGroup13.Size = New System.Drawing.Size(289, 0)
       Me.RibbonGroup13.TabIndex = 0
       Me.RibbonGroup13.Text = "Prenotazioni"
       '
@@ -2869,7 +2869,7 @@ Friend Class frmMain
       Me.RibbonGroup3.Dock = System.Windows.Forms.DockStyle.Fill
       Me.RibbonGroup3.Location = New System.Drawing.Point(294, 1)
       Me.RibbonGroup3.Name = "RibbonGroup3"
-      Me.RibbonGroup3.Size = New System.Drawing.Size(198, 94)
+      Me.RibbonGroup3.Size = New System.Drawing.Size(198, 0)
       Me.RibbonGroup3.TabIndex = 1
       Me.RibbonGroup3.Text = "Archivi"
       '
@@ -2942,7 +2942,7 @@ Friend Class frmMain
       Me.RibbonGroup4.Dock = System.Windows.Forms.DockStyle.Fill
       Me.RibbonGroup4.Location = New System.Drawing.Point(492, 1)
       Me.RibbonGroup4.Name = "RibbonGroup4"
-      Me.RibbonGroup4.Size = New System.Drawing.Size(117, 94)
+      Me.RibbonGroup4.Size = New System.Drawing.Size(117, 0)
       Me.RibbonGroup4.TabIndex = 2
       Me.RibbonGroup4.Text = "Documenti"
       '
@@ -2995,7 +2995,7 @@ Friend Class frmMain
       Me.RibbonGroup23.Dock = System.Windows.Forms.DockStyle.Fill
       Me.RibbonGroup23.Location = New System.Drawing.Point(5, 1)
       Me.RibbonGroup23.Name = "RibbonGroup23"
-      Me.RibbonGroup23.Size = New System.Drawing.Size(193, 94)
+      Me.RibbonGroup23.Size = New System.Drawing.Size(193, 0)
       Me.RibbonGroup23.TabIndex = 0
       Me.RibbonGroup23.Text = "Movimento"
       '
@@ -3076,7 +3076,7 @@ Friend Class frmMain
       Me.RibbonGroup24.Dock = System.Windows.Forms.DockStyle.Fill
       Me.RibbonGroup24.Location = New System.Drawing.Point(198, 1)
       Me.RibbonGroup24.Name = "RibbonGroup24"
-      Me.RibbonGroup24.Size = New System.Drawing.Size(387, 94)
+      Me.RibbonGroup24.Size = New System.Drawing.Size(387, 0)
       Me.RibbonGroup24.TabIndex = 1
       Me.RibbonGroup24.Text = "Periodo"
       '
@@ -3223,7 +3223,7 @@ Friend Class frmMain
       Me.eui_GruppoPos.Dock = System.Windows.Forms.DockStyle.Fill
       Me.eui_GruppoPos.Location = New System.Drawing.Point(5, 1)
       Me.eui_GruppoPos.Name = "eui_GruppoPos"
-      Me.eui_GruppoPos.Size = New System.Drawing.Size(97, 94)
+      Me.eui_GruppoPos.Size = New System.Drawing.Size(97, 0)
       Me.eui_GruppoPos.TabIndex = 0
       Me.eui_GruppoPos.Text = "Pos"
       '
@@ -3250,7 +3250,7 @@ Friend Class frmMain
       Me.eui_GruppoPrenotazioni.Dock = System.Windows.Forms.DockStyle.Fill
       Me.eui_GruppoPrenotazioni.Location = New System.Drawing.Point(102, 1)
       Me.eui_GruppoPrenotazioni.Name = "eui_GruppoPrenotazioni"
-      Me.eui_GruppoPrenotazioni.Size = New System.Drawing.Size(144, 94)
+      Me.eui_GruppoPrenotazioni.Size = New System.Drawing.Size(144, 0)
       Me.eui_GruppoPrenotazioni.TabIndex = 1
       Me.eui_GruppoPrenotazioni.Text = "Prenotazioni"
       '
@@ -3461,7 +3461,7 @@ Friend Class frmMain
       Me.RibbonGroup15.Dock = System.Windows.Forms.DockStyle.Fill
       Me.RibbonGroup15.Location = New System.Drawing.Point(246, 1)
       Me.RibbonGroup15.Name = "RibbonGroup15"
-      Me.RibbonGroup15.Size = New System.Drawing.Size(122, 94)
+      Me.RibbonGroup15.Size = New System.Drawing.Size(122, 0)
       Me.RibbonGroup15.TabIndex = 2
       Me.RibbonGroup15.Text = "Gestione"
       '
@@ -3547,7 +3547,7 @@ Friend Class frmMain
       Me.RibbonGroup16.Dock = System.Windows.Forms.DockStyle.Fill
       Me.RibbonGroup16.Location = New System.Drawing.Point(368, 1)
       Me.RibbonGroup16.Name = "RibbonGroup16"
-      Me.RibbonGroup16.Size = New System.Drawing.Size(169, 94)
+      Me.RibbonGroup16.Size = New System.Drawing.Size(169, 0)
       Me.RibbonGroup16.TabIndex = 3
       Me.RibbonGroup16.Text = "Operatori"
       '
@@ -3622,7 +3622,7 @@ Friend Class frmMain
       Me.RibbonGroup17.DialogLauncherButtonVisible = False
       Me.RibbonGroup17.Location = New System.Drawing.Point(5, 1)
       Me.RibbonGroup17.Name = "RibbonGroup17"
-      Me.RibbonGroup17.Size = New System.Drawing.Size(85, 94)
+      Me.RibbonGroup17.Size = New System.Drawing.Size(85, 0)
       Me.RibbonGroup17.TabIndex = 0
       Me.RibbonGroup17.Text = "Anagrafiche"
       '
@@ -3873,7 +3873,7 @@ Friend Class frmMain
       Me.RibbonGroup5.DialogLauncherButtonVisible = False
       Me.RibbonGroup5.Location = New System.Drawing.Point(90, 1)
       Me.RibbonGroup5.Name = "RibbonGroup5"
-      Me.RibbonGroup5.Size = New System.Drawing.Size(64, 94)
+      Me.RibbonGroup5.Size = New System.Drawing.Size(64, 0)
       Me.RibbonGroup5.TabIndex = 1
       Me.RibbonGroup5.Text = "Tabelle"
       '
@@ -4238,7 +4238,7 @@ Friend Class frmMain
       Me.RibbonGroup1.DialogLauncherButtonVisible = False
       Me.RibbonGroup1.Location = New System.Drawing.Point(154, 1)
       Me.RibbonGroup1.Name = "RibbonGroup1"
-      Me.RibbonGroup1.Size = New System.Drawing.Size(259, 94)
+      Me.RibbonGroup1.Size = New System.Drawing.Size(259, 0)
       Me.RibbonGroup1.TabIndex = 2
       Me.RibbonGroup1.Text = "Strumenti"
       '
@@ -4320,7 +4320,7 @@ Friend Class frmMain
       Me.RibbonGroup6.DialogLauncherButtonVisible = False
       Me.RibbonGroup6.Location = New System.Drawing.Point(5, 1)
       Me.RibbonGroup6.Name = "RibbonGroup6"
-      Me.RibbonGroup6.Size = New System.Drawing.Size(181, 94)
+      Me.RibbonGroup6.Size = New System.Drawing.Size(181, 0)
       Me.RibbonGroup6.TabIndex = 0
       Me.RibbonGroup6.Text = "Contabilità"
       '
@@ -4372,7 +4372,7 @@ Friend Class frmMain
       Me.RibbonGroup7.DialogLauncherButtonVisible = False
       Me.RibbonGroup7.Location = New System.Drawing.Point(186, 1)
       Me.RibbonGroup7.Name = "RibbonGroup7"
-      Me.RibbonGroup7.Size = New System.Drawing.Size(109, 94)
+      Me.RibbonGroup7.Size = New System.Drawing.Size(109, 0)
       Me.RibbonGroup7.TabIndex = 1
       Me.RibbonGroup7.Text = "Documenti"
       '
@@ -4410,7 +4410,7 @@ Friend Class frmMain
       Me.RibbonGroup8.DialogLauncherButtonVisible = False
       Me.RibbonGroup8.Location = New System.Drawing.Point(5, 1)
       Me.RibbonGroup8.Name = "RibbonGroup8"
-      Me.RibbonGroup8.Size = New System.Drawing.Size(87, 94)
+      Me.RibbonGroup8.Size = New System.Drawing.Size(87, 0)
       Me.RibbonGroup8.TabIndex = 0
       Me.RibbonGroup8.Text = "Articoli"
       '
@@ -4434,7 +4434,7 @@ Friend Class frmMain
       Me.RibbonGroup9.DialogLauncherButtonVisible = False
       Me.RibbonGroup9.Location = New System.Drawing.Point(92, 1)
       Me.RibbonGroup9.Name = "RibbonGroup9"
-      Me.RibbonGroup9.Size = New System.Drawing.Size(87, 94)
+      Me.RibbonGroup9.Size = New System.Drawing.Size(87, 0)
       Me.RibbonGroup9.TabIndex = 1
       Me.RibbonGroup9.Text = "Movimenti"
       '
@@ -4458,7 +4458,7 @@ Friend Class frmMain
       Me.RibbonGroup11.DialogLauncherButtonVisible = False
       Me.RibbonGroup11.Location = New System.Drawing.Point(179, 1)
       Me.RibbonGroup11.Name = "RibbonGroup11"
-      Me.RibbonGroup11.Size = New System.Drawing.Size(73, 94)
+      Me.RibbonGroup11.Size = New System.Drawing.Size(73, 0)
       Me.RibbonGroup11.TabIndex = 2
       Me.RibbonGroup11.Text = "Inventario"
       '
@@ -4482,7 +4482,7 @@ Friend Class frmMain
       Me.RibbonGroup12.DialogLauncherButtonVisible = False
       Me.RibbonGroup12.Location = New System.Drawing.Point(252, 1)
       Me.RibbonGroup12.Name = "RibbonGroup12"
-      Me.RibbonGroup12.Size = New System.Drawing.Size(101, 94)
+      Me.RibbonGroup12.Size = New System.Drawing.Size(101, 0)
       Me.RibbonGroup12.TabIndex = 3
       Me.RibbonGroup12.Text = "Scorte"
       '
@@ -4518,7 +4518,7 @@ Friend Class frmMain
       Me.RibbonGroup10.DialogLauncherButtonVisible = False
       Me.RibbonGroup10.Location = New System.Drawing.Point(5, 1)
       Me.RibbonGroup10.Name = "RibbonGroup10"
-      Me.RibbonGroup10.Size = New System.Drawing.Size(147, 94)
+      Me.RibbonGroup10.Size = New System.Drawing.Size(147, 0)
       Me.RibbonGroup10.TabIndex = 0
       Me.RibbonGroup10.Text = "Visualizza"
       '
@@ -4574,7 +4574,7 @@ Friend Class frmMain
       Me.eui_GruppoReparti.KeyTip = "M"
       Me.eui_GruppoReparti.Location = New System.Drawing.Point(5, 1)
       Me.eui_GruppoReparti.Name = "eui_GruppoReparti"
-      Me.eui_GruppoReparti.Size = New System.Drawing.Size(101, 94)
+      Me.eui_GruppoReparti.Size = New System.Drawing.Size(101, 0)
       Me.eui_GruppoReparti.TabIndex = 0
       Me.eui_GruppoReparti.Text = "Reparti"
       '
@@ -4599,7 +4599,7 @@ Friend Class frmMain
       Me.eui_GruppoEtichette.Dock = System.Windows.Forms.DockStyle.Fill
       Me.eui_GruppoEtichette.Location = New System.Drawing.Point(106, 1)
       Me.eui_GruppoEtichette.Name = "eui_GruppoEtichette"
-      Me.eui_GruppoEtichette.Size = New System.Drawing.Size(97, 94)
+      Me.eui_GruppoEtichette.Size = New System.Drawing.Size(97, 0)
       Me.eui_GruppoEtichette.TabIndex = 1
       Me.eui_GruppoEtichette.Text = "Etichette"
       '
@@ -4624,7 +4624,7 @@ Friend Class frmMain
       Me.RibbonGroup19.Dock = System.Windows.Forms.DockStyle.Fill
       Me.RibbonGroup19.Location = New System.Drawing.Point(203, 1)
       Me.RibbonGroup19.Name = "RibbonGroup19"
-      Me.RibbonGroup19.Size = New System.Drawing.Size(116, 94)
+      Me.RibbonGroup19.Size = New System.Drawing.Size(116, 0)
       Me.RibbonGroup19.TabIndex = 2
       Me.RibbonGroup19.Text = "C.A.P."
       '
@@ -4649,7 +4649,7 @@ Friend Class frmMain
       Me.eui_GruppoTavoli.Dock = System.Windows.Forms.DockStyle.Fill
       Me.eui_GruppoTavoli.Location = New System.Drawing.Point(319, 1)
       Me.eui_GruppoTavoli.Name = "eui_GruppoTavoli"
-      Me.eui_GruppoTavoli.Size = New System.Drawing.Size(79, 94)
+      Me.eui_GruppoTavoli.Size = New System.Drawing.Size(79, 0)
       Me.eui_GruppoTavoli.TabIndex = 3
       Me.eui_GruppoTavoli.Text = "Tavoli"
       '
@@ -4674,7 +4674,7 @@ Friend Class frmMain
       Me.eui_GruppoMenu.Dock = System.Windows.Forms.DockStyle.Fill
       Me.eui_GruppoMenu.Location = New System.Drawing.Point(398, 1)
       Me.eui_GruppoMenu.Name = "eui_GruppoMenu"
-      Me.eui_GruppoMenu.Size = New System.Drawing.Size(75, 94)
+      Me.eui_GruppoMenu.Size = New System.Drawing.Size(75, 0)
       Me.eui_GruppoMenu.TabIndex = 4
       Me.eui_GruppoMenu.Text = "Menù"
       '
@@ -4701,7 +4701,7 @@ Friend Class frmMain
       Me.RibbonGroup22.Dock = System.Windows.Forms.DockStyle.Fill
       Me.RibbonGroup22.Location = New System.Drawing.Point(473, 1)
       Me.RibbonGroup22.Name = "RibbonGroup22"
-      Me.RibbonGroup22.Size = New System.Drawing.Size(165, 94)
+      Me.RibbonGroup22.Size = New System.Drawing.Size(165, 0)
       Me.RibbonGroup22.TabIndex = 5
       Me.RibbonGroup22.Text = "Strumenti"
       '
@@ -4769,7 +4769,7 @@ Friend Class frmMain
       Me.RibbonGroup14.DialogLauncherButtonVisible = False
       Me.RibbonGroup14.Location = New System.Drawing.Point(5, 1)
       Me.RibbonGroup14.Name = "RibbonGroup14"
-      Me.RibbonGroup14.Size = New System.Drawing.Size(316, 94)
+      Me.RibbonGroup14.Size = New System.Drawing.Size(316, 0)
       Me.RibbonGroup14.TabIndex = 0
       Me.RibbonGroup14.Text = "Finestra"
       '
@@ -4979,10 +4979,10 @@ Friend Class frmMain
       Me.eui_sbrMain.ControlsArea = Me.StatusBarControlsArea1
       Me.eui_sbrMain.Dock = System.Windows.Forms.DockStyle.Bottom
       Me.eui_sbrMain.ForeColor = System.Drawing.SystemColors.ControlText
-      Me.eui_sbrMain.Location = New System.Drawing.Point(0, 490)
+      Me.eui_sbrMain.Location = New System.Drawing.Point(0, 493)
       Me.eui_sbrMain.Name = "eui_sbrMain"
       Me.eui_sbrMain.NotificationsArea = Me.StatusBarNotificationsArea1
-      Me.eui_sbrMain.Size = New System.Drawing.Size(1204, 22)
+      Me.eui_sbrMain.Size = New System.Drawing.Size(1212, 22)
       Me.eui_sbrMain.TabIndex = 20
       '
       'StatusBarNotificationsArea1
@@ -4994,7 +4994,7 @@ Friend Class frmMain
       Me.StatusBarNotificationsArea1.MaximumSize = New System.Drawing.Size(0, 22)
       Me.StatusBarNotificationsArea1.MinimumSize = New System.Drawing.Size(0, 22)
       Me.StatusBarNotificationsArea1.Name = "StatusBarNotificationsArea1"
-      Me.StatusBarNotificationsArea1.Size = New System.Drawing.Size(784, 22)
+      Me.StatusBarNotificationsArea1.Size = New System.Drawing.Size(792, 22)
       Me.StatusBarNotificationsArea1.TabIndex = 1
       Me.StatusBarNotificationsArea1.Text = "Prova 2"
       '
@@ -5069,7 +5069,7 @@ Friend Class frmMain
       Me.StatusBarControlsArea1.Controls.Add(Me.StatusBarPane4)
       Me.StatusBarControlsArea1.Controls.Add(Me.StatusBarPane6)
       Me.StatusBarControlsArea1.Dock = System.Windows.Forms.DockStyle.Right
-      Me.StatusBarControlsArea1.Location = New System.Drawing.Point(784, 0)
+      Me.StatusBarControlsArea1.Location = New System.Drawing.Point(792, 0)
       Me.StatusBarControlsArea1.MaximumSize = New System.Drawing.Size(0, 22)
       Me.StatusBarControlsArea1.MinimumSize = New System.Drawing.Size(0, 22)
       Me.StatusBarControlsArea1.Name = "StatusBarControlsArea1"
@@ -5299,7 +5299,7 @@ Friend Class frmMain
       '
       Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
       Me.BackColor = System.Drawing.Color.White
-      Me.ClientSize = New System.Drawing.Size(1204, 512)
+      Me.ClientSize = New System.Drawing.Size(1212, 515)
       Me.Controls.Add(Me.eui_BackstageView1)
       Me.Controls.Add(Me.eui_File)
       Me.Controls.Add(Me.dtpData)

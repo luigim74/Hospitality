@@ -391,6 +391,12 @@
     <Compile Include="Codice\Form\Hospitality\Documento.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Codice\Form\Hospitality\ListaDocumenti.Designer.vb">
+      <DependentUpon>ListaDocumenti.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Codice\Form\Hospitality\ListaDocumenti.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Codice\Form\Hospitality\ListaPiatti.Designer.vb">
       <DependentUpon>ListaPiatti.vb</DependentUpon>
     </Compile>
@@ -922,6 +928,9 @@
       <DependentUpon>Documento.vb</DependentUpon>
     </EmbeddedResource>
     <None Include="bin\Reports\AccessoriServizi.rdlc" />
+    <EmbeddedResource Include="Codice\Form\Hospitality\ListaDocumenti.resx">
+      <DependentUpon>ListaDocumenti.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Codice\Form\Hospitality\ListaPiatti.resx">
       <DependentUpon>ListaPiatti.vb</DependentUpon>
     </EmbeddedResource>

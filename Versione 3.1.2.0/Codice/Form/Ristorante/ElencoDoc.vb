@@ -2098,7 +2098,7 @@ Public Class ElencoDoc
          oraStyle.HeaderText = "Ora"
          oraStyle.Width = 50
          oraStyle.NullText = ""
-         oraStyle.Alignment = HorizontalAlignment.Center
+         oraStyle.Alignment = HorizontalAlignment.Left
          oraStyle.TextBox.BackColor = Color.White
          gridStyle.GridColumnStyles.Add(oraStyle)
          ' Documento
