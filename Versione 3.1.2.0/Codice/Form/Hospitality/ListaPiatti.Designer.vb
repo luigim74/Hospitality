@@ -51,7 +51,7 @@ Partial Class ListaPiatti
       Me.lvwPiatti.MultiSelect = False
       Me.lvwPiatti.Name = "lvwPiatti"
       Me.lvwPiatti.ShowGroups = False
-      Me.lvwPiatti.Size = New System.Drawing.Size(706, 431)
+      Me.lvwPiatti.Size = New System.Drawing.Size(722, 472)
       Me.lvwPiatti.TabIndex = 0
       Me.ToolTip1.SetToolTip(Me.lvwPiatti, "Fare doppio click sulla voce selezionata per effettuare l'inserimento.")
       Me.lvwPiatti.UseCompatibleStateImageBehavior = False
@@ -94,7 +94,7 @@ Partial Class ListaPiatti
       '
       Me.eui_cmdAnnulla.DialogResult = System.Windows.Forms.DialogResult.Cancel
       Me.eui_cmdAnnulla.Id = "18f34544-3dbb-4745-85c7-b9b4886ff164"
-      Me.eui_cmdAnnulla.Location = New System.Drawing.Point(608, 434)
+      Me.eui_cmdAnnulla.Location = New System.Drawing.Point(625, 475)
       Me.eui_cmdAnnulla.Name = "eui_cmdAnnulla"
       Me.eui_cmdAnnulla.Size = New System.Drawing.Size(88, 32)
       Me.eui_cmdAnnulla.TabIndex = 2
@@ -103,7 +103,7 @@ Partial Class ListaPiatti
       'eui_cmdInserisci
       '
       Me.eui_cmdInserisci.Id = "5a06a0ca-1d3f-4ba0-a3b6-a9c00d271c54"
-      Me.eui_cmdInserisci.Location = New System.Drawing.Point(512, 434)
+      Me.eui_cmdInserisci.Location = New System.Drawing.Point(529, 475)
       Me.eui_cmdInserisci.Name = "eui_cmdInserisci"
       Me.eui_cmdInserisci.Size = New System.Drawing.Size(88, 32)
       Me.eui_cmdInserisci.TabIndex = 1
@@ -117,7 +117,7 @@ Partial Class ListaPiatti
       'eui_dwnListino
       '
       Me.eui_dwnListino.Id = "5e64669a-7a94-4a84-8de4-9c3e29903c2d"
-      Me.eui_dwnListino.Location = New System.Drawing.Point(9, 434)
+      Me.eui_dwnListino.Location = New System.Drawing.Point(9, 475)
       Me.eui_dwnListino.Name = "eui_dwnListino"
       Me.eui_dwnListino.Popup = Me.PopupMenu1
       Me.eui_dwnListino.Size = New System.Drawing.Size(88, 32)
@@ -174,7 +174,7 @@ Partial Class ListaPiatti
       Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
       Me.BackColor = System.Drawing.SystemColors.AppWorkspace
       Me.CancelButton = Me.eui_cmdAnnulla
-      Me.ClientSize = New System.Drawing.Size(705, 472)
+      Me.ClientSize = New System.Drawing.Size(722, 511)
       Me.Controls.Add(Me.eui_dwnListino)
       Me.Controls.Add(Me.eui_cmdInserisci)
       Me.Controls.Add(Me.eui_cmdAnnulla)

@@ -23,17 +23,17 @@ Partial Class ListaDocumenti
    <System.Diagnostics.DebuggerStepThrough()> _
    Private Sub InitializeComponent()
       Me.formFrameSkinner = New Elegant.Ui.FormFrameSkinner()
-      Me.lvwPiatti = New System.Windows.Forms.ListView()
+      Me.lvwDocumenti = New System.Windows.Forms.ListView()
+      Me.clnNumero = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
       Me.clnData = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
       Me.clnOra = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-      Me.clnNumero = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
       Me.clnDocumento = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
       Me.clnCliente = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
       Me.clnStato = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
       Me.clnTotale = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+      Me.clnCodice = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
       Me.eui_cmdImporta = New Elegant.Ui.Button()
       Me.eui_cmdAnnulla = New Elegant.Ui.Button()
-      Me.clnCodice = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
       Me.SuspendLayout()
       '
       'formFrameSkinner
@@ -41,19 +41,23 @@ Partial Class ListaDocumenti
       Me.formFrameSkinner.AllowGlass = False
       Me.formFrameSkinner.Form = Me
       '
-      'lvwPiatti
+      'lvwDocumenti
       '
-      Me.lvwPiatti.CheckBoxes = True
-      Me.lvwPiatti.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.clnNumero, Me.clnData, Me.clnOra, Me.clnDocumento, Me.clnCliente, Me.clnStato, Me.clnTotale, Me.clnCodice})
-      Me.lvwPiatti.FullRowSelect = True
-      Me.lvwPiatti.Location = New System.Drawing.Point(1, 0)
-      Me.lvwPiatti.MultiSelect = False
-      Me.lvwPiatti.Name = "lvwPiatti"
-      Me.lvwPiatti.ShowGroups = False
-      Me.lvwPiatti.Size = New System.Drawing.Size(726, 431)
-      Me.lvwPiatti.TabIndex = 1
-      Me.lvwPiatti.UseCompatibleStateImageBehavior = False
-      Me.lvwPiatti.View = System.Windows.Forms.View.Details
+      Me.lvwDocumenti.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.clnNumero, Me.clnData, Me.clnOra, Me.clnDocumento, Me.clnCliente, Me.clnStato, Me.clnTotale, Me.clnCodice})
+      Me.lvwDocumenti.FullRowSelect = True
+      Me.lvwDocumenti.Location = New System.Drawing.Point(1, 0)
+      Me.lvwDocumenti.MultiSelect = False
+      Me.lvwDocumenti.Name = "lvwDocumenti"
+      Me.lvwDocumenti.ShowGroups = False
+      Me.lvwDocumenti.Size = New System.Drawing.Size(726, 431)
+      Me.lvwDocumenti.TabIndex = 1
+      Me.lvwDocumenti.UseCompatibleStateImageBehavior = False
+      Me.lvwDocumenti.View = System.Windows.Forms.View.Details
+      '
+      'clnNumero
+      '
+      Me.clnNumero.Text = "Numero"
+      Me.clnNumero.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
       '
       'clnData
       '
@@ -63,11 +67,6 @@ Partial Class ListaDocumenti
       'clnOra
       '
       Me.clnOra.Text = "Ora"
-      '
-      'clnNumero
-      '
-      Me.clnNumero.Text = "Numero"
-      Me.clnNumero.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
       '
       'clnDocumento
       '
@@ -90,6 +89,11 @@ Partial Class ListaDocumenti
       Me.clnTotale.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
       Me.clnTotale.Width = 100
       '
+      'clnCodice
+      '
+      Me.clnCodice.Text = "Codice"
+      Me.clnCodice.Width = 0
+      '
       'eui_cmdImporta
       '
       Me.eui_cmdImporta.Id = "abaed722-854b-4d92-af0e-42b09a2d6a9e"
@@ -109,20 +113,15 @@ Partial Class ListaDocumenti
       Me.eui_cmdAnnulla.TabIndex = 4
       Me.eui_cmdAnnulla.Text = "&Annulla"
       '
-      'clnCodice
-      '
-      Me.clnCodice.Text = "Codice"
-      Me.clnCodice.Width = 0
-      '
       'ListaDocumenti
       '
       Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
       Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
       Me.BackColor = System.Drawing.SystemColors.AppWorkspace
-      Me.ClientSize = New System.Drawing.Size(727, 473)
+      Me.ClientSize = New System.Drawing.Size(727, 471)
       Me.Controls.Add(Me.eui_cmdImporta)
       Me.Controls.Add(Me.eui_cmdAnnulla)
-      Me.Controls.Add(Me.lvwPiatti)
+      Me.Controls.Add(Me.lvwDocumenti)
       Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
       Me.MaximizeBox = False
       Me.MinimizeBox = False
@@ -136,7 +135,7 @@ Partial Class ListaDocumenti
    End Sub
 
    Friend WithEvents formFrameSkinner As Elegant.Ui.FormFrameSkinner
-   Friend WithEvents lvwPiatti As ListView
+   Friend WithEvents lvwDocumenti As ListView
    Friend WithEvents clnNumero As ColumnHeader
    Friend WithEvents clnData As ColumnHeader
    Friend WithEvents clnDocumento As ColumnHeader

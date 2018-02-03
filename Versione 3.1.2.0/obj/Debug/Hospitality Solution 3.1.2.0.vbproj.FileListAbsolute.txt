@@ -187,3 +187,4 @@ D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\obj\Debug\fr\Hospit
 D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\obj\Debug\Hospitality Solution 3.exe
 D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\obj\Debug\Hospitality Solution 3.xml
 D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\obj\Debug\Hospitality Solution 3.pdb
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\obj\Debug\Hospitality_Solution.ListaDocumenti.resources

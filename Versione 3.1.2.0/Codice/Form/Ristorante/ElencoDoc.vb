@@ -2791,4 +2791,5 @@ Public Class ElencoDoc
    Private Sub dtpAl_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles dtpAl.ValueChanged
       AggiornaDatiPeriodo()
    End Sub
+
 End Class

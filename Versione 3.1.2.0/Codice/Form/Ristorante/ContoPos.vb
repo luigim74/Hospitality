@@ -3338,35 +3338,13 @@ Public Class ContoPos
             .SospesoIncassare = CFormatta.FormattaNumeroDouble(valSospeso)
             .TotDoc = CFormatta.FormattaNumeroDouble(Convert.ToDouble(valDaPagare))
 
-            If tipoDocumento = TIPO_DOC_FF Then
+            If tipoDocumento = TIPO_DOC_FF Or tipoDocumento = TIPO_DOC_RF Then
                ' Calcola l'IVA.
                Dim valImposta As Double
                Dim valImponibile As Double
 
                If IsNumeric(txtIva.Text) = True Then
-
-                  'Dim valCoefficiente As Double
-                  'Select Case txtIva.Text
-                  '   Case "22,00"
-                  '      valCoefficiente = 1.22
-                  '   Case "21,00"
-                  '      valCoefficiente = 1.21
-                  '   Case "20,00"
-                  '      valCoefficiente = 1.2
-                  '   Case "10,00"
-                  '      valCoefficiente = 1.1
-                  '   Case "4,00"
-                  '      valCoefficiente = 1.04
-                  '   Case Else
-                  '      valCoefficiente = 0.0
-                  'End Select
-
-                  'If valCoefficiente <> 0.0 Then
-                  valImponibile = CalcolaImponibileIva(txtIva.Text, valDaPagare) '(valDaPagare / valCoefficiente)
-                  'Else
-                  '   valImponibile = 0.0
-                  'End If
-
+                  valImponibile = CalcolaImponibileIva(txtIva.Text, valDaPagare)
                   valImposta = CalcolaPercentuale(valImponibile, Convert.ToDouble(txtIva.Text))
                Else
                   valImposta = 0.0

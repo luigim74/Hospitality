@@ -262,6 +262,11 @@
       Dim QTA As Integer = 1
 
       Try
+         g_frmDocumento.dgvDettagli.Focus()
+         g_frmDocumento.dgvDettagli.Rows.Add()
+         g_frmDocumento.dgvDettagli.Rows.Item(g_frmDocumento.dgvDettagli.Rows.Count - 2).Selected = True
+         g_frmDocumento.dgvDettagli.Rows.Item(g_frmDocumento.dgvDettagli.Rows.Count - 2).Cells.Item(0).Selected = True
+
          cn.Open()
 
          Dim cmd As New OleDbCommand("SELECT * FROM " & tabella & " WHERE Id = " & id & " ORDER BY Id ASC", cn)

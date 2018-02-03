@@ -307,7 +307,7 @@ Public Class frmDocumento
 
             ' DA_FARE_A: Valutare se salvare l'iva anche per le ricevute.
             ' Se fattura salva l'iva...
-            If eui_cmbTipoDocumento.Text = TIPO_DOC_FF Then
+            If eui_cmbTipoDocumento.Text = TIPO_DOC_FF Or eui_cmbTipoDocumento.Text = TIPO_DOC_RF Then
                eui_txtTotaliRep1ImponibileLordo.Text = CFormatta.FormattaNumeroDouble(Convert.ToDouble(.ImpLordoRep1))
                eui_txtTotaliRep2ImponibileLordo.Text = CFormatta.FormattaNumeroDouble(Convert.ToDouble(.ImpLordoRep2))
                eui_txtTotaliRep3ImponibileLordo.Text = CFormatta.FormattaNumeroDouble(Convert.ToDouble(.ImpLordoRep3))
@@ -524,7 +524,7 @@ Public Class frmDocumento
 
          eui_txtTotaleDocumento.Text = CFormatta.FormattaNumeroDouble(Convert.ToDouble(valDaPagare))
 
-         If g_frmContoPos.tipoDocumento = TIPO_DOC_FF Then
+         If g_frmContoPos.tipoDocumento = TIPO_DOC_FF Or g_frmContoPos.tipoDocumento = TIPO_DOC_RF Then
             ' Calcola l'IVA.
             Dim valImposta As Double
             Dim valImponibile As Double
@@ -749,7 +749,7 @@ Public Class frmDocumento
 
             ' DA_FARE_A: Valutare se salvare l'iva anche per le ricevute.
             ' Se fattura salva l'iva...
-            If eui_cmbTipoDocumento.Text = TIPO_DOC_FF Then
+            If eui_cmbTipoDocumento.Text = TIPO_DOC_FF Or eui_cmbTipoDocumento.Text = TIPO_DOC_RF Then
 
                .ImpLordoRep1 = eui_txtTotaliRep1ImponibileLordo.Text
                .ImpLordoRep2 = eui_txtTotaliRep2ImponibileLordo.Text
@@ -861,12 +861,12 @@ Public Class frmDocumento
 
                ' Esegue il comando.
                Dim Record As Integer = cmdInsert.ExecuteNonQuery()
-                  ' Conferma transazione.
-                  tr.Commit()
-               Next
+               ' Conferma transazione.
+               tr.Commit()
+            Next
 
-               ' Salva il Numero del prossimo documento da stampare.
-               SalvaNumeroDocFiscaleConfig(TAB_DOCUMENTI, eui_cmbTipoDocumento.Text, Convert.ToInt32(eui_txtNumero.Text))
+            ' Salva il Numero del prossimo documento da stampare.
+            SalvaNumeroDocFiscaleConfig(TAB_DOCUMENTI, eui_cmbTipoDocumento.Text, Convert.ToInt32(eui_txtNumero.Text))
 
          End With
 
@@ -1222,6 +1222,25 @@ Public Class frmDocumento
       End Try
    End Sub
 
+   Private Sub frmDocumento_Resize(sender As Object, e As EventArgs) Handles Me.Resize
+      Try
+         ' Larghezza minima.
+         If Me.Width <= 825 Then
+            Me.Width = 825
+         End If
+
+         ' Altezza minima.
+         If Me.Height <= 660 Then
+            Me.Height = 660
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
+   End Sub
+
    Private Sub eui_cmdAnnulla_Click(sender As Object, e As EventArgs) Handles eui_cmdAnnulla.Click
       Me.Close()
    End Sub
@@ -1515,12 +1534,12 @@ Public Class frmDocumento
 
    Private Sub eui_tpcDocumento_SelectedTabPageChanged(sender As Object, e As TabPageChangedEventArgs) Handles eui_tpcDocumento.SelectedTabPageChanged
       Try
-         Select Case eui_tpcDocumento.SelectedTabPage.Text
-            Case "Dettagli"
-               If dgvDettagli.Rows.Count = 1 Then
-                  eui_cmdCancellaTutto.PerformClick()
-               End If
-         End Select
+         'Select Case eui_tpcDocumento.SelectedTabPage.Text
+         '   Case "Dettagli"
+         '      If dgvDettagli.Rows.Count = 1 Then
+         '         eui_cmdCancellaTutto.PerformClick()
+         '      End If
+         'End Select
 
       Catch ex As Exception
          ' Visualizza un messaggio di errore e lo registra nell'apposito file.
@@ -1568,7 +1587,7 @@ Public Class frmDocumento
       Try
          dgvDettagli.Focus()
          dgvDettagli.Rows.Clear()
-         dgvDettagli.Rows.Add()
+         'dgvDettagli.Rows.Add()
 
          CalcolaImportoRigaDoc()
          CalcolaTotaleSconto()
@@ -1866,6 +1885,5 @@ Public Class frmDocumento
    Private Sub eui_cmdTastiera_Click(sender As Object, e As EventArgs) Handles eui_cmdTastiera.Click
       AvviaTastieraVirtuale(Me.Handle)
    End Sub
-
 
 End Class
