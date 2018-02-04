@@ -40,19 +40,21 @@ Partial Class ListaPiatti
       Me.eui_cmdListino2 = New Elegant.Ui.Button()
       Me.eui_cmdListino3 = New Elegant.Ui.Button()
       Me.eui_cmdListino4 = New Elegant.Ui.Button()
+      Me.clnCategoria = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+      Me.eui_cmbCategoriaPiatti = New Elegant.Ui.ComboBox()
       CType(Me.PopupMenu1, System.ComponentModel.ISupportInitialize).BeginInit()
       Me.SuspendLayout()
       '
       'lvwPiatti
       '
-      Me.lvwPiatti.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.clnCodice, Me.clnDescrizione, Me.clnListino1, Me.clnListino2, Me.clnListino3, Me.clnListino4})
+      Me.lvwPiatti.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.clnCodice, Me.clnDescrizione, Me.clnListino1, Me.clnListino2, Me.clnListino3, Me.clnListino4, Me.clnCategoria})
       Me.lvwPiatti.FullRowSelect = True
-      Me.lvwPiatti.Location = New System.Drawing.Point(0, 0)
+      Me.lvwPiatti.Location = New System.Drawing.Point(0, 23)
       Me.lvwPiatti.MultiSelect = False
       Me.lvwPiatti.Name = "lvwPiatti"
       Me.lvwPiatti.ShowGroups = False
-      Me.lvwPiatti.Size = New System.Drawing.Size(722, 472)
-      Me.lvwPiatti.TabIndex = 0
+      Me.lvwPiatti.Size = New System.Drawing.Size(722, 449)
+      Me.lvwPiatti.TabIndex = 1
       Me.ToolTip1.SetToolTip(Me.lvwPiatti, "Fare doppio click sulla voce selezionata per effettuare l'inserimento.")
       Me.lvwPiatti.UseCompatibleStateImageBehavior = False
       Me.lvwPiatti.View = System.Windows.Forms.View.Details
@@ -97,7 +99,7 @@ Partial Class ListaPiatti
       Me.eui_cmdAnnulla.Location = New System.Drawing.Point(625, 475)
       Me.eui_cmdAnnulla.Name = "eui_cmdAnnulla"
       Me.eui_cmdAnnulla.Size = New System.Drawing.Size(88, 32)
-      Me.eui_cmdAnnulla.TabIndex = 2
+      Me.eui_cmdAnnulla.TabIndex = 4
       Me.eui_cmdAnnulla.Text = "&Annulla"
       '
       'eui_cmdInserisci
@@ -106,7 +108,7 @@ Partial Class ListaPiatti
       Me.eui_cmdInserisci.Location = New System.Drawing.Point(529, 475)
       Me.eui_cmdInserisci.Name = "eui_cmdInserisci"
       Me.eui_cmdInserisci.Size = New System.Drawing.Size(88, 32)
-      Me.eui_cmdInserisci.TabIndex = 1
+      Me.eui_cmdInserisci.TabIndex = 3
       Me.eui_cmdInserisci.Text = "&Inserisci"
       '
       'formFrameSkinner
@@ -121,7 +123,7 @@ Partial Class ListaPiatti
       Me.eui_dwnListino.Name = "eui_dwnListino"
       Me.eui_dwnListino.Popup = Me.PopupMenu1
       Me.eui_dwnListino.Size = New System.Drawing.Size(88, 32)
-      Me.eui_dwnListino.TabIndex = 44
+      Me.eui_dwnListino.TabIndex = 2
       Me.eui_dwnListino.Text = "Listino 1"
       '
       'PopupMenu1
@@ -167,6 +169,22 @@ Partial Class ListaPiatti
       Me.eui_cmdListino4.TabIndex = 6
       Me.eui_cmdListino4.Text = "Listino 4"
       '
+      'clnCategoria
+      '
+      Me.clnCategoria.Text = "Categoria"
+      Me.clnCategoria.Width = 0
+      '
+      'eui_cmbCategoriaPiatti
+      '
+      Me.eui_cmbCategoriaPiatti.Editable = False
+      Me.eui_cmbCategoriaPiatti.FormattingEnabled = False
+      Me.eui_cmbCategoriaPiatti.Id = "d3c08594-2644-4e76-836b-41ec7bea407d"
+      Me.eui_cmbCategoriaPiatti.Location = New System.Drawing.Point(1, 1)
+      Me.eui_cmbCategoriaPiatti.Name = "eui_cmbCategoriaPiatti"
+      Me.eui_cmbCategoriaPiatti.Size = New System.Drawing.Size(721, 21)
+      Me.eui_cmbCategoriaPiatti.TabIndex = 0
+      Me.eui_cmbCategoriaPiatti.TextEditorWidth = 702
+      '
       'ListaPiatti
       '
       Me.AcceptButton = Me.eui_cmdInserisci
@@ -174,7 +192,8 @@ Partial Class ListaPiatti
       Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
       Me.BackColor = System.Drawing.SystemColors.AppWorkspace
       Me.CancelButton = Me.eui_cmdAnnulla
-      Me.ClientSize = New System.Drawing.Size(722, 511)
+      Me.ClientSize = New System.Drawing.Size(724, 511)
+      Me.Controls.Add(Me.eui_cmbCategoriaPiatti)
       Me.Controls.Add(Me.eui_dwnListino)
       Me.Controls.Add(Me.eui_cmdInserisci)
       Me.Controls.Add(Me.eui_cmdAnnulla)
@@ -189,6 +208,7 @@ Partial Class ListaPiatti
       Me.Text = "Seleziona Piatto"
       CType(Me.PopupMenu1, System.ComponentModel.ISupportInitialize).EndInit()
       Me.ResumeLayout(False)
+      Me.PerformLayout()
 
    End Sub
    Friend WithEvents lvwPiatti As System.Windows.Forms.ListView
@@ -208,4 +228,6 @@ Partial Class ListaPiatti
    Friend WithEvents clnListino2 As ColumnHeader
    Friend WithEvents clnListino3 As ColumnHeader
    Friend WithEvents clnListino4 As ColumnHeader
+   Friend WithEvents clnCategoria As ColumnHeader
+   Friend WithEvents eui_cmbCategoriaPiatti As Elegant.Ui.ComboBox
 End Class

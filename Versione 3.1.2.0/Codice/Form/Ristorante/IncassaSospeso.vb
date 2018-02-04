@@ -777,7 +777,7 @@ Public Class IncassaSospeso
             .Carte = VALORE_ZERO
             .BuoniPasto = VALORE_ZERO
             .BuoniPastoIncassare = VALORE_ZERO
-            .Chiuso = "No"
+            .Chiuso = "Sì"
             .Note = ""
             .TipoPagamento = String.Empty
             .Tavolo = String.Empty

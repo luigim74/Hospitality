@@ -3319,7 +3319,7 @@ Public Class ContoPos
             .Carte = CFormatta.FormattaNumeroDouble(txtCartaCredito.Text)
             .BuoniPasto = CFormatta.FormattaNumeroDouble(txtBuoni.Text)
             .BuoniPastoIncassare = CFormatta.FormattaNumeroDouble(txtBuoni.Text)
-            .Chiuso = "No"
+            .Chiuso = "Sì"
             .Note = String.Empty
 
             If txtCartaCredito.Text <> VALORE_ZERO Then
@@ -4916,10 +4916,6 @@ Public Class ContoPos
    Private Sub lstvDettagli_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles lstvDettagli.SelectedIndexChanged
       ' Riproduce un effetto sonoro.
       RiproduciEffettoSonoro(My.Resources.beep_Lista, EffettiSonoriPOS)
-
-   End Sub
-
-   Private Sub txtCap_TextChanged(sender As System.Object, e As System.EventArgs) Handles txtCap.TextChanged
 
    End Sub
 

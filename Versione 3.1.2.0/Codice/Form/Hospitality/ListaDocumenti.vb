@@ -261,6 +261,9 @@
 
          Loop
 
+         ' Modifica lo stato del documento.
+         g_frmDocumento.ModificaStatoDocumento(NOME_TABELLA, id, "Importato")
+
          ' Registra loperazione effettuata dall'operatore identificato.
          'g_frmMain.RegistraOperazione(TipoOperazione.SelezionaPiatto, strDescrizione, MODULO_GESTIONE_POS)
 

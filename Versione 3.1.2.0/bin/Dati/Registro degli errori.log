@@ -3069,3 +3069,261 @@ Nome parametro: index"
    in Hospitality_Solution.ElencoContiPos.CaricaListaConti(ListView lstv, String tabella, String sql, Boolean cliente)"
 "
 "
+"*** 04/02/2018 - 15:23:17 ***"
+"- DESCRIZIONE ERRORE: Cast non valido dalla stringa """" al tipo 'Double'."
+"- NOME PROCEDURA:    in Microsoft.VisualBasic.CompilerServices.Conversions.ToDouble(String Value, NumberFormatInfo NumberFormat)
+   in Microsoft.VisualBasic.CompilerServices.Operators.CompareObject2(Object Left, Object Right, Boolean TextCompare)
+   in Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectNotEqual(Object Left, Object Right, Boolean TextCompare)
+   in Hospitality_Solution.frmDocumento.SalvaStatistiche(Boolean rifDoc)"
+"
+"
+"*** 04/02/2018 - 15:30:47 ***"
+"- DESCRIZIONE ERRORE: Riferimento a un oggetto non impostato su un'istanza di oggetto."
+"- NOME PROCEDURA:    in Hospitality_Solution.frmDocumento.SalvaStatistiche(Boolean rifDoc) in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Hospitality\Documento.vb:riga 387"
+"
+"
+"*** 04/02/2018 - 16:29:15 ***"
+"- DESCRIZIONE ERRORE: Riferimento a un oggetto non impostato su un'istanza di oggetto."
+"- NOME PROCEDURA:    in Hospitality_Solution.frmDocumento.SalvaDocumento() in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Hospitality\Documento.vb:riga 1275"
+"
+"
+"*** 04/02/2018 - 16:31:22 ***"
+"- DESCRIZIONE ERRORE: Riferimento a un oggetto non impostato su un'istanza di oggetto."
+"- NOME PROCEDURA:    in Hospitality_Solution.frmDocumento.SalvaStatistiche(Boolean rifDoc) in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Hospitality\Documento.vb:riga 376"
+"
+"
+"*** 04/02/2018 - 16:31:51 ***"
+"- DESCRIZIONE ERRORE: Riferimento a un oggetto non impostato su un'istanza di oggetto."
+"- NOME PROCEDURA:    in Hospitality_Solution.frmDocumento.SalvaDocumento() in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Hospitality\Documento.vb:riga 1275"
+"
+"
+"*** 04/02/2018 - 16:36:18 ***"
+"- DESCRIZIONE ERRORE: Il campo ""Statistiche.IdPiatto"" non può contenere una stringa di lunghezza zero."
+"- NOME PROCEDURA:    in System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   in System.Data.OleDb.OleDbCommand.ExecuteNonQuery()
+   in Hospitality_Solution.Statistiche.InserisciDati(String tabella) in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Classi\Statistiche.vb:riga 154"
+"
+"
+"*** 04/02/2018 - 16:38:05 ***"
+"- DESCRIZIONE ERRORE: Riferimento a un oggetto non impostato su un'istanza di oggetto."
+"- NOME PROCEDURA:    in Hospitality_Solution.frmDocumento.SalvaDocumento() in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Hospitality\Documento.vb:riga 1275"
+"
+"
+"*** 04/02/2018 - 16:45:23 ***"
+"- DESCRIZIONE ERRORE: Cast non valido dalla stringa """" al tipo 'Double'."
+"- NOME PROCEDURA:    in Microsoft.VisualBasic.CompilerServices.Conversions.ToDouble(String Value, NumberFormatInfo NumberFormat)
+   in Microsoft.VisualBasic.CompilerServices.Operators.CompareObject2(Object Left, Object Right, Boolean TextCompare)
+   in Microsoft.VisualBasic.CompilerServices.Operators.CompareObjectNotEqual(Object Left, Object Right, Boolean TextCompare)
+   in Hospitality_Solution.frmDocumento.SalvaStatistiche(Boolean rifDoc) in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Hospitality\Documento.vb:riga 376"
+"
+"
+"*** 04/02/2018 - 16:48:49 ***"
+"- DESCRIZIONE ERRORE: Riferimento a un oggetto non impostato su un'istanza di oggetto."
+"- NOME PROCEDURA:    in Hospitality_Solution.frmDocumento.SalvaDocumento() in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Hospitality\Documento.vb:riga 1280"
+"
+"
+"*** 04/02/2018 - 17:00:34 ***"
+"- DESCRIZIONE ERRORE: Riferimento a un oggetto non impostato su un'istanza di oggetto."
+"- NOME PROCEDURA:    in Hospitality_Solution.frmDocumento.SalvaDocumento() in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Hospitality\Documento.vb:riga 1277"
+"
+"
+"*** 04/02/2018 - 17:17:22 ***"
+"- DESCRIZIONE ERRORE: Tipi di dati non corrispondenti nell'espressione criterio."
+"- NOME PROCEDURA:    in System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   in System.Data.OleDb.OleDbCommand.ExecuteNonQuery()
+   in Hospitality_Solution.frmDocumento.SalvaDocumento() in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Hospitality\Documento.vb:riga 1316"
+"
+"
+"*** 04/02/2018 - 17:31:44 ***"
+"- DESCRIZIONE ERRORE: Il campo ""Statistiche.DesCategoria"" non può contenere una stringa di lunghezza zero."
+"- NOME PROCEDURA:    in System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object& executeResult)
+   in System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   in System.Data.OleDb.OleDbCommand.ExecuteNonQuery()
+   in Hospitality_Solution.Statistiche.InserisciDati(String tabella) in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Classi\Statistiche.vb:riga 154"
+"
+"
+"*** 04/02/2018 - 17:57:59 ***"
+"- DESCRIZIONE ERRORE: Formato della stringa di input non corretto."
+"- NOME PROCEDURA:    in System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   in System.String.System.IConvertible.ToDouble(IFormatProvider provider)
+   in System.Convert.ToDouble(Object value)
+   in Hospitality_Solution.ListaPiatti.CaricaLista(String tabella, String categoria) in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Hospitality\ListaPiatti.vb:riga 125"
+"
+"
+"*** 04/02/2018 - 17:58:02 ***"
+"- DESCRIZIONE ERRORE: Formato della stringa di input non corretto."
+"- NOME PROCEDURA:    in System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   in System.String.System.IConvertible.ToDouble(IFormatProvider provider)
+   in System.Convert.ToDouble(Object value)
+   in Hospitality_Solution.ListaPiatti.CaricaLista(String tabella, String categoria) in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Hospitality\ListaPiatti.vb:riga 125"
+"
+"
+"*** 04/02/2018 - 17:58:10 ***"
+"- DESCRIZIONE ERRORE: Formato della stringa di input non corretto."
+"- NOME PROCEDURA:    in System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   in System.String.System.IConvertible.ToDouble(IFormatProvider provider)
+   in System.Convert.ToDouble(Object value)
+   in Hospitality_Solution.ListaPiatti.CaricaLista(String tabella, String categoria) in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Hospitality\ListaPiatti.vb:riga 125"
+"
+"
+"*** 04/02/2018 - 17:58:21 ***"
+"- DESCRIZIONE ERRORE: Formato della stringa di input non corretto."
+"- NOME PROCEDURA:    in System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   in System.String.System.IConvertible.ToDouble(IFormatProvider provider)
+   in System.Convert.ToDouble(Object value)
+   in Hospitality_Solution.ListaPiatti.CaricaLista(String tabella, String categoria) in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Hospitality\ListaPiatti.vb:riga 125"
+"
+"
+"*** 04/02/2018 - 17:59:01 ***"
+"- DESCRIZIONE ERRORE: Formato della stringa di input non corretto."
+"- NOME PROCEDURA:    in System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   in System.String.System.IConvertible.ToDouble(IFormatProvider provider)
+   in System.Convert.ToDouble(Object value)
+   in Hospitality_Solution.ListaPiatti.CaricaLista(String tabella, String categoria) in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Hospitality\ListaPiatti.vb:riga 125"
+"
+"
+"*** 04/02/2018 - 17:59:03 ***"
+"- DESCRIZIONE ERRORE: Formato della stringa di input non corretto."
+"- NOME PROCEDURA:    in System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   in System.String.System.IConvertible.ToDouble(IFormatProvider provider)
+   in System.Convert.ToDouble(Object value)
+   in Hospitality_Solution.ListaPiatti.CaricaLista(String tabella, String categoria) in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Hospitality\ListaPiatti.vb:riga 125"
+"
+"
+"*** 04/02/2018 - 17:59:09 ***"
+"- DESCRIZIONE ERRORE: Formato della stringa di input non corretto."
+"- NOME PROCEDURA:    in System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   in System.String.System.IConvertible.ToDouble(IFormatProvider provider)
+   in System.Convert.ToDouble(Object value)
+   in Hospitality_Solution.ListaPiatti.CaricaLista(String tabella, String categoria) in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Hospitality\ListaPiatti.vb:riga 125"
+"
+"
+"*** 04/02/2018 - 17:59:21 ***"
+"- DESCRIZIONE ERRORE: Cast non valido dalla stringa """" al tipo 'Double'."
+"- NOME PROCEDURA:    in Microsoft.VisualBasic.CompilerServices.Conversions.ToDouble(String Value, NumberFormatInfo NumberFormat)
+   in Microsoft.VisualBasic.CompilerServices.Operators.CompareObject2(Object Left, Object Right, Boolean TextCompare)
+   in Microsoft.VisualBasic.CompilerServices.Operators.CompareObjectNotEqual(Object Left, Object Right, Boolean TextCompare)
+   in Hospitality_Solution.frmDocumento.SalvaStatistiche(Boolean rifDoc) in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Hospitality\Documento.vb:riga 376"
+"
+"
+"*** 04/02/2018 - 18:00:12 ***"
+"- DESCRIZIONE ERRORE: Categoria"
+"- NOME PROCEDURA:    in System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   in System.Data.OleDb.OleDbDataReader.GetOrdinal(String name)
+   in System.Data.OleDb.OleDbDataReader.get_Item(String name)
+   in Hospitality_Solution.frmDocumento.InserisciDettagliRiga(String tabella, Int32 id) in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Hospitality\Documento.vb:riga 861"
+"
+"
+"*** 04/02/2018 - 18:04:16 ***"
+"- DESCRIZIONE ERRORE: Categoria"
+"- NOME PROCEDURA:    in System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   in System.Data.OleDb.OleDbDataReader.GetOrdinal(String name)
+   in System.Data.OleDb.OleDbDataReader.get_Item(String name)
+   in Hospitality_Solution.frmDocumento.InserisciDettagliRiga(String tabella, Int32 id) in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Hospitality\Documento.vb:riga 861"
+"
+"
+"*** 04/02/2018 - 18:04:47 ***"
+"- DESCRIZIONE ERRORE: Categoria"
+"- NOME PROCEDURA:    in System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   in System.Data.OleDb.OleDbDataReader.GetOrdinal(String name)
+   in System.Data.OleDb.OleDbDataReader.get_Item(String name)
+   in Hospitality_Solution.frmDocumento.InserisciDettagliRiga(String tabella, Int32 id) in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Hospitality\Documento.vb:riga 861"
+"
+"
+"*** 04/02/2018 - 18:04:57 ***"
+"- DESCRIZIONE ERRORE: Formato della stringa di input non corretto."
+"- NOME PROCEDURA:    in System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   in System.String.System.IConvertible.ToDouble(IFormatProvider provider)
+   in System.Convert.ToDouble(Object value)
+   in Hospitality_Solution.ListaPiatti.CaricaLista(String tabella, String categoria) in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Hospitality\ListaPiatti.vb:riga 125"
+"
+"
+"*** 04/02/2018 - 18:05:01 ***"
+"- DESCRIZIONE ERRORE: Formato della stringa di input non corretto."
+"- NOME PROCEDURA:    in System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   in System.String.System.IConvertible.ToDouble(IFormatProvider provider)
+   in System.Convert.ToDouble(Object value)
+   in Hospitality_Solution.ListaPiatti.CaricaLista(String tabella, String categoria) in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Hospitality\ListaPiatti.vb:riga 125"
+"
+"
+"*** 04/02/2018 - 18:10:24 ***"
+"- DESCRIZIONE ERRORE: Cast non valido dalla stringa """" al tipo 'Double'."
+"- NOME PROCEDURA:    in Microsoft.VisualBasic.CompilerServices.Conversions.ToDouble(String Value, NumberFormatInfo NumberFormat)
+   in Microsoft.VisualBasic.CompilerServices.Operators.CompareObject2(Object Left, Object Right, Boolean TextCompare)
+   in Microsoft.VisualBasic.CompilerServices.Operators.CompareObjectNotEqual(Object Left, Object Right, Boolean TextCompare)
+   in Hospitality_Solution.frmDocumento.SalvaStatistiche(Boolean rifDoc) in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Hospitality\Documento.vb:riga 376"
+"
+"
+"*** 04/02/2018 - 18:10:46 ***"
+"- DESCRIZIONE ERRORE: Categoria"
+"- NOME PROCEDURA:    in System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   in System.Data.OleDb.OleDbDataReader.GetOrdinal(String name)
+   in System.Data.OleDb.OleDbDataReader.get_Item(String name)
+   in Hospitality_Solution.frmDocumento.InserisciDettagliRiga(String tabella, Int32 id) in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Hospitality\Documento.vb:riga 861"
+"
+"
+"*** 04/02/2018 - 18:18:18 ***"
+"- DESCRIZIONE ERRORE: Cast non valido dalla stringa """" al tipo 'Double'."
+"- NOME PROCEDURA:    in Microsoft.VisualBasic.CompilerServices.Conversions.ToDouble(String Value, NumberFormatInfo NumberFormat)
+   in Microsoft.VisualBasic.CompilerServices.Operators.CompareObject2(Object Left, Object Right, Boolean TextCompare)
+   in Microsoft.VisualBasic.CompilerServices.Operators.CompareObjectNotEqual(Object Left, Object Right, Boolean TextCompare)
+   in Hospitality_Solution.frmDocumento.SalvaStatistiche(Boolean rifDoc) in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Hospitality\Documento.vb:riga 376"
+"
+"
+"*** 04/02/2018 - 18:23:21 ***"
+"- DESCRIZIONE ERRORE: Cast non valido dalla stringa """" al tipo 'Double'."
+"- NOME PROCEDURA:    in Microsoft.VisualBasic.CompilerServices.Conversions.ToDouble(String Value, NumberFormatInfo NumberFormat)
+   in Microsoft.VisualBasic.CompilerServices.Operators.CompareObject2(Object Left, Object Right, Boolean TextCompare)
+   in Microsoft.VisualBasic.CompilerServices.Operators.CompareObjectNotEqual(Object Left, Object Right, Boolean TextCompare)
+   in Hospitality_Solution.frmDocumento.SalvaStatistiche(Boolean rifDoc) in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Hospitality\Documento.vb:riga 376"
+"
+"
+"*** 04/02/2018 - 18:25:39 ***"
+"- DESCRIZIONE ERRORE: Cast non valido dalla stringa """" al tipo 'Double'."
+"- NOME PROCEDURA:    in Microsoft.VisualBasic.CompilerServices.Conversions.ToDouble(String Value, NumberFormatInfo NumberFormat)
+   in Microsoft.VisualBasic.CompilerServices.Operators.CompareObject2(Object Left, Object Right, Boolean TextCompare)
+   in Microsoft.VisualBasic.CompilerServices.Operators.CompareObjectNotEqual(Object Left, Object Right, Boolean TextCompare)
+   in Hospitality_Solution.frmDocumento.SalvaStatistiche(Boolean rifDoc) in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Hospitality\Documento.vb:riga 376"
+"
+"
+"*** 04/02/2018 - 18:36:29 ***"
+"- DESCRIZIONE ERRORE: Riferimento a un oggetto non impostato su un'istanza di oggetto."
+"- NOME PROCEDURA:    in Hospitality_Solution.frmDocumento.SalvaStatistiche(Boolean rifDoc) in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Hospitality\Documento.vb:riga 376"
+"
+"
+"*** 04/02/2018 - 18:44:53 ***"
+"- DESCRIZIONE ERRORE: Riferimento a un oggetto non impostato su un'istanza di oggetto."
+"- NOME PROCEDURA:    in Hospitality_Solution.frmDocumento.SalvaStatistiche(Boolean rifDoc) in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Hospitality\Documento.vb:riga 393"
+"
+"
+"*** 04/02/2018 - 18:46:12 ***"
+"- DESCRIZIONE ERRORE: Riferimento a un oggetto non impostato su un'istanza di oggetto."
+"- NOME PROCEDURA:    in Hospitality_Solution.frmDocumento.SalvaStatistiche(Boolean rifDoc) in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Hospitality\Documento.vb:riga 393"
+"
+"
+"*** 04/02/2018 - 18:46:46 ***"
+"- DESCRIZIONE ERRORE: Riferimento a un oggetto non impostato su un'istanza di oggetto."
+"- NOME PROCEDURA:    in Hospitality_Solution.frmDocumento.SalvaStatistiche(Boolean rifDoc) in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Hospitality\Documento.vb:riga 393"
+"
+"
+"*** 04/02/2018 - 18:48:52 ***"
+"- DESCRIZIONE ERRORE: Riferimento a un oggetto non impostato su un'istanza di oggetto."
+"- NOME PROCEDURA:    in Hospitality_Solution.frmDocumento.SalvaStatistiche(Boolean rifDoc) in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Hospitality\Documento.vb:riga 393"
+"
+"
+"*** 04/02/2018 - 18:50:01 ***"
+"- DESCRIZIONE ERRORE: Riferimento a un oggetto non impostato su un'istanza di oggetto."
+"- NOME PROCEDURA:    in Hospitality_Solution.frmDocumento.SalvaStatistiche(Boolean rifDoc) in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Hospitality\Documento.vb:riga 393"
+"
+"

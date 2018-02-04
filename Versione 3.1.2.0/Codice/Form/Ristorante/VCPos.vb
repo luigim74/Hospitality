@@ -1828,7 +1828,7 @@ Public Class frmPos
 
 #End Region
 
-#Region "Scarico ingredienti"
+#Region "Scarico ingredienti "
    Private Function SalvaDati(ByVal tabella As String, ByVal id As Integer, ByVal giacenza As Double,
                               ByVal carico As Double, ByVal scarico As Double,
                               ByVal situazione As Double, ByVal prezzo As String,
@@ -1951,6 +1951,7 @@ Public Class frmPos
          cn.Close()
       End Try
    End Function
+
    Private Function CalcolaGiacenza(ByVal giacenza As Double, ByVal scortaMin As Double, ByVal quantità As Double) As Double
       Try
          If scortaMin > 0 Then
@@ -3420,7 +3421,7 @@ Public Class frmPos
                .DesCameriere = String.Empty
 
                If lstvDettagli.Items(i).SubItems(1).Text <> String.Empty Then
-                  .Quantità = Convert.ToDecimal(lstvDettagli.Items(i).SubItems(1).Text)
+                  .Quantità = Convert.ToDouble(lstvDettagli.Items(i).SubItems(1).Text)
                Else
                   .Quantità = 1
                End If

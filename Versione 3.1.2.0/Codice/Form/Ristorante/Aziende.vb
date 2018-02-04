@@ -2481,7 +2481,7 @@ Public Class frmAziende
             .Sospeso = VALORE_ZERO
             .SospesoIncassare = VALORE_ZERO
             .TotDoc = valDaPagare
-            .Chiuso = "No"
+            .Chiuso = "Sì"
             .Note = FormattaApici(txtNoteDoc.Text)
 
             ' Calcola l'IVA.

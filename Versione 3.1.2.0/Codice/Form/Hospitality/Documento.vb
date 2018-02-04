@@ -9,6 +9,7 @@ Public Class frmDocumento
    Const TAB_TIPO_DOCUMENTI As String = "TipoDoc"
    Const TAB_CAUSALI_DOCUMENTI As String = "CausaliDocumento"
    Const TAB_TIPO_PAGAMENTO As String = "ModPagamento"
+   Const TAB_STATISTICHE As String = "Statistiche"
 
    Const TIPO_DOC_RF As String = "Ricevuta Fiscale"
    Const TIPO_DOC_FF As String = "Fattura"
@@ -60,6 +61,380 @@ Public Class frmDocumento
       ' Aggiungere le eventuali istruzioni di inizializzazione dopo la chiamata a InitializeComponent().
 
    End Sub
+
+#Region "Scarico ingredienti "
+
+   Private Function SalvaDati(ByVal tabella As String, ByVal id As Integer, ByVal giacenza As Double,
+                              ByVal carico As Double, ByVal scarico As Double,
+                              ByVal situazione As Double, ByVal prezzo As String,
+                              ByVal valCarico As Double, ByVal valScarico As Double, ByVal valAttuale As Double) As Boolean
+
+      Dim cn As New OleDbConnection(ConnString)
+      Dim sql As String
+
+      Try
+         ' Apre la connessione.
+         cn.Open()
+
+         ' Avvia una transazione.
+         tr = cn.BeginTransaction(IsolationLevel.ReadCommitted)
+
+         ' Crea la stringa di eliminazione.
+         sql = String.Format("UPDATE {0} " &
+                             "SET Giacenza = @Giacenza, " &
+                             "Carico = @Carico, " &
+                             "Scarico = @Scarico, " &
+                             "SituazioneScorta = @SituazioneScorta, " &
+                             "ValCarico = @ValCarico, " &
+                             "valScarico = @ValScarico, " &
+                             "ValAttuale = @ValAttuale, " &
+                             "PrezzoAcquisto = @Prezzo " &
+                             "WHERE Id = {1}",
+                              tabella,
+                              id)
+
+         ' Crea il comando per la connessione corrente.
+         Dim cmdUpdate As New OleDbCommand(sql, cn, tr)
+
+         cmdUpdate.Parameters.AddWithValue("@Giacenza", giacenza)
+         cmdUpdate.Parameters.AddWithValue("@Carico", carico)
+         cmdUpdate.Parameters.AddWithValue("@Scarico", scarico)
+         cmdUpdate.Parameters.AddWithValue("@SituazioneScorta", situazione)
+         cmdUpdate.Parameters.AddWithValue("@ValCarico", valCarico)
+         cmdUpdate.Parameters.AddWithValue("@ValScarico", valScarico)
+         cmdUpdate.Parameters.AddWithValue("@ValAttuale", valAttuale)
+         cmdUpdate.Parameters.AddWithValue("@Prezzo", prezzo)
+
+         ' Esegue il comando.
+         Dim Record As Integer = cmdUpdate.ExecuteNonQuery()
+
+         ' Conferma transazione.
+         tr.Commit()
+
+         Return True
+
+      Catch ex As Exception
+         ' Annulla transazione.
+         tr.Rollback()
+
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+         Return False
+
+      Finally
+         ' Chiude la connessione.
+         cn.Close()
+      End Try
+   End Function
+
+   Private Function SalvaMovimentiMag(ByVal tabella As String, ByVal id_Articolo As Integer, ByVal data As String,
+                                      ByVal codice As String, ByVal descrizione As String,
+                                      ByVal carico As Double, ByVal scarico As Double,
+                                      ByVal causale As String, ByVal prezzo As String,
+                                      ByVal fornitore As String, ByVal magazzino As String) As Boolean
+
+      Dim cn As New OleDbConnection(ConnString)
+      Dim sql As String
+
+      Try
+         ' Apre la connessione.
+         cn.Open()
+
+         ' Avvia una transazione.
+         tr = cn.BeginTransaction(IsolationLevel.ReadCommitted)
+
+         ' Crea la stringa di eliminazione.
+         sql = String.Format("INSERT INTO {0} (Id_Articolo, Data, Codice, Descrizione, PrezzoAcquisto, " &
+                                              "Carico, Scarico, Causale, Fornitore, Magazzino) " &
+                                       "VALUES(@Id_Articolo, @Data, @Codice, @Descrizione, @PrezzoAcquisto, " &
+                                              "@Carico, @Scarico, @Causale, @Fornitore, @Magazzino)", tabella)
+
+         ' Crea il comando per la connessione corrente.
+         Dim cmdInsert As New OleDbCommand(sql, cn, tr)
+
+         cmdInsert.Parameters.Add("@Id_Articolo", id_Articolo)
+         cmdInsert.Parameters.Add("@Data", data)
+         cmdInsert.Parameters.Add("@Codice", codice)
+         cmdInsert.Parameters.Add("@Descrizione", descrizione)
+         cmdInsert.Parameters.Add("@PrezzoAcquisto", prezzo)
+         cmdInsert.Parameters.Add("@Carico", carico)
+         cmdInsert.Parameters.Add("@Scarico", scarico)
+         cmdInsert.Parameters.Add("@Causale", causale)
+         cmdInsert.Parameters.Add("@Fornitore", fornitore)
+         cmdInsert.Parameters.Add("@Magazzino", magazzino)
+
+         ' Esegue il comando.
+         Dim Record As Integer = cmdInsert.ExecuteNonQuery()
+
+         ' Conferma transazione.
+         tr.Commit()
+
+         Return True
+
+      Catch ex As Exception
+         ' Annulla transazione.
+         tr.Rollback()
+
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+         Return False
+
+      Finally
+         ' Chiude la connessione.
+         cn.Close()
+      End Try
+   End Function
+
+   Private Function CalcolaGiacenza(ByVal giacenza As Double, ByVal scortaMin As Double, ByVal quantità As Double) As Double
+      Try
+         If scortaMin > 0 Then
+            If (giacenza - quantità) < scortaMin Then
+               ' Messaggio sottoscorta.
+               MessageBox.Show("L'articolo o l'ingrediente selezionato risulterà essere sottoscorta!", "Attenzione!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            End If
+            Return (giacenza - quantità)
+
+         ElseIf scortaMin = 0 Then
+            If quantità = giacenza Then
+               ' Messaggio giacenza pari a zero.
+               MessageBox.Show("L'articolo o l'ingrediente selezionato risulterà essere con giacenza pari a zero!", "Attenzione!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+               Return 0
+
+            ElseIf quantità > giacenza Then
+               ' Messaggio quantità maggiore della giacenza.
+               MessageBox.Show("Si sta scaricando una quantità maggiore della giacenza! " &
+                               "La quantità presente in giacenza assumerà un valore negativo.", "Attenzione!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+               Return (giacenza - quantità)
+            Else
+               Return (giacenza - quantità)
+            End If
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
+   End Function
+
+   Private Function CalcolaScarico(ByVal scarico As Double, ByVal nuovoScarico As Double) As Double
+      Try
+         Return (scarico + nuovoScarico)
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
+   End Function
+
+   Private Sub ScaricaIngredienti()
+      '   Try
+      '      Dim idArticolo As Integer
+      '      Dim qtàScarico As Double
+
+      '      cn.Open()
+
+      '      Dim i As Integer
+      '      For i = 0 To lstvDettagli.Items.Count - 1
+      '         ' Ottiene l'Id del piatto.
+      '         Dim IdPiatto As Integer = Convert.ToInt32(lstvDettagli.Items(i).SubItems(5).Text)
+
+      '         ' Codice necessario per le varianti che non hanno una quantità.
+      '         Dim qtàPiatto As Integer
+      '         If lstvDettagli.Items(i).SubItems(1).Text <> String.Empty Then
+      '            qtàPiatto = Convert.ToInt32(lstvDettagli.Items(i).SubItems(1).Text)
+      '         Else
+      '            qtàPiatto = 1
+      '         End If
+
+      '         ' Legge i dati degli ingredienti del piatto.
+      '         Dim cmd As New OleDbCommand("SELECT * FROM Ingredienti WHERE Id_Piatto = " & IdPiatto & " ORDER BY Id ASC", cn)
+      '         Dim dr As OleDbDataReader = cmd.ExecuteReader()
+
+      '         Do While dr.Read
+      '            idArticolo = Convert.ToInt32((dr.Item("Id_Articolo")))
+      '            ' Moltiplica per il numero di piatti venduti.
+      '            qtàScarico = Convert.ToDouble(dr.Item("Quantità")) * qtàPiatto
+
+      '            AArticoli.LeggiDati("Articoli", dr.Item("Id_Articolo").ToString)
+
+      '            Dim nuovaGiacenza As Double = CalcolaGiacenza(AArticoli.Giacenza, AArticoli.ScortaMin, qtàScarico)
+      '            Dim Carico As Double = 0
+      '            Dim Scarico As Double = 0
+      '            Dim situazioneScorta As Double = 0
+      '            Dim valCarico As Double = 0
+      '            Dim valScarico As Double = 0
+      '            Dim valAttuale As Double = 0
+
+      '            Scarico = CalcolaScarico(AArticoli.Scarico, qtàScarico)
+      '            Carico = AArticoli.Carico
+
+      '            If AArticoli.ScortaMin > 0 Then
+      '               situazioneScorta = (nuovaGiacenza - AArticoli.ScortaMin)
+      '            Else
+      '               situazioneScorta = 0
+      '            End If
+
+      '            ' Calcola i progressivi.
+      '            If AArticoli.PrezzoAcquisto <> "" Then
+      '               If IsNumeric(AArticoli.PrezzoAcquisto) = True Then
+      '                  If Carico <> 0 Then
+      '                     valCarico = CFormatta.FormattaEuro(CalcolaValore(Convert.ToDecimal(AArticoli.PrezzoAcquisto), Carico))
+      '                  Else
+      '                     valCarico = 0
+      '                  End If
+
+      '                  If Scarico <> 0 Then
+      '                     valScarico = CFormatta.FormattaEuro(CalcolaValore(Convert.ToDecimal(AArticoli.PrezzoAcquisto), Scarico))
+      '                  Else
+      '                     valScarico = 0
+      '                  End If
+
+      '                  If nuovaGiacenza <> 0 Then
+      '                     valAttuale = CFormatta.FormattaEuro(CalcolaValore(Convert.ToDecimal(AArticoli.PrezzoAcquisto), nuovaGiacenza))
+      '                  Else
+      '                     valAttuale = 0
+      '                  End If
+      '               Else
+      '                  valCarico = 0
+      '                  valScarico = 0
+      '                  valAttuale = 0
+      '               End If
+      '            Else
+      '               valCarico = 0
+      '               valScarico = 0
+      '               valAttuale = 0
+      '            End If
+
+      '            ' Aggiorna i dati della tabella Articoli.
+      '            SalvaDati("Articoli", idArticolo, nuovaGiacenza,
+      '                       Carico, Scarico, situazioneScorta, AArticoli.PrezzoAcquisto,
+      '                       valCarico, valScarico, valAttuale)
+
+      '            ' Verifica se è un carico o scarico.
+      '            Dim qtàCaricata As Double = 0
+      '            Dim qtàScaricata As Double = 0
+      '            qtàScaricata = qtàScarico
+      '            qtàCaricata = 0
+
+      '            Dim data As Date = dtpData.Text
+
+      '            ' Salva i dati per i movimenti di magazzino.
+      '            SalvaMovimentiMag("MovMagazzino", idArticolo, data.ToShortDateString, AArticoli.Codice, AArticoli.Descrizione,
+      '                               qtàCaricata, qtàScaricata, CausaleMovMag, AArticoli.PrezzoAcquisto,
+      '                               AArticoli.Fornitore, AArticoli.Magazzino)
+
+      '            If IsNothing(g_frmArticoli) = False Then
+      '               ' Aggiorna la griglia dati.
+      '               g_frmArticoli.AggiornaDati()
+      '            End If
+
+      '            If IsNothing(g_frmScorte) = False Then
+      '               ' Aggiorna la griglia dati.
+      '               g_frmScorte.AggiornaDati()
+      '            End If
+
+      '            If IsNothing(g_frmInventario) = False Then
+      '               ' Aggiorna la griglia dati.
+      '               g_frmInventario.AggiornaDati()
+      '            End If
+
+      '            If IsNothing(g_frmMovMag) = False Then
+      '               ' Aggiorna la griglia dati.
+      '               g_frmMovMag.AggiornaDati()
+      '            End If
+      '         Loop
+
+      '         cmd.Dispose()
+      '         dr.Close()
+      '      Next
+
+      '   Catch ex As Exception
+      '      ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+      '      err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      '   Finally
+      '      cn.Close()
+      '   End Try
+   End Sub
+
+#End Region
+
+#Region "Statistiche "
+
+   Private Sub SalvaStatistiche(ByVal rifDoc As Boolean)
+      Dim Stat As New Statistiche
+
+      Try
+         Dim i As Integer
+         For i = 0 To dgvDettagli.Rows.Count - 2
+
+            ' Salva solo le righe che hanno un codice Piatto.
+            If IsNothing(dgvDettagli.Rows(i).Cells(g_frmDocumento.clnCodice.Name).Value.ToString) = False Or dgvDettagli.Rows(i).Cells(g_frmDocumento.clnCodice.Name).Value.ToString <> String.Empty Then
+
+               With Stat
+                  ' Assegna i dati dei campi della classe alle caselle di testo.
+                  .Data = Today.Date.ToShortDateString
+
+                  If rifDoc = True Then
+                     ' Salva un riferimento Id del documento per il comando Annulla documento.
+                     If Me.Tag = String.Empty Then
+                        .IdCategoria = LeggiUltimoRecord(TAB_DOCUMENTI).ToString
+                     Else
+                        .IdCategoria = Me.Tag
+                     End If
+                  Else
+                     .IdCategoria = "0"
+                  End If
+
+                  If IsNothing(dgvDettagli.Rows(i).Cells(g_frmDocumento.clnCategoria.Name).Value.ToString) = False Or dgvDettagli.Rows(i).Cells(g_frmDocumento.clnCategoria.Name).Value.ToString <> String.Empty Then
+                     .DesCategoria = dgvDettagli.Rows(i).Cells(g_frmDocumento.clnCategoria.Name).Value.ToString
+                  Else
+                     .DesCategoria = "Nessuna"
+                  End If
+
+                  .IdPiatto = dgvDettagli.Rows(i).Cells(g_frmDocumento.clnCodice.Name).Value.ToString
+                  .DesPiatto = dgvDettagli.Rows(i).Cells(g_frmDocumento.clnDescrizione.Name).Value.ToString
+                  .IdTavolo = "0"
+                  .DesTavolo = String.Empty
+                  .IdCameriere = "0"
+                  .DesCameriere = String.Empty
+
+                  If dgvDettagli.Rows(i).Cells(g_frmDocumento.clnQta.Name).Value.ToString <> String.Empty Then
+                     .Quantità = Convert.ToDouble(dgvDettagli.Rows(i).Cells(g_frmDocumento.clnQta.Name).Value)
+                  Else
+                     .Quantità = 1
+                  End If
+
+                  .Prezzo = dgvDettagli.Rows(i).Cells(g_frmDocumento.clnPrezzo.Name).Value.ToString
+                  .Importo = dgvDettagli.Rows(i).Cells(g_frmDocumento.clnImporto.Name).Value.ToString
+
+                  .InserisciDati(TAB_STATISTICHE)
+
+                  ' B_TODO: Modifica per Retail.
+                  If IsNothing(g_frmStatistiche) = False Then
+                     ' Aggiorna la griglia dati.
+                     g_frmStatistiche.AggiornaDati()
+                  End If
+
+               End With
+
+            End If
+         Next
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      Finally
+
+      End Try
+   End Sub
+
+#End Region
 
    Public Function LeggiNumeroMax(ByVal tabella As String, ByVal tipoDoc As String) As Integer
       Dim closeOnExit As Boolean
@@ -201,6 +576,9 @@ Public Class frmDocumento
          eui_txtOra.Text = TimeOfDay.Hour.ToString & ":" & FormattaMinuti(TimeOfDay.Minute.ToString)
          eui_cmbTipoDocumento.Text = tipoDocumento
 
+         ' Carica i dati appropriati per la lista.
+         CaricaListaStatoDoc()
+
          eui_cmbStatoDocumento.Text = "Bozza"
          eui_cmbCausaleDocumento.Text = "Vendita"
 
@@ -272,6 +650,10 @@ Public Class frmDocumento
             ' DOCUMENTO.
             eui_txtNumero.Text = .Numero
             eui_cmbTipoDocumento.Text = .Tipo
+
+            ' Carica i dati appropriati per la lista.
+            CaricaListaStatoDoc()
+
             eui_txtAnno.Text = .Anno
             eui_dtpData.Value = .Data
             eui_txtOra.Text = .Ora
@@ -357,6 +739,51 @@ Public Class frmDocumento
 
       End Try
    End Sub
+
+   Public Function ModificaStatoDocumento(ByVal tabella As String, ByVal codice As String, ByVal stato As String) As Boolean
+      ' Dichiara un oggetto connessione.
+      Dim cn As New OleDbConnection(ConnString)
+      Dim tr As OleDbTransaction
+      Dim sql As String
+
+      Try
+         ' Apre la connessione.
+         cn.Open()
+
+         ' Avvia una transazione.
+         tr = cn.BeginTransaction(IsolationLevel.ReadCommitted)
+
+         ' Crea la stringa di eliminazione.
+         sql = String.Format("UPDATE {0} SET StatoDoc = @StatoDoc WHERE Id = {1}", tabella, codice)
+
+         ' Crea il comando per la connessione corrente.
+         Dim cmdUpdate As New OleDbCommand(sql, cn, tr)
+
+         cmdUpdate.Parameters.AddWithValue("@StatoDoc", stato)
+
+         ' Esegue il comando.
+         Dim Record As Integer = cmdUpdate.ExecuteNonQuery()
+
+         ' Conferma transazione.
+         tr.Commit()
+
+         Return True
+
+      Catch ex As Exception
+         ' Annulla transazione.
+         tr.Rollback()
+
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+         Return False
+
+      Finally
+         ' Chiude la connessione.
+         cn.Close()
+      End Try
+
+   End Function
 
    Public Sub InserisciDettagliRiga(ByVal tabella As String, ByVal id As Integer)
       ' Dichiara un oggetto connessione.
@@ -850,14 +1277,46 @@ Public Class frmDocumento
                   cmdInsert.Parameters.AddWithValue("@RifDoc", LeggiUltimoRecord(TAB_DOCUMENTI))
                End If
 
-               cmdInsert.Parameters.AddWithValue("@CodiceArticolo", dgvDettagli.Rows(i).Cells(clnCodice.Name).Value.ToString)
-               cmdInsert.Parameters.AddWithValue("@Descrizione", dgvDettagli.Rows(i).Cells(clnDescrizione.Name).Value.ToString)
-               cmdInsert.Parameters.AddWithValue("@UnitàMisura", dgvDettagli.Rows(i).Cells(clnUm.Name).Value.ToString)
-               cmdInsert.Parameters.AddWithValue("@Quantità", dgvDettagli.Rows(i).Cells(clnQta.Name).Value.ToString)
-               cmdInsert.Parameters.AddWithValue("@ValoreUnitario", dgvDettagli.Rows(i).Cells(clnPrezzo.Name).Value.ToString) ' B_TODO: Modifica per Retail.
-               cmdInsert.Parameters.AddWithValue("@Sconto", dgvDettagli.Rows(i).Cells(clnSconto.Name).Value.ToString)
-               cmdInsert.Parameters.AddWithValue("@ImportoNetto", dgvDettagli.Rows(i).Cells(clnImporto.Name).Value.ToString)
-               cmdInsert.Parameters.AddWithValue("@AliquotaIva", dgvDettagli.Rows(i).Cells(clnIva.Name).Value.ToString)
+               If IsNothing(dgvDettagli.Rows(i).Cells(g_frmDocumento.clnCodice.Name).Value) = False Then
+                  cmdInsert.Parameters.AddWithValue("@CodiceArticolo", dgvDettagli.Rows(i).Cells(clnCodice.Name).Value.ToString)
+               Else
+                  cmdInsert.Parameters.AddWithValue("@CodiceArticolo", String.Empty)
+               End If
+               If IsNothing(dgvDettagli.Rows(i).Cells(g_frmDocumento.clnDescrizione.Name).Value) = False Then
+                  cmdInsert.Parameters.AddWithValue("@Descrizione", dgvDettagli.Rows(i).Cells(clnDescrizione.Name).Value.ToString)
+               Else
+                  cmdInsert.Parameters.AddWithValue("@Descrizione", String.Empty)
+               End If
+               If IsNothing(dgvDettagli.Rows(i).Cells(g_frmDocumento.clnUm.Name).Value) = False Then
+                  cmdInsert.Parameters.AddWithValue("@UnitàMisura", dgvDettagli.Rows(i).Cells(clnUm.Name).Value.ToString)
+               Else
+                  cmdInsert.Parameters.AddWithValue("@UnitàMisura", String.Empty)
+               End If
+               If IsNothing(dgvDettagli.Rows(i).Cells(g_frmDocumento.clnQta.Name).Value) = False Then
+                  cmdInsert.Parameters.AddWithValue("@Quantità", dgvDettagli.Rows(i).Cells(clnQta.Name).Value.ToString)
+               Else
+                  cmdInsert.Parameters.AddWithValue("@Quantità", VALORE_ZERO)
+               End If
+               If IsNothing(dgvDettagli.Rows(i).Cells(g_frmDocumento.clnPrezzo.Name).Value) = False Then
+                  cmdInsert.Parameters.AddWithValue("@ValoreUnitario", dgvDettagli.Rows(i).Cells(clnPrezzo.Name).Value.ToString)
+               Else
+                  cmdInsert.Parameters.AddWithValue("@ValoreUnitario", VALORE_ZERO)
+               End If
+               If IsNothing(dgvDettagli.Rows(i).Cells(g_frmDocumento.clnSconto.Name).Value) = False Then
+                  cmdInsert.Parameters.AddWithValue("@Sconto", dgvDettagli.Rows(i).Cells(clnSconto.Name).Value.ToString)
+               Else
+                  cmdInsert.Parameters.AddWithValue("@Sconto", VALORE_ZERO)
+               End If
+               If IsNothing(dgvDettagli.Rows(i).Cells(g_frmDocumento.clnImporto.Name).Value) = False Then
+                  cmdInsert.Parameters.AddWithValue("@ImportoNetto", dgvDettagli.Rows(i).Cells(clnImporto.Name).Value.ToString)
+               Else
+                  cmdInsert.Parameters.AddWithValue("@ImportoNetto", VALORE_ZERO)
+               End If
+               If IsNothing(dgvDettagli.Rows(i).Cells(g_frmDocumento.clnIva.Name).Value) = False Then
+                  cmdInsert.Parameters.AddWithValue("@AliquotaIva", dgvDettagli.Rows(i).Cells(clnIva.Name).Value.ToString)
+               Else
+                  cmdInsert.Parameters.AddWithValue("@AliquotaIva", 0)
+               End If
 
                ' Esegue il comando.
                Dim Record As Integer = cmdInsert.ExecuteNonQuery()
@@ -1154,6 +1613,41 @@ Public Class frmDocumento
       End Try
    End Sub
 
+   Private Sub CaricaListaStatoDoc()
+      Try
+         ' Pulisce la lista.
+         eui_cmbStatoDocumento.Items.Clear()
+
+         Select Case eui_cmbTipoDocumento.Text
+            Case TIPO_DOC_CO
+               eui_cmbStatoDocumento.Items.Add("Bozza")
+               eui_cmbStatoDocumento.Items.Add("Aperto")
+               eui_cmbStatoDocumento.Items.Add("Chiuso")
+               eui_cmbStatoDocumento.Items.Add("Importato")
+               eui_cmbStatoDocumento.Items.Add("Annullato")
+               eui_cmbStatoDocumento.Items.Add("Stampato")
+
+            Case TIPO_DOC_PF
+               eui_cmbStatoDocumento.Items.Add("Bozza")
+               eui_cmbStatoDocumento.Items.Add("Importato")
+               eui_cmbStatoDocumento.Items.Add("Annullato")
+               eui_cmbStatoDocumento.Items.Add("Stampato")
+
+            Case TIPO_DOC_RF, TIPO_DOC_FF, TIPO_DOC_SF
+               eui_cmbStatoDocumento.Items.Add("Bozza")
+               eui_cmbStatoDocumento.Items.Add("Emesso")
+               eui_cmbStatoDocumento.Items.Add("Emesso e stampato")
+               eui_cmbStatoDocumento.Items.Add("Annullato")
+               eui_cmbStatoDocumento.Items.Add("Stampato")
+         End Select
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
+   End Sub
+
    Public Function ApriClienti(ByVal val As String) As Boolean
       Try
          ' Modifica il cursore del mouse.
@@ -1342,13 +1836,18 @@ Public Class frmDocumento
             Case TIPO_DOC_CO, TIPO_DOC_PF
                NumeroDocumento = LeggiNumeroMax(TAB_DOCUMENTI, eui_cmbTipoDocumento.Text) + 1
 
+               eui_cmbStatoDocumento.Items.Add("aaa")
+
+
             Case TIPO_DOC_RF, TIPO_DOC_FF
                NumeroDocumento = LeggiNumeroDocFiscaleConfig(TAB_DOCUMENTI, eui_cmbTipoDocumento.Text)
 
             Case TIPO_DOC_SF
                NumeroDocumento = LeggiNumeroMax(TAB_DOCUMENTI, eui_cmbTipoDocumento.Text) + 1
-
          End Select
+
+         ' Carica i dati appropriati per la lista.
+         CaricaListaStatoDoc()
 
          eui_txtNumero.Text = NumeroDocumento.ToString
          Me.Text = eui_cmbTipoDocumento.Text & statoDoc
@@ -1433,6 +1932,21 @@ Public Class frmDocumento
       Try
          Dim frm As New ListaDocumenti(eui_cmbClienteCognome.Text)
          frm.ShowDialog()
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
+   End Sub
+
+   Private Sub eui_cmdEmetti_Click(sender As Object, e As EventArgs) Handles eui_cmdEmetti.Click
+      Try
+         ' Salva le modifiche apportate al documento.
+         eui_cmdSalva.PerformClick()
+
+         '  Salva i dati per le statistiche.
+         SalvaStatistiche(True)
 
       Catch ex As Exception
          ' Visualizza un messaggio di errore e lo registra nell'apposito file.
@@ -1885,5 +2399,6 @@ Public Class frmDocumento
    Private Sub eui_cmdTastiera_Click(sender As Object, e As EventArgs) Handles eui_cmdTastiera.Click
       AvviaTastieraVirtuale(Me.Handle)
    End Sub
+
 
 End Class

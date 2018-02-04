@@ -15,9 +15,24 @@
    End Sub
 
    Private Sub ListaPiatti_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-      If CaricaLista(NOME_TABELLA) = True Then
-         Exit Sub
-      End If
+      Try
+         ' Carica le categorie piatti.
+         If CaricaListaCategorie() = True Then
+            eui_cmbCategoriaPiatti.SelectedIndex = 0
+         Else
+            Exit Sub
+         End If
+
+         ' Carica i Piatti.
+         If CaricaLista(NOME_TABELLA, eui_cmbCategoriaPiatti.Text) = True Then
+            Exit Sub
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
    End Sub
 
    Private Sub eui_cmdAnnulla_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdAnnulla.Click
@@ -46,7 +61,7 @@
       eui_cmdInserisci.PerformClick()
    End Sub
 
-   Public Function CaricaLista(ByVal tabella As String) As Boolean
+   Public Function CaricaLista(ByVal tabella As String, ByVal categoria As String) As Boolean
       Dim caricata As Boolean = False
       ' Dichiara un oggetto connessione.
       Dim cn As New OleDbConnection(ConnString)
@@ -55,8 +70,11 @@
       Try
          cn.Open()
 
-         Dim cmd As New OleDbCommand("SELECT * FROM " & tabella & " ORDER BY Descrizione ASC", cn)
+         Dim cmd As New OleDbCommand("SELECT * FROM " & tabella & " WHERE Categoria = '" & categoria & "' ORDER BY Descrizione ASC", cn)
          Dim dr As OleDbDataReader = cmd.ExecuteReader()
+
+         ' Pulisce la lista.
+         lvwPiatti.Items.Clear()
 
          Do While dr.Read()
             ' Codice.
@@ -102,6 +120,13 @@
                lvwPiatti.Items(lvwPiatti.Items.Count - 1).SubItems.Add(VALORE_ZERO)
             End If
 
+            ' Categoria.
+            If IsDBNull(dr.Item("Categoria")) = False Then
+               lvwPiatti.Items(lvwPiatti.Items.Count - 1).SubItems.Add(dr.Item("Categoria"))
+            Else
+               lvwPiatti.Items(lvwPiatti.Items.Count - 1).SubItems.Add(String.Empty)
+            End If
+
             ' Stringa per registrare loperazione effettuata dall'operatore identificato.
             'strDescrizione = "(" & dr.Item("Descrizione") & ")"
 
@@ -124,6 +149,39 @@
 
       End Try
    End Function
+
+   Public Function CaricaListaCategorie() As Boolean
+      ' Dichiara un oggetto connessione.
+      Dim cn As New OleDbConnection(ConnString)
+      Dim caricata As Boolean = False
+
+      Try
+         cn.Open()
+
+         Dim cmd As New OleDbCommand("SELECT * FROM CategoriePiatti ORDER BY IdOrd ASC", cn)
+         Dim dr As OleDbDataReader = cmd.ExecuteReader()
+
+         Do While dr.Read()
+            ' Codice.
+            eui_cmbCategoriaPiatti.Items.Add(dr.Item("Descrizione"))
+
+            caricata = True
+         Loop
+
+         Return caricata
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+         Return False
+
+      Finally
+         cn.Close()
+
+      End Try
+   End Function
+
 
    Public Sub InserisciElementi(ByVal tabella As String, ByVal id As Integer)
       ' Dichiara un oggetto connessione.
@@ -213,6 +271,13 @@
                g_frmDocumento.dgvDettagli.CurrentRow.Cells(g_frmDocumento.clnIva.Name).Value = LeggiAliquotaIva(dr.Item("AliquotaIva"))
             Else
                g_frmDocumento.dgvDettagli.CurrentRow.Cells(g_frmDocumento.clnIva.Name).Value = AliquotaIvaRistorante
+            End If
+
+            ' Categoria.
+            If IsDBNull(dr.Item("Categoria")) = False Then
+               g_frmDocumento.dgvDettagli.CurrentRow.Cells(g_frmDocumento.clnCategoria.Name).Value = LeggiAliquotaIva(dr.Item("Categoria"))
+            Else
+               g_frmDocumento.dgvDettagli.CurrentRow.Cells(g_frmDocumento.clnCategoria.Name).Value = String.Empty
             End If
 
             ' Stringa per registrare loperazione effettuata dall'operatore identificato.
@@ -312,5 +377,20 @@
          err.GestisciErrore(ex.StackTrace, ex.Message)
 
       End Try
+   End Sub
+
+   Private Sub eui_cmbCategoriaPiatti_SelectedIndexChanged(sender As Object, e As EventArgs) Handles eui_cmbCategoriaPiatti.SelectedIndexChanged
+      Try
+         ' Carica i Piatti.
+         If CaricaLista(NOME_TABELLA, sender.Text) = True Then
+            Exit Sub
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
+
    End Sub
 End Class

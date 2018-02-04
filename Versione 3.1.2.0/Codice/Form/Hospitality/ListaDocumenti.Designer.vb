@@ -118,7 +118,7 @@ Partial Class ListaDocumenti
       Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
       Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
       Me.BackColor = System.Drawing.SystemColors.AppWorkspace
-      Me.ClientSize = New System.Drawing.Size(727, 471)
+      Me.ClientSize = New System.Drawing.Size(737, 481)
       Me.Controls.Add(Me.eui_cmdImporta)
       Me.Controls.Add(Me.eui_cmdAnnulla)
       Me.Controls.Add(Me.lvwDocumenti)

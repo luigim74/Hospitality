@@ -4110,7 +4110,7 @@ Public Class frmPrenRisorse
             .Carte = VALORE_ZERO
             .BuoniPasto = VALORE_ZERO
             .BuoniPastoIncassare = VALORE_ZERO
-            .Chiuso = "No"
+            .Chiuso = "Sì"
             .Note = String.Empty
 
             .TipoPagamento = cmbPagamento.Text
