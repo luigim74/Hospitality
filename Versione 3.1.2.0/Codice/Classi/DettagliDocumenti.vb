@@ -12,6 +12,7 @@ Public Class DettagliDocumenti
    Public Sconto As String
    Public ImportoNetto As String
    Public AliquotaIva As String
+   Public Categoria As String
 
    ' Dichiara un oggetto connessione.
    Private cn As New OleDbConnection(ConnString)
@@ -45,27 +46,27 @@ Public Class DettagliDocumenti
          If IsDBNull(ds.Tables(tabella).Rows(0)("Id")) = False Then
             Me.Codice = ds.Tables(tabella).Rows(0)("Id").ToString
          Else
-            Me.Codice = ""
+            Me.Codice = String.Empty
          End If
          If IsDBNull(ds.Tables(tabella).Rows(0)("RifDoc")) = False Then
             Me.RifDoc = ds.Tables(tabella).Rows(0)("RifDoc").ToString
          Else
-            Me.RifDoc = ""
+            Me.RifDoc = String.Empty
          End If
          If IsDBNull(ds.Tables(tabella).Rows(0)("CodiceArticolo")) = False Then
             Me.CodiceArticolo = ds.Tables(tabella).Rows(0)("CodiceArticolo").ToString
          Else
-            Me.CodiceArticolo = ""
+            Me.CodiceArticolo = String.Empty
          End If
          If IsDBNull(ds.Tables(tabella).Rows(0)("Descrizione")) = False Then
             Me.Descrizione = ds.Tables(tabella).Rows(0)("Descrizione").ToString
          Else
-            Me.Descrizione = ""
+            Me.Descrizione = String.Empty
          End If
          If IsDBNull(ds.Tables(tabella).Rows(0)("Unit‡Misura")) = False Then
             Me.Unit‡Misura = ds.Tables(tabella).Rows(0)("Unit‡Misura").ToString
          Else
-            Me.Unit‡Misura = ""
+            Me.Unit‡Misura = String.Empty
          End If
          If IsDBNull(ds.Tables(tabella).Rows(0)("Quantit‡")) = False Then
             Me.Quantit‡ = Convert.ToInt32(ds.Tables(tabella).Rows(0)("Quantit‡"))
@@ -91,6 +92,11 @@ Public Class DettagliDocumenti
             Me.AliquotaIva = ds.Tables(tabella).Rows(0)("AliquotaIva").ToString
          Else
             Me.AliquotaIva = VALORE_ZERO
+         End If
+         If IsDBNull(ds.Tables(tabella).Rows(0)("Categoria")) = False Then
+            Me.Unit‡Misura = ds.Tables(tabella).Rows(0)("Categoria").ToString
+         Else
+            Me.Unit‡Misura = String.Empty
          End If
 
       Catch ex As Exception
@@ -209,8 +215,8 @@ Public Class DettagliDocumenti
          ' Avvia una transazione.
          tr = cn.BeginTransaction(IsolationLevel.ReadCommitted)
          ' Crea la stringa di eliminazione.
-         sql = String.Format("INSERT INTO {0} (RifDoc, CodiceArticolo, Descrizione, Unit‡Misura, Quantit‡, ValoreUnitario, Sconto, ImportoNetto, AliquotaIva) " &
-                                       "VALUES(@RifDoc, @CodiceArticolo, @Descrizione, @Unit‡Misura, @Quantit‡, @ValoreUnitario, @Sconto, @ImportoNetto, @AliquotaIva)", tabella)
+         sql = String.Format("INSERT INTO {0} (RifDoc, CodiceArticolo, Descrizione, Unit‡Misura, Quantit‡, ValoreUnitario, Sconto, ImportoNetto, AliquotaIva, Categoria) " &
+                                       "VALUES(@RifDoc, @CodiceArticolo, @Descrizione, @Unit‡Misura, @Quantit‡, @ValoreUnitario, @Sconto, @ImportoNetto, @AliquotaIva, @Categoria)", tabella)
 
          ' Crea il comando per la connessione corrente.
          Dim cmdInsert As New OleDbCommand(sql, cn, tr)
@@ -224,6 +230,7 @@ Public Class DettagliDocumenti
          cmdInsert.Parameters.AddWithValue("@Sconto", Me.Sconto)
          cmdInsert.Parameters.AddWithValue("@ImportoNetto", Me.ImportoNetto)
          cmdInsert.Parameters.AddWithValue("@AliquotaIva", Me.AliquotaIva)
+         cmdInsert.Parameters.AddWithValue("@Categoria", Me.Categoria)
 
          ' Esegue il comando.
          Dim Record As Integer = cmdInsert.ExecuteNonQuery()
@@ -309,7 +316,8 @@ Public Class DettagliDocumenti
                              "ValoreUnitario = @ValoreUnitario, " &
                              "Sconto = @Sconto, " &
                              "ImportoNetto = @ImportoNetto, " &
-                             "AliquotaIva = @AliquotaIva " &
+                             "AliquotaIva = @AliquotaIva, " &
+                             "Categoria = @Categoria " &
                              "WHERE Id = {1}",
                               tabella,
                               codice)
@@ -326,6 +334,7 @@ Public Class DettagliDocumenti
          cmdUpdate.Parameters.AddWithValue("@Sconto", Me.Sconto)
          cmdUpdate.Parameters.AddWithValue("@ImportoNetto", Me.ImportoNetto)
          cmdUpdate.Parameters.AddWithValue("@AliquotaIva", Me.AliquotaIva)
+         cmdUpdate.Parameters.AddWithValue("@Categoria", Me.Categoria)
 
          ' Esegue il comando.
          Dim Record As Integer = cmdUpdate.ExecuteNonQuery()

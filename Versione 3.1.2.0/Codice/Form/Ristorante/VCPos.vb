@@ -1952,25 +1952,25 @@ Public Class frmPos
       End Try
    End Function
 
-   Private Function CalcolaGiacenza(ByVal giacenza As Double, ByVal scortaMin As Double, ByVal quantit‡ As Double) As Double
+   Private Function CalcolaGiacenza(ByVal descrizione As String, ByVal giacenza As Double, ByVal scortaMin As Double, ByVal quantit‡ As Double) As Double
       Try
          If scortaMin > 0 Then
             If (giacenza - quantit‡) < scortaMin Then
                ' Messaggio sottoscorta.
-               MessageBox.Show("L'articolo o l'ingrediente selezionato risulter‡ essere sottoscorta!", "Attenzione!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+               MessageBox.Show("L'articolo o l'ingrediente '" & descrizione & "' risulter‡ essere sottoscorta!", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             End If
             Return (giacenza - quantit‡)
 
          ElseIf scortaMin = 0 Then
             If quantit‡ = giacenza Then
                ' Messaggio giacenza pari a zero.
-               MessageBox.Show("L'articolo o l'ingrediente selezionato risulter‡ essere con giacenza pari a zero!", "Attenzione!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+               MessageBox.Show("L'articolo o l'ingrediente '" & descrizione & "' risulter‡ essere con giacenza pari a zero!", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                Return 0
 
             ElseIf quantit‡ > giacenza Then
                ' Messaggio quantit‡ maggiore della giacenza.
-               MessageBox.Show("Si sta scaricando una quantit‡ maggiore della giacenza! " &
-                               "La quantit‡ presente in giacenza assumer‡ un valore negativo.", "Attenzione!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+               MessageBox.Show("Per l'articolo o l'ingrediente '" & descrizione & "' si sta scaricando una quantit‡ maggiore della giacenza! " &
+                               "La quantit‡ presente in giacenza assumer‡ un valore negativo.", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                Return (giacenza - quantit‡)
             Else
                Return (giacenza - quantit‡)
@@ -2026,7 +2026,7 @@ Public Class frmPos
 
                AArticoli.LeggiDati("Articoli", dr.Item("Id_Articolo").ToString)
 
-               Dim nuovaGiacenza As Double = CalcolaGiacenza(AArticoli.Giacenza, AArticoli.ScortaMin, qt‡Scarico)
+               Dim nuovaGiacenza As Double = CalcolaGiacenza(AArticoli.Descrizione, AArticoli.Giacenza, AArticoli.ScortaMin, qt‡Scarico)
                Dim Carico As Double = 0
                Dim Scarico As Double = 0
                Dim situazioneScorta As Double = 0

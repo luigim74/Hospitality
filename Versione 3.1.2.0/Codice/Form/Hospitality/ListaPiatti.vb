@@ -275,7 +275,7 @@
 
             ' Categoria.
             If IsDBNull(dr.Item("Categoria")) = False Then
-               g_frmDocumento.dgvDettagli.CurrentRow.Cells(g_frmDocumento.clnCategoria.Name).Value = LeggiAliquotaIva(dr.Item("Categoria"))
+               g_frmDocumento.dgvDettagli.CurrentRow.Cells(g_frmDocumento.clnCategoria.Name).Value = dr.Item("Categoria")
             Else
                g_frmDocumento.dgvDettagli.CurrentRow.Cells(g_frmDocumento.clnCategoria.Name).Value = String.Empty
             End If

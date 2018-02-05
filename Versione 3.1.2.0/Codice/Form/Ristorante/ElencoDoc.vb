@@ -1281,6 +1281,13 @@ Public Class ElencoDoc
                      .AliquotaIva = "0"
                   End If
 
+                  ' Categoria.
+                  If IsDBNull(dr.Item("Categoria")) = False Then
+                     .Categoria = dr.Item("Categoria")
+                  Else
+                     .Categoria = String.Empty
+                  End If
+
                   ' Crea il nuovo record (duplicato) con i dati del record selezionato nella lista.
                   .InserisciDati(TAB_DETTAGLI_DOC)
                Loop
@@ -1873,7 +1880,6 @@ Public Class ElencoDoc
                Case Else
                   g_frmMain.eui_Strumenti_Annulla.Enabled = False
 
-
             End Select
          End If
 
@@ -1919,7 +1925,7 @@ Public Class ElencoDoc
          EliminaDocumento()
 
       Else
-         ModificaStatoDoc(TAB_DOCUMENTI, Id, STATO_DOC_ANNULLATO)
+         ModificaStatoDocumento(TAB_DOCUMENTI, Id, STATO_DOC_ANNULLATO)
       End If
 
       ' QUESTA PROCEDURA NON E' PIU' NECESSARIA. 
@@ -1939,7 +1945,10 @@ Public Class ElencoDoc
 
    End Sub
 
-   Public Function ModificaStatoDoc(ByVal tabella As String, ByVal codice As String, ByVal statoDoc As String) As Boolean
+   Public Function ModificaStatoDocumento(ByVal tabella As String, ByVal codice As String, ByVal stato As String) As Boolean
+      ' Dichiara un oggetto connessione.
+      Dim cn As New OleDbConnection(ConnString)
+      Dim tr As OleDbTransaction
       Dim sql As String
 
       Try
@@ -1950,25 +1959,18 @@ Public Class ElencoDoc
          tr = cn.BeginTransaction(IsolationLevel.ReadCommitted)
 
          ' Crea la stringa di eliminazione.
-         sql = String.Format("UPDATE {0} " &
-                             "SET StatoDoc = @StatoDoc " &
-                             "WHERE Id = {1}",
-                              tabella,
-                              codice)
+         sql = String.Format("UPDATE {0} SET StatoDoc = @StatoDoc WHERE Id = {1}", tabella, codice)
 
          ' Crea il comando per la connessione corrente.
          Dim cmdUpdate As New OleDbCommand(sql, cn, tr)
 
-         cmdUpdate.Parameters.AddWithValue("@StatoDoc", statoDoc)
+         cmdUpdate.Parameters.AddWithValue("@StatoDoc", stato)
 
          ' Esegue il comando.
          Dim Record As Integer = cmdUpdate.ExecuteNonQuery()
 
          ' Conferma transazione.
          tr.Commit()
-
-         ' Aggiorna la lista dati.
-         AggiornaDati()
 
          Return True
 
