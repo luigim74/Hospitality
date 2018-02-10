@@ -38,6 +38,8 @@ Public Class ModificaPiattoPOS
 
    Private NumListino As Short
 
+   Public aliquotaIvaPiatto As String
+
    Public Enum Listino As Short
       Uno = 1
       Due = 2
@@ -48,7 +50,7 @@ Public Class ModificaPiattoPOS
 
 #Region " Codice generato da Progettazione Windows Form "
 
-   Public Sub New(ByVal idPiatto As String, ByVal quantità As String, ByVal descrizione As String, ByVal prezzo As String, ByVal totPrezzo As String)
+   Public Sub New(ByVal idPiatto As String, ByVal quantità As String, ByVal descrizione As String, ByVal prezzo As String, ByVal totPrezzo As String, ByVal aliquotaIva As String)
       MyBase.New()
 
       'Chiamata richiesta da Progettazione Windows Form.
@@ -61,6 +63,7 @@ Public Class ModificaPiattoPOS
       eui_txtDescrizione.Text = descrizione
       eui_txtPrezzo.Text = CFormatta.FormattaEuro(prezzo)
       netBtn_Totale.TextButton = CFormatta.FormattaEuro(totPrezzo)
+      aliquotaIvaPiatto = aliquotaIva
 
    End Sub
 
@@ -224,7 +227,6 @@ Public Class ModificaPiattoPOS
       '
       'eui_cmdIva
       '
-      Me.eui_cmdIva.Enabled = False
       Me.eui_cmdIva.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.eui_cmdIva.Id = "4f7025a2-09b4-4c5c-a6bc-ca41ff96dc20"
       Me.eui_cmdIva.Location = New System.Drawing.Point(361, 291)
@@ -634,7 +636,7 @@ Public Class ModificaPiattoPOS
       Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
       Me.BackColor = System.Drawing.SystemColors.AppWorkspace
       Me.CancelButton = Me.eui_cmdAnnulla
-      Me.ClientSize = New System.Drawing.Size(526, 458)
+      Me.ClientSize = New System.Drawing.Size(495, 429)
       Me.Controls.Add(Me.NetButton1)
       Me.Controls.Add(Me.netBtn_Totale)
       Me.Controls.Add(Me.eui_txtPrezzo)
@@ -886,10 +888,10 @@ Public Class ModificaPiattoPOS
          NumListino = Listino.Uno
 
          ' Legge l'aliquota iva del reparto.
-         If AliquotaIvaRistorante <> String.Empty Then
+         If aliquotaIvaPiatto = String.Empty Then
             eui_cmdIva.Text = "&IVA (" & CFormatta.FormattaAliquotaIva(AliquotaIvaRistorante) & "%)"
          Else
-            eui_cmdIva.Text = "&IVA (0%)"
+            eui_cmdIva.Text = "&IVA (" & aliquotaIvaPiatto & "%)"
          End If
 
          eui_txtQuantità.Focus()
@@ -1241,9 +1243,10 @@ Public Class ModificaPiattoPOS
          ' Riproduce un effetto sonoro.
          RiproduciEffettoSonoro(My.Resources.beep_Normale, EffettiSonoriPOS)
 
-         Dim frm As New TipoAliquotaIvaPos
+         Dim frm As New TipoAliquotaIvaPos(False)
          If frm.ShowDialog() = DialogResult.OK Then
-            eui_cmdIva.Text = "IVA " & frm.Tag.ToString
+            eui_cmdIva.Text = "&IVA (" & frm.Tag.ToString & "%)"
+            aliquotaIvaPiatto = frm.Tag.ToString
          End If
 
          eui_txtPrezzo.Focus()

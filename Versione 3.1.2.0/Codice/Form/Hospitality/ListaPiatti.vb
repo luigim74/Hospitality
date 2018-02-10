@@ -298,43 +298,6 @@
       End Try
    End Sub
 
-   Public Function LeggiAliquotaIva(ByVal reparto As String) As String
-      Try
-         DatiConfig = New AppConfig
-         DatiConfig.ConfigType = ConfigFileType.AppConfig
-
-         ' Aliquote IVA per i reparti.
-         Dim aliquotaIva As String
-
-         Select Case reparto
-            Case "Reparto 1"
-               aliquotaIva = DatiConfig.GetValue("AliquotaIva1")
-
-            Case "Reparto 2"
-               aliquotaIva = DatiConfig.GetValue("AliquotaIva2")
-
-            Case "Reparto 3"
-               aliquotaIva = DatiConfig.GetValue("AliquotaIva3")
-
-            Case "Reparto 4"
-               aliquotaIva = DatiConfig.GetValue("AliquotaIva4")
-
-            Case Else
-               aliquotaIva = AliquotaIvaRistorante
-
-         End Select
-
-         Return aliquotaIva
-
-      Catch ex As Exception
-         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-         err.GestisciErrore(ex.StackTrace, ex.Message)
-
-         Return AliquotaIvaRistorante
-
-      End Try
-   End Function
-
    Private Sub eui_cmdListino1_Click(sender As Object, e As EventArgs) Handles eui_cmdListino1.Click
       Try
          eui_dwnListino.Text = sender.text

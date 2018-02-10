@@ -3398,3 +3398,122 @@ Nome parametro: index"
    in Hospitality_Solution.ReportsViewer.ReportsViewer_Load(Object sender, EventArgs e)"
 "
 "
+"*** 10/02/2018 - 15:54:24 ***"
+"- DESCRIZIONE ERRORE: InvalidArgument=Valore di '12' non valido per 'index'.
+Nome parametro: index"
+"- NOME PROCEDURA:    in System.Windows.Forms.ListViewItem.ListViewSubItemCollection.get_Item(Int32 index)
+   in Hospitality_Solution.ContoPos.CaricaListaConto()"
+"
+"
+"*** 10/02/2018 - 15:54:33 ***"
+"- DESCRIZIONE ERRORE: InvalidArgument=Valore di '12' non valido per 'index'.
+Nome parametro: index"
+"- NOME PROCEDURA:    in System.Windows.Forms.ListViewItem.ListViewSubItemCollection.get_Item(Int32 index)
+   in Hospitality_Solution.ContoPos.CaricaListaConto()"
+"
+"
+"*** 10/02/2018 - 15:54:34 ***"
+"- DESCRIZIONE ERRORE: InvalidArgument=Valore di '12' non valido per 'index'.
+Nome parametro: index"
+"- NOME PROCEDURA:    in System.Windows.Forms.ListViewItem.ListViewSubItemCollection.get_Item(Int32 index)
+   in Hospitality_Solution.ContoPos.CaricaListaConto()"
+"
+"
+"*** 10/02/2018 - 15:54:35 ***"
+"- DESCRIZIONE ERRORE: InvalidArgument=Valore di '12' non valido per 'index'.
+Nome parametro: index"
+"- NOME PROCEDURA:    in System.Windows.Forms.ListViewItem.ListViewSubItemCollection.get_Item(Int32 index)
+   in Hospitality_Solution.ContoPos.CaricaListaConto()"
+"
+"
+"*** 10/02/2018 - 16:01:15 ***"
+"- DESCRIZIONE ERRORE: InvalidArgument=Valore di '12' non valido per 'index'.
+Nome parametro: index"
+"- NOME PROCEDURA:    in System.Windows.Forms.ListViewItem.ListViewSubItemCollection.get_Item(Int32 index)
+   in Hospitality_Solution.ContoPos.CaricaListaConto() in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Ristorante\ContoPos.vb:riga 2804"
+"
+"
+"*** 10/02/2018 - 16:02:07 ***"
+"- DESCRIZIONE ERRORE: InvalidArgument=Valore di '12' non valido per 'index'.
+Nome parametro: index"
+"- NOME PROCEDURA:    in System.Windows.Forms.ListViewItem.ListViewSubItemCollection.get_Item(Int32 index)
+   in Hospitality_Solution.ContoPos.CaricaListaConto() in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Ristorante\ContoPos.vb:riga 2804"
+"
+"
+"*** 10/02/2018 - 16:02:08 ***"
+"- DESCRIZIONE ERRORE: InvalidArgument=Valore di '12' non valido per 'index'.
+Nome parametro: index"
+"- NOME PROCEDURA:    in System.Windows.Forms.ListViewItem.ListViewSubItemCollection.get_Item(Int32 index)
+   in Hospitality_Solution.ContoPos.CaricaListaConto() in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Ristorante\ContoPos.vb:riga 2804"
+"
+"
+"*** 10/02/2018 - 16:02:08 ***"
+"- DESCRIZIONE ERRORE: InvalidArgument=Valore di '12' non valido per 'index'.
+Nome parametro: index"
+"- NOME PROCEDURA:    in System.Windows.Forms.ListViewItem.ListViewSubItemCollection.get_Item(Int32 index)
+   in Hospitality_Solution.ContoPos.CaricaListaConto() in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Ristorante\ContoPos.vb:riga 2804"
+"
+"
+"*** 10/02/2018 - 16:02:09 ***"
+"- DESCRIZIONE ERRORE: InvalidArgument=Valore di '12' non valido per 'index'.
+Nome parametro: index"
+"- NOME PROCEDURA:    in System.Windows.Forms.ListViewItem.ListViewSubItemCollection.get_Item(Int32 index)
+   in Hospitality_Solution.ContoPos.CaricaListaConto() in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Ristorante\ContoPos.vb:riga 2804"
+"
+"
+"*** 10/02/2018 - 16:02:10 ***"
+"- DESCRIZIONE ERRORE: InvalidArgument=Valore di '12' non valido per 'index'.
+Nome parametro: index"
+"- NOME PROCEDURA:    in System.Windows.Forms.ListViewItem.ListViewSubItemCollection.get_Item(Int32 index)
+   in Hospitality_Solution.ContoPos.CaricaListaConto() in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Ristorante\ContoPos.vb:riga 2804"
+"
+"
+"*** 10/02/2018 - 16:02:11 ***"
+"- DESCRIZIONE ERRORE: InvalidArgument=Valore di '12' non valido per 'index'.
+Nome parametro: index"
+"- NOME PROCEDURA:    in System.Windows.Forms.ListViewItem.ListViewSubItemCollection.get_Item(Int32 index)
+   in Hospitality_Solution.ContoPos.CaricaListaConto() in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Ristorante\ContoPos.vb:riga 2804"
+"
+"
+"*** 10/02/2018 - 16:04:44 ***"
+"- DESCRIZIONE ERRORE: InvalidArgument=Valore di '11' non valido per 'index'.
+Nome parametro: index"
+"- NOME PROCEDURA:    in System.Windows.Forms.ListViewItem.ListViewSubItemCollection.get_Item(Int32 index)
+   in Hospitality_Solution.ContoPos.CaricaListaConto() in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Ristorante\ContoPos.vb:riga 2804"
+"
+"
+"*** 10/02/2018 - 16:04:50 ***"
+"- DESCRIZIONE ERRORE: InvalidArgument=Valore di '11' non valido per 'index'.
+Nome parametro: index"
+"- NOME PROCEDURA:    in System.Windows.Forms.ListViewItem.ListViewSubItemCollection.get_Item(Int32 index)
+   in Hospitality_Solution.ContoPos.CaricaListaConto() in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Ristorante\ContoPos.vb:riga 2804"
+"
+"
+"*** 10/02/2018 - 16:22:36 ***"
+"- DESCRIZIONE ERRORE: InvalidArgument=Valore di '12' non valido per 'index'.
+Nome parametro: index"
+"- NOME PROCEDURA:    in System.Windows.Forms.ListViewItem.ListViewSubItemCollection.get_Item(Int32 index)
+   in Hospitality_Solution.ContoPos.CaricaListaConto() in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Ristorante\ContoPos.vb:riga 2804"
+"
+"
+"*** 10/02/2018 - 16:22:46 ***"
+"- DESCRIZIONE ERRORE: InvalidArgument=Valore di '12' non valido per 'index'.
+Nome parametro: index"
+"- NOME PROCEDURA:    in System.Windows.Forms.ListViewItem.ListViewSubItemCollection.get_Item(Int32 index)
+   in Hospitality_Solution.ContoPos.CaricaListaConto() in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Ristorante\ContoPos.vb:riga 2804"
+"
+"
+"*** 10/02/2018 - 16:22:47 ***"
+"- DESCRIZIONE ERRORE: InvalidArgument=Valore di '12' non valido per 'index'.
+Nome parametro: index"
+"- NOME PROCEDURA:    in System.Windows.Forms.ListViewItem.ListViewSubItemCollection.get_Item(Int32 index)
+   in Hospitality_Solution.ContoPos.CaricaListaConto() in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Ristorante\ContoPos.vb:riga 2804"
+"
+"
+"*** 10/02/2018 - 17:19:01 ***"
+"- DESCRIZIONE ERRORE: InvalidArgument=Valore di '12' non valido per 'index'.
+Nome parametro: index"
+"- NOME PROCEDURA:    in System.Windows.Forms.ListViewItem.ListViewSubItemCollection.get_Item(Int32 index)
+   in Hospitality_Solution.frmPos.ModificaElemento() in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Ristorante\VCPos.vb:riga 4858"
+"
+"

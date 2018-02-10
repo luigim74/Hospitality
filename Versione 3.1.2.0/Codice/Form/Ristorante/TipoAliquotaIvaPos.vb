@@ -19,13 +19,17 @@ Public Class TipoAliquotaIvaPos
    Friend WithEvents netBtn_Reparto4 As Softgroup.NetButton.NetButton
    Private cmd As New OleDbCommand(sql, cn)
 
+   Dim modificaReparto As Boolean = False
+
 #Region " Codice generato da Progettazione Windows Form "
 
-   Public Sub New()
+   Public Sub New(ByVal modificaAliquotaReparto As Boolean)
       MyBase.New()
 
       'Chiamata richiesta da Progettazione Windows Form.
       InitializeComponent()
+
+      modificaReparto = modificaAliquotaReparto
 
    End Sub
 
@@ -261,7 +265,9 @@ Public Class TipoAliquotaIvaPos
       ' Riproduce un effetto sonoro.
       RiproduciEffettoSonoro(My.Resources.beep_Normale, EffettiSonoriPOS)
 
-      g_frmPos.netBtn_Reparto.TextButton = netBtn_Reparto1.TextButton
+      If modificaReparto = True Then
+         g_frmPos.netBtn_Reparto.TextButton = netBtn_Reparto1.TextButton
+      End If
 
       Me.Tag = netBtn_Reparto1.Tag
       Me.DialogResult = DialogResult.OK
@@ -272,7 +278,9 @@ Public Class TipoAliquotaIvaPos
       ' Riproduce un effetto sonoro.
       RiproduciEffettoSonoro(My.Resources.beep_Normale, EffettiSonoriPOS)
 
-      g_frmPos.netBtn_Reparto.TextButton = netBtn_Reparto2.TextButton
+      If modificaReparto = True Then
+         g_frmPos.netBtn_Reparto.TextButton = netBtn_Reparto2.TextButton
+      End If
 
       Me.Tag = netBtn_Reparto2.Tag
       Me.DialogResult = DialogResult.OK
@@ -283,7 +291,9 @@ Public Class TipoAliquotaIvaPos
       ' Riproduce un effetto sonoro.
       RiproduciEffettoSonoro(My.Resources.beep_Normale, EffettiSonoriPOS)
 
-      g_frmPos.netBtn_Reparto.TextButton = netBtn_Reparto3.TextButton
+      If modificaReparto = True Then
+         g_frmPos.netBtn_Reparto.TextButton = netBtn_Reparto3.TextButton
+      End If
 
       Me.Tag = netBtn_Reparto3.Tag
       Me.DialogResult = DialogResult.OK
@@ -294,7 +304,9 @@ Public Class TipoAliquotaIvaPos
       ' Riproduce un effetto sonoro.
       RiproduciEffettoSonoro(My.Resources.beep_Normale, EffettiSonoriPOS)
 
-      g_frmPos.netBtn_Reparto.TextButton = netBtn_Reparto4.TextButton
+      If modificaReparto = True Then
+         g_frmPos.netBtn_Reparto.TextButton = netBtn_Reparto4.TextButton
+      End If
 
       Me.Tag = netBtn_Reparto4.Tag
       Me.DialogResult = DialogResult.OK
