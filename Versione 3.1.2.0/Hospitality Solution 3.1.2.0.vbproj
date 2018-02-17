@@ -415,6 +415,7 @@
     <Compile Include="Codice\Form\Hospitality\GiudizioDemo.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Codice\Form\Ristorante\HospitalityDataSet.vb" />
     <Compile Include="Codice\Form\Ristorante\NoteContiPos.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -677,6 +678,11 @@
     <Compile Include="Codice\Moduli\Dichiarazioni.vb">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="HospitalityDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalityDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Codice\Moduli\Licenza.vb" />
     <Compile Include="Codice\Moduli\MMain.vb">
       <SubType>Code</SubType>
@@ -689,11 +695,6 @@
     </Compile>
     <Compile Include="Dataset1.vb">
       <DependentUpon>Dataset1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="HospitalityDataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HospitalityDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -777,10 +778,6 @@
     <None Include="bin\Reports\StatRisorse.rpt" />
     <None Include="bin\Reports\Tavoli.rpt" />
     <None Include="bin\Reports\Times\Menu.rpt" />
-    <None Include="Dataset1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Dataset1.Designer.vb</LastGenOutput>
-    </None>
     <None Include="HospitalityDataSet.xsc">
       <DependentUpon>HospitalityDataSet.xsd</DependentUpon>
     </None>
@@ -791,6 +788,10 @@
     </None>
     <None Include="HospitalityDataSet.xss">
       <DependentUpon>HospitalityDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Dataset1.Designer.vb</LastGenOutput>
     </None>
     <None Include="My Project\DataSources\Hospitality_Solution.Dataset1TableAdapters.AccessoriServiziTableAdapter.datasource" />
     <None Include="Resources\LogoAmica.ico" />

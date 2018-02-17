@@ -35,6 +35,30 @@ Partial Class frmDocumento
       Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDocumento))
       Me.formFrameSkinner = New Elegant.Ui.FormFrameSkinner()
       Me.eui_tpcDocumento = New Elegant.Ui.TabControl()
+      Me.eui_tpDettagli = New Elegant.Ui.TabPage()
+      Me.eui_cmdImportaDoc = New Elegant.Ui.Button()
+      Me.eui_cmdCancellaTutto = New Elegant.Ui.Button()
+      Me.eui_cmdEliminaRiga = New Elegant.Ui.Button()
+      Me.DropDown1 = New Elegant.Ui.DropDown()
+      Me.PopupMenu1 = New Elegant.Ui.PopupMenu(Me.components)
+      Me.eui_cmdInsPiatti = New Elegant.Ui.Button()
+      Me.eui_cmdInsProdotti = New Elegant.Ui.Button()
+      Me.Separator2 = New Elegant.Ui.Separator()
+      Me.eui_cmdInsAccessori = New Elegant.Ui.Button()
+      Me.eui_cmdInsiServizi = New Elegant.Ui.Button()
+      Me.eui_cmdNuovaRiga = New Elegant.Ui.Button()
+      Me.dgvDettagli = New System.Windows.Forms.DataGridView()
+      Me.clnCodice = New System.Windows.Forms.DataGridViewTextBoxColumn()
+      Me.clnDescrizione = New System.Windows.Forms.DataGridViewTextBoxColumn()
+      Me.clnUm = New System.Windows.Forms.DataGridViewTextBoxColumn()
+      Me.clnQta = New System.Windows.Forms.DataGridViewTextBoxColumn()
+      Me.clnPrezzo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+      Me.clnSconto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+      Me.clnImporto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+      Me.clnIva = New System.Windows.Forms.DataGridViewTextBoxColumn()
+      Me.clnRepartoIva = New System.Windows.Forms.DataGridViewTextBoxColumn()
+      Me.clnValoreSconto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+      Me.clnCategoria = New System.Windows.Forms.DataGridViewTextBoxColumn()
       Me.eui_tpGenerale = New Elegant.Ui.TabPage()
       Me.eui_txtNumProgressivo = New Elegant.Ui.TextBox()
       Me.eui_txtCameriere = New Elegant.Ui.TextBox()
@@ -73,30 +97,6 @@ Partial Class frmDocumento
       Me.eui_txtClienteNome = New Elegant.Ui.TextBox()
       Me.eui_cmbClienteCognome = New Elegant.Ui.ComboBox()
       Me.Label6 = New Elegant.Ui.Label()
-      Me.eui_tpDettagli = New Elegant.Ui.TabPage()
-      Me.eui_cmdImportaDoc = New Elegant.Ui.Button()
-      Me.eui_cmdCancellaTutto = New Elegant.Ui.Button()
-      Me.eui_cmdEliminaRiga = New Elegant.Ui.Button()
-      Me.DropDown1 = New Elegant.Ui.DropDown()
-      Me.PopupMenu1 = New Elegant.Ui.PopupMenu(Me.components)
-      Me.eui_cmdInsPiatti = New Elegant.Ui.Button()
-      Me.eui_cmdInsProdotti = New Elegant.Ui.Button()
-      Me.Separator2 = New Elegant.Ui.Separator()
-      Me.eui_cmdInsAccessori = New Elegant.Ui.Button()
-      Me.eui_cmdInsiServizi = New Elegant.Ui.Button()
-      Me.eui_cmdNuovaRiga = New Elegant.Ui.Button()
-      Me.dgvDettagli = New System.Windows.Forms.DataGridView()
-      Me.clnCodice = New System.Windows.Forms.DataGridViewTextBoxColumn()
-      Me.clnDescrizione = New System.Windows.Forms.DataGridViewTextBoxColumn()
-      Me.clnUm = New System.Windows.Forms.DataGridViewTextBoxColumn()
-      Me.clnQta = New System.Windows.Forms.DataGridViewTextBoxColumn()
-      Me.clnPrezzo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-      Me.clnSconto = New System.Windows.Forms.DataGridViewTextBoxColumn()
-      Me.clnImporto = New System.Windows.Forms.DataGridViewTextBoxColumn()
-      Me.clnIva = New System.Windows.Forms.DataGridViewTextBoxColumn()
-      Me.clnRepartoIva = New System.Windows.Forms.DataGridViewTextBoxColumn()
-      Me.clnValoreSconto = New System.Windows.Forms.DataGridViewTextBoxColumn()
-      Me.clnCategoria = New System.Windows.Forms.DataGridViewTextBoxColumn()
       Me.eui_tpTotali = New Elegant.Ui.TabPage()
       Me.Label36 = New Elegant.Ui.Label()
       Me.eui_txtTotaliRep4Imposta = New Elegant.Ui.TextBox()
@@ -173,10 +173,10 @@ Partial Class frmDocumento
       Me.eui_cmdEmettiStampa = New Elegant.Ui.Button()
       Me.eui_cmdTastiera = New Elegant.Ui.Button()
       CType(Me.eui_tpcDocumento, System.ComponentModel.ISupportInitialize).BeginInit()
-      Me.eui_tpGenerale.SuspendLayout()
       Me.eui_tpDettagli.SuspendLayout()
       CType(Me.PopupMenu1, System.ComponentModel.ISupportInitialize).BeginInit()
       CType(Me.dgvDettagli, System.ComponentModel.ISupportInitialize).BeginInit()
+      Me.eui_tpGenerale.SuspendLayout()
       Me.eui_tpTotali.SuspendLayout()
       Me.eui_tpNote.SuspendLayout()
       CType(Me.PopupMenu2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -205,10 +205,262 @@ Partial Class frmDocumento
       Me.eui_tpcDocumento.Location = New System.Drawing.Point(9, 9)
       Me.eui_tpcDocumento.Name = "eui_tpcDocumento"
       Me.eui_tpcDocumento.SelectedTabPage = Me.eui_tpDettagli
-      Me.eui_tpcDocumento.Size = New System.Drawing.Size(661, 553)
+      Me.eui_tpcDocumento.Size = New System.Drawing.Size(661, 541)
       Me.eui_tpcDocumento.TabIndex = 0
       Me.eui_tpcDocumento.TabPages.AddRange(New Elegant.Ui.TabPage() {Me.eui_tpGenerale, Me.eui_tpDettagli, Me.eui_tpTotali, Me.eui_tpNote})
       Me.eui_tpcDocumento.Text = " "
+      '
+      'eui_tpDettagli
+      '
+      Me.eui_tpDettagli.ActiveControl = Nothing
+      Me.eui_tpDettagli.Controls.Add(Me.eui_cmdImportaDoc)
+      Me.eui_tpDettagli.Controls.Add(Me.eui_cmdCancellaTutto)
+      Me.eui_tpDettagli.Controls.Add(Me.eui_cmdEliminaRiga)
+      Me.eui_tpDettagli.Controls.Add(Me.DropDown1)
+      Me.eui_tpDettagli.Controls.Add(Me.eui_cmdNuovaRiga)
+      Me.eui_tpDettagli.Controls.Add(Me.dgvDettagli)
+      Me.eui_tpDettagli.KeyTip = Nothing
+      Me.eui_tpDettagli.Name = "eui_tpDettagli"
+      Me.eui_tpDettagli.Size = New System.Drawing.Size(659, 520)
+      Me.eui_tpDettagli.TabIndex = 1
+      Me.eui_tpDettagli.Text = "Dettagli"
+      '
+      'eui_cmdImportaDoc
+      '
+      Me.eui_cmdImportaDoc.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+      Me.eui_cmdImportaDoc.Id = "ec3e23ac-6c4f-4121-b3fe-64698cc82823"
+      Me.eui_cmdImportaDoc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+      Me.eui_cmdImportaDoc.Location = New System.Drawing.Point(5, 479)
+      Me.eui_cmdImportaDoc.Name = "eui_cmdImportaDoc"
+      Me.eui_cmdImportaDoc.ScreenTip.Caption = "Stampa"
+      Me.eui_cmdImportaDoc.ScreenTip.Text = "Salva e stampa il documento."
+      Me.eui_cmdImportaDoc.Size = New System.Drawing.Size(122, 29)
+      Me.eui_cmdImportaDoc.TabIndex = 1
+      Me.eui_cmdImportaDoc.Text = "Importa documento..."
+      '
+      'eui_cmdCancellaTutto
+      '
+      Me.eui_cmdCancellaTutto.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+      Me.eui_cmdCancellaTutto.Id = "a64e0446-1db7-4144-9b7c-e1251124234a"
+      Me.eui_cmdCancellaTutto.Location = New System.Drawing.Point(560, 478)
+      Me.eui_cmdCancellaTutto.Name = "eui_cmdCancellaTutto"
+      Me.eui_cmdCancellaTutto.Size = New System.Drawing.Size(95, 29)
+      Me.eui_cmdCancellaTutto.TabIndex = 5
+      Me.eui_cmdCancellaTutto.Text = "&Cancella tutto"
+      '
+      'eui_cmdEliminaRiga
+      '
+      Me.eui_cmdEliminaRiga.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+      Me.eui_cmdEliminaRiga.Id = "ffdf7dee-e67d-4bb1-8383-e023e9410042"
+      Me.eui_cmdEliminaRiga.Location = New System.Drawing.Point(456, 478)
+      Me.eui_cmdEliminaRiga.Name = "eui_cmdEliminaRiga"
+      Me.eui_cmdEliminaRiga.Size = New System.Drawing.Size(95, 29)
+      Me.eui_cmdEliminaRiga.TabIndex = 4
+      Me.eui_cmdEliminaRiga.Text = "&Elimina riga"
+      '
+      'DropDown1
+      '
+      Me.DropDown1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+      Me.DropDown1.Id = "8fc42b15-7920-4cc6-8833-4a5a44220cbf"
+      Me.DropDown1.Location = New System.Drawing.Point(137, 479)
+      Me.DropDown1.Name = "DropDown1"
+      Me.DropDown1.Popup = Me.PopupMenu1
+      Me.DropDown1.Size = New System.Drawing.Size(122, 29)
+      Me.DropDown1.TabIndex = 2
+      Me.DropDown1.Text = "&Inserisci"
+      '
+      'PopupMenu1
+      '
+      Me.PopupMenu1.Items.AddRange(New System.Windows.Forms.Control() {Me.eui_cmdInsPiatti, Me.eui_cmdInsProdotti, Me.Separator2, Me.eui_cmdInsAccessori, Me.eui_cmdInsiServizi})
+      Me.PopupMenu1.KeepPopupsWithOffsetPlacementWithinPlacementArea = False
+      Me.PopupMenu1.PlacementMode = Elegant.Ui.PopupPlacementMode.Bottom
+      Me.PopupMenu1.Size = New System.Drawing.Size(100, 100)
+      '
+      'eui_cmdInsPiatti
+      '
+      Me.eui_cmdInsPiatti.Id = "4ac25483-812f-4790-b27f-46db20bebb88"
+      Me.eui_cmdInsPiatti.Location = New System.Drawing.Point(2, 2)
+      Me.eui_cmdInsPiatti.Name = "eui_cmdInsPiatti"
+      Me.eui_cmdInsPiatti.Size = New System.Drawing.Size(126, 23)
+      Me.eui_cmdInsPiatti.TabIndex = 5
+      Me.eui_cmdInsPiatti.Text = "&Piatti"
+      '
+      'eui_cmdInsProdotti
+      '
+      Me.eui_cmdInsProdotti.Enabled = False
+      Me.eui_cmdInsProdotti.Id = "6ae8cd35-7b39-4425-b887-ec304fea57fc"
+      Me.eui_cmdInsProdotti.Location = New System.Drawing.Point(2, 25)
+      Me.eui_cmdInsProdotti.Name = "eui_cmdInsProdotti"
+      Me.eui_cmdInsProdotti.Size = New System.Drawing.Size(126, 23)
+      Me.eui_cmdInsProdotti.TabIndex = 6
+      Me.eui_cmdInsProdotti.Text = "Pr&odotti"
+      '
+      'Separator2
+      '
+      Me.Separator2.Id = "5b3afab4-cce2-4b7e-b2e5-a49bcb982da3"
+      Me.Separator2.Location = New System.Drawing.Point(2, 48)
+      Me.Separator2.Name = "Separator2"
+      Me.Separator2.Orientation = Elegant.Ui.SeparatorOrientation.Horizontal
+      Me.Separator2.Size = New System.Drawing.Size(126, 5)
+      Me.Separator2.TabIndex = 7
+      Me.Separator2.Text = "Separator2"
+      '
+      'eui_cmdInsAccessori
+      '
+      Me.eui_cmdInsAccessori.Id = "731bfde3-799a-4b0d-937a-67443e967c36"
+      Me.eui_cmdInsAccessori.Location = New System.Drawing.Point(2, 53)
+      Me.eui_cmdInsAccessori.Name = "eui_cmdInsAccessori"
+      Me.eui_cmdInsAccessori.Size = New System.Drawing.Size(126, 23)
+      Me.eui_cmdInsAccessori.TabIndex = 8
+      Me.eui_cmdInsAccessori.Text = "&Accessori"
+      '
+      'eui_cmdInsiServizi
+      '
+      Me.eui_cmdInsiServizi.Id = "681de0fa-bff3-460a-86e9-0f84be4abcce"
+      Me.eui_cmdInsiServizi.Location = New System.Drawing.Point(2, 76)
+      Me.eui_cmdInsiServizi.Name = "eui_cmdInsiServizi"
+      Me.eui_cmdInsiServizi.Size = New System.Drawing.Size(126, 23)
+      Me.eui_cmdInsiServizi.TabIndex = 10
+      Me.eui_cmdInsiServizi.Text = "&Servizi"
+      '
+      'eui_cmdNuovaRiga
+      '
+      Me.eui_cmdNuovaRiga.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+      Me.eui_cmdNuovaRiga.Id = "009b3784-161a-4521-84d6-77d07b88a7dd"
+      Me.eui_cmdNuovaRiga.Location = New System.Drawing.Point(351, 478)
+      Me.eui_cmdNuovaRiga.Name = "eui_cmdNuovaRiga"
+      Me.eui_cmdNuovaRiga.Size = New System.Drawing.Size(95, 29)
+      Me.eui_cmdNuovaRiga.TabIndex = 3
+      Me.eui_cmdNuovaRiga.Text = "&Nuova riga"
+      '
+      'dgvDettagli
+      '
+      DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+      Me.dgvDettagli.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+      Me.dgvDettagli.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+      Me.dgvDettagli.BorderStyle = System.Windows.Forms.BorderStyle.None
+      Me.dgvDettagli.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+      Me.dgvDettagli.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.clnCodice, Me.clnDescrizione, Me.clnUm, Me.clnQta, Me.clnPrezzo, Me.clnSconto, Me.clnImporto, Me.clnIva, Me.clnRepartoIva, Me.clnValoreSconto, Me.clnCategoria})
+      DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+      DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window
+      DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+      DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText
+      DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Orange
+      DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.ControlText
+      DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+      Me.dgvDettagli.DefaultCellStyle = DataGridViewCellStyle9
+      Me.dgvDettagli.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
+      Me.dgvDettagli.Location = New System.Drawing.Point(5, 2)
+      Me.dgvDettagli.MultiSelect = False
+      Me.dgvDettagli.Name = "dgvDettagli"
+      Me.dgvDettagli.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+      Me.dgvDettagli.Size = New System.Drawing.Size(650, 470)
+      Me.dgvDettagli.TabIndex = 0
+      '
+      'clnCodice
+      '
+      DataGridViewCellStyle2.Format = "N0"
+      DataGridViewCellStyle2.NullValue = Nothing
+      Me.clnCodice.DefaultCellStyle = DataGridViewCellStyle2
+      Me.clnCodice.HeaderText = "Codice"
+      Me.clnCodice.Name = "clnCodice"
+      Me.clnCodice.ToolTipText = "Codice"
+      Me.clnCodice.Width = 80
+      '
+      'clnDescrizione
+      '
+      Me.clnDescrizione.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+      DataGridViewCellStyle3.NullValue = Nothing
+      Me.clnDescrizione.DefaultCellStyle = DataGridViewCellStyle3
+      Me.clnDescrizione.HeaderText = "Descrizione"
+      Me.clnDescrizione.Name = "clnDescrizione"
+      Me.clnDescrizione.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+      Me.clnDescrizione.ToolTipText = "Descrizione"
+      '
+      'clnUm
+      '
+      Me.clnUm.FillWeight = 30.0!
+      Me.clnUm.HeaderText = "U.M."
+      Me.clnUm.Name = "clnUm"
+      Me.clnUm.ToolTipText = "Unità di misura"
+      Me.clnUm.Width = 50
+      '
+      'clnQta
+      '
+      DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+      DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+      DataGridViewCellStyle4.Format = "N2"
+      DataGridViewCellStyle4.NullValue = "0,00"
+      Me.clnQta.DefaultCellStyle = DataGridViewCellStyle4
+      Me.clnQta.HeaderText = "Q.tà"
+      Me.clnQta.Name = "clnQta"
+      Me.clnQta.ToolTipText = "Quantità"
+      Me.clnQta.Width = 50
+      '
+      'clnPrezzo
+      '
+      DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+      DataGridViewCellStyle5.Format = "C2"
+      DataGridViewCellStyle5.NullValue = "0,00"
+      Me.clnPrezzo.DefaultCellStyle = DataGridViewCellStyle5
+      Me.clnPrezzo.HeaderText = "Prezzo"
+      Me.clnPrezzo.Name = "clnPrezzo"
+      Me.clnPrezzo.ToolTipText = "Prezzo unitario"
+      '
+      'clnSconto
+      '
+      DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+      DataGridViewCellStyle6.Format = "N2"
+      DataGridViewCellStyle6.NullValue = "0,00"
+      Me.clnSconto.DefaultCellStyle = DataGridViewCellStyle6
+      Me.clnSconto.HeaderText = "Sconto %"
+      Me.clnSconto.Name = "clnSconto"
+      Me.clnSconto.ToolTipText = "Sconto"
+      Me.clnSconto.Width = 60
+      '
+      'clnImporto
+      '
+      DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+      DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+      DataGridViewCellStyle7.Format = "C2"
+      DataGridViewCellStyle7.NullValue = "0,00"
+      Me.clnImporto.DefaultCellStyle = DataGridViewCellStyle7
+      Me.clnImporto.HeaderText = "Importo"
+      Me.clnImporto.Name = "clnImporto"
+      Me.clnImporto.ReadOnly = True
+      Me.clnImporto.ToolTipText = "Importo totale"
+      '
+      'clnIva
+      '
+      DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+      DataGridViewCellStyle8.Format = "N0"
+      DataGridViewCellStyle8.NullValue = "0"
+      Me.clnIva.DefaultCellStyle = DataGridViewCellStyle8
+      Me.clnIva.HeaderText = "I.V.A. %"
+      Me.clnIva.Name = "clnIva"
+      Me.clnIva.ToolTipText = "Aliquota Iva"
+      Me.clnIva.Width = 50
+      '
+      'clnRepartoIva
+      '
+      Me.clnRepartoIva.HeaderText = "RepartoIva"
+      Me.clnRepartoIva.Name = "clnRepartoIva"
+      Me.clnRepartoIva.ReadOnly = True
+      Me.clnRepartoIva.Visible = False
+      '
+      'clnValoreSconto
+      '
+      Me.clnValoreSconto.HeaderText = "Valore Sconto"
+      Me.clnValoreSconto.Name = "clnValoreSconto"
+      Me.clnValoreSconto.Visible = False
+      '
+      'clnCategoria
+      '
+      Me.clnCategoria.HeaderText = "Categoria"
+      Me.clnCategoria.Name = "clnCategoria"
+      Me.clnCategoria.Visible = False
       '
       'eui_tpGenerale
       '
@@ -634,258 +886,6 @@ Partial Class frmDocumento
       Me.Label6.Size = New System.Drawing.Size(33, 13)
       Me.Label6.TabIndex = 20
       Me.Label6.Text = "Clente:"
-      '
-      'eui_tpDettagli
-      '
-      Me.eui_tpDettagli.ActiveControl = Nothing
-      Me.eui_tpDettagli.Controls.Add(Me.eui_cmdImportaDoc)
-      Me.eui_tpDettagli.Controls.Add(Me.eui_cmdCancellaTutto)
-      Me.eui_tpDettagli.Controls.Add(Me.eui_cmdEliminaRiga)
-      Me.eui_tpDettagli.Controls.Add(Me.DropDown1)
-      Me.eui_tpDettagli.Controls.Add(Me.eui_cmdNuovaRiga)
-      Me.eui_tpDettagli.Controls.Add(Me.dgvDettagli)
-      Me.eui_tpDettagli.KeyTip = Nothing
-      Me.eui_tpDettagli.Name = "eui_tpDettagli"
-      Me.eui_tpDettagli.Size = New System.Drawing.Size(659, 532)
-      Me.eui_tpDettagli.TabIndex = 1
-      Me.eui_tpDettagli.Text = "Dettagli"
-      '
-      'eui_cmdImportaDoc
-      '
-      Me.eui_cmdImportaDoc.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-      Me.eui_cmdImportaDoc.Id = "ec3e23ac-6c4f-4121-b3fe-64698cc82823"
-      Me.eui_cmdImportaDoc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-      Me.eui_cmdImportaDoc.Location = New System.Drawing.Point(5, 491)
-      Me.eui_cmdImportaDoc.Name = "eui_cmdImportaDoc"
-      Me.eui_cmdImportaDoc.ScreenTip.Caption = "Stampa"
-      Me.eui_cmdImportaDoc.ScreenTip.Text = "Salva e stampa il documento."
-      Me.eui_cmdImportaDoc.Size = New System.Drawing.Size(122, 29)
-      Me.eui_cmdImportaDoc.TabIndex = 1
-      Me.eui_cmdImportaDoc.Text = "Importa documento..."
-      '
-      'eui_cmdCancellaTutto
-      '
-      Me.eui_cmdCancellaTutto.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-      Me.eui_cmdCancellaTutto.Id = "a64e0446-1db7-4144-9b7c-e1251124234a"
-      Me.eui_cmdCancellaTutto.Location = New System.Drawing.Point(560, 490)
-      Me.eui_cmdCancellaTutto.Name = "eui_cmdCancellaTutto"
-      Me.eui_cmdCancellaTutto.Size = New System.Drawing.Size(95, 29)
-      Me.eui_cmdCancellaTutto.TabIndex = 5
-      Me.eui_cmdCancellaTutto.Text = "&Cancella tutto"
-      '
-      'eui_cmdEliminaRiga
-      '
-      Me.eui_cmdEliminaRiga.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-      Me.eui_cmdEliminaRiga.Id = "ffdf7dee-e67d-4bb1-8383-e023e9410042"
-      Me.eui_cmdEliminaRiga.Location = New System.Drawing.Point(456, 490)
-      Me.eui_cmdEliminaRiga.Name = "eui_cmdEliminaRiga"
-      Me.eui_cmdEliminaRiga.Size = New System.Drawing.Size(95, 29)
-      Me.eui_cmdEliminaRiga.TabIndex = 4
-      Me.eui_cmdEliminaRiga.Text = "&Elimina riga"
-      '
-      'DropDown1
-      '
-      Me.DropDown1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-      Me.DropDown1.Id = "8fc42b15-7920-4cc6-8833-4a5a44220cbf"
-      Me.DropDown1.Location = New System.Drawing.Point(137, 491)
-      Me.DropDown1.Name = "DropDown1"
-      Me.DropDown1.Popup = Me.PopupMenu1
-      Me.DropDown1.Size = New System.Drawing.Size(122, 29)
-      Me.DropDown1.TabIndex = 2
-      Me.DropDown1.Text = "&Inserisci"
-      '
-      'PopupMenu1
-      '
-      Me.PopupMenu1.Items.AddRange(New System.Windows.Forms.Control() {Me.eui_cmdInsPiatti, Me.eui_cmdInsProdotti, Me.Separator2, Me.eui_cmdInsAccessori, Me.eui_cmdInsiServizi})
-      Me.PopupMenu1.KeepPopupsWithOffsetPlacementWithinPlacementArea = False
-      Me.PopupMenu1.PlacementMode = Elegant.Ui.PopupPlacementMode.Bottom
-      Me.PopupMenu1.Size = New System.Drawing.Size(100, 100)
-      '
-      'eui_cmdInsPiatti
-      '
-      Me.eui_cmdInsPiatti.Id = "4ac25483-812f-4790-b27f-46db20bebb88"
-      Me.eui_cmdInsPiatti.Location = New System.Drawing.Point(2, 2)
-      Me.eui_cmdInsPiatti.Name = "eui_cmdInsPiatti"
-      Me.eui_cmdInsPiatti.Size = New System.Drawing.Size(126, 23)
-      Me.eui_cmdInsPiatti.TabIndex = 5
-      Me.eui_cmdInsPiatti.Text = "&Piatti"
-      '
-      'eui_cmdInsProdotti
-      '
-      Me.eui_cmdInsProdotti.Enabled = False
-      Me.eui_cmdInsProdotti.Id = "6ae8cd35-7b39-4425-b887-ec304fea57fc"
-      Me.eui_cmdInsProdotti.Location = New System.Drawing.Point(2, 25)
-      Me.eui_cmdInsProdotti.Name = "eui_cmdInsProdotti"
-      Me.eui_cmdInsProdotti.Size = New System.Drawing.Size(126, 23)
-      Me.eui_cmdInsProdotti.TabIndex = 6
-      Me.eui_cmdInsProdotti.Text = "Pr&odotti"
-      '
-      'Separator2
-      '
-      Me.Separator2.Id = "5b3afab4-cce2-4b7e-b2e5-a49bcb982da3"
-      Me.Separator2.Location = New System.Drawing.Point(2, 48)
-      Me.Separator2.Name = "Separator2"
-      Me.Separator2.Orientation = Elegant.Ui.SeparatorOrientation.Horizontal
-      Me.Separator2.Size = New System.Drawing.Size(126, 5)
-      Me.Separator2.TabIndex = 7
-      Me.Separator2.Text = "Separator2"
-      '
-      'eui_cmdInsAccessori
-      '
-      Me.eui_cmdInsAccessori.Id = "731bfde3-799a-4b0d-937a-67443e967c36"
-      Me.eui_cmdInsAccessori.Location = New System.Drawing.Point(2, 53)
-      Me.eui_cmdInsAccessori.Name = "eui_cmdInsAccessori"
-      Me.eui_cmdInsAccessori.Size = New System.Drawing.Size(126, 23)
-      Me.eui_cmdInsAccessori.TabIndex = 8
-      Me.eui_cmdInsAccessori.Text = "&Accessori"
-      '
-      'eui_cmdInsiServizi
-      '
-      Me.eui_cmdInsiServizi.Id = "681de0fa-bff3-460a-86e9-0f84be4abcce"
-      Me.eui_cmdInsiServizi.Location = New System.Drawing.Point(2, 76)
-      Me.eui_cmdInsiServizi.Name = "eui_cmdInsiServizi"
-      Me.eui_cmdInsiServizi.Size = New System.Drawing.Size(126, 23)
-      Me.eui_cmdInsiServizi.TabIndex = 10
-      Me.eui_cmdInsiServizi.Text = "&Servizi"
-      '
-      'eui_cmdNuovaRiga
-      '
-      Me.eui_cmdNuovaRiga.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-      Me.eui_cmdNuovaRiga.Id = "009b3784-161a-4521-84d6-77d07b88a7dd"
-      Me.eui_cmdNuovaRiga.Location = New System.Drawing.Point(351, 490)
-      Me.eui_cmdNuovaRiga.Name = "eui_cmdNuovaRiga"
-      Me.eui_cmdNuovaRiga.Size = New System.Drawing.Size(95, 29)
-      Me.eui_cmdNuovaRiga.TabIndex = 3
-      Me.eui_cmdNuovaRiga.Text = "&Nuova riga"
-      '
-      'dgvDettagli
-      '
-      DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-      Me.dgvDettagli.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-      Me.dgvDettagli.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-      Me.dgvDettagli.BorderStyle = System.Windows.Forms.BorderStyle.None
-      Me.dgvDettagli.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-      Me.dgvDettagli.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.clnCodice, Me.clnDescrizione, Me.clnUm, Me.clnQta, Me.clnPrezzo, Me.clnSconto, Me.clnImporto, Me.clnIva, Me.clnRepartoIva, Me.clnValoreSconto, Me.clnCategoria})
-      DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-      DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window
-      DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText
-      DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Orange
-      DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.ControlText
-      DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-      Me.dgvDettagli.DefaultCellStyle = DataGridViewCellStyle9
-      Me.dgvDettagli.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
-      Me.dgvDettagli.Location = New System.Drawing.Point(5, 2)
-      Me.dgvDettagli.MultiSelect = False
-      Me.dgvDettagli.Name = "dgvDettagli"
-      Me.dgvDettagli.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-      Me.dgvDettagli.Size = New System.Drawing.Size(650, 482)
-      Me.dgvDettagli.TabIndex = 0
-      '
-      'clnCodice
-      '
-      DataGridViewCellStyle2.Format = "N0"
-      DataGridViewCellStyle2.NullValue = Nothing
-      Me.clnCodice.DefaultCellStyle = DataGridViewCellStyle2
-      Me.clnCodice.HeaderText = "Codice"
-      Me.clnCodice.Name = "clnCodice"
-      Me.clnCodice.ToolTipText = "Codice"
-      Me.clnCodice.Width = 80
-      '
-      'clnDescrizione
-      '
-      Me.clnDescrizione.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-      DataGridViewCellStyle3.NullValue = Nothing
-      Me.clnDescrizione.DefaultCellStyle = DataGridViewCellStyle3
-      Me.clnDescrizione.HeaderText = "Descrizione"
-      Me.clnDescrizione.Name = "clnDescrizione"
-      Me.clnDescrizione.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-      Me.clnDescrizione.ToolTipText = "Descrizione"
-      '
-      'clnUm
-      '
-      Me.clnUm.FillWeight = 30.0!
-      Me.clnUm.HeaderText = "U.M."
-      Me.clnUm.Name = "clnUm"
-      Me.clnUm.ToolTipText = "Unità di misura"
-      Me.clnUm.Width = 50
-      '
-      'clnQta
-      '
-      DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
-      DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      DataGridViewCellStyle4.Format = "N2"
-      DataGridViewCellStyle4.NullValue = "0,00"
-      Me.clnQta.DefaultCellStyle = DataGridViewCellStyle4
-      Me.clnQta.HeaderText = "Q.tà"
-      Me.clnQta.Name = "clnQta"
-      Me.clnQta.ToolTipText = "Quantità"
-      Me.clnQta.Width = 50
-      '
-      'clnPrezzo
-      '
-      DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
-      DataGridViewCellStyle5.Format = "C2"
-      DataGridViewCellStyle5.NullValue = "0,00"
-      Me.clnPrezzo.DefaultCellStyle = DataGridViewCellStyle5
-      Me.clnPrezzo.HeaderText = "Prezzo"
-      Me.clnPrezzo.Name = "clnPrezzo"
-      Me.clnPrezzo.ToolTipText = "Prezzo unitario"
-      '
-      'clnSconto
-      '
-      DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
-      DataGridViewCellStyle6.Format = "N2"
-      DataGridViewCellStyle6.NullValue = "0,00"
-      Me.clnSconto.DefaultCellStyle = DataGridViewCellStyle6
-      Me.clnSconto.HeaderText = "Sconto %"
-      Me.clnSconto.Name = "clnSconto"
-      Me.clnSconto.ToolTipText = "Sconto"
-      Me.clnSconto.Width = 60
-      '
-      'clnImporto
-      '
-      DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
-      DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      DataGridViewCellStyle7.Format = "C2"
-      DataGridViewCellStyle7.NullValue = "0,00"
-      Me.clnImporto.DefaultCellStyle = DataGridViewCellStyle7
-      Me.clnImporto.HeaderText = "Importo"
-      Me.clnImporto.Name = "clnImporto"
-      Me.clnImporto.ReadOnly = True
-      Me.clnImporto.ToolTipText = "Importo totale"
-      '
-      'clnIva
-      '
-      DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
-      DataGridViewCellStyle8.Format = "N0"
-      DataGridViewCellStyle8.NullValue = "0"
-      Me.clnIva.DefaultCellStyle = DataGridViewCellStyle8
-      Me.clnIva.HeaderText = "I.V.A. %"
-      Me.clnIva.Name = "clnIva"
-      Me.clnIva.ToolTipText = "Aliquota Iva"
-      Me.clnIva.Width = 50
-      '
-      'clnRepartoIva
-      '
-      Me.clnRepartoIva.HeaderText = "RepartoIva"
-      Me.clnRepartoIva.Name = "clnRepartoIva"
-      Me.clnRepartoIva.ReadOnly = True
-      Me.clnRepartoIva.Visible = False
-      '
-      'clnValoreSconto
-      '
-      Me.clnValoreSconto.HeaderText = "Valore Sconto"
-      Me.clnValoreSconto.Name = "clnValoreSconto"
-      Me.clnValoreSconto.Visible = False
-      '
-      'clnCategoria
-      '
-      Me.clnCategoria.HeaderText = "Categoria"
-      Me.clnCategoria.Name = "clnCategoria"
-      Me.clnCategoria.Visible = False
       '
       'eui_tpTotali
       '
@@ -1368,10 +1368,10 @@ Partial Class frmDocumento
       Me.StatusBar1.Controls.Add(Me.StatusBarControlsArea1)
       Me.StatusBar1.ControlsArea = Me.StatusBarControlsArea1
       Me.StatusBar1.Dock = System.Windows.Forms.DockStyle.Bottom
-      Me.StatusBar1.Location = New System.Drawing.Point(0, 676)
+      Me.StatusBar1.Location = New System.Drawing.Point(0, 675)
       Me.StatusBar1.Name = "StatusBar1"
       Me.StatusBar1.NotificationsArea = Me.StatusBarNotificationsArea1
-      Me.StatusBar1.Size = New System.Drawing.Size(845, 22)
+      Me.StatusBar1.Size = New System.Drawing.Size(853, 22)
       Me.StatusBar1.TabIndex = 3
       Me.StatusBar1.Text = "StatusBar1"
       '
@@ -1385,7 +1385,7 @@ Partial Class frmDocumento
       Me.StatusBarNotificationsArea1.MaximumSize = New System.Drawing.Size(0, 22)
       Me.StatusBarNotificationsArea1.MinimumSize = New System.Drawing.Size(0, 22)
       Me.StatusBarNotificationsArea1.Name = "StatusBarNotificationsArea1"
-      Me.StatusBarNotificationsArea1.Size = New System.Drawing.Size(711, 22)
+      Me.StatusBarNotificationsArea1.Size = New System.Drawing.Size(719, 22)
       Me.StatusBarNotificationsArea1.TabIndex = 1
       '
       'StatusBarPane2
@@ -1453,7 +1453,7 @@ Partial Class frmDocumento
       '
       Me.StatusBarControlsArea1.Controls.Add(Me.StatusBarPane4)
       Me.StatusBarControlsArea1.Dock = System.Windows.Forms.DockStyle.Right
-      Me.StatusBarControlsArea1.Location = New System.Drawing.Point(711, 0)
+      Me.StatusBarControlsArea1.Location = New System.Drawing.Point(719, 0)
       Me.StatusBarControlsArea1.MaximumSize = New System.Drawing.Size(0, 22)
       Me.StatusBarControlsArea1.MinimumSize = New System.Drawing.Size(0, 22)
       Me.StatusBarControlsArea1.Name = "StatusBarControlsArea1"
@@ -1485,7 +1485,7 @@ Partial Class frmDocumento
       Me.eui_cmdAnteprima.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.eui_cmdAnteprima.Id = "a24f06e9-0d6d-457c-a692-06d6a31b5a4c"
       Me.eui_cmdAnteprima.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-      Me.eui_cmdAnteprima.Location = New System.Drawing.Point(687, 209)
+      Me.eui_cmdAnteprima.Location = New System.Drawing.Point(687, 197)
       Me.eui_cmdAnteprima.Name = "eui_cmdAnteprima"
       Me.eui_cmdAnteprima.ScreenTip.Caption = "Anteprima"
       Me.eui_cmdAnteprima.ScreenTip.Text = "Salva e visualizza l'anteprima del documento."
@@ -1500,7 +1500,7 @@ Partial Class frmDocumento
       Me.eui_cmdEmetti.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.eui_cmdEmetti.Id = "61543a85-ab7b-43e0-8dda-63529664b486"
       Me.eui_cmdEmetti.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-      Me.eui_cmdEmetti.Location = New System.Drawing.Point(687, 425)
+      Me.eui_cmdEmetti.Location = New System.Drawing.Point(687, 413)
       Me.eui_cmdEmetti.Name = "eui_cmdEmetti"
       Me.eui_cmdEmetti.ScreenTip.Caption = "Emetti"
       Me.eui_cmdEmetti.ScreenTip.Text = "Salva ed emette il documento eseguendo le operazioni contabili."
@@ -1545,7 +1545,7 @@ Partial Class frmDocumento
       '
       Me.eui_txtSconto.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
       Me.eui_txtSconto.Id = "bff966b8-cb34-4234-96d6-3d92f169b3d2"
-      Me.eui_txtSconto.Location = New System.Drawing.Point(81, 594)
+      Me.eui_txtSconto.Location = New System.Drawing.Point(81, 582)
       Me.eui_txtSconto.Name = "eui_txtSconto"
       Me.eui_txtSconto.Size = New System.Drawing.Size(64, 21)
       Me.eui_txtSconto.TabIndex = 1
@@ -1557,7 +1557,7 @@ Partial Class frmDocumento
       '
       Me.eui_txtServizio.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
       Me.eui_txtServizio.Id = "95b58821-86a3-401d-8984-ecca4d27aaaa"
-      Me.eui_txtServizio.Location = New System.Drawing.Point(9, 594)
+      Me.eui_txtServizio.Location = New System.Drawing.Point(9, 582)
       Me.eui_txtServizio.Name = "eui_txtServizio"
       Me.eui_txtServizio.Size = New System.Drawing.Size(64, 21)
       Me.eui_txtServizio.TabIndex = 0
@@ -1568,7 +1568,7 @@ Partial Class frmDocumento
       'Label14
       '
       Me.Label14.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-      Me.Label14.Location = New System.Drawing.Point(81, 578)
+      Me.Label14.Location = New System.Drawing.Point(81, 566)
       Me.Label14.Name = "Label14"
       Me.Label14.Size = New System.Drawing.Size(56, 16)
       Me.Label14.TabIndex = 35
@@ -1578,7 +1578,7 @@ Partial Class frmDocumento
       'Label15
       '
       Me.Label15.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-      Me.Label15.Location = New System.Drawing.Point(9, 578)
+      Me.Label15.Location = New System.Drawing.Point(9, 566)
       Me.Label15.Name = "Label15"
       Me.Label15.Size = New System.Drawing.Size(53, 13)
       Me.Label15.TabIndex = 34
@@ -1589,7 +1589,7 @@ Partial Class frmDocumento
       '
       Me.eui_txtImposta.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.eui_txtImposta.Id = "47893f1f-16cc-4c5c-9f18-80cc5dfafc75"
-      Me.eui_txtImposta.Location = New System.Drawing.Point(410, 593)
+      Me.eui_txtImposta.Location = New System.Drawing.Point(410, 581)
       Me.eui_txtImposta.Name = "eui_txtImposta"
       Me.eui_txtImposta.Size = New System.Drawing.Size(124, 21)
       Me.eui_txtImposta.TabIndex = 3
@@ -1600,7 +1600,7 @@ Partial Class frmDocumento
       '
       Me.eui_txtImponibile.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.eui_txtImponibile.Id = "db7f65dd-91d0-44b9-81e5-988cf080c183"
-      Me.eui_txtImponibile.Location = New System.Drawing.Point(277, 593)
+      Me.eui_txtImponibile.Location = New System.Drawing.Point(277, 581)
       Me.eui_txtImponibile.Name = "eui_txtImponibile"
       Me.eui_txtImponibile.Size = New System.Drawing.Size(124, 21)
       Me.eui_txtImponibile.TabIndex = 2
@@ -1610,7 +1610,7 @@ Partial Class frmDocumento
       'Label16
       '
       Me.Label16.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-      Me.Label16.Location = New System.Drawing.Point(410, 577)
+      Me.Label16.Location = New System.Drawing.Point(410, 565)
       Me.Label16.Name = "Label16"
       Me.Label16.Size = New System.Drawing.Size(56, 16)
       Me.Label16.TabIndex = 39
@@ -1619,7 +1619,7 @@ Partial Class frmDocumento
       'Label17
       '
       Me.Label17.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-      Me.Label17.Location = New System.Drawing.Point(277, 577)
+      Me.Label17.Location = New System.Drawing.Point(277, 565)
       Me.Label17.Name = "Label17"
       Me.Label17.Size = New System.Drawing.Size(56, 16)
       Me.Label17.TabIndex = 38
@@ -1630,7 +1630,7 @@ Partial Class frmDocumento
       Me.eui_txtTotaleDocumento.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.eui_txtTotaleDocumento.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.eui_txtTotaleDocumento.Id = "95402abc-858c-4074-bcbe-42aba8a8657b"
-      Me.eui_txtTotaleDocumento.Location = New System.Drawing.Point(545, 593)
+      Me.eui_txtTotaleDocumento.Location = New System.Drawing.Point(545, 581)
       Me.eui_txtTotaleDocumento.Name = "eui_txtTotaleDocumento"
       Me.eui_txtTotaleDocumento.Size = New System.Drawing.Size(124, 21)
       Me.eui_txtTotaleDocumento.TabIndex = 4
@@ -1640,7 +1640,7 @@ Partial Class frmDocumento
       'Label18
       '
       Me.Label18.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-      Me.Label18.Location = New System.Drawing.Point(545, 577)
+      Me.Label18.Location = New System.Drawing.Point(545, 565)
       Me.Label18.Name = "Label18"
       Me.Label18.Size = New System.Drawing.Size(56, 16)
       Me.Label18.TabIndex = 42
@@ -1651,7 +1651,7 @@ Partial Class frmDocumento
       Me.eui_cmdStampa.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.eui_cmdStampa.Id = "3f5dd41d-365c-44ff-9339-5f43d19c42a9"
       Me.eui_cmdStampa.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-      Me.eui_cmdStampa.Location = New System.Drawing.Point(687, 281)
+      Me.eui_cmdStampa.Location = New System.Drawing.Point(687, 269)
       Me.eui_cmdStampa.Name = "eui_cmdStampa"
       Me.eui_cmdStampa.ScreenTip.Caption = "Stampa"
       Me.eui_cmdStampa.ScreenTip.Text = "Salva e stampa il documento."
@@ -1666,7 +1666,7 @@ Partial Class frmDocumento
       Me.eui_cmdEmettiStampa.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.eui_cmdEmettiStampa.Id = "39cac427-b8a2-4ffc-8fc8-a532a1f414e9"
       Me.eui_cmdEmettiStampa.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-      Me.eui_cmdEmettiStampa.Location = New System.Drawing.Point(687, 353)
+      Me.eui_cmdEmettiStampa.Location = New System.Drawing.Point(687, 341)
       Me.eui_cmdEmettiStampa.Name = "eui_cmdEmettiStampa"
       Me.eui_cmdEmettiStampa.ScreenTip.Caption = "Emetti"
       Me.eui_cmdEmettiStampa.ScreenTip.Text = "Salva, stampa ed emette il documento eseguendo le operazioni contabili."
@@ -1680,7 +1680,7 @@ Partial Class frmDocumento
       '
       Me.eui_cmdTastiera.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.eui_cmdTastiera.Id = "03b32c49-16f5-47ce-837d-3771218e7e99"
-      Me.eui_cmdTastiera.Location = New System.Drawing.Point(687, 497)
+      Me.eui_cmdTastiera.Location = New System.Drawing.Point(687, 485)
       Me.eui_cmdTastiera.Name = "eui_cmdTastiera"
       Me.eui_cmdTastiera.ScreenTip.Caption = "Tastiera virtuale"
       Me.eui_cmdTastiera.ScreenTip.Text = "Apre la tastiera virtuale."
@@ -1696,7 +1696,7 @@ Partial Class frmDocumento
       Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
       Me.BackColor = System.Drawing.SystemColors.AppWorkspace
       Me.CancelButton = Me.eui_cmdAnnulla
-      Me.ClientSize = New System.Drawing.Size(845, 698)
+      Me.ClientSize = New System.Drawing.Size(853, 697)
       Me.Controls.Add(Me.eui_cmdTastiera)
       Me.Controls.Add(Me.eui_cmdEmettiStampa)
       Me.Controls.Add(Me.eui_cmdStampa)
@@ -1721,11 +1721,11 @@ Partial Class frmDocumento
       Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
       Me.Text = "Conto"
       CType(Me.eui_tpcDocumento, System.ComponentModel.ISupportInitialize).EndInit()
-      Me.eui_tpGenerale.ResumeLayout(False)
-      Me.eui_tpGenerale.PerformLayout()
       Me.eui_tpDettagli.ResumeLayout(False)
       CType(Me.PopupMenu1, System.ComponentModel.ISupportInitialize).EndInit()
       CType(Me.dgvDettagli, System.ComponentModel.ISupportInitialize).EndInit()
+      Me.eui_tpGenerale.ResumeLayout(False)
+      Me.eui_tpGenerale.PerformLayout()
       Me.eui_tpTotali.ResumeLayout(False)
       Me.eui_tpTotali.PerformLayout()
       Me.eui_tpNote.ResumeLayout(False)

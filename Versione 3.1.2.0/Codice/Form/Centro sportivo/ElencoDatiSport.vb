@@ -1468,7 +1468,7 @@ Public Class frmElencoDatiSport
 
             oleAdapter.SelectCommand = New OleDbCommand(sqlRep, cn)
 
-            Dim ds As New HospitalityDataSet 'Dataset1 utilizzato con Crystal Reports
+            Dim ds As New Dataset1 'utilizzato con Crystal Reports
 
             ds.Clear()
 

@@ -3529,6 +3529,35 @@ Module Procedure
       End Try
    End Function
 
+   Public Function VerificaAliquotaIva(ByVal valIva As String) As String
+      Try
+         Select Case valIva
+            Case LeggiAliquotaIva("Reparto 1")
+               Return "Reparto 1"
+
+            Case LeggiAliquotaIva("Reparto 2")
+               Return "Reparto 2"
+
+            Case LeggiAliquotaIva("Reparto 3")
+               Return "Reparto 3"
+
+            Case LeggiAliquotaIva("Reparto 4")
+               Return "Reparto 4"
+
+            Case Else
+               Return String.Empty
+
+         End Select
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+         Return False
+
+      End Try
+   End Function
+
 #End Region
 
 End Module

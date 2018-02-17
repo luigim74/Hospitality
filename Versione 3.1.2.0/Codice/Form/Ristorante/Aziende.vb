@@ -2419,7 +2419,7 @@ Public Class frmAziende
 
       End Try
    End Sub
-
+   ' DA_FARE_A: Modificare!
    Private Sub SalvaDocumento()
       Try
          ' Valore ID per l'Azienda o Buono pasto.

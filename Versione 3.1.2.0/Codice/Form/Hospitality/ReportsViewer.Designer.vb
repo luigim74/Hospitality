@@ -27,16 +27,16 @@ Partial Class ReportsViewer
       Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
       Dim ReportDataSource3 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
       Me.DettagliDocBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-      Me.HospitalityDataSet = New HospitalityDataSet()
+      Me.HospitalityDataSet = New Hospitality_Solution.HospitalityDataSet()
       Me.AziendaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
       Me.DocumentiBindingSource = New System.Windows.Forms.BindingSource(Me.components)
       Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
       Me.formFrameSkinner = New Elegant.Ui.FormFrameSkinner()
-      Me.DettagliDocTableAdapter = New HospitalityDataSetTableAdapters.DettagliDocTableAdapter()
-      Me.AziendaTableAdapter = New HospitalityDataSetTableAdapters.AziendaTableAdapter()
-      Me.DocumentiTableAdapter = New HospitalityDataSetTableAdapters.DocumentiTableAdapter()
+      Me.DettagliDocTableAdapter = New Hospitality_Solution.HospitalityDataSetTableAdapters.DettagliDocTableAdapter()
+      Me.AziendaTableAdapter = New Hospitality_Solution.HospitalityDataSetTableAdapters.AziendaTableAdapter()
+      Me.DocumentiTableAdapter = New Hospitality_Solution.HospitalityDataSetTableAdapters.DocumentiTableAdapter()
       Me.asBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-      Me.AccessoriServiziTableAdapter = New HospitalityDataSetTableAdapters.AccessoriServiziTableAdapter()
+      Me.AccessoriServiziTableAdapter = New Hospitality_Solution.HospitalityDataSetTableAdapters.AccessoriServiziTableAdapter()
       CType(Me.DettagliDocBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
       CType(Me.HospitalityDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
       CType(Me.AziendaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -81,7 +81,7 @@ Partial Class ReportsViewer
       Me.ReportViewer1.LocalReport.ReportEmbeddedResource = ""
       Me.ReportViewer1.Location = New System.Drawing.Point(0, 0)
       Me.ReportViewer1.Name = "ReportViewer1"
-      Me.ReportViewer1.Size = New System.Drawing.Size(908, 337)
+      Me.ReportViewer1.Size = New System.Drawing.Size(916, 345)
       Me.ReportViewer1.TabIndex = 0
       '
       'formFrameSkinner
@@ -114,7 +114,7 @@ Partial Class ReportsViewer
       '
       Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
       Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-      Me.ClientSize = New System.Drawing.Size(908, 337)
+      Me.ClientSize = New System.Drawing.Size(916, 345)
       Me.Controls.Add(Me.ReportViewer1)
       Me.Name = "ReportsViewer"
       Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

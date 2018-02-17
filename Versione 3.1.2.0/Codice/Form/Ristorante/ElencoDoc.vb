@@ -2777,13 +2777,19 @@ Public Class ElencoDoc
    End Sub
 
    Private Sub DataGrid1_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles DataGrid1.DoubleClick
-      'If Modifica.Enabled = True Then
-      '   ' Registra loperazione efettuata dall'operatore identificato.
-      '   registraModifica()
+      Try
+         ' Modifica il cursore del mouse.
+         Cursor.Current = Cursors.AppStarting
 
-      '   ' Apre la finestra Cliente per la modifica dei dati.
-      '   ApriDati(CStr(DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 0)))
-      'End If
+         ' Apre la finestra Documento per la modifica dei dati.
+         g_frmDocumento = New frmDocumento("ElencoDoc", DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 4), DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 0))
+         g_frmDocumento.ShowDialog()
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
    End Sub
 
    Private Sub dtpDal_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles dtpDal.ValueChanged

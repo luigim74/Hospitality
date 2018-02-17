@@ -11013,6 +11013,9 @@ Friend Class frmMain
                g_frmListiniCamere.Nuovo()
 
             Case TITOLO_FINESTRA_ELENCO_DOCUMENTI
+               ' Modifica il cursore del mouse.
+               Cursor.Current = Cursors.AppStarting
+
                g_frmDocumento = New frmDocumento("ElencoDoc", "Conto", String.Empty)
                g_frmDocumento.ShowDialog()
 
@@ -11043,6 +11046,7 @@ Friend Class frmMain
             Case TITOLO_FINESTRA_ELENCO_DOCUMENTI
                ' Modifica il cursore del mouse.
                Cursor.Current = Cursors.AppStarting
+
                g_frmDocumento = New frmDocumento("ElencoDoc", g_frmDocumenti.DataGrid1.Item(g_frmDocumenti.DataGrid1.CurrentCell.RowNumber, 4), g_frmDocumenti.DataGrid1.Item(g_frmDocumenti.DataGrid1.CurrentCell.RowNumber, 0))
                g_frmDocumento.ShowDialog()
 

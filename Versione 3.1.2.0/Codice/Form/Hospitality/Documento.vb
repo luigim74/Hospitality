@@ -1321,7 +1321,7 @@ Public Class frmDocumento
             For i = 0 To dgvDettagli.Rows.Count - 2 ' L'ultima riga è quella di inserimento dati.
                ' Avvia una transazione.
                tr = cn.BeginTransaction(IsolationLevel.ReadCommitted)
-               ' Crea la stringa di eliminazione.
+               ' Crea la stringa di inserimento dati.
                sql = String.Format("INSERT INTO {0} (RifDoc, CodiceArticolo, Descrizione, UnitàMisura, Quantità, ValoreUnitario, Sconto, ImportoNetto, AliquotaIva, Categoria) " &
                                    "VALUES(@RifDoc, @CodiceArticolo, @Descrizione, @UnitàMisura, @Quantità, @ValoreUnitario, @Sconto, @ImportoNetto, @AliquotaIva, @Categoria)", TAB_DETTAGLI_DOCUMENTI)
 
@@ -1604,72 +1604,6 @@ Public Class frmDocumento
       End Try
    End Sub
 
-   Public Function LeggiAliquotaIva(ByVal reparto As String) As String
-      Try
-         DatiConfig = New AppConfig
-         DatiConfig.ConfigType = ConfigFileType.AppConfig
-
-         ' Aliquote IVA per i reparti.
-         Dim aliquotaIva As String
-
-         Select Case reparto
-            Case "Reparto 1"
-               aliquotaIva = DatiConfig.GetValue("AliquotaIva1")
-
-            Case "Reparto 2"
-               aliquotaIva = DatiConfig.GetValue("AliquotaIva2")
-
-            Case "Reparto 3"
-               aliquotaIva = DatiConfig.GetValue("AliquotaIva3")
-
-            Case "Reparto 4"
-               aliquotaIva = DatiConfig.GetValue("AliquotaIva4")
-
-            Case Else
-               aliquotaIva = AliquotaIvaRistorante
-
-         End Select
-
-         Return aliquotaIva
-
-      Catch ex As Exception
-         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-         err.GestisciErrore(ex.StackTrace, ex.Message)
-
-         Return AliquotaIvaRistorante
-
-      End Try
-   End Function
-
-   Private Function VerificaAliquotaIva(ByVal valIva As String) As String
-      Try
-         Select Case valIva
-            Case LeggiAliquotaIva("Reparto 1")
-               Return "Reparto 1"
-
-            Case LeggiAliquotaIva("Reparto 2")
-               Return "Reparto 2"
-
-            Case LeggiAliquotaIva("Reparto 3")
-               Return "Reparto 3"
-
-            Case LeggiAliquotaIva("Reparto 4")
-               Return "Reparto 4"
-
-            Case Else
-               Return String.Empty
-
-         End Select
-
-      Catch ex As Exception
-         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-         err.GestisciErrore(ex.StackTrace, ex.Message)
-
-         Return False
-
-      End Try
-   End Function
-
    Private Sub InserisciRepartoIva()
       Try
          Dim repIva As String = VerificaAliquotaIva(dgvDettagli.CurrentRow.Cells(clnIva.Name).Value.ToString)
@@ -1762,7 +1696,7 @@ Public Class frmDocumento
 
          Select Case nomeFinestra
             Case "ContoPos"
-               LeggiDatiConto()
+               'LeggiDatiConto()
 
             Case "ElencoDoc"
                ' Se il tipo documento è una stringa vuota apre la finestra per la modifica di un documento,
@@ -1987,6 +1921,53 @@ Public Class frmDocumento
 
             ' Stampare il documento...
 
+            'Select Case nomeFinestra
+            '   Case "ContoPos"
+
+            'If g_frmPos.nomeTavolo <> String.Empty And g_frmPos.nomeTavolo <> "Tavoli" Then
+            '   mantieniDatiTavolo = False
+            'Else
+            '   mantieniDatiTavolo = True
+            'End If
+
+            'g_frmContoPos.tipoDocumento = tipoDocumento
+
+            'If g_frmContoPos.ImpostaNomeDoc(0) <> String.Empty Then
+            '   g_frmContoPos.percorsoRep = "\Reports\" & g_frmContoPos.ImpostaNomeDoc(0)
+            'Else
+            '   Select Case tipoDocumento
+            '      Case TIPO_DOC_CO
+            '         ' TODO: Aggiungere documento conto.
+
+            '      Case TIPO_DOC_PF
+            '         g_frmContoPos.percorsoRep = PERCORSO_REP_PF_A4_DOPPIA
+
+            '      Case TIPO_DOC_RF
+            '         g_frmContoPos.percorsoRep = PERCORSO_REP_RF_A4_DOPPIA
+
+            '      Case TIPO_DOC_FF
+            '         g_frmContoPos.percorsoRep = PERCORSO_REP_FF_A4_DOPPIA
+
+            '      Case TIPO_DOC_SF
+            '         ' TODO: Aggiungere documento scontrino.
+
+            '   End Select
+            'End If
+
+            'If g_frmContoPos.txtSospeso.Text <> VALORE_ZERO Then
+            '   If g_frmContoPos.VerificaIntestazione() = False Then
+            '      Exit Sub
+            '   End If
+            'End If
+
+            'If g_frmContoPos.VerificaCartaCredito() = True Then
+            '   g_frmContoPos.StampaConto(g_frmContoPos.ImpostaNomeStampante(0))
+            'End If
+
+            'Case "ElencoDoc"
+
+            'End Select
+
             Select Case eui_cmbStatoDocumento.Text
                Case STATO_DOC_ANNULLATO, STATO_DOC_EMESSO_STAMPATO
                   Exit Sub
@@ -2006,55 +1987,6 @@ Public Class frmDocumento
             MessageBox.Show("Il comando non è stato eseguito! Verificare di avere compilato correttamente il documento e riprovare.", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Information)
 
          End If
-
-
-         'Select Case nomeFinestra
-         '   Case "ContoPos"
-
-         'If g_frmPos.nomeTavolo <> String.Empty And g_frmPos.nomeTavolo <> "Tavoli" Then
-         '   mantieniDatiTavolo = False
-         'Else
-         '   mantieniDatiTavolo = True
-         'End If
-
-         'g_frmContoPos.tipoDocumento = tipoDocumento
-
-         'If g_frmContoPos.ImpostaNomeDoc(0) <> String.Empty Then
-         '   g_frmContoPos.percorsoRep = "\Reports\" & g_frmContoPos.ImpostaNomeDoc(0)
-         'Else
-         '   Select Case tipoDocumento
-         '      Case TIPO_DOC_CO
-         '         ' TODO: Aggiungere documento conto.
-
-         '      Case TIPO_DOC_PF
-         '         g_frmContoPos.percorsoRep = PERCORSO_REP_PF_A4_DOPPIA
-
-         '      Case TIPO_DOC_RF
-         '         g_frmContoPos.percorsoRep = PERCORSO_REP_RF_A4_DOPPIA
-
-         '      Case TIPO_DOC_FF
-         '         g_frmContoPos.percorsoRep = PERCORSO_REP_FF_A4_DOPPIA
-
-         '      Case TIPO_DOC_SF
-         '         ' TODO: Aggiungere documento scontrino.
-
-         '   End Select
-         'End If
-
-         'If g_frmContoPos.txtSospeso.Text <> VALORE_ZERO Then
-         '   If g_frmContoPos.VerificaIntestazione() = False Then
-         '      Exit Sub
-         '   End If
-         'End If
-
-         'If g_frmContoPos.VerificaCartaCredito() = True Then
-         '   g_frmContoPos.StampaConto(g_frmContoPos.ImpostaNomeStampante(0))
-         'End If
-
-         'Case "ElencoDoc"
-
-         'End Select
-
 
       Catch ex As Exception
          ' Visualizza un messaggio di errore e lo registra nell'apposito file.
@@ -2304,11 +2236,16 @@ Public Class frmDocumento
          If dgvDettagli.Rows.Count <> 1 Then
 
             If IsNothing(dgvDettagli.CurrentRow.Cells(clnIva.Name).Value) = False Then
-               If VerificaAliquotaIva(dgvDettagli.CurrentRow.Cells(clnIva.Name).Value.ToString) = String.Empty Then
-                  MessageBox.Show("Il valore dell'aliquota Iva inserito non è corretto!" & vbCrLf &
-                                  "Inserire una delle quattro aliquote impostate nel programma. (Vedere finestra Opzioni)", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 
-                  dgvDettagli.CurrentRow.Cells(clnIva.Name).Value = 0
+               If VerificaAliquotaIva(dgvDettagli.CurrentRow.Cells(clnIva.Name).Value.ToString) = String.Empty Then
+
+                  If IsNumeric(dgvDettagli.CurrentRow.Cells(clnIva.Name).Value.ToString) = False Then
+                     MessageBox.Show("Il valore dell'aliquota Iva inserito non è corretto!" & vbCrLf &
+                                     "Inserire una delle quattro aliquote impostate nel programma. (Vedere finestra Opzioni)", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                  Else
+                     dgvDettagli.CurrentRow.Cells(clnIva.Name).Value = 0
+
+                  End If
                Else
                   InserisciRepartoIva()
                End If

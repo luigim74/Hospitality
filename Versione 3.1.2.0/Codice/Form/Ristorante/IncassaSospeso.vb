@@ -726,6 +726,7 @@ Public Class IncassaSospeso
       End Try
    End Sub
 
+   ' DA_FARE_A: Modificare!
    Private Sub SalvaDocumento()
       Try
          Dim NumeroDocumento As Integer = LeggiNumeroDocFiscaleConfig(TAB_DOC, tipoDocumento)

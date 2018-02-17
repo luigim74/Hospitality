@@ -7,5 +7,6 @@ Namespace My
     ' L'evento SettingsLoaded viene generato dopo il caricamento dei valori dell'impostazione.
     ' L'evento SettingsSaving viene generato prima del salvataggio dei valori dell'impostazione.
     Partial Friend NotInheritable Class MySettings
-    End Class
+
+   End Class
 End Namespace

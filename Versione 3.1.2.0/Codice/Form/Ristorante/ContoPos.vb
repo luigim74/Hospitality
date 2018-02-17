@@ -494,7 +494,7 @@ Public Class ContoPos
       Me.Label3.Cursor = System.Windows.Forms.Cursors.Default
       Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.Label3.ForeColor = System.Drawing.Color.Black
-      Me.Label3.Location = New System.Drawing.Point(622, 16)
+      Me.Label3.Location = New System.Drawing.Point(652, 16)
       Me.Label3.Name = "Label3"
       Me.Label3.RightToLeft = System.Windows.Forms.RightToLeft.No
       Me.Label3.Size = New System.Drawing.Size(88, 24)
@@ -544,7 +544,7 @@ Public Class ContoPos
       Me.Label1.BackColor = System.Drawing.Color.Transparent
       Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.Label1.ForeColor = System.Drawing.Color.Black
-      Me.Label1.Location = New System.Drawing.Point(622, 88)
+      Me.Label1.Location = New System.Drawing.Point(652, 88)
       Me.Label1.Name = "Label1"
       Me.Label1.Size = New System.Drawing.Size(144, 16)
       Me.Label1.TabIndex = 188
@@ -556,7 +556,7 @@ Public Class ContoPos
       Me.Label2.BackColor = System.Drawing.Color.Transparent
       Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.Label2.ForeColor = System.Drawing.Color.Black
-      Me.Label2.Location = New System.Drawing.Point(622, 128)
+      Me.Label2.Location = New System.Drawing.Point(652, 128)
       Me.Label2.Name = "Label2"
       Me.Label2.Size = New System.Drawing.Size(144, 18)
       Me.Label2.TabIndex = 189
@@ -568,7 +568,7 @@ Public Class ContoPos
       Me.Label6.BackColor = System.Drawing.Color.Transparent
       Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.Label6.ForeColor = System.Drawing.Color.Black
-      Me.Label6.Location = New System.Drawing.Point(622, 208)
+      Me.Label6.Location = New System.Drawing.Point(652, 208)
       Me.Label6.Name = "Label6"
       Me.Label6.Size = New System.Drawing.Size(144, 40)
       Me.Label6.TabIndex = 190
@@ -579,7 +579,7 @@ Public Class ContoPos
       Me.Label7.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.Label7.ForeColor = System.Drawing.Color.Black
-      Me.Label7.Location = New System.Drawing.Point(622, 436)
+      Me.Label7.Location = New System.Drawing.Point(652, 436)
       Me.Label7.Name = "Label7"
       Me.Label7.Size = New System.Drawing.Size(144, 16)
       Me.Label7.TabIndex = 193
@@ -591,7 +591,7 @@ Public Class ContoPos
       Me.Label9.BackColor = System.Drawing.Color.Transparent
       Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.Label9.ForeColor = System.Drawing.Color.Black
-      Me.Label9.Location = New System.Drawing.Point(622, 168)
+      Me.Label9.Location = New System.Drawing.Point(652, 168)
       Me.Label9.Name = "Label9"
       Me.Label9.Size = New System.Drawing.Size(144, 16)
       Me.Label9.TabIndex = 195
@@ -602,7 +602,7 @@ Public Class ContoPos
       Me.Label8.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.Label8.ForeColor = System.Drawing.Color.Black
-      Me.Label8.Location = New System.Drawing.Point(622, 396)
+      Me.Label8.Location = New System.Drawing.Point(652, 396)
       Me.Label8.Name = "Label8"
       Me.Label8.Size = New System.Drawing.Size(144, 16)
       Me.Label8.TabIndex = 196
@@ -616,7 +616,7 @@ Public Class ContoPos
       Me.txtTotaleConto.Cursor = System.Windows.Forms.Cursors.IBeam
       Me.txtTotaleConto.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.txtTotaleConto.ForeColor = System.Drawing.SystemColors.WindowText
-      Me.txtTotaleConto.Location = New System.Drawing.Point(784, 79)
+      Me.txtTotaleConto.Location = New System.Drawing.Point(814, 79)
       Me.txtTotaleConto.MaxLength = 100
       Me.txtTotaleConto.Name = "txtTotaleConto"
       Me.txtTotaleConto.ReadOnly = True
@@ -634,7 +634,7 @@ Public Class ContoPos
       Me.txtValSconto.Cursor = System.Windows.Forms.Cursors.IBeam
       Me.txtValSconto.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.txtValSconto.ForeColor = System.Drawing.SystemColors.WindowText
-      Me.txtValSconto.Location = New System.Drawing.Point(784, 119)
+      Me.txtValSconto.Location = New System.Drawing.Point(814, 119)
       Me.txtValSconto.MaxLength = 100
       Me.txtValSconto.Name = "txtValSconto"
       Me.txtValSconto.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -650,7 +650,7 @@ Public Class ContoPos
       Me.txtServizio.Cursor = System.Windows.Forms.Cursors.IBeam
       Me.txtServizio.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.txtServizio.ForeColor = System.Drawing.SystemColors.WindowText
-      Me.txtServizio.Location = New System.Drawing.Point(784, 159)
+      Me.txtServizio.Location = New System.Drawing.Point(814, 159)
       Me.txtServizio.MaxLength = 100
       Me.txtServizio.Name = "txtServizio"
       Me.txtServizio.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -666,7 +666,7 @@ Public Class ContoPos
       Me.txtContanti.Cursor = System.Windows.Forms.Cursors.IBeam
       Me.txtContanti.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.txtContanti.ForeColor = System.Drawing.SystemColors.WindowText
-      Me.txtContanti.Location = New System.Drawing.Point(784, 267)
+      Me.txtContanti.Location = New System.Drawing.Point(814, 267)
       Me.txtContanti.MaxLength = 100
       Me.txtContanti.Name = "txtContanti"
       Me.txtContanti.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -682,7 +682,7 @@ Public Class ContoPos
       Me.txtCartaCredito.Cursor = System.Windows.Forms.Cursors.IBeam
       Me.txtCartaCredito.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.txtCartaCredito.ForeColor = System.Drawing.SystemColors.WindowText
-      Me.txtCartaCredito.Location = New System.Drawing.Point(784, 307)
+      Me.txtCartaCredito.Location = New System.Drawing.Point(814, 307)
       Me.txtCartaCredito.MaxLength = 100
       Me.txtCartaCredito.Name = "txtCartaCredito"
       Me.txtCartaCredito.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -698,7 +698,7 @@ Public Class ContoPos
       Me.txtSospeso.Cursor = System.Windows.Forms.Cursors.IBeam
       Me.txtSospeso.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.txtSospeso.ForeColor = System.Drawing.Color.Red
-      Me.txtSospeso.Location = New System.Drawing.Point(784, 387)
+      Me.txtSospeso.Location = New System.Drawing.Point(814, 387)
       Me.txtSospeso.MaxLength = 100
       Me.txtSospeso.Name = "txtSospeso"
       Me.txtSospeso.ReadOnly = True
@@ -715,7 +715,7 @@ Public Class ContoPos
       Me.txtResto.Cursor = System.Windows.Forms.Cursors.IBeam
       Me.txtResto.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.txtResto.ForeColor = System.Drawing.SystemColors.WindowText
-      Me.txtResto.Location = New System.Drawing.Point(784, 427)
+      Me.txtResto.Location = New System.Drawing.Point(814, 427)
       Me.txtResto.MaxLength = 100
       Me.txtResto.Name = "txtResto"
       Me.txtResto.ReadOnly = True
@@ -740,7 +740,7 @@ Public Class ContoPos
       Me.lstvDettagli.Location = New System.Drawing.Point(298, 80)
       Me.lstvDettagli.MultiSelect = False
       Me.lstvDettagli.Name = "lstvDettagli"
-      Me.lstvDettagli.Size = New System.Drawing.Size(316, 627)
+      Me.lstvDettagli.Size = New System.Drawing.Size(346, 657)
       Me.lstvDettagli.TabIndex = 9
       Me.lstvDettagli.UseCompatibleStateImageBehavior = False
       Me.lstvDettagli.View = System.Windows.Forms.View.Details
@@ -836,7 +836,7 @@ Public Class ContoPos
       Me.txtBuoni.Cursor = System.Windows.Forms.Cursors.IBeam
       Me.txtBuoni.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.txtBuoni.ForeColor = System.Drawing.SystemColors.WindowText
-      Me.txtBuoni.Location = New System.Drawing.Point(784, 347)
+      Me.txtBuoni.Location = New System.Drawing.Point(814, 347)
       Me.txtBuoni.MaxLength = 100
       Me.txtBuoni.Name = "txtBuoni"
       Me.txtBuoni.ReadOnly = True
@@ -928,7 +928,7 @@ Public Class ContoPos
       Me.txtCoperto.Cursor = System.Windows.Forms.Cursors.IBeam
       Me.txtCoperto.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.txtCoperto.ForeColor = System.Drawing.SystemColors.WindowText
-      Me.txtCoperto.Location = New System.Drawing.Point(915, 159)
+      Me.txtCoperto.Location = New System.Drawing.Point(945, 159)
       Me.txtCoperto.MaxLength = 100
       Me.txtCoperto.Name = "txtCoperto"
       Me.txtCoperto.ReadOnly = True
@@ -944,7 +944,7 @@ Public Class ContoPos
       Me.Label12.BackColor = System.Drawing.Color.Transparent
       Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.Label12.ForeColor = System.Drawing.Color.Black
-      Me.Label12.Location = New System.Drawing.Point(915, 128)
+      Me.Label12.Location = New System.Drawing.Point(945, 128)
       Me.Label12.Name = "Label12"
       Me.Label12.Size = New System.Drawing.Size(88, 20)
       Me.Label12.TabIndex = 233
@@ -1048,7 +1048,7 @@ Public Class ContoPos
       Me.lstvElencoDocAperti.Location = New System.Drawing.Point(8, 199)
       Me.lstvElencoDocAperti.MultiSelect = False
       Me.lstvElencoDocAperti.Name = "lstvElencoDocAperti"
-      Me.lstvElencoDocAperti.Size = New System.Drawing.Size(280, 508)
+      Me.lstvElencoDocAperti.Size = New System.Drawing.Size(280, 538)
       Me.lstvElencoDocAperti.TabIndex = 5
       Me.lstvElencoDocAperti.UseCompatibleStateImageBehavior = False
       Me.lstvElencoDocAperti.View = System.Windows.Forms.View.Details
@@ -1412,7 +1412,7 @@ Public Class ContoPos
       Me.eui_cmdTipoElenco.Id = "0c1154fa-f012-4871-b06b-f4c01a6df540"
       Me.eui_cmdTipoElenco.Location = New System.Drawing.Point(298, 38)
       Me.eui_cmdTipoElenco.Name = "eui_cmdTipoElenco"
-      Me.eui_cmdTipoElenco.Size = New System.Drawing.Size(316, 34)
+      Me.eui_cmdTipoElenco.Size = New System.Drawing.Size(346, 34)
       Me.eui_cmdTipoElenco.TabIndex = 8
       Me.eui_cmdTipoElenco.Text = "Elenco completo"
       '
@@ -1421,7 +1421,7 @@ Public Class ContoPos
       Me.eui_cmdCliente.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.eui_cmdCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.eui_cmdCliente.Id = "91912e10-0af0-4b35-92c4-aac862f9b961"
-      Me.eui_cmdCliente.Location = New System.Drawing.Point(622, 38)
+      Me.eui_cmdCliente.Location = New System.Drawing.Point(652, 38)
       Me.eui_cmdCliente.Name = "eui_cmdCliente"
       Me.eui_cmdCliente.Size = New System.Drawing.Size(422, 34)
       Me.eui_cmdCliente.TabIndex = 12
@@ -1443,7 +1443,7 @@ Public Class ContoPos
       Me.eui_cmdContanti.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.eui_cmdContanti.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.eui_cmdContanti.Id = "a450c693-540f-480d-a0cc-85da140f5dbf"
-      Me.eui_cmdContanti.Location = New System.Drawing.Point(622, 267)
+      Me.eui_cmdContanti.Location = New System.Drawing.Point(652, 267)
       Me.eui_cmdContanti.Name = "eui_cmdContanti"
       Me.eui_cmdContanti.Size = New System.Drawing.Size(159, 32)
       Me.eui_cmdContanti.TabIndex = 16
@@ -1454,7 +1454,7 @@ Public Class ContoPos
       Me.eui_cmdTipoPagamento.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.eui_cmdTipoPagamento.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.eui_cmdTipoPagamento.Id = "68ed8e14-f2d2-4fcf-b7e9-b96a2ab95848"
-      Me.eui_cmdTipoPagamento.Location = New System.Drawing.Point(622, 307)
+      Me.eui_cmdTipoPagamento.Location = New System.Drawing.Point(652, 307)
       Me.eui_cmdTipoPagamento.Name = "eui_cmdTipoPagamento"
       Me.eui_cmdTipoPagamento.Size = New System.Drawing.Size(159, 32)
       Me.eui_cmdTipoPagamento.TabIndex = 18
@@ -1465,7 +1465,7 @@ Public Class ContoPos
       Me.eui_cmdBuoni.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.eui_cmdBuoni.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.eui_cmdBuoni.Id = "b6adb7f7-858a-491f-ac6e-9ab0305a328f"
-      Me.eui_cmdBuoni.Location = New System.Drawing.Point(622, 347)
+      Me.eui_cmdBuoni.Location = New System.Drawing.Point(652, 347)
       Me.eui_cmdBuoni.Name = "eui_cmdBuoni"
       Me.eui_cmdBuoni.Size = New System.Drawing.Size(159, 32)
       Me.eui_cmdBuoni.TabIndex = 20
@@ -1476,7 +1476,7 @@ Public Class ContoPos
       Me.eui_cmdRicevuta.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.eui_cmdRicevuta.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.eui_cmdRicevuta.Id = "20a6a06b-510e-4f11-a302-4d5b6d963889"
-      Me.eui_cmdRicevuta.Location = New System.Drawing.Point(915, 267)
+      Me.eui_cmdRicevuta.Location = New System.Drawing.Point(945, 267)
       Me.eui_cmdRicevuta.Name = "eui_cmdRicevuta"
       Me.eui_cmdRicevuta.Size = New System.Drawing.Size(129, 61)
       Me.eui_cmdRicevuta.TabIndex = 41
@@ -1488,7 +1488,7 @@ Public Class ContoPos
       Me.eui_cmdFattura.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.eui_cmdFattura.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.eui_cmdFattura.Id = "4f3f9c86-b0d0-4431-8de4-e3873c4d7c55"
-      Me.eui_cmdFattura.Location = New System.Drawing.Point(915, 336)
+      Me.eui_cmdFattura.Location = New System.Drawing.Point(945, 336)
       Me.eui_cmdFattura.Name = "eui_cmdFattura"
       Me.eui_cmdFattura.Size = New System.Drawing.Size(129, 61)
       Me.eui_cmdFattura.TabIndex = 42
@@ -1499,7 +1499,7 @@ Public Class ContoPos
       Me.eui_cmdProforma.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.eui_cmdProforma.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.eui_cmdProforma.Id = "2ea56b5e-671a-43b3-8ad8-7ab81a602bb2"
-      Me.eui_cmdProforma.Location = New System.Drawing.Point(915, 405)
+      Me.eui_cmdProforma.Location = New System.Drawing.Point(945, 405)
       Me.eui_cmdProforma.Name = "eui_cmdProforma"
       Me.eui_cmdProforma.Size = New System.Drawing.Size(129, 61)
       Me.eui_cmdProforma.TabIndex = 43
@@ -1510,7 +1510,7 @@ Public Class ContoPos
       Me.eui_cmdScontrino.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.eui_cmdScontrino.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.eui_cmdScontrino.Id = "7e04d4eb-5141-450a-80d8-a3bc5f3a6183"
-      Me.eui_cmdScontrino.Location = New System.Drawing.Point(915, 474)
+      Me.eui_cmdScontrino.Location = New System.Drawing.Point(945, 474)
       Me.eui_cmdScontrino.Name = "eui_cmdScontrino"
       Me.eui_cmdScontrino.Size = New System.Drawing.Size(129, 61)
       Me.eui_cmdScontrino.TabIndex = 44
@@ -1521,7 +1521,7 @@ Public Class ContoPos
       Me.eui_AddebitoSuRisorsa.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.eui_AddebitoSuRisorsa.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.eui_AddebitoSuRisorsa.Id = "6a87759a-b9e3-4a71-9907-e9f88099bbca"
-      Me.eui_AddebitoSuRisorsa.Location = New System.Drawing.Point(915, 612)
+      Me.eui_AddebitoSuRisorsa.Location = New System.Drawing.Point(945, 612)
       Me.eui_AddebitoSuRisorsa.Name = "eui_AddebitoSuRisorsa"
       Me.eui_AddebitoSuRisorsa.Size = New System.Drawing.Size(129, 61)
       Me.eui_AddebitoSuRisorsa.TabIndex = 45
@@ -1534,7 +1534,7 @@ Public Class ContoPos
       Me.eui_cmdEsci.DialogResult = System.Windows.Forms.DialogResult.Cancel
       Me.eui_cmdEsci.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.eui_cmdEsci.Id = "142ec9f4-717a-4e39-89b3-e61402042ebe"
-      Me.eui_cmdEsci.Location = New System.Drawing.Point(915, 711)
+      Me.eui_cmdEsci.Location = New System.Drawing.Point(945, 741)
       Me.eui_cmdEsci.Name = "eui_cmdEsci"
       Me.eui_cmdEsci.Size = New System.Drawing.Size(129, 51)
       Me.eui_cmdEsci.TabIndex = 46
@@ -1550,7 +1550,7 @@ Public Class ContoPos
       Me.netBtn_DaPagare.ColorTop = System.Drawing.SystemColors.ControlLightLight
       Me.netBtn_DaPagare.CornerRadius = 2
       Me.netBtn_DaPagare.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.netBtn_DaPagare.Location = New System.Drawing.Point(784, 199)
+      Me.netBtn_DaPagare.Location = New System.Drawing.Point(814, 199)
       Me.netBtn_DaPagare.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
       Me.netBtn_DaPagare.Name = "netBtn_DaPagare"
       Me.netBtn_DaPagare.Size = New System.Drawing.Size(260, 62)
@@ -1569,7 +1569,7 @@ Public Class ContoPos
       Me.netBtn_C.ColorTop = System.Drawing.Color.White
       Me.netBtn_C.CornerRadius = 2
       Me.netBtn_C.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.netBtn_C.Location = New System.Drawing.Point(838, 466)
+      Me.netBtn_C.Location = New System.Drawing.Point(868, 466)
       Me.netBtn_C.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
       Me.netBtn_C.Name = "netBtn_C"
       Me.netBtn_C.Size = New System.Drawing.Size(71, 51)
@@ -1587,7 +1587,7 @@ Public Class ContoPos
       Me.netBtn_9.ColorTop = System.Drawing.Color.AliceBlue
       Me.netBtn_9.CornerRadius = 2
       Me.netBtn_9.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.netBtn_9.Location = New System.Drawing.Point(766, 466)
+      Me.netBtn_9.Location = New System.Drawing.Point(796, 466)
       Me.netBtn_9.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
       Me.netBtn_9.Name = "netBtn_9"
       Me.netBtn_9.Size = New System.Drawing.Size(71, 51)
@@ -1605,7 +1605,7 @@ Public Class ContoPos
       Me.netBtn_8.ColorTop = System.Drawing.Color.AliceBlue
       Me.netBtn_8.CornerRadius = 2
       Me.netBtn_8.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.netBtn_8.Location = New System.Drawing.Point(694, 466)
+      Me.netBtn_8.Location = New System.Drawing.Point(724, 466)
       Me.netBtn_8.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
       Me.netBtn_8.Name = "netBtn_8"
       Me.netBtn_8.Size = New System.Drawing.Size(71, 51)
@@ -1623,7 +1623,7 @@ Public Class ContoPos
       Me.netBtn_7.ColorTop = System.Drawing.Color.AliceBlue
       Me.netBtn_7.CornerRadius = 2
       Me.netBtn_7.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.netBtn_7.Location = New System.Drawing.Point(622, 466)
+      Me.netBtn_7.Location = New System.Drawing.Point(652, 466)
       Me.netBtn_7.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
       Me.netBtn_7.Name = "netBtn_7"
       Me.netBtn_7.Size = New System.Drawing.Size(71, 51)
@@ -1641,7 +1641,7 @@ Public Class ContoPos
       Me.netBtn_Ok.ColorTop = System.Drawing.Color.White
       Me.netBtn_Ok.CornerRadius = 2
       Me.netBtn_Ok.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.netBtn_Ok.Location = New System.Drawing.Point(838, 622)
+      Me.netBtn_Ok.Location = New System.Drawing.Point(868, 622)
       Me.netBtn_Ok.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
       Me.netBtn_Ok.Name = "netBtn_Ok"
       Me.netBtn_Ok.Size = New System.Drawing.Size(71, 51)
@@ -1659,7 +1659,7 @@ Public Class ContoPos
       Me.netBtn_Percentuale.ColorTop = System.Drawing.Color.White
       Me.netBtn_Percentuale.CornerRadius = 2
       Me.netBtn_Percentuale.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.netBtn_Percentuale.Location = New System.Drawing.Point(838, 570)
+      Me.netBtn_Percentuale.Location = New System.Drawing.Point(868, 570)
       Me.netBtn_Percentuale.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
       Me.netBtn_Percentuale.Name = "netBtn_Percentuale"
       Me.netBtn_Percentuale.Size = New System.Drawing.Size(71, 51)
@@ -1677,7 +1677,7 @@ Public Class ContoPos
       Me.netBtn_X.ColorTop = System.Drawing.Color.AliceBlue
       Me.netBtn_X.CornerRadius = 2
       Me.netBtn_X.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.netBtn_X.Location = New System.Drawing.Point(838, 518)
+      Me.netBtn_X.Location = New System.Drawing.Point(868, 518)
       Me.netBtn_X.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
       Me.netBtn_X.Name = "netBtn_X"
       Me.netBtn_X.Size = New System.Drawing.Size(71, 51)
@@ -1695,7 +1695,7 @@ Public Class ContoPos
       Me.netBtn_00.ColorTop = System.Drawing.Color.AliceBlue
       Me.netBtn_00.CornerRadius = 2
       Me.netBtn_00.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.netBtn_00.Location = New System.Drawing.Point(766, 622)
+      Me.netBtn_00.Location = New System.Drawing.Point(796, 622)
       Me.netBtn_00.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
       Me.netBtn_00.Name = "netBtn_00"
       Me.netBtn_00.Size = New System.Drawing.Size(71, 51)
@@ -1713,7 +1713,7 @@ Public Class ContoPos
       Me.netBtn_0.ColorTop = System.Drawing.Color.AliceBlue
       Me.netBtn_0.CornerRadius = 2
       Me.netBtn_0.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.netBtn_0.Location = New System.Drawing.Point(694, 622)
+      Me.netBtn_0.Location = New System.Drawing.Point(724, 622)
       Me.netBtn_0.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
       Me.netBtn_0.Name = "netBtn_0"
       Me.netBtn_0.Size = New System.Drawing.Size(71, 51)
@@ -1731,7 +1731,7 @@ Public Class ContoPos
       Me.netBtn_Virgola.ColorTop = System.Drawing.Color.AliceBlue
       Me.netBtn_Virgola.CornerRadius = 2
       Me.netBtn_Virgola.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.netBtn_Virgola.Location = New System.Drawing.Point(622, 622)
+      Me.netBtn_Virgola.Location = New System.Drawing.Point(652, 622)
       Me.netBtn_Virgola.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
       Me.netBtn_Virgola.Name = "netBtn_Virgola"
       Me.netBtn_Virgola.Size = New System.Drawing.Size(71, 51)
@@ -1749,7 +1749,7 @@ Public Class ContoPos
       Me.netBtn_3.ColorTop = System.Drawing.Color.AliceBlue
       Me.netBtn_3.CornerRadius = 2
       Me.netBtn_3.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.netBtn_3.Location = New System.Drawing.Point(766, 570)
+      Me.netBtn_3.Location = New System.Drawing.Point(796, 570)
       Me.netBtn_3.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
       Me.netBtn_3.Name = "netBtn_3"
       Me.netBtn_3.Size = New System.Drawing.Size(71, 51)
@@ -1767,7 +1767,7 @@ Public Class ContoPos
       Me.netBtn_2.ColorTop = System.Drawing.Color.AliceBlue
       Me.netBtn_2.CornerRadius = 2
       Me.netBtn_2.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.netBtn_2.Location = New System.Drawing.Point(694, 570)
+      Me.netBtn_2.Location = New System.Drawing.Point(724, 570)
       Me.netBtn_2.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
       Me.netBtn_2.Name = "netBtn_2"
       Me.netBtn_2.Size = New System.Drawing.Size(71, 51)
@@ -1785,7 +1785,7 @@ Public Class ContoPos
       Me.netBtn_1.ColorTop = System.Drawing.Color.AliceBlue
       Me.netBtn_1.CornerRadius = 2
       Me.netBtn_1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.netBtn_1.Location = New System.Drawing.Point(622, 570)
+      Me.netBtn_1.Location = New System.Drawing.Point(652, 570)
       Me.netBtn_1.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
       Me.netBtn_1.Name = "netBtn_1"
       Me.netBtn_1.Size = New System.Drawing.Size(71, 51)
@@ -1803,7 +1803,7 @@ Public Class ContoPos
       Me.netBtn_6.ColorTop = System.Drawing.Color.AliceBlue
       Me.netBtn_6.CornerRadius = 2
       Me.netBtn_6.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.netBtn_6.Location = New System.Drawing.Point(766, 518)
+      Me.netBtn_6.Location = New System.Drawing.Point(796, 518)
       Me.netBtn_6.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
       Me.netBtn_6.Name = "netBtn_6"
       Me.netBtn_6.Size = New System.Drawing.Size(71, 51)
@@ -1821,7 +1821,7 @@ Public Class ContoPos
       Me.netBtn_5.ColorTop = System.Drawing.Color.AliceBlue
       Me.netBtn_5.CornerRadius = 2
       Me.netBtn_5.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.netBtn_5.Location = New System.Drawing.Point(694, 518)
+      Me.netBtn_5.Location = New System.Drawing.Point(724, 518)
       Me.netBtn_5.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
       Me.netBtn_5.Name = "netBtn_5"
       Me.netBtn_5.Size = New System.Drawing.Size(71, 51)
@@ -1839,7 +1839,7 @@ Public Class ContoPos
       Me.netBtn_4.ColorTop = System.Drawing.Color.AliceBlue
       Me.netBtn_4.CornerRadius = 2
       Me.netBtn_4.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.netBtn_4.Location = New System.Drawing.Point(622, 518)
+      Me.netBtn_4.Location = New System.Drawing.Point(652, 518)
       Me.netBtn_4.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
       Me.netBtn_4.Name = "netBtn_4"
       Me.netBtn_4.Size = New System.Drawing.Size(71, 51)
@@ -1850,7 +1850,7 @@ Public Class ContoPos
       '
       Me.eui_cmdTastiera.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.eui_cmdTastiera.Id = "f72ccff9-cedc-4702-9eba-e3fa4d014db8"
-      Me.eui_cmdTastiera.Location = New System.Drawing.Point(622, 711)
+      Me.eui_cmdTastiera.Location = New System.Drawing.Point(652, 741)
       Me.eui_cmdTastiera.Name = "eui_cmdTastiera"
       Me.eui_cmdTastiera.ScreenTip.Caption = "Tastiera virtuale"
       Me.eui_cmdTastiera.ScreenTip.Text = "Apre la tastiera virtuale."
@@ -1864,7 +1864,7 @@ Public Class ContoPos
       Me.eui_cmdCancella.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.eui_cmdCancella.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.eui_cmdCancella.Id = "ccec8484-50d6-4bb7-8a65-30c6a2687fd7"
-      Me.eui_cmdCancella.Location = New System.Drawing.Point(703, 711)
+      Me.eui_cmdCancella.Location = New System.Drawing.Point(733, 741)
       Me.eui_cmdCancella.Name = "eui_cmdCancella"
       Me.eui_cmdCancella.Size = New System.Drawing.Size(206, 51)
       Me.eui_cmdCancella.TabIndex = 39
@@ -1875,7 +1875,7 @@ Public Class ContoPos
       Me.eui_cmdDocApertiSu.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
       Me.eui_cmdDocApertiSu.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.eui_cmdDocApertiSu.Id = "6b059eae-beb8-459f-9f21-2d487ed272aa"
-      Me.eui_cmdDocApertiSu.Location = New System.Drawing.Point(148, 711)
+      Me.eui_cmdDocApertiSu.Location = New System.Drawing.Point(148, 741)
       Me.eui_cmdDocApertiSu.Name = "eui_cmdDocApertiSu"
       Me.eui_cmdDocApertiSu.ScreenTip.Caption = "Tastiera virtuale"
       Me.eui_cmdDocApertiSu.ScreenTip.Text = "Apre la tastiera virtuale."
@@ -1888,7 +1888,7 @@ Public Class ContoPos
       Me.eui_cmdDocApertiGiù.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
       Me.eui_cmdDocApertiGiù.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.eui_cmdDocApertiGiù.Id = "3ebac6e2-30eb-41ab-a4a7-bae15468f153"
-      Me.eui_cmdDocApertiGiù.Location = New System.Drawing.Point(8, 711)
+      Me.eui_cmdDocApertiGiù.Location = New System.Drawing.Point(8, 741)
       Me.eui_cmdDocApertiGiù.Name = "eui_cmdDocApertiGiù"
       Me.eui_cmdDocApertiGiù.ScreenTip.Caption = "Tastiera virtuale"
       Me.eui_cmdDocApertiGiù.ScreenTip.Text = "Apre la tastiera virtuale."
@@ -1901,7 +1901,7 @@ Public Class ContoPos
       Me.eui_cmdDettagliSu.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.eui_cmdDettagliSu.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.eui_cmdDettagliSu.Id = "fe8d24ea-75aa-4e10-a4cb-ce858d8dbf12"
-      Me.eui_cmdDettagliSu.Location = New System.Drawing.Point(486, 711)
+      Me.eui_cmdDettagliSu.Location = New System.Drawing.Point(516, 741)
       Me.eui_cmdDettagliSu.Name = "eui_cmdDettagliSu"
       Me.eui_cmdDettagliSu.ScreenTip.Caption = "Tastiera virtuale"
       Me.eui_cmdDettagliSu.ScreenTip.Text = "Apre la tastiera virtuale."
@@ -1914,7 +1914,7 @@ Public Class ContoPos
       Me.eui_cmdDettagliGiù.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
       Me.eui_cmdDettagliGiù.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.eui_cmdDettagliGiù.Id = "36f1cf5e-85e8-4af3-993a-3ef9d4016630"
-      Me.eui_cmdDettagliGiù.Location = New System.Drawing.Point(298, 711)
+      Me.eui_cmdDettagliGiù.Location = New System.Drawing.Point(298, 741)
       Me.eui_cmdDettagliGiù.Name = "eui_cmdDettagliGiù"
       Me.eui_cmdDettagliGiù.ScreenTip.Caption = "Tastiera virtuale"
       Me.eui_cmdDettagliGiù.ScreenTip.Text = "Apre la tastiera virtuale."
@@ -1928,9 +1928,9 @@ Public Class ContoPos
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.Button10.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.Button10.Id = "c3060643-24dd-41c0-ba02-8d7a62780804"
-      Me.Button10.Location = New System.Drawing.Point(427, 711)
+      Me.Button10.Location = New System.Drawing.Point(427, 741)
       Me.Button10.Name = "Button10"
-      Me.Button10.Size = New System.Drawing.Size(58, 51)
+      Me.Button10.Size = New System.Drawing.Size(88, 51)
       Me.Button10.TabIndex = 311
       '
       'Panel1
@@ -1966,7 +1966,7 @@ Public Class ContoPos
       Me.eui_cmdParcheggiaConto.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.eui_cmdParcheggiaConto.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.eui_cmdParcheggiaConto.Id = "2d6cfcc8-f5e7-4f05-9936-774797ba8423"
-      Me.eui_cmdParcheggiaConto.Location = New System.Drawing.Point(914, 543)
+      Me.eui_cmdParcheggiaConto.Location = New System.Drawing.Point(944, 543)
       Me.eui_cmdParcheggiaConto.Name = "eui_cmdParcheggiaConto"
       Me.eui_cmdParcheggiaConto.Size = New System.Drawing.Size(129, 61)
       Me.eui_cmdParcheggiaConto.TabIndex = 40
@@ -1977,7 +1977,7 @@ Public Class ContoPos
       '
       Me.AutoScaleBaseSize = New System.Drawing.Size(9, 22)
       Me.BackColor = System.Drawing.SystemColors.AppWorkspace
-      Me.ClientSize = New System.Drawing.Size(1077, 796)
+      Me.ClientSize = New System.Drawing.Size(1131, 850)
       Me.Controls.Add(Me.eui_cmdParcheggiaConto)
       Me.Controls.Add(Me.Panel1)
       Me.Controls.Add(Me.lstvDettagliTemp)
@@ -2811,6 +2811,7 @@ Public Class ContoPos
                   ' Categoria.
                   lstvDettagli.Items(lstvDettagli.Items.Count - 1).SubItems.Add(.lstvDettagli.Items(i).SubItems(6))
                   lstvDettagliCopia.Items(lstvDettagliCopia.Items.Count - 1).SubItems.Add(.lstvDettagli.Items(i).SubItems(6))
+
                End If
             Next
          End With
@@ -3200,7 +3201,7 @@ Public Class ContoPos
          Dim oleAdapter As New OleDbDataAdapter
          oleAdapter.SelectCommand = New OleDbCommand("SELECT * FROM " & TAB_DOC & " WHERE Id = " & numDoc, cn)
 
-         Dim ds As New HospitalityDataSet 'Dataset1 utilizzato con Crystal Reports
+         Dim ds As New Dataset1 'utilizzato con Crystal Reports
          ds.Clear()
          oleAdapter.Fill(ds, TAB_DOC)
 
@@ -3289,19 +3290,6 @@ Public Class ContoPos
             .CodFiscale = txtCodiceFiscale.Text
             .CodAzienda = String.Empty
 
-            .ImpLordoRep1 = VALORE_ZERO
-            .ImpLordoRep2 = VALORE_ZERO
-            .ImpLordoRep3 = VALORE_ZERO
-            .ImpLordoRep4 = VALORE_ZERO
-            .AliquotaIvaRep1 = VALORE_ZERO
-            .AliquotaIvaRep2 = VALORE_ZERO
-            .AliquotaIvaRep3 = VALORE_ZERO
-            .AliquotaIvaRep4 = VALORE_ZERO
-            .ImpostaRep1 = VALORE_ZERO
-            .ImpostaRep2 = VALORE_ZERO
-            .ImpostaRep3 = VALORE_ZERO
-            .ImpostaRep4 = VALORE_ZERO
-
             .Coperto = CFormatta.FormattaNumeroDouble(txtCoperto.Text)
             .Sconto = CFormatta.FormattaNumeroDouble(valSconto)
             If txtValSconto.Text.Contains("%") = True Then
@@ -3319,8 +3307,8 @@ Public Class ContoPos
             .Carte = CFormatta.FormattaNumeroDouble(txtCartaCredito.Text)
             .BuoniPasto = CFormatta.FormattaNumeroDouble(txtBuoni.Text)
             .BuoniPastoIncassare = CFormatta.FormattaNumeroDouble(txtBuoni.Text)
-            .Chiuso = "Sì"
             .Note = String.Empty
+            .Chiuso = "Sì"
 
             If txtCartaCredito.Text <> VALORE_ZERO Then
                .TipoPagamento = eui_cmdTipoPagamento.Text & ": € " & CFormatta.FormattaNumeroDouble(txtCartaCredito.Text)
@@ -3339,24 +3327,108 @@ Public Class ContoPos
             .TotDoc = CFormatta.FormattaNumeroDouble(Convert.ToDouble(valDaPagare))
 
             If tipoDocumento = TIPO_DOC_FF Or tipoDocumento = TIPO_DOC_RF Then
-               ' Calcola l'IVA.
-               Dim valImposta As Double
-               Dim valImponibile As Double
+               Dim importo1 As Double
+               Dim importo2 As Double
+               Dim importo3 As Double
+               Dim importo4 As Double
 
-               If IsNumeric(txtIva.Text) = True Then
-                  valImponibile = CalcolaImponibileIva(txtIva.Text, valDaPagare)
-                  valImposta = CalcolaPercentuale(valImponibile, Convert.ToDouble(txtIva.Text))
-               Else
-                  valImposta = 0.0
-                  txtIva.Text = VALORE_ZERO
-               End If
+               Dim percIva1 As Integer
+               Dim percIva2 As Integer
+               Dim percIva3 As Integer
+               Dim percIva4 As Integer
 
-               .Imponibile = CFormatta.FormattaNumeroDouble(valImponibile)
-               .Iva = txtIva.Text
-               .Imposta = CFormatta.FormattaNumeroDouble(valImposta)
-            Else
-               .Imponibile = VALORE_ZERO
+               Dim valTotaleImpostaRep1 As Double
+               Dim valTotaleImpostaRep2 As Double
+               Dim valTotaleImpostaRep3 As Double
+               Dim valTotaleImpostaRep4 As Double
+
+               Dim valTotaleImponibile1 As Double
+               Dim valTotaleImponibile2 As Double
+               Dim valTotaleImponibile3 As Double
+               Dim valTotaleImponibile4 As Double
+
+               ' Somma tutti gli importi delle righe del documento.
+               Dim j As Integer
+               For j = 0 To lstvDettagli.Items.Count - 1
+
+                  Select Case VerificaAliquotaIva(lstvDettagli.Items(j).SubItems(5).Text)
+                     Case "Reparto 1"
+                        importo1 = Convert.ToDouble(lstvDettagli.Items(j).SubItems(4).Text)
+                        percIva1 = Convert.ToInt32(lstvDettagli.Items(j).SubItems(5).Text)
+                        valTotaleImponibile1 = valTotaleImponibile1 + CalcolaImponibileIva(percIva1.ToString, importo1)
+                        valTotaleImpostaRep1 = CalcolaPercentuale(valTotaleImponibile1, percIva1)
+
+                     Case "Reparto 2"
+                        importo2 = Convert.ToDouble(lstvDettagli.Items(j).SubItems(4).Text)
+                        percIva2 = Convert.ToInt32(lstvDettagli.Items(j).SubItems(5).Text)
+                        valTotaleImponibile2 = valTotaleImponibile2 + CalcolaImponibileIva(percIva2.ToString, importo2)
+                        valTotaleImpostaRep2 = CalcolaPercentuale(valTotaleImponibile2, percIva2)
+
+                     Case "Reparto 3"
+                        importo3 = Convert.ToDouble(lstvDettagli.Items(j).SubItems(4).Text)
+                        percIva3 = Convert.ToInt32(lstvDettagli.Items(j).SubItems(5).Text)
+                        valTotaleImponibile3 = valTotaleImponibile3 + CalcolaImponibileIva(percIva3.ToString, importo3)
+                        valTotaleImpostaRep3 = CalcolaPercentuale(valTotaleImponibile3, percIva3)
+
+                     Case "Reparto 4"
+                        importo4 = Convert.ToDouble(lstvDettagli.Items(j).SubItems(4).Text)
+                        percIva4 = Convert.ToInt32(lstvDettagli.Items(j).SubItems(5).Text)
+                        valTotaleImponibile4 = valTotaleImponibile4 + CalcolaImponibileIva(percIva4.ToString, importo4)
+                        valTotaleImpostaRep4 = CalcolaPercentuale(valTotaleImponibile4, percIva4)
+
+                  End Select
+               Next
+
+               ' Aggiorna i totali.
+
+               ' Aliquote Iva.
+               .AliquotaIvaRep1 = percIva1.ToString
+               .AliquotaIvaRep2 = percIva2.ToString
+               .AliquotaIvaRep3 = percIva3.ToString
+               .AliquotaIvaRep4 = percIva4.ToString
+
+               ' Imponibile.
+               .ImpLordoRep1 = CFormatta.FormattaEuro(valTotaleImponibile1)
+               .ImpLordoRep2 = CFormatta.FormattaEuro(valTotaleImponibile2)
+               .ImpLordoRep3 = CFormatta.FormattaEuro(valTotaleImponibile3)
+               .ImpLordoRep4 = CFormatta.FormattaEuro(valTotaleImponibile4)
+
+               ' Imposte.
+               .ImpostaRep1 = CFormatta.FormattaEuro(valTotaleImpostaRep1)
+               .ImpostaRep2 = CFormatta.FormattaEuro(valTotaleImpostaRep2)
+               .ImpostaRep3 = CFormatta.FormattaEuro(valTotaleImpostaRep3)
+               .ImpostaRep4 = CFormatta.FormattaEuro(valTotaleImpostaRep4)
+
+               ' Imponibile totale.
+               .Imponibile = CFormatta.FormattaEuro((valTotaleImponibile1 + valTotaleImponibile2 + valTotaleImponibile3 + valTotaleImponibile4))
+
+               ' Imposta totale.
+               .Imposta = CFormatta.FormattaEuro((valTotaleImpostaRep1 + valTotaleImpostaRep2 + valTotaleImpostaRep3 + valTotaleImpostaRep4))
+
+               ' DA_FARE: Non più usata.
                .Iva = VALORE_ZERO
+            Else
+               ' Aliquote Iva.
+               .AliquotaIvaRep1 = VALORE_ZERO
+               .AliquotaIvaRep2 = VALORE_ZERO
+               .AliquotaIvaRep3 = VALORE_ZERO
+               .AliquotaIvaRep4 = VALORE_ZERO
+
+               ' Imponibile.
+               .ImpLordoRep1 = VALORE_ZERO
+               .ImpLordoRep2 = VALORE_ZERO
+               .ImpLordoRep3 = VALORE_ZERO
+               .ImpLordoRep4 = VALORE_ZERO
+
+               ' Imposte.
+               .ImpostaRep1 = VALORE_ZERO
+               .ImpostaRep2 = VALORE_ZERO
+               .ImpostaRep3 = VALORE_ZERO
+               .ImpostaRep4 = VALORE_ZERO
+
+               ' DA_FARE: Non più usata.
+               .Iva = VALORE_ZERO
+               .Imponibile = VALORE_ZERO
                .Imposta = VALORE_ZERO
             End If
 
@@ -3374,14 +3446,23 @@ Public Class ContoPos
                ' Avvia una transazione.
                tr = cn.BeginTransaction(IsolationLevel.ReadCommitted)
                ' Crea la stringa di eliminazione.
-               sql = String.Format("INSERT INTO {0} (RifDoc, Descrizione, Quantità, ImportoNetto) " &
-                                             "VALUES(@RifDoc, @Descrizione, @Quantità, @ImportoNetto)", TAB_DETTAGLI_DOC)
+               sql = String.Format("INSERT INTO {0} (RifDoc, CodiceArticolo, Descrizione, UnitàMisura, Quantità, ValoreUnitario, Sconto, ImportoNetto, AliquotaIva, Categoria) " &
+                                   "VALUES(@RifDoc, @CodiceArticolo, @Descrizione, @UnitàMisura, @Quantità, @ValoreUnitario, @Sconto, @ImportoNetto, @AliquotaIva, @Categoria)", TAB_DETTAGLI_DOC)
+
                ' Crea il comando per la connessione corrente.
                Dim cmdInsert As New OleDbCommand(sql, cn, tr)
+
                cmdInsert.Parameters.AddWithValue("@RifDoc", LeggiUltimoRecord(TAB_DOC))
+               cmdInsert.Parameters.AddWithValue("@CodiceArticolo", String.Empty)
                cmdInsert.Parameters.AddWithValue("@Descrizione", "COPERTO")
+               cmdInsert.Parameters.AddWithValue("@UnitàMisura", String.Empty)
                cmdInsert.Parameters.AddWithValue("@Quantità", NumCopertiRistorante)
+               cmdInsert.Parameters.AddWithValue("@ValoreUnitario", CopertoRistorante) ' B_TODO: Modifica per Retail.
+               cmdInsert.Parameters.AddWithValue("@Sconto", VALORE_ZERO)
                cmdInsert.Parameters.AddWithValue("@ImportoNetto", Doc.Coperto)
+               cmdInsert.Parameters.AddWithValue("@AliquotaIva", "0")
+               cmdInsert.Parameters.AddWithValue("@Categoria", String.Empty)
+
                ' Esegue il comando.
                Dim Record As Integer = cmdInsert.ExecuteNonQuery()
                ' Conferma transazione.
@@ -3397,9 +3478,9 @@ Public Class ContoPos
 
             ' Avvia una transazione.
             tr = cn.BeginTransaction(IsolationLevel.ReadCommitted)
-            ' Crea la stringa di eliminazione.
-            sql = String.Format("INSERT INTO {0} (RifDoc, Descrizione, Quantità, ValoreUnitario, ImportoNetto) " &
-                                          "VALUES(@RifDoc, @Descrizione, @Quantità, @ValoreUnitario, @ImportoNetto)", TAB_DETTAGLI_DOC)
+            ' Crea la stringa di inserimento dati.
+            sql = String.Format("INSERT INTO {0} (RifDoc, CodiceArticolo, Descrizione, UnitàMisura, Quantità, ValoreUnitario, Sconto, ImportoNetto, AliquotaIva, Categoria) " &
+                                   "VALUES(@RifDoc, @CodiceArticolo, @Descrizione, @UnitàMisura, @Quantità, @ValoreUnitario, @Sconto, @ImportoNetto, @AliquotaIva, @Categoria)", TAB_DETTAGLI_DOC)
 
             ' Crea il comando per la connessione corrente.
             Dim cmdInsert As New OleDbCommand(sql, cn, tr)
@@ -3413,10 +3494,15 @@ Public Class ContoPos
             End If
 
             cmdInsert.Parameters.AddWithValue("@RifDoc", LeggiUltimoRecord(TAB_DOC))
+            cmdInsert.Parameters.AddWithValue("@CodiceArticolo", String.Empty)
             cmdInsert.Parameters.AddWithValue("@Descrizione", FormattaApici(lstvDettagli.Items(i).SubItems(2).Text))
+            cmdInsert.Parameters.AddWithValue("@UnitàMisura", String.Empty)
             cmdInsert.Parameters.AddWithValue("@Quantità", quantità)
-            cmdInsert.Parameters.AddWithValue("@ValoreUnitario", VALORE_ZERO) ' B_TODO: Modifica per Retail.
+            cmdInsert.Parameters.AddWithValue("@ValoreUnitario", lstvDettagli.Items(i).SubItems(3).Text) ' B_TODO: Modifica per Retail.
+            cmdInsert.Parameters.AddWithValue("@Sconto", VALORE_ZERO)
             cmdInsert.Parameters.AddWithValue("@ImportoNetto", lstvDettagli.Items(i).SubItems(4).Text)
+            cmdInsert.Parameters.AddWithValue("@AliquotaIva", lstvDettagli.Items(i).SubItems(5).Text)
+            cmdInsert.Parameters.AddWithValue("@Categoria", lstvDettagli.Items(i).SubItems(7).Text)
 
             ' Esegue il comando.
             Dim Record As Integer = cmdInsert.ExecuteNonQuery()
@@ -3432,14 +3518,29 @@ Public Class ContoPos
                ' Avvia una transazione.
                tr = cn.BeginTransaction(IsolationLevel.ReadCommitted)
                ' Crea la stringa di eliminazione.
-               sql = String.Format("INSERT INTO {0} (RifDoc, Descrizione, Quantità, ImportoNetto) " &
-                                             "VALUES(@RifDoc, @Descrizione, @Quantità, @ImportoNetto)", TAB_DETTAGLI_DOC)
+               sql = String.Format("INSERT INTO {0} (RifDoc, CodiceArticolo, Descrizione, UnitàMisura, Quantità, ValoreUnitario, Sconto, ImportoNetto, AliquotaIva, Categoria) " &
+                                   "VALUES(@RifDoc, @CodiceArticolo, @Descrizione, @UnitàMisura, @Quantità, @ValoreUnitario, @Sconto, @ImportoNetto, @AliquotaIva, @Categoria)", TAB_DETTAGLI_DOC)
+
                ' Crea il comando per la connessione corrente.
                Dim cmdInsert As New OleDbCommand(sql, cn, tr)
+
                cmdInsert.Parameters.AddWithValue("@RifDoc", LeggiUltimoRecord(TAB_DOC))
-               cmdInsert.Parameters.AddWithValue("@Descrizione", "SCONTO")
-               cmdInsert.Parameters.AddWithValue("@Quantità", VALORE_ZERO)
+               cmdInsert.Parameters.AddWithValue("@CodiceArticolo", String.Empty)
+
+               If Doc.TipoSconto <> String.Empty Then
+                  cmdInsert.Parameters.AddWithValue("@Descrizione", "SCONTO %")
+               Else
+                  cmdInsert.Parameters.AddWithValue("@Descrizione", "SCONTO")
+               End If
+
+               cmdInsert.Parameters.AddWithValue("@UnitàMisura", String.Empty)
+               cmdInsert.Parameters.AddWithValue("@Quantità", "1")
+               cmdInsert.Parameters.AddWithValue("@ValoreUnitario", "-" & Doc.Sconto) ' B_TODO: Modifica per Retail.
+               cmdInsert.Parameters.AddWithValue("@Sconto", VALORE_ZERO)
                cmdInsert.Parameters.AddWithValue("@ImportoNetto", "-" & Doc.Sconto)
+               cmdInsert.Parameters.AddWithValue("@AliquotaIva", 0)
+               cmdInsert.Parameters.AddWithValue("@Categoria", String.Empty)
+
                ' Esegue il comando.
                Dim Record As Integer = cmdInsert.ExecuteNonQuery()
                ' Conferma transazione.
@@ -3453,14 +3554,29 @@ Public Class ContoPos
                ' Avvia una transazione.
                tr = cn.BeginTransaction(IsolationLevel.ReadCommitted)
                ' Crea la stringa di eliminazione.
-               sql = String.Format("INSERT INTO {0} (RifDoc, Descrizione, Quantità, ImportoNetto) " &
-                                             "VALUES(@RifDoc, @Descrizione, @Quantità, @ImportoNetto)", TAB_DETTAGLI_DOC)
+               sql = String.Format("INSERT INTO {0} (RifDoc, CodiceArticolo, Descrizione, UnitàMisura, Quantità, ValoreUnitario, Sconto, ImportoNetto, AliquotaIva, Categoria) " &
+                                   "VALUES(@RifDoc, @CodiceArticolo, @Descrizione, @UnitàMisura, @Quantità, @ValoreUnitario, @Sconto, @ImportoNetto, @AliquotaIva, @Categoria)", TAB_DETTAGLI_DOC)
+
                ' Crea il comando per la connessione corrente.
                Dim cmdInsert As New OleDbCommand(sql, cn, tr)
+
                cmdInsert.Parameters.AddWithValue("@RifDoc", LeggiUltimoRecord(TAB_DOC))
-               cmdInsert.Parameters.AddWithValue("@Descrizione", "SERVIZIO")
-               cmdInsert.Parameters.AddWithValue("@Quantità", VALORE_ZERO)
+               cmdInsert.Parameters.AddWithValue("@CodiceArticolo", String.Empty)
+
+               If Doc.TipoServizio <> String.Empty Then
+                  cmdInsert.Parameters.AddWithValue("@Descrizione", "SERVIZIO %")
+               Else
+                  cmdInsert.Parameters.AddWithValue("@Descrizione", "SERVIZIO")
+               End If
+
+               cmdInsert.Parameters.AddWithValue("@UnitàMisura", String.Empty)
+               cmdInsert.Parameters.AddWithValue("@Quantità", "1")
+               cmdInsert.Parameters.AddWithValue("@ValoreUnitario", Doc.Servizio) ' B_TODO: Modifica per Retail.
+               cmdInsert.Parameters.AddWithValue("@Sconto", VALORE_ZERO)
                cmdInsert.Parameters.AddWithValue("@ImportoNetto", Doc.Servizio)
+               cmdInsert.Parameters.AddWithValue("@AliquotaIva", 0)
+               cmdInsert.Parameters.AddWithValue("@Categoria", String.Empty)
+
                ' Esegue il comando.
                Dim Record As Integer = cmdInsert.ExecuteNonQuery()
                ' Conferma transazione.
@@ -3749,6 +3865,35 @@ Public Class ContoPos
          MessageBox.Show("Selezionare un elemento dalla lista.", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
       End Try
    End Sub
+
+   Private Function VerificaAliquotaIva(ByVal valIva As String) As String
+      Try
+         Select Case valIva
+            Case LeggiAliquotaIva("Reparto 1")
+               Return "Reparto 1"
+
+            Case LeggiAliquotaIva("Reparto 2")
+               Return "Reparto 2"
+
+            Case LeggiAliquotaIva("Reparto 3")
+               Return "Reparto 3"
+
+            Case LeggiAliquotaIva("Reparto 4")
+               Return "Reparto 4"
+
+            Case Else
+               Return String.Empty
+
+         End Select
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+         Return False
+
+      End Try
+   End Function
 
    Private Sub FormattaControlloAttivo(ByVal controllo As Control)
       Try
@@ -5459,7 +5604,14 @@ Public Class ContoPos
          End If
 
          If VerificaCartaCredito() = True Then
-            StampaConto(ImpostaNomeStampante(0))
+            'StampaConto(ImpostaNomeStampante(0))
+
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.AppStarting
+
+            g_frmDocumento = New frmDocumento("ContoPos", TIPO_DOC_RF, String.Empty)
+            g_frmDocumento.ShowDialog()
+
          End If
 
       Catch ex As Exception
