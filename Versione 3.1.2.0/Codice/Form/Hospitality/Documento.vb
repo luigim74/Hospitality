@@ -4,6 +4,7 @@ Public Class frmDocumento
 
    Const ANA_CLIENTI As String = "Clienti"
    Const ANA_AZIENDE As String = "Aziende"
+   Const TAB_AZIENDA As String = "Azienda"
    Const TAB_DOCUMENTI As String = "Documenti"
    Const TAB_DETTAGLI_DOCUMENTI As String = "DettagliDoc"
    Const TAB_TIPO_DOCUMENTI As String = "TipoDoc"
@@ -1879,6 +1880,148 @@ Public Class frmDocumento
       End Try
    End Sub
 
+   Private Function LeggiNomeReport(ByVal tipoDoc As String) As String
+      Try
+         Dim percorsoReport As String
+
+         ' Imposta il nome del Report.
+         Select Case tipoDoc
+            Case TIPO_DOC_CO, TIPO_DOC_PF
+
+               ' Conto e Proforma.
+               If ImpostaNomeDoc(2) <> String.Empty Then
+                  percorsoReport = "\Reports\" & ImpostaNomeDoc(2)
+               Else
+                  percorsoReport = PERCORSO_REP_PF_A4_DOPPIA
+               End If
+
+            Case TIPO_DOC_RF
+
+               ' Ricevuta Fiscale.
+               If ImpostaNomeDoc(0) <> String.Empty Then
+                  percorsoReport = "\Reports\" & ImpostaNomeDoc(0)
+               Else
+                  percorsoReport = PERCORSO_REP_RF_A4_DOPPIA
+               End If
+
+            Case TIPO_DOC_FF
+
+               ' Fattura.
+               If ImpostaNomeDoc(1) <> String.Empty Then
+                  percorsoReport = "\Reports\" & ImpostaNomeDoc(1)
+               Else
+                  percorsoReport = PERCORSO_REP_FF_A4_DOPPIA
+               End If
+
+            Case TIPO_DOC_SF
+
+               ' Scontrino.
+               If ImpostaNomeDoc(3) <> String.Empty Then
+                  percorsoReport = "\Reports\" & ImpostaNomeDoc(3)
+               Else
+                  percorsoReport = PERCORSO_REP_SF
+               End If
+
+         End Select
+
+         Return percorsoReport
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
+
+   End Function
+
+   Private Function LeggiNomeStampante(ByVal tipoDoc As String) As String
+      Try
+         Dim percorsoStampante As String
+
+         ' Imposta il nome del Report.
+         Select Case tipoDoc
+            Case TIPO_DOC_CO, TIPO_DOC_PF
+
+               ' Imposta il percorso completo del nome stampante.
+               percorsoStampante = ImpostaNomeStampante(2)
+
+            Case TIPO_DOC_RF
+
+               ' Imposta il percorso completo del nome stampante.
+               percorsoStampante = ImpostaNomeStampante(0)
+
+            Case TIPO_DOC_FF
+
+               ' Imposta il percorso completo del nome stampante.
+               percorsoStampante = ImpostaNomeStampante(1)
+
+            Case TIPO_DOC_SF
+
+               ' Imposta il percorso completo del nome stampante.
+               percorsoStampante = ImpostaNomeStampante(3)
+
+         End Select
+
+         Return percorsoStampante
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+         Return String.Empty
+
+      End Try
+
+   End Function
+
+   Private Sub AnteprimaDiStampa()
+      Try
+         ' Ottiene l'Id del documento.
+         Dim idDocumento As String
+         If Me.Tag = String.Empty Then
+            ' Nuovo documento.
+            idDocumento = LeggiUltimoRecord(TAB_DOCUMENTI)
+         Else
+            ' Documento esistente.
+            idDocumento = Me.Tag
+         End If
+
+         ' Stampare il documento...
+         'Utilizzare il modello di oggetti ADO .NET per impostare le informazioni di connessione. 
+         Dim cn As New OleDbConnection(ConnString)
+
+         cn.Open()
+
+         ' Tabella Documenti.
+         Dim oleAdapter As New OleDbDataAdapter
+         oleAdapter.SelectCommand = New OleDbCommand("SELECT * FROM " & TAB_DOCUMENTI & " WHERE Id = " & idDocumento, cn)
+
+         Dim ds As New HospitalityDataSet 'Dataset1 'utilizzato con Crystal Reports
+         ds.Clear()
+         oleAdapter.Fill(ds, TAB_DOCUMENTI)
+
+         ' Tabella DettagliDoc
+         Dim oleAdapter1 As New OleDbDataAdapter
+         oleAdapter1.SelectCommand = New OleDbCommand("SELECT * FROM " & TAB_DETTAGLI_DOCUMENTI & " WHERE RifDoc = " & idDocumento, cn)
+         oleAdapter1.Fill(ds, TAB_DETTAGLI_DOCUMENTI)
+
+         ' Tabella Azienda
+         Dim oleAdapter2 As New OleDbDataAdapter
+         oleAdapter2.SelectCommand = New OleDbCommand("SELECT * FROM " & TAB_AZIENDA, cn)
+         oleAdapter2.Fill(ds, TAB_AZIENDA)
+
+         ' ReportViewer - Apre la finestra di Anteprima di stampa per il documento.
+         Dim frm As New ReportViewer(ds, LeggiNomeReport(eui_cmbTipoDocumento.Text), LeggiNomeStampante(eui_cmbTipoDocumento.Text))
+         frm.ShowDialog()
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
+
+   End Sub
+
    Private Sub eui_cmdImportaDoc_Click(sender As Object, e As EventArgs) Handles eui_cmdImportaDoc.Click
       Try
          Dim frm As New ListaDocumenti(eui_cmbClienteCognome.Text)
@@ -1911,7 +2054,14 @@ Public Class frmDocumento
    End Sub
 
    Private Sub eui_cmdAnnulla_Click(sender As Object, e As EventArgs) Handles eui_cmdAnnulla.Click
-      Me.Close()
+      Try
+         Me.Close()
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
    End Sub
 
    Private Sub eui_cmdAnteprima_Click(sender As Object, e As EventArgs) Handles eui_cmdAnteprima.Click
@@ -1919,54 +2069,8 @@ Public Class frmDocumento
          ' Salva le modifiche apportate al documento.
          If SalvaDocumento() = True Then
 
-            ' Stampare il documento...
-
-            'Select Case nomeFinestra
-            '   Case "ContoPos"
-
-            'If g_frmPos.nomeTavolo <> String.Empty And g_frmPos.nomeTavolo <> "Tavoli" Then
-            '   mantieniDatiTavolo = False
-            'Else
-            '   mantieniDatiTavolo = True
-            'End If
-
-            'g_frmContoPos.tipoDocumento = tipoDocumento
-
-            'If g_frmContoPos.ImpostaNomeDoc(0) <> String.Empty Then
-            '   g_frmContoPos.percorsoRep = "\Reports\" & g_frmContoPos.ImpostaNomeDoc(0)
-            'Else
-            '   Select Case tipoDocumento
-            '      Case TIPO_DOC_CO
-            '         ' TODO: Aggiungere documento conto.
-
-            '      Case TIPO_DOC_PF
-            '         g_frmContoPos.percorsoRep = PERCORSO_REP_PF_A4_DOPPIA
-
-            '      Case TIPO_DOC_RF
-            '         g_frmContoPos.percorsoRep = PERCORSO_REP_RF_A4_DOPPIA
-
-            '      Case TIPO_DOC_FF
-            '         g_frmContoPos.percorsoRep = PERCORSO_REP_FF_A4_DOPPIA
-
-            '      Case TIPO_DOC_SF
-            '         ' TODO: Aggiungere documento scontrino.
-
-            '   End Select
-            'End If
-
-            'If g_frmContoPos.txtSospeso.Text <> VALORE_ZERO Then
-            '   If g_frmContoPos.VerificaIntestazione() = False Then
-            '      Exit Sub
-            '   End If
-            'End If
-
-            'If g_frmContoPos.VerificaCartaCredito() = True Then
-            '   g_frmContoPos.StampaConto(g_frmContoPos.ImpostaNomeStampante(0))
-            'End If
-
-            'Case "ElencoDoc"
-
-            'End Select
+            ' Apre l'anteprima di stampa per il documento selezionato.
+            AnteprimaDiStampa()
 
             Select Case eui_cmbStatoDocumento.Text
                Case STATO_DOC_ANNULLATO, STATO_DOC_EMESSO_STAMPATO
@@ -1981,11 +2085,8 @@ Public Class frmDocumento
                   ModificaStatoDocumento(TAB_DOCUMENTI, LeggiUltimoRecord(TAB_DOCUMENTI), STATO_DOC_STAMPATO)
 
             End Select
-
-            Me.Close()
          Else
             MessageBox.Show("Il comando non è stato eseguito! Verificare di avere compilato correttamente il documento e riprovare.", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Information)
-
          End If
 
       Catch ex As Exception
@@ -1996,37 +2097,37 @@ Public Class frmDocumento
    End Sub
 
    Private Sub eui_cmdStampa_Click(sender As Object, e As EventArgs) Handles eui_cmdStampa.Click
-      Try
-         ' Salva le modifiche apportate al documento.
-         If SalvaDocumento() = True Then
+      'Try
+      '   ' Salva le modifiche apportate al documento.
+      '   If SalvaDocumento() = True Then
 
-            ' Stampare il documento...
+      '      ' Stampare il documento...
 
-            Select Case eui_cmbStatoDocumento.Text
-               Case STATO_DOC_ANNULLATO, STATO_DOC_EMESSO_STAMPATO
-                  Exit Sub
+      '      Select Case eui_cmbStatoDocumento.Text
+      '         Case STATO_DOC_ANNULLATO, STATO_DOC_EMESSO_STAMPATO
+      '            Exit Sub
 
-               Case STATO_DOC_EMESSO
-                  ' Modifica lo stato del documento.
-                  ModificaStatoDocumento(TAB_DOCUMENTI, LeggiUltimoRecord(TAB_DOCUMENTI), STATO_DOC_EMESSO_STAMPATO)
+      '         Case STATO_DOC_EMESSO
+      '            ' Modifica lo stato del documento.
+      '            ModificaStatoDocumento(TAB_DOCUMENTI, LeggiUltimoRecord(TAB_DOCUMENTI), STATO_DOC_EMESSO_STAMPATO)
 
-               Case Else
-                  ' Modifica lo stato del documento.
-                  ModificaStatoDocumento(TAB_DOCUMENTI, LeggiUltimoRecord(TAB_DOCUMENTI), STATO_DOC_STAMPATO)
+      '         Case Else
+      '            ' Modifica lo stato del documento.
+      '            ModificaStatoDocumento(TAB_DOCUMENTI, LeggiUltimoRecord(TAB_DOCUMENTI), STATO_DOC_STAMPATO)
 
-            End Select
+      '      End Select
 
-            Me.Close()
-         Else
-            MessageBox.Show("Il comando non è stato eseguito! Verificare di avere compilato correttamente il documento e riprovare.", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Information)
+      '      Me.Close()
+      '   Else
+      '      MessageBox.Show("Il comando non è stato eseguito! Verificare di avere compilato correttamente il documento e riprovare.", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-         End If
+      '   End If
 
-      Catch ex As Exception
-         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-         err.GestisciErrore(ex.StackTrace, ex.Message)
+      'Catch ex As Exception
+      '   ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+      '   err.GestisciErrore(ex.StackTrace, ex.Message)
 
-      End Try
+      'End Try
    End Sub
 
    Private Sub eui_cmdEmettiStampa_Click(sender As Object, e As EventArgs) Handles eui_cmdEmettiStampa.Click
@@ -2045,7 +2146,8 @@ Public Class frmDocumento
 
             MessageBox.Show("Tutte le operazioni contabili sono state eseguite!", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-            Me.Close()
+            ' Apre l'anteprima di stampa per il documento selezionato.
+            AnteprimaDiStampa()
          Else
             MessageBox.Show("Il comando non è stato eseguito! Verificare di avere compilato correttamente il documento e riprovare.", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Information)
 
@@ -2074,8 +2176,6 @@ Public Class frmDocumento
             ModificaStatoDocumento(TAB_DOCUMENTI, LeggiUltimoRecord(TAB_DOCUMENTI), STATO_DOC_EMESSO)
 
             MessageBox.Show("Tutte le operazioni contabili sono state eseguite!", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Information)
-
-            Me.Close()
          Else
             MessageBox.Show("Il comando non è stato eseguito! Verificare di avere compilato correttamente il documento e riprovare.", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Information)
 

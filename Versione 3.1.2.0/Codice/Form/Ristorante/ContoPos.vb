@@ -3921,48 +3921,6 @@ Public Class ContoPos
       End Try
    End Sub
 
-   Public Function ImpostaNomeStampante(ByVal indice As Integer) As String
-      Try
-         Dim val() As String = PercorsiStampantiDocumenti(indice).Split(";")
-
-         If val(1) <> "<Nessuna>" Then
-            Return val(1)
-         Else
-            Return String.Empty
-         End If
-
-      Catch ex As NullReferenceException
-         MessageBox.Show("Non è possibile effettuare l'operazione! Verificare nei percorsi di stampa della finestra Opzioni che siano impostate le stampanti.", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-
-         Exit Function
-
-      Catch ex As Exception
-         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-         err.GestisciErrore(ex.StackTrace, ex.Message)
-      End Try
-   End Function
-
-   Public Function ImpostaNomeDoc(ByVal indice As Integer) As String
-      Try
-         Dim val() As String = PercorsiStampantiDocumenti(indice).Split(";")
-
-         If val(2) <> String.Empty Then
-            Return val(2)
-         Else
-            Return String.Empty
-         End If
-
-      Catch ex As NullReferenceException
-         MessageBox.Show("Non è possibile effettuare l'operazione! Verificare nei percorsi di stampa della finestra Opzioni che siano impostati i reports.", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-
-         Exit Function
-
-      Catch ex As Exception
-         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-         err.GestisciErrore(ex.StackTrace, ex.Message)
-      End Try
-   End Function
-
    Public Sub AggiornaValoriConto()
       Try
          ' Riproduce un effetto sonoro.
@@ -5604,14 +5562,7 @@ Public Class ContoPos
          End If
 
          If VerificaCartaCredito() = True Then
-            'StampaConto(ImpostaNomeStampante(0))
-
-            ' Modifica il cursore del mouse.
-            Cursor.Current = Cursors.AppStarting
-
-            g_frmDocumento = New frmDocumento("ContoPos", TIPO_DOC_RF, String.Empty)
-            g_frmDocumento.ShowDialog()
-
+            StampaConto(ImpostaNomeStampante(0))
          End If
 
       Catch ex As Exception

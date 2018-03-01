@@ -27,14 +27,14 @@ Partial Class ReportViewer
       Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
       Dim ReportDataSource3 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
       Me.DettagliDocBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-      Me.HospitalityDataSet = New Hospitality_Solution.HospitalityDataSet()
+      Me.HospitalityDataSet = New HospitalityDataSet()
       Me.AziendaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
       Me.DocumentiBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-      Me.formFrameSkinner = New Elegant.Ui.FormFrameSkinner()
       Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
-      Me.DettagliDocTableAdapter = New Hospitality_Solution.HospitalityDataSetTableAdapters.DettagliDocTableAdapter()
-      Me.AziendaTableAdapter = New Hospitality_Solution.HospitalityDataSetTableAdapters.AziendaTableAdapter()
-      Me.DocumentiTableAdapter = New Hospitality_Solution.HospitalityDataSetTableAdapters.DocumentiTableAdapter()
+      Me.DettagliDocTableAdapter = New HospitalityDataSetTableAdapters.DettagliDocTableAdapter()
+      Me.AziendaTableAdapter = New HospitalityDataSetTableAdapters.AziendaTableAdapter()
+      Me.DocumentiTableAdapter = New HospitalityDataSetTableAdapters.DocumentiTableAdapter()
+      Me.formFrameSkinner = New Elegant.Ui.FormFrameSkinner()
       CType(Me.DettagliDocBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
       CType(Me.HospitalityDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
       CType(Me.AziendaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -61,13 +61,10 @@ Partial Class ReportViewer
       Me.DocumentiBindingSource.DataMember = "Documenti"
       Me.DocumentiBindingSource.DataSource = Me.HospitalityDataSet
       '
-      'formFrameSkinner
-      '
-      Me.formFrameSkinner.Form = Me
-      '
       'ReportViewer1
       '
       Me.ReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
+      Me.ReportViewer1.DocumentMapCollapsed = True
       ReportDataSource1.Name = "DettagliDoc"
       ReportDataSource1.Value = Me.DettagliDocBindingSource
       ReportDataSource2.Name = "Azienda"
@@ -80,7 +77,8 @@ Partial Class ReportViewer
       Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "Hospitality_Solution.Fattura A4_Doppia.rdlc"
       Me.ReportViewer1.Location = New System.Drawing.Point(0, 0)
       Me.ReportViewer1.Name = "ReportViewer1"
-      Me.ReportViewer1.Size = New System.Drawing.Size(752, 277)
+      Me.ReportViewer1.PromptAreaCollapsed = True
+      Me.ReportViewer1.Size = New System.Drawing.Size(848, 373)
       Me.ReportViewer1.TabIndex = 1
       '
       'DettagliDocTableAdapter
@@ -95,14 +93,21 @@ Partial Class ReportViewer
       '
       Me.DocumentiTableAdapter.ClearBeforeFill = True
       '
+      'formFrameSkinner
+      '
+      Me.formFrameSkinner.AllowGlass = False
+      Me.formFrameSkinner.Form = Me
+      '
       'ReportViewer
       '
       Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
       Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-      Me.ClientSize = New System.Drawing.Size(752, 277)
+      Me.ClientSize = New System.Drawing.Size(848, 373)
       Me.Controls.Add(Me.ReportViewer1)
       Me.Name = "ReportViewer"
+      Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
       Me.Text = "Anteprima di stampa"
+      Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
       CType(Me.DettagliDocBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
       CType(Me.HospitalityDataSet, System.ComponentModel.ISupportInitialize).EndInit()
       CType(Me.AziendaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -110,8 +115,6 @@ Partial Class ReportViewer
       Me.ResumeLayout(False)
 
    End Sub
-
-   Friend WithEvents formFrameSkinner As Elegant.Ui.FormFrameSkinner
    Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
    Friend WithEvents DettagliDocBindingSource As BindingSource
    Friend WithEvents HospitalityDataSet As HospitalityDataSet
@@ -120,4 +123,5 @@ Partial Class ReportViewer
    Friend WithEvents DettagliDocTableAdapter As HospitalityDataSetTableAdapters.DettagliDocTableAdapter
    Friend WithEvents AziendaTableAdapter As HospitalityDataSetTableAdapters.AziendaTableAdapter
    Friend WithEvents DocumentiTableAdapter As HospitalityDataSetTableAdapters.DocumentiTableAdapter
+   Friend WithEvents formFrameSkinner As Elegant.Ui.FormFrameSkinner
 End Class

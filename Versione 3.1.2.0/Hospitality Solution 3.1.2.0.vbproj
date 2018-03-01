@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
   <PropertyGroup>
     <ProjectType>Local</ProjectType>
     <ProductVersion>8.0.30319</ProductVersion>
@@ -25,7 +25,7 @@
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <MyType>WindowsFormsWithCustomSubMain</MyType>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <OldToolsVersion>0.0</OldToolsVersion>
     <UpgradeBackupLocation />
     <IsWebBootstrapper>false</IsWebBootstrapper>
@@ -75,6 +75,7 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <UseVSHostingProcess>true</UseVSHostingProcess>
     <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\</OutputPath>
@@ -98,6 +99,7 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <RunCodeAnalysis>false</RunCodeAnalysis>
     <CodeAnalysisIgnoreGeneratedCode>false</CodeAnalysisIgnoreGeneratedCode>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup />
   <PropertyGroup>
@@ -429,7 +431,7 @@
     <Compile Include="Codice\Form\Hospitality\ReportViewer.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Codice\Form\Ristorante\HospitalityDataSet.vb" />
+    <Compile Include="HospitalityDataSet.vb" />
     <Compile Include="Codice\Form\Ristorante\NoteContiPos.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -728,70 +730,6 @@
     <Compile Include="Settings.vb" />
     <None Include="bin\Archivi\CAP.mdb" />
     <None Include="bin\Archivi\Hospitality.mdb" />
-    <None Include="bin\Reports\AccessoriServizi.rpt" />
-    <None Include="bin\Reports\Acquisti.rpt" />
-    <None Include="bin\Reports\Arial\Menu.rpt" />
-    <None Include="bin\Reports\Articoli.rpt" />
-    <None Include="bin\Reports\Aziende.rpt" />
-    <None Include="bin\Reports\Camerieri.rpt" />
-    <None Include="bin\Reports\CatPiatti.rpt" />
-    <None Include="bin\Reports\Clienti.rpt" />
-    <None Include="bin\Reports\ComandaClienti.rpt" />
-    <None Include="bin\Reports\ComandaReparti.rpt" />
-    <None Include="bin\Reports\ComandaReparti2.rpt" />
-    <None Include="bin\Reports\Comic\Menu.rpt" />
-    <None Include="bin\Reports\Corrispettivi.rpt" />
-    <None Include="bin\Reports\Documenti.rpt" />
-    <None Include="bin\Reports\Etichette\Etichette635_339.rpt" />
-    <None Include="bin\Reports\Etichette\Etichette635_381.rpt" />
-    <None Include="bin\Reports\Etichette\Etichette635_72.rpt" />
-    <None Include="bin\Reports\Etichette\Etichette991_331.rpt" />
-    <None Include="bin\Reports\Etichette\Etichette991_381.rpt" />
-    <None Include="bin\Reports\Etichette\Etichette991_677.rpt" />
-    <None Include="bin\Reports\Etichette\EtichetteArt635_339.rpt" />
-    <None Include="bin\Reports\Etichette\EtichetteArt635_381.rpt" />
-    <None Include="bin\Reports\Etichette\EtichetteArt635_72.rpt" />
-    <None Include="bin\Reports\Etichette\EtichetteArt991_331.rpt" />
-    <None Include="bin\Reports\Etichette\EtichetteArt991_381.rpt" />
-    <None Include="bin\Reports\Etichette\EtichetteArt991_677.rpt" />
-    <None Include="bin\Reports\FattAziende.rpt" />
-    <None Include="bin\Reports\Fattura - Centro sportivo.rpt" />
-    <None Include="bin\Reports\Fattura - Pizz. Bella Napoli.rpt" />
-    <None Include="bin\Reports\Fattura - Rist. Celide.rpt" />
-    <None Include="bin\Reports\Fattura - Rist. La Forchetta D%27Oro.rpt" />
-    <None Include="bin\Reports\Fattura.rpt" />
-    <None Include="bin\Reports\Fattura0.rpt" />
-    <None Include="bin\Reports\Fornitori.rpt" />
-    <None Include="bin\Reports\Gruppi.rpt" />
-    <None Include="bin\Reports\Inventario.rpt" />
-    <None Include="bin\Reports\Messaggi.rpt" />
-    <None Include="bin\Reports\MovMag.rpt" />
-    <None Include="bin\Reports\Operatori.rpt" />
-    <None Include="bin\Reports\Operazioni.rpt" />
-    <None Include="bin\Reports\Piatti.rpt" />
-    <None Include="bin\Reports\PNota.rpt" />
-    <None Include="bin\Reports\Pren.rpt" />
-    <None Include="bin\Reports\PrenRisorse.rpt" />
-    <None Include="bin\Reports\Proforma - Centro sportivo.rpt" />
-    <None Include="bin\Reports\Proforma - Pizz. Bella Napoli.rpt" />
-    <None Include="bin\Reports\Proforma - Rist. Celide.rpt" />
-    <None Include="bin\Reports\Proforma - Rist. La Forchetta D%27Oro.rpt" />
-    <None Include="bin\Reports\Proforma.rpt" />
-    <None Include="bin\Reports\PSale.rpt" />
-    <None Include="bin\Reports\RFiscale - Centro sportivo.rpt" />
-    <None Include="bin\Reports\RFiscale - Pizz. Bella Napoli.rpt" />
-    <None Include="bin\Reports\RFiscale - Rist. Celide.rpt" />
-    <None Include="bin\Reports\RFiscale - Rist. La Forchetta D%27Oro.rpt" />
-    <None Include="bin\Reports\RFiscale.rpt" />
-    <None Include="bin\Reports\RFiscale0.rpt" />
-    <None Include="bin\Reports\RicevutaKubeII.rpt" />
-    <None Include="bin\Reports\Risorse.rpt" />
-    <None Include="bin\Reports\Sale.rpt" />
-    <None Include="bin\Reports\Scorte.rpt" />
-    <None Include="bin\Reports\Stat.rpt" />
-    <None Include="bin\Reports\StatRisorse.rpt" />
-    <None Include="bin\Reports\Tavoli.rpt" />
-    <None Include="bin\Reports\Times\Menu.rpt" />
     <None Include="HospitalityDataSet.xsc">
       <DependentUpon>HospitalityDataSet.xsd</DependentUpon>
     </None>
@@ -807,7 +745,6 @@
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>Dataset1.Designer.vb</LastGenOutput>
     </None>
-    <None Include="My Project\DataSources\Hospitality_Solution.Dataset1TableAdapters.AccessoriServiziTableAdapter.datasource" />
     <None Include="Resources\LogoAmica.ico" />
     <None Include="bin\Android\CHS_ANAG.DB" />
     <None Include="bin\Android\CHS_CMD.DB" />
@@ -880,17 +817,6 @@
     <None Include="Resources\About1.ico" />
     <None Include="Resources\About.ico" />
     <None Include="Resources\Hospitality.ico" />
-    <EmbeddedResource Include="bin\Reports\Fattura A4.rdlc" />
-    <EmbeddedResource Include="bin\Reports\Fattura A4_Doppia - Centro sportivo.rdlc" />
-    <EmbeddedResource Include="bin\Reports\Fattura A4_Doppia.rdlc" />
-    <EmbeddedResource Include="bin\Reports\Proforma A4_Doppia - Centro sportivo.rdlc" />
-    <EmbeddedResource Include="bin\Reports\Proforma A4_Doppia.rdlc" />
-    <EmbeddedResource Include="bin\Reports\Proforma A5.rdlc" />
-    <EmbeddedResource Include="bin\Reports\Proforma A6.rdlc" />
-    <EmbeddedResource Include="bin\Reports\RFiscale A4_Doppia - Centro sportivo.rdlc" />
-    <EmbeddedResource Include="bin\Reports\RFiscale A4_Doppia.rdlc" />
-    <EmbeddedResource Include="bin\Reports\RFiscale A5.rdlc" />
-    <EmbeddedResource Include="bin\Reports\RFiscale A6.rdlc" />
     <EmbeddedResource Include="Codice\Classi\CellaColorata.resx">
       <DependentUpon>CellaColorata.vb</DependentUpon>
     </EmbeddedResource>
@@ -942,7 +868,6 @@
     <EmbeddedResource Include="Codice\Form\Hospitality\Documento.resx">
       <DependentUpon>Documento.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="bin\Reports\AccessoriServizi.rdlc" />
     <EmbeddedResource Include="Codice\Form\Hospitality\ListaDocumenti.resx">
       <DependentUpon>ListaDocumenti.vb</DependentUpon>
     </EmbeddedResource>
@@ -1273,10 +1198,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Interop.HSS.dll" />
-    <Content Include="bin\Reports\ComandaClientiKubeII.rpt.txt" />
-    <Content Include="bin\Reports\ComandaRepartiKubeII.rpt.txt" />
-    <Content Include="bin\Reports\ProformaKubeII.rpt.txt" />
-    <Content Include="bin\Reports\RicevutaKubeII.rpt.txt" />
   </ItemGroup>
   <ItemGroup>
     <PublishFile Include="CrystalDecisions.CrystalReports.Engine">
@@ -1789,6 +1710,9 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="My Project\DataSources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <PropertyGroup>

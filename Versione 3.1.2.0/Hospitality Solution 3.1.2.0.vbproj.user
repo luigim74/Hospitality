@@ -2,6 +2,7 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <EnableUnmanagedDebugging>true</EnableUnmanagedDebugging>
+    <EnableSQLServerDebugging>true</EnableSQLServerDebugging>
   </PropertyGroup>
   <PropertyGroup>
     <PublishUrlHistory>\publish\|\\localhost\Users\Luigi Montana\Desktop\HS3\|\\localhost\Program Files %28x86%29\|D:\HS3\|ftp://ftp.montanasoftware.it/htdocs/shop/HS3/</PublishUrlHistory>

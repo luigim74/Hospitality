@@ -149,7 +149,7 @@ Public Class frmAccesso
       Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
       Me.BackColor = System.Drawing.SystemColors.AppWorkspace
       Me.CancelButton = Me.eui_cmdAnnulla
-      Me.ClientSize = New System.Drawing.Size(405, 169)
+      Me.ClientSize = New System.Drawing.Size(397, 167)
       Me.Controls.Add(Me.eui_cmdAnnulla)
       Me.Controls.Add(Me.eui_cmdOK)
       Me.Controls.Add(Me.PictureBox2)

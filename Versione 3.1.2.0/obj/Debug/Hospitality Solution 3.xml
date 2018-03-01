@@ -6,6 +6,585 @@ Hospitality Solution 3
 </name>
 </assembly>
 <members>
+<member name="M:Hospitality_Solution.frmDocumento.#ctor(System.String,System.String,System.String)">
+ <summary>
+ Apre il documento da eleborare.
+ </summary>
+ <param name="nomeWnd">Nome della finestra che richiama il metodo.</param>
+ <param name="documento">Il tipo di documento da aprire.</param>
+ <param name="id">Il codice del documento da aprire.</param>
+</member>
+<member name="M:Hospitality_Solution.frmDocumento.NuovoDocumento">
+ <summary>
+ Crea un nuovo documento.
+ </summary>
+</member>
+<member name="M:Hospitality_Solution.frmDocumento.ModificaDocumento">
+ <summary>
+ Modifica i dati del documento selezionato.
+ </summary>
+</member>
+<member name="M:Hospitality_Solution.frmDocumento.SalvaDocumento">
+ <summary>
+ Salva i dati per il documento creato.
+ </summary>
+ <returns><c>True</c> Documento salvato, <c>False</c> Documento non salvato.</returns>
+</member>
+<member name="T:Hospitality_Solution.HospitalityDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.HospitalityDataSet.AziendaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.HospitalityDataSet.DocumentiDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.HospitalityDataSet.DettagliDocDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.HospitalityDataSet.AziendaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.HospitalityDataSet.DocumentiRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.HospitalityDataSet.DettagliDocRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.HospitalityDataSet.AziendaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.HospitalityDataSet.DocumentiRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.HospitalityDataSet.DettagliDocRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.HospitalityDataSetTableAdapters.AziendaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.HospitalityDataSetTableAdapters.DocumentiTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.HospitalityDataSetTableAdapters.DettagliDocTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.HospitalityDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:Hospitality_Solution.HospitalityDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(Hospitality_Solution.HospitalityDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:Hospitality_Solution.HospitalityDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(Hospitality_Solution.HospitalityDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:Hospitality_Solution.HospitalityDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(Hospitality_Solution.HospitalityDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:Hospitality_Solution.HospitalityDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:Hospitality_Solution.HospitalityDataSetTableAdapters.TableAdapterManager.UpdateAll(Hospitality_Solution.HospitalityDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.HospitalityDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:Hospitality_Solution.HospitalityDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.RisorseDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.StatisticheRisorseDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.PrenRisorseDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.AccessoriServiziDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.AziendaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.ClientiDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.PiattiDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.AcquistiDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.FornitoriDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.PrimaNotaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.CategoriePiattiDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.StatisticheDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.ArticoliDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.MovMagazzinoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.CorrispettiviDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.DettagliDocDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.AziendeDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.DocumentiDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.Comande2DataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.MessaggiDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.ComandeDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.SaleDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.TavoliDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.PrenSaleDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.PrenotazioniDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.GruppiDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.OperatoriDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.OperazioniDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.RisorseRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.StatisticheRisorseRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.PrenRisorseRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.AccessoriServiziRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.AziendaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.ClientiRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.PiattiRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.AcquistiRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.FornitoriRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.PrimaNotaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.CategoriePiattiRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.StatisticheRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.ArticoliRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.MovMagazzinoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.CorrispettiviRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.DettagliDocRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.AziendeRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.DocumentiRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.Comande2Row">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.MessaggiRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.ComandeRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.SaleRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.TavoliRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.PrenSaleRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.PrenotazioniRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.GruppiRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.OperatoriRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.OperazioniRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.RisorseRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.StatisticheRisorseRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.PrenRisorseRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.AccessoriServiziRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.AziendaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.ClientiRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.PiattiRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.AcquistiRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.FornitoriRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.PrimaNotaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.CategoriePiattiRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.StatisticheRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.ArticoliRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.MovMagazzinoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.CorrispettiviRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.DettagliDocRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.AziendeRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.DocumentiRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.Comande2RowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.MessaggiRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.ComandeRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.SaleRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.TavoliRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.PrenSaleRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.PrenotazioniRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.GruppiRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.OperatoriRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1.OperazioniRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1TableAdapters.RisorseTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1TableAdapters.StatisticheRisorseTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1TableAdapters.PrenRisorseTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1TableAdapters.AccessoriServiziTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Hospitality_Solution.Dataset1TableAdapters.AziendaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
 <member name="T:Hospitality_Solution.My.Resources.Resources">
 <summary>
   Classe di risorse fortemente tipizzata per la ricerca di stringhe localizzate e così via.
@@ -305,620 +884,6 @@ Hospitality Solution 3
 <member name="P:Hospitality_Solution.My.Resources.Resources.sport_Ico">
 <summary>
   Cerca una risorsa localizzata di tipo System.Drawing.Icon simile a (Icona).
-</summary>
-</member>
-<member name="M:Hospitality_Solution.frmDocumento.#ctor(System.String,System.String,System.String)">
- <summary>
- Apre il documento da eleborare.
- </summary>
- <param name="nomeWnd">Nome della finestra che richiama il metodo.</param>
- <param name="documento">Il tipo di documento da aprire.</param>
- <param name="id">Il codice del documento da aprire.</param>
-</member>
-<member name="M:Hospitality_Solution.frmDocumento.NuovoDocumento">
- <summary>
- Crea un nuovo documento.
- </summary>
-</member>
-<member name="M:Hospitality_Solution.frmDocumento.ModificaDocumento">
- <summary>
- Modifica i dati del documento selezionato.
- </summary>
-</member>
-<member name="M:Hospitality_Solution.frmDocumento.SalvaDocumento">
- <summary>
- Salva i dati per il documento creato.
- </summary>
- <returns><c>True</c> Documento salvato, <c>False</c> Documento non salvato.</returns>
-</member>
-<member name="T:Hospitality_Solution.Dataset1">
-<summary>
-Represents a strongly typed in-memory cache of data.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.RisorseDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.StatisticheRisorseDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.PrenRisorseDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.AccessoriServiziDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.ClientiDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.PiattiDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.AcquistiDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.FornitoriDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.PrimaNotaDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.CategoriePiattiDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.StatisticheDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.ArticoliDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.MovMagazzinoDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.CorrispettiviDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.AziendaDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.DettagliDocDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.AziendeDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.DocumentiDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.Comande2DataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.MessaggiDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.ComandeDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.SaleDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.TavoliDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.PrenSaleDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.PrenotazioniDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.GruppiDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.OperatoriDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.OperazioniDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.RisorseRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.StatisticheRisorseRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.PrenRisorseRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.AccessoriServiziRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.ClientiRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.PiattiRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.AcquistiRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.FornitoriRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.PrimaNotaRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.CategoriePiattiRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.StatisticheRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.ArticoliRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.MovMagazzinoRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.CorrispettiviRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.AziendaRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.DettagliDocRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.AziendeRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.DocumentiRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.Comande2Row">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.MessaggiRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.ComandeRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.SaleRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.TavoliRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.PrenSaleRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.PrenotazioniRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.GruppiRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.OperatoriRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.OperazioniRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.RisorseRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.StatisticheRisorseRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.PrenRisorseRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.AccessoriServiziRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.ClientiRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.PiattiRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.AcquistiRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.FornitoriRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.PrimaNotaRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.CategoriePiattiRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.StatisticheRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.ArticoliRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.MovMagazzinoRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.CorrispettiviRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.AziendaRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.DettagliDocRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.AziendeRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.DocumentiRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.Comande2RowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.MessaggiRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.ComandeRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.SaleRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.TavoliRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.PrenSaleRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.PrenotazioniRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.GruppiRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.OperatoriRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1.OperazioniRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1TableAdapters.RisorseTableAdapter">
-<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1TableAdapters.StatisticheRisorseTableAdapter">
-<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1TableAdapters.PrenRisorseTableAdapter">
-<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.Dataset1TableAdapters.AccessoriServiziTableAdapter">
-<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.HospitalityDataSet">
-<summary>
-Represents a strongly typed in-memory cache of data.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.HospitalityDataSet.AziendaDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.HospitalityDataSet.DettagliDocDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.HospitalityDataSet.DocumentiDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.HospitalityDataSet.AccessoriServiziDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.HospitalityDataSet.ArticoliDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.HospitalityDataSet.AziendaRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.HospitalityDataSet.DettagliDocRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.HospitalityDataSet.DocumentiRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.HospitalityDataSet.AccessoriServiziRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.HospitalityDataSet.ArticoliRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.HospitalityDataSet.AziendaRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:Hospitality_Solution.HospitalityDataSet.DettagliDocRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:Hospitality_Solution.HospitalityDataSet.DocumentiRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:Hospitality_Solution.HospitalityDataSet.AccessoriServiziRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:Hospitality_Solution.HospitalityDataSet.ArticoliRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:Hospitality_Solution.HospitalityDataSetTableAdapters.AziendaTableAdapter">
-<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.HospitalityDataSetTableAdapters.DettagliDocTableAdapter">
-<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.HospitalityDataSetTableAdapters.DocumentiTableAdapter">
-<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.HospitalityDataSetTableAdapters.AccessoriServiziTableAdapter">
-<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.HospitalityDataSetTableAdapters.ArticoliTableAdapter">
-<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.HospitalityDataSetTableAdapters.TableAdapterManager">
-<summary>
-TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
-</summary>
-</member>
-<member name="M:Hospitality_Solution.HospitalityDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(Hospitality_Solution.HospitalityDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
-<summary>
-Update rows in top-down order.
-</summary>
-</member>
-<member name="M:Hospitality_Solution.HospitalityDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(Hospitality_Solution.HospitalityDataSet,System.Collections.Generic.List{System.Data.DataRow})">
-<summary>
-Insert rows in top-down order.
-</summary>
-</member>
-<member name="M:Hospitality_Solution.HospitalityDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(Hospitality_Solution.HospitalityDataSet,System.Collections.Generic.List{System.Data.DataRow})">
-<summary>
-Delete rows in bottom-up order.
-</summary>
-</member>
-<member name="M:Hospitality_Solution.HospitalityDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
-<summary>
-Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
-</summary>
-</member>
-<member name="M:Hospitality_Solution.HospitalityDataSetTableAdapters.TableAdapterManager.UpdateAll(Hospitality_Solution.HospitalityDataSet)">
-<summary>
-Update all changes to the dataset.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.HospitalityDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
-<summary>
-Update Order Option
-</summary>
-</member>
-<member name="T:Hospitality_Solution.HospitalityDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
-<summary>
-Used to sort self-referenced table's rows
 </summary>
 </member>
 </members>

@@ -2195,6 +2195,48 @@ Module Procedure
       End Try
    End Sub
 
+   Public Function ImpostaNomeStampante(ByVal indice As Integer) As String
+      Try
+         Dim val() As String = PercorsiStampantiDocumenti(indice).Split(";")
+
+         If val(1) <> "<Nessuna>" Then
+            Return val(1)
+         Else
+            Return String.Empty
+         End If
+
+      Catch ex As NullReferenceException
+         MessageBox.Show("Non è possibile effettuare l'operazione! Verificare nei percorsi di stampa della finestra Opzioni che siano impostate le stampanti.", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+
+         Exit Function
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Function
+
+   Public Function ImpostaNomeDoc(ByVal indice As Integer) As String
+      Try
+         Dim val() As String = PercorsiStampantiDocumenti(indice).Split(";")
+
+         If val(2) <> String.Empty Then
+            Return val(2)
+         Else
+            Return String.Empty
+         End If
+
+      Catch ex As NullReferenceException
+         MessageBox.Show("Non è possibile effettuare l'operazione! Verificare nei percorsi di stampa della finestra Opzioni che siano impostati i reports.", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+
+         Exit Function
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Function
+
 #End Region
 
 #Region "Custom KUBE II"
