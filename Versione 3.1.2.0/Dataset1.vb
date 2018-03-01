@@ -4,7 +4,9 @@
 End Class
 
 Namespace Dataset1TableAdapters
-    
-    Partial Public Class RisorseTableAdapter
-    End Class
+   Partial Public Class AziendaTableAdapter
+   End Class
+
+   Partial Public Class RisorseTableAdapter
+   End Class
 End Namespace

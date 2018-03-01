@@ -205,7 +205,7 @@ Partial Class frmDocumento
       Me.eui_tpcDocumento.Location = New System.Drawing.Point(9, 9)
       Me.eui_tpcDocumento.Name = "eui_tpcDocumento"
       Me.eui_tpcDocumento.SelectedTabPage = Me.eui_tpDettagli
-      Me.eui_tpcDocumento.Size = New System.Drawing.Size(661, 541)
+      Me.eui_tpcDocumento.Size = New System.Drawing.Size(661, 517)
       Me.eui_tpcDocumento.TabIndex = 0
       Me.eui_tpcDocumento.TabPages.AddRange(New Elegant.Ui.TabPage() {Me.eui_tpGenerale, Me.eui_tpDettagli, Me.eui_tpTotali, Me.eui_tpNote})
       Me.eui_tpcDocumento.Text = " "
@@ -221,7 +221,7 @@ Partial Class frmDocumento
       Me.eui_tpDettagli.Controls.Add(Me.dgvDettagli)
       Me.eui_tpDettagli.KeyTip = Nothing
       Me.eui_tpDettagli.Name = "eui_tpDettagli"
-      Me.eui_tpDettagli.Size = New System.Drawing.Size(659, 520)
+      Me.eui_tpDettagli.Size = New System.Drawing.Size(659, 496)
       Me.eui_tpDettagli.TabIndex = 1
       Me.eui_tpDettagli.Text = "Dettagli"
       '
@@ -230,7 +230,7 @@ Partial Class frmDocumento
       Me.eui_cmdImportaDoc.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
       Me.eui_cmdImportaDoc.Id = "ec3e23ac-6c4f-4121-b3fe-64698cc82823"
       Me.eui_cmdImportaDoc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-      Me.eui_cmdImportaDoc.Location = New System.Drawing.Point(5, 479)
+      Me.eui_cmdImportaDoc.Location = New System.Drawing.Point(5, 455)
       Me.eui_cmdImportaDoc.Name = "eui_cmdImportaDoc"
       Me.eui_cmdImportaDoc.ScreenTip.Caption = "Stampa"
       Me.eui_cmdImportaDoc.ScreenTip.Text = "Salva e stampa il documento."
@@ -242,7 +242,7 @@ Partial Class frmDocumento
       '
       Me.eui_cmdCancellaTutto.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.eui_cmdCancellaTutto.Id = "a64e0446-1db7-4144-9b7c-e1251124234a"
-      Me.eui_cmdCancellaTutto.Location = New System.Drawing.Point(560, 478)
+      Me.eui_cmdCancellaTutto.Location = New System.Drawing.Point(560, 454)
       Me.eui_cmdCancellaTutto.Name = "eui_cmdCancellaTutto"
       Me.eui_cmdCancellaTutto.Size = New System.Drawing.Size(95, 29)
       Me.eui_cmdCancellaTutto.TabIndex = 5
@@ -252,7 +252,7 @@ Partial Class frmDocumento
       '
       Me.eui_cmdEliminaRiga.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.eui_cmdEliminaRiga.Id = "ffdf7dee-e67d-4bb1-8383-e023e9410042"
-      Me.eui_cmdEliminaRiga.Location = New System.Drawing.Point(456, 478)
+      Me.eui_cmdEliminaRiga.Location = New System.Drawing.Point(456, 454)
       Me.eui_cmdEliminaRiga.Name = "eui_cmdEliminaRiga"
       Me.eui_cmdEliminaRiga.Size = New System.Drawing.Size(95, 29)
       Me.eui_cmdEliminaRiga.TabIndex = 4
@@ -262,7 +262,7 @@ Partial Class frmDocumento
       '
       Me.DropDown1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
       Me.DropDown1.Id = "8fc42b15-7920-4cc6-8833-4a5a44220cbf"
-      Me.DropDown1.Location = New System.Drawing.Point(137, 479)
+      Me.DropDown1.Location = New System.Drawing.Point(137, 455)
       Me.DropDown1.Name = "DropDown1"
       Me.DropDown1.Popup = Me.PopupMenu1
       Me.DropDown1.Size = New System.Drawing.Size(122, 29)
@@ -327,7 +327,7 @@ Partial Class frmDocumento
       '
       Me.eui_cmdNuovaRiga.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.eui_cmdNuovaRiga.Id = "009b3784-161a-4521-84d6-77d07b88a7dd"
-      Me.eui_cmdNuovaRiga.Location = New System.Drawing.Point(351, 478)
+      Me.eui_cmdNuovaRiga.Location = New System.Drawing.Point(351, 454)
       Me.eui_cmdNuovaRiga.Name = "eui_cmdNuovaRiga"
       Me.eui_cmdNuovaRiga.Size = New System.Drawing.Size(95, 29)
       Me.eui_cmdNuovaRiga.TabIndex = 3
@@ -356,7 +356,7 @@ Partial Class frmDocumento
       Me.dgvDettagli.MultiSelect = False
       Me.dgvDettagli.Name = "dgvDettagli"
       Me.dgvDettagli.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-      Me.dgvDettagli.Size = New System.Drawing.Size(650, 470)
+      Me.dgvDettagli.Size = New System.Drawing.Size(650, 446)
       Me.dgvDettagli.TabIndex = 0
       '
       'clnCodice
@@ -1368,10 +1368,10 @@ Partial Class frmDocumento
       Me.StatusBar1.Controls.Add(Me.StatusBarControlsArea1)
       Me.StatusBar1.ControlsArea = Me.StatusBarControlsArea1
       Me.StatusBar1.Dock = System.Windows.Forms.DockStyle.Bottom
-      Me.StatusBar1.Location = New System.Drawing.Point(0, 675)
+      Me.StatusBar1.Location = New System.Drawing.Point(0, 662)
       Me.StatusBar1.Name = "StatusBar1"
       Me.StatusBar1.NotificationsArea = Me.StatusBarNotificationsArea1
-      Me.StatusBar1.Size = New System.Drawing.Size(853, 22)
+      Me.StatusBar1.Size = New System.Drawing.Size(861, 22)
       Me.StatusBar1.TabIndex = 3
       Me.StatusBar1.Text = "StatusBar1"
       '
@@ -1385,7 +1385,7 @@ Partial Class frmDocumento
       Me.StatusBarNotificationsArea1.MaximumSize = New System.Drawing.Size(0, 22)
       Me.StatusBarNotificationsArea1.MinimumSize = New System.Drawing.Size(0, 22)
       Me.StatusBarNotificationsArea1.Name = "StatusBarNotificationsArea1"
-      Me.StatusBarNotificationsArea1.Size = New System.Drawing.Size(719, 22)
+      Me.StatusBarNotificationsArea1.Size = New System.Drawing.Size(727, 22)
       Me.StatusBarNotificationsArea1.TabIndex = 1
       '
       'StatusBarPane2
@@ -1453,7 +1453,7 @@ Partial Class frmDocumento
       '
       Me.StatusBarControlsArea1.Controls.Add(Me.StatusBarPane4)
       Me.StatusBarControlsArea1.Dock = System.Windows.Forms.DockStyle.Right
-      Me.StatusBarControlsArea1.Location = New System.Drawing.Point(719, 0)
+      Me.StatusBarControlsArea1.Location = New System.Drawing.Point(727, 0)
       Me.StatusBarControlsArea1.MaximumSize = New System.Drawing.Size(0, 22)
       Me.StatusBarControlsArea1.MinimumSize = New System.Drawing.Size(0, 22)
       Me.StatusBarControlsArea1.Name = "StatusBarControlsArea1"
@@ -1485,7 +1485,7 @@ Partial Class frmDocumento
       Me.eui_cmdAnteprima.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.eui_cmdAnteprima.Id = "a24f06e9-0d6d-457c-a692-06d6a31b5a4c"
       Me.eui_cmdAnteprima.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-      Me.eui_cmdAnteprima.Location = New System.Drawing.Point(687, 197)
+      Me.eui_cmdAnteprima.Location = New System.Drawing.Point(687, 173)
       Me.eui_cmdAnteprima.Name = "eui_cmdAnteprima"
       Me.eui_cmdAnteprima.ScreenTip.Caption = "Anteprima"
       Me.eui_cmdAnteprima.ScreenTip.Text = "Salva e visualizza l'anteprima del documento."
@@ -1500,7 +1500,7 @@ Partial Class frmDocumento
       Me.eui_cmdEmetti.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.eui_cmdEmetti.Id = "61543a85-ab7b-43e0-8dda-63529664b486"
       Me.eui_cmdEmetti.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-      Me.eui_cmdEmetti.Location = New System.Drawing.Point(687, 413)
+      Me.eui_cmdEmetti.Location = New System.Drawing.Point(687, 389)
       Me.eui_cmdEmetti.Name = "eui_cmdEmetti"
       Me.eui_cmdEmetti.ScreenTip.Caption = "Emetti"
       Me.eui_cmdEmetti.ScreenTip.Text = "Salva ed emette il documento eseguendo le operazioni contabili."
@@ -1545,7 +1545,7 @@ Partial Class frmDocumento
       '
       Me.eui_txtSconto.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
       Me.eui_txtSconto.Id = "bff966b8-cb34-4234-96d6-3d92f169b3d2"
-      Me.eui_txtSconto.Location = New System.Drawing.Point(81, 582)
+      Me.eui_txtSconto.Location = New System.Drawing.Point(81, 558)
       Me.eui_txtSconto.Name = "eui_txtSconto"
       Me.eui_txtSconto.Size = New System.Drawing.Size(64, 21)
       Me.eui_txtSconto.TabIndex = 1
@@ -1557,7 +1557,7 @@ Partial Class frmDocumento
       '
       Me.eui_txtServizio.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
       Me.eui_txtServizio.Id = "95b58821-86a3-401d-8984-ecca4d27aaaa"
-      Me.eui_txtServizio.Location = New System.Drawing.Point(9, 582)
+      Me.eui_txtServizio.Location = New System.Drawing.Point(9, 558)
       Me.eui_txtServizio.Name = "eui_txtServizio"
       Me.eui_txtServizio.Size = New System.Drawing.Size(64, 21)
       Me.eui_txtServizio.TabIndex = 0
@@ -1568,7 +1568,7 @@ Partial Class frmDocumento
       'Label14
       '
       Me.Label14.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-      Me.Label14.Location = New System.Drawing.Point(81, 566)
+      Me.Label14.Location = New System.Drawing.Point(81, 542)
       Me.Label14.Name = "Label14"
       Me.Label14.Size = New System.Drawing.Size(56, 16)
       Me.Label14.TabIndex = 35
@@ -1578,7 +1578,7 @@ Partial Class frmDocumento
       'Label15
       '
       Me.Label15.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-      Me.Label15.Location = New System.Drawing.Point(9, 566)
+      Me.Label15.Location = New System.Drawing.Point(9, 542)
       Me.Label15.Name = "Label15"
       Me.Label15.Size = New System.Drawing.Size(53, 13)
       Me.Label15.TabIndex = 34
@@ -1589,7 +1589,7 @@ Partial Class frmDocumento
       '
       Me.eui_txtImposta.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.eui_txtImposta.Id = "47893f1f-16cc-4c5c-9f18-80cc5dfafc75"
-      Me.eui_txtImposta.Location = New System.Drawing.Point(410, 581)
+      Me.eui_txtImposta.Location = New System.Drawing.Point(410, 557)
       Me.eui_txtImposta.Name = "eui_txtImposta"
       Me.eui_txtImposta.Size = New System.Drawing.Size(124, 21)
       Me.eui_txtImposta.TabIndex = 3
@@ -1600,7 +1600,7 @@ Partial Class frmDocumento
       '
       Me.eui_txtImponibile.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.eui_txtImponibile.Id = "db7f65dd-91d0-44b9-81e5-988cf080c183"
-      Me.eui_txtImponibile.Location = New System.Drawing.Point(277, 581)
+      Me.eui_txtImponibile.Location = New System.Drawing.Point(277, 557)
       Me.eui_txtImponibile.Name = "eui_txtImponibile"
       Me.eui_txtImponibile.Size = New System.Drawing.Size(124, 21)
       Me.eui_txtImponibile.TabIndex = 2
@@ -1610,7 +1610,7 @@ Partial Class frmDocumento
       'Label16
       '
       Me.Label16.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-      Me.Label16.Location = New System.Drawing.Point(410, 565)
+      Me.Label16.Location = New System.Drawing.Point(410, 541)
       Me.Label16.Name = "Label16"
       Me.Label16.Size = New System.Drawing.Size(56, 16)
       Me.Label16.TabIndex = 39
@@ -1619,7 +1619,7 @@ Partial Class frmDocumento
       'Label17
       '
       Me.Label17.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-      Me.Label17.Location = New System.Drawing.Point(277, 565)
+      Me.Label17.Location = New System.Drawing.Point(277, 541)
       Me.Label17.Name = "Label17"
       Me.Label17.Size = New System.Drawing.Size(56, 16)
       Me.Label17.TabIndex = 38
@@ -1630,7 +1630,7 @@ Partial Class frmDocumento
       Me.eui_txtTotaleDocumento.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.eui_txtTotaleDocumento.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.eui_txtTotaleDocumento.Id = "95402abc-858c-4074-bcbe-42aba8a8657b"
-      Me.eui_txtTotaleDocumento.Location = New System.Drawing.Point(545, 581)
+      Me.eui_txtTotaleDocumento.Location = New System.Drawing.Point(545, 557)
       Me.eui_txtTotaleDocumento.Name = "eui_txtTotaleDocumento"
       Me.eui_txtTotaleDocumento.Size = New System.Drawing.Size(124, 21)
       Me.eui_txtTotaleDocumento.TabIndex = 4
@@ -1640,7 +1640,7 @@ Partial Class frmDocumento
       'Label18
       '
       Me.Label18.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-      Me.Label18.Location = New System.Drawing.Point(545, 565)
+      Me.Label18.Location = New System.Drawing.Point(545, 541)
       Me.Label18.Name = "Label18"
       Me.Label18.Size = New System.Drawing.Size(56, 16)
       Me.Label18.TabIndex = 42
@@ -1651,7 +1651,7 @@ Partial Class frmDocumento
       Me.eui_cmdStampa.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.eui_cmdStampa.Id = "3f5dd41d-365c-44ff-9339-5f43d19c42a9"
       Me.eui_cmdStampa.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-      Me.eui_cmdStampa.Location = New System.Drawing.Point(687, 269)
+      Me.eui_cmdStampa.Location = New System.Drawing.Point(687, 245)
       Me.eui_cmdStampa.Name = "eui_cmdStampa"
       Me.eui_cmdStampa.ScreenTip.Caption = "Stampa"
       Me.eui_cmdStampa.ScreenTip.Text = "Salva e stampa il documento."
@@ -1666,7 +1666,7 @@ Partial Class frmDocumento
       Me.eui_cmdEmettiStampa.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.eui_cmdEmettiStampa.Id = "39cac427-b8a2-4ffc-8fc8-a532a1f414e9"
       Me.eui_cmdEmettiStampa.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-      Me.eui_cmdEmettiStampa.Location = New System.Drawing.Point(687, 341)
+      Me.eui_cmdEmettiStampa.Location = New System.Drawing.Point(687, 317)
       Me.eui_cmdEmettiStampa.Name = "eui_cmdEmettiStampa"
       Me.eui_cmdEmettiStampa.ScreenTip.Caption = "Emetti"
       Me.eui_cmdEmettiStampa.ScreenTip.Text = "Salva, stampa ed emette il documento eseguendo le operazioni contabili."
@@ -1680,7 +1680,7 @@ Partial Class frmDocumento
       '
       Me.eui_cmdTastiera.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.eui_cmdTastiera.Id = "03b32c49-16f5-47ce-837d-3771218e7e99"
-      Me.eui_cmdTastiera.Location = New System.Drawing.Point(687, 485)
+      Me.eui_cmdTastiera.Location = New System.Drawing.Point(687, 461)
       Me.eui_cmdTastiera.Name = "eui_cmdTastiera"
       Me.eui_cmdTastiera.ScreenTip.Caption = "Tastiera virtuale"
       Me.eui_cmdTastiera.ScreenTip.Text = "Apre la tastiera virtuale."
@@ -1696,7 +1696,7 @@ Partial Class frmDocumento
       Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
       Me.BackColor = System.Drawing.SystemColors.AppWorkspace
       Me.CancelButton = Me.eui_cmdAnnulla
-      Me.ClientSize = New System.Drawing.Size(853, 697)
+      Me.ClientSize = New System.Drawing.Size(861, 684)
       Me.Controls.Add(Me.eui_cmdTastiera)
       Me.Controls.Add(Me.eui_cmdEmettiStampa)
       Me.Controls.Add(Me.eui_cmdStampa)

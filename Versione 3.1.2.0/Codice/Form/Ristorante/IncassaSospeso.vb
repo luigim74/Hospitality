@@ -693,7 +693,7 @@ Public Class IncassaSospeso
          oleAdapter2.Fill(ds, TAB_AZIENDA)
 
          ' ReportViewer - Apre la finestra di Anteprima di stampa per il documento.
-         Dim frm As New ReportsViewer(ds, nomeDoc, nomeStampante)
+         Dim frm As New ReportViewer(ds, nomeDoc, nomeStampante)
          frm.ShowDialog()
 
          ' ---------------------------------------------------------------------------------

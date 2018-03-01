@@ -48,10 +48,10 @@
 
          Select Case nomeReport
             Case PERCORSO_REP_ACCESSORI_SERVIZI_A4
-               Me.AccessoriServiziTableAdapter.Fill(Me.HospitalityDataSet.AccessoriServizi)
+               Me.AccessoriServiziTableAdapter1.Fill(Me.Dataset1.AccessoriServizi)
 
             Case Else
-               Me.AziendaTableAdapter.Fill(Me.HospitalityDataSet.Azienda)
+               Me.AziendaTableAdapter1.Fill(Me.Dataset1.Azienda)
                Me.DettagliDocTableAdapter.Fill(Me.HospitalityDataSet.DettagliDoc)
                Me.DocumentiTableAdapter.Fill(Me.HospitalityDataSet.Documenti)
 

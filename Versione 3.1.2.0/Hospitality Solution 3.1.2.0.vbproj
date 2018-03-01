@@ -166,6 +166,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\FOSS Software Inc\Elegant Ribbon\Bin\Themes\Elegant.Ui.Ribbon.Theme.Office2010Black.dll</HintPath>
     </Reference>
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="Interop.OposPOSPrinter_1_9_Lib, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
@@ -175,10 +178,22 @@
       <Name>Interop.SHDocVw</Name>
       <HintPath>..\Risorse\Classi\MSolution\bin\Interop.SHDocVw.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.AnalysisServices, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.AnalysisServices.SPClient.Interfaces, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.DataDesign.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.DataDesign.DataSetDesigner, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.TemplateWizardInterface, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VSDesigner, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\common7\ide\Microsoft.VSDesigner.DLL</HintPath>
+    </Reference>
     <Reference Include="Softgroup.NetButton, Version=2.0.3083.17509, Culture=neutral, PublicKeyToken=414472004535f54e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Softgroup.NetButton.dll</HintPath>
@@ -195,6 +210,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\System.Data.SQLite.dll</HintPath>
     </Reference>
+    <Reference Include="System.Design" />
     <Reference Include="System.Drawing">
       <Name>System.Drawing</Name>
     </Reference>
@@ -215,8 +231,6 @@
     <Import Include="CrystalDecisions.CrystalReports.Engine" />
     <Import Include="CrystalDecisions.ReportSource" />
     <Import Include="CrystalDecisions.Shared" />
-    <Import Include="Hospitality_Solution" />
-    <Import Include="Hospitality_Solution.HospitalityDataSetTableAdapters" />
     <Import Include="Microsoft.VisualBasic" />
     <Import Include="System" />
     <Import Include="System.Collections" />
@@ -403,16 +417,16 @@
     <Compile Include="Codice\Form\Hospitality\ListaPiatti.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Codice\Form\Hospitality\ReportsViewer.Designer.vb">
-      <DependentUpon>ReportsViewer.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Codice\Form\Hospitality\ReportsViewer.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Codice\Form\Hospitality\GiudizioDemo.Designer.vb">
       <DependentUpon>GiudizioDemo.vb</DependentUpon>
     </Compile>
     <Compile Include="Codice\Form\Hospitality\GiudizioDemo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Codice\Form\Hospitality\ReportViewer.Designer.vb">
+      <DependentUpon>ReportViewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Codice\Form\Hospitality\ReportViewer.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Codice\Form\Ristorante\HospitalityDataSet.vb" />
@@ -928,21 +942,21 @@
     <EmbeddedResource Include="Codice\Form\Hospitality\Documento.resx">
       <DependentUpon>Documento.vb</DependentUpon>
     </EmbeddedResource>
-    <None Include="bin\Reports\AccessoriServizi.rdlc" />
+    <EmbeddedResource Include="bin\Reports\AccessoriServizi.rdlc" />
     <EmbeddedResource Include="Codice\Form\Hospitality\ListaDocumenti.resx">
       <DependentUpon>ListaDocumenti.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Codice\Form\Hospitality\ListaPiatti.resx">
       <DependentUpon>ListaPiatti.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Codice\Form\Hospitality\ReportsViewer.resx">
-      <DependentUpon>ReportsViewer.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Codice\Form\Hospitality\GiudizioDemo.resx">
       <DependentUpon>GiudizioDemo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Codice\Form\Hospitality\Main.it-IT.resx">
       <DependentUpon>Main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Codice\Form\Hospitality\ReportViewer.resx">
+      <DependentUpon>ReportViewer.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Codice\Form\Hospitality\StatoPrenotazioni.resx">
       <DependentUpon>StatoPrenotazioni.vb</DependentUpon>

@@ -24,107 +24,67 @@ Partial Class ReportsViewer
    Private Sub InitializeComponent()
       Me.components = New System.ComponentModel.Container()
       Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-      Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-      Dim ReportDataSource3 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+      Me.asBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
       Me.DettagliDocBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-      Me.HospitalityDataSet = New Hospitality_Solution.HospitalityDataSet()
       Me.AziendaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
       Me.DocumentiBindingSource = New System.Windows.Forms.BindingSource(Me.components)
       Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
       Me.formFrameSkinner = New Elegant.Ui.FormFrameSkinner()
-      Me.DettagliDocTableAdapter = New Hospitality_Solution.HospitalityDataSetTableAdapters.DettagliDocTableAdapter()
-      Me.AziendaTableAdapter = New Hospitality_Solution.HospitalityDataSetTableAdapters.AziendaTableAdapter()
-      Me.DocumentiTableAdapter = New Hospitality_Solution.HospitalityDataSetTableAdapters.DocumentiTableAdapter()
-      Me.asBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-      Me.AccessoriServiziTableAdapter = New Hospitality_Solution.HospitalityDataSetTableAdapters.AccessoriServiziTableAdapter()
+      CType(Me.asBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
       CType(Me.DettagliDocBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-      CType(Me.HospitalityDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
       CType(Me.AziendaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
       CType(Me.DocumentiBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-      CType(Me.asBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
       Me.SuspendLayout()
+      '
+      'asBindingSource1
+      '
+      Me.asBindingSource1.AllowNew = True
+      Me.asBindingSource1.DataMember = "AccessoriServizi"
       '
       'DettagliDocBindingSource
       '
       Me.DettagliDocBindingSource.DataMember = "DettagliDoc"
-      Me.DettagliDocBindingSource.DataSource = Me.HospitalityDataSet
-      '
-      'HospitalityDataSet
-      '
-      Me.HospitalityDataSet.DataSetName = "HospitalityDataSet"
-      Me.HospitalityDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
       '
       'AziendaBindingSource
       '
       Me.AziendaBindingSource.DataMember = "Azienda"
-      Me.AziendaBindingSource.DataSource = Me.HospitalityDataSet
       '
       'DocumentiBindingSource
       '
       Me.DocumentiBindingSource.DataMember = "Documenti"
-      Me.DocumentiBindingSource.DataSource = Me.HospitalityDataSet
       '
       'ReportViewer1
       '
       Me.ReportViewer1.AutoScroll = True
       Me.ReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.None
       Me.ReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
-      ReportDataSource1.Name = "DettagliDoc"
-      ReportDataSource1.Value = Me.DettagliDocBindingSource
-      ReportDataSource2.Name = "Azienda"
-      ReportDataSource2.Value = Me.AziendaBindingSource
-      ReportDataSource3.Name = "Documenti"
-      ReportDataSource3.Value = Me.DocumentiBindingSource
+      ReportDataSource1.Name = "AccessoriServizi"
+      ReportDataSource1.Value = Me.asBindingSource1
       Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
-      Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource2)
-      Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource3)
-      Me.ReportViewer1.LocalReport.ReportEmbeddedResource = ""
+      Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "Hospitality_Solution.Fattura A4.rdlc"
       Me.ReportViewer1.Location = New System.Drawing.Point(0, 0)
       Me.ReportViewer1.Name = "ReportViewer1"
-      Me.ReportViewer1.Size = New System.Drawing.Size(916, 345)
+      Me.ReportViewer1.Size = New System.Drawing.Size(724, 251)
       Me.ReportViewer1.TabIndex = 0
       '
       'formFrameSkinner
       '
       Me.formFrameSkinner.Form = Me
       '
-      'DettagliDocTableAdapter
-      '
-      Me.DettagliDocTableAdapter.ClearBeforeFill = True
-      '
-      'AziendaTableAdapter
-      '
-      Me.AziendaTableAdapter.ClearBeforeFill = True
-      '
-      'DocumentiTableAdapter
-      '
-      Me.DocumentiTableAdapter.ClearBeforeFill = True
-      '
-      'asBindingSource1
-      '
-      Me.asBindingSource1.AllowNew = True
-      Me.asBindingSource1.DataMember = "AccessoriServizi"
-      Me.asBindingSource1.DataSource = Me.HospitalityDataSet
-      '
-      'AccessoriServiziTableAdapter
-      '
-      Me.AccessoriServiziTableAdapter.ClearBeforeFill = True
-      '
       'ReportsViewer
       '
       Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
       Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-      Me.ClientSize = New System.Drawing.Size(916, 345)
+      Me.ClientSize = New System.Drawing.Size(724, 251)
       Me.Controls.Add(Me.ReportViewer1)
       Me.Name = "ReportsViewer"
       Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
       Me.Text = "Anteprima di stampa"
       Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
+      CType(Me.asBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
       CType(Me.DettagliDocBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-      CType(Me.HospitalityDataSet, System.ComponentModel.ISupportInitialize).EndInit()
       CType(Me.AziendaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
       CType(Me.DocumentiBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-      CType(Me.asBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
       Me.ResumeLayout(False)
 
    End Sub
@@ -138,6 +98,6 @@ Partial Class ReportsViewer
    Friend WithEvents DocumentiTableAdapter As HospitalityDataSetTableAdapters.DocumentiTableAdapter
    Friend WithEvents HospitalityDataSet As HospitalityDataSet
    Friend WithEvents formFrameSkinner As Elegant.Ui.FormFrameSkinner
+   Friend WithEvents Dataset1 As Dataset1
    Friend WithEvents asBindingSource1 As BindingSource
-   Friend WithEvents AccessoriServiziTableAdapter As HospitalityDataSetTableAdapters.AccessoriServiziTableAdapter
 End Class

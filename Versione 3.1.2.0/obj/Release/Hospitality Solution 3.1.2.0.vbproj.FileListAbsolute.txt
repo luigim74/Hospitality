@@ -374,3 +374,6 @@ D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\obj\Release\af\Hosp
 D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\obj\Release\fr\Hospitality Solution 3.resources.dll
 D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\obj\Release\Hospitality Solution 3.1.2.0.vbproj.CoreCompileInputs.cache
 D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\obj\Release\Hospitality_Solution.ListaDocumenti.resources
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\obj\Release\Hospitality_Solution.ReportViewer.resources
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\obj\Release\RdlCompile.cache
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\obj\Release\RdlCompile.compiled

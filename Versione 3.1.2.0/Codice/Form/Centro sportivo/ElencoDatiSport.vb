@@ -1475,7 +1475,7 @@ Public Class frmElencoDatiSport
             oleAdapter.Fill(ds, tabella)
 
             ' ReportViewer - Apre la finestra di Anteprima di stampa per il documento.
-            Dim frm As New ReportsViewer(ds, nomeDoc, String.Empty)
+            Dim frm As New ReportViewer(ds, nomeDoc, String.Empty)
             frm.ShowDialog()
 
 

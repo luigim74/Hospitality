@@ -3201,7 +3201,7 @@ Public Class ContoPos
          Dim oleAdapter As New OleDbDataAdapter
          oleAdapter.SelectCommand = New OleDbCommand("SELECT * FROM " & TAB_DOC & " WHERE Id = " & numDoc, cn)
 
-         Dim ds As New Dataset1 'utilizzato con Crystal Reports
+         Dim ds As New HospitalityDataSet 'Dataset1 'utilizzato con Crystal Reports
          ds.Clear()
          oleAdapter.Fill(ds, TAB_DOC)
 
@@ -3216,7 +3216,7 @@ Public Class ContoPos
          oleAdapter2.Fill(ds, TAB_AZIENDA)
 
          ' ReportViewer - Apre la finestra di Anteprima di stampa per il documento.
-         Dim frm As New ReportsViewer(ds, nomeDoc, nomeStampante)
+         Dim frm As New ReportViewer(ds, nomeDoc, nomeStampante)
          frm.ShowDialog()
 
          ' ---------------------------------------------------------------------------------
