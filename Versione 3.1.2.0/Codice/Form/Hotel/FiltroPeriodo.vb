@@ -6,8 +6,8 @@ Public Class FiltroPeriodo
 
    Private CFormatta As New ClsFormatta
 
-   ' Dichiara un oggetto Transazione
-   Private tr As OleDbTransaction
+    ' Dichiara un oggetto Transazione
+    Private tr As OleDbTransaction
 
    ' Dichiara un oggetto connessione.
    Dim cn As New OleDbConnection(ConnString)
@@ -20,18 +20,18 @@ Public Class FiltroPeriodo
 
 #Region " Windows Form Designer generated code "
 
-   Public Sub New()
-      MyBase.New()
+    Public Sub New()
+        MyBase.New()
 
-      'This call is required by the Windows Form Designer.
-      InitializeComponent()
+        'This call is required by the Windows Form Designer.
+        InitializeComponent()
 
-      'Add any initialization after the InitializeComponent() call
+        'Add any initialization after the InitializeComponent() call
 
-   End Sub
+    End Sub
 
-   'Form overrides dispose to clean up the component list.
-   Protected Overloads Overrides Sub Dispose(ByVal disposing As Boolean)
+    'Form overrides dispose to clean up the component list.
+    Protected Overloads Overrides Sub Dispose(ByVal disposing As Boolean)
       If disposing Then
          If Not (components Is Nothing) Then
             components.Dispose()
@@ -183,50 +183,70 @@ Public Class FiltroPeriodo
    End Sub
 
    Private Sub eui_cmdOk_Click(sender As Object, e As EventArgs) Handles eui_cmdOk.Click
-      Try
-         g_frmMain.eui_Strumenti_Periodo_DalAl.Text = "Dal " & eui_dtpDataDal.Value.GetValueOrDefault.ToShortDateString & " " &
-                                                      "Al " & eui_dtpDataAl.Value.GetValueOrDefault.ToShortDateString
+        Try
 
-         ' Chiude la finestra.
-         Me.Close()
+            g_frmMain.eui_Strumenti_Periodo_DalAl.Text = "Dal " & eui_dtpDataDal.Value.GetValueOrDefault.ToShortDateString & " " &
+                                                         "Al " & eui_dtpDataAl.Value.GetValueOrDefault.ToShortDateString
 
-         ' Registra loperazione effettuata dall'operatore identificato.
-         'g_frmMain.RegistraOperazione(TipoOperazione.Annulla, String.Empty, MODULO_CONTABILITA_PRIMA_NOTA)
+            ' Chiude la finestra.
+            Me.Close()
 
-      Catch ex As Exception
-         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-         err.GestisciErrore(ex.StackTrace, ex.Message)
+            ' Registra loperazione effettuata dall'operatore identificato.
+            'g_frmMain.RegistraOperazione(TipoOperazione.Annulla, String.Empty, MODULO_CONTABILITA_PRIMA_NOTA)
+
+        Catch ex As Exception
+            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+            err.GestisciErrore(ex.StackTrace, ex.Message)
       End Try
 
    End Sub
 
    Private Sub eui_cmdAnnulla_Click(sender As Object, e As EventArgs) Handles eui_cmdAnnulla.Click
-      Try
-         ' Se il filtro di periodo non è impostato visualizza tutti i dati.
-         If g_frmMain.eui_Strumenti_Periodo_DalAl.Text = "Dal... Al..." Then
-            g_frmMain.eui_Strumenti_Periodo_Tutte.Pressed = True
+        Try
+            ' Prenotazioni Camere.
+            If IsNothing(g_frmPrenCamere) = False Then
+                ' Se il filtro di periodo non è impostato visualizza tutti i dati.
+                If g_frmMain.eui_Strumenti_Periodo_DalAl.Text = "Dal... Al..." Then
+                    g_frmMain.eui_Strumenti_Periodo_Tutte.Pressed = True
+                    g_frmMain.eui_Strumenti_Periodo_Mese.Pressed = False
+                    g_frmMain.eui_Strumenti_Periodo_Anno.Pressed = False
+                    g_frmMain.eui_Strumenti_Periodo_Arrivo.Pressed = False
+                    g_frmMain.eui_Strumenti_Periodo_Partenza.Pressed = False
+                    g_frmMain.eui_Strumenti_Periodo_DalAl.Pressed = False
+                    g_frmPrenCamere.AggiornaDatiTutte()
+                End If
+            End If
 
-            g_frmMain.eui_Strumenti_Periodo_Mese.Pressed = False
-            g_frmMain.eui_Strumenti_Periodo_Anno.Pressed = False
-            g_frmMain.eui_Strumenti_Periodo_Arrivo.Pressed = False
-            g_frmMain.eui_Strumenti_Periodo_Partenza.Pressed = False
-            g_frmMain.eui_Strumenti_Periodo_DalAl.Pressed = False
+            ' Elenco Documenti.
+            If IsNothing(g_frmDocumenti) = False Then
+                ' Se il filtro di periodo non è impostato visualizza tutti i dati.
+                If g_frmMain.eui_Strumenti_Periodo_DalAl.Text = "Dal... Al..." Then
+                    g_frmMain.eui_Strumenti_Periodo_Tutte.Pressed = True
+                    g_frmMain.eui_Strumenti_Periodo_Mese.Pressed = False
+                    g_frmMain.eui_Strumenti_Periodo_Anno.Pressed = False
+                    g_frmMain.eui_Strumenti_Periodo_DalAl.Pressed = False
+                    g_frmMain.eui_Strumenti_Sospesi_Filtra.Pressed = False
+                    g_frmDocumenti.filtroDati = "Tutti"
+                    g_frmDocumenti.eui_txtTestoRicerca.Text = String.Empty
+                    g_frmDocumenti.AggiornaDati()
+                End If
 
-            g_frmPrenCamere.AggiornaDatiTutte()
-         End If
+            End If
 
-         ' Serve a registrare l'operazione ANNULLA nell'evento Closed.
-         Me.Tag = "0"
+            ' Inserire qui il codice per gestire le altre finestre.
 
-         ' Chiude la finestra.
-         Me.Close()
+            ' Serve a registrare l'operazione ANNULLA nell'evento Closed.
+            Me.Tag = "0"
 
-         ' Registra loperazione effettuata dall'operatore identificato.
-         'g_frmMain.RegistraOperazione(TipoOperazione.Annulla, String.Empty, MODULO_CONTABILITA_PRIMA_NOTA)
+            ' Chiude la finestra.
+            Me.Close()
 
-      Catch ex As Exception
-         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-         err.GestisciErrore(ex.StackTrace, ex.Message)
+            ' Registra loperazione effettuata dall'operatore identificato.
+            'g_frmMain.RegistraOperazione(TipoOperazione.Annulla, String.Empty, MODULO_CONTABILITA_PRIMA_NOTA)
+
+        Catch ex As Exception
+            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+            err.GestisciErrore(ex.StackTrace, ex.Message)
       End Try
 
    End Sub

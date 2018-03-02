@@ -3264,9 +3264,9 @@ Public Class ContoPos
             .Ora = g_frmPos.lblOra.Text
             .Tipo = tipoDocumento
             .Stato = "Emesso e stampato"
-            .Causale = "Vendita"
+                .Causale = "Vendita da ristorante"
 
-            Select Case tipoCliente
+                Select Case tipoCliente
                Case Cliente.Azienda
                   ' Viene aggiunta la lettera A per identificare le Aziende.
                   ' Codice aggiunto dopo la creazione della nuova anagrafica Aziende.

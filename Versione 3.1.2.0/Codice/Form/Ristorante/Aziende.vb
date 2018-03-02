@@ -2441,9 +2441,9 @@ Public Class frmAziende
 
             .Tipo = TIPO_DOC_FF
             .Stato = "Emesso e stampato"
-            .Causale = "Vendita"
+                .Causale = "Fatturazione Buoni pasto"
 
-            .IdCliente = "A" & AAziende.Codice
+                .IdCliente = "A" & AAziende.Codice
             .Cliente = FormattaApici(txtRagSociale.Text)
             .Indirizzo = FormattaApici(txtIndirizzo1.Text)
             .Cap = FormattaApici(txtCap.Text)
@@ -2519,18 +2519,26 @@ Public Class frmAziende
 
             ' Avvia una transazione.
             tr = cn.BeginTransaction(IsolationLevel.ReadCommitted)
-            ' Crea la stringa.
-            sql = String.Format("INSERT INTO {0} (RifDoc, Descrizione, Quantit‡, ValoreUnitario, ImportoNetto) " &
-                                                "VALUES(@RifDoc, @Descrizione, @Quantit‡, @ValoreUnitario, @ImportoNetto)", TAB_DETTAGLI_DOC)
-            ' Crea il comando per la connessione corrente.
-            Dim cmdInsert As New OleDbCommand(sql, cn, tr)
-            cmdInsert.Parameters.Add("@RifDoc", LeggiUltimoRecord(TAB_DOC))
-            cmdInsert.Parameters.Add("@Descrizione", FormattaApici(lstvDatiFatt.Items(i).SubItems(1).Text))
-            cmdInsert.Parameters.Add("@Quantit‡", lstvDatiFatt.Items(i).SubItems(0).Text)
-            cmdInsert.Parameters.Add("@ValoreUnitario", valUnitario)
-            cmdInsert.Parameters.Add("@ImportoNetto", lstvDatiFatt.Items(i).SubItems(3).Text)
-            ' Esegue il comando.
-            Dim Record As Integer = cmdInsert.ExecuteNonQuery()
+                ' Crea la stringa.
+                sql = String.Format("INSERT INTO {0} (RifDoc, CodiceArticolo, Descrizione, Unit‡Misura, Quantit‡, ValoreUnitario, Sconto, ImportoNetto, AliquotaIva, Categoria) " &
+                                   "VALUES(@RifDoc, @CodiceArticolo, @Descrizione, @Unit‡Misura, @Quantit‡, @ValoreUnitario, @Sconto, @ImportoNetto, @AliquotaIva, @Categoria)", TAB_DETTAGLI_DOC)
+
+                ' Crea il comando per la connessione corrente.
+                Dim cmdInsert As New OleDbCommand(sql, cn, tr)
+
+                cmdInsert.Parameters.AddWithValue("@RifDoc", LeggiUltimoRecord(TAB_DOC))
+                cmdInsert.Parameters.AddWithValue("@CodiceArticolo", String.Empty)
+                cmdInsert.Parameters.AddWithValue("@Descrizione", FormattaApici(lstvDatiFatt.Items(i).SubItems(1).Text))
+                cmdInsert.Parameters.AddWithValue("@Unit‡Misura", String.Empty)
+                cmdInsert.Parameters.AddWithValue("@Quantit‡", lstvDatiFatt.Items(i).SubItems(0).Text)
+                cmdInsert.Parameters.AddWithValue("@ValoreUnitario", valUnitario) ' B_TODO: Modifica per Retail.
+                cmdInsert.Parameters.AddWithValue("@Sconto", VALORE_ZERO)
+                cmdInsert.Parameters.AddWithValue("@ImportoNetto", lstvDatiFatt.Items(i).SubItems(3).Text)
+                cmdInsert.Parameters.AddWithValue("@AliquotaIva", 0)
+                cmdInsert.Parameters.AddWithValue("@Categoria", String.Empty)
+
+                ' Esegue il comando.
+                Dim Record As Integer = cmdInsert.ExecuteNonQuery()
             ' Conferma transazione.
             tr.Commit()
          Next
@@ -2540,17 +2548,26 @@ Public Class frmAziende
             If Doc.Sconto <> VALORE_ZERO Then
                ' Avvia una transazione.
                tr = cn.BeginTransaction(IsolationLevel.ReadCommitted)
-               ' Crea la stringa di eliminazione.
-               sql = String.Format("INSERT INTO {0} (RifDoc, Descrizione, Quantit‡, ImportoNetto) " &
-                                             "VALUES(@RifDoc, @Descrizione, @Quantit‡, @ImportoNetto)", TAB_DETTAGLI_DOC)
-               ' Crea il comando per la connessione corrente.
-               Dim cmdInsert As New OleDbCommand(sql, cn, tr)
-               cmdInsert.Parameters.Add("@RifDoc", LeggiUltimoRecord(TAB_DOC))
-               cmdInsert.Parameters.Add("@Descrizione", "Sconto")
-               cmdInsert.Parameters.Add("@Quantit‡", VALORE_ZERO)
-               cmdInsert.Parameters.Add("@ImportoNetto", "-" & Doc.Sconto)
-               ' Esegue il comando.
-               Dim Record As Integer = cmdInsert.ExecuteNonQuery()
+                    ' Crea la stringa di eliminazione.
+                    sql = String.Format("INSERT INTO {0} (RifDoc, CodiceArticolo, Descrizione, Unit‡Misura, Quantit‡, ValoreUnitario, Sconto, ImportoNetto, AliquotaIva, Categoria) " &
+                                   "VALUES(@RifDoc, @CodiceArticolo, @Descrizione, @Unit‡Misura, @Quantit‡, @ValoreUnitario, @Sconto, @ImportoNetto, @AliquotaIva, @Categoria)", TAB_DETTAGLI_DOC)
+
+                    ' Crea il comando per la connessione corrente.
+                    Dim cmdInsert As New OleDbCommand(sql, cn, tr)
+
+                    cmdInsert.Parameters.AddWithValue("@RifDoc", LeggiUltimoRecord(TAB_DOC))
+                    cmdInsert.Parameters.AddWithValue("@CodiceArticolo", String.Empty)
+                    cmdInsert.Parameters.AddWithValue("@Descrizione", "Sconto")
+                    cmdInsert.Parameters.AddWithValue("@Unit‡Misura", String.Empty)
+                    cmdInsert.Parameters.AddWithValue("@Quantit‡", VALORE_ZERO)
+                    cmdInsert.Parameters.AddWithValue("@ValoreUnitario", VALORE_ZERO) ' B_TODO: Modifica per Retail.
+                    cmdInsert.Parameters.AddWithValue("@Sconto", VALORE_ZERO)
+                    cmdInsert.Parameters.AddWithValue("@ImportoNetto", "-" & Doc.Sconto)
+                    cmdInsert.Parameters.AddWithValue("@AliquotaIva", 0)
+                    cmdInsert.Parameters.AddWithValue("@Categoria", String.Empty)
+
+                    ' Esegue il comando.
+                    Dim Record As Integer = cmdInsert.ExecuteNonQuery()
                ' Conferma transazione.
                tr.Commit()
             End If

@@ -194,1097 +194,1097 @@ Public Class frmPrenRisorse
    Friend WithEvents txtCostoRisorsa As System.Windows.Forms.TextBox
    Public WithEvents Label14 As System.Windows.Forms.Label
    <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
-      Me.components = New System.ComponentModel.Container()
-      Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPrenRisorse))
-      Dim ListViewGroup1 As System.Windows.Forms.ListViewGroup = New System.Windows.Forms.ListViewGroup("Articoli vari", System.Windows.Forms.HorizontalAlignment.Left)
-      Dim ListViewGroup2 As System.Windows.Forms.ListViewGroup = New System.Windows.Forms.ListViewGroup("Accessori", System.Windows.Forms.HorizontalAlignment.Left)
-      Dim ListViewGroup3 As System.Windows.Forms.ListViewGroup = New System.Windows.Forms.ListViewGroup("Servizi", System.Windows.Forms.HorizontalAlignment.Left)
-      Me.ToolBar1 = New System.Windows.Forms.ToolBar()
-      Me.Salva = New System.Windows.Forms.ToolBarButton()
-      Me.Annulla = New System.Windows.Forms.ToolBarButton()
-      Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
-      Me.Panel1 = New System.Windows.Forms.Panel()
-      Me.lblIntestazione = New System.Windows.Forms.Label()
-      Me.TabControl1 = New System.Windows.Forms.TabControl()
-      Me.TabPage1 = New System.Windows.Forms.TabPage()
-      Me.txtIva = New System.Windows.Forms.TextBox()
-      Me.cmbCaratteristiche = New System.Windows.Forms.ComboBox()
-      Me.Label12 = New System.Windows.Forms.Label()
-      Me.txtOre = New System.Windows.Forms.TextBox()
-      Me.Label17 = New System.Windows.Forms.Label()
-      Me.txtCostoRisorsa = New System.Windows.Forms.TextBox()
-      Me.Label14 = New System.Windows.Forms.Label()
-      Me.Label15 = New System.Windows.Forms.Label()
-      Me.dtpScadenza = New System.Windows.Forms.DateTimePicker()
-      Me.cmbOraFine = New System.Windows.Forms.ComboBox()
-      Me.cmbOraInizio = New System.Windows.Forms.ComboBox()
-      Me.cmbRisorsa = New System.Windows.Forms.ComboBox()
-      Me.Label3 = New System.Windows.Forms.Label()
-      Me.cmbCliente = New System.Windows.Forms.ComboBox()
-      Me.Label2 = New System.Windows.Forms.Label()
-      Me.Label1 = New System.Windows.Forms.Label()
-      Me.dtpData = New System.Windows.Forms.DateTimePicker()
-      Me.cmdColore = New System.Windows.Forms.Button()
-      Me.Label8 = New System.Windows.Forms.Label()
-      Me.Label6 = New System.Windows.Forms.Label()
-      Me.cmbStatoPren = New System.Windows.Forms.ComboBox()
-      Me.txtNumero = New System.Windows.Forms.TextBox()
-      Me.Label34 = New System.Windows.Forms.Label()
-      Me.Label5 = New System.Windows.Forms.Label()
-      Me.Label20 = New System.Windows.Forms.Label()
-      Me.TabPage2 = New System.Windows.Forms.TabPage()
-      Me.cmbScontoCliente = New System.Windows.Forms.ComboBox()
-      Me.cmbIdCliente = New System.Windows.Forms.ComboBox()
-      Me.cmbIdGiocatore4 = New System.Windows.Forms.ComboBox()
-      Me.cmbIdGiocatore3 = New System.Windows.Forms.ComboBox()
-      Me.cmbIdGiocatore2 = New System.Windows.Forms.ComboBox()
-      Me.Label10 = New System.Windows.Forms.Label()
-      Me.cmbGiocatore4 = New System.Windows.Forms.ComboBox()
-      Me.Label9 = New System.Windows.Forms.Label()
-      Me.cmbGiocatore3 = New System.Windows.Forms.ComboBox()
-      Me.Label7 = New System.Windows.Forms.Label()
-      Me.cmbGiocatore2 = New System.Windows.Forms.ComboBox()
-      Me.Label4 = New System.Windows.Forms.Label()
-      Me.TabPage3 = New System.Windows.Forms.TabPage()
-      Me.cmbPagamento = New System.Windows.Forms.ComboBox()
-      Me.Label13 = New System.Windows.Forms.Label()
-      Me.txtSconto = New System.Windows.Forms.TextBox()
-      Me.Label18 = New System.Windows.Forms.Label()
-      Me.cmbApplicaSconto = New System.Windows.Forms.ComboBox()
-      Me.Label19 = New System.Windows.Forms.Label()
-      Me.eui_Quantit‡Meno = New Elegant.Ui.Button()
-      Me.eui_cmdQuantit‡Pi˘ = New Elegant.Ui.Button()
-      Me.txtTotale = New System.Windows.Forms.TextBox()
-      Me.Label16 = New System.Windows.Forms.Label()
-      Me.cmbPagato = New System.Windows.Forms.ComboBox()
-      Me.Label11 = New System.Windows.Forms.Label()
-      Me.DropDown2 = New Elegant.Ui.DropDown()
-      Me.PopupMenu2 = New Elegant.Ui.PopupMenu(Me.components)
-      Me.eui_cmdStampaDocPF = New Elegant.Ui.Button()
-      Me.Separator2 = New Elegant.Ui.Separator()
-      Me.eui_cmdStampaDocRF = New Elegant.Ui.Button()
-      Me.eui_cmdStampaDocFF = New Elegant.Ui.Button()
-      Me.Separator3 = New Elegant.Ui.Separator()
-      Me.eui_cmdStampaDocSF = New Elegant.Ui.Button()
-      Me.Separator4 = New Elegant.Ui.Separator()
-      Me.eui_cmdStampaPos = New Elegant.Ui.Button()
-      Me.DropDown1 = New Elegant.Ui.DropDown()
-      Me.PopupMenu1 = New Elegant.Ui.PopupMenu(Me.components)
-      Me.eui_cmdAccessori = New Elegant.Ui.Button()
-      Me.eui_cmdServizi = New Elegant.Ui.Button()
-      Me.Separator1 = New Elegant.Ui.Separator()
-      Me.eui_cmdApriPos = New Elegant.Ui.Button()
-      Me.eui_cmdEliminaRiga = New Elegant.Ui.Button()
-      Me.lvwConto = New System.Windows.Forms.ListView()
-      Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-      Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-      Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-      Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-      Me.TabPage6 = New System.Windows.Forms.TabPage()
-      Me.txtNote = New System.Windows.Forms.TextBox()
-      Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-      Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-      Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-      Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
-      Me.formFrameSkinner = New Elegant.Ui.FormFrameSkinner()
-      Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
-      Me.Panel1.SuspendLayout()
-      Me.TabControl1.SuspendLayout()
-      Me.TabPage1.SuspendLayout()
-      Me.TabPage2.SuspendLayout()
-      Me.TabPage3.SuspendLayout()
-      CType(Me.PopupMenu2, System.ComponentModel.ISupportInitialize).BeginInit()
-      CType(Me.PopupMenu1, System.ComponentModel.ISupportInitialize).BeginInit()
-      Me.TabPage6.SuspendLayout()
-      CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
-      Me.SuspendLayout()
-      '
-      'ToolBar1
-      '
-      Me.ToolBar1.Appearance = System.Windows.Forms.ToolBarAppearance.Flat
-      Me.ToolBar1.Buttons.AddRange(New System.Windows.Forms.ToolBarButton() {Me.Salva, Me.Annulla})
-      Me.ToolBar1.ButtonSize = New System.Drawing.Size(22, 22)
-      Me.ToolBar1.Divider = False
-      Me.ToolBar1.DropDownArrows = True
-      Me.ToolBar1.ImageList = Me.ImageList1
-      Me.ToolBar1.Location = New System.Drawing.Point(0, 0)
-      Me.ToolBar1.Name = "ToolBar1"
-      Me.ToolBar1.ShowToolTips = True
-      Me.ToolBar1.Size = New System.Drawing.Size(629, 26)
-      Me.ToolBar1.TabIndex = 0
-      Me.ToolBar1.TextAlign = System.Windows.Forms.ToolBarTextAlign.Right
-      '
-      'Salva
-      '
-      Me.Salva.ImageIndex = 0
-      Me.Salva.Name = "Salva"
-      Me.Salva.Tag = "Salva"
-      Me.Salva.Text = "Salva"
-      Me.Salva.ToolTipText = "Salva"
-      '
-      'Annulla
-      '
-      Me.Annulla.ImageIndex = 1
-      Me.Annulla.Name = "Annulla"
-      Me.Annulla.Tag = "Annulla"
-      Me.Annulla.Text = "Annulla"
-      Me.Annulla.ToolTipText = "Annulla"
-      '
-      'ImageList1
-      '
-      Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
-      Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
-      Me.ImageList1.Images.SetKeyName(0, "saveHS.png")
-      Me.ImageList1.Images.SetKeyName(1, "Edit_UndoHS.png")
-      '
-      'Panel1
-      '
-      Me.Panel1.BackColor = System.Drawing.Color.Gray
-      Me.Panel1.Controls.Add(Me.lblIntestazione)
-      Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-      Me.Panel1.Location = New System.Drawing.Point(0, 26)
-      Me.Panel1.Name = "Panel1"
-      Me.Panel1.Size = New System.Drawing.Size(629, 20)
-      Me.Panel1.TabIndex = 0
-      '
-      'lblIntestazione
-      '
-      Me.lblIntestazione.AutoSize = True
-      Me.lblIntestazione.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.lblIntestazione.ForeColor = System.Drawing.SystemColors.Window
-      Me.lblIntestazione.Location = New System.Drawing.Point(4, 2)
-      Me.lblIntestazione.Name = "lblIntestazione"
-      Me.lblIntestazione.Size = New System.Drawing.Size(16, 16)
-      Me.lblIntestazione.TabIndex = 0
-      Me.lblIntestazione.Text = "#"
-      '
-      'TabControl1
-      '
-      Me.TabControl1.Controls.Add(Me.TabPage1)
-      Me.TabControl1.Controls.Add(Me.TabPage2)
-      Me.TabControl1.Controls.Add(Me.TabPage3)
-      Me.TabControl1.Controls.Add(Me.TabPage6)
-      Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
-      Me.TabControl1.Location = New System.Drawing.Point(0, 46)
-      Me.TabControl1.Multiline = True
-      Me.TabControl1.Name = "TabControl1"
-      Me.TabControl1.SelectedIndex = 0
-      Me.TabControl1.Size = New System.Drawing.Size(629, 420)
-      Me.TabControl1.TabIndex = 0
-      '
-      'TabPage1
-      '
-      Me.TabPage1.BackColor = System.Drawing.SystemColors.AppWorkspace
-      Me.TabPage1.Controls.Add(Me.txtIva)
-      Me.TabPage1.Controls.Add(Me.cmbCaratteristiche)
-      Me.TabPage1.Controls.Add(Me.Label12)
-      Me.TabPage1.Controls.Add(Me.txtOre)
-      Me.TabPage1.Controls.Add(Me.Label17)
-      Me.TabPage1.Controls.Add(Me.txtCostoRisorsa)
-      Me.TabPage1.Controls.Add(Me.Label14)
-      Me.TabPage1.Controls.Add(Me.Label15)
-      Me.TabPage1.Controls.Add(Me.dtpScadenza)
-      Me.TabPage1.Controls.Add(Me.cmbOraFine)
-      Me.TabPage1.Controls.Add(Me.cmbOraInizio)
-      Me.TabPage1.Controls.Add(Me.cmbRisorsa)
-      Me.TabPage1.Controls.Add(Me.Label3)
-      Me.TabPage1.Controls.Add(Me.cmbCliente)
-      Me.TabPage1.Controls.Add(Me.Label2)
-      Me.TabPage1.Controls.Add(Me.Label1)
-      Me.TabPage1.Controls.Add(Me.dtpData)
-      Me.TabPage1.Controls.Add(Me.cmdColore)
-      Me.TabPage1.Controls.Add(Me.Label8)
-      Me.TabPage1.Controls.Add(Me.Label6)
-      Me.TabPage1.Controls.Add(Me.cmbStatoPren)
-      Me.TabPage1.Controls.Add(Me.txtNumero)
-      Me.TabPage1.Controls.Add(Me.Label34)
-      Me.TabPage1.Controls.Add(Me.Label5)
-      Me.TabPage1.Controls.Add(Me.Label20)
-      Me.TabPage1.ForeColor = System.Drawing.Color.Black
-      Me.TabPage1.Location = New System.Drawing.Point(4, 22)
-      Me.TabPage1.Name = "TabPage1"
-      Me.TabPage1.Size = New System.Drawing.Size(621, 394)
-      Me.TabPage1.TabIndex = 0
-      Me.TabPage1.Text = "Dati principali"
-      '
-      'txtIva
-      '
-      Me.txtIva.AcceptsReturn = True
-      Me.txtIva.BackColor = System.Drawing.SystemColors.Window
-      Me.txtIva.Cursor = System.Windows.Forms.Cursors.IBeam
-      Me.txtIva.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.txtIva.ForeColor = System.Drawing.SystemColors.ControlText
-      Me.txtIva.Location = New System.Drawing.Point(440, 264)
-      Me.txtIva.MaxLength = 0
-      Me.txtIva.Name = "txtIva"
-      Me.txtIva.ReadOnly = True
-      Me.txtIva.RightToLeft = System.Windows.Forms.RightToLeft.No
-      Me.txtIva.Size = New System.Drawing.Size(64, 20)
-      Me.txtIva.TabIndex = 242
-      Me.txtIva.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-      Me.txtIva.Visible = False
-      '
-      'cmbCaratteristiche
-      '
-      Me.cmbCaratteristiche.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-      Me.cmbCaratteristiche.Location = New System.Drawing.Point(136, 160)
-      Me.cmbCaratteristiche.Name = "cmbCaratteristiche"
-      Me.cmbCaratteristiche.Size = New System.Drawing.Size(368, 21)
-      Me.cmbCaratteristiche.TabIndex = 5
-      '
-      'Label12
-      '
-      Me.Label12.AutoSize = True
-      Me.Label12.BackColor = System.Drawing.Color.Transparent
-      Me.Label12.Cursor = System.Windows.Forms.Cursors.Default
-      Me.Label12.ForeColor = System.Drawing.Color.Black
-      Me.Label12.Location = New System.Drawing.Point(24, 160)
-      Me.Label12.Name = "Label12"
-      Me.Label12.RightToLeft = System.Windows.Forms.RightToLeft.No
-      Me.Label12.Size = New System.Drawing.Size(98, 13)
-      Me.Label12.TabIndex = 241
-      Me.Label12.Text = "Tipologia di utilizzo:"
-      '
-      'txtOre
-      '
-      Me.txtOre.AcceptsReturn = True
-      Me.txtOre.BackColor = System.Drawing.SystemColors.Window
-      Me.txtOre.Cursor = System.Windows.Forms.Cursors.IBeam
-      Me.txtOre.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.txtOre.ForeColor = System.Drawing.SystemColors.ControlText
-      Me.txtOre.Location = New System.Drawing.Point(440, 200)
-      Me.txtOre.MaxLength = 0
-      Me.txtOre.Name = "txtOre"
-      Me.txtOre.ReadOnly = True
-      Me.txtOre.RightToLeft = System.Windows.Forms.RightToLeft.No
-      Me.txtOre.Size = New System.Drawing.Size(64, 20)
-      Me.txtOre.TabIndex = 8
-      Me.txtOre.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-      '
-      'Label17
-      '
-      Me.Label17.AutoSize = True
-      Me.Label17.BackColor = System.Drawing.Color.Transparent
-      Me.Label17.Cursor = System.Windows.Forms.Cursors.Default
-      Me.Label17.ForeColor = System.Drawing.Color.Black
-      Me.Label17.Location = New System.Drawing.Point(352, 200)
-      Me.Label17.Name = "Label17"
-      Me.Label17.RightToLeft = System.Windows.Forms.RightToLeft.No
-      Me.Label17.Size = New System.Drawing.Size(75, 13)
-      Me.Label17.TabIndex = 235
-      Me.Label17.Text = "Ore prenotate:"
-      '
-      'txtCostoRisorsa
-      '
-      Me.txtCostoRisorsa.ForeColor = System.Drawing.Color.Red
-      Me.txtCostoRisorsa.Location = New System.Drawing.Point(440, 128)
-      Me.txtCostoRisorsa.MaxLength = 0
-      Me.txtCostoRisorsa.Name = "txtCostoRisorsa"
-      Me.txtCostoRisorsa.Size = New System.Drawing.Size(64, 20)
-      Me.txtCostoRisorsa.TabIndex = 4
-      Me.txtCostoRisorsa.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-      '
-      'Label14
-      '
-      Me.Label14.AutoSize = True
-      Me.Label14.BackColor = System.Drawing.Color.Transparent
-      Me.Label14.Cursor = System.Windows.Forms.Cursors.Default
-      Me.Label14.ForeColor = System.Drawing.Color.Black
-      Me.Label14.Location = New System.Drawing.Point(352, 128)
-      Me.Label14.Name = "Label14"
-      Me.Label14.RightToLeft = System.Windows.Forms.RightToLeft.No
-      Me.Label14.Size = New System.Drawing.Size(70, 13)
-      Me.Label14.TabIndex = 232
-      Me.Label14.Text = "Costo risorsa:"
-      '
-      'Label15
-      '
-      Me.Label15.AutoSize = True
-      Me.Label15.BackColor = System.Drawing.Color.Transparent
-      Me.Label15.Cursor = System.Windows.Forms.Cursors.Default
-      Me.Label15.ForeColor = System.Drawing.Color.Black
-      Me.Label15.Location = New System.Drawing.Point(24, 264)
-      Me.Label15.Name = "Label15"
-      Me.Label15.RightToLeft = System.Windows.Forms.RightToLeft.No
-      Me.Label15.Size = New System.Drawing.Size(58, 13)
-      Me.Label15.TabIndex = 212
-      Me.Label15.Text = "Scadenza:"
-      '
-      'dtpScadenza
-      '
-      Me.dtpScadenza.Location = New System.Drawing.Point(136, 264)
-      Me.dtpScadenza.Name = "dtpScadenza"
-      Me.dtpScadenza.Size = New System.Drawing.Size(200, 20)
-      Me.dtpScadenza.TabIndex = 10
-      '
-      'cmbOraFine
-      '
-      Me.cmbOraFine.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-      Me.cmbOraFine.Location = New System.Drawing.Point(264, 200)
-      Me.cmbOraFine.Name = "cmbOraFine"
-      Me.cmbOraFine.Size = New System.Drawing.Size(72, 21)
-      Me.cmbOraFine.TabIndex = 7
-      '
-      'cmbOraInizio
-      '
-      Me.cmbOraInizio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-      Me.cmbOraInizio.Location = New System.Drawing.Point(136, 200)
-      Me.cmbOraInizio.Name = "cmbOraInizio"
-      Me.cmbOraInizio.Size = New System.Drawing.Size(72, 21)
-      Me.cmbOraInizio.TabIndex = 6
-      '
-      'cmbRisorsa
-      '
-      Me.cmbRisorsa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-      Me.cmbRisorsa.Location = New System.Drawing.Point(136, 128)
-      Me.cmbRisorsa.Name = "cmbRisorsa"
-      Me.cmbRisorsa.Size = New System.Drawing.Size(200, 21)
-      Me.cmbRisorsa.TabIndex = 3
-      '
-      'Label3
-      '
-      Me.Label3.AutoSize = True
-      Me.Label3.BackColor = System.Drawing.Color.Transparent
-      Me.Label3.Cursor = System.Windows.Forms.Cursors.Default
-      Me.Label3.ForeColor = System.Drawing.Color.Black
-      Me.Label3.Location = New System.Drawing.Point(24, 128)
-      Me.Label3.Name = "Label3"
-      Me.Label3.RightToLeft = System.Windows.Forms.RightToLeft.No
-      Me.Label3.Size = New System.Drawing.Size(45, 13)
-      Me.Label3.TabIndex = 199
-      Me.Label3.Text = "Risorsa:"
-      '
-      'cmbCliente
-      '
-      Me.cmbCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.cmbCliente.Location = New System.Drawing.Point(136, 88)
-      Me.cmbCliente.Name = "cmbCliente"
-      Me.cmbCliente.Size = New System.Drawing.Size(368, 21)
-      Me.cmbCliente.TabIndex = 2
-      '
-      'Label2
-      '
-      Me.Label2.AutoSize = True
-      Me.Label2.BackColor = System.Drawing.Color.Transparent
-      Me.Label2.Cursor = System.Windows.Forms.Cursors.Default
-      Me.Label2.ForeColor = System.Drawing.Color.Black
-      Me.Label2.Location = New System.Drawing.Point(216, 200)
-      Me.Label2.Name = "Label2"
-      Me.Label2.RightToLeft = System.Windows.Forms.RightToLeft.No
-      Me.Label2.Size = New System.Drawing.Size(45, 13)
-      Me.Label2.TabIndex = 197
-      Me.Label2.Text = "Alle ore:"
-      '
-      'Label1
-      '
-      Me.Label1.AutoSize = True
-      Me.Label1.BackColor = System.Drawing.Color.Transparent
-      Me.Label1.Cursor = System.Windows.Forms.Cursors.Default
-      Me.Label1.ForeColor = System.Drawing.Color.Black
-      Me.Label1.Location = New System.Drawing.Point(24, 56)
-      Me.Label1.Name = "Label1"
-      Me.Label1.RightToLeft = System.Windows.Forms.RightToLeft.No
-      Me.Label1.Size = New System.Drawing.Size(33, 13)
-      Me.Label1.TabIndex = 195
-      Me.Label1.Text = "Data:"
-      '
-      'dtpData
-      '
-      Me.dtpData.Location = New System.Drawing.Point(136, 56)
-      Me.dtpData.Name = "dtpData"
-      Me.dtpData.Size = New System.Drawing.Size(200, 20)
-      Me.dtpData.TabIndex = 1
-      '
-      'cmdColore
-      '
-      Me.cmdColore.BackColor = System.Drawing.Color.White
-      Me.cmdColore.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-      Me.cmdColore.Location = New System.Drawing.Point(416, 56)
-      Me.cmdColore.Name = "cmdColore"
-      Me.cmdColore.Size = New System.Drawing.Size(88, 19)
-      Me.cmdColore.TabIndex = 11
-      Me.cmdColore.TabStop = False
-      Me.cmdColore.UseVisualStyleBackColor = False
-      '
-      'Label8
-      '
-      Me.Label8.AutoSize = True
-      Me.Label8.BackColor = System.Drawing.Color.Transparent
-      Me.Label8.Cursor = System.Windows.Forms.Cursors.Default
-      Me.Label8.ForeColor = System.Drawing.Color.Black
-      Me.Label8.Location = New System.Drawing.Point(352, 56)
-      Me.Label8.Name = "Label8"
-      Me.Label8.RightToLeft = System.Windows.Forms.RightToLeft.No
-      Me.Label8.Size = New System.Drawing.Size(40, 13)
-      Me.Label8.TabIndex = 193
-      Me.Label8.Text = "Colore:"
-      '
-      'Label6
-      '
-      Me.Label6.AutoSize = True
-      Me.Label6.BackColor = System.Drawing.Color.Transparent
-      Me.Label6.Cursor = System.Windows.Forms.Cursors.Default
-      Me.Label6.ForeColor = System.Drawing.Color.Black
-      Me.Label6.Location = New System.Drawing.Point(24, 200)
-      Me.Label6.Name = "Label6"
-      Me.Label6.RightToLeft = System.Windows.Forms.RightToLeft.No
-      Me.Label6.Size = New System.Drawing.Size(52, 13)
-      Me.Label6.TabIndex = 191
-      Me.Label6.Text = "Dalle ore:"
-      '
-      'cmbStatoPren
-      '
-      Me.cmbStatoPren.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-      Me.cmbStatoPren.Location = New System.Drawing.Point(136, 232)
-      Me.cmbStatoPren.Name = "cmbStatoPren"
-      Me.cmbStatoPren.Size = New System.Drawing.Size(200, 21)
-      Me.cmbStatoPren.TabIndex = 9
-      '
-      'txtNumero
-      '
-      Me.txtNumero.AcceptsReturn = True
-      Me.txtNumero.BackColor = System.Drawing.SystemColors.Window
-      Me.txtNumero.Cursor = System.Windows.Forms.Cursors.IBeam
-      Me.txtNumero.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.txtNumero.ForeColor = System.Drawing.Color.Red
-      Me.txtNumero.Location = New System.Drawing.Point(136, 24)
-      Me.txtNumero.MaxLength = 0
-      Me.txtNumero.Name = "txtNumero"
-      Me.txtNumero.ReadOnly = True
-      Me.txtNumero.RightToLeft = System.Windows.Forms.RightToLeft.No
-      Me.txtNumero.Size = New System.Drawing.Size(120, 20)
-      Me.txtNumero.TabIndex = 0
-      Me.txtNumero.TabStop = False
-      Me.txtNumero.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-      '
-      'Label34
-      '
-      Me.Label34.AutoSize = True
-      Me.Label34.BackColor = System.Drawing.Color.Transparent
-      Me.Label34.Cursor = System.Windows.Forms.Cursors.Default
-      Me.Label34.ForeColor = System.Drawing.Color.Black
-      Me.Label34.Location = New System.Drawing.Point(24, 232)
-      Me.Label34.Name = "Label34"
-      Me.Label34.RightToLeft = System.Windows.Forms.RightToLeft.No
-      Me.Label34.Size = New System.Drawing.Size(99, 13)
-      Me.Label34.TabIndex = 171
-      Me.Label34.Text = "Stato prenotazione:"
-      '
-      'Label5
-      '
-      Me.Label5.AutoSize = True
-      Me.Label5.BackColor = System.Drawing.Color.Transparent
-      Me.Label5.Cursor = System.Windows.Forms.Cursors.Default
-      Me.Label5.ForeColor = System.Drawing.Color.Black
-      Me.Label5.Location = New System.Drawing.Point(24, 24)
-      Me.Label5.Name = "Label5"
-      Me.Label5.RightToLeft = System.Windows.Forms.RightToLeft.No
-      Me.Label5.Size = New System.Drawing.Size(43, 13)
-      Me.Label5.TabIndex = 164
-      Me.Label5.Text = "Codice:"
-      '
-      'Label20
-      '
-      Me.Label20.AutoSize = True
-      Me.Label20.BackColor = System.Drawing.Color.Transparent
-      Me.Label20.Cursor = System.Windows.Forms.Cursors.Default
-      Me.Label20.ForeColor = System.Drawing.Color.Black
-      Me.Label20.Location = New System.Drawing.Point(24, 88)
-      Me.Label20.Name = "Label20"
-      Me.Label20.RightToLeft = System.Windows.Forms.RightToLeft.No
-      Me.Label20.Size = New System.Drawing.Size(62, 13)
-      Me.Label20.TabIndex = 153
-      Me.Label20.Text = "Intestatario:"
-      '
-      'TabPage2
-      '
-      Me.TabPage2.BackColor = System.Drawing.SystemColors.AppWorkspace
-      Me.TabPage2.Controls.Add(Me.cmbScontoCliente)
-      Me.TabPage2.Controls.Add(Me.cmbIdCliente)
-      Me.TabPage2.Controls.Add(Me.cmbIdGiocatore4)
-      Me.TabPage2.Controls.Add(Me.cmbIdGiocatore3)
-      Me.TabPage2.Controls.Add(Me.cmbIdGiocatore2)
-      Me.TabPage2.Controls.Add(Me.Label10)
-      Me.TabPage2.Controls.Add(Me.cmbGiocatore4)
-      Me.TabPage2.Controls.Add(Me.Label9)
-      Me.TabPage2.Controls.Add(Me.cmbGiocatore3)
-      Me.TabPage2.Controls.Add(Me.Label7)
-      Me.TabPage2.Controls.Add(Me.cmbGiocatore2)
-      Me.TabPage2.Controls.Add(Me.Label4)
-      Me.TabPage2.Location = New System.Drawing.Point(4, 22)
-      Me.TabPage2.Name = "TabPage2"
-      Me.TabPage2.Size = New System.Drawing.Size(611, 384)
-      Me.TabPage2.TabIndex = 6
-      Me.TabPage2.Text = "Altri componenti"
-      '
-      'cmbScontoCliente
-      '
-      Me.cmbScontoCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-      Me.cmbScontoCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.cmbScontoCliente.Location = New System.Drawing.Point(280, 160)
-      Me.cmbScontoCliente.Name = "cmbScontoCliente"
-      Me.cmbScontoCliente.Size = New System.Drawing.Size(104, 21)
-      Me.cmbScontoCliente.TabIndex = 177
-      Me.cmbScontoCliente.Visible = False
-      '
-      'cmbIdCliente
-      '
-      Me.cmbIdCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-      Me.cmbIdCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.cmbIdCliente.Location = New System.Drawing.Point(392, 160)
-      Me.cmbIdCliente.Name = "cmbIdCliente"
-      Me.cmbIdCliente.Size = New System.Drawing.Size(104, 21)
-      Me.cmbIdCliente.TabIndex = 176
-      Me.cmbIdCliente.Visible = False
-      '
-      'cmbIdGiocatore4
-      '
-      Me.cmbIdGiocatore4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-      Me.cmbIdGiocatore4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.cmbIdGiocatore4.Location = New System.Drawing.Point(392, 256)
-      Me.cmbIdGiocatore4.Name = "cmbIdGiocatore4"
-      Me.cmbIdGiocatore4.Size = New System.Drawing.Size(104, 21)
-      Me.cmbIdGiocatore4.TabIndex = 175
-      Me.cmbIdGiocatore4.Visible = False
-      '
-      'cmbIdGiocatore3
-      '
-      Me.cmbIdGiocatore3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-      Me.cmbIdGiocatore3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.cmbIdGiocatore3.Location = New System.Drawing.Point(392, 224)
-      Me.cmbIdGiocatore3.Name = "cmbIdGiocatore3"
-      Me.cmbIdGiocatore3.Size = New System.Drawing.Size(104, 21)
-      Me.cmbIdGiocatore3.TabIndex = 174
-      Me.cmbIdGiocatore3.Visible = False
-      '
-      'cmbIdGiocatore2
-      '
-      Me.cmbIdGiocatore2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-      Me.cmbIdGiocatore2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.cmbIdGiocatore2.Location = New System.Drawing.Point(392, 192)
-      Me.cmbIdGiocatore2.Name = "cmbIdGiocatore2"
-      Me.cmbIdGiocatore2.Size = New System.Drawing.Size(104, 21)
-      Me.cmbIdGiocatore2.TabIndex = 173
-      Me.cmbIdGiocatore2.Visible = False
-      '
-      'Label10
-      '
-      Me.Label10.AutoSize = True
-      Me.Label10.BackColor = System.Drawing.Color.Transparent
-      Me.Label10.Cursor = System.Windows.Forms.Cursors.Default
-      Me.Label10.ForeColor = System.Drawing.Color.Black
-      Me.Label10.Location = New System.Drawing.Point(24, 24)
-      Me.Label10.Name = "Label10"
-      Me.Label10.RightToLeft = System.Windows.Forms.RightToLeft.No
-      Me.Label10.Size = New System.Drawing.Size(316, 13)
-      Me.Label10.TabIndex = 172
-      Me.Label10.Text = "Inserire eventuali giocatori per le prenotazioni dei campi da tennis."
-      '
-      'cmbGiocatore4
-      '
-      Me.cmbGiocatore4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.cmbGiocatore4.Location = New System.Drawing.Point(128, 120)
-      Me.cmbGiocatore4.Name = "cmbGiocatore4"
-      Me.cmbGiocatore4.Size = New System.Drawing.Size(368, 21)
-      Me.cmbGiocatore4.TabIndex = 2
-      '
-      'Label9
-      '
-      Me.Label9.AutoSize = True
-      Me.Label9.BackColor = System.Drawing.Color.Transparent
-      Me.Label9.Cursor = System.Windows.Forms.Cursors.Default
-      Me.Label9.ForeColor = System.Drawing.Color.Black
-      Me.Label9.Location = New System.Drawing.Point(24, 120)
-      Me.Label9.Name = "Label9"
-      Me.Label9.RightToLeft = System.Windows.Forms.RightToLeft.No
-      Me.Label9.Size = New System.Drawing.Size(89, 13)
-      Me.Label9.TabIndex = 159
-      Me.Label9.Text = "Quarto giocatore:"
-      '
-      'cmbGiocatore3
-      '
-      Me.cmbGiocatore3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.cmbGiocatore3.Location = New System.Drawing.Point(128, 88)
-      Me.cmbGiocatore3.Name = "cmbGiocatore3"
-      Me.cmbGiocatore3.Size = New System.Drawing.Size(368, 21)
-      Me.cmbGiocatore3.TabIndex = 1
-      '
-      'Label7
-      '
-      Me.Label7.AutoSize = True
-      Me.Label7.BackColor = System.Drawing.Color.Transparent
-      Me.Label7.Cursor = System.Windows.Forms.Cursors.Default
-      Me.Label7.ForeColor = System.Drawing.Color.Black
-      Me.Label7.Location = New System.Drawing.Point(24, 88)
-      Me.Label7.Name = "Label7"
-      Me.Label7.RightToLeft = System.Windows.Forms.RightToLeft.No
-      Me.Label7.Size = New System.Drawing.Size(84, 13)
-      Me.Label7.TabIndex = 157
-      Me.Label7.Text = "Terzo giocatore:"
-      '
-      'cmbGiocatore2
-      '
-      Me.cmbGiocatore2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.cmbGiocatore2.Location = New System.Drawing.Point(128, 56)
-      Me.cmbGiocatore2.Name = "cmbGiocatore2"
-      Me.cmbGiocatore2.Size = New System.Drawing.Size(368, 21)
-      Me.cmbGiocatore2.TabIndex = 0
-      '
-      'Label4
-      '
-      Me.Label4.AutoSize = True
-      Me.Label4.BackColor = System.Drawing.Color.Transparent
-      Me.Label4.Cursor = System.Windows.Forms.Cursors.Default
-      Me.Label4.ForeColor = System.Drawing.Color.Black
-      Me.Label4.Location = New System.Drawing.Point(24, 56)
-      Me.Label4.Name = "Label4"
-      Me.Label4.RightToLeft = System.Windows.Forms.RightToLeft.No
-      Me.Label4.Size = New System.Drawing.Size(100, 13)
-      Me.Label4.TabIndex = 155
-      Me.Label4.Text = "Secondo giocatore:"
-      '
-      'TabPage3
-      '
-      Me.TabPage3.BackColor = System.Drawing.SystemColors.AppWorkspace
-      Me.TabPage3.Controls.Add(Me.cmbPagamento)
-      Me.TabPage3.Controls.Add(Me.Label13)
-      Me.TabPage3.Controls.Add(Me.txtSconto)
-      Me.TabPage3.Controls.Add(Me.Label18)
-      Me.TabPage3.Controls.Add(Me.cmbApplicaSconto)
-      Me.TabPage3.Controls.Add(Me.Label19)
-      Me.TabPage3.Controls.Add(Me.eui_Quantit‡Meno)
-      Me.TabPage3.Controls.Add(Me.eui_cmdQuantit‡Pi˘)
-      Me.TabPage3.Controls.Add(Me.txtTotale)
-      Me.TabPage3.Controls.Add(Me.Label16)
-      Me.TabPage3.Controls.Add(Me.cmbPagato)
-      Me.TabPage3.Controls.Add(Me.Label11)
-      Me.TabPage3.Controls.Add(Me.DropDown2)
-      Me.TabPage3.Controls.Add(Me.DropDown1)
-      Me.TabPage3.Controls.Add(Me.eui_cmdEliminaRiga)
-      Me.TabPage3.Controls.Add(Me.lvwConto)
-      Me.TabPage3.Location = New System.Drawing.Point(4, 22)
-      Me.TabPage3.Name = "TabPage3"
-      Me.TabPage3.Size = New System.Drawing.Size(621, 394)
-      Me.TabPage3.TabIndex = 7
-      Me.TabPage3.Text = "Gestione conto"
-      '
-      'cmbPagamento
-      '
-      Me.cmbPagamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-      Me.cmbPagamento.Location = New System.Drawing.Point(424, 24)
-      Me.cmbPagamento.Name = "cmbPagamento"
-      Me.cmbPagamento.Size = New System.Drawing.Size(152, 21)
-      Me.cmbPagamento.TabIndex = 0
-      '
-      'Label13
-      '
-      Me.Label13.AutoSize = True
-      Me.Label13.BackColor = System.Drawing.Color.Transparent
-      Me.Label13.Cursor = System.Windows.Forms.Cursors.Default
-      Me.Label13.ForeColor = System.Drawing.Color.Black
-      Me.Label13.Location = New System.Drawing.Point(424, 8)
-      Me.Label13.Name = "Label13"
-      Me.Label13.RightToLeft = System.Windows.Forms.RightToLeft.No
-      Me.Label13.Size = New System.Drawing.Size(106, 13)
-      Me.Label13.TabIndex = 246
-      Me.Label13.Text = "Modalit‡ pagamento:"
-      '
-      'txtSconto
-      '
-      Me.txtSconto.ForeColor = System.Drawing.Color.Black
-      Me.txtSconto.Location = New System.Drawing.Point(496, 96)
-      Me.txtSconto.MaxLength = 0
-      Me.txtSconto.Name = "txtSconto"
-      Me.txtSconto.Size = New System.Drawing.Size(80, 20)
-      Me.txtSconto.TabIndex = 2
-      Me.txtSconto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-      '
-      'Label18
-      '
-      Me.Label18.AutoSize = True
-      Me.Label18.BackColor = System.Drawing.Color.Transparent
-      Me.Label18.Cursor = System.Windows.Forms.Cursors.Default
-      Me.Label18.ForeColor = System.Drawing.Color.Black
-      Me.Label18.Location = New System.Drawing.Point(424, 96)
-      Me.Label18.Name = "Label18"
-      Me.Label18.RightToLeft = System.Windows.Forms.RightToLeft.No
-      Me.Label18.Size = New System.Drawing.Size(44, 13)
-      Me.Label18.TabIndex = 244
-      Me.Label18.Text = "Sconto:"
-      '
-      'cmbApplicaSconto
-      '
-      Me.cmbApplicaSconto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-      Me.cmbApplicaSconto.Items.AddRange(New Object() {"Sul costo della Risorsa", "Sul totale del conto"})
-      Me.cmbApplicaSconto.Location = New System.Drawing.Point(424, 64)
-      Me.cmbApplicaSconto.Name = "cmbApplicaSconto"
-      Me.cmbApplicaSconto.Size = New System.Drawing.Size(152, 21)
-      Me.cmbApplicaSconto.TabIndex = 1
-      '
-      'Label19
-      '
-      Me.Label19.AutoSize = True
-      Me.Label19.BackColor = System.Drawing.Color.Transparent
-      Me.Label19.Cursor = System.Windows.Forms.Cursors.Default
-      Me.Label19.ForeColor = System.Drawing.Color.Black
-      Me.Label19.Location = New System.Drawing.Point(424, 48)
-      Me.Label19.Name = "Label19"
-      Me.Label19.RightToLeft = System.Windows.Forms.RightToLeft.No
-      Me.Label19.Size = New System.Drawing.Size(80, 13)
-      Me.Label19.TabIndex = 242
-      Me.Label19.Text = "Applica sconto:"
-      '
-      'eui_Quantit‡Meno
-      '
-      Me.eui_Quantit‡Meno.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.eui_Quantit‡Meno.Id = "7ddb0454-456a-4157-b997-ee0142d09efc"
-      Me.eui_Quantit‡Meno.Location = New System.Drawing.Point(504, 200)
-      Me.eui_Quantit‡Meno.Name = "eui_Quantit‡Meno"
-      Me.eui_Quantit‡Meno.Size = New System.Drawing.Size(72, 32)
-      Me.eui_Quantit‡Meno.TabIndex = 6
-      Me.eui_Quantit‡Meno.Text = "-"
-      '
-      'eui_cmdQuantit‡Pi˘
-      '
-      Me.eui_cmdQuantit‡Pi˘.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.eui_cmdQuantit‡Pi˘.Id = "a4051c7a-bb82-4e29-98d3-baf5c1ba0f35"
-      Me.eui_cmdQuantit‡Pi˘.Location = New System.Drawing.Point(424, 200)
-      Me.eui_cmdQuantit‡Pi˘.Name = "eui_cmdQuantit‡Pi˘"
-      Me.eui_cmdQuantit‡Pi˘.Size = New System.Drawing.Size(72, 32)
-      Me.eui_cmdQuantit‡Pi˘.TabIndex = 5
-      Me.eui_cmdQuantit‡Pi˘.Text = "+"
-      '
-      'txtTotale
-      '
-      Me.txtTotale.AcceptsReturn = True
-      Me.txtTotale.BackColor = System.Drawing.SystemColors.Window
-      Me.txtTotale.Cursor = System.Windows.Forms.Cursors.IBeam
-      Me.txtTotale.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.txtTotale.ForeColor = System.Drawing.Color.Red
-      Me.txtTotale.Location = New System.Drawing.Point(496, 128)
-      Me.txtTotale.MaxLength = 0
-      Me.txtTotale.Name = "txtTotale"
-      Me.txtTotale.ReadOnly = True
-      Me.txtTotale.RightToLeft = System.Windows.Forms.RightToLeft.No
-      Me.txtTotale.Size = New System.Drawing.Size(80, 20)
-      Me.txtTotale.TabIndex = 3
-      Me.txtTotale.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-      '
-      'Label16
-      '
-      Me.Label16.AutoSize = True
-      Me.Label16.BackColor = System.Drawing.Color.Transparent
-      Me.Label16.Cursor = System.Windows.Forms.Cursors.Default
-      Me.Label16.ForeColor = System.Drawing.Color.Black
-      Me.Label16.Location = New System.Drawing.Point(424, 131)
-      Me.Label16.Name = "Label16"
-      Me.Label16.RightToLeft = System.Windows.Forms.RightToLeft.No
-      Me.Label16.Size = New System.Drawing.Size(65, 13)
-      Me.Label16.TabIndex = 237
-      Me.Label16.Text = "Totale Euro:"
-      '
-      'cmbPagato
-      '
-      Me.cmbPagato.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-      Me.cmbPagato.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.cmbPagato.Items.AddRange(New Object() {"SÏ", "No"})
-      Me.cmbPagato.Location = New System.Drawing.Point(496, 160)
-      Me.cmbPagato.Name = "cmbPagato"
-      Me.cmbPagato.Size = New System.Drawing.Size(80, 21)
-      Me.cmbPagato.TabIndex = 4
-      '
-      'Label11
-      '
-      Me.Label11.AutoSize = True
-      Me.Label11.BackColor = System.Drawing.Color.Transparent
-      Me.Label11.Cursor = System.Windows.Forms.Cursors.Default
-      Me.Label11.ForeColor = System.Drawing.Color.Black
-      Me.Label11.Location = New System.Drawing.Point(424, 160)
-      Me.Label11.Name = "Label11"
-      Me.Label11.RightToLeft = System.Windows.Forms.RightToLeft.No
-      Me.Label11.Size = New System.Drawing.Size(44, 13)
-      Me.Label11.TabIndex = 235
-      Me.Label11.Text = "Pagato:"
-      '
-      'DropDown2
-      '
-      Me.DropDown2.Id = "e1a4a3aa-756d-4dd7-a825-64cb625b1329"
-      Me.DropDown2.Location = New System.Drawing.Point(424, 320)
-      Me.DropDown2.Name = "DropDown2"
-      Me.DropDown2.Popup = Me.PopupMenu2
-      Me.DropDown2.Size = New System.Drawing.Size(152, 35)
-      Me.DropDown2.TabIndex = 9
-      Me.DropDown2.Text = "&Stampa documento"
-      '
-      'PopupMenu2
-      '
-      Me.PopupMenu2.Items.AddRange(New System.Windows.Forms.Control() {Me.eui_cmdStampaDocPF, Me.Separator2, Me.eui_cmdStampaDocRF, Me.eui_cmdStampaDocFF, Me.Separator3, Me.eui_cmdStampaDocSF, Me.Separator4, Me.eui_cmdStampaPos})
-      Me.PopupMenu2.KeepPopupsWithOffsetPlacementWithinPlacementArea = False
-      Me.PopupMenu2.PlacementMode = Elegant.Ui.PopupPlacementMode.Bottom
-      Me.PopupMenu2.Size = New System.Drawing.Size(100, 100)
-      '
-      'eui_cmdStampaDocPF
-      '
-      Me.eui_cmdStampaDocPF.Id = "00dbb5f1-a365-4575-8695-2ab9c82ed6e1"
-      Me.eui_cmdStampaDocPF.Location = New System.Drawing.Point(2, 2)
-      Me.eui_cmdStampaDocPF.Name = "eui_cmdStampaDocPF"
-      Me.eui_cmdStampaDocPF.Size = New System.Drawing.Size(181, 23)
-      Me.eui_cmdStampaDocPF.TabIndex = 3
-      Me.eui_cmdStampaDocPF.Text = "&Proforma"
-      '
-      'Separator2
-      '
-      Me.Separator2.Id = "2e966542-fc56-4791-89d4-d817ae3e36ab"
-      Me.Separator2.Location = New System.Drawing.Point(2, 25)
-      Me.Separator2.Name = "Separator2"
-      Me.Separator2.Orientation = Elegant.Ui.SeparatorOrientation.Horizontal
-      Me.Separator2.Size = New System.Drawing.Size(181, 5)
-      Me.Separator2.TabIndex = 7
-      Me.Separator2.Text = "Separator2"
-      '
-      'eui_cmdStampaDocRF
-      '
-      Me.eui_cmdStampaDocRF.Id = "a8c335c8-97ac-4228-a4d2-89f86b712b47"
-      Me.eui_cmdStampaDocRF.Location = New System.Drawing.Point(2, 30)
-      Me.eui_cmdStampaDocRF.Name = "eui_cmdStampaDocRF"
-      Me.eui_cmdStampaDocRF.Size = New System.Drawing.Size(181, 23)
-      Me.eui_cmdStampaDocRF.TabIndex = 4
-      Me.eui_cmdStampaDocRF.Text = "&Ricevuta fiscale"
-      '
-      'eui_cmdStampaDocFF
-      '
-      Me.eui_cmdStampaDocFF.Id = "a1cb9a2c-b357-4e65-96c0-ddb70659d8f5"
-      Me.eui_cmdStampaDocFF.Location = New System.Drawing.Point(2, 53)
-      Me.eui_cmdStampaDocFF.Name = "eui_cmdStampaDocFF"
-      Me.eui_cmdStampaDocFF.Size = New System.Drawing.Size(181, 23)
-      Me.eui_cmdStampaDocFF.TabIndex = 5
-      Me.eui_cmdStampaDocFF.Text = "&Fattura"
-      '
-      'Separator3
-      '
-      Me.Separator3.Id = "6ef89758-7f74-4407-a0c6-1b61a8e28ff5"
-      Me.Separator3.Location = New System.Drawing.Point(2, 76)
-      Me.Separator3.Name = "Separator3"
-      Me.Separator3.Orientation = Elegant.Ui.SeparatorOrientation.Horizontal
-      Me.Separator3.Size = New System.Drawing.Size(181, 5)
-      Me.Separator3.TabIndex = 8
-      Me.Separator3.Text = "Separator3"
-      '
-      'eui_cmdStampaDocSF
-      '
-      Me.eui_cmdStampaDocSF.Id = "f57b38ce-85f2-4ce1-9bbc-a2dc77aea63d"
-      Me.eui_cmdStampaDocSF.Location = New System.Drawing.Point(2, 81)
-      Me.eui_cmdStampaDocSF.Name = "eui_cmdStampaDocSF"
-      Me.eui_cmdStampaDocSF.Size = New System.Drawing.Size(181, 23)
-      Me.eui_cmdStampaDocSF.TabIndex = 6
-      Me.eui_cmdStampaDocSF.Text = "S&contrino"
-      '
-      'Separator4
-      '
-      Me.Separator4.Id = "a48e2695-3842-4ee1-a297-5b50b8420ff7"
-      Me.Separator4.Location = New System.Drawing.Point(2, 104)
-      Me.Separator4.Name = "Separator4"
-      Me.Separator4.Orientation = Elegant.Ui.SeparatorOrientation.Horizontal
-      Me.Separator4.Size = New System.Drawing.Size(181, 5)
-      Me.Separator4.TabIndex = 10
-      Me.Separator4.Text = "Separator4"
-      '
-      'eui_cmdStampaPos
-      '
-      Me.eui_cmdStampaPos.Enabled = False
-      Me.eui_cmdStampaPos.Id = "b21910b8-a43b-4559-98bc-3cbddeca03e7"
-      Me.eui_cmdStampaPos.Location = New System.Drawing.Point(2, 109)
-      Me.eui_cmdStampaPos.Name = "eui_cmdStampaPos"
-      Me.eui_cmdStampaPos.Size = New System.Drawing.Size(181, 23)
-      Me.eui_cmdStampaPos.TabIndex = 11
-      Me.eui_cmdStampaPos.Text = "S&tampa da Punto cassa"
-      '
-      'DropDown1
-      '
-      Me.DropDown1.Id = "17929c68-21dd-41c4-85c4-f6da6176d755"
-      Me.DropDown1.Location = New System.Drawing.Point(424, 240)
-      Me.DropDown1.Name = "DropDown1"
-      Me.DropDown1.Popup = Me.PopupMenu1
-      Me.DropDown1.Size = New System.Drawing.Size(152, 32)
-      Me.DropDown1.TabIndex = 7
-      Me.DropDown1.Text = "&Inserisci"
-      '
-      'PopupMenu1
-      '
-      Me.PopupMenu1.Items.AddRange(New System.Windows.Forms.Control() {Me.eui_cmdAccessori, Me.eui_cmdServizi, Me.Separator1, Me.eui_cmdApriPos})
-      Me.PopupMenu1.KeepPopupsWithOffsetPlacementWithinPlacementArea = False
-      Me.PopupMenu1.PlacementMode = Elegant.Ui.PopupPlacementMode.Bottom
-      Me.PopupMenu1.Size = New System.Drawing.Size(100, 100)
-      '
-      'eui_cmdAccessori
-      '
-      Me.eui_cmdAccessori.Id = "b822c091-f60a-4f8d-9c4d-a04b7f5e16e2"
-      Me.eui_cmdAccessori.KeyTip = "A"
-      Me.eui_cmdAccessori.Location = New System.Drawing.Point(2, 2)
-      Me.eui_cmdAccessori.Name = "eui_cmdAccessori"
-      Me.eui_cmdAccessori.ScreenTip.Caption = "Accessori"
-      Me.eui_cmdAccessori.ScreenTip.Text = "Apre un'elenco per l'inserimento degli accessori."
-      Me.eui_cmdAccessori.Size = New System.Drawing.Size(149, 23)
-      Me.eui_cmdAccessori.TabIndex = 3
-      Me.eui_cmdAccessori.Text = "&Accessori"
-      '
-      'eui_cmdServizi
-      '
-      Me.eui_cmdServizi.Id = "497cace7-5d26-4be4-acd5-c6373adfd58e"
-      Me.eui_cmdServizi.KeyTip = "S"
-      Me.eui_cmdServizi.Location = New System.Drawing.Point(2, 25)
-      Me.eui_cmdServizi.Name = "eui_cmdServizi"
-      Me.eui_cmdServizi.ScreenTip.Caption = "Servizi"
-      Me.eui_cmdServizi.ScreenTip.Text = "Apre un'elenco per l'inserimento dei servizi."
-      Me.eui_cmdServizi.Size = New System.Drawing.Size(149, 23)
-      Me.eui_cmdServizi.TabIndex = 7
-      Me.eui_cmdServizi.Text = "&Servizi"
-      '
-      'Separator1
-      '
-      Me.Separator1.Id = "bfd7c152-8453-4088-ac46-a4c3e9d61b96"
-      Me.Separator1.Location = New System.Drawing.Point(2, 48)
-      Me.Separator1.Name = "Separator1"
-      Me.Separator1.Orientation = Elegant.Ui.SeparatorOrientation.Horizontal
-      Me.Separator1.Size = New System.Drawing.Size(149, 5)
-      Me.Separator1.TabIndex = 5
-      Me.Separator1.Text = "Separator1"
-      '
-      'eui_cmdApriPos
-      '
-      Me.eui_cmdApriPos.Enabled = False
-      Me.eui_cmdApriPos.Id = "c61d05a8-dddf-42a3-b1c0-478e0e86188a"
-      Me.eui_cmdApriPos.KeyTip = "P"
-      Me.eui_cmdApriPos.Location = New System.Drawing.Point(2, 53)
-      Me.eui_cmdApriPos.Name = "eui_cmdApriPos"
-      Me.eui_cmdApriPos.ScreenTip.Caption = "Apri Punto cassa"
-      Me.eui_cmdApriPos.ScreenTip.Text = "Apre il Punto cassa per l'inserimento di prodotti vari."
-      Me.eui_cmdApriPos.Size = New System.Drawing.Size(149, 23)
-      Me.eui_cmdApriPos.TabIndex = 4
-      Me.eui_cmdApriPos.Text = "Apri &Punto Cassa"
-      '
-      'eui_cmdEliminaRiga
-      '
-      Me.eui_cmdEliminaRiga.Id = "f5df8945-aa06-4649-81eb-266957eb6304"
-      Me.eui_cmdEliminaRiga.Location = New System.Drawing.Point(424, 280)
-      Me.eui_cmdEliminaRiga.Name = "eui_cmdEliminaRiga"
-      Me.eui_cmdEliminaRiga.Size = New System.Drawing.Size(152, 32)
-      Me.eui_cmdEliminaRiga.TabIndex = 8
-      Me.eui_cmdEliminaRiga.Text = "&Elimina riga"
-      '
-      'lvwConto
-      '
-      Me.lvwConto.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader2, Me.ColumnHeader1, Me.ColumnHeader3, Me.ColumnHeader4})
-      Me.lvwConto.Dock = System.Windows.Forms.DockStyle.Left
-      Me.lvwConto.FullRowSelect = True
-      ListViewGroup1.Header = "Articoli vari"
-      ListViewGroup1.Name = "ListViewGroup4"
-      ListViewGroup2.Header = "Accessori"
-      ListViewGroup2.Name = "ListViewGroup2"
-      ListViewGroup3.Header = "Servizi"
-      ListViewGroup3.Name = "ListViewGroup3"
-      Me.lvwConto.Groups.AddRange(New System.Windows.Forms.ListViewGroup() {ListViewGroup1, ListViewGroup2, ListViewGroup3})
-      Me.lvwConto.Location = New System.Drawing.Point(0, 0)
-      Me.lvwConto.MultiSelect = False
-      Me.lvwConto.Name = "lvwConto"
-      Me.lvwConto.Size = New System.Drawing.Size(408, 394)
-      Me.lvwConto.TabIndex = 10
-      Me.lvwConto.UseCompatibleStateImageBehavior = False
-      Me.lvwConto.View = System.Windows.Forms.View.Details
-      '
-      'ColumnHeader2
-      '
-      Me.ColumnHeader2.Text = "Descrizione"
-      Me.ColumnHeader2.Width = 245
-      '
-      'ColumnHeader1
-      '
-      Me.ColumnHeader1.Text = "Quantit‡"
-      Me.ColumnHeader1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-      '
-      'ColumnHeader3
-      '
-      Me.ColumnHeader3.Text = "Importo"
-      Me.ColumnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-      Me.ColumnHeader3.Width = 80
-      '
-      'ColumnHeader4
-      '
-      Me.ColumnHeader4.Text = "Indice"
-      Me.ColumnHeader4.Width = 0
-      '
-      'TabPage6
-      '
-      Me.TabPage6.Controls.Add(Me.txtNote)
-      Me.TabPage6.Location = New System.Drawing.Point(4, 22)
-      Me.TabPage6.Name = "TabPage6"
-      Me.TabPage6.Size = New System.Drawing.Size(611, 384)
-      Me.TabPage6.TabIndex = 5
-      Me.TabPage6.Text = "Note"
-      '
-      'txtNote
-      '
-      Me.txtNote.AcceptsReturn = True
-      Me.txtNote.BackColor = System.Drawing.SystemColors.Window
-      Me.txtNote.Cursor = System.Windows.Forms.Cursors.IBeam
-      Me.txtNote.Dock = System.Windows.Forms.DockStyle.Fill
-      Me.txtNote.ForeColor = System.Drawing.SystemColors.WindowText
-      Me.txtNote.Location = New System.Drawing.Point(0, 0)
-      Me.txtNote.MaxLength = 0
-      Me.txtNote.Multiline = True
-      Me.txtNote.Name = "txtNote"
-      Me.txtNote.RightToLeft = System.Windows.Forms.RightToLeft.No
-      Me.txtNote.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-      Me.txtNote.Size = New System.Drawing.Size(611, 384)
-      Me.txtNote.TabIndex = 0
-      '
-      'ErrorProvider1
-      '
-      Me.ErrorProvider1.ContainerControl = Me
-      '
-      'formFrameSkinner
-      '
-      Me.formFrameSkinner.AllowGlass = False
-      Me.formFrameSkinner.Form = Me
-      '
-      'frmPrenRisorse
-      '
-      Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
-      Me.BackColor = System.Drawing.SystemColors.AppWorkspace
-      Me.ClientSize = New System.Drawing.Size(629, 466)
-      Me.Controls.Add(Me.TabControl1)
-      Me.Controls.Add(Me.Panel1)
-      Me.Controls.Add(Me.ToolBar1)
-      Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
-      Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-      Me.MaximizeBox = False
-      Me.MinimizeBox = False
-      Me.Name = "frmPrenRisorse"
-      Me.ShowInTaskbar = False
-      Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-      Me.Text = "Prenotazione Risorsa sportiva"
-      Me.Panel1.ResumeLayout(False)
-      Me.Panel1.PerformLayout()
-      Me.TabControl1.ResumeLayout(False)
-      Me.TabPage1.ResumeLayout(False)
-      Me.TabPage1.PerformLayout()
-      Me.TabPage2.ResumeLayout(False)
-      Me.TabPage2.PerformLayout()
-      Me.TabPage3.ResumeLayout(False)
-      Me.TabPage3.PerformLayout()
-      CType(Me.PopupMenu2, System.ComponentModel.ISupportInitialize).EndInit()
-      CType(Me.PopupMenu1, System.ComponentModel.ISupportInitialize).EndInit()
-      Me.TabPage6.ResumeLayout(False)
-      Me.TabPage6.PerformLayout()
-      CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
-      Me.ResumeLayout(False)
-      Me.PerformLayout()
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPrenRisorse))
+        Dim ListViewGroup1 As System.Windows.Forms.ListViewGroup = New System.Windows.Forms.ListViewGroup("Articoli vari", System.Windows.Forms.HorizontalAlignment.Left)
+        Dim ListViewGroup2 As System.Windows.Forms.ListViewGroup = New System.Windows.Forms.ListViewGroup("Accessori", System.Windows.Forms.HorizontalAlignment.Left)
+        Dim ListViewGroup3 As System.Windows.Forms.ListViewGroup = New System.Windows.Forms.ListViewGroup("Servizi", System.Windows.Forms.HorizontalAlignment.Left)
+        Me.ToolBar1 = New System.Windows.Forms.ToolBar()
+        Me.Salva = New System.Windows.Forms.ToolBarButton()
+        Me.Annulla = New System.Windows.Forms.ToolBarButton()
+        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.lblIntestazione = New System.Windows.Forms.Label()
+        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.txtIva = New System.Windows.Forms.TextBox()
+        Me.cmbCaratteristiche = New System.Windows.Forms.ComboBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.txtOre = New System.Windows.Forms.TextBox()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.txtCostoRisorsa = New System.Windows.Forms.TextBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.dtpScadenza = New System.Windows.Forms.DateTimePicker()
+        Me.cmbOraFine = New System.Windows.Forms.ComboBox()
+        Me.cmbOraInizio = New System.Windows.Forms.ComboBox()
+        Me.cmbRisorsa = New System.Windows.Forms.ComboBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.cmbCliente = New System.Windows.Forms.ComboBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.dtpData = New System.Windows.Forms.DateTimePicker()
+        Me.cmdColore = New System.Windows.Forms.Button()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.cmbStatoPren = New System.Windows.Forms.ComboBox()
+        Me.txtNumero = New System.Windows.Forms.TextBox()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.cmbScontoCliente = New System.Windows.Forms.ComboBox()
+        Me.cmbIdCliente = New System.Windows.Forms.ComboBox()
+        Me.cmbIdGiocatore4 = New System.Windows.Forms.ComboBox()
+        Me.cmbIdGiocatore3 = New System.Windows.Forms.ComboBox()
+        Me.cmbIdGiocatore2 = New System.Windows.Forms.ComboBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.cmbGiocatore4 = New System.Windows.Forms.ComboBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.cmbGiocatore3 = New System.Windows.Forms.ComboBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.cmbGiocatore2 = New System.Windows.Forms.ComboBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.cmbPagamento = New System.Windows.Forms.ComboBox()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.txtSconto = New System.Windows.Forms.TextBox()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.cmbApplicaSconto = New System.Windows.Forms.ComboBox()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.eui_Quantit‡Meno = New Elegant.Ui.Button()
+        Me.eui_cmdQuantit‡Pi˘ = New Elegant.Ui.Button()
+        Me.txtTotale = New System.Windows.Forms.TextBox()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.cmbPagato = New System.Windows.Forms.ComboBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.DropDown2 = New Elegant.Ui.DropDown()
+        Me.PopupMenu2 = New Elegant.Ui.PopupMenu(Me.components)
+        Me.eui_cmdStampaDocPF = New Elegant.Ui.Button()
+        Me.Separator2 = New Elegant.Ui.Separator()
+        Me.eui_cmdStampaDocRF = New Elegant.Ui.Button()
+        Me.eui_cmdStampaDocFF = New Elegant.Ui.Button()
+        Me.Separator3 = New Elegant.Ui.Separator()
+        Me.eui_cmdStampaDocSF = New Elegant.Ui.Button()
+        Me.Separator4 = New Elegant.Ui.Separator()
+        Me.eui_cmdStampaPos = New Elegant.Ui.Button()
+        Me.DropDown1 = New Elegant.Ui.DropDown()
+        Me.PopupMenu1 = New Elegant.Ui.PopupMenu(Me.components)
+        Me.eui_cmdAccessori = New Elegant.Ui.Button()
+        Me.eui_cmdServizi = New Elegant.Ui.Button()
+        Me.Separator1 = New Elegant.Ui.Separator()
+        Me.eui_cmdApriPos = New Elegant.Ui.Button()
+        Me.eui_cmdEliminaRiga = New Elegant.Ui.Button()
+        Me.lvwConto = New System.Windows.Forms.ListView()
+        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.TabPage6 = New System.Windows.Forms.TabPage()
+        Me.txtNote = New System.Windows.Forms.TextBox()
+        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
+        Me.formFrameSkinner = New Elegant.Ui.FormFrameSkinner()
+        Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
+        Me.Panel1.SuspendLayout()
+        Me.TabControl1.SuspendLayout()
+        Me.TabPage1.SuspendLayout()
+        Me.TabPage2.SuspendLayout()
+        Me.TabPage3.SuspendLayout()
+        CType(Me.PopupMenu2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PopupMenu1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage6.SuspendLayout()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'ToolBar1
+        '
+        Me.ToolBar1.Appearance = System.Windows.Forms.ToolBarAppearance.Flat
+        Me.ToolBar1.Buttons.AddRange(New System.Windows.Forms.ToolBarButton() {Me.Salva, Me.Annulla})
+        Me.ToolBar1.ButtonSize = New System.Drawing.Size(22, 22)
+        Me.ToolBar1.Divider = False
+        Me.ToolBar1.DropDownArrows = True
+        Me.ToolBar1.ImageList = Me.ImageList1
+        Me.ToolBar1.Location = New System.Drawing.Point(0, 0)
+        Me.ToolBar1.Name = "ToolBar1"
+        Me.ToolBar1.ShowToolTips = True
+        Me.ToolBar1.Size = New System.Drawing.Size(600, 26)
+        Me.ToolBar1.TabIndex = 0
+        Me.ToolBar1.TextAlign = System.Windows.Forms.ToolBarTextAlign.Right
+        '
+        'Salva
+        '
+        Me.Salva.ImageIndex = 0
+        Me.Salva.Name = "Salva"
+        Me.Salva.Tag = "Salva"
+        Me.Salva.Text = "Salva"
+        Me.Salva.ToolTipText = "Salva"
+        '
+        'Annulla
+        '
+        Me.Annulla.ImageIndex = 1
+        Me.Annulla.Name = "Annulla"
+        Me.Annulla.Tag = "Annulla"
+        Me.Annulla.Text = "Annulla"
+        Me.Annulla.ToolTipText = "Annulla"
+        '
+        'ImageList1
+        '
+        Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
+        Me.ImageList1.Images.SetKeyName(0, "saveHS.png")
+        Me.ImageList1.Images.SetKeyName(1, "Edit_UndoHS.png")
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.Gray
+        Me.Panel1.Controls.Add(Me.lblIntestazione)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 26)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(600, 20)
+        Me.Panel1.TabIndex = 0
+        '
+        'lblIntestazione
+        '
+        Me.lblIntestazione.AutoSize = True
+        Me.lblIntestazione.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblIntestazione.ForeColor = System.Drawing.SystemColors.Window
+        Me.lblIntestazione.Location = New System.Drawing.Point(4, 2)
+        Me.lblIntestazione.Name = "lblIntestazione"
+        Me.lblIntestazione.Size = New System.Drawing.Size(16, 16)
+        Me.lblIntestazione.TabIndex = 0
+        Me.lblIntestazione.Text = "#"
+        '
+        'TabControl1
+        '
+        Me.TabControl1.Controls.Add(Me.TabPage1)
+        Me.TabControl1.Controls.Add(Me.TabPage2)
+        Me.TabControl1.Controls.Add(Me.TabPage3)
+        Me.TabControl1.Controls.Add(Me.TabPage6)
+        Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControl1.Location = New System.Drawing.Point(0, 46)
+        Me.TabControl1.Multiline = True
+        Me.TabControl1.Name = "TabControl1"
+        Me.TabControl1.SelectedIndex = 0
+        Me.TabControl1.Size = New System.Drawing.Size(600, 398)
+        Me.TabControl1.TabIndex = 0
+        '
+        'TabPage1
+        '
+        Me.TabPage1.BackColor = System.Drawing.SystemColors.AppWorkspace
+        Me.TabPage1.Controls.Add(Me.txtIva)
+        Me.TabPage1.Controls.Add(Me.cmbCaratteristiche)
+        Me.TabPage1.Controls.Add(Me.Label12)
+        Me.TabPage1.Controls.Add(Me.txtOre)
+        Me.TabPage1.Controls.Add(Me.Label17)
+        Me.TabPage1.Controls.Add(Me.txtCostoRisorsa)
+        Me.TabPage1.Controls.Add(Me.Label14)
+        Me.TabPage1.Controls.Add(Me.Label15)
+        Me.TabPage1.Controls.Add(Me.dtpScadenza)
+        Me.TabPage1.Controls.Add(Me.cmbOraFine)
+        Me.TabPage1.Controls.Add(Me.cmbOraInizio)
+        Me.TabPage1.Controls.Add(Me.cmbRisorsa)
+        Me.TabPage1.Controls.Add(Me.Label3)
+        Me.TabPage1.Controls.Add(Me.cmbCliente)
+        Me.TabPage1.Controls.Add(Me.Label2)
+        Me.TabPage1.Controls.Add(Me.Label1)
+        Me.TabPage1.Controls.Add(Me.dtpData)
+        Me.TabPage1.Controls.Add(Me.cmdColore)
+        Me.TabPage1.Controls.Add(Me.Label8)
+        Me.TabPage1.Controls.Add(Me.Label6)
+        Me.TabPage1.Controls.Add(Me.cmbStatoPren)
+        Me.TabPage1.Controls.Add(Me.txtNumero)
+        Me.TabPage1.Controls.Add(Me.Label34)
+        Me.TabPage1.Controls.Add(Me.Label5)
+        Me.TabPage1.Controls.Add(Me.Label20)
+        Me.TabPage1.ForeColor = System.Drawing.Color.Black
+        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.Size = New System.Drawing.Size(592, 372)
+        Me.TabPage1.TabIndex = 0
+        Me.TabPage1.Text = "Dati principali"
+        '
+        'txtIva
+        '
+        Me.txtIva.AcceptsReturn = True
+        Me.txtIva.BackColor = System.Drawing.SystemColors.Window
+        Me.txtIva.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtIva.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtIva.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.txtIva.Location = New System.Drawing.Point(440, 264)
+        Me.txtIva.MaxLength = 0
+        Me.txtIva.Name = "txtIva"
+        Me.txtIva.ReadOnly = True
+        Me.txtIva.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.txtIva.Size = New System.Drawing.Size(64, 20)
+        Me.txtIva.TabIndex = 242
+        Me.txtIva.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.txtIva.Visible = False
+        '
+        'cmbCaratteristiche
+        '
+        Me.cmbCaratteristiche.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbCaratteristiche.Location = New System.Drawing.Point(136, 160)
+        Me.cmbCaratteristiche.Name = "cmbCaratteristiche"
+        Me.cmbCaratteristiche.Size = New System.Drawing.Size(368, 21)
+        Me.cmbCaratteristiche.TabIndex = 5
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.BackColor = System.Drawing.Color.Transparent
+        Me.Label12.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Label12.ForeColor = System.Drawing.Color.Black
+        Me.Label12.Location = New System.Drawing.Point(24, 160)
+        Me.Label12.Name = "Label12"
+        Me.Label12.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label12.Size = New System.Drawing.Size(98, 13)
+        Me.Label12.TabIndex = 241
+        Me.Label12.Text = "Tipologia di utilizzo:"
+        '
+        'txtOre
+        '
+        Me.txtOre.AcceptsReturn = True
+        Me.txtOre.BackColor = System.Drawing.SystemColors.Window
+        Me.txtOre.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtOre.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtOre.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.txtOre.Location = New System.Drawing.Point(440, 200)
+        Me.txtOre.MaxLength = 0
+        Me.txtOre.Name = "txtOre"
+        Me.txtOre.ReadOnly = True
+        Me.txtOre.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.txtOre.Size = New System.Drawing.Size(64, 20)
+        Me.txtOre.TabIndex = 8
+        Me.txtOre.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.BackColor = System.Drawing.Color.Transparent
+        Me.Label17.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Label17.ForeColor = System.Drawing.Color.Black
+        Me.Label17.Location = New System.Drawing.Point(352, 200)
+        Me.Label17.Name = "Label17"
+        Me.Label17.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label17.Size = New System.Drawing.Size(75, 13)
+        Me.Label17.TabIndex = 235
+        Me.Label17.Text = "Ore prenotate:"
+        '
+        'txtCostoRisorsa
+        '
+        Me.txtCostoRisorsa.ForeColor = System.Drawing.Color.Red
+        Me.txtCostoRisorsa.Location = New System.Drawing.Point(440, 128)
+        Me.txtCostoRisorsa.MaxLength = 0
+        Me.txtCostoRisorsa.Name = "txtCostoRisorsa"
+        Me.txtCostoRisorsa.Size = New System.Drawing.Size(64, 20)
+        Me.txtCostoRisorsa.TabIndex = 4
+        Me.txtCostoRisorsa.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.BackColor = System.Drawing.Color.Transparent
+        Me.Label14.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Label14.ForeColor = System.Drawing.Color.Black
+        Me.Label14.Location = New System.Drawing.Point(352, 128)
+        Me.Label14.Name = "Label14"
+        Me.Label14.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label14.Size = New System.Drawing.Size(70, 13)
+        Me.Label14.TabIndex = 232
+        Me.Label14.Text = "Costo risorsa:"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.BackColor = System.Drawing.Color.Transparent
+        Me.Label15.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Label15.ForeColor = System.Drawing.Color.Black
+        Me.Label15.Location = New System.Drawing.Point(24, 264)
+        Me.Label15.Name = "Label15"
+        Me.Label15.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label15.Size = New System.Drawing.Size(58, 13)
+        Me.Label15.TabIndex = 212
+        Me.Label15.Text = "Scadenza:"
+        '
+        'dtpScadenza
+        '
+        Me.dtpScadenza.Location = New System.Drawing.Point(136, 264)
+        Me.dtpScadenza.Name = "dtpScadenza"
+        Me.dtpScadenza.Size = New System.Drawing.Size(200, 20)
+        Me.dtpScadenza.TabIndex = 10
+        '
+        'cmbOraFine
+        '
+        Me.cmbOraFine.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbOraFine.Location = New System.Drawing.Point(264, 200)
+        Me.cmbOraFine.Name = "cmbOraFine"
+        Me.cmbOraFine.Size = New System.Drawing.Size(72, 21)
+        Me.cmbOraFine.TabIndex = 7
+        '
+        'cmbOraInizio
+        '
+        Me.cmbOraInizio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbOraInizio.Location = New System.Drawing.Point(136, 200)
+        Me.cmbOraInizio.Name = "cmbOraInizio"
+        Me.cmbOraInizio.Size = New System.Drawing.Size(72, 21)
+        Me.cmbOraInizio.TabIndex = 6
+        '
+        'cmbRisorsa
+        '
+        Me.cmbRisorsa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbRisorsa.Location = New System.Drawing.Point(136, 128)
+        Me.cmbRisorsa.Name = "cmbRisorsa"
+        Me.cmbRisorsa.Size = New System.Drawing.Size(200, 21)
+        Me.cmbRisorsa.TabIndex = 3
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Label3.ForeColor = System.Drawing.Color.Black
+        Me.Label3.Location = New System.Drawing.Point(24, 128)
+        Me.Label3.Name = "Label3"
+        Me.Label3.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label3.Size = New System.Drawing.Size(45, 13)
+        Me.Label3.TabIndex = 199
+        Me.Label3.Text = "Risorsa:"
+        '
+        'cmbCliente
+        '
+        Me.cmbCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbCliente.Location = New System.Drawing.Point(136, 88)
+        Me.cmbCliente.Name = "cmbCliente"
+        Me.cmbCliente.Size = New System.Drawing.Size(368, 21)
+        Me.cmbCliente.TabIndex = 2
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Label2.ForeColor = System.Drawing.Color.Black
+        Me.Label2.Location = New System.Drawing.Point(216, 200)
+        Me.Label2.Name = "Label2"
+        Me.Label2.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label2.Size = New System.Drawing.Size(45, 13)
+        Me.Label2.TabIndex = 197
+        Me.Label2.Text = "Alle ore:"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.Location = New System.Drawing.Point(24, 56)
+        Me.Label1.Name = "Label1"
+        Me.Label1.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label1.Size = New System.Drawing.Size(33, 13)
+        Me.Label1.TabIndex = 195
+        Me.Label1.Text = "Data:"
+        '
+        'dtpData
+        '
+        Me.dtpData.Location = New System.Drawing.Point(136, 56)
+        Me.dtpData.Name = "dtpData"
+        Me.dtpData.Size = New System.Drawing.Size(200, 20)
+        Me.dtpData.TabIndex = 1
+        '
+        'cmdColore
+        '
+        Me.cmdColore.BackColor = System.Drawing.Color.White
+        Me.cmdColore.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.cmdColore.Location = New System.Drawing.Point(416, 56)
+        Me.cmdColore.Name = "cmdColore"
+        Me.cmdColore.Size = New System.Drawing.Size(88, 19)
+        Me.cmdColore.TabIndex = 11
+        Me.cmdColore.TabStop = False
+        Me.cmdColore.UseVisualStyleBackColor = False
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Label8.ForeColor = System.Drawing.Color.Black
+        Me.Label8.Location = New System.Drawing.Point(352, 56)
+        Me.Label8.Name = "Label8"
+        Me.Label8.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label8.Size = New System.Drawing.Size(40, 13)
+        Me.Label8.TabIndex = 193
+        Me.Label8.Text = "Colore:"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Label6.ForeColor = System.Drawing.Color.Black
+        Me.Label6.Location = New System.Drawing.Point(24, 200)
+        Me.Label6.Name = "Label6"
+        Me.Label6.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label6.Size = New System.Drawing.Size(52, 13)
+        Me.Label6.TabIndex = 191
+        Me.Label6.Text = "Dalle ore:"
+        '
+        'cmbStatoPren
+        '
+        Me.cmbStatoPren.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbStatoPren.Location = New System.Drawing.Point(136, 232)
+        Me.cmbStatoPren.Name = "cmbStatoPren"
+        Me.cmbStatoPren.Size = New System.Drawing.Size(200, 21)
+        Me.cmbStatoPren.TabIndex = 9
+        '
+        'txtNumero
+        '
+        Me.txtNumero.AcceptsReturn = True
+        Me.txtNumero.BackColor = System.Drawing.SystemColors.Window
+        Me.txtNumero.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtNumero.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNumero.ForeColor = System.Drawing.Color.Red
+        Me.txtNumero.Location = New System.Drawing.Point(136, 24)
+        Me.txtNumero.MaxLength = 0
+        Me.txtNumero.Name = "txtNumero"
+        Me.txtNumero.ReadOnly = True
+        Me.txtNumero.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.txtNumero.Size = New System.Drawing.Size(120, 20)
+        Me.txtNumero.TabIndex = 0
+        Me.txtNumero.TabStop = False
+        Me.txtNumero.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label34
+        '
+        Me.Label34.AutoSize = True
+        Me.Label34.BackColor = System.Drawing.Color.Transparent
+        Me.Label34.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Label34.ForeColor = System.Drawing.Color.Black
+        Me.Label34.Location = New System.Drawing.Point(24, 232)
+        Me.Label34.Name = "Label34"
+        Me.Label34.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label34.Size = New System.Drawing.Size(99, 13)
+        Me.Label34.TabIndex = 171
+        Me.Label34.Text = "Stato prenotazione:"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Label5.ForeColor = System.Drawing.Color.Black
+        Me.Label5.Location = New System.Drawing.Point(24, 24)
+        Me.Label5.Name = "Label5"
+        Me.Label5.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label5.Size = New System.Drawing.Size(43, 13)
+        Me.Label5.TabIndex = 164
+        Me.Label5.Text = "Codice:"
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.BackColor = System.Drawing.Color.Transparent
+        Me.Label20.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Label20.ForeColor = System.Drawing.Color.Black
+        Me.Label20.Location = New System.Drawing.Point(24, 88)
+        Me.Label20.Name = "Label20"
+        Me.Label20.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label20.Size = New System.Drawing.Size(62, 13)
+        Me.Label20.TabIndex = 153
+        Me.Label20.Text = "Intestatario:"
+        '
+        'TabPage2
+        '
+        Me.TabPage2.BackColor = System.Drawing.SystemColors.AppWorkspace
+        Me.TabPage2.Controls.Add(Me.cmbScontoCliente)
+        Me.TabPage2.Controls.Add(Me.cmbIdCliente)
+        Me.TabPage2.Controls.Add(Me.cmbIdGiocatore4)
+        Me.TabPage2.Controls.Add(Me.cmbIdGiocatore3)
+        Me.TabPage2.Controls.Add(Me.cmbIdGiocatore2)
+        Me.TabPage2.Controls.Add(Me.Label10)
+        Me.TabPage2.Controls.Add(Me.cmbGiocatore4)
+        Me.TabPage2.Controls.Add(Me.Label9)
+        Me.TabPage2.Controls.Add(Me.cmbGiocatore3)
+        Me.TabPage2.Controls.Add(Me.Label7)
+        Me.TabPage2.Controls.Add(Me.cmbGiocatore2)
+        Me.TabPage2.Controls.Add(Me.Label4)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Size = New System.Drawing.Size(592, 372)
+        Me.TabPage2.TabIndex = 6
+        Me.TabPage2.Text = "Altri componenti"
+        '
+        'cmbScontoCliente
+        '
+        Me.cmbScontoCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbScontoCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbScontoCliente.Location = New System.Drawing.Point(280, 160)
+        Me.cmbScontoCliente.Name = "cmbScontoCliente"
+        Me.cmbScontoCliente.Size = New System.Drawing.Size(104, 21)
+        Me.cmbScontoCliente.TabIndex = 177
+        Me.cmbScontoCliente.Visible = False
+        '
+        'cmbIdCliente
+        '
+        Me.cmbIdCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbIdCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbIdCliente.Location = New System.Drawing.Point(392, 160)
+        Me.cmbIdCliente.Name = "cmbIdCliente"
+        Me.cmbIdCliente.Size = New System.Drawing.Size(104, 21)
+        Me.cmbIdCliente.TabIndex = 176
+        Me.cmbIdCliente.Visible = False
+        '
+        'cmbIdGiocatore4
+        '
+        Me.cmbIdGiocatore4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbIdGiocatore4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbIdGiocatore4.Location = New System.Drawing.Point(392, 256)
+        Me.cmbIdGiocatore4.Name = "cmbIdGiocatore4"
+        Me.cmbIdGiocatore4.Size = New System.Drawing.Size(104, 21)
+        Me.cmbIdGiocatore4.TabIndex = 175
+        Me.cmbIdGiocatore4.Visible = False
+        '
+        'cmbIdGiocatore3
+        '
+        Me.cmbIdGiocatore3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbIdGiocatore3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbIdGiocatore3.Location = New System.Drawing.Point(392, 224)
+        Me.cmbIdGiocatore3.Name = "cmbIdGiocatore3"
+        Me.cmbIdGiocatore3.Size = New System.Drawing.Size(104, 21)
+        Me.cmbIdGiocatore3.TabIndex = 174
+        Me.cmbIdGiocatore3.Visible = False
+        '
+        'cmbIdGiocatore2
+        '
+        Me.cmbIdGiocatore2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbIdGiocatore2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbIdGiocatore2.Location = New System.Drawing.Point(392, 192)
+        Me.cmbIdGiocatore2.Name = "cmbIdGiocatore2"
+        Me.cmbIdGiocatore2.Size = New System.Drawing.Size(104, 21)
+        Me.cmbIdGiocatore2.TabIndex = 173
+        Me.cmbIdGiocatore2.Visible = False
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.BackColor = System.Drawing.Color.Transparent
+        Me.Label10.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Label10.ForeColor = System.Drawing.Color.Black
+        Me.Label10.Location = New System.Drawing.Point(24, 24)
+        Me.Label10.Name = "Label10"
+        Me.Label10.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label10.Size = New System.Drawing.Size(316, 13)
+        Me.Label10.TabIndex = 172
+        Me.Label10.Text = "Inserire eventuali giocatori per le prenotazioni dei campi da tennis."
+        '
+        'cmbGiocatore4
+        '
+        Me.cmbGiocatore4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbGiocatore4.Location = New System.Drawing.Point(128, 120)
+        Me.cmbGiocatore4.Name = "cmbGiocatore4"
+        Me.cmbGiocatore4.Size = New System.Drawing.Size(368, 21)
+        Me.cmbGiocatore4.TabIndex = 2
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
+        Me.Label9.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Label9.ForeColor = System.Drawing.Color.Black
+        Me.Label9.Location = New System.Drawing.Point(24, 120)
+        Me.Label9.Name = "Label9"
+        Me.Label9.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label9.Size = New System.Drawing.Size(89, 13)
+        Me.Label9.TabIndex = 159
+        Me.Label9.Text = "Quarto giocatore:"
+        '
+        'cmbGiocatore3
+        '
+        Me.cmbGiocatore3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbGiocatore3.Location = New System.Drawing.Point(128, 88)
+        Me.cmbGiocatore3.Name = "cmbGiocatore3"
+        Me.cmbGiocatore3.Size = New System.Drawing.Size(368, 21)
+        Me.cmbGiocatore3.TabIndex = 1
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Label7.ForeColor = System.Drawing.Color.Black
+        Me.Label7.Location = New System.Drawing.Point(24, 88)
+        Me.Label7.Name = "Label7"
+        Me.Label7.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label7.Size = New System.Drawing.Size(84, 13)
+        Me.Label7.TabIndex = 157
+        Me.Label7.Text = "Terzo giocatore:"
+        '
+        'cmbGiocatore2
+        '
+        Me.cmbGiocatore2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbGiocatore2.Location = New System.Drawing.Point(128, 56)
+        Me.cmbGiocatore2.Name = "cmbGiocatore2"
+        Me.cmbGiocatore2.Size = New System.Drawing.Size(368, 21)
+        Me.cmbGiocatore2.TabIndex = 0
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Label4.ForeColor = System.Drawing.Color.Black
+        Me.Label4.Location = New System.Drawing.Point(24, 56)
+        Me.Label4.Name = "Label4"
+        Me.Label4.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label4.Size = New System.Drawing.Size(100, 13)
+        Me.Label4.TabIndex = 155
+        Me.Label4.Text = "Secondo giocatore:"
+        '
+        'TabPage3
+        '
+        Me.TabPage3.BackColor = System.Drawing.SystemColors.AppWorkspace
+        Me.TabPage3.Controls.Add(Me.cmbPagamento)
+        Me.TabPage3.Controls.Add(Me.Label13)
+        Me.TabPage3.Controls.Add(Me.txtSconto)
+        Me.TabPage3.Controls.Add(Me.Label18)
+        Me.TabPage3.Controls.Add(Me.cmbApplicaSconto)
+        Me.TabPage3.Controls.Add(Me.Label19)
+        Me.TabPage3.Controls.Add(Me.eui_Quantit‡Meno)
+        Me.TabPage3.Controls.Add(Me.eui_cmdQuantit‡Pi˘)
+        Me.TabPage3.Controls.Add(Me.txtTotale)
+        Me.TabPage3.Controls.Add(Me.Label16)
+        Me.TabPage3.Controls.Add(Me.cmbPagato)
+        Me.TabPage3.Controls.Add(Me.Label11)
+        Me.TabPage3.Controls.Add(Me.DropDown2)
+        Me.TabPage3.Controls.Add(Me.DropDown1)
+        Me.TabPage3.Controls.Add(Me.eui_cmdEliminaRiga)
+        Me.TabPage3.Controls.Add(Me.lvwConto)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage3.Name = "TabPage3"
+        Me.TabPage3.Size = New System.Drawing.Size(592, 372)
+        Me.TabPage3.TabIndex = 7
+        Me.TabPage3.Text = "Gestione conto"
+        '
+        'cmbPagamento
+        '
+        Me.cmbPagamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbPagamento.Location = New System.Drawing.Point(424, 24)
+        Me.cmbPagamento.Name = "cmbPagamento"
+        Me.cmbPagamento.Size = New System.Drawing.Size(152, 21)
+        Me.cmbPagamento.TabIndex = 0
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.BackColor = System.Drawing.Color.Transparent
+        Me.Label13.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Label13.ForeColor = System.Drawing.Color.Black
+        Me.Label13.Location = New System.Drawing.Point(424, 8)
+        Me.Label13.Name = "Label13"
+        Me.Label13.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label13.Size = New System.Drawing.Size(106, 13)
+        Me.Label13.TabIndex = 246
+        Me.Label13.Text = "Modalit‡ pagamento:"
+        '
+        'txtSconto
+        '
+        Me.txtSconto.ForeColor = System.Drawing.Color.Black
+        Me.txtSconto.Location = New System.Drawing.Point(496, 96)
+        Me.txtSconto.MaxLength = 0
+        Me.txtSconto.Name = "txtSconto"
+        Me.txtSconto.Size = New System.Drawing.Size(80, 20)
+        Me.txtSconto.TabIndex = 2
+        Me.txtSconto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.BackColor = System.Drawing.Color.Transparent
+        Me.Label18.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Label18.ForeColor = System.Drawing.Color.Black
+        Me.Label18.Location = New System.Drawing.Point(424, 96)
+        Me.Label18.Name = "Label18"
+        Me.Label18.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label18.Size = New System.Drawing.Size(44, 13)
+        Me.Label18.TabIndex = 244
+        Me.Label18.Text = "Sconto:"
+        '
+        'cmbApplicaSconto
+        '
+        Me.cmbApplicaSconto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbApplicaSconto.Items.AddRange(New Object() {"Sul costo della Risorsa", "Sul totale del conto"})
+        Me.cmbApplicaSconto.Location = New System.Drawing.Point(424, 64)
+        Me.cmbApplicaSconto.Name = "cmbApplicaSconto"
+        Me.cmbApplicaSconto.Size = New System.Drawing.Size(152, 21)
+        Me.cmbApplicaSconto.TabIndex = 1
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.BackColor = System.Drawing.Color.Transparent
+        Me.Label19.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Label19.ForeColor = System.Drawing.Color.Black
+        Me.Label19.Location = New System.Drawing.Point(424, 48)
+        Me.Label19.Name = "Label19"
+        Me.Label19.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label19.Size = New System.Drawing.Size(80, 13)
+        Me.Label19.TabIndex = 242
+        Me.Label19.Text = "Applica sconto:"
+        '
+        'eui_Quantit‡Meno
+        '
+        Me.eui_Quantit‡Meno.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.eui_Quantit‡Meno.Id = "7ddb0454-456a-4157-b997-ee0142d09efc"
+        Me.eui_Quantit‡Meno.Location = New System.Drawing.Point(504, 200)
+        Me.eui_Quantit‡Meno.Name = "eui_Quantit‡Meno"
+        Me.eui_Quantit‡Meno.Size = New System.Drawing.Size(72, 32)
+        Me.eui_Quantit‡Meno.TabIndex = 6
+        Me.eui_Quantit‡Meno.Text = "-"
+        '
+        'eui_cmdQuantit‡Pi˘
+        '
+        Me.eui_cmdQuantit‡Pi˘.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.eui_cmdQuantit‡Pi˘.Id = "a4051c7a-bb82-4e29-98d3-baf5c1ba0f35"
+        Me.eui_cmdQuantit‡Pi˘.Location = New System.Drawing.Point(424, 200)
+        Me.eui_cmdQuantit‡Pi˘.Name = "eui_cmdQuantit‡Pi˘"
+        Me.eui_cmdQuantit‡Pi˘.Size = New System.Drawing.Size(72, 32)
+        Me.eui_cmdQuantit‡Pi˘.TabIndex = 5
+        Me.eui_cmdQuantit‡Pi˘.Text = "+"
+        '
+        'txtTotale
+        '
+        Me.txtTotale.AcceptsReturn = True
+        Me.txtTotale.BackColor = System.Drawing.SystemColors.Window
+        Me.txtTotale.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtTotale.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTotale.ForeColor = System.Drawing.Color.Red
+        Me.txtTotale.Location = New System.Drawing.Point(496, 128)
+        Me.txtTotale.MaxLength = 0
+        Me.txtTotale.Name = "txtTotale"
+        Me.txtTotale.ReadOnly = True
+        Me.txtTotale.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.txtTotale.Size = New System.Drawing.Size(80, 20)
+        Me.txtTotale.TabIndex = 3
+        Me.txtTotale.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.BackColor = System.Drawing.Color.Transparent
+        Me.Label16.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Label16.ForeColor = System.Drawing.Color.Black
+        Me.Label16.Location = New System.Drawing.Point(424, 131)
+        Me.Label16.Name = "Label16"
+        Me.Label16.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label16.Size = New System.Drawing.Size(65, 13)
+        Me.Label16.TabIndex = 237
+        Me.Label16.Text = "Totale Euro:"
+        '
+        'cmbPagato
+        '
+        Me.cmbPagato.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbPagato.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbPagato.Items.AddRange(New Object() {"SÏ", "No"})
+        Me.cmbPagato.Location = New System.Drawing.Point(496, 160)
+        Me.cmbPagato.Name = "cmbPagato"
+        Me.cmbPagato.Size = New System.Drawing.Size(80, 21)
+        Me.cmbPagato.TabIndex = 4
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.BackColor = System.Drawing.Color.Transparent
+        Me.Label11.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Label11.ForeColor = System.Drawing.Color.Black
+        Me.Label11.Location = New System.Drawing.Point(424, 160)
+        Me.Label11.Name = "Label11"
+        Me.Label11.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label11.Size = New System.Drawing.Size(44, 13)
+        Me.Label11.TabIndex = 235
+        Me.Label11.Text = "Pagato:"
+        '
+        'DropDown2
+        '
+        Me.DropDown2.Id = "e1a4a3aa-756d-4dd7-a825-64cb625b1329"
+        Me.DropDown2.Location = New System.Drawing.Point(424, 320)
+        Me.DropDown2.Name = "DropDown2"
+        Me.DropDown2.Popup = Me.PopupMenu2
+        Me.DropDown2.Size = New System.Drawing.Size(152, 35)
+        Me.DropDown2.TabIndex = 9
+        Me.DropDown2.Text = "&Stampa documento"
+        '
+        'PopupMenu2
+        '
+        Me.PopupMenu2.Items.AddRange(New System.Windows.Forms.Control() {Me.eui_cmdStampaDocPF, Me.Separator2, Me.eui_cmdStampaDocRF, Me.eui_cmdStampaDocFF, Me.Separator3, Me.eui_cmdStampaDocSF, Me.Separator4, Me.eui_cmdStampaPos})
+        Me.PopupMenu2.KeepPopupsWithOffsetPlacementWithinPlacementArea = False
+        Me.PopupMenu2.PlacementMode = Elegant.Ui.PopupPlacementMode.Bottom
+        Me.PopupMenu2.Size = New System.Drawing.Size(100, 100)
+        '
+        'eui_cmdStampaDocPF
+        '
+        Me.eui_cmdStampaDocPF.Id = "00dbb5f1-a365-4575-8695-2ab9c82ed6e1"
+        Me.eui_cmdStampaDocPF.Location = New System.Drawing.Point(2, 2)
+        Me.eui_cmdStampaDocPF.Name = "eui_cmdStampaDocPF"
+        Me.eui_cmdStampaDocPF.Size = New System.Drawing.Size(181, 23)
+        Me.eui_cmdStampaDocPF.TabIndex = 3
+        Me.eui_cmdStampaDocPF.Text = "&Proforma"
+        '
+        'Separator2
+        '
+        Me.Separator2.Id = "2e966542-fc56-4791-89d4-d817ae3e36ab"
+        Me.Separator2.Location = New System.Drawing.Point(2, 25)
+        Me.Separator2.Name = "Separator2"
+        Me.Separator2.Orientation = Elegant.Ui.SeparatorOrientation.Horizontal
+        Me.Separator2.Size = New System.Drawing.Size(181, 5)
+        Me.Separator2.TabIndex = 7
+        Me.Separator2.Text = "Separator2"
+        '
+        'eui_cmdStampaDocRF
+        '
+        Me.eui_cmdStampaDocRF.Id = "a8c335c8-97ac-4228-a4d2-89f86b712b47"
+        Me.eui_cmdStampaDocRF.Location = New System.Drawing.Point(2, 30)
+        Me.eui_cmdStampaDocRF.Name = "eui_cmdStampaDocRF"
+        Me.eui_cmdStampaDocRF.Size = New System.Drawing.Size(181, 23)
+        Me.eui_cmdStampaDocRF.TabIndex = 4
+        Me.eui_cmdStampaDocRF.Text = "&Ricevuta fiscale"
+        '
+        'eui_cmdStampaDocFF
+        '
+        Me.eui_cmdStampaDocFF.Id = "a1cb9a2c-b357-4e65-96c0-ddb70659d8f5"
+        Me.eui_cmdStampaDocFF.Location = New System.Drawing.Point(2, 53)
+        Me.eui_cmdStampaDocFF.Name = "eui_cmdStampaDocFF"
+        Me.eui_cmdStampaDocFF.Size = New System.Drawing.Size(181, 23)
+        Me.eui_cmdStampaDocFF.TabIndex = 5
+        Me.eui_cmdStampaDocFF.Text = "&Fattura"
+        '
+        'Separator3
+        '
+        Me.Separator3.Id = "6ef89758-7f74-4407-a0c6-1b61a8e28ff5"
+        Me.Separator3.Location = New System.Drawing.Point(2, 76)
+        Me.Separator3.Name = "Separator3"
+        Me.Separator3.Orientation = Elegant.Ui.SeparatorOrientation.Horizontal
+        Me.Separator3.Size = New System.Drawing.Size(181, 5)
+        Me.Separator3.TabIndex = 8
+        Me.Separator3.Text = "Separator3"
+        '
+        'eui_cmdStampaDocSF
+        '
+        Me.eui_cmdStampaDocSF.Id = "f57b38ce-85f2-4ce1-9bbc-a2dc77aea63d"
+        Me.eui_cmdStampaDocSF.Location = New System.Drawing.Point(2, 81)
+        Me.eui_cmdStampaDocSF.Name = "eui_cmdStampaDocSF"
+        Me.eui_cmdStampaDocSF.Size = New System.Drawing.Size(181, 23)
+        Me.eui_cmdStampaDocSF.TabIndex = 6
+        Me.eui_cmdStampaDocSF.Text = "S&contrino"
+        '
+        'Separator4
+        '
+        Me.Separator4.Id = "a48e2695-3842-4ee1-a297-5b50b8420ff7"
+        Me.Separator4.Location = New System.Drawing.Point(2, 104)
+        Me.Separator4.Name = "Separator4"
+        Me.Separator4.Orientation = Elegant.Ui.SeparatorOrientation.Horizontal
+        Me.Separator4.Size = New System.Drawing.Size(181, 5)
+        Me.Separator4.TabIndex = 10
+        Me.Separator4.Text = "Separator4"
+        '
+        'eui_cmdStampaPos
+        '
+        Me.eui_cmdStampaPos.Enabled = False
+        Me.eui_cmdStampaPos.Id = "b21910b8-a43b-4559-98bc-3cbddeca03e7"
+        Me.eui_cmdStampaPos.Location = New System.Drawing.Point(2, 109)
+        Me.eui_cmdStampaPos.Name = "eui_cmdStampaPos"
+        Me.eui_cmdStampaPos.Size = New System.Drawing.Size(181, 23)
+        Me.eui_cmdStampaPos.TabIndex = 11
+        Me.eui_cmdStampaPos.Text = "S&tampa da Punto cassa"
+        '
+        'DropDown1
+        '
+        Me.DropDown1.Id = "17929c68-21dd-41c4-85c4-f6da6176d755"
+        Me.DropDown1.Location = New System.Drawing.Point(424, 240)
+        Me.DropDown1.Name = "DropDown1"
+        Me.DropDown1.Popup = Me.PopupMenu1
+        Me.DropDown1.Size = New System.Drawing.Size(152, 32)
+        Me.DropDown1.TabIndex = 7
+        Me.DropDown1.Text = "&Inserisci"
+        '
+        'PopupMenu1
+        '
+        Me.PopupMenu1.Items.AddRange(New System.Windows.Forms.Control() {Me.eui_cmdAccessori, Me.eui_cmdServizi, Me.Separator1, Me.eui_cmdApriPos})
+        Me.PopupMenu1.KeepPopupsWithOffsetPlacementWithinPlacementArea = False
+        Me.PopupMenu1.PlacementMode = Elegant.Ui.PopupPlacementMode.Bottom
+        Me.PopupMenu1.Size = New System.Drawing.Size(100, 100)
+        '
+        'eui_cmdAccessori
+        '
+        Me.eui_cmdAccessori.Id = "b822c091-f60a-4f8d-9c4d-a04b7f5e16e2"
+        Me.eui_cmdAccessori.KeyTip = "A"
+        Me.eui_cmdAccessori.Location = New System.Drawing.Point(2, 2)
+        Me.eui_cmdAccessori.Name = "eui_cmdAccessori"
+        Me.eui_cmdAccessori.ScreenTip.Caption = "Accessori"
+        Me.eui_cmdAccessori.ScreenTip.Text = "Apre un'elenco per l'inserimento degli accessori."
+        Me.eui_cmdAccessori.Size = New System.Drawing.Size(149, 23)
+        Me.eui_cmdAccessori.TabIndex = 3
+        Me.eui_cmdAccessori.Text = "&Accessori"
+        '
+        'eui_cmdServizi
+        '
+        Me.eui_cmdServizi.Id = "497cace7-5d26-4be4-acd5-c6373adfd58e"
+        Me.eui_cmdServizi.KeyTip = "S"
+        Me.eui_cmdServizi.Location = New System.Drawing.Point(2, 25)
+        Me.eui_cmdServizi.Name = "eui_cmdServizi"
+        Me.eui_cmdServizi.ScreenTip.Caption = "Servizi"
+        Me.eui_cmdServizi.ScreenTip.Text = "Apre un'elenco per l'inserimento dei servizi."
+        Me.eui_cmdServizi.Size = New System.Drawing.Size(149, 23)
+        Me.eui_cmdServizi.TabIndex = 7
+        Me.eui_cmdServizi.Text = "&Servizi"
+        '
+        'Separator1
+        '
+        Me.Separator1.Id = "bfd7c152-8453-4088-ac46-a4c3e9d61b96"
+        Me.Separator1.Location = New System.Drawing.Point(2, 48)
+        Me.Separator1.Name = "Separator1"
+        Me.Separator1.Orientation = Elegant.Ui.SeparatorOrientation.Horizontal
+        Me.Separator1.Size = New System.Drawing.Size(149, 5)
+        Me.Separator1.TabIndex = 5
+        Me.Separator1.Text = "Separator1"
+        '
+        'eui_cmdApriPos
+        '
+        Me.eui_cmdApriPos.Enabled = False
+        Me.eui_cmdApriPos.Id = "c61d05a8-dddf-42a3-b1c0-478e0e86188a"
+        Me.eui_cmdApriPos.KeyTip = "P"
+        Me.eui_cmdApriPos.Location = New System.Drawing.Point(2, 53)
+        Me.eui_cmdApriPos.Name = "eui_cmdApriPos"
+        Me.eui_cmdApriPos.ScreenTip.Caption = "Apri Punto cassa"
+        Me.eui_cmdApriPos.ScreenTip.Text = "Apre il Punto cassa per l'inserimento di prodotti vari."
+        Me.eui_cmdApriPos.Size = New System.Drawing.Size(149, 23)
+        Me.eui_cmdApriPos.TabIndex = 4
+        Me.eui_cmdApriPos.Text = "Apri &Punto Cassa"
+        '
+        'eui_cmdEliminaRiga
+        '
+        Me.eui_cmdEliminaRiga.Id = "f5df8945-aa06-4649-81eb-266957eb6304"
+        Me.eui_cmdEliminaRiga.Location = New System.Drawing.Point(424, 280)
+        Me.eui_cmdEliminaRiga.Name = "eui_cmdEliminaRiga"
+        Me.eui_cmdEliminaRiga.Size = New System.Drawing.Size(152, 32)
+        Me.eui_cmdEliminaRiga.TabIndex = 8
+        Me.eui_cmdEliminaRiga.Text = "&Elimina riga"
+        '
+        'lvwConto
+        '
+        Me.lvwConto.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader2, Me.ColumnHeader1, Me.ColumnHeader3, Me.ColumnHeader4})
+        Me.lvwConto.Dock = System.Windows.Forms.DockStyle.Left
+        Me.lvwConto.FullRowSelect = True
+        ListViewGroup1.Header = "Articoli vari"
+        ListViewGroup1.Name = "ListViewGroup4"
+        ListViewGroup2.Header = "Accessori"
+        ListViewGroup2.Name = "ListViewGroup2"
+        ListViewGroup3.Header = "Servizi"
+        ListViewGroup3.Name = "ListViewGroup3"
+        Me.lvwConto.Groups.AddRange(New System.Windows.Forms.ListViewGroup() {ListViewGroup1, ListViewGroup2, ListViewGroup3})
+        Me.lvwConto.Location = New System.Drawing.Point(0, 0)
+        Me.lvwConto.MultiSelect = False
+        Me.lvwConto.Name = "lvwConto"
+        Me.lvwConto.Size = New System.Drawing.Size(408, 372)
+        Me.lvwConto.TabIndex = 10
+        Me.lvwConto.UseCompatibleStateImageBehavior = False
+        Me.lvwConto.View = System.Windows.Forms.View.Details
+        '
+        'ColumnHeader2
+        '
+        Me.ColumnHeader2.Text = "Descrizione"
+        Me.ColumnHeader2.Width = 245
+        '
+        'ColumnHeader1
+        '
+        Me.ColumnHeader1.Text = "Quantit‡"
+        Me.ColumnHeader1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'ColumnHeader3
+        '
+        Me.ColumnHeader3.Text = "Importo"
+        Me.ColumnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.ColumnHeader3.Width = 80
+        '
+        'ColumnHeader4
+        '
+        Me.ColumnHeader4.Text = "Indice"
+        Me.ColumnHeader4.Width = 0
+        '
+        'TabPage6
+        '
+        Me.TabPage6.Controls.Add(Me.txtNote)
+        Me.TabPage6.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage6.Name = "TabPage6"
+        Me.TabPage6.Size = New System.Drawing.Size(621, 394)
+        Me.TabPage6.TabIndex = 5
+        Me.TabPage6.Text = "Note"
+        '
+        'txtNote
+        '
+        Me.txtNote.AcceptsReturn = True
+        Me.txtNote.BackColor = System.Drawing.SystemColors.Window
+        Me.txtNote.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtNote.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txtNote.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.txtNote.Location = New System.Drawing.Point(0, 0)
+        Me.txtNote.MaxLength = 0
+        Me.txtNote.Multiline = True
+        Me.txtNote.Name = "txtNote"
+        Me.txtNote.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.txtNote.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.txtNote.Size = New System.Drawing.Size(621, 394)
+        Me.txtNote.TabIndex = 0
+        '
+        'ErrorProvider1
+        '
+        Me.ErrorProvider1.ContainerControl = Me
+        '
+        'formFrameSkinner
+        '
+        Me.formFrameSkinner.AllowGlass = False
+        Me.formFrameSkinner.Form = Me
+        '
+        'frmPrenRisorse
+        '
+        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.BackColor = System.Drawing.SystemColors.AppWorkspace
+        Me.ClientSize = New System.Drawing.Size(600, 444)
+        Me.Controls.Add(Me.TabControl1)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.ToolBar1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
+        Me.Name = "frmPrenRisorse"
+        Me.ShowInTaskbar = False
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Prenotazione Risorsa sportiva"
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        Me.TabControl1.ResumeLayout(False)
+        Me.TabPage1.ResumeLayout(False)
+        Me.TabPage1.PerformLayout()
+        Me.TabPage2.ResumeLayout(False)
+        Me.TabPage2.PerformLayout()
+        Me.TabPage3.ResumeLayout(False)
+        Me.TabPage3.PerformLayout()
+        CType(Me.PopupMenu2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PopupMenu1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage6.ResumeLayout(False)
+        Me.TabPage6.PerformLayout()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
 
-   End Sub
+    End Sub
 
 #End Region
 
-   Private Sub FormResize(ByVal larghezza As Short, ByVal altezza As Short)
+    Private Sub FormResize(ByVal larghezza As Short, ByVal altezza As Short)
       ' A_TODO: MODIFICHE ASD AGON
       Try
          ' Imposta le dimensioni standard del form.
@@ -4064,17 +4064,17 @@ Public Class frmPrenRisorse
             .Ora = dtpData.Value.ToShortTimeString
             .Tipo = tipoDocumento
             .Stato = "Emesso e stampato"
-            .Causale = "Vendita"
+                .Causale = "Vendita da Centro sportivo"
 
-            'Select Case tipoCliente
-            '   Case Cliente.Azienda
-            '      ' Viene aggiunta la lettera A per identificare le Aziende.
-            '      ' Codice aggiunto dopo la creazione della nuova anagrafica Aziende.
-            '      .IdCliente = "A" & idCliente
-            '   Case Cliente.Privato
-            'End Select
+                'Select Case tipoCliente
+                '   Case Cliente.Azienda
+                '      ' Viene aggiunta la lettera A per identificare le Aziende.
+                '      ' Codice aggiunto dopo la creazione della nuova anagrafica Aziende.
+                '      .IdCliente = "A" & idCliente
+                '   Case Cliente.Privato
+                'End Select
 
-            If VerificaCliente(cmbCliente, cmbCliente.Text) = True Then
+                If VerificaCliente(cmbCliente, cmbCliente.Text) = True Then
                ' Se i dati del cliente sono nell'anagrafica li legge per utilizzarli nei documenti fiscali.
                .IdCliente = cmbIdCliente.Items(cmbCliente.SelectedIndex).ToString
                .Cliente = FormattaApici(cmbCliente.Text)
@@ -4166,21 +4166,26 @@ Public Class frmPrenRisorse
 
             ' Avvia una transazione.
             tr = cn.BeginTransaction(IsolationLevel.ReadCommitted)
-            ' Crea la stringa di eliminazione.
-            sql = String.Format("INSERT INTO {0} (RifDoc, Descrizione, Quantit‡, ValoreUnitario, ImportoNetto) " &
-                                          "VALUES(@RifDoc, @Descrizione, @Quantit‡, @ValoreUnitario, @ImportoNetto)", TAB_DETTAGLI_DOC)
+                ' Crea la stringa di inserimento.
+                sql = String.Format("INSERT INTO {0} (RifDoc, CodiceArticolo, Descrizione, Unit‡Misura, Quantit‡, ValoreUnitario, Sconto, ImportoNetto, AliquotaIva, Categoria) " &
+                                   "VALUES(@RifDoc, @CodiceArticolo, @Descrizione, @Unit‡Misura, @Quantit‡, @ValoreUnitario, @Sconto, @ImportoNetto, @AliquotaIva, @Categoria)", TAB_DETTAGLI_DOC)
 
-            ' Crea il comando per la connessione corrente.
-            Dim cmdInsert As New OleDbCommand(sql, cn, tr)
+                ' Crea il comando per la connessione corrente.
+                Dim cmdInsert As New OleDbCommand(sql, cn, tr)
 
-            cmdInsert.Parameters.Add("@RifDoc", LeggiUltimoRecord(TAB_DOC))
-            cmdInsert.Parameters.Add("@Descrizione", FormattaApici(lvwConto.Items(i).SubItems(0).Text))
-            cmdInsert.Parameters.Add("@Quantit‡", lvwConto.Items(i).SubItems(1).Text)
-            cmdInsert.Parameters.Add("@ValoreUnitario", VALORE_ZERO)
-            cmdInsert.Parameters.Add("@ImportoNetto", lvwConto.Items(i).SubItems(2).Text)
+                cmdInsert.Parameters.AddWithValue("@RifDoc", LeggiUltimoRecord(TAB_DOC))
+                cmdInsert.Parameters.AddWithValue("@CodiceArticolo", String.Empty)
+                cmdInsert.Parameters.AddWithValue("@Descrizione", FormattaApici(lvwConto.Items(i).SubItems(0).Text))
+                cmdInsert.Parameters.AddWithValue("@Unit‡Misura", String.Empty)
+                cmdInsert.Parameters.AddWithValue("@Quantit‡", lvwConto.Items(i).SubItems(1).Text)
+                cmdInsert.Parameters.AddWithValue("@ValoreUnitario", VALORE_ZERO) ' B_TODO: Modifica per Retail.
+                cmdInsert.Parameters.AddWithValue("@Sconto", VALORE_ZERO)
+                cmdInsert.Parameters.AddWithValue("@ImportoNetto", lvwConto.Items(i).SubItems(2).Text)
+                cmdInsert.Parameters.AddWithValue("@AliquotaIva", AliquotaIvaCentroSportivo)
+                cmdInsert.Parameters.AddWithValue("@Categoria", String.Empty)
 
-            ' Esegue il comando.
-            Dim Record As Integer = cmdInsert.ExecuteNonQuery()
+                ' Esegue il comando.
+                Dim Record As Integer = cmdInsert.ExecuteNonQuery()
             ' Conferma transazione.
             tr.Commit()
             'End If
@@ -4190,25 +4195,37 @@ Public Class frmPrenRisorse
          If Doc.Sconto <> VALORE_ZERO Then
             ' Avvia una transazione.
             tr = cn.BeginTransaction(IsolationLevel.ReadCommitted)
-            ' Crea la stringa di eliminazione.
-            sql = String.Format("INSERT INTO {0} (RifDoc, Descrizione, Quantit‡, ImportoNetto) " &
-                                          "VALUES(@RifDoc, @Descrizione, @Quantit‡, @ImportoNetto)", TAB_DETTAGLI_DOC)
-            ' Crea il comando per la connessione corrente.
-            Dim cmdInsert As New OleDbCommand(sql, cn, tr)
-            cmdInsert.Parameters.Add("@RifDoc", LeggiUltimoRecord(TAB_DOC))
+                ' Crea la stringa di inserimento.
+                'sql = String.Format("INSERT INTO {0} (RifDoc, Descrizione, Quantit‡, ImportoNetto) " &
+                '                          "VALUES(@RifDoc, @Descrizione, @Quantit‡, @ImportoNetto)", TAB_DETTAGLI_DOC)
 
-            If cmbApplicaSconto.SelectedIndex = 1 Then
-               ' Sul totale del conto.
-               cmdInsert.Parameters.Add("@Descrizione", "Sconto")
-            Else
-               ' Sul costo della risorsa.
-               cmdInsert.Parameters.Add("@Descrizione", "Sconto sul costo di " & cmbRisorsa.Text)
-            End If
+                sql = String.Format("INSERT INTO {0} (RifDoc, CodiceArticolo, Descrizione, Unit‡Misura, Quantit‡, ValoreUnitario, Sconto, ImportoNetto, AliquotaIva, Categoria) " &
+                                   "VALUES(@RifDoc, @CodiceArticolo, @Descrizione, @Unit‡Misura, @Quantit‡, @ValoreUnitario, @Sconto, @ImportoNetto, @AliquotaIva, @Categoria)", TAB_DETTAGLI_DOC)
 
-            cmdInsert.Parameters.Add("@Quantit‡", VALORE_ZERO)
-            cmdInsert.Parameters.Add("@ImportoNetto", "-" & Doc.Sconto)
-            ' Esegue il comando.
-            Dim Record As Integer = cmdInsert.ExecuteNonQuery()
+                ' Crea il comando per la connessione corrente.
+                Dim cmdInsert As New OleDbCommand(sql, cn, tr)
+
+                cmdInsert.Parameters.AddWithValue("@RifDoc", LeggiUltimoRecord(TAB_DOC))
+                cmdInsert.Parameters.AddWithValue("@CodiceArticolo", String.Empty)
+
+                If cmbApplicaSconto.SelectedIndex = 1 Then
+                    ' Sul totale del conto.
+                    cmdInsert.Parameters.AddWithValue("@Descrizione", "Sconto")
+                Else
+                    ' Sul costo della risorsa.
+                    cmdInsert.Parameters.AddWithValue("@Descrizione", "Sconto sul costo di " & cmbRisorsa.Text)
+                End If
+
+                cmdInsert.Parameters.AddWithValue("@Unit‡Misura", String.Empty)
+                cmdInsert.Parameters.AddWithValue("@Quantit‡", VALORE_ZERO)
+                cmdInsert.Parameters.AddWithValue("@ValoreUnitario", VALORE_ZERO) ' B_TODO: Modifica per Retail.
+                cmdInsert.Parameters.AddWithValue("@Sconto", VALORE_ZERO)
+                cmdInsert.Parameters.AddWithValue("@ImportoNetto", "-" & Doc.Sconto)
+                cmdInsert.Parameters.AddWithValue("@AliquotaIva", 0)
+                cmdInsert.Parameters.AddWithValue("@Categoria", String.Empty)
+
+                ' Esegue il comando.
+                Dim Record As Integer = cmdInsert.ExecuteNonQuery()
             ' Conferma transazione.
             tr.Commit()
          End If

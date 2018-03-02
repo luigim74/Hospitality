@@ -195,9 +195,10 @@ Module Dichiarazioni
 
    Public Const REPORT_FATTURA_A4_DOPPIA As String = "Fattura A4_Doppia.rdlc"
    Public Const REPORT_FATTURA_A4 As String = "Fattura A4.rdlc"
+    Public Const REPORT_FATTURA_A4_IVA_MULTIPLA As String = "Fattura A4_Iva_Multipla.rdlc"
 
-   Public Const REPORT_PROFORMA_A4_DOPPIA As String = "Proforma A4_Doppia.rdlc"
-   Public Const REPORT_PROFORMA_A5 As String = "Proforma A5.rdlc"
+    Public Const REPORT_PROFORMA_A4_DOPPIA As String = "Proforma A4_Doppia.rdlc"
+    Public Const REPORT_PROFORMA_A5 As String = "Proforma A5.rdlc"
    Public Const REPORT_PROFORMA_A6 As String = "Proforma A6.rdlc"
 
    Public Const REPORT_RICEVUTA_A4_DOPPIA_CENTRO_SPORTIVO As String = "RFiscale A4_Doppia - Centro sportivo.rdlc"

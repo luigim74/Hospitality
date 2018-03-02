@@ -6,6 +6,307 @@ Hospitality Solution 3
 </name>
 </assembly>
 <members>
+<member name="T:Hospitality_Solution.My.Resources.Resources">
+<summary>
+  Classe di risorse fortemente tipizzata per la ricerca di stringhe localizzate e così via.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.ResourceManager">
+<summary>
+  Restituisce l'istanza di ResourceManager nella cache utilizzata da questa classe.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.Culture">
+<summary>
+  Esegue l'override della proprietà CurrentUICulture del thread corrente per tutte le
+  ricerche di risorse eseguite utilizzando questa classe di risorse fortemente tipizzata.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.bar_Ico">
+<summary>
+  Cerca una risorsa localizzata di tipo System.Drawing.Icon simile a (Icona).
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.beep_1">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.beep_10">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.beep_2">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.beep_21">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.beep_25">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.beep_27">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.beep_28">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.beep_3">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.beep_30">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.beep_6">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.beep_9">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.beep_Esci">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.beep_Lista">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.beep_Normale">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.beep_Piatti">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_10">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_11">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_15">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_16">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_17">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_19">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_21">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_22">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_23">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_24">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_27">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_28">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_29">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_3">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_30">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_34">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_35">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_36">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_37">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_38">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_39">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_4">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_40">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_41">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_42">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_43">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_44">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_45">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_46">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_47">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_48">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_49">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.button_50">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.chef_Ico">
+<summary>
+  Cerca una risorsa localizzata di tipo System.Drawing.Icon simile a (Icona).
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.Hospitality_Ico">
+<summary>
+  Cerca una risorsa localizzata di tipo System.Drawing.Icon simile a (Icona).
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.notifica_Prenotazioni">
+<summary>
+  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.Splash_screen_ombra_bar">
+<summary>
+  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.Splash_screen_ombra_chef">
+<summary>
+  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.Splash_screen_ombra_hospitality">
+<summary>
+  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.Splash_screen_ombra_sporting">
+<summary>
+  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Hospitality_Solution.My.Resources.Resources.sport_Ico">
+<summary>
+  Cerca una risorsa localizzata di tipo System.Drawing.Icon simile a (Icona).
+</summary>
+</member>
 <member name="M:Hospitality_Solution.frmDocumento.#ctor(System.String,System.String,System.String)">
  <summary>
  Apre il documento da eleborare.
@@ -583,307 +884,6 @@ Represents the connection and commands used to retrieve and save data.
 <member name="T:Hospitality_Solution.Dataset1TableAdapters.AziendaTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
-</summary>
-</member>
-<member name="T:Hospitality_Solution.My.Resources.Resources">
-<summary>
-  Classe di risorse fortemente tipizzata per la ricerca di stringhe localizzate e così via.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.ResourceManager">
-<summary>
-  Restituisce l'istanza di ResourceManager nella cache utilizzata da questa classe.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.Culture">
-<summary>
-  Esegue l'override della proprietà CurrentUICulture del thread corrente per tutte le
-  ricerche di risorse eseguite utilizzando questa classe di risorse fortemente tipizzata.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.bar_Ico">
-<summary>
-  Cerca una risorsa localizzata di tipo System.Drawing.Icon simile a (Icona).
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.beep_1">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.beep_10">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.beep_2">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.beep_21">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.beep_25">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.beep_27">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.beep_28">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.beep_3">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.beep_30">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.beep_6">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.beep_9">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.beep_Esci">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.beep_Lista">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.beep_Normale">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.beep_Piatti">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.button_10">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.button_11">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.button_15">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.button_16">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.button_17">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.button_19">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.button_21">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.button_22">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.button_23">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.button_24">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.button_27">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.button_28">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.button_29">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.button_3">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.button_30">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.button_34">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.button_35">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.button_36">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.button_37">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.button_38">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.button_39">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.button_4">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.button_40">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.button_41">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.button_42">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.button_43">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.button_44">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.button_45">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.button_46">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.button_47">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.button_48">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.button_49">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.button_50">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.chef_Ico">
-<summary>
-  Cerca una risorsa localizzata di tipo System.Drawing.Icon simile a (Icona).
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.Hospitality_Ico">
-<summary>
-  Cerca una risorsa localizzata di tipo System.Drawing.Icon simile a (Icona).
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.notifica_Prenotazioni">
-<summary>
-  Cerca una risorsa localizzata di tipo System.IO.UnmanagedMemoryStream simile a System.IO.MemoryStream.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.Splash_screen_ombra_bar">
-<summary>
-  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.Splash_screen_ombra_chef">
-<summary>
-  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.Splash_screen_ombra_hospitality">
-<summary>
-  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.Splash_screen_ombra_sporting">
-<summary>
-  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:Hospitality_Solution.My.Resources.Resources.sport_Ico">
-<summary>
-  Cerca una risorsa localizzata di tipo System.Drawing.Icon simile a (Icona).
 </summary>
 </member>
 </members>

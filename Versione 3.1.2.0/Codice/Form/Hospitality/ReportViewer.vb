@@ -15,30 +15,30 @@
          ' Imposta il nome della stampante.
          nomeStampante = percorsoNomeStampante
 
-         ReportViewer1.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Local
-         ReportViewer1.LocalReport.ReportPath = Application.StartupPath & nomeDoc
+            ReportViewer1.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Local
+            ReportViewer1.LocalReport.ReportPath = Application.StartupPath & nomeDoc
 
-         Select Case nomeReport
-            Case PERCORSO_REP_ACCESSORI_SERVIZI_A4
-               'ReportViewer1.LocalReport.DataSources.Add(New Microsoft.Reporting.WinForms.ReportDataSource("HospitalityDataSet", "AccessoriServizi"))
-               'Me.asBindingSource1.DataMember = "AccessoriServizi"
-               'Me.asBindingSource1.DataSource = ds
+            Select Case nomeReport
+                Case PERCORSO_REP_ACCESSORI_SERVIZI_A4
+                    'ReportViewer1.LocalReport.DataSources.Add(New Microsoft.Reporting.WinForms.ReportDataSource("HospitalityDataSet", "AccessoriServizi"))
+                    'Me.asBindingSource1.DataMember = "AccessoriServizi"
+                    'Me.asBindingSource1.DataSource = ds
 
-            Case Else
-               ReportViewer1.LocalReport.DataSources.Add(New Microsoft.Reporting.WinForms.ReportDataSource("HospitalityDataSet", "Azienda"))
-               ReportViewer1.LocalReport.DataSources.Add(New Microsoft.Reporting.WinForms.ReportDataSource("HospitalityDataSet", "DettagliDoc"))
-               ReportViewer1.LocalReport.DataSources.Add(New Microsoft.Reporting.WinForms.ReportDataSource("HospitalityDataSet", "Documenti"))
+                Case Else
+                    ReportViewer1.LocalReport.DataSources.Add(New Microsoft.Reporting.WinForms.ReportDataSource("HospitalityDataSet", "Azienda"))
+                    ReportViewer1.LocalReport.DataSources.Add(New Microsoft.Reporting.WinForms.ReportDataSource("HospitalityDataSet", "DettagliDoc"))
+                    ReportViewer1.LocalReport.DataSources.Add(New Microsoft.Reporting.WinForms.ReportDataSource("HospitalityDataSet", "Documenti"))
 
-               Me.AziendaBindingSource.DataMember = "Azienda"
-               Me.AziendaBindingSource.DataSource = ds
-               Me.DettagliDocBindingSource.DataMember = "DettagliDoc"
-               Me.DettagliDocBindingSource.DataSource = ds
-               Me.DocumentiBindingSource.DataMember = "Documenti"
-               Me.DocumentiBindingSource.DataSource = ds
+                    Me.AziendaBindingSource.DataMember = "Azienda"
+                    Me.AziendaBindingSource.DataSource = ds
+                    Me.DettagliDocBindingSource.DataMember = "DettagliDoc"
+                    Me.DettagliDocBindingSource.DataSource = ds
+                    Me.DocumentiBindingSource.DataMember = "Documenti"
+                    Me.DocumentiBindingSource.DataSource = ds
 
-         End Select
+            End Select
 
-      Catch ex As Exception
+        Catch ex As Exception
          ' Visualizza un messaggio di errore e lo registra nell'apposito file.
          err.GestisciErrore(ex.StackTrace, ex.Message)
 

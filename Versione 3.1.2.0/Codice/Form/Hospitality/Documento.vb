@@ -1219,7 +1219,8 @@ Public Class frmDocumento
             .Note = eui_txtNote.Text
             .Chiuso = "No"
 
-            If eui_txtTotaliCarte.Text <> VALORE_ZERO Then
+                ' DA_FARE_A: Da modificare perchè non funziona e non salva il tipo pagamento.
+                If eui_txtTotaliCarte.Text <> VALORE_ZERO Then
                .TipoPagamento = eui_cmbTipoPagamento.Text & ": € " & CFormatta.FormattaNumeroDouble(Convert.ToDouble(eui_txtTotaliCarte.Text))
             Else
                If eui_txtTotaliContanti.Text <> VALORE_ZERO Then
@@ -1881,190 +1882,190 @@ Public Class frmDocumento
    End Sub
 
    Private Function LeggiNomeReport(ByVal tipoDoc As String) As String
-      Try
-         Dim percorsoReport As String
+        Try
+            Dim percorsoReport As String
 
-         ' Imposta il nome del Report.
-         Select Case tipoDoc
-            Case TIPO_DOC_CO, TIPO_DOC_PF
+            ' Imposta il nome del Report.
+            Select Case tipoDoc
+                Case TIPO_DOC_CO, TIPO_DOC_PF
 
-               ' Conto e Proforma.
-               If ImpostaNomeDoc(2) <> String.Empty Then
-                  percorsoReport = "\Reports\" & ImpostaNomeDoc(2)
-               Else
-                  percorsoReport = PERCORSO_REP_PF_A4_DOPPIA
-               End If
+                    ' Conto e Proforma.
+                    If ImpostaNomeDoc(2) <> String.Empty Then
+                        percorsoReport = "\Reports\" & ImpostaNomeDoc(2)
+                    Else
+                        percorsoReport = PERCORSO_REP_PF_A4_DOPPIA
+                    End If
 
-            Case TIPO_DOC_RF
+                Case TIPO_DOC_RF
 
-               ' Ricevuta Fiscale.
-               If ImpostaNomeDoc(0) <> String.Empty Then
-                  percorsoReport = "\Reports\" & ImpostaNomeDoc(0)
-               Else
-                  percorsoReport = PERCORSO_REP_RF_A4_DOPPIA
-               End If
+                    ' Ricevuta Fiscale.
+                    If ImpostaNomeDoc(0) <> String.Empty Then
+                        percorsoReport = "\Reports\" & ImpostaNomeDoc(0)
+                    Else
+                        percorsoReport = PERCORSO_REP_RF_A4_DOPPIA
+                    End If
 
-            Case TIPO_DOC_FF
+                Case TIPO_DOC_FF
 
-               ' Fattura.
-               If ImpostaNomeDoc(1) <> String.Empty Then
-                  percorsoReport = "\Reports\" & ImpostaNomeDoc(1)
-               Else
-                  percorsoReport = PERCORSO_REP_FF_A4_DOPPIA
-               End If
+                    ' Fattura.
+                    If ImpostaNomeDoc(1) <> String.Empty Then
+                        percorsoReport = "\Reports\" & ImpostaNomeDoc(1)
+                    Else
+                        percorsoReport = PERCORSO_REP_FF_A4_DOPPIA
+                    End If
 
-            Case TIPO_DOC_SF
+                Case TIPO_DOC_SF
 
-               ' Scontrino.
-               If ImpostaNomeDoc(3) <> String.Empty Then
-                  percorsoReport = "\Reports\" & ImpostaNomeDoc(3)
-               Else
-                  percorsoReport = PERCORSO_REP_SF
-               End If
+                    ' Scontrino.
+                    If ImpostaNomeDoc(3) <> String.Empty Then
+                        percorsoReport = "\Reports\" & ImpostaNomeDoc(3)
+                    Else
+                        percorsoReport = PERCORSO_REP_SF
+                    End If
 
-         End Select
+            End Select
 
-         Return percorsoReport
+            Return percorsoReport
 
-      Catch ex As Exception
-         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-         err.GestisciErrore(ex.StackTrace, ex.Message)
+        Catch ex As Exception
+            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+            err.GestisciErrore(ex.StackTrace, ex.Message)
 
-      End Try
+        End Try
 
-   End Function
+    End Function
 
-   Private Function LeggiNomeStampante(ByVal tipoDoc As String) As String
-      Try
-         Dim percorsoStampante As String
+    Private Function LeggiNomeStampante(ByVal tipoDoc As String) As String
+        Try
+            Dim percorsoStampante As String
 
-         ' Imposta il nome del Report.
-         Select Case tipoDoc
-            Case TIPO_DOC_CO, TIPO_DOC_PF
+            ' Imposta il nome del Report.
+            Select Case tipoDoc
+                Case TIPO_DOC_CO, TIPO_DOC_PF
 
-               ' Imposta il percorso completo del nome stampante.
-               percorsoStampante = ImpostaNomeStampante(2)
+                    ' Imposta il percorso completo del nome stampante.
+                    percorsoStampante = ImpostaNomeStampante(2)
 
-            Case TIPO_DOC_RF
+                Case TIPO_DOC_RF
 
-               ' Imposta il percorso completo del nome stampante.
-               percorsoStampante = ImpostaNomeStampante(0)
+                    ' Imposta il percorso completo del nome stampante.
+                    percorsoStampante = ImpostaNomeStampante(0)
 
-            Case TIPO_DOC_FF
+                Case TIPO_DOC_FF
 
-               ' Imposta il percorso completo del nome stampante.
-               percorsoStampante = ImpostaNomeStampante(1)
+                    ' Imposta il percorso completo del nome stampante.
+                    percorsoStampante = ImpostaNomeStampante(1)
 
-            Case TIPO_DOC_SF
+                Case TIPO_DOC_SF
 
-               ' Imposta il percorso completo del nome stampante.
-               percorsoStampante = ImpostaNomeStampante(3)
+                    ' Imposta il percorso completo del nome stampante.
+                    percorsoStampante = ImpostaNomeStampante(3)
 
-         End Select
+            End Select
 
-         Return percorsoStampante
+            Return percorsoStampante
 
-      Catch ex As Exception
-         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-         err.GestisciErrore(ex.StackTrace, ex.Message)
+        Catch ex As Exception
+            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+            err.GestisciErrore(ex.StackTrace, ex.Message)
 
-         Return String.Empty
+            Return String.Empty
 
-      End Try
+        End Try
 
-   End Function
+    End Function
 
-   Private Sub AnteprimaDiStampa()
-      Try
-         ' Ottiene l'Id del documento.
-         Dim idDocumento As String
-         If Me.Tag = String.Empty Then
-            ' Nuovo documento.
-            idDocumento = LeggiUltimoRecord(TAB_DOCUMENTI)
-         Else
-            ' Documento esistente.
-            idDocumento = Me.Tag
-         End If
+    Private Sub AnteprimaDiStampa()
+        Try
+            ' Ottiene l'Id del documento.
+            Dim idDocumento As String
+            If Me.Tag = String.Empty Then
+                ' Nuovo documento.
+                idDocumento = LeggiUltimoRecord(TAB_DOCUMENTI)
+            Else
+                ' Documento esistente.
+                idDocumento = Me.Tag
+            End If
 
-         ' Stampare il documento...
-         'Utilizzare il modello di oggetti ADO .NET per impostare le informazioni di connessione. 
-         Dim cn As New OleDbConnection(ConnString)
+            ' Stampare il documento...
+            'Utilizzare il modello di oggetti ADO .NET per impostare le informazioni di connessione. 
+            Dim cn As New OleDbConnection(ConnString)
 
-         cn.Open()
+            cn.Open()
 
-         ' Tabella Documenti.
-         Dim oleAdapter As New OleDbDataAdapter
-         oleAdapter.SelectCommand = New OleDbCommand("SELECT * FROM " & TAB_DOCUMENTI & " WHERE Id = " & idDocumento, cn)
+            ' Tabella Documenti.
+            Dim oleAdapter As New OleDbDataAdapter
+            oleAdapter.SelectCommand = New OleDbCommand("SELECT * FROM " & TAB_DOCUMENTI & " WHERE Id = " & idDocumento, cn)
 
-         Dim ds As New HospitalityDataSet 'Dataset1 'utilizzato con Crystal Reports
-         ds.Clear()
-         oleAdapter.Fill(ds, TAB_DOCUMENTI)
+            Dim ds As New HospitalityDataSet 'Dataset1 'utilizzato con Crystal Reports
+            ds.Clear()
+            oleAdapter.Fill(ds, TAB_DOCUMENTI)
 
-         ' Tabella DettagliDoc
-         Dim oleAdapter1 As New OleDbDataAdapter
-         oleAdapter1.SelectCommand = New OleDbCommand("SELECT * FROM " & TAB_DETTAGLI_DOCUMENTI & " WHERE RifDoc = " & idDocumento, cn)
-         oleAdapter1.Fill(ds, TAB_DETTAGLI_DOCUMENTI)
+            ' Tabella DettagliDoc
+            Dim oleAdapter1 As New OleDbDataAdapter
+            oleAdapter1.SelectCommand = New OleDbCommand("SELECT * FROM " & TAB_DETTAGLI_DOCUMENTI & " WHERE RifDoc = " & idDocumento, cn)
+            oleAdapter1.Fill(ds, TAB_DETTAGLI_DOCUMENTI)
 
-         ' Tabella Azienda
-         Dim oleAdapter2 As New OleDbDataAdapter
-         oleAdapter2.SelectCommand = New OleDbCommand("SELECT * FROM " & TAB_AZIENDA, cn)
-         oleAdapter2.Fill(ds, TAB_AZIENDA)
+            ' Tabella Azienda
+            Dim oleAdapter2 As New OleDbDataAdapter
+            oleAdapter2.SelectCommand = New OleDbCommand("SELECT * FROM " & TAB_AZIENDA, cn)
+            oleAdapter2.Fill(ds, TAB_AZIENDA)
 
-         ' ReportViewer - Apre la finestra di Anteprima di stampa per il documento.
-         Dim frm As New ReportViewer(ds, LeggiNomeReport(eui_cmbTipoDocumento.Text), LeggiNomeStampante(eui_cmbTipoDocumento.Text))
-         frm.ShowDialog()
+            ' ReportViewer - Apre la finestra di Anteprima di stampa per il documento.
+            Dim frm As New ReportViewer(ds, LeggiNomeReport(eui_cmbTipoDocumento.Text), LeggiNomeStampante(eui_cmbTipoDocumento.Text))
+            frm.ShowDialog()
 
-      Catch ex As Exception
-         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-         err.GestisciErrore(ex.StackTrace, ex.Message)
+        Catch ex As Exception
+            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+            err.GestisciErrore(ex.StackTrace, ex.Message)
 
-      End Try
+        End Try
 
-   End Sub
+    End Sub
 
-   Private Sub eui_cmdImportaDoc_Click(sender As Object, e As EventArgs) Handles eui_cmdImportaDoc.Click
-      Try
-         Dim frm As New ListaDocumenti(eui_cmbClienteCognome.Text)
-         frm.ShowDialog()
+    Private Sub eui_cmdImportaDoc_Click(sender As Object, e As EventArgs) Handles eui_cmdImportaDoc.Click
+        Try
+            Dim frm As New ListaDocumenti(eui_cmbClienteCognome.Text)
+            frm.ShowDialog()
 
-      Catch ex As Exception
-         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-         err.GestisciErrore(ex.StackTrace, ex.Message)
+        Catch ex As Exception
+            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+            err.GestisciErrore(ex.StackTrace, ex.Message)
 
-      End Try
-   End Sub
+        End Try
+    End Sub
 
-   Private Sub eui_cmdSalva_Click(sender As Object, e As EventArgs) Handles eui_cmdSalva.Click
-      Try
-         ' Salva il documento e chiude la finestra.
-         If SalvaDocumento() = True Then
+    Private Sub eui_cmdSalva_Click(sender As Object, e As EventArgs) Handles eui_cmdSalva.Click
+        Try
+            ' Salva il documento e chiude la finestra.
+            If SalvaDocumento() = True Then
+                Me.Close()
+
+                ' Se aperto aggiorna l'elenco documenti.
+                If IsNothing(g_frmDocumenti) = False Then
+                    g_frmDocumenti.AggiornaDati()
+                End If
+            End If
+
+        Catch ex As Exception
+            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+            err.GestisciErrore(ex.StackTrace, ex.Message)
+
+        End Try
+    End Sub
+
+    Private Sub eui_cmdAnnulla_Click(sender As Object, e As EventArgs) Handles eui_cmdAnnulla.Click
+        Try
             Me.Close()
 
-            ' Se aperto aggiorna l'elenco documenti.
-            If IsNothing(g_frmDocumenti) = False Then
-               g_frmDocumenti.AggiornaDati()
-            End If
-         End If
+        Catch ex As Exception
+            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+            err.GestisciErrore(ex.StackTrace, ex.Message)
 
-      Catch ex As Exception
-         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-         err.GestisciErrore(ex.StackTrace, ex.Message)
+        End Try
+    End Sub
 
-      End Try
-   End Sub
-
-   Private Sub eui_cmdAnnulla_Click(sender As Object, e As EventArgs) Handles eui_cmdAnnulla.Click
-      Try
-         Me.Close()
-
-      Catch ex As Exception
-         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-         err.GestisciErrore(ex.StackTrace, ex.Message)
-
-      End Try
-   End Sub
-
-   Private Sub eui_cmdAnteprima_Click(sender As Object, e As EventArgs) Handles eui_cmdAnteprima.Click
+    Private Sub eui_cmdAnteprima_Click(sender As Object, e As EventArgs) Handles eui_cmdAnteprima.Click
       Try
          ' Salva le modifiche apportate al documento.
          If SalvaDocumento() = True Then

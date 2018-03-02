@@ -1209,44 +1209,44 @@ Public Class ElencoPrenCamere
       End Try
    End Sub
 
-   ' A_TODO: HOTEL - da modificare!
-   Public Sub AggiornaDatiPeriodo()
-      Try
-         ' Rimuove i dati di un'eventuale ricerca.
-         TestoRicerca.Text = String.Empty
+    ' A_TODO: HOTEL - da modificare!
+    Public Sub AggiornaDatiPeriodo()
+        Try
+            ' Rimuove i dati di un'eventuale ricerca.
+            TestoRicerca.Text = String.Empty
 
-         Dim frmFiltroPerido As New FiltroPeriodo
-         If frmFiltroPerido.ShowDialog = Windows.Forms.DialogResult.OK Then
+            Dim frmFiltroPerido As New FiltroPeriodo()
+            If frmFiltroPerido.ShowDialog = Windows.Forms.DialogResult.OK Then
 
-            ' Crea la stringa di selezione dei dati.
-            Dim dataDal As String = CFormatta.FormattaData(frmFiltroPerido.eui_dtpDataDal.Value.GetValueOrDefault.ToShortDateString)
-            Dim dataAl As String = CFormatta.FormattaData(frmFiltroPerido.eui_dtpDataAl.Value.GetValueOrDefault.ToShortDateString)
-            sql = String.Format("SELECT TOP {0} * FROM {1} WHERE DataArrivo BETWEEN #{2}# AND #{3}# ORDER BY DataArrivo ASC", DIM_PAGINA_GRANDE, TAB_PRENOTAZIONI, dataDal, dataAl)
-            repSql = sql
-            LeggiDati("(" & sql & ")", sql)
+                ' Crea la stringa di selezione dei dati.
+                Dim dataDal As String = CFormatta.FormattaData(frmFiltroPerido.eui_dtpDataDal.Value.GetValueOrDefault.ToShortDateString)
+                Dim dataAl As String = CFormatta.FormattaData(frmFiltroPerido.eui_dtpDataAl.Value.GetValueOrDefault.ToShortDateString)
+                sql = String.Format("SELECT TOP {0} * FROM {1} WHERE DataArrivo BETWEEN #{2}# AND #{3}# ORDER BY DataArrivo ASC", DIM_PAGINA_GRANDE, TAB_PRENOTAZIONI, dataDal, dataAl)
+                repSql = sql
+                LeggiDati("(" & sql & ")", sql)
 
-            ' Se nella tabella non ci sono record disattiva i pulsanti.
-            ConvalidaDati()
+                ' Se nella tabella non ci sono record disattiva i pulsanti.
+                ConvalidaDati()
 
-            ' Aggiorna l 'intestazione della griglia dati.
-            AggIntGriglia()
+                ' Aggiorna l 'intestazione della griglia dati.
+                AggIntGriglia()
 
-            ' Aggiorna il titolo della finestra.
-            AggTitoloFinestra(TITOLO_FINESTRA_ELENCO_PREN_CAMERE)
+                ' Aggiorna il titolo della finestra.
+                AggTitoloFinestra(TITOLO_FINESTRA_ELENCO_PREN_CAMERE)
 
-            ' Somma i valori delle colonne.
-            SommaValoriColonne()
+                ' Somma i valori delle colonne.
+                SommaValoriColonne()
 
-         End If
+            End If
 
-      Catch ex As Exception
-         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-         err.GestisciErrore(ex.StackTrace, ex.Message)
+        Catch ex As Exception
+            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+            err.GestisciErrore(ex.StackTrace, ex.Message)
 
-      End Try
-   End Sub
+        End Try
+    End Sub
 
-   Public Sub AggiornaDatiArrivoOggi()
+    Public Sub AggiornaDatiArrivoOggi()
       Try
          ' Rimuove i dati di un'eventuale ricerca.
          TestoRicerca.Text = String.Empty

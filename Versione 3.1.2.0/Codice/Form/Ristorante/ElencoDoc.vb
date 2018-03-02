@@ -18,9 +18,10 @@ Public Class ElencoDoc
    Const COLONNA_ID_DOC As Short = 0
    Const COLONNA_NUMERO_DOC As Short = 1
    Const COLONNA_DATA_DOC As Short = 2
-   Const COLONNA_TIPO_DOC As Short = 4
-   Const COLONNA_STATO_DOC As Short = 6
-   Const COLONNA_IMPORTO_TOTALE As Short = 9 '6 '7
+    Const COLONNA_TIPO_DOC As Short = 4
+    Const COLONNA_INTESTATARIO As Short = 5
+    Const COLONNA_STATO_DOC As Short = 6
+    Const COLONNA_IMPORTO_TOTALE As Short = 9 '6 '7
    Const COLONNA_IMPORTO_SOSPESO As Short = 10 '7 '8
    Const COLONNA_IMPORTO_IMPONIBILE As Short = 11 '7 '8
    Const COLONNA_IMPORTO_IMPOSTA As Short = 12 '7 '8
@@ -1502,49 +1503,49 @@ Public Class ElencoDoc
       End Try
    End Sub
 
-   Public Sub AggiornaDatiPeriodo()
-      Try
-         ' Rimuove i dati di un'eventuale ricerca.
-         eui_txtTestoRicerca.Text = String.Empty
+    Public Sub AggiornaDatiPeriodo()
+        Try
+            ' Rimuove i dati di un'eventuale ricerca.
+            eui_txtTestoRicerca.Text = String.Empty
 
-         Dim frmFiltroPerido As New FiltroPeriodo
-         If frmFiltroPerido.ShowDialog = Windows.Forms.DialogResult.OK Then
+            Dim frmFiltroPerido As New FiltroPeriodo()
+            If frmFiltroPerido.ShowDialog = Windows.Forms.DialogResult.OK Then
 
-            ' Crea la stringa di selezione dei dati.
-            Dim dataDal As String = CFormatta.FormattaData(frmFiltroPerido.eui_dtpDataDal.Value.GetValueOrDefault.ToShortDateString)
-            Dim dataAl As String = CFormatta.FormattaData(frmFiltroPerido.eui_dtpDataAl.Value.GetValueOrDefault.ToShortDateString)
-            sql = String.Format("Select TOP {0} * FROM {1} WHERE DataDoc BETWEEN #{2}# And #{3}# ORDER BY DataDoc ASC", DIM_PAGINA_GRANDE, TAB_DOCUMENTI, dataDal, dataAl)
-            repSql = sql
-            LeggiDati("(" & sql & ")", sql)
+                ' Crea la stringa di selezione dei dati.
+                Dim dataDal As String = CFormatta.FormattaData(frmFiltroPerido.eui_dtpDataDal.Value.GetValueOrDefault.ToShortDateString)
+                Dim dataAl As String = CFormatta.FormattaData(frmFiltroPerido.eui_dtpDataAl.Value.GetValueOrDefault.ToShortDateString)
+                sql = String.Format("Select TOP {0} * FROM {1} WHERE DataDoc BETWEEN #{2}# And #{3}# ORDER BY DataDoc ASC", DIM_PAGINA_GRANDE, TAB_DOCUMENTI, dataDal, dataAl)
+                repSql = sql
+                LeggiDati("(" & sql & ")", sql)
 
-            ' Attiva/disattiva il pulsanti per i sospesi, i buoni e annulla.
-            AttivaDisattivaSospeso()
-            AttivaDisattivaPassaSospeso()
-            AttivaDisattivaAnnullaSospeso()
-            AttivaDisattivaBuoni()
-            AttivaDisattivaAnnullaDoc()
+                ' Attiva/disattiva il pulsanti per i sospesi, i buoni e annulla.
+                AttivaDisattivaSospeso()
+                AttivaDisattivaPassaSospeso()
+                AttivaDisattivaAnnullaSospeso()
+                AttivaDisattivaBuoni()
+                AttivaDisattivaAnnullaDoc()
 
-            ' Se nella tabella non ci sono record disattiva i pulsanti.
-            ConvalidaDati()
+                ' Se nella tabella non ci sono record disattiva i pulsanti.
+                ConvalidaDati()
 
-            ' Aggiorna l'intestazione della griglia dati.
-            AggIntGriglia()
+                ' Aggiorna l'intestazione della griglia dati.
+                AggIntGriglia()
 
-            ' Aggiorna il titolo della finestra.
-            AggTitoloFinestra(TITOLO_FINESTRA)
+                ' Aggiorna il titolo della finestra.
+                AggTitoloFinestra(TITOLO_FINESTRA)
 
-            ' Somma i valori della colonna Importo.
-            SommaImporti()
-         End If
+                ' Somma i valori della colonna Importo.
+                SommaImporti()
+            End If
 
-      Catch ex As Exception
-         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-         err.GestisciErrore(ex.StackTrace, ex.Message)
+        Catch ex As Exception
+            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+            err.GestisciErrore(ex.StackTrace, ex.Message)
 
-      End Try
-   End Sub
+        End Try
+    End Sub
 
-   Public Sub AggiornaDatiMese()
+    Public Sub AggiornaDatiMese()
       Try
          ' Crea la stringa di selezione dei dati.
          Dim Anno As String = Year(Now)
@@ -2417,14 +2418,14 @@ Public Class ElencoDoc
 
    Public Sub IncassaSospeso()
       Try
-         ' Apre la finestra per l'incasso del sospeso.
-         Dim frm As New IncassaSospeso(DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 0),
-                                          DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 1),
-                                          DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 2),
-                                          DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 4),
-                                          DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 5),
-                                          DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 8))
-         frm.ShowDialog()
+            ' Apre la finestra per l'incasso del sospeso.
+            Dim frm As New IncassaSospeso(DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, COLONNA_ID_DOC),
+                                          DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, COLONNA_NUMERO_DOC),
+                                          DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, COLONNA_DATA_DOC),
+                                          DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, COLONNA_TIPO_DOC),
+                                          DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, COLONNA_INTESTATARIO),
+                                          DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, COLONNA_IMPORTO_SOSPESO))
+            frm.ShowDialog()
 
       Catch ex As Exception
 
@@ -2461,13 +2462,13 @@ Public Class ElencoDoc
             ' Conferma transazione.
             tr.Commit()
 
-            Dim Data As String = DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 2)
-            Dim Documento As String = DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 4)
-            Dim Numero As String = DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 1)
-            Dim Importo As String = CFormatta.FormattaEuro(DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 7))
+                Dim Data As String = DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, COLONNA_DATA_DOC)
+                Dim Documento As String = DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, COLONNA_TIPO_DOC)
+                Dim Numero As String = DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, COLONNA_NUMERO_DOC)
+                Dim Importo As String = CFormatta.FormattaEuro(DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, COLONNA_IMPORTO_TOTALE))
 
-            ' Registra loperazione effettuata dall'operatore identificato.
-            Dim strDescrizione As String = "(" & Documento & " n. " & Numero & " del " & Data & " - € " & Importo & ")"
+                ' Registra loperazione effettuata dall'operatore identificato.
+                Dim strDescrizione As String = "(" & Documento & " n. " & Numero & " del " & Data & " - € " & Importo & ")"
             g_frmMain.RegistraOperazione(TipoOperazione.PassaSospeso, strDescrizione, MODULO_CONTABILITA_DOCUMENTI)
 
             If g_frmMain.eui_Strumenti_Sospesi_Filtra.Pressed = True Then
@@ -2534,13 +2535,13 @@ Public Class ElencoDoc
             ' Conferma transazione.
             tr.Commit()
 
-            Dim Data As String = DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 2)
-            Dim Documento As String = DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 4)
-            Dim Numero As String = DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 1)
-            Dim Importo As String = CFormatta.FormattaEuro(DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 7))
+                Dim Data As String = DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, COLONNA_DATA_DOC)
+                Dim Documento As String = DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, COLONNA_TIPO_DOC)
+                Dim Numero As String = DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, COLONNA_NUMERO_DOC)
+                Dim Importo As String = CFormatta.FormattaEuro(DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, COLONNA_IMPORTO_TOTALE))
 
-            ' Registra loperazione effettuata dall'operatore identificato.
-            Dim strDescrizione As String = "(" & Documento & " n. " & Numero & " del " & Data & " - € " & Importo & ")"
+                ' Registra loperazione effettuata dall'operatore identificato.
+                Dim strDescrizione As String = "(" & Documento & " n. " & Numero & " del " & Data & " - € " & Importo & ")"
             g_frmMain.RegistraOperazione(TipoOperazione.AnnullaSospeso, strDescrizione, MODULO_CONTABILITA_DOCUMENTI)
 
             If g_frmMain.eui_Strumenti_Sospesi_Filtra.Pressed = True Then
@@ -2589,9 +2590,9 @@ Public Class ElencoDoc
 
          Dim frm As New ElencoBuoni
 
-         ' Visualizza l'anagrafica clienti.
-         frm.Tag = DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 0)
-         frm.ShowDialog()
+            ' Visualizza l'anagrafica clienti.
+            frm.Tag = DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, COLONNA_ID_DOC)
+            frm.ShowDialog()
 
          ' Modifica il cursore del mouse.
          Cursor.Current = Cursors.Default

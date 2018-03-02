@@ -378,9 +378,6 @@ D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.Visua
 D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Shell.Interop.dll
 D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.TemplateWizardInterface.dll
 D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.TextManager.Interop.dll
-D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.OLE.Interop.xml
-D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Shell.Interop.xml
-D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.TextManager.Interop.xml
 D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Shell.Design.dll
 D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VSDesigner.DLL
 D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Shell.14.0.dll
@@ -412,7 +409,6 @@ D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.Visua
 D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.ProjectAggregator.dll
 D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Shell.Immutable.12.0.dll
 D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.ImageCatalog.dll
-D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.Build.Framework.dll
 D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\VSLangProj2.dll
 D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\System.Threading.Tasks.Dataflow.dll
 D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Data.dll
@@ -429,20 +425,10 @@ D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.Visua
 D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Shell.Design.xml
 D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.TemplateWizardInterface.xml
 D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Shell.14.0.xml
-D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Shell.Interop.10.0.xml
-D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Shell.Interop.8.0.xml
-D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Shell.Interop.11.0.xml
-D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.WCFReference.Interop.xml
-D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Data.Services.xml
-D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Data.Core.xml
 D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Designer.Interfaces.xml
 D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Shell.Immutable.10.0.xml
-D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.ManagedInterfaces.xml
 D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Shell.Immutable.14.0.xml
 D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Shell.Immutable.11.0.xml
-D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Shell.Interop.9.0.xml
-D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.TextManager.Interop.8.0.xml
-D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.ProjectAggregator.xml
 D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Shell.Immutable.12.0.xml
 D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.ImageCatalog.xml
 D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.CoreUtility.xml
@@ -461,3 +447,18 @@ D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\it\Microsoft.Vi
 D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\it\Microsoft.VisualStudio.GraphModel.resources.dll
 D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\it\Microsoft.VisualStudio.Data.Host.resources.dll
 D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\it\Microsoft.VisualStudio.Data.Providers.Common.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Shell.15.0.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Data.Framework.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.ComponentModelHost.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Shell.Framework.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Threading.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Text.Data.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Validation.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Threading.xml
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Text.Data.xml
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Validation.xml
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\it\Microsoft.VisualStudio.Data.Services.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\it\Microsoft.VisualStudio.Data.Core.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\it\Microsoft.VisualStudio.Shell.15.0.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\it\Microsoft.VisualStudio.Data.Framework.resources.dll
+D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\obj\Release\Hospitality Solution 3.1.2.0.vbproj.CoreCompileInputs.cache
