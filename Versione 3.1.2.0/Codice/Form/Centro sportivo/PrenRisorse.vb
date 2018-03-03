@@ -4049,7 +4049,7 @@ Public Class frmPrenRisorse
       End Try
 
    End Function
-   ' DA_FARE_A: Modificare!
+
    Private Function SalvaDocumento() As Boolean
       Try
          Dim NumeroDocumento As Integer = LeggiNumeroDocFiscaleConfig(TAB_DOC, tipoDocumento)
@@ -4064,17 +4064,17 @@ Public Class frmPrenRisorse
             .Ora = dtpData.Value.ToShortTimeString
             .Tipo = tipoDocumento
             .Stato = "Emesso e stampato"
-                .Causale = "Vendita da Centro sportivo"
+            .Causale = "Vendita da Centro sportivo"
 
-                'Select Case tipoCliente
-                '   Case Cliente.Azienda
-                '      ' Viene aggiunta la lettera A per identificare le Aziende.
-                '      ' Codice aggiunto dopo la creazione della nuova anagrafica Aziende.
-                '      .IdCliente = "A" & idCliente
-                '   Case Cliente.Privato
-                'End Select
+            'Select Case tipoCliente
+            '   Case Cliente.Azienda
+            '      ' Viene aggiunta la lettera A per identificare le Aziende.
+            '      ' Codice aggiunto dopo la creazione della nuova anagrafica Aziende.
+            '      .IdCliente = "A" & idCliente
+            '   Case Cliente.Privato
+            'End Select
 
-                If VerificaCliente(cmbCliente, cmbCliente.Text) = True Then
+            If VerificaCliente(cmbCliente, cmbCliente.Text) = True Then
                ' Se i dati del cliente sono nell'anagrafica li legge per utilizzarli nei documenti fiscali.
                .IdCliente = cmbIdCliente.Items(cmbCliente.SelectedIndex).ToString
                .Cliente = FormattaApici(cmbCliente.Text)
@@ -4128,7 +4128,7 @@ Public Class frmPrenRisorse
 
             .TotDoc = CFormatta.FormattaNumeroDouble(Convert.ToDouble(valDaPagare))
 
-            If tipoDocumento = TIPO_DOC_FF Or tipoDocumento = TIPO_DOC_RF Then
+            If tipoDocumento = TIPO_DOC_FF Or tipoDocumento = TIPO_DOC_RF Or tipoDocumento = TIPO_DOC_SF Then
                ' Calcola l'IVA.
                Dim valImposta As Double
                Dim valImponibile As Double
@@ -4166,26 +4166,26 @@ Public Class frmPrenRisorse
 
             ' Avvia una transazione.
             tr = cn.BeginTransaction(IsolationLevel.ReadCommitted)
-                ' Crea la stringa di inserimento.
-                sql = String.Format("INSERT INTO {0} (RifDoc, CodiceArticolo, Descrizione, Unit‡Misura, Quantit‡, ValoreUnitario, Sconto, ImportoNetto, AliquotaIva, Categoria) " &
+            ' Crea la stringa di inserimento.
+            sql = String.Format("INSERT INTO {0} (RifDoc, CodiceArticolo, Descrizione, Unit‡Misura, Quantit‡, ValoreUnitario, Sconto, ImportoNetto, AliquotaIva, Categoria) " &
                                    "VALUES(@RifDoc, @CodiceArticolo, @Descrizione, @Unit‡Misura, @Quantit‡, @ValoreUnitario, @Sconto, @ImportoNetto, @AliquotaIva, @Categoria)", TAB_DETTAGLI_DOC)
 
-                ' Crea il comando per la connessione corrente.
-                Dim cmdInsert As New OleDbCommand(sql, cn, tr)
+            ' Crea il comando per la connessione corrente.
+            Dim cmdInsert As New OleDbCommand(sql, cn, tr)
 
-                cmdInsert.Parameters.AddWithValue("@RifDoc", LeggiUltimoRecord(TAB_DOC))
-                cmdInsert.Parameters.AddWithValue("@CodiceArticolo", String.Empty)
-                cmdInsert.Parameters.AddWithValue("@Descrizione", FormattaApici(lvwConto.Items(i).SubItems(0).Text))
-                cmdInsert.Parameters.AddWithValue("@Unit‡Misura", String.Empty)
-                cmdInsert.Parameters.AddWithValue("@Quantit‡", lvwConto.Items(i).SubItems(1).Text)
-                cmdInsert.Parameters.AddWithValue("@ValoreUnitario", VALORE_ZERO) ' B_TODO: Modifica per Retail.
-                cmdInsert.Parameters.AddWithValue("@Sconto", VALORE_ZERO)
-                cmdInsert.Parameters.AddWithValue("@ImportoNetto", lvwConto.Items(i).SubItems(2).Text)
-                cmdInsert.Parameters.AddWithValue("@AliquotaIva", AliquotaIvaCentroSportivo)
-                cmdInsert.Parameters.AddWithValue("@Categoria", String.Empty)
+            cmdInsert.Parameters.AddWithValue("@RifDoc", LeggiUltimoRecord(TAB_DOC))
+            cmdInsert.Parameters.AddWithValue("@CodiceArticolo", String.Empty)
+            cmdInsert.Parameters.AddWithValue("@Descrizione", FormattaApici(lvwConto.Items(i).SubItems(0).Text))
+            cmdInsert.Parameters.AddWithValue("@Unit‡Misura", String.Empty)
+            cmdInsert.Parameters.AddWithValue("@Quantit‡", lvwConto.Items(i).SubItems(1).Text)
+            cmdInsert.Parameters.AddWithValue("@ValoreUnitario", VALORE_ZERO) ' B_TODO: Modifica per Retail.
+            cmdInsert.Parameters.AddWithValue("@Sconto", VALORE_ZERO)
+            cmdInsert.Parameters.AddWithValue("@ImportoNetto", lvwConto.Items(i).SubItems(2).Text)
+            cmdInsert.Parameters.AddWithValue("@AliquotaIva", AliquotaIvaCentroSportivo)
+            cmdInsert.Parameters.AddWithValue("@Categoria", String.Empty)
 
-                ' Esegue il comando.
-                Dim Record As Integer = cmdInsert.ExecuteNonQuery()
+            ' Esegue il comando.
+            Dim Record As Integer = cmdInsert.ExecuteNonQuery()
             ' Conferma transazione.
             tr.Commit()
             'End If
@@ -4195,37 +4195,37 @@ Public Class frmPrenRisorse
          If Doc.Sconto <> VALORE_ZERO Then
             ' Avvia una transazione.
             tr = cn.BeginTransaction(IsolationLevel.ReadCommitted)
-                ' Crea la stringa di inserimento.
-                'sql = String.Format("INSERT INTO {0} (RifDoc, Descrizione, Quantit‡, ImportoNetto) " &
-                '                          "VALUES(@RifDoc, @Descrizione, @Quantit‡, @ImportoNetto)", TAB_DETTAGLI_DOC)
+            ' Crea la stringa di inserimento.
+            'sql = String.Format("INSERT INTO {0} (RifDoc, Descrizione, Quantit‡, ImportoNetto) " &
+            '                          "VALUES(@RifDoc, @Descrizione, @Quantit‡, @ImportoNetto)", TAB_DETTAGLI_DOC)
 
-                sql = String.Format("INSERT INTO {0} (RifDoc, CodiceArticolo, Descrizione, Unit‡Misura, Quantit‡, ValoreUnitario, Sconto, ImportoNetto, AliquotaIva, Categoria) " &
+            sql = String.Format("INSERT INTO {0} (RifDoc, CodiceArticolo, Descrizione, Unit‡Misura, Quantit‡, ValoreUnitario, Sconto, ImportoNetto, AliquotaIva, Categoria) " &
                                    "VALUES(@RifDoc, @CodiceArticolo, @Descrizione, @Unit‡Misura, @Quantit‡, @ValoreUnitario, @Sconto, @ImportoNetto, @AliquotaIva, @Categoria)", TAB_DETTAGLI_DOC)
 
-                ' Crea il comando per la connessione corrente.
-                Dim cmdInsert As New OleDbCommand(sql, cn, tr)
+            ' Crea il comando per la connessione corrente.
+            Dim cmdInsert As New OleDbCommand(sql, cn, tr)
 
-                cmdInsert.Parameters.AddWithValue("@RifDoc", LeggiUltimoRecord(TAB_DOC))
-                cmdInsert.Parameters.AddWithValue("@CodiceArticolo", String.Empty)
+            cmdInsert.Parameters.AddWithValue("@RifDoc", LeggiUltimoRecord(TAB_DOC))
+            cmdInsert.Parameters.AddWithValue("@CodiceArticolo", String.Empty)
 
-                If cmbApplicaSconto.SelectedIndex = 1 Then
-                    ' Sul totale del conto.
-                    cmdInsert.Parameters.AddWithValue("@Descrizione", "Sconto")
-                Else
-                    ' Sul costo della risorsa.
-                    cmdInsert.Parameters.AddWithValue("@Descrizione", "Sconto sul costo di " & cmbRisorsa.Text)
-                End If
+            If cmbApplicaSconto.SelectedIndex = 1 Then
+               ' Sul totale del conto.
+               cmdInsert.Parameters.AddWithValue("@Descrizione", "Sconto")
+            Else
+               ' Sul costo della risorsa.
+               cmdInsert.Parameters.AddWithValue("@Descrizione", "Sconto sul costo di " & cmbRisorsa.Text)
+            End If
 
-                cmdInsert.Parameters.AddWithValue("@Unit‡Misura", String.Empty)
-                cmdInsert.Parameters.AddWithValue("@Quantit‡", VALORE_ZERO)
-                cmdInsert.Parameters.AddWithValue("@ValoreUnitario", VALORE_ZERO) ' B_TODO: Modifica per Retail.
-                cmdInsert.Parameters.AddWithValue("@Sconto", VALORE_ZERO)
-                cmdInsert.Parameters.AddWithValue("@ImportoNetto", "-" & Doc.Sconto)
-                cmdInsert.Parameters.AddWithValue("@AliquotaIva", 0)
-                cmdInsert.Parameters.AddWithValue("@Categoria", String.Empty)
+            cmdInsert.Parameters.AddWithValue("@Unit‡Misura", String.Empty)
+            cmdInsert.Parameters.AddWithValue("@Quantit‡", VALORE_ZERO)
+            cmdInsert.Parameters.AddWithValue("@ValoreUnitario", VALORE_ZERO) ' B_TODO: Modifica per Retail.
+            cmdInsert.Parameters.AddWithValue("@Sconto", VALORE_ZERO)
+            cmdInsert.Parameters.AddWithValue("@ImportoNetto", "-" & Doc.Sconto)
+            cmdInsert.Parameters.AddWithValue("@AliquotaIva", 0)
+            cmdInsert.Parameters.AddWithValue("@Categoria", String.Empty)
 
-                ' Esegue il comando.
-                Dim Record As Integer = cmdInsert.ExecuteNonQuery()
+            ' Esegue il comando.
+            Dim Record As Integer = cmdInsert.ExecuteNonQuery()
             ' Conferma transazione.
             tr.Commit()
          End If

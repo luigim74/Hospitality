@@ -699,10 +699,8 @@ Public Class frmDocumento
             eui_txtTotaleDocumento.Text = CFormatta.FormattaNumeroDouble(Convert.ToDouble(.TotDoc))
 
             ' TOTALI.
-
-            ' DA_FARE_A: Valutare se salvare l'iva anche per gli scontrini.
-            ' Se Fattura o Ricevuta salva l'iva...
-            If eui_cmbTipoDocumento.Text = TIPO_DOC_FF Or eui_cmbTipoDocumento.Text = TIPO_DOC_RF Then
+            ' Se Fattura, Ricevuta o Scontrino salva l'iva...
+            If eui_cmbTipoDocumento.Text = TIPO_DOC_FF Or eui_cmbTipoDocumento.Text = TIPO_DOC_RF Or eui_cmbTipoDocumento.Text = TIPO_DOC_SF Then
                eui_txtTotaliRep1ImponibileLordo.Text = CFormatta.FormattaNumeroDouble(Convert.ToDouble(.ImpLordoRep1))
                eui_txtTotaliRep2ImponibileLordo.Text = CFormatta.FormattaNumeroDouble(Convert.ToDouble(.ImpLordoRep2))
                eui_txtTotaliRep3ImponibileLordo.Text = CFormatta.FormattaNumeroDouble(Convert.ToDouble(.ImpLordoRep3))
@@ -1218,27 +1216,25 @@ Public Class frmDocumento
             .BuoniPastoIncassare = eui_txtTotaliBuoni.Text
             .Note = eui_txtNote.Text
             .Chiuso = "No"
-
-                ' DA_FARE_A: Da modificare perchè non funziona e non salva il tipo pagamento.
-                If eui_txtTotaliCarte.Text <> VALORE_ZERO Then
-               .TipoPagamento = eui_cmbTipoPagamento.Text & ": € " & CFormatta.FormattaNumeroDouble(Convert.ToDouble(eui_txtTotaliCarte.Text))
-            Else
-               If eui_txtTotaliContanti.Text <> VALORE_ZERO Then
-                  .TipoPagamento = "Contanti"
-               Else
-                  .TipoPagamento = String.Empty
-               End If
-            End If
-
             .Tavolo = eui_txtTavolo.Text
             .Cameriere = eui_txtCameriere.Text
             .Sospeso = valSospeso.ToString
             .SospesoIncassare = valSospeso.ToString
             .TotDoc = valDaPagare.ToString
 
-            ' DA_FARE_A: Valutare se salvare l'iva anche per gli scontrini.
-            ' Se Fattura o Ricevuta salva l'iva...
-            If eui_cmbTipoDocumento.Text = TIPO_DOC_FF Or eui_cmbTipoDocumento.Text = TIPO_DOC_RF Then
+            ' Imposta il tipo di pagamento con il relativo importo.
+            If eui_txtTotaliCarte.Text <> VALORE_ZERO And eui_txtTotaliCarte.Text <> String.Empty Then
+               .TipoPagamento = eui_cmbTipoPagamento.Text & ": € " & CFormatta.FormattaNumeroDouble(Convert.ToDouble(eui_txtTotaliCarte.Text))
+            Else
+               If eui_txtTotaliContanti.Text <> VALORE_ZERO And eui_txtTotaliContanti.Text <> String.Empty Then
+                  .TipoPagamento = "Contanti"
+               Else
+                  .TipoPagamento = String.Empty
+               End If
+            End If
+
+            ' Se Fattura, Ricevuta o Scontrino salva l'iva...
+            If eui_cmbTipoDocumento.Text = TIPO_DOC_FF Or eui_cmbTipoDocumento.Text = TIPO_DOC_RF Or eui_cmbTipoDocumento.Text = TIPO_DOC_SF Then
 
                .ImpLordoRep1 = eui_txtTotaliRep1ImponibileLordo.Text
                .ImpLordoRep2 = eui_txtTotaliRep2ImponibileLordo.Text
@@ -1696,8 +1692,12 @@ Public Class frmDocumento
          CaricaListaClienti(eui_cmbClienteCognome, eui_cmbIdCliente, ANA_CLIENTI)
          CaricaLista(eui_cmbTipoPagamento, TAB_TIPO_PAGAMENTO)
 
+         ' Imposta il tipo di pagamento.
+         eui_cmbTipoPagamento.Text = "Contanti"
+
          Select Case nomeFinestra
             Case "ContoPos"
+               ' Il form non viene aperto dal conto pos.
                'LeggiDatiConto()
 
             Case "ElencoDoc"
@@ -1882,190 +1882,190 @@ Public Class frmDocumento
    End Sub
 
    Private Function LeggiNomeReport(ByVal tipoDoc As String) As String
-        Try
-            Dim percorsoReport As String
+      Try
+         Dim percorsoReport As String
 
-            ' Imposta il nome del Report.
-            Select Case tipoDoc
-                Case TIPO_DOC_CO, TIPO_DOC_PF
+         ' Imposta il nome del Report.
+         Select Case tipoDoc
+            Case TIPO_DOC_CO, TIPO_DOC_PF
 
-                    ' Conto e Proforma.
-                    If ImpostaNomeDoc(2) <> String.Empty Then
-                        percorsoReport = "\Reports\" & ImpostaNomeDoc(2)
-                    Else
-                        percorsoReport = PERCORSO_REP_PF_A4_DOPPIA
-                    End If
+               ' Conto e Proforma.
+               If ImpostaNomeDoc(2) <> String.Empty Then
+                  percorsoReport = "\Reports\" & ImpostaNomeDoc(2)
+               Else
+                  percorsoReport = PERCORSO_REP_PF_A4_DOPPIA
+               End If
 
-                Case TIPO_DOC_RF
+            Case TIPO_DOC_RF
 
-                    ' Ricevuta Fiscale.
-                    If ImpostaNomeDoc(0) <> String.Empty Then
-                        percorsoReport = "\Reports\" & ImpostaNomeDoc(0)
-                    Else
-                        percorsoReport = PERCORSO_REP_RF_A4_DOPPIA
-                    End If
+               ' Ricevuta Fiscale.
+               If ImpostaNomeDoc(0) <> String.Empty Then
+                  percorsoReport = "\Reports\" & ImpostaNomeDoc(0)
+               Else
+                  percorsoReport = PERCORSO_REP_RF_A4_DOPPIA
+               End If
 
-                Case TIPO_DOC_FF
+            Case TIPO_DOC_FF
 
-                    ' Fattura.
-                    If ImpostaNomeDoc(1) <> String.Empty Then
-                        percorsoReport = "\Reports\" & ImpostaNomeDoc(1)
-                    Else
-                        percorsoReport = PERCORSO_REP_FF_A4_DOPPIA
-                    End If
+               ' Fattura.
+               If ImpostaNomeDoc(1) <> String.Empty Then
+                  percorsoReport = "\Reports\" & ImpostaNomeDoc(1)
+               Else
+                  percorsoReport = PERCORSO_REP_FF_A4_DOPPIA
+               End If
 
-                Case TIPO_DOC_SF
+            Case TIPO_DOC_SF
 
-                    ' Scontrino.
-                    If ImpostaNomeDoc(3) <> String.Empty Then
-                        percorsoReport = "\Reports\" & ImpostaNomeDoc(3)
-                    Else
-                        percorsoReport = PERCORSO_REP_SF
-                    End If
+               ' Scontrino.
+               If ImpostaNomeDoc(3) <> String.Empty Then
+                  percorsoReport = "\Reports\" & ImpostaNomeDoc(3)
+               Else
+                  percorsoReport = PERCORSO_REP_SF
+               End If
 
-            End Select
+         End Select
 
-            Return percorsoReport
+         Return percorsoReport
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-        End Try
+      End Try
 
-    End Function
+   End Function
 
-    Private Function LeggiNomeStampante(ByVal tipoDoc As String) As String
-        Try
-            Dim percorsoStampante As String
+   Private Function LeggiNomeStampante(ByVal tipoDoc As String) As String
+      Try
+         Dim percorsoStampante As String
 
-            ' Imposta il nome del Report.
-            Select Case tipoDoc
-                Case TIPO_DOC_CO, TIPO_DOC_PF
+         ' Imposta il nome del Report.
+         Select Case tipoDoc
+            Case TIPO_DOC_CO, TIPO_DOC_PF
 
-                    ' Imposta il percorso completo del nome stampante.
-                    percorsoStampante = ImpostaNomeStampante(2)
+               ' Imposta il percorso completo del nome stampante.
+               percorsoStampante = ImpostaNomeStampante(2)
 
-                Case TIPO_DOC_RF
+            Case TIPO_DOC_RF
 
-                    ' Imposta il percorso completo del nome stampante.
-                    percorsoStampante = ImpostaNomeStampante(0)
+               ' Imposta il percorso completo del nome stampante.
+               percorsoStampante = ImpostaNomeStampante(0)
 
-                Case TIPO_DOC_FF
+            Case TIPO_DOC_FF
 
-                    ' Imposta il percorso completo del nome stampante.
-                    percorsoStampante = ImpostaNomeStampante(1)
+               ' Imposta il percorso completo del nome stampante.
+               percorsoStampante = ImpostaNomeStampante(1)
 
-                Case TIPO_DOC_SF
+            Case TIPO_DOC_SF
 
-                    ' Imposta il percorso completo del nome stampante.
-                    percorsoStampante = ImpostaNomeStampante(3)
+               ' Imposta il percorso completo del nome stampante.
+               percorsoStampante = ImpostaNomeStampante(3)
 
-            End Select
+         End Select
 
-            Return percorsoStampante
+         Return percorsoStampante
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-            Return String.Empty
+         Return String.Empty
 
-        End Try
+      End Try
 
-    End Function
+   End Function
 
-    Private Sub AnteprimaDiStampa()
-        Try
-            ' Ottiene l'Id del documento.
-            Dim idDocumento As String
-            If Me.Tag = String.Empty Then
-                ' Nuovo documento.
-                idDocumento = LeggiUltimoRecord(TAB_DOCUMENTI)
-            Else
-                ' Documento esistente.
-                idDocumento = Me.Tag
-            End If
+   Private Sub AnteprimaDiStampa()
+      Try
+         ' Ottiene l'Id del documento.
+         Dim idDocumento As String
+         If Me.Tag = String.Empty Then
+            ' Nuovo documento.
+            idDocumento = LeggiUltimoRecord(TAB_DOCUMENTI)
+         Else
+            ' Documento esistente.
+            idDocumento = Me.Tag
+         End If
 
-            ' Stampare il documento...
-            'Utilizzare il modello di oggetti ADO .NET per impostare le informazioni di connessione. 
-            Dim cn As New OleDbConnection(ConnString)
+         ' Stampare il documento...
+         'Utilizzare il modello di oggetti ADO .NET per impostare le informazioni di connessione. 
+         Dim cn As New OleDbConnection(ConnString)
 
-            cn.Open()
+         cn.Open()
 
-            ' Tabella Documenti.
-            Dim oleAdapter As New OleDbDataAdapter
-            oleAdapter.SelectCommand = New OleDbCommand("SELECT * FROM " & TAB_DOCUMENTI & " WHERE Id = " & idDocumento, cn)
+         ' Tabella Documenti.
+         Dim oleAdapter As New OleDbDataAdapter
+         oleAdapter.SelectCommand = New OleDbCommand("SELECT * FROM " & TAB_DOCUMENTI & " WHERE Id = " & idDocumento, cn)
 
-            Dim ds As New HospitalityDataSet 'Dataset1 'utilizzato con Crystal Reports
-            ds.Clear()
-            oleAdapter.Fill(ds, TAB_DOCUMENTI)
+         Dim ds As New HospitalityDataSet 'Dataset1 'utilizzato con Crystal Reports
+         ds.Clear()
+         oleAdapter.Fill(ds, TAB_DOCUMENTI)
 
-            ' Tabella DettagliDoc
-            Dim oleAdapter1 As New OleDbDataAdapter
-            oleAdapter1.SelectCommand = New OleDbCommand("SELECT * FROM " & TAB_DETTAGLI_DOCUMENTI & " WHERE RifDoc = " & idDocumento, cn)
-            oleAdapter1.Fill(ds, TAB_DETTAGLI_DOCUMENTI)
+         ' Tabella DettagliDoc
+         Dim oleAdapter1 As New OleDbDataAdapter
+         oleAdapter1.SelectCommand = New OleDbCommand("SELECT * FROM " & TAB_DETTAGLI_DOCUMENTI & " WHERE RifDoc = " & idDocumento, cn)
+         oleAdapter1.Fill(ds, TAB_DETTAGLI_DOCUMENTI)
 
-            ' Tabella Azienda
-            Dim oleAdapter2 As New OleDbDataAdapter
-            oleAdapter2.SelectCommand = New OleDbCommand("SELECT * FROM " & TAB_AZIENDA, cn)
-            oleAdapter2.Fill(ds, TAB_AZIENDA)
+         ' Tabella Azienda
+         Dim oleAdapter2 As New OleDbDataAdapter
+         oleAdapter2.SelectCommand = New OleDbCommand("SELECT * FROM " & TAB_AZIENDA, cn)
+         oleAdapter2.Fill(ds, TAB_AZIENDA)
 
-            ' ReportViewer - Apre la finestra di Anteprima di stampa per il documento.
-            Dim frm As New ReportViewer(ds, LeggiNomeReport(eui_cmbTipoDocumento.Text), LeggiNomeStampante(eui_cmbTipoDocumento.Text))
-            frm.ShowDialog()
+         ' ReportViewer - Apre la finestra di Anteprima di stampa per il documento.
+         Dim frm As New ReportViewer(ds, LeggiNomeReport(eui_cmbTipoDocumento.Text), LeggiNomeStampante(eui_cmbTipoDocumento.Text))
+         frm.ShowDialog()
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-        End Try
+      End Try
 
-    End Sub
+   End Sub
 
-    Private Sub eui_cmdImportaDoc_Click(sender As Object, e As EventArgs) Handles eui_cmdImportaDoc.Click
-        Try
-            Dim frm As New ListaDocumenti(eui_cmbClienteCognome.Text)
-            frm.ShowDialog()
+   Private Sub eui_cmdImportaDoc_Click(sender As Object, e As EventArgs) Handles eui_cmdImportaDoc.Click
+      Try
+         Dim frm As New ListaDocumenti(eui_cmbClienteCognome.Text)
+         frm.ShowDialog()
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-        End Try
-    End Sub
+      End Try
+   End Sub
 
-    Private Sub eui_cmdSalva_Click(sender As Object, e As EventArgs) Handles eui_cmdSalva.Click
-        Try
-            ' Salva il documento e chiude la finestra.
-            If SalvaDocumento() = True Then
-                Me.Close()
-
-                ' Se aperto aggiorna l'elenco documenti.
-                If IsNothing(g_frmDocumenti) = False Then
-                    g_frmDocumenti.AggiornaDati()
-                End If
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-
-        End Try
-    End Sub
-
-    Private Sub eui_cmdAnnulla_Click(sender As Object, e As EventArgs) Handles eui_cmdAnnulla.Click
-        Try
+   Private Sub eui_cmdSalva_Click(sender As Object, e As EventArgs) Handles eui_cmdSalva.Click
+      Try
+         ' Salva il documento e chiude la finestra.
+         If SalvaDocumento() = True Then
             Me.Close()
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+            ' Se aperto aggiorna l'elenco documenti.
+            If IsNothing(g_frmDocumenti) = False Then
+               g_frmDocumenti.AggiornaDati()
+            End If
+         End If
 
-        End Try
-    End Sub
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-    Private Sub eui_cmdAnteprima_Click(sender As Object, e As EventArgs) Handles eui_cmdAnteprima.Click
+      End Try
+   End Sub
+
+   Private Sub eui_cmdAnnulla_Click(sender As Object, e As EventArgs) Handles eui_cmdAnnulla.Click
+      Try
+         Me.Close()
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
+   End Sub
+
+   Private Sub eui_cmdAnteprima_Click(sender As Object, e As EventArgs) Handles eui_cmdAnteprima.Click
       Try
          ' Salva le modifiche apportate al documento.
          If SalvaDocumento() = True Then
@@ -2331,6 +2331,32 @@ Public Class frmDocumento
 
    End Sub
 
+   Private Sub CalcolaImportoSospeso()
+      Try
+         Dim totaleDoc As Double = Convert.ToDouble(eui_txtTotaleConto.Text)
+         Dim contanti As Double = Convert.ToDouble(eui_txtTotaliContanti.Text)
+         Dim carte As Double = Convert.ToDouble(eui_txtTotaliCarte.Text)
+         Dim buoni As Double = Convert.ToDouble(eui_txtTotaliBuoni.Text)
+         Dim valPagamento As Double = contanti + carte + buoni
+         Dim sospeso As Double = totaleDoc - valPagamento
+
+         If valPagamento > totaleDoc Then
+            MessageBox.Show("Il valore dei pagamenti specificati non può essere maggiore dell'importo totale del documento.", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            eui_txtTotaliContanti.Text = eui_txtTotaleConto.Text
+            eui_txtTotaliCarte.Text = VALORE_ZERO
+            eui_txtTotaliBuoni.Text = VALORE_ZERO
+         Else
+            eui_txtTotaliSospeso.Text = CFormatta.FormattaNumeroDouble(Convert.ToDouble(sospeso))
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+         eui_txtTotaliSospeso.Text = VALORE_ZERO
+      End Try
+   End Sub
+
    Private Sub dgvDettagli_CellValueChanged(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDettagli.CellValueChanged
       Try
          ' Se ci sono righe nel documento...
@@ -2561,64 +2587,142 @@ Public Class frmDocumento
    End Sub
 
    Private Sub eui_txtTotaliSospeso_KeyPress(sender As Object, e As KeyPressEventArgs) Handles eui_txtTotaliSospeso.KeyPress
+      ' Annulla il carattere premuto. 
+      e.KeyChar = String.Empty
+   End Sub
+
+   Private Sub eui_txtTotaliCoperto_LostFocus(sender As Object, e As EventArgs) Handles eui_txtTotaliCoperto.LostFocus
+      ' Non usata!
       Try
-         e.Handled = CConvalida.DigitaSoloNumeriPuntegg(e.KeyChar)
+         If IsNumeric(sender.Text) = True Then
+            sender.Text = CFormatta.FormattaNumeroDouble(Convert.ToDouble(sender.Text))
+         Else
+            sender.Text = VALORE_ZERO
+         End If
 
       Catch ex As Exception
          ' Visualizza un messaggio di errore e lo registra nell'apposito file.
          err.GestisciErrore(ex.StackTrace, ex.Message)
 
       End Try
+   End Sub
+
+   Private Sub eui_txtTotaliContanti_LostFocus(sender As Object, e As EventArgs) Handles eui_txtTotaliContanti.LostFocus
+      Try
+         If IsNumeric(sender.Text) = True Then
+            Dim totaleDoc As Double = Convert.ToDouble(eui_txtTotaleConto.Text)
+            Dim contanti As Double = Convert.ToDouble(eui_txtTotaliContanti.Text)
+
+            If contanti > totaleDoc Then
+               MessageBox.Show("Il valore specificato per i Contanti non può essere maggiore dell'importo totale del documento.", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+
+               sender.Text = CFormatta.FormattaNumeroDouble(Convert.ToDouble(eui_txtTotaleConto.Text))
+               eui_txtTotaliCarte.Text = VALORE_ZERO
+               eui_txtTotaliBuoni.Text = VALORE_ZERO
+
+               Exit Sub
+            Else
+               sender.Text = CFormatta.FormattaNumeroDouble(Convert.ToDouble(sender.Text))
+            End If
+         Else
+            sender.Text = VALORE_ZERO
+         End If
+
+         CalcolaImportoSospeso()
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
+   End Sub
+
+   Private Sub eui_txtTotaliCarte_LostFocus(sender As Object, e As EventArgs) Handles eui_txtTotaliCarte.LostFocus
+      Try
+         If IsNumeric(sender.Text) = True Then
+            Dim totaleDoc As Double = Convert.ToDouble(eui_txtTotaleConto.Text)
+            Dim carte As Double = Convert.ToDouble(eui_txtTotaliCarte.Text)
+
+            If carte > totaleDoc Then
+               MessageBox.Show("Il valore specificato per le Carte di credito non può essere maggiore dell'importo totale del documento.", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+
+               sender.Text = CFormatta.FormattaNumeroDouble(Convert.ToDouble(eui_txtTotaleConto.Text))
+               eui_txtTotaliContanti.Text = VALORE_ZERO
+               eui_txtTotaliBuoni.Text = VALORE_ZERO
+
+               Exit Sub
+            Else
+               sender.Text = CFormatta.FormattaNumeroDouble(Convert.ToDouble(sender.Text))
+            End If
+         Else
+            sender.Text = VALORE_ZERO
+         End If
+
+         CalcolaImportoSospeso()
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
+   End Sub
+
+   Private Sub eui_txtTotaliBuoni_LostFocus(sender As Object, e As EventArgs) Handles eui_txtTotaliBuoni.LostFocus
+      ' NON UTILIZZATA!
+      'Try
+      '   If IsNumeric(sender.Text) = True Then
+      '      Dim totaleDoc As Double = Convert.ToDouble(eui_txtTotaleConto.Text)
+      '      Dim buoni As Double = Convert.ToDouble(eui_txtTotaliBuoni.Text)
+
+      '      If buoni > totaleDoc Then
+      '         MessageBox.Show("Il valore specificato per i Buoni pasto non può essere maggiore dell'importo totale del documento.", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+
+      '         sender.Text = CFormatta.FormattaNumeroDouble(Convert.ToDouble(eui_txtTotaleConto.Text))
+      '         eui_txtTotaliContanti.Text = VALORE_ZERO
+      '         eui_txtTotaliCarte.Text = VALORE_ZERO
+
+      '         Exit Sub
+      '      Else
+      '         sender.Text = CFormatta.FormattaNumeroDouble(Convert.ToDouble(sender.Text))
+      '      End If
+      '   Else
+      '      sender.Text = VALORE_ZERO
+      '   End If
+
+      '   CalcolaImportoSospeso()
+
+      'Catch ex As Exception
+      '   ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+      '   err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      'End Try
    End Sub
 
    Private Sub eui_txtTotaliSospeso_LostFocus(sender As Object, e As EventArgs) Handles eui_txtTotaliSospeso.LostFocus
       Try
-         Dim sospeso As Double
          If IsNumeric(sender.Text) = True Then
-            sospeso = Convert.ToDouble(sender.Text)
-         End If
-
-         Dim totaleDoc As Double
-         If IsNumeric(eui_txtTotaleDocumento.Text) = True Then
-            totaleDoc = Convert.ToDouble(eui_txtTotaleDocumento.Text)
-         End If
-
-         If sospeso > totaleDoc Then
-            MessageBox.Show("Il valore sospeso specificato non può essere maggiore dell'importo totale del documento.", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            sender.Text = CFormatta.FormattaNumeroDouble(Convert.ToDouble(sender.Text))
+         Else
             sender.Text = VALORE_ZERO
-            sender.Focus()
          End If
 
       Catch ex As Exception
          ' Visualizza un messaggio di errore e lo registra nell'apposito file.
          err.GestisciErrore(ex.StackTrace, ex.Message)
 
-      Finally
-         sender.Text = CFormatta.FormattaNumeroDouble(Convert.ToDouble(sender.Text))
-
       End Try
 
    End Sub
 
-   Private Sub eui_txtTotaliCoperto_LostFocus(sender As Object, e As EventArgs) Handles eui_txtTotaliCoperto.LostFocus
-      sender.Text = CFormatta.FormattaNumeroDouble(Convert.ToDouble(sender.Text))
-   End Sub
-
-   Private Sub eui_txtTotaliContanti_LostFocus(sender As Object, e As EventArgs) Handles eui_txtTotaliContanti.LostFocus
-      sender.Text = CFormatta.FormattaNumeroDouble(Convert.ToDouble(sender.Text))
-   End Sub
-
-   Private Sub eui_txtTotaliBuoni_LostFocus(sender As Object, e As EventArgs) Handles eui_txtTotaliBuoni.LostFocus
-      sender.Text = CFormatta.FormattaNumeroDouble(Convert.ToDouble(sender.Text))
-   End Sub
-
-   Private Sub eui_txtTotaliCarte_LostFocus(sender As Object, e As EventArgs) Handles eui_txtTotaliCarte.LostFocus
-      sender.Text = CFormatta.FormattaNumeroDouble(Convert.ToDouble(sender.Text))
-   End Sub
-
    Private Sub eui_cmdTastiera_Click(sender As Object, e As EventArgs) Handles eui_cmdTastiera.Click
-      AvviaTastieraVirtuale(Me.Handle)
-   End Sub
+      Try
+         AvviaTastieraVirtuale(Me.Handle)
 
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
+   End Sub
 
 End Class

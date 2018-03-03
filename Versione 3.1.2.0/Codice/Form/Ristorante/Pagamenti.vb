@@ -94,7 +94,7 @@ Public Class Pagamenti
       Me.eui_cmdAnnulla.DialogResult = System.Windows.Forms.DialogResult.Cancel
       Me.eui_cmdAnnulla.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.eui_cmdAnnulla.Id = "27859f66-aaf1-49a4-8ff9-b854b92b080d"
-      Me.eui_cmdAnnulla.Location = New System.Drawing.Point(426, 446)
+      Me.eui_cmdAnnulla.Location = New System.Drawing.Point(439, 435)
       Me.eui_cmdAnnulla.Name = "eui_cmdAnnulla"
       Me.eui_cmdAnnulla.Size = New System.Drawing.Size(128, 53)
       Me.eui_cmdAnnulla.TabIndex = 1
@@ -105,7 +105,7 @@ Public Class Pagamenti
       Me.AutoScaleBaseSize = New System.Drawing.Size(9, 22)
       Me.BackColor = System.Drawing.SystemColors.AppWorkspace
       Me.CancelButton = Me.eui_cmdAnnulla
-      Me.ClientSize = New System.Drawing.Size(595, 526)
+      Me.ClientSize = New System.Drawing.Size(576, 496)
       Me.Controls.Add(Me.eui_cmdAnnulla)
       Me.Controls.Add(Me.pnlPag)
       Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -229,9 +229,19 @@ Public Class Pagamenti
    End Sub
 
    Private Sub Pagamenti_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-      Me.Tag = sender.TextButton
-      Me.DialogResult = DialogResult.OK
-      Me.Close()
+      Try
+         ' Riproduce un effetto sonoro.
+         RiproduciEffettoSonoro(My.Resources.beep_Normale, EffettiSonoriPOS)
+
+         Me.Tag = sender.TextButton
+         Me.DialogResult = DialogResult.OK
+         Me.Close()
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
    End Sub
 
    Private Sub Pagamenti_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load

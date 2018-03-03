@@ -771,138 +771,137 @@ Public Class IncassaSospeso
         End Try
     End Sub
 
-    ' DA_FARE_A: Modificare!
-    Private Sub SalvaDocumento()
-        Try
-            Dim NumeroDocumento As Integer = LeggiNumeroDocFiscaleConfig(TAB_DOC, tipoDocumento)
+   Private Sub SalvaDocumento()
+      Try
+         Dim NumeroDocumento As Integer = LeggiNumeroDocFiscaleConfig(TAB_DOC, tipoDocumento)
 
-            With Doc
-                .Numero = NumeroDocumento 'LeggiNumeroMax(TAB_DOC, tipoDocumento) + 1
-                .Anno = Now.Year
-                .Data = dtpData.Value.Date
+         With Doc
+            .Numero = NumeroDocumento 'LeggiNumeroMax(TAB_DOC, tipoDocumento) + 1
+            .Anno = Now.Year
+            .Data = dtpData.Value.Date
 
-                If DateTime.Now.Minute.ToString.Length = 1 Then
-                    .Ora = DateTime.Now.Hour & "." & "0" & DateTime.Now.Minute
-                Else
-                    .Ora = DateTime.Now.Hour & "." & DateTime.Now.Minute
-                End If
+            If DateTime.Now.Minute.ToString.Length = 1 Then
+               .Ora = DateTime.Now.Hour & "." & "0" & DateTime.Now.Minute
+            Else
+               .Ora = DateTime.Now.Hour & "." & DateTime.Now.Minute
+            End If
 
-                .Tipo = tipoDocumento
-                .Stato = "Emesso e stampato"
-                .Causale = "Riscosso importo sospeso"
+            .Tipo = tipoDocumento
+            .Stato = "Emesso e stampato"
+            .Causale = "Riscosso importo sospeso"
 
-                .IdCliente = idCliente
-                .Cliente = FormattaApici(cmbIntestatario.Text)
-                .Indirizzo = FormattaApici(txtIndirizzo.Text)
-                .Cap = FormattaApici(txtCap.Text)
-                .Citt‡ = FormattaApici(txtCitt‡.Text)
-                .Provincia = FormattaApici(txtProv.Text)
-                .PIva = txtPIva.Text
-                .CodFiscale = txtCodiceFiscale.Text
-                .CodAzienda = String.Empty
+            .IdCliente = idCliente
+            .Cliente = FormattaApici(cmbIntestatario.Text)
+            .Indirizzo = FormattaApici(txtIndirizzo.Text)
+            .Cap = FormattaApici(txtCap.Text)
+            .Citt‡ = FormattaApici(txtCitt‡.Text)
+            .Provincia = FormattaApici(txtProv.Text)
+            .PIva = txtPIva.Text
+            .CodFiscale = txtCodiceFiscale.Text
+            .CodAzienda = String.Empty
 
-                .ImpLordoRep1 = VALORE_ZERO
-                .ImpLordoRep2 = VALORE_ZERO
-                .ImpLordoRep3 = VALORE_ZERO
-                .ImpLordoRep4 = VALORE_ZERO
-                .AliquotaIvaRep1 = VALORE_ZERO
-                .AliquotaIvaRep2 = VALORE_ZERO
-                .AliquotaIvaRep3 = VALORE_ZERO
-                .AliquotaIvaRep4 = VALORE_ZERO
-                .ImpostaRep1 = VALORE_ZERO
-                .ImpostaRep2 = VALORE_ZERO
-                .ImpostaRep3 = VALORE_ZERO
-                .ImpostaRep4 = VALORE_ZERO
+            .ImpLordoRep1 = VALORE_ZERO
+            .ImpLordoRep2 = VALORE_ZERO
+            .ImpLordoRep3 = VALORE_ZERO
+            .ImpLordoRep4 = VALORE_ZERO
+            .AliquotaIvaRep1 = VALORE_ZERO
+            .AliquotaIvaRep2 = VALORE_ZERO
+            .AliquotaIvaRep3 = VALORE_ZERO
+            .AliquotaIvaRep4 = VALORE_ZERO
+            .ImpostaRep1 = VALORE_ZERO
+            .ImpostaRep2 = VALORE_ZERO
+            .ImpostaRep3 = VALORE_ZERO
+            .ImpostaRep4 = VALORE_ZERO
 
-                .Coperto = VALORE_ZERO
-                .Sconto = VALORE_ZERO
-                .TipoSconto = String.Empty
-                .Servizio = VALORE_ZERO
-                .TipoServizio = String.Empty
-                .Contanti = VALORE_ZERO
-                .Carte = VALORE_ZERO
-                .BuoniPasto = VALORE_ZERO
-                .BuoniPastoIncassare = VALORE_ZERO
-                .Chiuso = "SÏ"
-                .Note = ""
-                .TipoPagamento = String.Empty
-                .Tavolo = String.Empty
-                .Cameriere = String.Empty
-                .Sospeso = txtSospeso.Text
-                .SospesoIncassare = txtSospeso.Text
-                .TotDoc = CFormatta.FormattaEuro(totaleDoc)
+            .Coperto = VALORE_ZERO
+            .Sconto = VALORE_ZERO
+            .TipoSconto = String.Empty
+            .Servizio = VALORE_ZERO
+            .TipoServizio = String.Empty
+            .Contanti = VALORE_ZERO
+            .Carte = VALORE_ZERO
+            .BuoniPasto = VALORE_ZERO
+            .BuoniPastoIncassare = VALORE_ZERO
+            .Chiuso = "SÏ"
+            .Note = ""
+            .TipoPagamento = String.Empty
+            .Tavolo = String.Empty
+            .Cameriere = String.Empty
+            .Sospeso = txtSospeso.Text
+            .SospesoIncassare = txtSospeso.Text
+            .TotDoc = CFormatta.FormattaEuro(totaleDoc)
 
-                .Imponibile = VALORE_ZERO
-                .Iva = VALORE_ZERO
-                .Imposta = VALORE_ZERO
+            .Imponibile = VALORE_ZERO
+            .Iva = VALORE_ZERO
+            .Imposta = VALORE_ZERO
 
-                .InserisciDati(TAB_DOC)
-            End With
+            .InserisciDati(TAB_DOC)
+         End With
 
-            ' SALVA I DETTAGLI DEL DOCUMENTO.
-            Dim sql As String
-            ' Apre la connessione.
-            cn.Open()
+         ' SALVA I DETTAGLI DEL DOCUMENTO.
+         Dim sql As String
+         ' Apre la connessione.
+         cn.Open()
 
-            ' Avvia una transazione.
-            tr = cn.BeginTransaction(IsolationLevel.ReadCommitted)
-            ' Crea la stringa.
-            sql = String.Format("INSERT INTO {0} (RifDoc, CodiceArticolo, Descrizione, Unit‡Misura, Quantit‡, ValoreUnitario, Sconto, ImportoNetto, AliquotaIva, Categoria) " &
+         ' Avvia una transazione.
+         tr = cn.BeginTransaction(IsolationLevel.ReadCommitted)
+         ' Crea la stringa.
+         sql = String.Format("INSERT INTO {0} (RifDoc, CodiceArticolo, Descrizione, Unit‡Misura, Quantit‡, ValoreUnitario, Sconto, ImportoNetto, AliquotaIva, Categoria) " &
                                    "VALUES(@RifDoc, @CodiceArticolo, @Descrizione, @Unit‡Misura, @Quantit‡, @ValoreUnitario, @Sconto, @ImportoNetto, @AliquotaIva, @Categoria)", TAB_DETTAGLI_DOC)
 
-            ' Crea il comando per la connessione corrente.
-            Dim cmdInsert As New OleDbCommand(sql, cn, tr)
+         ' Crea il comando per la connessione corrente.
+         Dim cmdInsert As New OleDbCommand(sql, cn, tr)
 
-            cmdInsert.Parameters.AddWithValue("@RifDoc", LeggiUltimoRecord(TAB_DOC))
-            cmdInsert.Parameters.AddWithValue("@CodiceArticolo", String.Empty)
-            cmdInsert.Parameters.AddWithValue("@Descrizione", "Rif. " & tipoDoc & " n. " & numeroDoc & " del " & dataDoc)
-            cmdInsert.Parameters.AddWithValue("@Unit‡Misura", String.Empty)
-            cmdInsert.Parameters.AddWithValue("@Quantit‡", VALORE_ZERO)
-            cmdInsert.Parameters.AddWithValue("@ValoreUnitario", VALORE_ZERO) ' B_TODO: Modifica per Retail.
-            cmdInsert.Parameters.AddWithValue("@Sconto", VALORE_ZERO)
-            cmdInsert.Parameters.AddWithValue("@ImportoNetto", totaleDoc)
-            cmdInsert.Parameters.AddWithValue("@AliquotaIva", 0)
-            cmdInsert.Parameters.AddWithValue("@Categoria", String.Empty)
+         cmdInsert.Parameters.AddWithValue("@RifDoc", LeggiUltimoRecord(TAB_DOC))
+         cmdInsert.Parameters.AddWithValue("@CodiceArticolo", String.Empty)
+         cmdInsert.Parameters.AddWithValue("@Descrizione", "Rif. " & tipoDoc & " n. " & numeroDoc & " del " & dataDoc)
+         cmdInsert.Parameters.AddWithValue("@Unit‡Misura", String.Empty)
+         cmdInsert.Parameters.AddWithValue("@Quantit‡", VALORE_ZERO)
+         cmdInsert.Parameters.AddWithValue("@ValoreUnitario", VALORE_ZERO) ' B_TODO: Modifica per Retail.
+         cmdInsert.Parameters.AddWithValue("@Sconto", VALORE_ZERO)
+         cmdInsert.Parameters.AddWithValue("@ImportoNetto", totaleDoc)
+         cmdInsert.Parameters.AddWithValue("@AliquotaIva", 0)
+         cmdInsert.Parameters.AddWithValue("@Categoria", String.Empty)
 
-            ' Esegue il comando.
-            Dim Record As Integer = cmdInsert.ExecuteNonQuery()
-            ' Conferma transazione.
-            tr.Commit()
+         ' Esegue il comando.
+         Dim Record As Integer = cmdInsert.ExecuteNonQuery()
+         ' Conferma transazione.
+         tr.Commit()
 
-            ' AZZERA IL VALORE DEL CAMPO SOSPESO.
-            ' Avvia una transazione.
-            tr = cn.BeginTransaction(IsolationLevel.ReadCommitted)
-            ' Crea la stringa.
-            sql = String.Format("UPDATE {0} SET SospesoIncassare = @SospesoIncassare WHERE Id = {1}", TAB_DOC, idDoc)
+         ' AZZERA IL VALORE DEL CAMPO SOSPESO.
+         ' Avvia una transazione.
+         tr = cn.BeginTransaction(IsolationLevel.ReadCommitted)
+         ' Crea la stringa.
+         sql = String.Format("UPDATE {0} SET SospesoIncassare = @SospesoIncassare WHERE Id = {1}", TAB_DOC, idDoc)
 
-            ' Crea il comando per la connessione corrente.
-            Dim cmdUpdate As New OleDbCommand(sql, cn, tr)
+         ' Crea il comando per la connessione corrente.
+         Dim cmdUpdate As New OleDbCommand(sql, cn, tr)
 
-            cmdUpdate.Parameters.Add("@SospesoIncassare", VALORE_ZERO)
+         cmdUpdate.Parameters.Add("@SospesoIncassare", VALORE_ZERO)
 
-            ' Esegue il comando.
-            Dim Record1 As Integer = cmdUpdate.ExecuteNonQuery()
-            ' Conferma transazione.
-            tr.Commit()
+         ' Esegue il comando.
+         Dim Record1 As Integer = cmdUpdate.ExecuteNonQuery()
+         ' Conferma transazione.
+         tr.Commit()
 
-            ' Salva il Numero del prossimo documento da stampare.
-            SalvaNumeroDocFiscaleConfig(TAB_DOC, tipoDocumento, NumeroDocumento)
+         ' Salva il Numero del prossimo documento da stampare.
+         SalvaNumeroDocFiscaleConfig(TAB_DOC, tipoDocumento, NumeroDocumento)
 
-        Catch ex As Exception
-            ' Annulla transazione.
-            tr.Rollback()
+      Catch ex As Exception
+         ' Annulla transazione.
+         tr.Rollback()
 
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-        Finally
-            ' Chiude la connessione.
-            cn.Close()
+      Finally
+         ' Chiude la connessione.
+         cn.Close()
 
-        End Try
-    End Sub
+      End Try
+   End Sub
 
-    Private Function LeggiNumeroMax(ByVal tabella As String, ByVal tipoDoc As String) As Integer
+   Private Function LeggiNumeroMax(ByVal tabella As String, ByVal tipoDoc As String) As Integer
         Dim closeOnExit As Boolean
         Dim numRec As Integer
 

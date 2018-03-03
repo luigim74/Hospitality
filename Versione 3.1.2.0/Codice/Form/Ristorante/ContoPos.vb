@@ -3326,7 +3326,8 @@ Public Class ContoPos
             .SospesoIncassare = CFormatta.FormattaNumeroDouble(valSospeso)
             .TotDoc = CFormatta.FormattaNumeroDouble(Convert.ToDouble(valDaPagare))
 
-            If tipoDocumento = TIPO_DOC_FF Or tipoDocumento = TIPO_DOC_RF Then
+            ' Se Fattura, Ricevuta o Scontrino salva l'iva...
+            If tipoDocumento = TIPO_DOC_FF Or tipoDocumento = TIPO_DOC_RF Or tipoDocumento = TIPO_DOC_SF Then
                Dim importo1 As Double
                Dim importo2 As Double
                Dim importo3 As Double

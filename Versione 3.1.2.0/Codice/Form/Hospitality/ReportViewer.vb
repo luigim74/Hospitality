@@ -15,8 +15,8 @@
          ' Imposta il nome della stampante.
          nomeStampante = percorsoNomeStampante
 
-            ReportViewer1.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Local
-            ReportViewer1.LocalReport.ReportPath = Application.StartupPath & nomeDoc
+         ReportViewer1.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Local
+         ReportViewer1.LocalReport.ReportPath = Application.StartupPath & nomeDoc
 
             Select Case nomeReport
                 Case PERCORSO_REP_ACCESSORI_SERVIZI_A4

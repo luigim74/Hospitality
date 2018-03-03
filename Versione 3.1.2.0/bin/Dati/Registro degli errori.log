@@ -1,71 +1,11 @@
-"*** 02/03/2018 - 09:51:12 ***"
-"- DESCRIZIONE ERRORE: Cast non valido dalla stringa ""Contanti"" al tipo 'Double'."
-"- NOME PROCEDURA:    in Microsoft.VisualBasic.CompilerServices.Conversions.ToDouble(String Value, NumberFormatInfo NumberFormat)
-   in Microsoft.VisualBasic.CompilerServices.Conversions.ToDouble(String Value)
-   in Hospitality_Solution.IncassaSospeso..ctor(Int32 id, String numero, String data, String tipo, String int, String totale) in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Ristorante\IncassaSospeso.vb:riga 56
-   in Hospitality_Solution.ElencoDoc.IncassaSospeso() in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Ristorante\ElencoDoc.vb:riga 2421"
-"
-"
-"*** 02/03/2018 - 09:51:36 ***"
-"- DESCRIZIONE ERRORE: Cast non valido dalla stringa ""Contanti"" al tipo 'Double'."
-"- NOME PROCEDURA:    in Microsoft.VisualBasic.CompilerServices.Conversions.ToDouble(String Value, NumberFormatInfo NumberFormat)
-   in Microsoft.VisualBasic.CompilerServices.Conversions.ToDouble(String Value)
-   in Hospitality_Solution.IncassaSospeso..ctor(Int32 id, String numero, String data, String tipo, String int, String totale) in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Ristorante\IncassaSospeso.vb:riga 56
-   in Hospitality_Solution.ElencoDoc.IncassaSospeso() in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Ristorante\ElencoDoc.vb:riga 2421"
-"
-"
-"*** 02/03/2018 - 10:06:55 ***"
-"- DESCRIZIONE ERRORE: Tipi di dati non corrispondenti nell'espressione criterio."
+"*** 03/03/2018 - 18:52:09 ***"
+"- DESCRIZIONE ERRORE: Impossibile aggiungere la quantità di dati desiderata. Inserire o incollare meno dati."
 "- NOME PROCEDURA:    in System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
    in System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object& executeResult)
    in System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object& executeResult)
    in System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object& executeResult)
    in System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
    in System.Data.OleDb.OleDbCommand.ExecuteNonQuery()
-   in Hospitality_Solution.IncassaSospeso.SalvaDocumento() in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Ristorante\IncassaSospeso.vb:riga 870"
-"
-"
-"*** 02/03/2018 - 10:27:04 ***"
-"- DESCRIZIONE ERRORE: Tipi di dati non corrispondenti nell'espressione criterio."
-"- NOME PROCEDURA:    in System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
-   in System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object& executeResult)
-   in System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object& executeResult)
-   in System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object& executeResult)
-   in System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
-   in System.Data.OleDb.OleDbCommand.ExecuteNonQuery()
-   in Hospitality_Solution.ElencoDoc.PassaSospeso(Int32 id, String totale)"
-"
-"
-"*** 02/03/2018 - 10:28:32 ***"
-"- DESCRIZIONE ERRORE: Tipi di dati non corrispondenti nell'espressione criterio."
-"- NOME PROCEDURA:    in System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
-   in System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object& executeResult)
-   in System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object& executeResult)
-   in System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object& executeResult)
-   in System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
-   in System.Data.OleDb.OleDbCommand.ExecuteNonQuery()
-   in Hospitality_Solution.ElencoDoc.PassaSospeso(Int32 id, String totale)"
-"
-"
-"*** 02/03/2018 - 10:42:48 ***"
-"- DESCRIZIONE ERRORE: Tipi di dati non corrispondenti nell'espressione criterio."
-"- NOME PROCEDURA:    in System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
-   in System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object& executeResult)
-   in System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object& executeResult)
-   in System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object& executeResult)
-   in System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
-   in System.Data.OleDb.OleDbCommand.ExecuteNonQuery()
-   in Hospitality_Solution.ElencoDoc.PassaSospeso(Int32 id, String totale)"
-"
-"
-"*** 02/03/2018 - 10:43:10 ***"
-"- DESCRIZIONE ERRORE: Tipi di dati non corrispondenti nell'espressione criterio."
-"- NOME PROCEDURA:    in System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
-   in System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object& executeResult)
-   in System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object& executeResult)
-   in System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object& executeResult)
-   in System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
-   in System.Data.OleDb.OleDbCommand.ExecuteNonQuery()
-   in Hospitality_Solution.ElencoDoc.PassaSospeso(Int32 id, String totale)"
+   in Hospitality_Solution.Documenti.ModificaDati(String tabella, String codice)"
 "
 "
