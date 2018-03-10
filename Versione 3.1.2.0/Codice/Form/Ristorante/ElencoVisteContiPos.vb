@@ -161,7 +161,7 @@ Public Class ElencoVisteContiPos
       Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
       Me.BackColor = System.Drawing.SystemColors.AppWorkspace
       Me.CancelButton = Me.eui_cmdAnnulla
-      Me.ClientSize = New System.Drawing.Size(579, 562)
+      Me.ClientSize = New System.Drawing.Size(579, 564)
       Me.Controls.Add(Me.eui_cmdVisteSu)
       Me.Controls.Add(Me.eui_cmdVisteGiù)
       Me.Controls.Add(Me.lstvViste)

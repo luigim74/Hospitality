@@ -11,6 +11,7 @@ Public Class frmDocumento
    Const TAB_CAUSALI_DOCUMENTI As String = "CausaliDocumento"
    Const TAB_TIPO_PAGAMENTO As String = "ModPagamento"
    Const TAB_STATISTICHE As String = "Statistiche"
+   Const TAB_COMANDE As String = "Comande"
 
    Const TIPO_DOC_RF As String = "Ricevuta Fiscale"
    Const TIPO_DOC_FF As String = "Fattura"
@@ -825,9 +826,34 @@ Public Class frmDocumento
                If eui_cmbTipoDocumento.Text = TIPO_DOC_CO Or eui_cmbTipoDocumento.Text = TIPO_DOC_PF Then
                   eui_cmdEmettiStampa.Enabled = False
                   eui_cmdEmetti.Enabled = False
+
+                  If eui_txtTavolo.Text <> String.Empty Then
+                     ' Disattiva tutti i controlli delle schede.
+                     eui_tpGenerale.Enabled = False
+                     eui_tpDettagli.Enabled = False
+                     eui_tpTotali.Enabled = False
+                     eui_tpNote.Enabled = False
+
+                     ' Disattiva i comandi appropriati.
+                     eui_cmdSalva.Enabled = False
+                     eui_cmdEmettiStampa.Enabled = False
+                     eui_cmdEmetti.Enabled = False
+
+                     ' Disattiva le caselle dei totali.
+                     eui_txtImponibile.Enabled = False
+                     eui_txtImposta.Enabled = False
+                     eui_txtTotaleDocumento.Enabled = False
+
+                  End If
                End If
 
          End Select
+
+         ' Se uno scontrino disattiva solo i comandi di stampa.
+         If eui_cmbTipoDocumento.Text = TIPO_DOC_SF Then
+            eui_cmdAnteprima.Enabled = False
+            eui_cmdEmettiStampa.Enabled = False
+         End If
 
       Catch ex As Exception
          ' Visualizza un messaggio di errore e lo registra nell'apposito file.
@@ -1387,6 +1413,58 @@ Public Class frmDocumento
                tr.Commit()
             Next
 
+            ' DA_FARE: CODICE UTILE PER APRIRE I CONTI CREATI DA DOCUMENTI NEL PUNTO CASSA. 
+            '---------------------------------------------------------------------------------------------------------------------------------------
+            '' SALVA I DETTAGLI DELLE COMANDE.
+            'If eui_cmbTipoDocumento.Text = TIPO_DOC_CO Then
+
+            '   Dim CComande As New Comande
+            '   Dim J As Integer
+
+            '   With CComande
+            '      .EliminaDati(TAB_COMANDE, eui_txtNumero.Text)
+
+            '      For J = 0 To dgvDettagli.Rows.Count - 2 ' L'ultima riga è quella di inserimento dati.
+            '         .IdRisorsa = 0
+            '         .Risorsa = String.Empty
+            '         .Cameriere = String.Empty
+            '         .Coperti = "0"
+
+            '         If IsNothing(dgvDettagli.Rows(i).Cells(clnQta.Name).Value) = False Then
+            '            .Quantità = Convert.ToDouble(dgvDettagli.Rows(i).Cells(clnQta.Name).Value.ToString)
+            '         Else
+            '            .Quantità = 0
+            '         End If
+            '         If IsNothing(dgvDettagli.Rows(i).Cells(clnDescrizione.Name).Value) = False Then
+            '            .Descrizione = dgvDettagli.Rows(i).Cells(clnDescrizione.Name).Value.ToString
+            '         Else
+            '            .Descrizione = String.Empty
+            '         End If
+            '         If IsNothing(dgvDettagli.Rows(i).Cells(clnImporto.Name).Value) = False Then
+            '            .ImportoNetto = dgvDettagli.Rows(i).Cells(clnImporto.Name).Value.ToString
+            '         Else
+            '            .ImportoNetto = VALORE_ZERO
+            '         End If
+            '         If IsNothing(dgvDettagli.Rows(i).Cells(clnPrezzo.Name).Value) = False Then
+            '            .ValoreUnitario = dgvDettagli.Rows(i).Cells(clnPrezzo.Name).Value.ToString
+            '         Else
+            '            .ValoreUnitario = VALORE_ZERO
+            '         End If
+
+            '         .IdPiatto = Convert.ToInt32(g_frmPos.lstvDettagli.Items(i).SubItems(5).Text)
+            '         .CategoriaPiatto = g_frmPos.lstvDettagli.Items(i).SubItems(6).Text
+            '         .Reparto = g_frmPos.lstvDettagli.Items(i).SubItems(7).Text
+            '         .Inviata = g_frmPos.lstvDettagli.Items(i).SubItems(8).Text
+            '         .Esclusa = g_frmPos.lstvDettagli.Items(i).SubItems(9).Text
+            '         .Offerta = g_frmPos.lstvDettagli.Items(i).SubItems(10).Text
+            '         .NumeroConto = numConto
+
+            '         .InserisciDati(TAB_COMANDE)
+            '      Next
+            '   End With
+            'End If
+            '---------------------------------------------------------------------------------------------------------------------------------------
+
             ' Salva il Numero del prossimo documento da stampare.
             SalvaNumeroDocFiscaleConfig(TAB_DOCUMENTI, eui_cmbTipoDocumento.Text, Convert.ToInt32(eui_txtNumero.Text))
 
@@ -1839,19 +1917,22 @@ Public Class frmDocumento
             Case TIPO_DOC_CO, TIPO_DOC_PF
                NumeroDocumento = LeggiNumeroMax(TAB_DOCUMENTI, eui_cmbTipoDocumento.Text) + 1
 
+               eui_cmdAnteprima.Enabled = True
                eui_cmdEmettiStampa.Enabled = False
                eui_cmdEmetti.Enabled = False
 
             Case TIPO_DOC_RF, TIPO_DOC_FF
                NumeroDocumento = LeggiNumeroDocFiscaleConfig(TAB_DOCUMENTI, eui_cmbTipoDocumento.Text)
 
+               eui_cmdAnteprima.Enabled = True
                eui_cmdEmettiStampa.Enabled = True
                eui_cmdEmetti.Enabled = True
 
             Case TIPO_DOC_SF
                NumeroDocumento = LeggiNumeroMax(TAB_DOCUMENTI, eui_cmbTipoDocumento.Text) + 1
 
-               eui_cmdEmettiStampa.Enabled = True
+               eui_cmdAnteprima.Enabled = False
+               eui_cmdEmettiStampa.Enabled = False
                eui_cmdEmetti.Enabled = True
 
          End Select

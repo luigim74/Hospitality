@@ -483,7 +483,7 @@ Public Class CopertiPOS
       Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
       Me.BackColor = System.Drawing.SystemColors.AppWorkspace
       Me.CancelButton = Me.eui_cmdAnnulla
-      Me.ClientSize = New System.Drawing.Size(462, 262)
+      Me.ClientSize = New System.Drawing.Size(465, 259)
       Me.Controls.Add(Me.eui_cmdPiù)
       Me.Controls.Add(Me.eui_cmdMeno)
       Me.Controls.Add(Me.eui_cmdTastiera)

@@ -210,7 +210,7 @@ Public Class TipoElencoPos
       Me.AutoScaleBaseSize = New System.Drawing.Size(9, 22)
       Me.BackColor = System.Drawing.SystemColors.AppWorkspace
       Me.CancelButton = Me.eui_cmdAnnulla
-      Me.ClientSize = New System.Drawing.Size(556, 404)
+      Me.ClientSize = New System.Drawing.Size(558, 401)
       Me.Controls.Add(Me.eui_cmdAnnulla)
       Me.Controls.Add(Me.eui_cmdTastiera)
       Me.Controls.Add(Me.pnlPag)

@@ -765,14 +765,8 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Tavolo: </Value>
-                  <Style>
-                    <FontSize>8pt</FontSize>
-                  </Style>
-                </TextRun>
-                <TextRun>
                   <Label>Tavolo</Label>
-                  <Value>=First(Fields!Tavolo.Value, "Documenti")</Value>
+                  <Value>=IIf(First(Fields!Tavolo.Value, "Documenti") &lt;&gt; string.Empty, "Tavolo: " &amp; First(Fields!Tavolo.Value, "Documenti"), string.Empty)</Value>
                   <Style>
                     <FontSize>8pt</FontSize>
                   </Style>
@@ -783,14 +777,8 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Cameriere: </Value>
-                  <Style>
-                    <FontSize>8pt</FontSize>
-                  </Style>
-                </TextRun>
-                <TextRun>
                   <Label>Cameriere</Label>
-                  <Value>=First(Fields!Cameriere.Value, "Documenti")</Value>
+                  <Value>=IIf(First(Fields!Cameriere.Value, "Documenti") &lt;&gt; string.Empty, "Cameriere: " &amp; First(Fields!Cameriere.Value, "Documenti"), string.Empty)</Value>
                   <Style>
                     <FontSize>8pt</FontSize>
                   </Style>
@@ -1231,14 +1219,8 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Tavolo: </Value>
-                  <Style>
-                    <FontSize>8pt</FontSize>
-                  </Style>
-                </TextRun>
-                <TextRun>
                   <Label>Tavolo</Label>
-                  <Value>=First(Fields!Tavolo.Value, "Documenti")</Value>
+                  <Value>=IIf(First(Fields!Tavolo.Value, "Documenti") &lt;&gt; string.Empty, "Tavolo: " &amp; First(Fields!Tavolo.Value, "Documenti"), string.Empty)</Value>
                   <Style>
                     <FontSize>8pt</FontSize>
                   </Style>
@@ -1249,14 +1231,8 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Cameriere: </Value>
-                  <Style>
-                    <FontSize>8pt</FontSize>
-                  </Style>
-                </TextRun>
-                <TextRun>
                   <Label>Cameriere</Label>
-                  <Value>=First(Fields!Cameriere.Value, "Documenti")</Value>
+                  <Value>=IIf(First(Fields!Cameriere.Value, "Documenti") &lt;&gt; string.Empty, "Cameriere: " &amp; First(Fields!Cameriere.Value, "Documenti"), string.Empty)</Value>
                   <Style>
                     <FontSize>8pt</FontSize>
                   </Style>

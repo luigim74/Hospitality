@@ -426,7 +426,7 @@ Public Class frmVCPren
       Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
       Me.BackColor = System.Drawing.SystemColors.AppWorkspace
       Me.CancelButton = Me.eui_cmdAnnulla
-      Me.ClientSize = New System.Drawing.Size(536, 430)
+      Me.ClientSize = New System.Drawing.Size(530, 425)
       Me.Controls.Add(Me.eui_cmdAnnulla)
       Me.Controls.Add(Me.eui_cmdSalva)
       Me.Controls.Add(Me.eui_cmdTastiera)

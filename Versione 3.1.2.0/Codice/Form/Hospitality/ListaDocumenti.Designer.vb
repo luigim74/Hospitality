@@ -97,7 +97,7 @@ Partial Class ListaDocumenti
       'eui_cmdImporta
       '
       Me.eui_cmdImporta.Id = "abaed722-854b-4d92-af0e-42b09a2d6a9e"
-      Me.eui_cmdImporta.Location = New System.Drawing.Point(534, 434)
+      Me.eui_cmdImporta.Location = New System.Drawing.Point(534, 441)
       Me.eui_cmdImporta.Name = "eui_cmdImporta"
       Me.eui_cmdImporta.Size = New System.Drawing.Size(88, 32)
       Me.eui_cmdImporta.TabIndex = 3
@@ -107,7 +107,7 @@ Partial Class ListaDocumenti
       '
       Me.eui_cmdAnnulla.DialogResult = System.Windows.Forms.DialogResult.Cancel
       Me.eui_cmdAnnulla.Id = "a9af5fe5-2ead-4b3e-b9c6-13c65e252819"
-      Me.eui_cmdAnnulla.Location = New System.Drawing.Point(630, 434)
+      Me.eui_cmdAnnulla.Location = New System.Drawing.Point(630, 441)
       Me.eui_cmdAnnulla.Name = "eui_cmdAnnulla"
       Me.eui_cmdAnnulla.Size = New System.Drawing.Size(88, 32)
       Me.eui_cmdAnnulla.TabIndex = 4
@@ -118,7 +118,7 @@ Partial Class ListaDocumenti
       Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
       Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
       Me.BackColor = System.Drawing.SystemColors.AppWorkspace
-      Me.ClientSize = New System.Drawing.Size(737, 481)
+      Me.ClientSize = New System.Drawing.Size(727, 482)
       Me.Controls.Add(Me.eui_cmdImporta)
       Me.Controls.Add(Me.eui_cmdAnnulla)
       Me.Controls.Add(Me.lvwDocumenti)

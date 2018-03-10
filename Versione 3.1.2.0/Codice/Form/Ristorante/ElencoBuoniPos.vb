@@ -170,7 +170,7 @@ Public Class frmElencoBuoniPos
       Me.Label10.Size = New System.Drawing.Size(520, 40)
       Me.Label10.TabIndex = 7
       Me.Label10.Text = "Q.tà   Descrizione                                                               " &
-    "           Valore in Euro"
+    "        Valore in Euro"
       Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
       '
       'formFrameSkinner
@@ -260,7 +260,7 @@ Public Class frmElencoBuoniPos
       Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
       Me.BackColor = System.Drawing.SystemColors.AppWorkspace
       Me.CancelButton = Me.eui_cmdAnnulla
-      Me.ClientSize = New System.Drawing.Size(678, 571)
+      Me.ClientSize = New System.Drawing.Size(678, 576)
       Me.Controls.Add(Me.eui_cmdTotBuoni)
       Me.Controls.Add(Me.eui_cmdQuantitàMeno)
       Me.Controls.Add(Me.eui_cmdQuantitàPiù)

@@ -175,7 +175,7 @@ Public Class ElencoContiPos
       '
       Me.eui_cmdElabora.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.eui_cmdElabora.Id = "7a1eb92e-859a-4d27-b576-33ca41ac3da8"
-      Me.eui_cmdElabora.Location = New System.Drawing.Point(709, 662)
+      Me.eui_cmdElabora.Location = New System.Drawing.Point(318, 593)
       Me.eui_cmdElabora.Name = "eui_cmdElabora"
       Me.eui_cmdElabora.Size = New System.Drawing.Size(120, 53)
       Me.eui_cmdElabora.TabIndex = 6
@@ -419,7 +419,7 @@ Public Class ElencoContiPos
       Me.AutoScaleBaseSize = New System.Drawing.Size(23, 55)
       Me.BackColor = System.Drawing.SystemColors.AppWorkspace
       Me.CancelButton = Me.eui_cmdEsci
-      Me.ClientSize = New System.Drawing.Size(974, 657)
+      Me.ClientSize = New System.Drawing.Size(972, 657)
       Me.Controls.Add(Me.eui_txtNote)
       Me.Controls.Add(Me.lblNumConti)
       Me.Controls.Add(Me.Label1)

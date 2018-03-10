@@ -774,7 +774,7 @@ Public Class AsportoPOS
       Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
       Me.BackColor = System.Drawing.SystemColors.AppWorkspace
       Me.CancelButton = Me.eui_cmdAnnulla
-      Me.ClientSize = New System.Drawing.Size(641, 584)
+      Me.ClientSize = New System.Drawing.Size(642, 585)
       Me.Controls.Add(Me.eui_cmdMenoMezzora)
       Me.Controls.Add(Me.eui_cmdPiùMezzora)
       Me.Controls.Add(Me.eui_cmdOre24)

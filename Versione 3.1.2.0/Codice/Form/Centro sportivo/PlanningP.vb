@@ -249,9 +249,9 @@ Public Class frmPlanningP
       Me.Panel3.Controls.Add(Me.lblConfermata)
       Me.Panel3.Controls.Add(Me.Label1)
       Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
-      Me.Panel3.Location = New System.Drawing.Point(0, 507)
+      Me.Panel3.Location = New System.Drawing.Point(0, 515)
       Me.Panel3.Name = "Panel3"
-      Me.Panel3.Size = New System.Drawing.Size(877, 19)
+      Me.Panel3.Size = New System.Drawing.Size(885, 19)
       Me.Panel3.TabIndex = 11
       '
       'lblAbbonamento1
@@ -402,7 +402,7 @@ Public Class frmPlanningP
       Me.ToolBar2.Location = New System.Drawing.Point(0, 0)
       Me.ToolBar2.Name = "ToolBar2"
       Me.ToolBar2.ShowToolTips = True
-      Me.ToolBar2.Size = New System.Drawing.Size(877, 26)
+      Me.ToolBar2.Size = New System.Drawing.Size(885, 26)
       Me.ToolBar2.TabIndex = 15
       Me.ToolBar2.TextAlign = System.Windows.Forms.ToolBarTextAlign.Right
       '
@@ -483,7 +483,7 @@ Public Class frmPlanningP
       Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
       Me.Panel4.Location = New System.Drawing.Point(0, 26)
       Me.Panel4.Name = "Panel4"
-      Me.Panel4.Size = New System.Drawing.Size(877, 70)
+      Me.Panel4.Size = New System.Drawing.Size(885, 70)
       Me.Panel4.TabIndex = 16
       '
       'Altezza
@@ -491,7 +491,7 @@ Public Class frmPlanningP
       Me.Altezza.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.Altezza.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
       Me.Altezza.Items.AddRange(New Object() {"40", "50", "60", "70", "80"})
-      Me.Altezza.Location = New System.Drawing.Point(504, 21)
+      Me.Altezza.Location = New System.Drawing.Point(512, 21)
       Me.Altezza.Name = "Altezza"
       Me.Altezza.Size = New System.Drawing.Size(72, 21)
       Me.Altezza.TabIndex = 10
@@ -504,7 +504,7 @@ Public Class frmPlanningP
       Me.Label8.AutoSize = True
       Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.Label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-      Me.Label8.Location = New System.Drawing.Point(504, 2)
+      Me.Label8.Location = New System.Drawing.Point(512, 2)
       Me.Label8.Name = "Label8"
       Me.Label8.Size = New System.Drawing.Size(57, 15)
       Me.Label8.TabIndex = 12
@@ -520,7 +520,7 @@ Public Class frmPlanningP
       Me.ckbVisCosto.Enabled = False
       Me.ckbVisCosto.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.ckbVisCosto.ForeColor = System.Drawing.SystemColors.HighlightText
-      Me.ckbVisCosto.Location = New System.Drawing.Point(680, 48)
+      Me.ckbVisCosto.Location = New System.Drawing.Point(688, 48)
       Me.ckbVisCosto.Name = "ckbVisCosto"
       Me.ckbVisCosto.Size = New System.Drawing.Size(177, 19)
       Me.ckbVisCosto.TabIndex = 14
@@ -533,7 +533,7 @@ Public Class frmPlanningP
       Me.Label9.AutoSize = True
       Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.Label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-      Me.Label9.Location = New System.Drawing.Point(784, 5)
+      Me.Label9.Location = New System.Drawing.Point(792, 5)
       Me.Label9.Name = "Label9"
       Me.Label9.Size = New System.Drawing.Size(78, 15)
       Me.Label9.TabIndex = 13
@@ -545,7 +545,7 @@ Public Class frmPlanningP
       Me.Larghezza.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
       Me.Larghezza.Enabled = False
       Me.Larghezza.Items.AddRange(New Object() {"150", "160", "170", "180", "190", "200", "210", "220", "230", "240", "250"})
-      Me.Larghezza.Location = New System.Drawing.Point(784, 24)
+      Me.Larghezza.Location = New System.Drawing.Point(792, 24)
       Me.Larghezza.Name = "Larghezza"
       Me.Larghezza.Size = New System.Drawing.Size(72, 21)
       Me.Larghezza.TabIndex = 1
@@ -557,7 +557,7 @@ Public Class frmPlanningP
       Me.Label7.AutoSize = True
       Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.Label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-      Me.Label7.Location = New System.Drawing.Point(584, 5)
+      Me.Label7.Location = New System.Drawing.Point(592, 5)
       Me.Label7.Name = "Label7"
       Me.Label7.Size = New System.Drawing.Size(41, 15)
       Me.Label7.TabIndex = 7
@@ -567,7 +567,7 @@ Public Class frmPlanningP
       '
       Me.dtpData.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.dtpData.Enabled = False
-      Me.dtpData.Location = New System.Drawing.Point(584, 24)
+      Me.dtpData.Location = New System.Drawing.Point(592, 24)
       Me.dtpData.Name = "dtpData"
       Me.dtpData.Size = New System.Drawing.Size(192, 20)
       Me.dtpData.TabIndex = 0
@@ -581,7 +581,7 @@ Public Class frmPlanningP
       Me.lblDettagliPren.ForeColor = System.Drawing.SystemColors.Window
       Me.lblDettagliPren.Location = New System.Drawing.Point(16, 40)
       Me.lblDettagliPren.Name = "lblDettagliPren"
-      Me.lblDettagliPren.Size = New System.Drawing.Size(560, 16)
+      Me.lblDettagliPren.Size = New System.Drawing.Size(568, 16)
       Me.lblDettagliPren.TabIndex = 9
       '
       'lblRisorsaOra
@@ -593,7 +593,7 @@ Public Class frmPlanningP
       Me.lblRisorsaOra.ForeColor = System.Drawing.SystemColors.Window
       Me.lblRisorsaOra.Location = New System.Drawing.Point(11, 13)
       Me.lblRisorsaOra.Name = "lblRisorsaOra"
-      Me.lblRisorsaOra.Size = New System.Drawing.Size(565, 18)
+      Me.lblRisorsaOra.Size = New System.Drawing.Size(573, 18)
       Me.lblRisorsaOra.TabIndex = 8
       '
       'Ore
@@ -614,7 +614,7 @@ Public Class frmPlanningP
       Me.Panel1.Controls.Add(Me.Griglia)
       Me.Panel1.Location = New System.Drawing.Point(64, 104)
       Me.Panel1.Name = "Panel1"
-      Me.Panel1.Size = New System.Drawing.Size(797, 384)
+      Me.Panel1.Size = New System.Drawing.Size(805, 392)
       Me.Panel1.TabIndex = 62
       '
       'Risorse
@@ -624,7 +624,7 @@ Public Class frmPlanningP
       Me.Risorse.BackColor = System.Drawing.Color.Gray
       Me.Risorse.Location = New System.Drawing.Point(0, -1)
       Me.Risorse.Name = "Risorse"
-      Me.Risorse.Size = New System.Drawing.Size(10077, 33)
+      Me.Risorse.Size = New System.Drawing.Size(10085, 33)
       Me.Risorse.TabIndex = 63
       '
       'Griglia
@@ -641,9 +641,9 @@ Public Class frmPlanningP
       Me.HScrollBar1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.HScrollBar1.LargeChange = 80
-      Me.HScrollBar1.Location = New System.Drawing.Point(64, 488)
+      Me.HScrollBar1.Location = New System.Drawing.Point(64, 496)
       Me.HScrollBar1.Name = "HScrollBar1"
-      Me.HScrollBar1.Size = New System.Drawing.Size(796, 18)
+      Me.HScrollBar1.Size = New System.Drawing.Size(804, 18)
       Me.HScrollBar1.SmallChange = 40
       Me.HScrollBar1.TabIndex = 1
       '
@@ -652,9 +652,9 @@ Public Class frmPlanningP
       Me.VScrollBar1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.VScrollBar1.LargeChange = 80
-      Me.VScrollBar1.Location = New System.Drawing.Point(859, 136)
+      Me.VScrollBar1.Location = New System.Drawing.Point(867, 136)
       Me.VScrollBar1.Name = "VScrollBar1"
-      Me.VScrollBar1.Size = New System.Drawing.Size(18, 352)
+      Me.VScrollBar1.Size = New System.Drawing.Size(18, 360)
       Me.VScrollBar1.SmallChange = 40
       Me.VScrollBar1.TabIndex = 0
       '
@@ -670,7 +670,7 @@ Public Class frmPlanningP
       '
       Me.Panel6.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
       Me.Panel6.BackColor = System.Drawing.SystemColors.Control
-      Me.Panel6.Location = New System.Drawing.Point(0, 489)
+      Me.Panel6.Location = New System.Drawing.Point(0, 497)
       Me.Panel6.Name = "Panel6"
       Me.Panel6.Size = New System.Drawing.Size(64, 18)
       Me.Panel6.TabIndex = 68
@@ -684,7 +684,7 @@ Public Class frmPlanningP
       '
       Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
       Me.BackColor = System.Drawing.Color.Gray
-      Me.ClientSize = New System.Drawing.Size(877, 526)
+      Me.ClientSize = New System.Drawing.Size(885, 534)
       Me.Controls.Add(Me.Panel5)
       Me.Controls.Add(Me.Panel6)
       Me.Controls.Add(Me.VScrollBar1)

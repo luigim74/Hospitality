@@ -422,7 +422,7 @@ Public Class VisteContiPeriodoPOS
       Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
       Me.BackColor = System.Drawing.SystemColors.AppWorkspace
       Me.CancelButton = Me.eui_cmdAnnulla
-      Me.ClientSize = New System.Drawing.Size(313, 245)
+      Me.ClientSize = New System.Drawing.Size(310, 244)
       Me.Controls.Add(Me.dtpDataFinePeriodo)
       Me.Controls.Add(Me.Label7)
       Me.Controls.Add(Me.dtpDataInizioPeriodo)

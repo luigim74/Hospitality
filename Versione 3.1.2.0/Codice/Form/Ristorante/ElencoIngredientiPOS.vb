@@ -96,7 +96,7 @@ Public Class ElencoIngredientiPOS
       Me.eui_cmdOk.DialogResult = System.Windows.Forms.DialogResult.OK
       Me.eui_cmdOk.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.eui_cmdOk.Id = "1a9e92d9-0dbf-4c02-b78b-ee8ce7ae6166"
-      Me.eui_cmdOk.Location = New System.Drawing.Point(623, 461)
+      Me.eui_cmdOk.Location = New System.Drawing.Point(617, 442)
       Me.eui_cmdOk.Name = "eui_cmdOk"
       Me.eui_cmdOk.Size = New System.Drawing.Size(128, 53)
       Me.eui_cmdOk.TabIndex = 1
@@ -120,7 +120,7 @@ Public Class ElencoIngredientiPOS
       Me.dgElencoIngredienti.Location = New System.Drawing.Point(0, 0)
       Me.dgElencoIngredienti.Name = "dgElencoIngredienti"
       Me.dgElencoIngredienti.ReadOnly = True
-      Me.dgElencoIngredienti.Size = New System.Drawing.Size(773, 426)
+      Me.dgElencoIngredienti.Size = New System.Drawing.Size(756, 426)
       Me.dgElencoIngredienti.TabIndex = 0
       '
       'ElencoIngredientiPOS
@@ -128,7 +128,7 @@ Public Class ElencoIngredientiPOS
       Me.AcceptButton = Me.eui_cmdOk
       Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
       Me.BackColor = System.Drawing.SystemColors.AppWorkspace
-      Me.ClientSize = New System.Drawing.Size(772, 524)
+      Me.ClientSize = New System.Drawing.Size(754, 508)
       Me.Controls.Add(Me.eui_cmdOk)
       Me.Controls.Add(Me.dgElencoIngredienti)
       Me.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))

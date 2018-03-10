@@ -131,7 +131,7 @@ Public Class NoteContiPOS
       Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
       Me.BackColor = System.Drawing.SystemColors.AppWorkspace
       Me.CancelButton = Me.eui_cmdNo
-      Me.ClientSize = New System.Drawing.Size(570, 381)
+      Me.ClientSize = New System.Drawing.Size(567, 375)
       Me.Controls.Add(Me.eui_txtNote)
       Me.Controls.Add(Me.eui_cmdTastiera)
       Me.Controls.Add(Me.Label7)

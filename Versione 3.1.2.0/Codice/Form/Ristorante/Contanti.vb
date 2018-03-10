@@ -378,7 +378,7 @@ Public Class Contanti
       Me.AutoScaleBaseSize = New System.Drawing.Size(10, 24)
       Me.BackColor = System.Drawing.SystemColors.AppWorkspace
       Me.CancelButton = Me.eui_cmdAnnulla
-      Me.ClientSize = New System.Drawing.Size(779, 420)
+      Me.ClientSize = New System.Drawing.Size(776, 422)
       Me.Controls.Add(Me.eui_cmdAnnulla)
       Me.Controls.Add(Me.eui_cmdOk)
       Me.Controls.Add(Me.Panel1)

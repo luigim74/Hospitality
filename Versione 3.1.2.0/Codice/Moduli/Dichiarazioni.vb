@@ -231,6 +231,7 @@ Module Dichiarazioni
    ' Documenti fiscali formato .rdlc
    Public Const PERCORSO_REP_FF_A4 As String = "\Reports\Fattura A4.rdlc"
    Public Const PERCORSO_REP_FF_A4_DOPPIA As String = "\Reports\Fattura A4_Doppia.rdlc"
+   Public Const PERCORSO_REP_FF_A4_IVA_MULTIPLA As String = "\Reports\Fattura A4_Iva_Multipla.rdlc"
    Public Const PERCORSO_REP_RF_A4_DOPPIA As String = "\Reports\RFiscale A4_Doppia.rdlc"
    Public Const PERCORSO_REP_RF_A5 As String = "\Reports\RFiscale A5.rdlc"
    Public Const PERCORSO_REP_RF_A6 As String = "\Reports\RFiscale A6.rdlc"

@@ -89,9 +89,9 @@ Public Class ElencoClientiPos
    Friend WithEvents PrintDocument1 As System.Drawing.Printing.PrintDocument
    <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
       Me.components = New System.ComponentModel.Container()
-      Dim ListViewItem4 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Azienda Ligure SRL")
-      Dim ListViewItem5 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Montana Luigi")
-      Dim ListViewItem6 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Rossi Fabio")
+      Dim ListViewItem1 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Azienda Ligure SRL")
+      Dim ListViewItem2 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Montana Luigi")
+      Dim ListViewItem3 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Rossi Fabio")
       Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ElencoClientiPos))
       Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
       Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
@@ -154,7 +154,7 @@ Public Class ElencoClientiPos
       Me.lstvClienti.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.lstvClienti.FullRowSelect = True
       Me.lstvClienti.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None
-      Me.lstvClienti.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem4, ListViewItem5, ListViewItem6})
+      Me.lstvClienti.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem1, ListViewItem2, ListViewItem3})
       Me.lstvClienti.Location = New System.Drawing.Point(12, 16)
       Me.lstvClienti.MultiSelect = False
       Me.lstvClienti.Name = "lstvClienti"
@@ -538,7 +538,7 @@ Public Class ElencoClientiPos
       Me.AutoScaleBaseSize = New System.Drawing.Size(23, 55)
       Me.BackColor = System.Drawing.SystemColors.AppWorkspace
       Me.CancelButton = Me.eui_cmdAnnulla
-      Me.ClientSize = New System.Drawing.Size(655, 637)
+      Me.ClientSize = New System.Drawing.Size(658, 641)
       Me.Controls.Add(Me.eui_cmdModifica)
       Me.Controls.Add(Me.eui_cmdNuovo)
       Me.Controls.Add(Me.eui_cmdClientiSu)

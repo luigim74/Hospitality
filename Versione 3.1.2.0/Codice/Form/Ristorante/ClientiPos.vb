@@ -446,7 +446,7 @@ Public Class ClientiPos
       Me.AutoScaleBaseSize = New System.Drawing.Size(23, 55)
       Me.BackColor = System.Drawing.SystemColors.AppWorkspace
       Me.CancelButton = Me.eui_cmdAnnulla
-      Me.ClientSize = New System.Drawing.Size(564, 385)
+      Me.ClientSize = New System.Drawing.Size(563, 388)
       Me.Controls.Add(Me.eui_cmdAnnulla)
       Me.Controls.Add(Me.eui_cmdSalva)
       Me.Controls.Add(Me.eui_cmdTastiera)

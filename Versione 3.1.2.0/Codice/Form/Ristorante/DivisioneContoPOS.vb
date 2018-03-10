@@ -330,7 +330,7 @@ Public Class DivisioneContoPOS
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
       Me.pnlPiatti.Location = New System.Drawing.Point(149, 8)
       Me.pnlPiatti.Name = "pnlPiatti"
-      Me.pnlPiatti.Size = New System.Drawing.Size(176, 334)
+      Me.pnlPiatti.Size = New System.Drawing.Size(186, 344)
       Me.pnlPiatti.TabIndex = 3
       '
       'pnlConti
@@ -339,13 +339,13 @@ Public Class DivisioneContoPOS
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
       Me.pnlConti.Location = New System.Drawing.Point(8, 8)
       Me.pnlConti.Name = "pnlConti"
-      Me.pnlConti.Size = New System.Drawing.Size(138, 334)
+      Me.pnlConti.Size = New System.Drawing.Size(138, 344)
       Me.pnlConti.TabIndex = 0
       '
       'dtpData
       '
       Me.dtpData.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-      Me.dtpData.Location = New System.Drawing.Point(-199, 713)
+      Me.dtpData.Location = New System.Drawing.Point(-194, 723)
       Me.dtpData.Name = "dtpData"
       Me.dtpData.Size = New System.Drawing.Size(200, 20)
       Me.dtpData.TabIndex = 86
@@ -361,7 +361,7 @@ Public Class DivisioneContoPOS
       Me.Label2.BackColor = System.Drawing.Color.MidnightBlue
       Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.Label2.ForeColor = System.Drawing.Color.DodgerBlue
-      Me.Label2.Location = New System.Drawing.Point(615, -1)
+      Me.Label2.Location = New System.Drawing.Point(625, -1)
       Me.Label2.Name = "Label2"
       Me.Label2.Size = New System.Drawing.Size(312, 151)
       Me.Label2.TabIndex = 87
@@ -374,7 +374,7 @@ Public Class DivisioneContoPOS
       Me.lblData.BackColor = System.Drawing.Color.MidnightBlue
       Me.lblData.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.lblData.ForeColor = System.Drawing.Color.DodgerBlue
-      Me.lblData.Location = New System.Drawing.Point(639, 96)
+      Me.lblData.Location = New System.Drawing.Point(649, 96)
       Me.lblData.Name = "lblData"
       Me.lblData.Size = New System.Drawing.Size(16, 16)
       Me.lblData.TabIndex = 89
@@ -387,7 +387,7 @@ Public Class DivisioneContoPOS
       Me.lblTotale.BackColor = System.Drawing.Color.MidnightBlue
       Me.lblTotale.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.lblTotale.ForeColor = System.Drawing.Color.DodgerBlue
-      Me.lblTotale.Location = New System.Drawing.Point(703, 38)
+      Me.lblTotale.Location = New System.Drawing.Point(713, 38)
       Me.lblTotale.Name = "lblTotale"
       Me.lblTotale.Size = New System.Drawing.Size(216, 56)
       Me.lblTotale.TabIndex = 88
@@ -400,7 +400,7 @@ Public Class DivisioneContoPOS
       Me.Label4.BackColor = System.Drawing.Color.MidnightBlue
       Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.Label4.ForeColor = System.Drawing.Color.DodgerBlue
-      Me.Label4.Location = New System.Drawing.Point(639, 118)
+      Me.Label4.Location = New System.Drawing.Point(649, 118)
       Me.Label4.Name = "Label4"
       Me.Label4.Size = New System.Drawing.Size(40, 24)
       Me.Label4.TabIndex = 93
@@ -413,7 +413,7 @@ Public Class DivisioneContoPOS
       Me.lblQuantità.BackColor = System.Drawing.Color.MidnightBlue
       Me.lblQuantità.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.lblQuantità.ForeColor = System.Drawing.Color.DodgerBlue
-      Me.lblQuantità.Location = New System.Drawing.Point(871, 118)
+      Me.lblQuantità.Location = New System.Drawing.Point(881, 118)
       Me.lblQuantità.Name = "lblQuantità"
       Me.lblQuantità.Size = New System.Drawing.Size(40, 24)
       Me.lblQuantità.TabIndex = 92
@@ -426,7 +426,7 @@ Public Class DivisioneContoPOS
       Me.lblOra.BackColor = System.Drawing.Color.MidnightBlue
       Me.lblOra.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.lblOra.ForeColor = System.Drawing.Color.DodgerBlue
-      Me.lblOra.Location = New System.Drawing.Point(679, 118)
+      Me.lblOra.Location = New System.Drawing.Point(689, 118)
       Me.lblOra.Name = "lblOra"
       Me.lblOra.Size = New System.Drawing.Size(40, 24)
       Me.lblOra.TabIndex = 90
@@ -439,7 +439,7 @@ Public Class DivisioneContoPOS
       Me.Label6.BackColor = System.Drawing.Color.MidnightBlue
       Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.Label6.ForeColor = System.Drawing.Color.DodgerBlue
-      Me.Label6.Location = New System.Drawing.Point(639, 38)
+      Me.Label6.Location = New System.Drawing.Point(649, 38)
       Me.Label6.Name = "Label6"
       Me.Label6.Size = New System.Drawing.Size(32, 56)
       Me.Label6.TabIndex = 91
@@ -454,7 +454,7 @@ Public Class DivisioneContoPOS
       Me.lblConto.BackColor = System.Drawing.Color.MidnightBlue
       Me.lblConto.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.lblConto.ForeColor = System.Drawing.Color.DodgerBlue
-      Me.lblConto.Location = New System.Drawing.Point(636, 7)
+      Me.lblConto.Location = New System.Drawing.Point(646, 7)
       Me.lblConto.Name = "lblConto"
       Me.lblConto.Size = New System.Drawing.Size(144, 39)
       Me.lblConto.TabIndex = 94
@@ -476,10 +476,10 @@ Public Class DivisioneContoPOS
       Me.lstvDettagli.ForeColor = System.Drawing.Color.Black
       Me.lstvDettagli.FullRowSelect = True
       Me.lstvDettagli.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
-      Me.lstvDettagli.Location = New System.Drawing.Point(615, 151)
+      Me.lstvDettagli.Location = New System.Drawing.Point(625, 151)
       Me.lstvDettagli.MultiSelect = False
       Me.lstvDettagli.Name = "lstvDettagli"
-      Me.lstvDettagli.Size = New System.Drawing.Size(312, 193)
+      Me.lstvDettagli.Size = New System.Drawing.Size(312, 203)
       Me.lstvDettagli.TabIndex = 12
       Me.lstvDettagli.UseCompatibleStateImageBehavior = False
       Me.lstvDettagli.View = System.Windows.Forms.View.Details
@@ -523,7 +523,7 @@ Public Class DivisioneContoPOS
       Me.Label7.BackColor = System.Drawing.Color.MidnightBlue
       Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.Label7.ForeColor = System.Drawing.Color.DodgerBlue
-      Me.Label7.Location = New System.Drawing.Point(776, 118)
+      Me.Label7.Location = New System.Drawing.Point(786, 118)
       Me.Label7.Name = "Label7"
       Me.Label7.Size = New System.Drawing.Size(88, 24)
       Me.Label7.TabIndex = 230
@@ -534,9 +534,9 @@ Public Class DivisioneContoPOS
       '
       Me.pnlCoperti.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-      Me.pnlCoperti.Location = New System.Drawing.Point(328, 8)
+      Me.pnlCoperti.Location = New System.Drawing.Point(338, 8)
       Me.pnlCoperti.Name = "pnlCoperti"
-      Me.pnlCoperti.Size = New System.Drawing.Size(138, 334)
+      Me.pnlCoperti.Size = New System.Drawing.Size(138, 344)
       Me.pnlCoperti.TabIndex = 6
       '
       'netBtn_ListaPiattiSu
@@ -552,7 +552,7 @@ Public Class DivisioneContoPOS
       Me.netBtn_ListaPiattiSu.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.netBtn_ListaPiattiSu.Image = CType(resources.GetObject("netBtn_ListaPiattiSu.Image"), System.Drawing.Image)
       Me.netBtn_ListaPiattiSu.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
-      Me.netBtn_ListaPiattiSu.Location = New System.Drawing.Point(772, 349)
+      Me.netBtn_ListaPiattiSu.Location = New System.Drawing.Point(782, 359)
       Me.netBtn_ListaPiattiSu.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
       Me.netBtn_ListaPiattiSu.Name = "netBtn_ListaPiattiSu"
       Me.netBtn_ListaPiattiSu.Size = New System.Drawing.Size(155, 56)
@@ -572,7 +572,7 @@ Public Class DivisioneContoPOS
       Me.netBtn_ListaPiattiGiù.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.netBtn_ListaPiattiGiù.Image = CType(resources.GetObject("netBtn_ListaPiattiGiù.Image"), System.Drawing.Image)
       Me.netBtn_ListaPiattiGiù.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
-      Me.netBtn_ListaPiattiGiù.Location = New System.Drawing.Point(615, 349)
+      Me.netBtn_ListaPiattiGiù.Location = New System.Drawing.Point(625, 359)
       Me.netBtn_ListaPiattiGiù.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
       Me.netBtn_ListaPiattiGiù.Name = "netBtn_ListaPiattiGiù"
       Me.netBtn_ListaPiattiGiù.Size = New System.Drawing.Size(155, 56)
@@ -592,7 +592,7 @@ Public Class DivisioneContoPOS
       Me.netBtn_Tastiera.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.netBtn_Tastiera.Image = CType(resources.GetObject("netBtn_Tastiera.Image"), System.Drawing.Image)
       Me.netBtn_Tastiera.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
-      Me.netBtn_Tastiera.Location = New System.Drawing.Point(479, 349)
+      Me.netBtn_Tastiera.Location = New System.Drawing.Point(489, 359)
       Me.netBtn_Tastiera.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
       Me.netBtn_Tastiera.Name = "netBtn_Tastiera"
       Me.netBtn_Tastiera.Size = New System.Drawing.Size(130, 56)
@@ -612,10 +612,10 @@ Public Class DivisioneContoPOS
       Me.netBtn_SottoCategoria.ColorTop = System.Drawing.SystemColors.ControlLightLight
       Me.netBtn_SottoCategoria.CornerRadius = 2
       Me.netBtn_SottoCategoria.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.netBtn_SottoCategoria.Location = New System.Drawing.Point(218, 349)
+      Me.netBtn_SottoCategoria.Location = New System.Drawing.Point(218, 359)
       Me.netBtn_SottoCategoria.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
       Me.netBtn_SottoCategoria.Name = "netBtn_SottoCategoria"
-      Me.netBtn_SottoCategoria.Size = New System.Drawing.Size(38, 56)
+      Me.netBtn_SottoCategoria.Size = New System.Drawing.Size(48, 56)
       Me.netBtn_SottoCategoria.TabIndex = 326
       Me.netBtn_SottoCategoria.Tag = ""
       Me.netBtn_SottoCategoria.TextButton = ""
@@ -633,7 +633,7 @@ Public Class DivisioneContoPOS
       Me.netBtn_PiattiSu.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.netBtn_PiattiSu.Image = CType(resources.GetObject("netBtn_PiattiSu.Image"), System.Drawing.Image)
       Me.netBtn_PiattiSu.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
-      Me.netBtn_PiattiSu.Location = New System.Drawing.Point(257, 349)
+      Me.netBtn_PiattiSu.Location = New System.Drawing.Point(267, 359)
       Me.netBtn_PiattiSu.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
       Me.netBtn_PiattiSu.Name = "netBtn_PiattiSu"
       Me.netBtn_PiattiSu.Size = New System.Drawing.Size(68, 56)
@@ -653,7 +653,7 @@ Public Class DivisioneContoPOS
       Me.netBtn_PiattiGiù.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.netBtn_PiattiGiù.Image = CType(resources.GetObject("netBtn_PiattiGiù.Image"), System.Drawing.Image)
       Me.netBtn_PiattiGiù.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
-      Me.netBtn_PiattiGiù.Location = New System.Drawing.Point(149, 349)
+      Me.netBtn_PiattiGiù.Location = New System.Drawing.Point(149, 359)
       Me.netBtn_PiattiGiù.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
       Me.netBtn_PiattiGiù.Name = "netBtn_PiattiGiù"
       Me.netBtn_PiattiGiù.Size = New System.Drawing.Size(68, 56)
@@ -673,7 +673,7 @@ Public Class DivisioneContoPOS
       Me.netBtn_VarianteSu.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.netBtn_VarianteSu.Image = CType(resources.GetObject("netBtn_VarianteSu.Image"), System.Drawing.Image)
       Me.netBtn_VarianteSu.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
-      Me.netBtn_VarianteSu.Location = New System.Drawing.Point(398, 349)
+      Me.netBtn_VarianteSu.Location = New System.Drawing.Point(408, 359)
       Me.netBtn_VarianteSu.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
       Me.netBtn_VarianteSu.Name = "netBtn_VarianteSu"
       Me.netBtn_VarianteSu.Size = New System.Drawing.Size(68, 56)
@@ -693,7 +693,7 @@ Public Class DivisioneContoPOS
       Me.netBtn_VarianteGiù.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.netBtn_VarianteGiù.Image = CType(resources.GetObject("netBtn_VarianteGiù.Image"), System.Drawing.Image)
       Me.netBtn_VarianteGiù.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
-      Me.netBtn_VarianteGiù.Location = New System.Drawing.Point(328, 349)
+      Me.netBtn_VarianteGiù.Location = New System.Drawing.Point(338, 359)
       Me.netBtn_VarianteGiù.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
       Me.netBtn_VarianteGiù.Name = "netBtn_VarianteGiù"
       Me.netBtn_VarianteGiù.Size = New System.Drawing.Size(68, 56)
@@ -713,7 +713,7 @@ Public Class DivisioneContoPOS
       Me.netBtn_CategoriaSu.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.netBtn_CategoriaSu.Image = CType(resources.GetObject("netBtn_CategoriaSu.Image"), System.Drawing.Image)
       Me.netBtn_CategoriaSu.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
-      Me.netBtn_CategoriaSu.Location = New System.Drawing.Point(78, 349)
+      Me.netBtn_CategoriaSu.Location = New System.Drawing.Point(78, 359)
       Me.netBtn_CategoriaSu.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
       Me.netBtn_CategoriaSu.Name = "netBtn_CategoriaSu"
       Me.netBtn_CategoriaSu.Size = New System.Drawing.Size(68, 56)
@@ -733,7 +733,7 @@ Public Class DivisioneContoPOS
       Me.netBtn_CategoriaGiù.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.netBtn_CategoriaGiù.Image = CType(resources.GetObject("netBtn_CategoriaGiù.Image"), System.Drawing.Image)
       Me.netBtn_CategoriaGiù.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
-      Me.netBtn_CategoriaGiù.Location = New System.Drawing.Point(8, 349)
+      Me.netBtn_CategoriaGiù.Location = New System.Drawing.Point(8, 359)
       Me.netBtn_CategoriaGiù.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
       Me.netBtn_CategoriaGiù.Name = "netBtn_CategoriaGiù"
       Me.netBtn_CategoriaGiù.Size = New System.Drawing.Size(68, 56)
@@ -751,7 +751,7 @@ Public Class DivisioneContoPOS
       Me.netBtn_Rimuovi.ColorTop = System.Drawing.SystemColors.ControlLightLight
       Me.netBtn_Rimuovi.CornerRadius = 2
       Me.netBtn_Rimuovi.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.netBtn_Rimuovi.Location = New System.Drawing.Point(479, 211)
+      Me.netBtn_Rimuovi.Location = New System.Drawing.Point(489, 211)
       Me.netBtn_Rimuovi.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
       Me.netBtn_Rimuovi.Name = "netBtn_Rimuovi"
       Me.netBtn_Rimuovi.Size = New System.Drawing.Size(130, 100)
@@ -769,7 +769,7 @@ Public Class DivisioneContoPOS
       Me.netBtn_Conferma.ColorTop = System.Drawing.Color.White
       Me.netBtn_Conferma.CornerRadius = 2
       Me.netBtn_Conferma.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.netBtn_Conferma.Location = New System.Drawing.Point(479, 8)
+      Me.netBtn_Conferma.Location = New System.Drawing.Point(489, 8)
       Me.netBtn_Conferma.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
       Me.netBtn_Conferma.Name = "netBtn_Conferma"
       Me.netBtn_Conferma.Size = New System.Drawing.Size(130, 100)
@@ -787,7 +787,7 @@ Public Class DivisioneContoPOS
       Me.netBtn_Esci.ColorTop = System.Drawing.Color.White
       Me.netBtn_Esci.CornerRadius = 2
       Me.netBtn_Esci.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.netBtn_Esci.Location = New System.Drawing.Point(479, 110)
+      Me.netBtn_Esci.Location = New System.Drawing.Point(489, 110)
       Me.netBtn_Esci.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
       Me.netBtn_Esci.Name = "netBtn_Esci"
       Me.netBtn_Esci.Size = New System.Drawing.Size(130, 100)
@@ -798,7 +798,7 @@ Public Class DivisioneContoPOS
       '
       Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
       Me.BackColor = System.Drawing.SystemColors.AppWorkspace
-      Me.ClientSize = New System.Drawing.Size(930, 427)
+      Me.ClientSize = New System.Drawing.Size(940, 437)
       Me.Controls.Add(Me.netBtn_Rimuovi)
       Me.Controls.Add(Me.netBtn_Conferma)
       Me.Controls.Add(Me.netBtn_Esci)

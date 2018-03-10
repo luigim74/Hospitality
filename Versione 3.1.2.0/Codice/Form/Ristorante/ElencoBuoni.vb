@@ -99,7 +99,7 @@ Public Class ElencoBuoni
       Me.DataGrid1.Location = New System.Drawing.Point(0, 0)
       Me.DataGrid1.Name = "DataGrid1"
       Me.DataGrid1.ReadOnly = True
-      Me.DataGrid1.Size = New System.Drawing.Size(618, 336)
+      Me.DataGrid1.Size = New System.Drawing.Size(628, 346)
       Me.DataGrid1.TabIndex = 0
       '
       'Panel2
@@ -108,9 +108,9 @@ Public Class ElencoBuoni
       Me.Panel2.Controls.Add(Me.txtTotImporto)
       Me.Panel2.Controls.Add(Me.Label1)
       Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
-      Me.Panel2.Location = New System.Drawing.Point(0, 336)
+      Me.Panel2.Location = New System.Drawing.Point(0, 346)
       Me.Panel2.Name = "Panel2"
-      Me.Panel2.Size = New System.Drawing.Size(618, 32)
+      Me.Panel2.Size = New System.Drawing.Size(628, 32)
       Me.Panel2.TabIndex = 14
       '
       'txtTotImporto
@@ -121,12 +121,12 @@ Public Class ElencoBuoni
       Me.txtTotImporto.Cursor = System.Windows.Forms.Cursors.IBeam
       Me.txtTotImporto.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.txtTotImporto.ForeColor = System.Drawing.Color.Red
-      Me.txtTotImporto.Location = New System.Drawing.Point(480, 8)
+      Me.txtTotImporto.Location = New System.Drawing.Point(490, 8)
       Me.txtTotImporto.MaxLength = 0
       Me.txtTotImporto.Name = "txtTotImporto"
       Me.txtTotImporto.ReadOnly = True
       Me.txtTotImporto.RightToLeft = System.Windows.Forms.RightToLeft.No
-      Me.txtTotImporto.Size = New System.Drawing.Size(112, 20)
+      Me.txtTotImporto.Size = New System.Drawing.Size(126, 20)
       Me.txtTotImporto.TabIndex = 0
       Me.txtTotImporto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
       '
@@ -136,7 +136,7 @@ Public Class ElencoBuoni
       Me.Label1.AutoSize = True
       Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.Label1.ForeColor = System.Drawing.Color.White
-      Me.Label1.Location = New System.Drawing.Point(424, 8)
+      Me.Label1.Location = New System.Drawing.Point(434, 8)
       Me.Label1.Name = "Label1"
       Me.Label1.Size = New System.Drawing.Size(51, 15)
       Me.Label1.TabIndex = 16
@@ -151,7 +151,7 @@ Public Class ElencoBuoni
       '
       Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
       Me.BackColor = System.Drawing.SystemColors.AppWorkspace
-      Me.ClientSize = New System.Drawing.Size(618, 368)
+      Me.ClientSize = New System.Drawing.Size(628, 378)
       Me.Controls.Add(Me.DataGrid1)
       Me.Controls.Add(Me.Panel2)
       Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog

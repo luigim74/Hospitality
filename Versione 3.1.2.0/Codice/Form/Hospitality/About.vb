@@ -363,7 +363,7 @@ Friend Class frmAbout
       Me.AcceptButton = Me.cmdOK
       Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
       Me.BackColor = System.Drawing.SystemColors.AppWorkspace
-      Me.ClientSize = New System.Drawing.Size(449, 420)
+      Me.ClientSize = New System.Drawing.Size(442, 417)
       Me.Controls.Add(Me.lblFreeware)
       Me.Controls.Add(Me.lblAttenzione)
       Me.Controls.Add(Me.lnkWeb)

@@ -318,7 +318,7 @@ Public Class Chiusura
       Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
       Me.BackColor = System.Drawing.SystemColors.AppWorkspace
       Me.CancelButton = Me.cmdAnnulla
-      Me.ClientSize = New System.Drawing.Size(298, 264)
+      Me.ClientSize = New System.Drawing.Size(295, 267)
       Me.Controls.Add(Me.txtScontriniQ)
       Me.Controls.Add(Me.txtFattureQ)
       Me.Controls.Add(Me.txtRicevuteQ)

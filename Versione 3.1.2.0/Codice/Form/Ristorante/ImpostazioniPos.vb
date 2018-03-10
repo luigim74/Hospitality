@@ -323,18 +323,10 @@ Public Class ImpostazioniPos
       Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
       Me.formFrameSkinner = New Elegant.Ui.FormFrameSkinner()
       Me.TabControl1 = New Elegant.Ui.TabControl()
-      Me.tpSale = New Elegant.Ui.TabPage()
-      Me.GroupBox5 = New Elegant.Ui.GroupBox()
-      Me.Label14 = New System.Windows.Forms.Label()
-      Me.netBtn_AnteprimaSale = New Softgroup.NetButton.NetButton()
-      Me.pnlSale = New System.Windows.Forms.Panel()
-      Me.GroupBox2 = New Elegant.Ui.GroupBox()
-      Me.eui_nudAltezzaSale = New Elegant.Ui.NumericUpDown()
-      Me.Label5 = New Elegant.Ui.Label()
-      Me.lstSale = New System.Windows.Forms.ListBox()
-      Me.GroupBox1 = New Elegant.Ui.GroupBox()
-      Me.Label13 = New Elegant.Ui.Label()
-      Me.eui_ddwnStileColoreSale = New Elegant.Ui.DropDown()
+      Me.tpFunzioniPiatti = New Elegant.Ui.TabPage()
+      Me.GroupBox21 = New Elegant.Ui.GroupBox()
+      Me.Label34 = New Elegant.Ui.Label()
+      Me.eui_ddwnStileColoreFunzioniPiatti = New Elegant.Ui.DropDown()
       Me.PopupMenu1 = New Elegant.Ui.PopupMenu(Me.components)
       Me.eui_btnColorePredefinito = New Elegant.Ui.Button()
       Me.Separator1 = New Elegant.Ui.Separator()
@@ -347,6 +339,28 @@ Public Class ImpostazioniPos
       Me.eui_btnColoreGiallo = New Elegant.Ui.Button()
       Me.Separator2 = New Elegant.Ui.Separator()
       Me.eui_btnColorePersonalizzato = New Elegant.Ui.Button()
+      Me.cmdColoreSfondoFunzioniPiatti = New System.Windows.Forms.Button()
+      Me.cmdColoreTestoFunzioniPiatti = New System.Windows.Forms.Button()
+      Me.Label35 = New Elegant.Ui.Label()
+      Me.Label36 = New Elegant.Ui.Label()
+      Me.pnlFunzioniPiatti = New System.Windows.Forms.Panel()
+      Me.GroupBox20 = New Elegant.Ui.GroupBox()
+      Me.netBtn_AnteprimaFunzioniPiatti = New Softgroup.NetButton.NetButton()
+      Me.Label33 = New System.Windows.Forms.Label()
+      Me.lstFunzioniPiatti = New System.Windows.Forms.ListBox()
+      Me.eui_cmdReimpostaFunzioniPiatti = New Elegant.Ui.Button()
+      Me.tpSale = New Elegant.Ui.TabPage()
+      Me.GroupBox5 = New Elegant.Ui.GroupBox()
+      Me.Label14 = New System.Windows.Forms.Label()
+      Me.netBtn_AnteprimaSale = New Softgroup.NetButton.NetButton()
+      Me.pnlSale = New System.Windows.Forms.Panel()
+      Me.GroupBox2 = New Elegant.Ui.GroupBox()
+      Me.eui_nudAltezzaSale = New Elegant.Ui.NumericUpDown()
+      Me.Label5 = New Elegant.Ui.Label()
+      Me.lstSale = New System.Windows.Forms.ListBox()
+      Me.GroupBox1 = New Elegant.Ui.GroupBox()
+      Me.Label13 = New Elegant.Ui.Label()
+      Me.eui_ddwnStileColoreSale = New Elegant.Ui.DropDown()
       Me.cmdColoreTestoSale = New System.Windows.Forms.Button()
       Me.cmdColoreSfondoSale = New System.Windows.Forms.Button()
       Me.Label3 = New Elegant.Ui.Label()
@@ -469,20 +483,6 @@ Public Class ImpostazioniPos
       Me.eui_cmdReimpostaVarianti = New Elegant.Ui.Button()
       Me.eui_cmdSpostaGiùVarianti = New Elegant.Ui.Button()
       Me.eui_cmdSpostaSuVarianti = New Elegant.Ui.Button()
-      Me.tpFunzioniPiatti = New Elegant.Ui.TabPage()
-      Me.GroupBox21 = New Elegant.Ui.GroupBox()
-      Me.Label34 = New Elegant.Ui.Label()
-      Me.eui_ddwnStileColoreFunzioniPiatti = New Elegant.Ui.DropDown()
-      Me.cmdColoreSfondoFunzioniPiatti = New System.Windows.Forms.Button()
-      Me.cmdColoreTestoFunzioniPiatti = New System.Windows.Forms.Button()
-      Me.Label35 = New Elegant.Ui.Label()
-      Me.Label36 = New Elegant.Ui.Label()
-      Me.pnlFunzioniPiatti = New System.Windows.Forms.Panel()
-      Me.GroupBox20 = New Elegant.Ui.GroupBox()
-      Me.netBtn_AnteprimaFunzioniPiatti = New Softgroup.NetButton.NetButton()
-      Me.Label33 = New System.Windows.Forms.Label()
-      Me.lstFunzioniPiatti = New System.Windows.Forms.ListBox()
-      Me.eui_cmdReimpostaFunzioniPiatti = New Elegant.Ui.Button()
       Me.eui_cmdOK = New Elegant.Ui.Button()
       Me.eui_cmdAnnulla = New Elegant.Ui.Button()
       Me.Label1 = New Elegant.Ui.Label()
@@ -490,12 +490,15 @@ Public Class ImpostazioniPos
       Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
       CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
       CType(Me.TabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+      Me.tpFunzioniPiatti.SuspendLayout()
+      Me.GroupBox21.SuspendLayout()
+      CType(Me.PopupMenu1, System.ComponentModel.ISupportInitialize).BeginInit()
+      Me.GroupBox20.SuspendLayout()
       Me.tpSale.SuspendLayout()
       Me.GroupBox5.SuspendLayout()
       Me.GroupBox2.SuspendLayout()
       CType(Me.eui_nudAltezzaSale, System.ComponentModel.ISupportInitialize).BeginInit()
       Me.GroupBox1.SuspendLayout()
-      CType(Me.PopupMenu1, System.ComponentModel.ISupportInitialize).BeginInit()
       Me.tpTavoli.SuspendLayout()
       CType(Me.TabControl2, System.ComponentModel.ISupportInitialize).BeginInit()
       Me.TabPage2.SuspendLayout()
@@ -531,9 +534,6 @@ Public Class ImpostazioniPos
       Me.GroupBox18.SuspendLayout()
       CType(Me.eui_nudAltezzaVarianti, System.ComponentModel.ISupportInitialize).BeginInit()
       Me.GroupBox19.SuspendLayout()
-      Me.tpFunzioniPiatti.SuspendLayout()
-      Me.GroupBox21.SuspendLayout()
-      Me.GroupBox20.SuspendLayout()
       Me.SuspendLayout()
       '
       'ErrorProvider1
@@ -560,12 +560,280 @@ Public Class ImpostazioniPos
       Me.TabControl1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
       Me.TabControl1.Location = New System.Drawing.Point(9, 29)
       Me.TabControl1.Name = "TabControl1"
-      Me.TabControl1.SelectedTabPage = Me.tpFunzioniPiatti
+      Me.TabControl1.SelectedTabPage = Me.tpSale
       Me.TabControl1.Size = New System.Drawing.Size(692, 578)
       Me.TabControl1.TabIndex = 242
       Me.TabControl1.TabPages.AddRange(New Elegant.Ui.TabPage() {Me.tpSale, Me.tpTavoli, Me.tpFunzioniTavoli, Me.tpCategorie, Me.tpPiatti, Me.tpVarianti, Me.tpFunzioniPiatti})
       Me.TabControl1.TabsPlacement = Elegant.Ui.TabsPlacement.Bottom
       Me.TabControl1.Text = "TabControl1"
+      '
+      'tpFunzioniPiatti
+      '
+      Me.tpFunzioniPiatti.ActiveControl = Nothing
+      Me.tpFunzioniPiatti.Controls.Add(Me.GroupBox21)
+      Me.tpFunzioniPiatti.Controls.Add(Me.pnlFunzioniPiatti)
+      Me.tpFunzioniPiatti.Controls.Add(Me.GroupBox20)
+      Me.tpFunzioniPiatti.Controls.Add(Me.lstFunzioniPiatti)
+      Me.tpFunzioniPiatti.Controls.Add(Me.eui_cmdReimpostaFunzioniPiatti)
+      Me.tpFunzioniPiatti.KeyTip = Nothing
+      Me.tpFunzioniPiatti.Name = "tpFunzioniPiatti"
+      Me.tpFunzioniPiatti.Size = New System.Drawing.Size(690, 550)
+      Me.tpFunzioniPiatti.TabIndex = 6
+      Me.tpFunzioniPiatti.Text = "Funzioni "
+      '
+      'GroupBox21
+      '
+      Me.GroupBox21.Controls.Add(Me.Label34)
+      Me.GroupBox21.Controls.Add(Me.eui_ddwnStileColoreFunzioniPiatti)
+      Me.GroupBox21.Controls.Add(Me.cmdColoreSfondoFunzioniPiatti)
+      Me.GroupBox21.Controls.Add(Me.cmdColoreTestoFunzioniPiatti)
+      Me.GroupBox21.Controls.Add(Me.Label35)
+      Me.GroupBox21.Controls.Add(Me.Label36)
+      Me.GroupBox21.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+      Me.GroupBox21.Id = "806a59db-f798-4b83-b7f5-48daa9fe500b"
+      Me.GroupBox21.Location = New System.Drawing.Point(393, 14)
+      Me.GroupBox21.Name = "GroupBox21"
+      Me.GroupBox21.Size = New System.Drawing.Size(285, 250)
+      Me.GroupBox21.TabIndex = 270
+      Me.GroupBox21.Text = "Opzioni singolo elemento"
+      '
+      'Label34
+      '
+      Me.Label34.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+      Me.Label34.Location = New System.Drawing.Point(12, 35)
+      Me.Label34.Name = "Label34"
+      Me.Label34.Size = New System.Drawing.Size(108, 20)
+      Me.Label34.TabIndex = 265
+      Me.Label34.Text = "Stile colore:"
+      '
+      'eui_ddwnStileColoreFunzioniPiatti
+      '
+      Me.eui_ddwnStileColoreFunzioniPiatti.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+      Me.eui_ddwnStileColoreFunzioniPiatti.Id = "af79d192-654c-4b46-a9e7-672c21df3096"
+      Me.eui_ddwnStileColoreFunzioniPiatti.Location = New System.Drawing.Point(164, 32)
+      Me.eui_ddwnStileColoreFunzioniPiatti.Name = "eui_ddwnStileColoreFunzioniPiatti"
+      Me.eui_ddwnStileColoreFunzioniPiatti.Popup = Me.PopupMenu1
+      Me.eui_ddwnStileColoreFunzioniPiatti.Size = New System.Drawing.Size(106, 28)
+      Me.eui_ddwnStileColoreFunzioniPiatti.TabIndex = 0
+      Me.eui_ddwnStileColoreFunzioniPiatti.Text = "Predefinito"
+      '
+      'PopupMenu1
+      '
+      Me.PopupMenu1.Items.AddRange(New System.Windows.Forms.Control() {Me.eui_btnColorePredefinito, Me.Separator1, Me.eui_btnColoreBianco, Me.eui_btnColoreBlu, Me.eui_btnColoreGrigio, Me.eui_btnColoreVerde, Me.eui_btnColoreViola, Me.eui_btnColoreRosso, Me.eui_btnColoreGiallo, Me.Separator2, Me.eui_btnColorePersonalizzato})
+      Me.PopupMenu1.KeepPopupsWithOffsetPlacementWithinPlacementArea = False
+      Me.PopupMenu1.PlacementMode = Elegant.Ui.PopupPlacementMode.Bottom
+      Me.PopupMenu1.Size = New System.Drawing.Size(100, 100)
+      '
+      'eui_btnColorePredefinito
+      '
+      Me.eui_btnColorePredefinito.Id = "8216979a-c5a5-4baa-b8a9-b1f88811e9d5"
+      Me.eui_btnColorePredefinito.Location = New System.Drawing.Point(2, 2)
+      Me.eui_btnColorePredefinito.Name = "eui_btnColorePredefinito"
+      Me.eui_btnColorePredefinito.Size = New System.Drawing.Size(134, 23)
+      Me.eui_btnColorePredefinito.TabIndex = 3
+      Me.eui_btnColorePredefinito.Text = "&Predefinito"
+      '
+      'Separator1
+      '
+      Me.Separator1.Id = "52e39e68-662f-49bf-b22b-305ce9a4b00f"
+      Me.Separator1.Location = New System.Drawing.Point(2, 25)
+      Me.Separator1.Name = "Separator1"
+      Me.Separator1.Orientation = Elegant.Ui.SeparatorOrientation.Horizontal
+      Me.Separator1.Size = New System.Drawing.Size(134, 5)
+      Me.Separator1.TabIndex = 5
+      Me.Separator1.Text = "Separator1"
+      '
+      'eui_btnColoreBianco
+      '
+      Me.eui_btnColoreBianco.Id = "e20159b7-0636-4c93-a452-1c9d4ea1580c"
+      Me.eui_btnColoreBianco.Location = New System.Drawing.Point(2, 30)
+      Me.eui_btnColoreBianco.Name = "eui_btnColoreBianco"
+      Me.eui_btnColoreBianco.Size = New System.Drawing.Size(134, 23)
+      Me.eui_btnColoreBianco.TabIndex = 4
+      Me.eui_btnColoreBianco.Text = "&Bianco"
+      '
+      'eui_btnColoreBlu
+      '
+      Me.eui_btnColoreBlu.Id = "b46b1f07-b288-4e1a-8fd3-89cc7ceb19e9"
+      Me.eui_btnColoreBlu.Location = New System.Drawing.Point(2, 53)
+      Me.eui_btnColoreBlu.Name = "eui_btnColoreBlu"
+      Me.eui_btnColoreBlu.Size = New System.Drawing.Size(134, 23)
+      Me.eui_btnColoreBlu.TabIndex = 6
+      Me.eui_btnColoreBlu.Text = "Bl&u"
+      '
+      'eui_btnColoreGrigio
+      '
+      Me.eui_btnColoreGrigio.Id = "d07ffe2d-328e-47c1-8914-6c11cf803a1d"
+      Me.eui_btnColoreGrigio.Location = New System.Drawing.Point(2, 76)
+      Me.eui_btnColoreGrigio.Name = "eui_btnColoreGrigio"
+      Me.eui_btnColoreGrigio.Size = New System.Drawing.Size(134, 23)
+      Me.eui_btnColoreGrigio.TabIndex = 7
+      Me.eui_btnColoreGrigio.Text = "&Grigio"
+      '
+      'eui_btnColoreVerde
+      '
+      Me.eui_btnColoreVerde.Id = "ba5729c2-890a-4a08-91fd-5724c11e296f"
+      Me.eui_btnColoreVerde.Location = New System.Drawing.Point(2, 99)
+      Me.eui_btnColoreVerde.Name = "eui_btnColoreVerde"
+      Me.eui_btnColoreVerde.Size = New System.Drawing.Size(134, 23)
+      Me.eui_btnColoreVerde.TabIndex = 8
+      Me.eui_btnColoreVerde.Text = "&Verde"
+      '
+      'eui_btnColoreViola
+      '
+      Me.eui_btnColoreViola.Id = "1c322d3c-4fc3-4e99-bfd7-bcf7ba14a3c5"
+      Me.eui_btnColoreViola.Location = New System.Drawing.Point(2, 122)
+      Me.eui_btnColoreViola.Name = "eui_btnColoreViola"
+      Me.eui_btnColoreViola.Size = New System.Drawing.Size(134, 23)
+      Me.eui_btnColoreViola.TabIndex = 9
+      Me.eui_btnColoreViola.Text = "Vi&ola"
+      '
+      'eui_btnColoreRosso
+      '
+      Me.eui_btnColoreRosso.Id = "7f27ae88-f2ca-4948-9560-b3a1cfc84bc1"
+      Me.eui_btnColoreRosso.Location = New System.Drawing.Point(2, 145)
+      Me.eui_btnColoreRosso.Name = "eui_btnColoreRosso"
+      Me.eui_btnColoreRosso.Size = New System.Drawing.Size(134, 23)
+      Me.eui_btnColoreRosso.TabIndex = 10
+      Me.eui_btnColoreRosso.Text = "&Rosso"
+      '
+      'eui_btnColoreGiallo
+      '
+      Me.eui_btnColoreGiallo.Id = "05e8b8c3-62c9-4bfb-b4c3-b8a3f52305fb"
+      Me.eui_btnColoreGiallo.Location = New System.Drawing.Point(2, 168)
+      Me.eui_btnColoreGiallo.Name = "eui_btnColoreGiallo"
+      Me.eui_btnColoreGiallo.Size = New System.Drawing.Size(134, 23)
+      Me.eui_btnColoreGiallo.TabIndex = 11
+      Me.eui_btnColoreGiallo.Text = "Gi&allo"
+      '
+      'Separator2
+      '
+      Me.Separator2.Id = "6e45cd27-2461-4f74-9be6-609b0b8b1691"
+      Me.Separator2.Location = New System.Drawing.Point(2, 191)
+      Me.Separator2.Name = "Separator2"
+      Me.Separator2.Orientation = Elegant.Ui.SeparatorOrientation.Horizontal
+      Me.Separator2.Size = New System.Drawing.Size(134, 5)
+      Me.Separator2.TabIndex = 12
+      Me.Separator2.Text = "Separator2"
+      '
+      'eui_btnColorePersonalizzato
+      '
+      Me.eui_btnColorePersonalizzato.Id = "7e89c645-dbd0-4f62-97bb-890bcc950989"
+      Me.eui_btnColorePersonalizzato.Location = New System.Drawing.Point(2, 196)
+      Me.eui_btnColorePersonalizzato.Name = "eui_btnColorePersonalizzato"
+      Me.eui_btnColorePersonalizzato.Size = New System.Drawing.Size(134, 23)
+      Me.eui_btnColorePersonalizzato.TabIndex = 13
+      Me.eui_btnColorePersonalizzato.Text = "P&ersonalizzato"
+      '
+      'cmdColoreSfondoFunzioniPiatti
+      '
+      Me.cmdColoreSfondoFunzioniPiatti.BackColor = System.Drawing.SystemColors.Control
+      Me.cmdColoreSfondoFunzioniPiatti.Enabled = False
+      Me.cmdColoreSfondoFunzioniPiatti.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+      Me.cmdColoreSfondoFunzioniPiatti.Location = New System.Drawing.Point(165, 77)
+      Me.cmdColoreSfondoFunzioniPiatti.Name = "cmdColoreSfondoFunzioniPiatti"
+      Me.cmdColoreSfondoFunzioniPiatti.Size = New System.Drawing.Size(102, 28)
+      Me.cmdColoreSfondoFunzioniPiatti.TabIndex = 1
+      Me.cmdColoreSfondoFunzioniPiatti.UseVisualStyleBackColor = False
+      '
+      'cmdColoreTestoFunzioniPiatti
+      '
+      Me.cmdColoreTestoFunzioniPiatti.BackColor = System.Drawing.SystemColors.Control
+      Me.cmdColoreTestoFunzioniPiatti.Enabled = False
+      Me.cmdColoreTestoFunzioniPiatti.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+      Me.cmdColoreTestoFunzioniPiatti.Location = New System.Drawing.Point(164, 124)
+      Me.cmdColoreTestoFunzioniPiatti.Name = "cmdColoreTestoFunzioniPiatti"
+      Me.cmdColoreTestoFunzioniPiatti.Size = New System.Drawing.Size(102, 28)
+      Me.cmdColoreTestoFunzioniPiatti.TabIndex = 2
+      Me.cmdColoreTestoFunzioniPiatti.UseVisualStyleBackColor = False
+      '
+      'Label35
+      '
+      Me.Label35.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+      Me.Label35.Location = New System.Drawing.Point(12, 127)
+      Me.Label35.Name = "Label35"
+      Me.Label35.Size = New System.Drawing.Size(108, 20)
+      Me.Label35.TabIndex = 253
+      Me.Label35.Text = "Colore testo:"
+      '
+      'Label36
+      '
+      Me.Label36.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+      Me.Label36.Location = New System.Drawing.Point(12, 76)
+      Me.Label36.Name = "Label36"
+      Me.Label36.Size = New System.Drawing.Size(108, 20)
+      Me.Label36.TabIndex = 252
+      Me.Label36.Text = "Colore sfondo:"
+      '
+      'pnlFunzioniPiatti
+      '
+      Me.pnlFunzioniPiatti.Location = New System.Drawing.Point(284, 22)
+      Me.pnlFunzioniPiatti.Name = "pnlFunzioniPiatti"
+      Me.pnlFunzioniPiatti.Size = New System.Drawing.Size(96, 43)
+      Me.pnlFunzioniPiatti.TabIndex = 269
+      Me.pnlFunzioniPiatti.Visible = False
+      '
+      'GroupBox20
+      '
+      Me.GroupBox20.Controls.Add(Me.netBtn_AnteprimaFunzioniPiatti)
+      Me.GroupBox20.Controls.Add(Me.Label33)
+      Me.GroupBox20.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+      Me.GroupBox20.Id = "abbe5638-c658-4fe3-9a2d-bea19f1889e9"
+      Me.GroupBox20.Location = New System.Drawing.Point(392, 286)
+      Me.GroupBox20.Name = "GroupBox20"
+      Me.GroupBox20.Size = New System.Drawing.Size(285, 251)
+      Me.GroupBox20.TabIndex = 268
+      Me.GroupBox20.Text = "Anteprima"
+      '
+      'netBtn_AnteprimaFunzioniPiatti
+      '
+      Me.netBtn_AnteprimaFunzioniPiatti.ColorBottom = System.Drawing.Color.Black
+      Me.netBtn_AnteprimaFunzioniPiatti.ColorDisabled = System.Drawing.Color.DimGray
+      Me.netBtn_AnteprimaFunzioniPiatti.ColorLight = System.Drawing.SystemColors.HighlightText
+      Me.netBtn_AnteprimaFunzioniPiatti.ColorStyle = Softgroup.NetButton.NetButton.ColorStyleEnum.Custom
+      Me.netBtn_AnteprimaFunzioniPiatti.ColorText = System.Drawing.SystemColors.ControlText
+      Me.netBtn_AnteprimaFunzioniPiatti.ColorTop = System.Drawing.SystemColors.ControlLightLight
+      Me.netBtn_AnteprimaFunzioniPiatti.CornerRadius = 2
+      Me.netBtn_AnteprimaFunzioniPiatti.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+      Me.netBtn_AnteprimaFunzioniPiatti.Location = New System.Drawing.Point(120, 16)
+      Me.netBtn_AnteprimaFunzioniPiatti.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
+      Me.netBtn_AnteprimaFunzioniPiatti.Name = "netBtn_AnteprimaFunzioniPiatti"
+      Me.netBtn_AnteprimaFunzioniPiatti.Size = New System.Drawing.Size(150, 60)
+      Me.netBtn_AnteprimaFunzioniPiatti.TabIndex = 0
+      Me.netBtn_AnteprimaFunzioniPiatti.TextButton = ""
+      '
+      'Label33
+      '
+      Me.Label33.AutoSize = True
+      Me.Label33.BackColor = System.Drawing.Color.Transparent
+      Me.Label33.Cursor = System.Windows.Forms.Cursors.Default
+      Me.Label33.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+      Me.Label33.ForeColor = System.Drawing.Color.Black
+      Me.Label33.Location = New System.Drawing.Point(14, 16)
+      Me.Label33.Name = "Label33"
+      Me.Label33.RightToLeft = System.Windows.Forms.RightToLeft.No
+      Me.Label33.Size = New System.Drawing.Size(53, 20)
+      Me.Label33.TabIndex = 254
+      Me.Label33.Text = "Tasto:"
+      '
+      'lstFunzioniPiatti
+      '
+      Me.lstFunzioniPiatti.FormattingEnabled = True
+      Me.lstFunzioniPiatti.ItemHeight = 20
+      Me.lstFunzioniPiatti.Location = New System.Drawing.Point(13, 13)
+      Me.lstFunzioniPiatti.Name = "lstFunzioniPiatti"
+      Me.lstFunzioniPiatti.Size = New System.Drawing.Size(266, 524)
+      Me.lstFunzioniPiatti.TabIndex = 266
+      '
+      'eui_cmdReimpostaFunzioniPiatti
+      '
+      Me.eui_cmdReimpostaFunzioniPiatti.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+      Me.eui_cmdReimpostaFunzioniPiatti.Id = "f2739ae8-9673-426e-b909-907acf0d62f8"
+      Me.eui_cmdReimpostaFunzioniPiatti.Location = New System.Drawing.Point(282, 492)
+      Me.eui_cmdReimpostaFunzioniPiatti.Name = "eui_cmdReimpostaFunzioniPiatti"
+      Me.eui_cmdReimpostaFunzioniPiatti.Size = New System.Drawing.Size(96, 45)
+      Me.eui_cmdReimpostaFunzioniPiatti.TabIndex = 267
+      Me.eui_cmdReimpostaFunzioniPiatti.Text = "&Reimposta"
       '
       'tpSale
       '
@@ -715,114 +983,6 @@ Public Class ImpostazioniPos
       Me.eui_ddwnStileColoreSale.Size = New System.Drawing.Size(102, 28)
       Me.eui_ddwnStileColoreSale.TabIndex = 0
       Me.eui_ddwnStileColoreSale.Text = "Predefinito"
-      '
-      'PopupMenu1
-      '
-      Me.PopupMenu1.Items.AddRange(New System.Windows.Forms.Control() {Me.eui_btnColorePredefinito, Me.Separator1, Me.eui_btnColoreBianco, Me.eui_btnColoreBlu, Me.eui_btnColoreGrigio, Me.eui_btnColoreVerde, Me.eui_btnColoreViola, Me.eui_btnColoreRosso, Me.eui_btnColoreGiallo, Me.Separator2, Me.eui_btnColorePersonalizzato})
-      Me.PopupMenu1.KeepPopupsWithOffsetPlacementWithinPlacementArea = False
-      Me.PopupMenu1.PlacementMode = Elegant.Ui.PopupPlacementMode.Bottom
-      Me.PopupMenu1.Size = New System.Drawing.Size(100, 100)
-      '
-      'eui_btnColorePredefinito
-      '
-      Me.eui_btnColorePredefinito.Id = "8216979a-c5a5-4baa-b8a9-b1f88811e9d5"
-      Me.eui_btnColorePredefinito.Location = New System.Drawing.Point(2, 2)
-      Me.eui_btnColorePredefinito.Name = "eui_btnColorePredefinito"
-      Me.eui_btnColorePredefinito.Size = New System.Drawing.Size(134, 23)
-      Me.eui_btnColorePredefinito.TabIndex = 3
-      Me.eui_btnColorePredefinito.Text = "&Predefinito"
-      '
-      'Separator1
-      '
-      Me.Separator1.Id = "52e39e68-662f-49bf-b22b-305ce9a4b00f"
-      Me.Separator1.Location = New System.Drawing.Point(2, 25)
-      Me.Separator1.Name = "Separator1"
-      Me.Separator1.Orientation = Elegant.Ui.SeparatorOrientation.Horizontal
-      Me.Separator1.Size = New System.Drawing.Size(134, 5)
-      Me.Separator1.TabIndex = 5
-      Me.Separator1.Text = "Separator1"
-      '
-      'eui_btnColoreBianco
-      '
-      Me.eui_btnColoreBianco.Id = "e20159b7-0636-4c93-a452-1c9d4ea1580c"
-      Me.eui_btnColoreBianco.Location = New System.Drawing.Point(2, 30)
-      Me.eui_btnColoreBianco.Name = "eui_btnColoreBianco"
-      Me.eui_btnColoreBianco.Size = New System.Drawing.Size(134, 23)
-      Me.eui_btnColoreBianco.TabIndex = 4
-      Me.eui_btnColoreBianco.Text = "&Bianco"
-      '
-      'eui_btnColoreBlu
-      '
-      Me.eui_btnColoreBlu.Id = "b46b1f07-b288-4e1a-8fd3-89cc7ceb19e9"
-      Me.eui_btnColoreBlu.Location = New System.Drawing.Point(2, 53)
-      Me.eui_btnColoreBlu.Name = "eui_btnColoreBlu"
-      Me.eui_btnColoreBlu.Size = New System.Drawing.Size(134, 23)
-      Me.eui_btnColoreBlu.TabIndex = 6
-      Me.eui_btnColoreBlu.Text = "Bl&u"
-      '
-      'eui_btnColoreGrigio
-      '
-      Me.eui_btnColoreGrigio.Id = "d07ffe2d-328e-47c1-8914-6c11cf803a1d"
-      Me.eui_btnColoreGrigio.Location = New System.Drawing.Point(2, 76)
-      Me.eui_btnColoreGrigio.Name = "eui_btnColoreGrigio"
-      Me.eui_btnColoreGrigio.Size = New System.Drawing.Size(134, 23)
-      Me.eui_btnColoreGrigio.TabIndex = 7
-      Me.eui_btnColoreGrigio.Text = "&Grigio"
-      '
-      'eui_btnColoreVerde
-      '
-      Me.eui_btnColoreVerde.Id = "ba5729c2-890a-4a08-91fd-5724c11e296f"
-      Me.eui_btnColoreVerde.Location = New System.Drawing.Point(2, 99)
-      Me.eui_btnColoreVerde.Name = "eui_btnColoreVerde"
-      Me.eui_btnColoreVerde.Size = New System.Drawing.Size(134, 23)
-      Me.eui_btnColoreVerde.TabIndex = 8
-      Me.eui_btnColoreVerde.Text = "&Verde"
-      '
-      'eui_btnColoreViola
-      '
-      Me.eui_btnColoreViola.Id = "1c322d3c-4fc3-4e99-bfd7-bcf7ba14a3c5"
-      Me.eui_btnColoreViola.Location = New System.Drawing.Point(2, 122)
-      Me.eui_btnColoreViola.Name = "eui_btnColoreViola"
-      Me.eui_btnColoreViola.Size = New System.Drawing.Size(134, 23)
-      Me.eui_btnColoreViola.TabIndex = 9
-      Me.eui_btnColoreViola.Text = "Vi&ola"
-      '
-      'eui_btnColoreRosso
-      '
-      Me.eui_btnColoreRosso.Id = "7f27ae88-f2ca-4948-9560-b3a1cfc84bc1"
-      Me.eui_btnColoreRosso.Location = New System.Drawing.Point(2, 145)
-      Me.eui_btnColoreRosso.Name = "eui_btnColoreRosso"
-      Me.eui_btnColoreRosso.Size = New System.Drawing.Size(134, 23)
-      Me.eui_btnColoreRosso.TabIndex = 10
-      Me.eui_btnColoreRosso.Text = "&Rosso"
-      '
-      'eui_btnColoreGiallo
-      '
-      Me.eui_btnColoreGiallo.Id = "05e8b8c3-62c9-4bfb-b4c3-b8a3f52305fb"
-      Me.eui_btnColoreGiallo.Location = New System.Drawing.Point(2, 168)
-      Me.eui_btnColoreGiallo.Name = "eui_btnColoreGiallo"
-      Me.eui_btnColoreGiallo.Size = New System.Drawing.Size(134, 23)
-      Me.eui_btnColoreGiallo.TabIndex = 11
-      Me.eui_btnColoreGiallo.Text = "Gi&allo"
-      '
-      'Separator2
-      '
-      Me.Separator2.Id = "6e45cd27-2461-4f74-9be6-609b0b8b1691"
-      Me.Separator2.Location = New System.Drawing.Point(2, 191)
-      Me.Separator2.Name = "Separator2"
-      Me.Separator2.Orientation = Elegant.Ui.SeparatorOrientation.Horizontal
-      Me.Separator2.Size = New System.Drawing.Size(134, 5)
-      Me.Separator2.TabIndex = 12
-      Me.Separator2.Text = "Separator2"
-      '
-      'eui_btnColorePersonalizzato
-      '
-      Me.eui_btnColorePersonalizzato.Id = "7e89c645-dbd0-4f62-97bb-890bcc950989"
-      Me.eui_btnColorePersonalizzato.Location = New System.Drawing.Point(2, 196)
-      Me.eui_btnColorePersonalizzato.Name = "eui_btnColorePersonalizzato"
-      Me.eui_btnColorePersonalizzato.Size = New System.Drawing.Size(134, 23)
-      Me.eui_btnColorePersonalizzato.TabIndex = 13
-      Me.eui_btnColorePersonalizzato.Text = "P&ersonalizzato"
       '
       'cmdColoreTestoSale
       '
@@ -2194,166 +2354,6 @@ Public Class ImpostazioniPos
       Me.eui_cmdSpostaSuVarianti.TabIndex = 265
       Me.eui_cmdSpostaSuVarianti.Text = "Sposta in &Alto"
       '
-      'tpFunzioniPiatti
-      '
-      Me.tpFunzioniPiatti.ActiveControl = Nothing
-      Me.tpFunzioniPiatti.Controls.Add(Me.GroupBox21)
-      Me.tpFunzioniPiatti.Controls.Add(Me.pnlFunzioniPiatti)
-      Me.tpFunzioniPiatti.Controls.Add(Me.GroupBox20)
-      Me.tpFunzioniPiatti.Controls.Add(Me.lstFunzioniPiatti)
-      Me.tpFunzioniPiatti.Controls.Add(Me.eui_cmdReimpostaFunzioniPiatti)
-      Me.tpFunzioniPiatti.KeyTip = Nothing
-      Me.tpFunzioniPiatti.Name = "tpFunzioniPiatti"
-      Me.tpFunzioniPiatti.Size = New System.Drawing.Size(690, 550)
-      Me.tpFunzioniPiatti.TabIndex = 6
-      Me.tpFunzioniPiatti.Text = "Funzioni "
-      '
-      'GroupBox21
-      '
-      Me.GroupBox21.Controls.Add(Me.Label34)
-      Me.GroupBox21.Controls.Add(Me.eui_ddwnStileColoreFunzioniPiatti)
-      Me.GroupBox21.Controls.Add(Me.cmdColoreSfondoFunzioniPiatti)
-      Me.GroupBox21.Controls.Add(Me.cmdColoreTestoFunzioniPiatti)
-      Me.GroupBox21.Controls.Add(Me.Label35)
-      Me.GroupBox21.Controls.Add(Me.Label36)
-      Me.GroupBox21.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.GroupBox21.Id = "806a59db-f798-4b83-b7f5-48daa9fe500b"
-      Me.GroupBox21.Location = New System.Drawing.Point(393, 14)
-      Me.GroupBox21.Name = "GroupBox21"
-      Me.GroupBox21.Size = New System.Drawing.Size(285, 250)
-      Me.GroupBox21.TabIndex = 270
-      Me.GroupBox21.Text = "Opzioni singolo elemento"
-      '
-      'Label34
-      '
-      Me.Label34.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.Label34.Location = New System.Drawing.Point(12, 35)
-      Me.Label34.Name = "Label34"
-      Me.Label34.Size = New System.Drawing.Size(108, 20)
-      Me.Label34.TabIndex = 265
-      Me.Label34.Text = "Stile colore:"
-      '
-      'eui_ddwnStileColoreFunzioniPiatti
-      '
-      Me.eui_ddwnStileColoreFunzioniPiatti.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.eui_ddwnStileColoreFunzioniPiatti.Id = "af79d192-654c-4b46-a9e7-672c21df3096"
-      Me.eui_ddwnStileColoreFunzioniPiatti.Location = New System.Drawing.Point(164, 32)
-      Me.eui_ddwnStileColoreFunzioniPiatti.Name = "eui_ddwnStileColoreFunzioniPiatti"
-      Me.eui_ddwnStileColoreFunzioniPiatti.Popup = Me.PopupMenu1
-      Me.eui_ddwnStileColoreFunzioniPiatti.Size = New System.Drawing.Size(106, 28)
-      Me.eui_ddwnStileColoreFunzioniPiatti.TabIndex = 0
-      Me.eui_ddwnStileColoreFunzioniPiatti.Text = "Predefinito"
-      '
-      'cmdColoreSfondoFunzioniPiatti
-      '
-      Me.cmdColoreSfondoFunzioniPiatti.BackColor = System.Drawing.SystemColors.Control
-      Me.cmdColoreSfondoFunzioniPiatti.Enabled = False
-      Me.cmdColoreSfondoFunzioniPiatti.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-      Me.cmdColoreSfondoFunzioniPiatti.Location = New System.Drawing.Point(165, 77)
-      Me.cmdColoreSfondoFunzioniPiatti.Name = "cmdColoreSfondoFunzioniPiatti"
-      Me.cmdColoreSfondoFunzioniPiatti.Size = New System.Drawing.Size(102, 28)
-      Me.cmdColoreSfondoFunzioniPiatti.TabIndex = 1
-      Me.cmdColoreSfondoFunzioniPiatti.UseVisualStyleBackColor = False
-      '
-      'cmdColoreTestoFunzioniPiatti
-      '
-      Me.cmdColoreTestoFunzioniPiatti.BackColor = System.Drawing.SystemColors.Control
-      Me.cmdColoreTestoFunzioniPiatti.Enabled = False
-      Me.cmdColoreTestoFunzioniPiatti.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-      Me.cmdColoreTestoFunzioniPiatti.Location = New System.Drawing.Point(164, 124)
-      Me.cmdColoreTestoFunzioniPiatti.Name = "cmdColoreTestoFunzioniPiatti"
-      Me.cmdColoreTestoFunzioniPiatti.Size = New System.Drawing.Size(102, 28)
-      Me.cmdColoreTestoFunzioniPiatti.TabIndex = 2
-      Me.cmdColoreTestoFunzioniPiatti.UseVisualStyleBackColor = False
-      '
-      'Label35
-      '
-      Me.Label35.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.Label35.Location = New System.Drawing.Point(12, 127)
-      Me.Label35.Name = "Label35"
-      Me.Label35.Size = New System.Drawing.Size(108, 20)
-      Me.Label35.TabIndex = 253
-      Me.Label35.Text = "Colore testo:"
-      '
-      'Label36
-      '
-      Me.Label36.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.Label36.Location = New System.Drawing.Point(12, 76)
-      Me.Label36.Name = "Label36"
-      Me.Label36.Size = New System.Drawing.Size(108, 20)
-      Me.Label36.TabIndex = 252
-      Me.Label36.Text = "Colore sfondo:"
-      '
-      'pnlFunzioniPiatti
-      '
-      Me.pnlFunzioniPiatti.Location = New System.Drawing.Point(284, 22)
-      Me.pnlFunzioniPiatti.Name = "pnlFunzioniPiatti"
-      Me.pnlFunzioniPiatti.Size = New System.Drawing.Size(96, 43)
-      Me.pnlFunzioniPiatti.TabIndex = 269
-      Me.pnlFunzioniPiatti.Visible = False
-      '
-      'GroupBox20
-      '
-      Me.GroupBox20.Controls.Add(Me.netBtn_AnteprimaFunzioniPiatti)
-      Me.GroupBox20.Controls.Add(Me.Label33)
-      Me.GroupBox20.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.GroupBox20.Id = "abbe5638-c658-4fe3-9a2d-bea19f1889e9"
-      Me.GroupBox20.Location = New System.Drawing.Point(392, 286)
-      Me.GroupBox20.Name = "GroupBox20"
-      Me.GroupBox20.Size = New System.Drawing.Size(285, 251)
-      Me.GroupBox20.TabIndex = 268
-      Me.GroupBox20.Text = "Anteprima"
-      '
-      'netBtn_AnteprimaFunzioniPiatti
-      '
-      Me.netBtn_AnteprimaFunzioniPiatti.ColorBottom = System.Drawing.Color.Black
-      Me.netBtn_AnteprimaFunzioniPiatti.ColorDisabled = System.Drawing.Color.DimGray
-      Me.netBtn_AnteprimaFunzioniPiatti.ColorLight = System.Drawing.SystemColors.HighlightText
-      Me.netBtn_AnteprimaFunzioniPiatti.ColorStyle = Softgroup.NetButton.NetButton.ColorStyleEnum.Custom
-      Me.netBtn_AnteprimaFunzioniPiatti.ColorText = System.Drawing.SystemColors.ControlText
-      Me.netBtn_AnteprimaFunzioniPiatti.ColorTop = System.Drawing.SystemColors.ControlLightLight
-      Me.netBtn_AnteprimaFunzioniPiatti.CornerRadius = 2
-      Me.netBtn_AnteprimaFunzioniPiatti.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.netBtn_AnteprimaFunzioniPiatti.Location = New System.Drawing.Point(120, 16)
-      Me.netBtn_AnteprimaFunzioniPiatti.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
-      Me.netBtn_AnteprimaFunzioniPiatti.Name = "netBtn_AnteprimaFunzioniPiatti"
-      Me.netBtn_AnteprimaFunzioniPiatti.Size = New System.Drawing.Size(150, 60)
-      Me.netBtn_AnteprimaFunzioniPiatti.TabIndex = 0
-      Me.netBtn_AnteprimaFunzioniPiatti.TextButton = ""
-      '
-      'Label33
-      '
-      Me.Label33.AutoSize = True
-      Me.Label33.BackColor = System.Drawing.Color.Transparent
-      Me.Label33.Cursor = System.Windows.Forms.Cursors.Default
-      Me.Label33.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.Label33.ForeColor = System.Drawing.Color.Black
-      Me.Label33.Location = New System.Drawing.Point(14, 16)
-      Me.Label33.Name = "Label33"
-      Me.Label33.RightToLeft = System.Windows.Forms.RightToLeft.No
-      Me.Label33.Size = New System.Drawing.Size(53, 20)
-      Me.Label33.TabIndex = 254
-      Me.Label33.Text = "Tasto:"
-      '
-      'lstFunzioniPiatti
-      '
-      Me.lstFunzioniPiatti.FormattingEnabled = True
-      Me.lstFunzioniPiatti.ItemHeight = 20
-      Me.lstFunzioniPiatti.Location = New System.Drawing.Point(13, 13)
-      Me.lstFunzioniPiatti.Name = "lstFunzioniPiatti"
-      Me.lstFunzioniPiatti.Size = New System.Drawing.Size(266, 524)
-      Me.lstFunzioniPiatti.TabIndex = 266
-      '
-      'eui_cmdReimpostaFunzioniPiatti
-      '
-      Me.eui_cmdReimpostaFunzioniPiatti.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-      Me.eui_cmdReimpostaFunzioniPiatti.Id = "f2739ae8-9673-426e-b909-907acf0d62f8"
-      Me.eui_cmdReimpostaFunzioniPiatti.Location = New System.Drawing.Point(282, 492)
-      Me.eui_cmdReimpostaFunzioniPiatti.Name = "eui_cmdReimpostaFunzioniPiatti"
-      Me.eui_cmdReimpostaFunzioniPiatti.Size = New System.Drawing.Size(96, 45)
-      Me.eui_cmdReimpostaFunzioniPiatti.TabIndex = 267
-      Me.eui_cmdReimpostaFunzioniPiatti.Text = "&Reimposta"
-      '
       'eui_cmdOK
       '
       Me.eui_cmdOK.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -2390,7 +2390,7 @@ Public Class ImpostazioniPos
       Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
       Me.BackColor = System.Drawing.SystemColors.AppWorkspace
       Me.CancelButton = Me.eui_cmdAnnulla
-      Me.ClientSize = New System.Drawing.Size(859, 623)
+      Me.ClientSize = New System.Drawing.Size(852, 614)
       Me.Controls.Add(Me.Label1)
       Me.Controls.Add(Me.eui_cmdAnnulla)
       Me.Controls.Add(Me.eui_cmdOK)
@@ -2404,6 +2404,12 @@ Public Class ImpostazioniPos
       Me.Text = "IMPOSTAZIONI"
       CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
       CType(Me.TabControl1, System.ComponentModel.ISupportInitialize).EndInit()
+      Me.tpFunzioniPiatti.ResumeLayout(False)
+      Me.GroupBox21.ResumeLayout(False)
+      Me.GroupBox21.PerformLayout()
+      CType(Me.PopupMenu1, System.ComponentModel.ISupportInitialize).EndInit()
+      Me.GroupBox20.ResumeLayout(False)
+      Me.GroupBox20.PerformLayout()
       Me.tpSale.ResumeLayout(False)
       Me.GroupBox5.ResumeLayout(False)
       Me.GroupBox5.PerformLayout()
@@ -2412,7 +2418,6 @@ Public Class ImpostazioniPos
       CType(Me.eui_nudAltezzaSale, System.ComponentModel.ISupportInitialize).EndInit()
       Me.GroupBox1.ResumeLayout(False)
       Me.GroupBox1.PerformLayout()
-      CType(Me.PopupMenu1, System.ComponentModel.ISupportInitialize).EndInit()
       Me.tpTavoli.ResumeLayout(False)
       CType(Me.TabControl2, System.ComponentModel.ISupportInitialize).EndInit()
       Me.TabPage2.ResumeLayout(False)
@@ -2461,11 +2466,6 @@ Public Class ImpostazioniPos
       CType(Me.eui_nudAltezzaVarianti, System.ComponentModel.ISupportInitialize).EndInit()
       Me.GroupBox19.ResumeLayout(False)
       Me.GroupBox19.PerformLayout()
-      Me.tpFunzioniPiatti.ResumeLayout(False)
-      Me.GroupBox21.ResumeLayout(False)
-      Me.GroupBox21.PerformLayout()
-      Me.GroupBox20.ResumeLayout(False)
-      Me.GroupBox20.PerformLayout()
       Me.ResumeLayout(False)
       Me.PerformLayout()
 

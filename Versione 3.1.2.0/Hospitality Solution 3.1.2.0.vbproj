@@ -817,7 +817,7 @@
     <None Include="Resources\About1.ico" />
     <None Include="Resources\About.ico" />
     <None Include="Resources\Hospitality.ico" />
-    <EmbeddedResource Include="bin\Reports\Fattura A4_Iva_Multipla.rdlc" />
+    <EmbeddedResource Include="bin\Reports\Scontrino.rdlc" />
     <EmbeddedResource Include="Codice\Classi\CellaColorata.resx">
       <DependentUpon>CellaColorata.vb</DependentUpon>
     </EmbeddedResource>

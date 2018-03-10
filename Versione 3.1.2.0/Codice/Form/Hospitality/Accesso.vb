@@ -36,134 +36,134 @@ Public Class frmAccesso
     Friend WithEvents Label1 As Elegant.Ui.Label
     Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmAccesso))
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.formFrameSkinner = New Elegant.Ui.FormFrameSkinner()
-        Me.eui_cmdAnnulla = New Elegant.Ui.Button()
-        Me.eui_cmdOK = New Elegant.Ui.Button()
-        Me.eui_cmbOperatore = New Elegant.Ui.ComboBox()
-        Me.eui_txtPassword = New Elegant.Ui.TextBox()
-        Me.Label1 = New Elegant.Ui.Label()
-        Me.Label2 = New Elegant.Ui.Label()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout()
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(160, 168)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 185
-        Me.PictureBox2.TabStop = False
-        '
-        'ErrorProvider1
-        '
-        Me.ErrorProvider1.ContainerControl = Me
-        '
-        'formFrameSkinner
-        '
-        Me.formFrameSkinner.AllowGlass = False
-        Me.formFrameSkinner.Form = Me
-        '
-        'eui_cmdAnnulla
-        '
-        Me.eui_cmdAnnulla.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.eui_cmdAnnulla.Id = "5815fb08-3511-4c54-a173-cd48cbc7eb17"
-        Me.eui_cmdAnnulla.KeyTip = "A"
-        Me.eui_cmdAnnulla.Location = New System.Drawing.Point(290, 126)
-        Me.eui_cmdAnnulla.Name = "eui_cmdAnnulla"
-        Me.eui_cmdAnnulla.ScreenTip.Caption = "Annulla"
-        Me.eui_cmdAnnulla.ScreenTip.Text = "Annulla l'operazione e chiude la finestra"
-        Me.eui_cmdAnnulla.Size = New System.Drawing.Size(80, 24)
-        Me.eui_cmdAnnulla.TabIndex = 3
-        Me.eui_cmdAnnulla.Text = "&Annulla"
-        '
-        'eui_cmdOK
-        '
-        Me.eui_cmdOK.Id = "3aec9268-18c4-4062-85b2-1459f457e1f3"
-        Me.eui_cmdOK.KeyTip = "O"
-        Me.eui_cmdOK.Location = New System.Drawing.Point(202, 126)
-        Me.eui_cmdOK.Name = "eui_cmdOK"
-        Me.eui_cmdOK.ScreenTip.Caption = "OK"
-        Me.eui_cmdOK.ScreenTip.Text = "Conferma l'operazione  e chiude la finestra." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Nella versione Dimostrativa non è" &
+      Me.components = New System.ComponentModel.Container()
+      Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmAccesso))
+      Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+      Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+      Me.formFrameSkinner = New Elegant.Ui.FormFrameSkinner()
+      Me.eui_cmdAnnulla = New Elegant.Ui.Button()
+      Me.eui_cmdOK = New Elegant.Ui.Button()
+      Me.eui_cmbOperatore = New Elegant.Ui.ComboBox()
+      Me.eui_txtPassword = New Elegant.Ui.TextBox()
+      Me.Label1 = New Elegant.Ui.Label()
+      Me.Label2 = New Elegant.Ui.Label()
+      CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+      CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
+      Me.SuspendLayout()
+      '
+      'PictureBox2
+      '
+      Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+      Me.PictureBox2.Location = New System.Drawing.Point(0, 0)
+      Me.PictureBox2.Name = "PictureBox2"
+      Me.PictureBox2.Size = New System.Drawing.Size(160, 168)
+      Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+      Me.PictureBox2.TabIndex = 185
+      Me.PictureBox2.TabStop = False
+      '
+      'ErrorProvider1
+      '
+      Me.ErrorProvider1.ContainerControl = Me
+      '
+      'formFrameSkinner
+      '
+      Me.formFrameSkinner.AllowGlass = False
+      Me.formFrameSkinner.Form = Me
+      '
+      'eui_cmdAnnulla
+      '
+      Me.eui_cmdAnnulla.DialogResult = System.Windows.Forms.DialogResult.Cancel
+      Me.eui_cmdAnnulla.Id = "5815fb08-3511-4c54-a173-cd48cbc7eb17"
+      Me.eui_cmdAnnulla.KeyTip = "A"
+      Me.eui_cmdAnnulla.Location = New System.Drawing.Point(290, 126)
+      Me.eui_cmdAnnulla.Name = "eui_cmdAnnulla"
+      Me.eui_cmdAnnulla.ScreenTip.Caption = "Annulla"
+      Me.eui_cmdAnnulla.ScreenTip.Text = "Annulla l'operazione e chiude la finestra"
+      Me.eui_cmdAnnulla.Size = New System.Drawing.Size(80, 24)
+      Me.eui_cmdAnnulla.TabIndex = 3
+      Me.eui_cmdAnnulla.Text = "&Annulla"
+      '
+      'eui_cmdOK
+      '
+      Me.eui_cmdOK.Id = "3aec9268-18c4-4062-85b2-1459f457e1f3"
+      Me.eui_cmdOK.KeyTip = "O"
+      Me.eui_cmdOK.Location = New System.Drawing.Point(202, 126)
+      Me.eui_cmdOK.Name = "eui_cmdOK"
+      Me.eui_cmdOK.ScreenTip.Caption = "OK"
+      Me.eui_cmdOK.ScreenTip.Text = "Conferma l'operazione  e chiude la finestra." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Nella versione Dimostrativa non è" &
     " necessario specificare la password. Premere sul tasto OK."
-        Me.eui_cmdOK.Size = New System.Drawing.Size(80, 24)
-        Me.eui_cmdOK.TabIndex = 2
-        Me.eui_cmdOK.Text = "&OK"
-        '
-        'eui_cmbOperatore
-        '
-        Me.eui_cmbOperatore.Editable = False
-        Me.eui_cmbOperatore.FormattingEnabled = False
-        Me.eui_cmbOperatore.Id = "6048c6d5-a8bc-4e96-973d-6f7639cc70be"
-        Me.eui_cmbOperatore.Location = New System.Drawing.Point(169, 31)
-        Me.eui_cmbOperatore.Name = "eui_cmbOperatore"
-        Me.eui_cmbOperatore.Size = New System.Drawing.Size(201, 21)
-        Me.eui_cmbOperatore.TabIndex = 0
-        '
-        'eui_txtPassword
-        '
-        Me.eui_txtPassword.Id = "e00e3276-2503-423a-a886-0fb242add818"
-        Me.eui_txtPassword.Location = New System.Drawing.Point(169, 77)
-        Me.eui_txtPassword.Name = "eui_txtPassword"
-        Me.eui_txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.eui_txtPassword.Size = New System.Drawing.Size(201, 21)
-        Me.eui_txtPassword.TabIndex = 1
-        Me.eui_txtPassword.TextEditorWidth = 195
-        '
-        'Label1
-        '
-        Me.Label1.Location = New System.Drawing.Point(169, 16)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(50, 13)
-        Me.Label1.TabIndex = 190
-        Me.Label1.Text = "Operatore:"
-        '
-        'Label2
-        '
-        Me.Label2.Location = New System.Drawing.Point(169, 62)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(50, 13)
-        Me.Label2.TabIndex = 191
-        Me.Label2.Text = "Password:"
-        '
-        'frmAccesso
-        '
-        Me.AcceptButton = Me.eui_cmdOK
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
-        Me.BackColor = System.Drawing.SystemColors.AppWorkspace
-        Me.CancelButton = Me.eui_cmdAnnulla
-        Me.ClientSize = New System.Drawing.Size(381, 159)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.eui_txtPassword)
-        Me.Controls.Add(Me.eui_cmbOperatore)
-        Me.Controls.Add(Me.eui_cmdAnnulla)
-        Me.Controls.Add(Me.eui_cmdOK)
-        Me.Controls.Add(Me.PictureBox2)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.MaximizeBox = False
-        Me.MinimizeBox = False
-        Me.Name = "frmAccesso"
-        Me.ShowInTaskbar = False
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Seleziona operatore"
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
+      Me.eui_cmdOK.Size = New System.Drawing.Size(80, 24)
+      Me.eui_cmdOK.TabIndex = 2
+      Me.eui_cmdOK.Text = "&OK"
+      '
+      'eui_cmbOperatore
+      '
+      Me.eui_cmbOperatore.Editable = False
+      Me.eui_cmbOperatore.FormattingEnabled = False
+      Me.eui_cmbOperatore.Id = "6048c6d5-a8bc-4e96-973d-6f7639cc70be"
+      Me.eui_cmbOperatore.Location = New System.Drawing.Point(169, 31)
+      Me.eui_cmbOperatore.Name = "eui_cmbOperatore"
+      Me.eui_cmbOperatore.Size = New System.Drawing.Size(201, 21)
+      Me.eui_cmbOperatore.TabIndex = 0
+      '
+      'eui_txtPassword
+      '
+      Me.eui_txtPassword.Id = "e00e3276-2503-423a-a886-0fb242add818"
+      Me.eui_txtPassword.Location = New System.Drawing.Point(169, 77)
+      Me.eui_txtPassword.Name = "eui_txtPassword"
+      Me.eui_txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+      Me.eui_txtPassword.Size = New System.Drawing.Size(201, 21)
+      Me.eui_txtPassword.TabIndex = 1
+      Me.eui_txtPassword.TextEditorWidth = 195
+      '
+      'Label1
+      '
+      Me.Label1.Location = New System.Drawing.Point(169, 16)
+      Me.Label1.Name = "Label1"
+      Me.Label1.Size = New System.Drawing.Size(50, 13)
+      Me.Label1.TabIndex = 190
+      Me.Label1.Text = "Operatore:"
+      '
+      'Label2
+      '
+      Me.Label2.Location = New System.Drawing.Point(169, 62)
+      Me.Label2.Name = "Label2"
+      Me.Label2.Size = New System.Drawing.Size(50, 13)
+      Me.Label2.TabIndex = 191
+      Me.Label2.Text = "Password:"
+      '
+      'frmAccesso
+      '
+      Me.AcceptButton = Me.eui_cmdOK
+      Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+      Me.BackColor = System.Drawing.SystemColors.AppWorkspace
+      Me.CancelButton = Me.eui_cmdAnnulla
+      Me.ClientSize = New System.Drawing.Size(381, 169)
+      Me.Controls.Add(Me.Label2)
+      Me.Controls.Add(Me.Label1)
+      Me.Controls.Add(Me.eui_txtPassword)
+      Me.Controls.Add(Me.eui_cmbOperatore)
+      Me.Controls.Add(Me.eui_cmdAnnulla)
+      Me.Controls.Add(Me.eui_cmdOK)
+      Me.Controls.Add(Me.PictureBox2)
+      Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+      Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+      Me.MaximizeBox = False
+      Me.MinimizeBox = False
+      Me.Name = "frmAccesso"
+      Me.ShowInTaskbar = False
+      Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+      Me.Text = "Seleziona operatore"
+      CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+      CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
+      Me.ResumeLayout(False)
+      Me.PerformLayout()
 
-    End Sub
+   End Sub
 
 #End Region
 
-    Dim TAB_OPERATORI = "Operatori"
+   Dim TAB_OPERATORI = "Operatori"
     Dim TAB_GRUPPI = "Gruppi"
 
     Dim DatiConfig As AppConfig
