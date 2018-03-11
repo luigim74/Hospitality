@@ -11155,8 +11155,34 @@ Friend Class frmMain
     End Sub
 
     Private Sub eui_Strumenti_Esporta_Click(sender As System.Object, e As System.EventArgs) Handles eui_Strumenti_Esporta.Click
+      Try
+         ' Ottiene il form attivo.
+         Dim frmAttivo As String = EstraiNomeFinestra(Me.ActiveMdiChild.Text)
 
-    End Sub
+         ' Richiama la procedura per la modifica dei dati del form attivo.
+         Select Case frmAttivo
+            Case TITOLO_FINESTRA_ELENCO_PREN_CAMERE
+
+            Case TITOLO_FINESTRA_ELENCO_LISTINI_CAMERE
+
+            Case TITOLO_FINESTRA_ELENCO_DOCUMENTI
+               ' Registra loperazione effettuata dall'operatore identificato.
+               RegistraOperazione(TipoOperazione.Anteprima, STR_CONTABILITA_DOCUMENTI, MODULO_CONTABILITA_DOCUMENTI)
+
+               ' Apre il documento selezionato nell'elenco in anteprima di stampa.
+               ApriReports(g_frmDocumenti.repSql, g_frmDocumenti.TAB_DOCUMENTI, PERCORSO_REP_DOC)
+
+               ' Inserire qui il codice per gestire le altre finestre.
+
+         End Select
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
+
+   End Sub
 
     Private Sub eui_Strumenti_Stampa_Anteprima_Click(sender As System.Object, e As System.EventArgs) Handles eui_Strumenti_Stampa_Anteprima.Click
         Try

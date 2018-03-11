@@ -3495,7 +3495,7 @@ Public Class ContoPos
             End If
 
             cmdInsert.Parameters.AddWithValue("@RifDoc", LeggiUltimoRecord(TAB_DOC))
-            cmdInsert.Parameters.AddWithValue("@CodiceArticolo", String.Empty)
+            cmdInsert.Parameters.AddWithValue("@CodiceArticolo", lstvDettagli.Items(i).SubItems(6).Text)
             cmdInsert.Parameters.AddWithValue("@Descrizione", FormattaApici(lstvDettagli.Items(i).SubItems(2).Text))
             cmdInsert.Parameters.AddWithValue("@Unit‡Misura", String.Empty)
             cmdInsert.Parameters.AddWithValue("@Quantit‡", quantit‡)
@@ -3777,7 +3777,7 @@ Public Class ContoPos
             End If
 
             cmdInsert.Parameters.AddWithValue("@RifDoc", LeggiUltimoRecord(TAB_DOC))
-            cmdInsert.Parameters.AddWithValue("@CodiceArticolo", String.Empty)
+            cmdInsert.Parameters.AddWithValue("@CodiceArticolo", lstvDettagli.Items(i).SubItems(6).Text)
             cmdInsert.Parameters.AddWithValue("@Descrizione", FormattaApici(lstvDettagli.Items(i).SubItems(2).Text))
             cmdInsert.Parameters.AddWithValue("@Unit‡Misura", String.Empty)
             cmdInsert.Parameters.AddWithValue("@Quantit‡", quantit‡)
@@ -4774,6 +4774,7 @@ Public Class ContoPos
                .Inviata = g_frmPos.lstvDettagli.Items(i).SubItems(8).Text
                .Esclusa = g_frmPos.lstvDettagli.Items(i).SubItems(9).Text
                .Offerta = g_frmPos.lstvDettagli.Items(i).SubItems(10).Text
+               .AliquotaIva = g_frmPos.lstvDettagli.Items(i).SubItems(12).Text
                .NumeroConto = numConto
 
                .InserisciDati(TAB_COMANDE)

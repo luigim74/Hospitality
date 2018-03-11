@@ -30,6 +30,7 @@ Partial Class ListaPiatti
       Me.clnListino2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
       Me.clnListino3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
       Me.clnListino4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+      Me.clnCategoria = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
       Me.eui_cmdAnnulla = New Elegant.Ui.Button()
       Me.eui_cmdInserisci = New Elegant.Ui.Button()
       Me.formFrameSkinner = New Elegant.Ui.FormFrameSkinner()
@@ -40,7 +41,6 @@ Partial Class ListaPiatti
       Me.eui_cmdListino2 = New Elegant.Ui.Button()
       Me.eui_cmdListino3 = New Elegant.Ui.Button()
       Me.eui_cmdListino4 = New Elegant.Ui.Button()
-      Me.clnCategoria = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
       Me.eui_cmbCategoriaPiatti = New Elegant.Ui.ComboBox()
       CType(Me.PopupMenu1, System.ComponentModel.ISupportInitialize).BeginInit()
       Me.SuspendLayout()
@@ -91,6 +91,11 @@ Partial Class ListaPiatti
       Me.clnListino4.Text = "Listino 4"
       Me.clnListino4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
       Me.clnListino4.Width = 80
+      '
+      'clnCategoria
+      '
+      Me.clnCategoria.Text = "Categoria"
+      Me.clnCategoria.Width = 0
       '
       'eui_cmdAnnulla
       '
@@ -169,11 +174,6 @@ Partial Class ListaPiatti
       Me.eui_cmdListino4.TabIndex = 6
       Me.eui_cmdListino4.Text = "Listino 4"
       '
-      'clnCategoria
-      '
-      Me.clnCategoria.Text = "Categoria"
-      Me.clnCategoria.Width = 0
-      '
       'eui_cmbCategoriaPiatti
       '
       Me.eui_cmbCategoriaPiatti.Editable = False
@@ -192,7 +192,7 @@ Partial Class ListaPiatti
       Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
       Me.BackColor = System.Drawing.SystemColors.AppWorkspace
       Me.CancelButton = Me.eui_cmdAnnulla
-      Me.ClientSize = New System.Drawing.Size(724, 511)
+      Me.ClientSize = New System.Drawing.Size(724, 513)
       Me.Controls.Add(Me.eui_cmbCategoriaPiatti)
       Me.Controls.Add(Me.eui_dwnListino)
       Me.Controls.Add(Me.eui_cmdInserisci)

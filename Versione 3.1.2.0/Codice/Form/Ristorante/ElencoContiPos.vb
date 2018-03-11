@@ -547,7 +547,8 @@ Public Class ElencoContiPos
 
    Private Function stringSqlContiTutti() As String
       Try
-         Dim sql = String.Format("SELECT * FROM {0} WHERE TipoDoc = 'Conto' AND Chiuso = 'No' AND Tavolo <> '' ORDER BY NumDoc DESC", TAB_DOCUMENTI)
+         'Dim sql = String.Format("SELECT * FROM {0} WHERE TipoDoc = 'Conto' AND Chiuso = 'No' AND Tavolo <> '' ORDER BY NumDoc DESC", TAB_DOCUMENTI)
+         Dim sql = String.Format("SELECT * FROM {0} WHERE TipoDoc = 'Conto' AND Chiuso = 'No' ORDER BY NumDoc DESC", TAB_DOCUMENTI)
 
          Return sql
 
@@ -562,7 +563,8 @@ Public Class ElencoContiPos
 
    Private Function stringSqlContiChiusi() As String
       Try
-         Dim sql = String.Format("SELECT * FROM {0} WHERE TipoDoc = 'Conto' AND StatoDoc = 'Chiuso' AND Chiuso = 'No' AND Tavolo <> '' ORDER BY NumDoc DESC", TAB_DOCUMENTI)
+         'Dim sql = String.Format("SELECT * FROM {0} WHERE TipoDoc = 'Conto' AND StatoDoc = 'Chiuso' AND Chiuso = 'No' AND Tavolo <> '' ORDER BY NumDoc DESC", TAB_DOCUMENTI)
+         Dim sql = String.Format("SELECT * FROM {0} WHERE TipoDoc = 'Conto' AND StatoDoc = 'Chiuso' AND Chiuso = 'No' ORDER BY NumDoc DESC", TAB_DOCUMENTI)
 
          Return sql
 
@@ -577,7 +579,8 @@ Public Class ElencoContiPos
 
    Private Function stringSqlContiAperti() As String
       Try
-         Dim sql = String.Format("SELECT * FROM {0} WHERE TipoDoc = 'Conto'  AND StatoDoc = 'Aperto' AND Chiuso = 'No' AND Tavolo <> '' ORDER BY NumDoc DESC", TAB_DOCUMENTI)
+         'Dim sql = String.Format("SELECT * FROM {0} WHERE TipoDoc = 'Conto'  AND StatoDoc = 'Aperto' AND Chiuso = 'No' AND Tavolo <> '' ORDER BY NumDoc DESC", TAB_DOCUMENTI)
+         Dim sql = String.Format("SELECT * FROM {0} WHERE TipoDoc = 'Conto'  AND StatoDoc = 'Aperto' AND Chiuso = 'No' ORDER BY NumDoc DESC", TAB_DOCUMENTI)
 
          Return sql
 
@@ -592,7 +595,8 @@ Public Class ElencoContiPos
 
    Private Function stringSqlContiStampati() As String
       Try
-         Dim sql = String.Format("SELECT * FROM {0} WHERE TipoDoc = 'Conto'  AND StatoDoc = 'Stampato' AND Chiuso = 'No' AND Tavolo <> '' ORDER BY NumDoc DESC", TAB_DOCUMENTI)
+         'Dim sql = String.Format("SELECT * FROM {0} WHERE TipoDoc = 'Conto'  AND StatoDoc = 'Stampato' AND Chiuso = 'No' AND Tavolo <> '' ORDER BY NumDoc DESC", TAB_DOCUMENTI)
+         Dim sql = String.Format("SELECT * FROM {0} WHERE TipoDoc = 'Conto'  AND StatoDoc = 'Stampato' AND Chiuso = 'No' ORDER BY NumDoc DESC", TAB_DOCUMENTI)
 
          Return sql
 
@@ -611,7 +615,8 @@ Public Class ElencoContiPos
          Dim inizioPeriodo As String = CFormatta.FormattaData("01/01/" & anno)
          Dim ultimoGiornoAnno As String = DateTime.DaysInMonth(anno, 12)
          Dim finePeriodo As String = CFormatta.FormattaData(ultimoGiornoAnno & "/12/" & anno)
-         Dim sql = String.Format("SELECT * FROM {0} WHERE TipoDoc = 'Conto' AND Chiuso = 'No' AND Tavolo <> '' AND DataDoc BETWEEN #{1}# AND #{2}# ORDER BY NumDoc DESC", TAB_DOCUMENTI, inizioPeriodo, finePeriodo)
+         'Dim sql = String.Format("SELECT * FROM {0} WHERE TipoDoc = 'Conto' AND Chiuso = 'No' AND Tavolo <> '' AND DataDoc BETWEEN #{1}# AND #{2}# ORDER BY NumDoc DESC", TAB_DOCUMENTI, inizioPeriodo, finePeriodo)
+         Dim sql = String.Format("SELECT * FROM {0} WHERE TipoDoc = 'Conto' AND Chiuso = 'No' AND DataDoc BETWEEN #{1}# AND #{2}# ORDER BY NumDoc DESC", TAB_DOCUMENTI, inizioPeriodo, finePeriodo)
 
          Return sql
 
@@ -631,7 +636,8 @@ Public Class ElencoContiPos
          Dim inizioPeriodo As String = CFormatta.FormattaData("01/" & mese & "/" & anno)
          Dim ultimoGiornoAnno As String = DateTime.DaysInMonth(anno, mese)
          Dim finePeriodo As String = CFormatta.FormattaData(ultimoGiornoAnno & "/12/" & anno)
-         Dim sql = String.Format("SELECT * FROM {0} WHERE TipoDoc = 'Conto' AND Chiuso = 'No' AND Tavolo <> '' AND DataDoc BETWEEN #{1}# AND #{2}# ORDER BY NumDoc DESC", TAB_DOCUMENTI, inizioPeriodo, finePeriodo)
+         'Dim sql = String.Format("SELECT * FROM {0} WHERE TipoDoc = 'Conto' AND Chiuso = 'No' AND Tavolo <> '' AND DataDoc BETWEEN #{1}# AND #{2}# ORDER BY NumDoc DESC", TAB_DOCUMENTI, inizioPeriodo, finePeriodo)
+         Dim sql = String.Format("SELECT * FROM {0} WHERE TipoDoc = 'Conto' AND Chiuso = 'No' AND DataDoc BETWEEN #{1}# AND #{2}# ORDER BY NumDoc DESC", TAB_DOCUMENTI, inizioPeriodo, finePeriodo)
 
          Return sql
 
@@ -647,9 +653,8 @@ Public Class ElencoContiPos
    Private Function stringSqlContiOggi() As String
       Try
          Dim oggi As String = CFormatta.FormattaData(Today.ToShortDateString)
-         'Dim finePeriodo As String = CFormatta.FormattaData(ultimoGiornoAnno & "/12/" & anno)
-
-         Dim sql = String.Format("SELECT * FROM {0} WHERE TipoDoc = 'Conto' AND Chiuso = 'No' AND Tavolo <> '' AND DataDoc = #{1}# ORDER BY NumDoc DESC", TAB_DOCUMENTI, oggi)
+         'Dim sql = String.Format("SELECT * FROM {0} WHERE TipoDoc = 'Conto' AND Chiuso = 'No' AND Tavolo <> '' AND DataDoc = #{1}# ORDER BY NumDoc DESC", TAB_DOCUMENTI, oggi)
+         Dim sql = String.Format("SELECT * FROM {0} WHERE TipoDoc = 'Conto' AND Chiuso = 'No' AND DataDoc = #{1}# ORDER BY NumDoc DESC", TAB_DOCUMENTI, oggi)
 
          Return sql
 
@@ -664,7 +669,8 @@ Public Class ElencoContiPos
 
    Private Function stringSqlContiPeriodo(ByVal inizioPeriodo As String, ByVal finePeriodo As String) As String
       Try
-         sqlPeriodo = String.Format("SELECT * FROM {0} WHERE TipoDoc = 'Conto' AND Chiuso = 'No' AND Tavolo <> '' AND DataDoc BETWEEN #{1}# AND #{2}# ORDER BY NumDoc DESC", TAB_DOCUMENTI, inizioPeriodo, finePeriodo)
+         'sqlPeriodo = String.Format("SELECT * FROM {0} WHERE TipoDoc = 'Conto' AND Chiuso = 'No' AND Tavolo <> '' AND DataDoc BETWEEN #{1}# AND #{2}# ORDER BY NumDoc DESC", TAB_DOCUMENTI, inizioPeriodo, finePeriodo)
+         sqlPeriodo = String.Format("SELECT * FROM {0} WHERE TipoDoc = 'Conto' AND Chiuso = 'No' AND DataDoc BETWEEN #{1}# AND #{2}# ORDER BY NumDoc DESC", TAB_DOCUMENTI, inizioPeriodo, finePeriodo)
 
          Return sqlPeriodo
 
@@ -679,7 +685,8 @@ Public Class ElencoContiPos
 
    Private Function stringSqlContiSenzaIntestazione() As String
       Try
-         Dim sql = String.Format("SELECT * FROM {0} WHERE TipoDoc = 'Conto' AND Chiuso = 'No' AND Tavolo <> '' AND Cliente = '{1}' ORDER BY NumDoc DESC", TAB_DOCUMENTI, String.Empty)
+         'Dim sql = String.Format("SELECT * FROM {0} WHERE TipoDoc = 'Conto' AND Chiuso = 'No' AND Tavolo <> '' AND Cliente = '{1}' ORDER BY NumDoc DESC", TAB_DOCUMENTI, String.Empty)
+         Dim sql = String.Format("SELECT * FROM {0} WHERE TipoDoc = 'Conto' AND Chiuso = 'No' AND Cliente = '{1}' ORDER BY NumDoc DESC", TAB_DOCUMENTI, String.Empty)
 
          Return sql
 
@@ -694,7 +701,8 @@ Public Class ElencoContiPos
 
    Private Function stringSqlContiCliente(ByVal id As String) As String
       Try
-         Dim sql = String.Format("SELECT * FROM {0} WHERE TipoDoc = 'Conto' AND Chiuso = 'No' AND Tavolo <> '' AND IdCliente = '{1}' ORDER BY NumDoc DESC", TAB_DOCUMENTI, id)
+         'Dim sql = String.Format("SELECT * FROM {0} WHERE TipoDoc = 'Conto' AND Chiuso = 'No' AND Tavolo <> '' AND IdCliente = '{1}' ORDER BY NumDoc DESC", TAB_DOCUMENTI, id)
+         Dim sql = String.Format("SELECT * FROM {0} WHERE TipoDoc = 'Conto' AND Chiuso = 'No' AND IdCliente = '{1}' ORDER BY NumDoc DESC", TAB_DOCUMENTI, id)
 
          Return sql
 

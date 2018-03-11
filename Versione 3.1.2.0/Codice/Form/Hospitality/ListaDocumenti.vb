@@ -62,8 +62,8 @@
          cn.Open()
 
          ' Filtra i documenti in base al cliente.
-         If cliente <> String.Empty Then
-            sql = "SELECT * FROM " & tabella & " WHERE Cliente = '" & cliente & "' AND TipoDoc = '" & TIPO_DOC_CO & "' OR TipoDoc = '" & TIPO_DOC_PF & "' ORDER BY Id ASC"
+         If cliente <> String.Empty And cliente <> " " Then
+            sql = "SELECT * FROM " & tabella & " WHERE Cliente = '" & cliente & "' AND TipoDoc IN ('" & TIPO_DOC_CO & "', '" & TIPO_DOC_PF & "') ORDER BY Id ASC"
          Else
             sql = "SELECT * FROM " & tabella & " WHERE TipoDoc = '" & TIPO_DOC_CO & "' OR TipoDoc = '" & TIPO_DOC_PF & "' ORDER BY Id ASC"
          End If

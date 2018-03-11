@@ -182,12 +182,11 @@
       End Try
    End Function
 
-
    Public Sub InserisciElementi(ByVal tabella As String, ByVal id As Integer)
       ' Dichiara un oggetto connessione.
       Dim cn As New OleDbConnection(ConnString)
       Dim strDescrizione As String
-      Dim QTA As string = "1,00"
+      Dim QTA As String = "1,00"
 
       Try
          g_frmDocumento.dgvDettagli.Focus()

@@ -3588,6 +3588,7 @@ Public Class frmPos
                .Inviata = lstvDettagli.Items(i).SubItems(8).Text
                .Esclusa = lstvDettagli.Items(i).SubItems(9).Text
                .Offerta = lstvDettagli.Items(i).SubItems(10).Text
+               .AliquotaIva = lstvDettagli.Items(i).SubItems(12).Text
                .NumeroConto = String.Empty
 
                .InserisciDati(TAB_COMANDE)

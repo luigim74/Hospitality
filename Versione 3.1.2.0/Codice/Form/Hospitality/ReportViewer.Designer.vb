@@ -78,7 +78,7 @@ Partial Class ReportViewer
       Me.ReportViewer1.Location = New System.Drawing.Point(0, 0)
       Me.ReportViewer1.Name = "ReportViewer1"
       Me.ReportViewer1.PromptAreaCollapsed = True
-      Me.ReportViewer1.Size = New System.Drawing.Size(700, 577)
+      Me.ReportViewer1.Size = New System.Drawing.Size(859, 593)
       Me.ReportViewer1.TabIndex = 1
       '
       'DettagliDocTableAdapter
@@ -103,7 +103,7 @@ Partial Class ReportViewer
       Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
       Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
       Me.BackColor = System.Drawing.SystemColors.AppWorkspace
-      Me.ClientSize = New System.Drawing.Size(700, 577)
+      Me.ClientSize = New System.Drawing.Size(859, 593)
       Me.Controls.Add(Me.ReportViewer1)
       Me.Name = "ReportViewer"
       Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
