@@ -618,7 +618,7 @@ Public Class TabelleDati
    Public Sub AggIntGriglia()
       Try
          If numRecord > 0 Then
-            DataGrid1.CaptionText = Strings.UCase("Pagina " & pagCorrente.ToString & " di " & numPagine.ToString & " - " & _
+            DataGrid1.CaptionText = Strings.UCase("Pagina " & pagCorrente.ToString & " di " & numPagine.ToString & " - " &
                                                   DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 1))
          Else
             DataGrid1.CaptionText = Strings.UCase("Non ci sono valori.")
@@ -712,7 +712,7 @@ Public Class TabelleDati
          Dim sql As String
 
          ' Chiede conferma per l'eliminazione.
-         Risposta = MsgBox("Si desidera eliminare il valore """ & Descrizione & _
+         Risposta = MsgBox("Si desidera eliminare il valore """ & Descrizione &
                            """?" & vbCrLf & vbCrLf & "Non sarà più possibile recuperare i dati.", MsgBoxStyle.YesNo + MsgBoxStyle.Question, "Conferma eliminazione")
 
          If Risposta = MsgBoxResult.Yes Then
@@ -1105,78 +1105,63 @@ Public Class TabelleDati
    End Function
 
    Private Sub TabelleDati_Activated(sender As Object, e As System.EventArgs) Handles Me.Activated
+
+#Region "Gestionale Amica - (Condivisa) "
       Try
+         ' Chiude i comandi sul Ribbon per l'importazione/esportazione dati del Gestionale Amica.
          Select Case Me.Tag
             Case "CategorieClienti"
-               ' Chiude i comandi sul Ribbon per l'importazione/esportazione dati del Gestionale Amica.
                g_frmMain.rtgGestionaleAmica.Visible = False
 
             Case "Attività"
-               ' Visualizza i comandi sul Ribbon per l'importazione/esportazione dati del Gestionale Amica.
                g_frmMain.rtgGestionaleAmica.Visible = True
 
             Case "ModPagamento"
-               ' Visualizza i comandi sul Ribbon per l'importazione/esportazione dati del Gestionale Amica.
                g_frmMain.rtgGestionaleAmica.Visible = True
 
             Case "Qualifiche"
-               ' Chiude i comandi sul Ribbon per l'importazione/esportazione dati del Gestionale Amica.
                g_frmMain.rtgGestionaleAmica.Visible = False
 
             Case "CausaliDocumento"
-               ' Chiude i comandi sul Ribbon per l'importazione/esportazione dati del Gestionale Amica.
                g_frmMain.rtgGestionaleAmica.Visible = False
 
             Case "CategorieMerce"
-               ' Visualizza i comandi sul Ribbon per l'importazione/esportazione dati del Gestionale Amica.
                g_frmMain.rtgGestionaleAmica.Visible = True
 
             Case "UnitàMisura"
-               ' Chiude i comandi sul Ribbon per l'importazione/esportazione dati del Gestionale Amica.
                g_frmMain.rtgGestionaleAmica.Visible = False
 
             Case "MessaggiReparti"
-               ' Chiude i comandi sul Ribbon per l'importazione/esportazione dati del Gestionale Amica.
                g_frmMain.rtgGestionaleAmica.Visible = False
 
             Case "Tipologie"
-               ' Chiude i comandi sul Ribbon per l'importazione/esportazione dati del Gestionale Amica.
                g_frmMain.rtgGestionaleAmica.Visible = False
 
             Case "Nazioni"
-               ' Visualizza i comandi sul Ribbon per l'importazione/esportazione dati del Gestionale Amica.
                g_frmMain.rtgGestionaleAmica.Visible = True
 
             Case "Magazzini"
-               ' Visualizza i comandi sul Ribbon per l'importazione/esportazione dati del Gestionale Amica.
                g_frmMain.rtgGestionaleAmica.Visible = True
 
             Case "Reparti"
-               ' Chiude i comandi sul Ribbon per l'importazione/esportazione dati del Gestionale Amica.
                g_frmMain.rtgGestionaleAmica.Visible = False
 
             Case "Ubicazioni"
-               ' Chiude i comandi sul Ribbon per l'importazione/esportazione dati del Gestionale Amica.
                g_frmMain.rtgGestionaleAmica.Visible = False
 
             Case "Scaffali"
-               ' Chiude i comandi sul Ribbon per l'importazione/esportazione dati del Gestionale Amica.
                g_frmMain.rtgGestionaleAmica.Visible = False
 
             Case "TipologieCamere"
-               ' Chiude i comandi sul Ribbon per l'importazione/esportazione dati del Gestionale Amica.
                g_frmMain.rtgGestionaleAmica.Visible = False
 
             Case "UbicazioniCamere"
-               ' Chiude i comandi sul Ribbon per l'importazione/esportazione dati del Gestionale Amica.
                g_frmMain.rtgGestionaleAmica.Visible = False
 
             Case "PosizioniCamere"
-               ' Chiude i comandi sul Ribbon per l'importazione/esportazione dati del Gestionale Amica.
                g_frmMain.rtgGestionaleAmica.Visible = False
 
             Case "DocIdentità"
-               ' Chiude i comandi sul Ribbon per l'importazione/esportazione dati del Gestionale Amica.
                g_frmMain.rtgGestionaleAmica.Visible = False
 
          End Select
@@ -1186,13 +1171,22 @@ Public Class TabelleDati
          err.GestisciErrore(ex.StackTrace, ex.Message)
       End Try
 
+#End Region
+
+   End Sub
+
+   Private Sub TabelleDati_Deactivate(sender As Object, e As EventArgs) Handles Me.Deactivate
+
+#Region "Gestionale Amica - (Condivisa) "
+      ' Chiude i comandi sul Ribbon per l'importazione/esportazione dati del Gestionale Amica.
+      g_frmMain.rtgGestionaleAmica.Visible = False
+
+#End Region
+
    End Sub
 
    Private Sub TabelleDati_FormClosed(sender As Object, e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
       Try
-         ' Chiude i comandi sul Ribbon per l'importazione/esportazione dati del Gestionale Amica.
-         g_frmMain.rtgGestionaleAmica.Visible = False
-
          ' Rimuove la finestra aperta dal menu Finestra/Seleziona.
          g_frmMain.RimuoviFormMenuSeleziona(Me)
 
@@ -1372,6 +1366,5 @@ Public Class TabelleDati
 
       End Select
    End Sub
-
 
 End Class

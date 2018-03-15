@@ -52,8 +52,20 @@ Public Class PlanningCamere
 #End Region
 
    Private Sub PlanningCamere_Activated(sender As Object, e As System.EventArgs) Handles Me.Activated
+#Region "Planning Camere "
       ' Visualizza i comandi sul Ribbon per il Planning Camere.
       g_frmMain.rtgPlanningCamere.Visible = True
+
+#End Region
+
+   End Sub
+
+   Private Sub PlanningCamere_Deactivate(sender As Object, e As EventArgs) Handles Me.Deactivate
+#Region "Planning Camere "
+      ' Nasconde i comandi sul Ribbon per il Planning Camere.
+      g_frmMain.rtgPlanningCamere.Visible = False
+
+#End Region
 
    End Sub
 
@@ -94,9 +106,6 @@ Public Class PlanningCamere
    End Sub
 
    Private Sub PlanningCamere_FormClosed(sender As Object, e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
-      ' Chiude i comandi sul Ribbon per il Planning Camere.
-      g_frmMain.rtgPlanningCamere.Visible = False
-
       ' Rimuove la finestra aperta dal menu Finestra/Seleziona.
       g_frmMain.RimuoviFormMenuSeleziona(g_frmPlanningCamere)
 

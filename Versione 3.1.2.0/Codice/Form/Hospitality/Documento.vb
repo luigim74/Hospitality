@@ -1763,6 +1763,8 @@ Public Class frmDocumento
       Try
          ImpostaIcona(Me)
 
+         eui_lblStatoClienteDoc.Text = String.Empty
+
          CaricaLista(eui_cmbTipoDocumento, TAB_TIPO_DOCUMENTI)
          CaricaLista(eui_cmbCausaleDocumento, TAB_CAUSALI_DOCUMENTI)
          CaricaListaClienti(eui_cmbClienteCognome, eui_cmbIdCliente, ANA_CLIENTI)

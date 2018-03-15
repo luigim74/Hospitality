@@ -205,7 +205,6 @@ Module Dichiarazioni
    Public Const REPORT_FATTURA_A4_DOPPIA_CENTRO_SPORTIVO As String = "Fattura A4_Doppia - Centro sportivo.rdlc"
    Public Const REPORT_PROFORMA_A4_DOPPIA_CENTRO_SPORTIVO As String = "Proforma A4_Doppia - Centro sportivo.rdlc"
 
-
    ' Documenti fiscali formato .rpt
    Public Const PERCORSO_REP_FF_AZIENDE As String = "\Reports\FattAziende.rpt"
    Public Const PERCORSO_REP_FF As String = "\Reports\Fattura.rpt" ' NON UTILIZZATA.
@@ -773,7 +772,7 @@ Module Dichiarazioni
    ' Numero di serie del prodotto. (VERSIONE_FILE - VERSIONE_PRODOTTO - DATA_RILASCIO - ORA_RILASCIO)
    Public Const NUMERO_SERIE As String = "03030-003-0109013-09051"
    ' Numero di elementi inseribili per la versione demo.
-   Public Const NUM_ELEMENTI_DEMO As Integer = 6
+   Public Const NUM_ELEMENTI_DEMO As Integer = 16
    ' File per la data di installazione.
    Public Const FILE_DATA_DEMO As String = "\Interop.HSS.dll"
 

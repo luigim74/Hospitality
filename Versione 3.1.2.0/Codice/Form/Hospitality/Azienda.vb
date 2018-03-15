@@ -84,11 +84,13 @@ Friend Class frmAzienda
    Public WithEvents Label21 As System.Windows.Forms.Label
    Friend WithEvents Button1 As System.Windows.Forms.Button
    Friend WithEvents formFrameSkinner As Elegant.Ui.FormFrameSkinner
+   Friend WithEvents tbrSalva As ToolBarButton
    Friend WithEvents tbrElimina As System.Windows.Forms.ToolBarButton
    <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
       Me.components = New System.ComponentModel.Container()
       Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmAzienda))
       Me.ToolBar1 = New System.Windows.Forms.ToolBar()
+      Me.tbrSalva = New System.Windows.Forms.ToolBarButton()
       Me.tbrElimina = New System.Windows.Forms.ToolBarButton()
       Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
       Me.Panel1 = New System.Windows.Forms.Panel()
@@ -153,19 +155,27 @@ Friend Class frmAzienda
       'ToolBar1
       '
       Me.ToolBar1.Appearance = System.Windows.Forms.ToolBarAppearance.Flat
-      Me.ToolBar1.Buttons.AddRange(New System.Windows.Forms.ToolBarButton() {Me.tbrElimina})
+      Me.ToolBar1.Buttons.AddRange(New System.Windows.Forms.ToolBarButton() {Me.tbrSalva, Me.tbrElimina})
       Me.ToolBar1.DropDownArrows = True
       Me.ToolBar1.ImageList = Me.ImageList1
       Me.ToolBar1.Location = New System.Drawing.Point(0, 0)
       Me.ToolBar1.Name = "ToolBar1"
       Me.ToolBar1.ShowToolTips = True
-      Me.ToolBar1.Size = New System.Drawing.Size(544, 28)
+      Me.ToolBar1.Size = New System.Drawing.Size(560, 28)
       Me.ToolBar1.TabIndex = 1
       Me.ToolBar1.TextAlign = System.Windows.Forms.ToolBarTextAlign.Right
       '
+      'tbrSalva
+      '
+      Me.tbrSalva.ImageIndex = 1
+      Me.tbrSalva.Name = "tbrSalva"
+      Me.tbrSalva.Tag = "Salva"
+      Me.tbrSalva.Text = "Salva e chiudi"
+      Me.tbrSalva.ToolTipText = "Salva tutti i dati e chiude la finestra."
+      '
       'tbrElimina
       '
-      Me.tbrElimina.ImageIndex = 0
+      Me.tbrElimina.ImageIndex = 2
       Me.tbrElimina.Name = "tbrElimina"
       Me.tbrElimina.Tag = "Elimina"
       Me.tbrElimina.Text = "Elimina"
@@ -176,6 +186,8 @@ Friend Class frmAzienda
       Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
       Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
       Me.ImageList1.Images.SetKeyName(0, "DeleteHS.png")
+      Me.ImageList1.Images.SetKeyName(1, "Save_Small.png")
+      Me.ImageList1.Images.SetKeyName(2, "Delete_Small.png")
       '
       'Panel1
       '
@@ -184,7 +196,7 @@ Friend Class frmAzienda
       Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
       Me.Panel1.Location = New System.Drawing.Point(0, 28)
       Me.Panel1.Name = "Panel1"
-      Me.Panel1.Size = New System.Drawing.Size(544, 20)
+      Me.Panel1.Size = New System.Drawing.Size(560, 20)
       Me.Panel1.TabIndex = 19
       '
       'lblIntestazione
@@ -226,7 +238,7 @@ Friend Class frmAzienda
       Me.TabControl1.Multiline = True
       Me.TabControl1.Name = "TabControl1"
       Me.TabControl1.SelectedIndex = 0
-      Me.TabControl1.Size = New System.Drawing.Size(544, 310)
+      Me.TabControl1.Size = New System.Drawing.Size(560, 326)
       Me.TabControl1.TabIndex = 0
       '
       'TabPage1
@@ -252,7 +264,7 @@ Friend Class frmAzienda
       Me.TabPage1.ForeColor = System.Drawing.SystemColors.Desktop
       Me.TabPage1.Location = New System.Drawing.Point(4, 22)
       Me.TabPage1.Name = "TabPage1"
-      Me.TabPage1.Size = New System.Drawing.Size(536, 284)
+      Me.TabPage1.Size = New System.Drawing.Size(552, 300)
       Me.TabPage1.TabIndex = 0
       Me.TabPage1.Tag = "Codice fornito da Azienda emettitrice di Buoni pasto:"
       Me.TabPage1.Text = "Dati principali"
@@ -481,7 +493,7 @@ Friend Class frmAzienda
       Me.TabPage3.Controls.Add(Me.Label21)
       Me.TabPage3.Location = New System.Drawing.Point(4, 22)
       Me.TabPage3.Name = "TabPage3"
-      Me.TabPage3.Size = New System.Drawing.Size(536, 284)
+      Me.TabPage3.Size = New System.Drawing.Size(544, 292)
       Me.TabPage3.TabIndex = 2
       Me.TabPage3.Text = "Tel./Internet"
       Me.TabPage3.ToolTipText = "Dati sul telefono e Internet"
@@ -611,7 +623,7 @@ Friend Class frmAzienda
       Me.TabPage2.Controls.Add(Me.Label38)
       Me.TabPage2.Location = New System.Drawing.Point(4, 22)
       Me.TabPage2.Name = "TabPage2"
-      Me.TabPage2.Size = New System.Drawing.Size(536, 284)
+      Me.TabPage2.Size = New System.Drawing.Size(544, 292)
       Me.TabPage2.TabIndex = 6
       Me.TabPage2.Text = "Modalità pagamento"
       Me.TabPage2.Visible = False
@@ -809,7 +821,7 @@ Friend Class frmAzienda
       '
       Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
       Me.BackColor = System.Drawing.SystemColors.AppWorkspace
-      Me.ClientSize = New System.Drawing.Size(544, 358)
+      Me.ClientSize = New System.Drawing.Size(560, 374)
       Me.Controls.Add(Me.TabControl1)
       Me.Controls.Add(Me.chkVisRagSoc)
       Me.Controls.Add(Me.Panel1)
@@ -998,7 +1010,6 @@ Friend Class frmAzienda
 
    End Sub
 
-
    Private Sub frmAzienda_Load(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles MyBase.Load
       Dim tempFile As String = Application.StartupPath & "\temp.bmp"
 
@@ -1110,6 +1121,10 @@ Friend Class frmAzienda
 
    Private Sub ToolBar1_ButtonClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ToolBarButtonClickEventArgs) Handles ToolBar1.ButtonClick
       Select Case e.Button.Tag
+         Case "Salva"
+            ' Salva i data e chiude il form.
+            Me.Close()
+
          Case "Elimina"
             Dim descrizione As String = "(" & AAzienda.RagSociale & ")"
 

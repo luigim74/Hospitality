@@ -2604,19 +2604,76 @@ Public Class ElencoDoc
    End Sub
 
    Private Sub ElencoDoc_Activated(sender As Object, e As System.EventArgs) Handles Me.Activated
-      ' Visualizza i comandi sul Ribbon per l'importazione/esportazione dati del Gestionale Amica.
-      g_frmMain.rtgGestionaleAmica.Visible = False
-      g_frmMain.rtgPlanningCamere.Visible = False
 
+#Region "Strumenti di Modifica - (Condivisa) "
       ' Visualizza i comandi Strumenti di modifica sul Ribbon.
       g_frmMain.rtgStrumentiModifica.Visible = True
-      g_frmMain.eui_StrumentiDocumenti.Visible = False
 
-      'g_frmMain.eui_Strumenti_Duplica.Visible = False
+#Region "Modifica - (Condivisa) "
+      ' TabPage.
+      g_frmMain.eui_StrumentiModifica.Visible = True
+
+      ' Dati.
+      g_frmMain.eui_Strumenti_Nuovo.Visible = True
+      g_frmMain.eui_Strumenti_Modifica.Visible = True
+      g_frmMain.eui_Strumenti_Duplica.Visible = True
+      g_frmMain.eui_Strumenti_Elimina.Visible = True
+      g_frmMain.eui_Strumenti_Annulla.Visible = True
+      g_frmMain.eui_Strumenti_Aggiorna.Visible = True
+      g_frmMain.eui_Strumenti_Esporta.Visible = True
+
+      ' Stampa.
+      g_frmMain.eui_Strumenti_Stampa_Anteprima.Visible = True
+      g_frmMain.eui_Strumenti_Stampa_Elenco.Visible = True
+
+#End Region
+
+#Region "Periodo - (Condivisa) "
+      ' TabPage.
+      g_frmMain.eui_StrumentiPeriodo.Visible = True
+
+      ' Periodo.
+      g_frmMain.eui_Strumenti_Periodo_Tutte.Visible = True
+      g_frmMain.eui_Strumenti_Periodo_Anno.Visible = True
+      g_frmMain.eui_Strumenti_Periodo_Mese.Visible = True
+      g_frmMain.eui_Strumenti_Periodo_DalAl.Visible = True
+      g_frmMain.eui_Strumenti_Periodo_Sep1.Visible = False
       g_frmMain.eui_Strumenti_Periodo_Arrivo.Visible = False
       g_frmMain.eui_Strumenti_Periodo_Partenza.Visible = False
-      g_frmMain.eui_Strumenti_Periodo_Sep1.Visible = False
+
+      ' Visualizza.
+      g_frmMain.eui_Strumenti_Visualizza_Presenze.Visible = False
       g_frmMain.eui_rib_Visualizza.Visible = False
+
+#End Region
+
+#Region "Documenti "
+      ' TabPage.
+      g_frmMain.eui_StrumentiDocumenti.Visible = False
+
+#End Region
+
+#Region "Sospesi / Buoni pasto "
+      ' TabPage.
+      g_frmMain.eui_StrumentiSospesiBuoni.Visible = True
+
+#End Region
+
+      ' Serve ad attivare/disattivare i vari comandi in base ai dati visualizzati.
+      AggiornaDati()
+
+#End Region
+
+   End Sub
+
+   Private Sub ElencoDoc_Deactivate(sender As Object, e As EventArgs) Handles Me.Deactivate
+
+#Region "Strumenti di Modifica - (Condivisa) "
+      ' Chiude i comandi sul Ribbon per l'importazione/esportazione dati del Gestionale Amica.
+      g_frmMain.rtgStrumentiModifica.Visible = False
+
+#End Region
+
    End Sub
 
    Private Sub ElencoDoc_FormClosed(sender As Object, e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
@@ -2628,11 +2685,6 @@ Public Class ElencoDoc
 
          ' Rimuove la finestra aperta dal menu Finestra/Seleziona.
          g_frmMain.RimuoviFormMenuSeleziona(g_frmDocumenti)
-
-         ' Chiude i comandi sul Ribbon per l'importazione/esportazione dati del Gestionale Amica.
-         g_frmMain.rtgGestionaleAmica.Visible = False
-         g_frmMain.rtgPlanningCamere.Visible = False
-         g_frmMain.rtgStrumentiModifica.Visible = False
 
          ' Distrugge l'oggetto e libera le risorse.
          g_frmDocumenti.Dispose()
@@ -2800,5 +2852,6 @@ Public Class ElencoDoc
    Private Sub dtpAl_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles dtpAl.ValueChanged
       AggiornaDatiPeriodo()
    End Sub
+
 
 End Class

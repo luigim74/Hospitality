@@ -1113,11 +1113,11 @@ Public Class frmElencoDati
          tr = cn.BeginTransaction(IsolationLevel.ReadCommitted)
 
          ' Crea la stringa di eliminazione.
-         sql = String.Format("UPDATE {0} " & _
-                             "SET Colore = {1} " & _
-                             "WHERE Id = {2}", _
-                             tabella, _
-                             Convert.ToString(colore.ToArgb), _
+         sql = String.Format("UPDATE {0} " &
+                             "SET Colore = {1} " &
+                             "WHERE Id = {2}",
+                             tabella,
+                             Convert.ToString(colore.ToArgb),
                              codice)
 
          ' Crea il comando per la connessione corrente.
@@ -1507,7 +1507,7 @@ Public Class frmElencoDati
                strDescrizione = "(" & Cognome & " " & Nome & ")"
 
                ' Chiede conferma per l'eliminazione.
-               Risposta = MsgBox("Si desidera eliminare la scheda di """ & Cognome & " " & Nome & _
+               Risposta = MsgBox("Si desidera eliminare la scheda di """ & Cognome & " " & Nome &
                                  """?" & vbCrLf & vbCrLf & "Non sarà più possibile recuperare i dati.", MsgBoxStyle.YesNo + MsgBoxStyle.Question, "Conferma eliminazione")
             Case Elenco.Aziende
                Dim ragSoc As String = DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 2)
@@ -1516,7 +1516,7 @@ Public Class frmElencoDati
                strDescrizione = "(" & ragSoc & ")"
 
                ' Chiede conferma per l'eliminazione.
-               Risposta = MsgBox("Si desidera eliminare la scheda di " & ragSoc & _
+               Risposta = MsgBox("Si desidera eliminare la scheda di " & ragSoc &
                                  """?" & vbCrLf & vbCrLf & "Non sarà più possibile recuperare i dati, incassare eventuali documenti Sospesi o fatturare eventuali Buoni pasto.", MsgBoxStyle.YesNo + MsgBoxStyle.Question, "Conferma eliminazione")
             Case Elenco.Fornitori
                Dim ragSoc As String = DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 1)
@@ -1525,22 +1525,22 @@ Public Class frmElencoDati
                strDescrizione = "(" & ragSoc & ")"
 
                ' Chiede conferma per l'eliminazione.
-               Risposta = MsgBox("Si desidera eliminare la scheda di " & ragSoc & _
+               Risposta = MsgBox("Si desidera eliminare la scheda di " & ragSoc &
                                  """?" & vbCrLf & vbCrLf & "Non sarà più possibile recuperare i dati.", MsgBoxStyle.YesNo + MsgBoxStyle.Question, "Conferma eliminazione")
 
             Case Elenco.Prenotazioni, Elenco.PrenSale
                Dim Cliente As String = DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 2)
 
                ' Registra l'operazione.
-               strDescrizione = " (" & DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 2) & _
-                 " - Per " & DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 4) & _
-                 " il " & DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 1) & _
-                 " alle " & DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 5) & _
-                 " / " & DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 6) & _
+               strDescrizione = " (" & DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 2) &
+                 " - Per " & DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 4) &
+                 " il " & DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 1) &
+                 " alle " & DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 5) &
+                 " / " & DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 6) &
                  " - " & DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 3) & ")"
 
                ' Chiede conferma per l'eliminazione.
-               Risposta = MsgBox("Si desidera eliminare la prenotazione del cliente """ & Cliente & _
+               Risposta = MsgBox("Si desidera eliminare la prenotazione del cliente """ & Cliente &
                                  """?" & vbCrLf & vbCrLf & "Non sarà più possibile recuperare i dati.", MsgBoxStyle.YesNo + MsgBoxStyle.Question, "Conferma eliminazione")
 
             Case Elenco.CatPiatti
@@ -1550,7 +1550,7 @@ Public Class frmElencoDati
                strDescrizione = "(" & descrizione & ")"
 
                ' Chiede conferma per l'eliminazione.
-               Risposta = MsgBox("Si desidera eliminare la Categoria """ & descrizione & _
+               Risposta = MsgBox("Si desidera eliminare la Categoria """ & descrizione &
                                  """?" & vbCrLf & vbCrLf & "Non sarà più possibile recuperare i dati.", MsgBoxStyle.YesNo + MsgBoxStyle.Question, "Conferma eliminazione")
 
             Case Elenco.Camerieri
@@ -1560,13 +1560,13 @@ Public Class frmElencoDati
                strDescrizione = "(" & Nome & ")"
 
                ' Chiede conferma per l'eliminazione.
-               Risposta = MsgBox("Si desidera eliminare il cameriere """ & Nome & _
+               Risposta = MsgBox("Si desidera eliminare il cameriere """ & Nome &
                                  """?" & vbCrLf & vbCrLf & "Non sarà più possibile recuperare i dati.", MsgBoxStyle.YesNo + MsgBoxStyle.Question, "Conferma eliminazione")
 
             Case Elenco.Sale
                If IsNothing(g_frmVCTavoli) = False Then
                   ' Aggiorna Visual POS
-                  MessageBox.Show("Non è possibile eliminare una sala perchè Visual POS è in esecuzione." & vbCrLf & _
+                  MessageBox.Show("Non è possibile eliminare una sala perchè Visual POS è in esecuzione." & vbCrLf &
                                   "Si consiglia di chiudere Visual POS e ripetere l'operazione.", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Information)
                   Exit Sub
                End If
@@ -1577,12 +1577,12 @@ Public Class frmElencoDati
                strDescrizione = "(" & descrizione & ")"
 
                ' Chiede conferma per l'eliminazione.
-               Risposta = MsgBox("Si desidera eliminare la Sala """ & descrizione & _
+               Risposta = MsgBox("Si desidera eliminare la Sala """ & descrizione &
                                  """?" & vbCrLf & vbCrLf & "Non sarà più possibile recuperare i dati.", MsgBoxStyle.YesNo + MsgBoxStyle.Question, "Conferma eliminazione")
             Case Elenco.Tavoli
                If IsNothing(g_frmVCTavoli) = False Then
                   ' Aggiorna Visual POS
-                  MessageBox.Show("Non è possibile eliminare un tavolo perchè Visual POS è in esecuzione." & vbCrLf & _
+                  MessageBox.Show("Non è possibile eliminare un tavolo perchè Visual POS è in esecuzione." & vbCrLf &
                                   "Si consiglia di chiudere Visual POS e ripetere l'operazione.", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Information)
                   Exit Sub
                End If
@@ -1593,7 +1593,7 @@ Public Class frmElencoDati
                strDescrizione = "(" & descrizione & ")"
 
                ' Chiede conferma per l'eliminazione.
-               Risposta = MsgBox("Si desidera eliminare il tavolo """ & descrizione & _
+               Risposta = MsgBox("Si desidera eliminare il tavolo """ & descrizione &
                                  """?" & vbCrLf & vbCrLf & "Non sarà più possibile recuperare i dati.", MsgBoxStyle.YesNo + MsgBoxStyle.Question, "Conferma eliminazione")
 
             Case Elenco.Camere
@@ -1604,7 +1604,7 @@ Public Class frmElencoDati
                strDescrizione = "(" & numero & " " & descrizione & ")"
 
                ' Chiede conferma per l'eliminazione.
-               Risposta = MsgBox("Si desidera eliminare la camera numero """ & numero & " " & descrizione & _
+               Risposta = MsgBox("Si desidera eliminare la camera numero """ & numero & " " & descrizione &
                                  """?" & vbCrLf & vbCrLf & "Non sarà più possibile recuperare i dati.", MsgBoxStyle.YesNo + MsgBoxStyle.Question, "Conferma eliminazione")
 
             Case Elenco.StatoPren
@@ -1614,7 +1614,7 @@ Public Class frmElencoDati
                strDescrizione = "(" & descrizione & ")"
 
                ' Chiede conferma per l'eliminazione.
-               Risposta = MsgBox("Si desidera eliminare lo stato prenotazione """ & descrizione & _
+               Risposta = MsgBox("Si desidera eliminare lo stato prenotazione """ & descrizione &
                                  """?" & vbCrLf & vbCrLf & "Non sarà più possibile recuperare i dati.", MsgBoxStyle.YesNo + MsgBoxStyle.Question, "Conferma eliminazione")
 
             Case Elenco.Articoli
@@ -1624,7 +1624,7 @@ Public Class frmElencoDati
                strDescrizione = "(" & descrizione & ")"
 
                ' Chiede conferma per l'eliminazione.
-               Risposta = MsgBox("Si desidera eliminare l'articolo """ & descrizione & _
+               Risposta = MsgBox("Si desidera eliminare l'articolo """ & descrizione &
                                  """?" & vbCrLf & vbCrLf & "Non sarà più possibile recuperare i dati.", MsgBoxStyle.YesNo + MsgBoxStyle.Question, "Conferma eliminazione")
 
             Case Elenco.Operatori
@@ -1634,7 +1634,7 @@ Public Class frmElencoDati
                strDescrizione = "(" & nomeUtente & ")"
 
                ' Chiede conferma per l'eliminazione.
-               Risposta = MsgBox("Si desidera eliminare la scheda di " & nomeUtente & _
+               Risposta = MsgBox("Si desidera eliminare la scheda di " & nomeUtente &
                                  """?" & vbCrLf & vbCrLf & "Non sarà più possibile recuperare i dati.", MsgBoxStyle.YesNo + MsgBoxStyle.Question, "Conferma eliminazione")
 
             Case Elenco.Gruppi
@@ -1644,7 +1644,7 @@ Public Class frmElencoDati
                strDescrizione = "(" & nomeGruppo & ")"
 
                ' Chiede conferma per l'eliminazione.
-               Risposta = MsgBox("Si desidera eliminare il gruppo " & nomeGruppo & _
+               Risposta = MsgBox("Si desidera eliminare il gruppo " & nomeGruppo &
                                  """?" & vbCrLf & vbCrLf & "Non sarà più possibile recuperare i dati.", MsgBoxStyle.YesNo + MsgBoxStyle.Question, "Conferma eliminazione")
 
             Case Elenco.CaratteristicheRisorse
@@ -1654,7 +1654,7 @@ Public Class frmElencoDati
                strDescrizione = "(" & descrizione & ")"
 
                ' Chiede conferma per l'eliminazione.
-               Risposta = MsgBox("Si desidera eliminare la tipologia di utilizzo risorsa " & descrizione & _
+               Risposta = MsgBox("Si desidera eliminare la tipologia di utilizzo risorsa " & descrizione &
                                  """?" & vbCrLf & vbCrLf & "Non sarà più possibile recuperare i dati.", MsgBoxStyle.YesNo + MsgBoxStyle.Question, "Conferma eliminazione")
 
          End Select
@@ -1953,7 +1953,7 @@ Public Class frmElencoDati
 
                If IsNothing(g_frmVCTavoli) = False Then
                   ' Aggiorna Visual POS
-                  MessageBox.Show("Non è possibile modificare o creare una nuova sala perchè Visual POS è in esecuzione." & vbCrLf & _
+                  MessageBox.Show("Non è possibile modificare o creare una nuova sala perchè Visual POS è in esecuzione." & vbCrLf &
                                   "Si consiglia di chiudere Visual POS e ripetere l'operazione.", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Information)
                   Exit Sub
                End If
@@ -1976,7 +1976,7 @@ Public Class frmElencoDati
 
                If IsNothing(g_frmVCTavoli) = False Then
                   ' Aggiorna Visual POS
-                  MessageBox.Show("Non è possibile modificare o creare un nuovo tavolo perchè Visual POS è in esecuzione." & vbCrLf & _
+                  MessageBox.Show("Non è possibile modificare o creare un nuovo tavolo perchè Visual POS è in esecuzione." & vbCrLf &
                                   "Si consiglia di chiudere Visual POS e ripetere l'operazione.", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Information)
                   Exit Sub
                End If
@@ -2127,26 +2127,26 @@ Public Class frmElencoDati
          If numRecord <> 0 Then
             Select Case TipoElenco
                Case Elenco.Clienti
-                  DataGrid1.CaptionText = Strings.UCase("Pagina " & pagCorrente.ToString & " di " & numPagine.ToString & " - " & _
-                                                        DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 2) & _
+                  DataGrid1.CaptionText = Strings.UCase("Pagina " & pagCorrente.ToString & " di " & numPagine.ToString & " - " &
+                                                        DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 2) &
                                                         " " & DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 3))
 
                Case Elenco.Aziende
-                  DataGrid1.CaptionText = Strings.UCase("Pagina " & pagCorrente.ToString & " di " & numPagine.ToString & " - " & _
+                  DataGrid1.CaptionText = Strings.UCase("Pagina " & pagCorrente.ToString & " di " & numPagine.ToString & " - " &
                                                         DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 2))
 
                Case Elenco.Prenotazioni, Elenco.PrenSale, Elenco.Articoli
-                  DataGrid1.CaptionText = Strings.UCase("Pagina " & pagCorrente.ToString & " di " & numPagine.ToString & " - " & _
+                  DataGrid1.CaptionText = Strings.UCase("Pagina " & pagCorrente.ToString & " di " & numPagine.ToString & " - " &
                                                         DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 3))
 
                Case Elenco.Camere
-                  DataGrid1.CaptionText = Strings.UCase("Pagina " & pagCorrente.ToString & " di " & numPagine.ToString & " - " & _
-                                                        DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 1) & _
+                  DataGrid1.CaptionText = Strings.UCase("Pagina " & pagCorrente.ToString & " di " & numPagine.ToString & " - " &
+                                                        DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 1) &
                                                         " " & DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 2))
 
                Case Elenco.Fornitori, Elenco.CatPiatti, Elenco.Camerieri, Elenco.Sale, Elenco.Tavoli,
                     Elenco.Operatori, Elenco.Gruppi, Elenco.StatoPren, Elenco.CaratteristicheRisorse
-                  DataGrid1.CaptionText = Strings.UCase("Pagina " & pagCorrente.ToString & " di " & numPagine.ToString & " - " & _
+                  DataGrid1.CaptionText = Strings.UCase("Pagina " & pagCorrente.ToString & " di " & numPagine.ToString & " - " &
                                                         DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 1))
             End Select
          Else
@@ -3929,8 +3929,8 @@ Public Class frmElencoDati
 
             rep.SetDataSource(ds)
 
-            rep.PrintToPrinter(PrintDialog1.PrinterSettings.Copies, True, _
-                               PrintDialog1.PrinterSettings.FromPage, _
+            rep.PrintToPrinter(PrintDialog1.PrinterSettings.Copies, True,
+                               PrintDialog1.PrinterSettings.FromPage,
                                PrintDialog1.PrinterSettings.ToPage)
 
             cn.Close()
@@ -3944,6 +3944,9 @@ Public Class frmElencoDati
    End Sub
 
    Private Sub frmElencoDati_Activated(sender As Object, e As System.EventArgs) Handles Me.Activated
+
+#Region "Gestionale Amica - (Condivisa) "
+
       Select Case TipoElenco
          Case Elenco.Clienti
             ' Visualizza i comandi sul Ribbon per l'importazione/esportazione dati del Gestionale Amica.
@@ -4006,6 +4009,19 @@ Public Class frmElencoDati
             g_frmMain.rtgGestionaleAmica.Visible = True
 
       End Select
+
+#End Region
+
+   End Sub
+
+   Private Sub frmElencoDati_Deactivate(sender As Object, e As EventArgs) Handles Me.Deactivate
+
+#Region "Gestionale Amica - (Condivisa) "
+
+      ' Chiude i comandi sul Ribbon per l'importazione/esportazione dati del Gestionale Amica.
+      g_frmMain.rtgGestionaleAmica.Visible = False
+
+#End Region
 
    End Sub
 
@@ -4170,9 +4186,6 @@ Public Class frmElencoDati
                g_frmClienti.Dispose()
                g_frmClienti = Nothing
 
-               ' Chiude i comandi sul Ribbon per l'importazione/esportazione dati del Gestionale Amica.
-               g_frmMain.rtgGestionaleAmica.Visible = False
-
             Case Elenco.Aziende
                ' Rimuove la finestra aperta dal menu Finestra/Seleziona.
                g_frmMain.RimuoviFormMenuSeleziona(g_frmAziende)
@@ -4181,9 +4194,6 @@ Public Class frmElencoDati
                g_frmAziende.Dispose()
                g_frmAziende = Nothing
 
-               ' Chiude i comandi sul Ribbon per l'importazione/esportazione dati del Gestionale Amica.
-               g_frmMain.rtgGestionaleAmica.Visible = False
-
             Case Elenco.Fornitori
                ' Rimuove la finestra aperta dal menu Finestra/Seleziona.
                g_frmMain.RimuoviFormMenuSeleziona(g_frmFornitori)
@@ -4191,9 +4201,6 @@ Public Class frmElencoDati
                ' Distrugge l'oggetto e libera le risorse.
                g_frmFornitori.Dispose()
                g_frmFornitori = Nothing
-
-               ' Chiude i comandi sul Ribbon per l'importazione/esportazione dati del Gestionale Amica.
-               g_frmMain.rtgGestionaleAmica.Visible = False
 
             Case Elenco.CatPiatti
                ' Rimuove la finestra aperta dal menu Finestra/Seleziona.
@@ -4266,9 +4273,6 @@ Public Class frmElencoDati
                ' Distrugge l'oggetto e libera le risorse.
                g_frmArticoli.Dispose()
                g_frmArticoli = Nothing
-
-               ' Chiude i comandi sul Ribbon per l'importazione/esportazione dati del Gestionale Amica.
-               g_frmMain.rtgGestionaleAmica.Visible = False
 
             Case Elenco.Operatori
                ' Rimuove la finestra aperta dal menu Finestra/Seleziona.
@@ -4344,27 +4348,27 @@ Public Class frmElencoDati
             End If
 
          Case "Carico"
-            Dim frm As New CaricoScarico("Carico", DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 0), _
-                                                   DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 2), _
-                                                   DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 3), _
-                                                   DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 5), _
-                                                   DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 6), _
-                                                   DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 7), _
-                                                   DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 1), _
-                                                   DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 8), _
-                                                   DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 10), _
+            Dim frm As New CaricoScarico("Carico", DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 0),
+                                                   DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 2),
+                                                   DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 3),
+                                                   DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 5),
+                                                   DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 6),
+                                                   DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 7),
+                                                   DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 1),
+                                                   DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 8),
+                                                   DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 10),
                                                    DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 11))
             frm.ShowDialog()
 
          Case "Scarico"
-            Dim frm As New CaricoScarico("Scarico", DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 0), _
-                                                   DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 2), _
-                                                   DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 3), _
-                                                   DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 5), _
-                                                   DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 6), _
-                                                   DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 7), _
-                                                   DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 1), _
-                                                   DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 8), , _
+            Dim frm As New CaricoScarico("Scarico", DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 0),
+                                                   DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 2),
+                                                   DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 3),
+                                                   DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 5),
+                                                   DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 6),
+                                                   DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 7),
+                                                   DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 1),
+                                                   DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 8), ,
                                                    DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 11))
             frm.ShowDialog()
 
@@ -4558,6 +4562,5 @@ Public Class frmElencoDati
          ApriDati(CStr(DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 0)))
       End If
    End Sub
-
 
 End Class

@@ -448,7 +448,7 @@ Public Class ElencoListiniCamere
          Dim Descrizione As String = DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 1)
 
          ' Chiede conferma per l'eliminazione.
-         Risposta = MsgBox("Si desidera eliminare il listino """ & Descrizione & """?" & _
+         Risposta = MsgBox("Si desidera eliminare il listino """ & Descrizione & """?" &
                            vbCrLf & vbCrLf & "Non sarà più possibile recuperare i dati.", MsgBoxStyle.YesNo + MsgBoxStyle.Question, "Conferma eliminazione")
 
          If Risposta = MsgBoxResult.Yes Then
@@ -580,8 +580,8 @@ Public Class ElencoListiniCamere
    Public Sub AggIntGriglia()
       Try
          If numRecord <> 0 Then
-            DataGrid1.CaptionText = Strings.UCase(DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 0) & " - " & _
-                                                  DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 1) & " - " & _
+            DataGrid1.CaptionText = Strings.UCase(DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 0) & " - " &
+                                                  DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 1) & " - " &
                                                   DataGrid1.Item(DataGrid1.CurrentCell.RowNumber, 23))
          Else
             DataGrid1.CaptionText = ""
@@ -1036,8 +1036,8 @@ Public Class ElencoListiniCamere
 
             rep.SetDataSource(ds)
 
-            rep.PrintToPrinter(PrintDialog1.PrinterSettings.Copies, True, _
-                               PrintDialog1.PrinterSettings.FromPage, _
+            rep.PrintToPrinter(PrintDialog1.PrinterSettings.Copies, True,
+                               PrintDialog1.PrinterSettings.FromPage,
                                PrintDialog1.PrinterSettings.ToPage)
 
             cn.Close()
@@ -1051,16 +1051,60 @@ Public Class ElencoListiniCamere
    End Sub
 
    Private Sub ElencoListiniCamere_Activated(sender As Object, e As System.EventArgs) Handles Me.Activated
-      ' Visualizza i comandi sul Ribbon per l'importazione/esportazione dati del Gestionale Amica.
-      g_frmMain.rtgGestionaleAmica.Visible = False
-
-      g_frmMain.rtgPlanningCamere.Visible = False
-
+#Region "Strumenti di Modifica - (Condivisa) "
       ' Visualizza i comandi Strumenti di modifica sul Ribbon.
       g_frmMain.rtgStrumentiModifica.Visible = True
-      ' Nasconde la scheda Periodo e Documenti
-      g_frmMain.rtgStrumentiModifica.TabPages(1).Visible = False
-      g_frmMain.rtgStrumentiModifica.TabPages(2).Visible = False
+
+#Region "Modifica - (Condivisa) "
+      ' TabPage.
+      g_frmMain.eui_StrumentiModifica.Visible = True
+
+      ' Dati.
+      g_frmMain.eui_Strumenti_Nuovo.Visible = True
+      g_frmMain.eui_Strumenti_Modifica.Visible = True
+      g_frmMain.eui_Strumenti_Duplica.Visible = True
+      g_frmMain.eui_Strumenti_Elimina.Visible = True
+      g_frmMain.eui_Strumenti_Annulla.Visible = False
+      g_frmMain.eui_Strumenti_Aggiorna.Visible = True
+      g_frmMain.eui_Strumenti_Esporta.Visible = True
+
+      ' Stampa.
+      g_frmMain.eui_Strumenti_Stampa_Anteprima.Visible = True
+      g_frmMain.eui_Strumenti_Stampa_Elenco.Visible = True
+
+#End Region
+
+#Region "Periodo - (Condivisa) "
+      ' TabPage.
+      g_frmMain.eui_StrumentiPeriodo.Visible = False
+
+#End Region
+
+#Region "Documenti "
+      ' TabPage.
+      g_frmMain.eui_StrumentiDocumenti.Visible = False
+
+#End Region
+
+#Region "Sospesi / Buoni pasto "
+      ' TabPage.
+      g_frmMain.eui_StrumentiSospesiBuoni.Visible = False
+
+#End Region
+
+      ' Serve ad attivare/disattivare i vari comandi in base ai dati visualizzati.
+      AggiornaDati()
+
+#End Region
+
+   End Sub
+
+   Private Sub ElencoListiniCamere_Deactivate(sender As Object, e As EventArgs) Handles Me.Deactivate
+
+#Region "Strumenti di Modifica - (Condivisa) "
+      g_frmMain.rtgStrumentiModifica.Visible = False
+
+#End Region
 
    End Sub
 
@@ -1074,11 +1118,6 @@ Public Class ElencoListiniCamere
 
          ' Rimuove la finestra aperta dal menu Finestra/Seleziona.
          g_frmMain.RimuoviFormMenuSeleziona(g_frmListiniCamere)
-
-         ' Chiude i comandi sul Ribbon.
-         g_frmMain.rtgGestionaleAmica.Visible = False
-         g_frmMain.rtgPlanningCamere.Visible = False
-         g_frmMain.rtgStrumentiModifica.Visible = False
 
          ' Distrugge l'oggetto e libera le risorse.
          g_frmListiniCamere.Dispose()
@@ -1243,6 +1282,5 @@ Public Class ElencoListiniCamere
 
       End Try
    End Sub
-
 
 End Class
