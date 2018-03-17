@@ -1,0 +1,61 @@
+"*** 17/03/2018 - 15:55:40 ***"
+"- DESCRIZIONE ERRORE: Errore del server remoto: (530) Accesso non eseguito.."
+"- NOME PROCEDURA:    in System.Net.WebClient.UploadFile(Uri address, String method, String fileName)
+   in System.Net.WebClient.UploadFile(String address, String fileName)
+   in Hospitality_Solution.WebCommunication.ScriviFile(String ftp, String login, String pwd, String percorsoRemoto, String percorsoLocale)
+   in Hospitality_Solution.frmMain.VerificaAggiornamento()"
+"
+"
+"*** 17/03/2018 - 16:01:28 ***"
+"- DESCRIZIONE ERRORE: Errore del server remoto: (530) Accesso non eseguito.."
+"- NOME PROCEDURA:    in System.Net.WebClient.UploadFile(Uri address, String method, String fileName)
+   in System.Net.WebClient.UploadFile(String address, String fileName)
+   in Hospitality_Solution.WebCommunication.ScriviFile(String ftp, String login, String pwd, String percorsoRemoto, String percorsoLocale)
+   in Hospitality_Solution.frmMain.VerificaAggiornamento()"
+"
+"
+"*** 17/03/2018 - 16:07:32 ***"
+"- DESCRIZIONE ERRORE: Eccezione durante una richiesta WebClient."
+"- NOME PROCEDURA:    in System.Net.WebClient.UploadFile(Uri address, String method, String fileName)
+   in System.Net.WebClient.UploadFile(String address, String method, String fileName)
+   in Hospitality_Solution.WebCommunication.ScriviFile(String ftp, String login, String pwd, String percorsoRemoto, String percorsoLocale)
+   in Hospitality_Solution.frmMain.VerificaAggiornamento()"
+"
+"
+"*** 17/03/2018 - 17:02:51 ***"
+"- DESCRIZIONE ERRORE: Errore del server remoto: (404) Non trovato."
+"- NOME PROCEDURA:    in System.Net.WebClient.DownloadFile(Uri address, String fileName)
+   in System.Net.WebClient.DownloadFile(String address, String fileName)
+   in Hospitality_Solution.WebCommunication.LeggiFile(String percorsoRemoto, String percorsoLocale)
+   in Hospitality_Solution.frmMain.VerificaAggiornamento()"
+"
+"
+"*** 17/03/2018 - 17:04:36 ***"
+"- DESCRIZIONE ERRORE: Errore del server remoto: (404) Non trovato."
+"- NOME PROCEDURA:    in System.Net.WebClient.DownloadFile(Uri address, String fileName)
+   in System.Net.WebClient.DownloadFile(String address, String fileName)
+   in Hospitality_Solution.WebCommunication.LeggiFile(String percorsoRemoto, String percorsoLocale)
+   in Hospitality_Solution.frmMain.VerificaAggiornamento()"
+"
+"
+"*** 17/03/2018 - 17:05:34 ***"
+"- DESCRIZIONE ERRORE: Errore del server remoto: (404) Non trovato."
+"- NOME PROCEDURA:    in System.Net.WebClient.DownloadFile(Uri address, String fileName)
+   in System.Net.WebClient.DownloadFile(String address, String fileName)
+   in Hospitality_Solution.frmMain.VerificaAggiornamento()"
+"
+"
+"*** 17/03/2018 - 17:37:05 ***"
+"- DESCRIZIONE ERRORE: Errore del server remoto: (404) Non trovato."
+"- NOME PROCEDURA:    in System.Net.WebClient.DownloadFile(Uri address, String fileName)
+   in System.Net.WebClient.DownloadFile(String address, String fileName)
+   in Hospitality_Solution.WebCommunication.LeggiFile(String percorsoRemoto, String percorsoLocale) in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Classi\WebCommunication.vb:riga 31
+   in Hospitality_Solution.frmMain.VerificaAggiornamenti() in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Hospitality\Main.vb:riga 12368"
+"
+"
+"*** 17/03/2018 - 18:55:53 ***"
+"- DESCRIZIONE ERRORE: Ribbon does not contain the specified tab page"
+"- NOME PROCEDURA:    in Elegant.Ui.Ribbon.set_CurrentTabPage(RibbonTabPage value)
+   in Hospitality_Solution.ElencoDoc.ElencoDoc_Load(Object sender, EventArgs e) in D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Codice\Form\Ristorante\ElencoDoc.vb:riga 2797"
+"
+"

@@ -17,10 +17,11 @@ Public Class WebCommunication
 
    Public Shared Sub ScriviFile(ByVal ftp As String, ByVal login As String, ByVal pwd As String, ByVal percorsoRemoto As String, ByVal percorsoLocale As String)
       Dim client As New Net.WebClient
+      Dim valRitorno As Byte()
 
       client.Credentials = New Net.NetworkCredential(login, pwd, ftp)
 
-      client.UploadFile(percorsoRemoto, percorsoLocale)
+      valRitorno = client.UploadFile(percorsoRemoto, percorsoLocale)
 
    End Sub
 

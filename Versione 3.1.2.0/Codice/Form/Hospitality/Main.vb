@@ -411,9 +411,11 @@ Friend Class frmMain
     Friend WithEvents eui_Strumenti_Buoni_Pasto As Button
     Friend WithEvents eui_Strumenti_Annulla As Button
     Friend WithEvents eui_Strumenti_Sospesi_Filtra As ToggleButton
-    Friend WithEvents eui_cmdGestionePrenRisorse As Elegant.Ui.Button
+   Friend WithEvents StatusBarPane2 As StatusBarPane
+   Friend WithEvents eui_picAggiornamenti As PictureBox
+   Friend WithEvents eui_cmdGestionePrenRisorse As Elegant.Ui.Button
 
-    <System.Diagnostics.DebuggerStepThrough()>
+   <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
       Me.components = New System.ComponentModel.Container()
       Dim themeSelector As Elegant.Ui.ThemeSelector
@@ -461,44 +463,6 @@ Friend Class frmMain
       Me.formFrameSkinner = New Elegant.Ui.FormFrameSkinner()
       Me.eui_File = New Elegant.Ui.Ribbon()
       Me.eui_BackstageView1 = New Elegant.Ui.BackstageView()
-      Me.eui_GestioneModuli = New Elegant.Ui.BackstageViewPage()
-      Me.eui_Info = New Elegant.Ui.BackstageViewPage()
-      Me.Label1 = New System.Windows.Forms.Label()
-      Me.lblPercorso = New System.Windows.Forms.Label()
-      Me.Label19 = New System.Windows.Forms.Label()
-      Me.Label18 = New System.Windows.Forms.Label()
-      Me.Label17 = New System.Windows.Forms.Label()
-      Me.Label16 = New System.Windows.Forms.Label()
-      Me.Label11 = New System.Windows.Forms.Label()
-      Me.Label12 = New System.Windows.Forms.Label()
-      Me.Label13 = New System.Windows.Forms.Label()
-      Me.Label14 = New System.Windows.Forms.Label()
-      Me.Label15 = New System.Windows.Forms.Label()
-      Me.lblDimensioniFile = New System.Windows.Forms.Label()
-      Me.lblDataUltimaScrittura = New System.Windows.Forms.Label()
-      Me.lblDataUltimoAccesso = New System.Windows.Forms.Label()
-      Me.lblDataCreazione = New System.Windows.Forms.Label()
-      Me.lblAttributi = New System.Windows.Forms.Label()
-      Me.Label10 = New System.Windows.Forms.Label()
-      Me.PictureBox11 = New System.Windows.Forms.PictureBox()
-      Me.PictureBox9 = New System.Windows.Forms.PictureBox()
-      Me.PictureBox8 = New System.Windows.Forms.PictureBox()
-      Me.PictureBox7 = New System.Windows.Forms.PictureBox()
-      Me.PictureBox6 = New System.Windows.Forms.PictureBox()
-      Me.Label8 = New System.Windows.Forms.Label()
-      Me.Label9 = New System.Windows.Forms.Label()
-      Me.Label6 = New System.Windows.Forms.Label()
-      Me.Label7 = New System.Windows.Forms.Label()
-      Me.Label4 = New System.Windows.Forms.Label()
-      Me.Label5 = New System.Windows.Forms.Label()
-      Me.cmdCompatta = New Elegant.Ui.Button()
-      Me.cmdPulizia = New Elegant.Ui.Button()
-      Me.cmdBackup = New Elegant.Ui.Button()
-      Me.Label3 = New System.Windows.Forms.Label()
-      Me.Label2 = New System.Windows.Forms.Label()
-      Me.cmdAttivaModuli = New Elegant.Ui.Button()
-      Me.cmdApriPercorso = New Elegant.Ui.Button()
-      Me.BackstageViewSeparator1 = New Elegant.Ui.BackstageViewSeparator()
       Me.eui_Guida = New Elegant.Ui.BackstageViewPage()
       Me.BackstageViewPage1 = New Elegant.Ui.BackstageViewPage()
       Me.lblGiorniProva = New System.Windows.Forms.Label()
@@ -536,6 +500,44 @@ Friend Class frmMain
       Me.Button3 = New Elegant.Ui.Button()
       Me.Button2 = New Elegant.Ui.Button()
       Me.Button34 = New Elegant.Ui.Button()
+      Me.eui_Info = New Elegant.Ui.BackstageViewPage()
+      Me.Label1 = New System.Windows.Forms.Label()
+      Me.lblPercorso = New System.Windows.Forms.Label()
+      Me.Label19 = New System.Windows.Forms.Label()
+      Me.Label18 = New System.Windows.Forms.Label()
+      Me.Label17 = New System.Windows.Forms.Label()
+      Me.Label16 = New System.Windows.Forms.Label()
+      Me.Label11 = New System.Windows.Forms.Label()
+      Me.Label12 = New System.Windows.Forms.Label()
+      Me.Label13 = New System.Windows.Forms.Label()
+      Me.Label14 = New System.Windows.Forms.Label()
+      Me.Label15 = New System.Windows.Forms.Label()
+      Me.lblDimensioniFile = New System.Windows.Forms.Label()
+      Me.lblDataUltimaScrittura = New System.Windows.Forms.Label()
+      Me.lblDataUltimoAccesso = New System.Windows.Forms.Label()
+      Me.lblDataCreazione = New System.Windows.Forms.Label()
+      Me.lblAttributi = New System.Windows.Forms.Label()
+      Me.Label10 = New System.Windows.Forms.Label()
+      Me.PictureBox11 = New System.Windows.Forms.PictureBox()
+      Me.PictureBox9 = New System.Windows.Forms.PictureBox()
+      Me.PictureBox8 = New System.Windows.Forms.PictureBox()
+      Me.PictureBox7 = New System.Windows.Forms.PictureBox()
+      Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+      Me.Label8 = New System.Windows.Forms.Label()
+      Me.Label9 = New System.Windows.Forms.Label()
+      Me.Label6 = New System.Windows.Forms.Label()
+      Me.Label7 = New System.Windows.Forms.Label()
+      Me.Label4 = New System.Windows.Forms.Label()
+      Me.Label5 = New System.Windows.Forms.Label()
+      Me.cmdCompatta = New Elegant.Ui.Button()
+      Me.cmdPulizia = New Elegant.Ui.Button()
+      Me.cmdBackup = New Elegant.Ui.Button()
+      Me.Label3 = New System.Windows.Forms.Label()
+      Me.Label2 = New System.Windows.Forms.Label()
+      Me.cmdAttivaModuli = New Elegant.Ui.Button()
+      Me.cmdApriPercorso = New Elegant.Ui.Button()
+      Me.eui_GestioneModuli = New Elegant.Ui.BackstageViewPage()
+      Me.BackstageViewSeparator1 = New Elegant.Ui.BackstageViewSeparator()
       Me.eui_Opzioni = New Elegant.Ui.BackstageViewButton()
       Me.eui_Esci = New Elegant.Ui.BackstageViewButton()
       Me.rtgStrumentiModifica = New Elegant.Ui.RibbonContextualTabGroup(Me.components)
@@ -793,6 +795,8 @@ Friend Class frmMain
       Me.StatusBarPane6 = New Elegant.Ui.StatusBarPane()
       Me.PictureBox4 = New Elegant.Ui.PictureBox()
       Me.eui_cmdData = New Elegant.Ui.Button()
+      Me.StatusBarPane2 = New Elegant.Ui.StatusBarPane()
+      Me.eui_picAggiornamenti = New Elegant.Ui.PictureBox()
       Me.NavigationBarItem6 = New Elegant.Ui.NavigationBarItem()
       Me.CheckBox7 = New Elegant.Ui.CheckBox()
       Me.PopupMenu7 = New Elegant.Ui.PopupMenu(Me.components)
@@ -807,13 +811,6 @@ Friend Class frmMain
       CType(Me.picProg, System.ComponentModel.ISupportInitialize).BeginInit()
       CType(Me.eui_File, System.ComponentModel.ISupportInitialize).BeginInit()
       CType(Me.eui_BackstageView1, System.ComponentModel.ISupportInitialize).BeginInit()
-      Me.eui_GestioneModuli.SuspendLayout()
-      Me.eui_Info.SuspendLayout()
-      CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
-      CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
-      CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
-      CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
-      CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
       Me.eui_Guida.SuspendLayout()
       Me.BackstageViewPage1.SuspendLayout()
       CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -825,6 +822,13 @@ Friend Class frmMain
       CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
       CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
       CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
+      Me.eui_Info.SuspendLayout()
+      CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
+      CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
+      CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
+      CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
+      CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
+      Me.eui_GestioneModuli.SuspendLayout()
       CType(Me.eui_StrumentiModifica, System.ComponentModel.ISupportInitialize).BeginInit()
       Me.eui_StrumentiModifica.SuspendLayout()
       CType(Me.RibbonGroup21, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -940,6 +944,7 @@ Friend Class frmMain
       Me.StatusBarPane3.SuspendLayout()
       Me.StatusBarPane4.SuspendLayout()
       Me.StatusBarPane6.SuspendLayout()
+      Me.StatusBarPane2.SuspendLayout()
       CType(Me.PopupMenu7, System.ComponentModel.ISupportInitialize).BeginInit()
       CType(Me.PopupMenu8, System.ComponentModel.ISupportInitialize).BeginInit()
       CType(Me.PopupMenu9, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1061,7 +1066,7 @@ Friend Class frmMain
       Me.lvwGestioneModuli.MultiSelect = False
       Me.lvwGestioneModuli.Name = "lvwGestioneModuli"
       Me.lvwGestioneModuli.ShowItemToolTips = True
-      Me.lvwGestioneModuli.Size = New System.Drawing.Size(1160, 344)
+      Me.lvwGestioneModuli.Size = New System.Drawing.Size(1176, 350)
       Me.lvwGestioneModuli.SmallImageList = Me.ImageList1
       Me.lvwGestioneModuli.TabIndex = 79
       Me.ToolTip1.SetToolTip(Me.lvwGestioneModuli, "Elenco moduli.")
@@ -1161,33 +1166,527 @@ Friend Class frmMain
       Me.eui_File.Name = "eui_File"
       Me.eui_File.QuickAccessToolbarCustomizationDialogEnabled = False
       Me.eui_File.QuickAccessToolbarCustomizationEnabled = False
-      Me.eui_File.Size = New System.Drawing.Size(1308, 154)
+      Me.eui_File.Size = New System.Drawing.Size(1356, 154)
       Me.eui_File.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_File.SmallImages.Images"), System.Drawing.Image))})
       Me.eui_File.TabIndex = 15
       Me.eui_File.TabPages.AddRange(New Elegant.Ui.RibbonTabPage() {Me.eui_Gestione, Me.eui_Archivi, Me.eui_Contabilità, Me.eui_Magazzino, Me.eui_Visualizza, Me.eui_Strumenti, Me.eui_Finestra})
       '
       'eui_BackstageView1
       '
-      Me.eui_BackstageView1.CurrentPage = Me.eui_GestioneModuli
+      Me.eui_BackstageView1.CurrentPage = Me.eui_Guida
       Me.eui_BackstageView1.Id = "26b6ed12-6b3d-4104-bf29-d19f8880bdff"
       Me.eui_BackstageView1.Items.AddRange(New System.Windows.Forms.Control() {Me.eui_Info, Me.eui_GestioneModuli, Me.BackstageViewSeparator1, Me.eui_Guida, Me.eui_Opzioni, Me.eui_Esci})
       Me.eui_BackstageView1.Location = New System.Drawing.Point(0, 55)
       Me.eui_BackstageView1.Name = "eui_BackstageView1"
-      Me.eui_BackstageView1.Size = New System.Drawing.Size(1308, 474)
+      Me.eui_BackstageView1.Size = New System.Drawing.Size(1332, 663)
       Me.eui_BackstageView1.Style = Elegant.Ui.BackstageViewStyle.Office2010DarkBlue
       Me.eui_BackstageView1.TabIndex = 16
       '
-      'eui_GestioneModuli
+      'eui_Guida
       '
-      Me.eui_GestioneModuli.AutoScroll = True
-      Me.eui_GestioneModuli.Controls.Add(Me.lvwGestioneModuli)
-      Me.eui_GestioneModuli.KeyTip = "G"
-      Me.eui_GestioneModuli.Location = New System.Drawing.Point(0, 0)
-      Me.eui_GestioneModuli.Name = "eui_GestioneModuli"
-      Me.eui_GestioneModuli.Padding = New System.Windows.Forms.Padding(0, 1, 2, 1)
-      Me.eui_GestioneModuli.Size = New System.Drawing.Size(1165, 472)
-      Me.eui_GestioneModuli.TabIndex = 0
-      Me.eui_GestioneModuli.Text = "Gestione Moduli    "
+      Me.eui_Guida.Controls.Add(Me.BackstageViewPage1)
+      Me.eui_Guida.Controls.Add(Me.Button6)
+      Me.eui_Guida.Controls.Add(Me.Button5)
+      Me.eui_Guida.Controls.Add(Me.Button3)
+      Me.eui_Guida.Controls.Add(Me.Button2)
+      Me.eui_Guida.Controls.Add(Me.Button34)
+      Me.eui_Guida.KeyTip = "W"
+      Me.eui_Guida.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_Guida.LargeImages.Images"), System.Drawing.Image))})
+      Me.eui_Guida.Location = New System.Drawing.Point(0, 0)
+      Me.eui_Guida.Name = "eui_Guida"
+      Me.eui_Guida.Padding = New System.Windows.Forms.Padding(0, 1, 2, 1)
+      Me.eui_Guida.Size = New System.Drawing.Size(1247, 661)
+      Me.eui_Guida.TabIndex = 0
+      Me.eui_Guida.Text = "Guida"
+      '
+      'BackstageViewPage1
+      '
+      Me.BackstageViewPage1.Controls.Add(Me.lblGiorniProva)
+      Me.BackstageViewPage1.Controls.Add(Me.lblDemo)
+      Me.BackstageViewPage1.Controls.Add(Me.PictureBox18)
+      Me.BackstageViewPage1.Controls.Add(Me.lnkMsWeb)
+      Me.BackstageViewPage1.Controls.Add(Me.lnkLicenza)
+      Me.BackstageViewPage1.Controls.Add(Me.lblNumSerie)
+      Me.BackstageViewPage1.Controls.Add(Me.lnkSupporto)
+      Me.BackstageViewPage1.Controls.Add(Me.lblInfo)
+      Me.BackstageViewPage1.Controls.Add(Me.lnkInfoSu)
+      Me.BackstageViewPage1.Controls.Add(Me.lblVersione)
+      Me.BackstageViewPage1.Controls.Add(Me.Label24)
+      Me.BackstageViewPage1.Controls.Add(Me.PictureBox17)
+      Me.BackstageViewPage1.Controls.Add(Me.Label26)
+      Me.BackstageViewPage1.Controls.Add(Me.eui_txtDettagliProdotto)
+      Me.BackstageViewPage1.Controls.Add(Me.eui_lstProdottiAttivati)
+      Me.BackstageViewPage1.Controls.Add(Me.Label23)
+      Me.BackstageViewPage1.Controls.Add(Me.PictureBox16)
+      Me.BackstageViewPage1.Controls.Add(Me.Label22)
+      Me.BackstageViewPage1.Controls.Add(Me.PictureBox15)
+      Me.BackstageViewPage1.Controls.Add(Me.PictureBox14)
+      Me.BackstageViewPage1.Controls.Add(Me.PictureBox13)
+      Me.BackstageViewPage1.Controls.Add(Me.PictureBox12)
+      Me.BackstageViewPage1.Controls.Add(Me.PictureBox10)
+      Me.BackstageViewPage1.Controls.Add(Me.Label21)
+      Me.BackstageViewPage1.Controls.Add(Me.Label20)
+      Me.BackstageViewPage1.Controls.Add(Me.eui_cmdAggiornamenti)
+      Me.BackstageViewPage1.Controls.Add(Me.eui_cmdMobile)
+      Me.BackstageViewPage1.Controls.Add(Me.eui_cmdOpzioni)
+      Me.BackstageViewPage1.Controls.Add(Me.eui_cmdContattaci)
+      Me.BackstageViewPage1.Controls.Add(Me.eui_cmdGuida)
+      Me.BackstageViewPage1.KeyTip = "W"
+      Me.BackstageViewPage1.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("BackstageViewPage1.LargeImages.Images"), System.Drawing.Image))})
+      Me.BackstageViewPage1.Location = New System.Drawing.Point(0, 1)
+      Me.BackstageViewPage1.Name = "BackstageViewPage1"
+      Me.BackstageViewPage1.Padding = New System.Windows.Forms.Padding(0, 1, 2, 1)
+      Me.BackstageViewPage1.Size = New System.Drawing.Size(1245, 659)
+      Me.BackstageViewPage1.TabIndex = 6
+      Me.BackstageViewPage1.Text = "Guida"
+      '
+      'lblGiorniProva
+      '
+      Me.lblGiorniProva.AutoSize = True
+      Me.lblGiorniProva.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+      Me.lblGiorniProva.ForeColor = System.Drawing.Color.Gray
+      Me.lblGiorniProva.Location = New System.Drawing.Point(741, 56)
+      Me.lblGiorniProva.Name = "lblGiorniProva"
+      Me.lblGiorniProva.Size = New System.Drawing.Size(117, 13)
+      Me.lblGiorniProva.TabIndex = 46
+      Me.lblGiorniProva.Text = "GIORNI DI PROVA: 30"
+      '
+      'lblDemo
+      '
+      Me.lblDemo.AutoSize = True
+      Me.lblDemo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
+      Me.lblDemo.ForeColor = System.Drawing.Color.DarkOrange
+      Me.lblDemo.Location = New System.Drawing.Point(733, 32)
+      Me.lblDemo.Name = "lblDemo"
+      Me.lblDemo.Size = New System.Drawing.Size(181, 16)
+      Me.lblDemo.TabIndex = 45
+      Me.lblDemo.Text = "VERSIONE DIMOSTRATIVA"
+      '
+      'PictureBox18
+      '
+      Me.PictureBox18.Image = CType(resources.GetObject("PictureBox18.Image"), System.Drawing.Image)
+      Me.PictureBox18.Location = New System.Drawing.Point(48, 240)
+      Me.PictureBox18.Name = "PictureBox18"
+      Me.PictureBox18.Size = New System.Drawing.Size(32, 32)
+      Me.PictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+      Me.PictureBox18.TabIndex = 44
+      Me.PictureBox18.TabStop = False
+      '
+      'lnkMsWeb
+      '
+      Me.lnkMsWeb.ActiveLinkColor = System.Drawing.Color.DarkOrange
+      Me.lnkMsWeb.AutoSize = True
+      Me.lnkMsWeb.LinkColor = System.Drawing.Color.Gray
+      Me.lnkMsWeb.Location = New System.Drawing.Point(112, 248)
+      Me.lnkMsWeb.Name = "lnkMsWeb"
+      Me.lnkMsWeb.Size = New System.Drawing.Size(215, 13)
+      Me.lnkMsWeb.TabIndex = 43
+      Me.lnkMsWeb.TabStop = True
+      Me.lnkMsWeb.Text = "Visita il sito Internet della Montana Software."
+      '
+      'lnkLicenza
+      '
+      Me.lnkLicenza.ActiveLinkColor = System.Drawing.Color.DarkOrange
+      Me.lnkLicenza.AutoSize = True
+      Me.lnkLicenza.LinkColor = System.Drawing.Color.Gray
+      Me.lnkLicenza.Location = New System.Drawing.Point(416, 624)
+      Me.lnkLicenza.Name = "lnkLicenza"
+      Me.lnkLicenza.Size = New System.Drawing.Size(238, 13)
+      Me.lnkLicenza.TabIndex = 9
+      Me.lnkLicenza.TabStop = True
+      Me.lnkLicenza.Text = "Condizioni di licenza software Montana Software."
+      '
+      'lblNumSerie
+      '
+      Me.lblNumSerie.AutoSize = True
+      Me.lblNumSerie.Location = New System.Drawing.Point(416, 600)
+      Me.lblNumSerie.Name = "lblNumSerie"
+      Me.lblNumSerie.Size = New System.Drawing.Size(63, 13)
+      Me.lblNumSerie.TabIndex = 41
+      Me.lblNumSerie.Text = "ID prodotto:"
+      '
+      'lnkSupporto
+      '
+      Me.lnkSupporto.ActiveLinkColor = System.Drawing.Color.DarkOrange
+      Me.lnkSupporto.AutoSize = True
+      Me.lnkSupporto.LinkColor = System.Drawing.Color.Gray
+      Me.lnkSupporto.Location = New System.Drawing.Point(416, 576)
+      Me.lnkSupporto.Name = "lnkSupporto"
+      Me.lnkSupporto.Size = New System.Drawing.Size(225, 13)
+      Me.lnkSupporto.TabIndex = 8
+      Me.lnkSupporto.TabStop = True
+      Me.lnkSupporto.Text = "Servizio Supporto Tecnico Montana Software."
+      '
+      'lblInfo
+      '
+      Me.lblInfo.AutoSize = True
+      Me.lblInfo.Location = New System.Drawing.Point(416, 552)
+      Me.lblInfo.Name = "lblInfo"
+      Me.lblInfo.Size = New System.Drawing.Size(28, 13)
+      Me.lblInfo.TabIndex = 39
+      Me.lblInfo.Text = "Info:"
+      '
+      'lnkInfoSu
+      '
+      Me.lnkInfoSu.ActiveLinkColor = System.Drawing.Color.DarkOrange
+      Me.lnkInfoSu.AutoSize = True
+      Me.lnkInfoSu.LinkColor = System.Drawing.Color.Gray
+      Me.lnkInfoSu.Location = New System.Drawing.Point(416, 528)
+      Me.lnkInfoSu.Name = "lnkInfoSu"
+      Me.lnkInfoSu.Size = New System.Drawing.Size(227, 13)
+      Me.lnkInfoSu.TabIndex = 7
+      Me.lnkInfoSu.TabStop = True
+      Me.lnkInfoSu.Text = "Informazioni aggiuntive su versione e copyrigth"
+      '
+      'lblVersione
+      '
+      Me.lblVersione.AutoSize = True
+      Me.lblVersione.Location = New System.Drawing.Point(416, 504)
+      Me.lblVersione.Name = "lblVersione"
+      Me.lblVersione.Size = New System.Drawing.Size(51, 13)
+      Me.lblVersione.TabIndex = 37
+      Me.lblVersione.Text = "Versione:"
+      '
+      'Label24
+      '
+      Me.Label24.AutoSize = True
+      Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
+      Me.Label24.ForeColor = System.Drawing.Color.DimGray
+      Me.Label24.Location = New System.Drawing.Point(416, 464)
+      Me.Label24.Name = "Label24"
+      Me.Label24.Size = New System.Drawing.Size(249, 16)
+      Me.Label24.TabIndex = 36
+      Me.Label24.Text = "Informazioni su Hospitality Solution"
+      '
+      'PictureBox17
+      '
+      Me.PictureBox17.BackColor = System.Drawing.Color.Transparent
+      Me.PictureBox17.Image = CType(resources.GetObject("PictureBox17.Image"), System.Drawing.Image)
+      Me.PictureBox17.Location = New System.Drawing.Point(416, 480)
+      Me.PictureBox17.Name = "PictureBox17"
+      Me.PictureBox17.Size = New System.Drawing.Size(500, 8)
+      Me.PictureBox17.TabIndex = 35
+      Me.PictureBox17.TabStop = False
+      '
+      'Label26
+      '
+      Me.Label26.AutoSize = True
+      Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
+      Me.Label26.ForeColor = System.Drawing.Color.DimGray
+      Me.Label26.Location = New System.Drawing.Point(416, 339)
+      Me.Label26.Name = "Label26"
+      Me.Label26.Size = New System.Drawing.Size(124, 16)
+      Me.Label26.TabIndex = 34
+      Me.Label26.Text = "Dettagli prodotto"
+      '
+      'eui_txtDettagliProdotto
+      '
+      Me.eui_txtDettagliProdotto.Id = "fbf90a56-48ff-4512-ad51-95b021fe30df"
+      Me.eui_txtDettagliProdotto.KeyTip = "D"
+      Me.eui_txtDettagliProdotto.Location = New System.Drawing.Point(416, 360)
+      Me.eui_txtDettagliProdotto.Multiline = True
+      Me.eui_txtDettagliProdotto.Name = "eui_txtDettagliProdotto"
+      Me.eui_txtDettagliProdotto.ReadOnly = True
+      Me.eui_txtDettagliProdotto.ScreenTip.Caption = "Dettagli prodotto"
+      Me.eui_txtDettagliProdotto.ScreenTip.Text = "Informazioni sul prodotto installato."
+      Me.eui_txtDettagliProdotto.Size = New System.Drawing.Size(500, 80)
+      Me.eui_txtDettagliProdotto.TabIndex = 6
+      Me.eui_txtDettagliProdotto.TextEditorWidth = 506
+      '
+      'eui_lstProdottiAttivati
+      '
+      Me.eui_lstProdottiAttivati.AutoScroll = True
+      Me.eui_lstProdottiAttivati.Id = "12df6a0f-8828-44b9-948d-aff61ccffa9a"
+      Me.eui_lstProdottiAttivati.KeyTip = "P"
+      Me.eui_lstProdottiAttivati.Location = New System.Drawing.Point(416, 152)
+      Me.eui_lstProdottiAttivati.Name = "eui_lstProdottiAttivati"
+      Me.eui_lstProdottiAttivati.ScreenTip.Caption = "Prodotti attivati"
+      Me.eui_lstProdottiAttivati.ScreenTip.Text = "Elenco dei prodotti attivi installati nel software."
+      Me.eui_lstProdottiAttivati.Size = New System.Drawing.Size(500, 168)
+      Me.eui_lstProdottiAttivati.TabIndex = 5
+      Me.eui_lstProdottiAttivati.Text = "ListBox1"
+      '
+      'Label23
+      '
+      Me.Label23.AutoSize = True
+      Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
+      Me.Label23.ForeColor = System.Drawing.Color.DimGray
+      Me.Label23.Location = New System.Drawing.Point(416, 88)
+      Me.Label23.Name = "Label23"
+      Me.Label23.Size = New System.Drawing.Size(193, 16)
+      Me.Label23.TabIndex = 29
+      Me.Label23.Text = "Hospitality Solution Suite 3"
+      '
+      'PictureBox16
+      '
+      Me.PictureBox16.Image = CType(resources.GetObject("PictureBox16.Image"), System.Drawing.Image)
+      Me.PictureBox16.Location = New System.Drawing.Point(416, 104)
+      Me.PictureBox16.Name = "PictureBox16"
+      Me.PictureBox16.Size = New System.Drawing.Size(500, 8)
+      Me.PictureBox16.TabIndex = 28
+      Me.PictureBox16.TabStop = False
+      '
+      'Label22
+      '
+      Me.Label22.AutoSize = True
+      Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
+      Me.Label22.ForeColor = System.Drawing.Color.DimGray
+      Me.Label22.Location = New System.Drawing.Point(416, 132)
+      Me.Label22.Name = "Label22"
+      Me.Label22.Size = New System.Drawing.Size(112, 16)
+      Me.Label22.TabIndex = 27
+      Me.Label22.Text = "Prodotti attivati"
+      '
+      'PictureBox15
+      '
+      Me.PictureBox15.Image = CType(resources.GetObject("PictureBox15.Image"), System.Drawing.Image)
+      Me.PictureBox15.Location = New System.Drawing.Point(462, 30)
+      Me.PictureBox15.Name = "PictureBox15"
+      Me.PictureBox15.Size = New System.Drawing.Size(260, 35)
+      Me.PictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+      Me.PictureBox15.TabIndex = 26
+      Me.PictureBox15.TabStop = False
+      '
+      'PictureBox14
+      '
+      Me.PictureBox14.Image = CType(resources.GetObject("PictureBox14.Image"), System.Drawing.Image)
+      Me.PictureBox14.Location = New System.Drawing.Point(416, 24)
+      Me.PictureBox14.Name = "PictureBox14"
+      Me.PictureBox14.Size = New System.Drawing.Size(40, 40)
+      Me.PictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+      Me.PictureBox14.TabIndex = 25
+      Me.PictureBox14.TabStop = False
+      '
+      'PictureBox13
+      '
+      Me.PictureBox13.BackColor = System.Drawing.Color.Transparent
+      Me.PictureBox13.Image = CType(resources.GetObject("PictureBox13.Image"), System.Drawing.Image)
+      Me.PictureBox13.Location = New System.Drawing.Point(392, 0)
+      Me.PictureBox13.Name = "PictureBox13"
+      Me.PictureBox13.Size = New System.Drawing.Size(8, 823)
+      Me.PictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+      Me.PictureBox13.TabIndex = 24
+      Me.PictureBox13.TabStop = False
+      '
+      'PictureBox12
+      '
+      Me.PictureBox12.Image = CType(resources.GetObject("PictureBox12.Image"), System.Drawing.Image)
+      Me.PictureBox12.Location = New System.Drawing.Point(24, 304)
+      Me.PictureBox12.Name = "PictureBox12"
+      Me.PictureBox12.Size = New System.Drawing.Size(352, 8)
+      Me.PictureBox12.TabIndex = 23
+      Me.PictureBox12.TabStop = False
+      '
+      'PictureBox10
+      '
+      Me.PictureBox10.Image = CType(resources.GetObject("PictureBox10.Image"), System.Drawing.Image)
+      Me.PictureBox10.Location = New System.Drawing.Point(24, 40)
+      Me.PictureBox10.Name = "PictureBox10"
+      Me.PictureBox10.Size = New System.Drawing.Size(352, 8)
+      Me.PictureBox10.TabIndex = 22
+      Me.PictureBox10.TabStop = False
+      '
+      'Label21
+      '
+      Me.Label21.AutoSize = True
+      Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
+      Me.Label21.ForeColor = System.Drawing.Color.DimGray
+      Me.Label21.Location = New System.Drawing.Point(24, 288)
+      Me.Label21.Name = "Label21"
+      Me.Label21.Size = New System.Drawing.Size(313, 16)
+      Me.Label21.TabIndex = 7
+      Me.Label21.Text = "Strumenti per l'utilizzo di Hospitality Solution"
+      '
+      'Label20
+      '
+      Me.Label20.AutoSize = True
+      Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
+      Me.Label20.ForeColor = System.Drawing.Color.DimGray
+      Me.Label20.Location = New System.Drawing.Point(24, 24)
+      Me.Label20.Name = "Label20"
+      Me.Label20.Size = New System.Drawing.Size(71, 16)
+      Me.Label20.TabIndex = 6
+      Me.Label20.Text = "Supporto"
+      '
+      'eui_cmdAggiornamenti
+      '
+      Me.eui_cmdAggiornamenti.BackColor = System.Drawing.Color.White
+      Me.eui_cmdAggiornamenti.DescriptionText = "E' possibile recuperare gli aggiornamenti più recenti di Hospitality Solution."
+      Me.eui_cmdAggiornamenti.FlatStyle = Elegant.Ui.FlatStyle.Flat
+      Me.eui_cmdAggiornamenti.Id = "4a13c6bc-7ce5-4d8b-86a4-556a801346e5"
+      Me.eui_cmdAggiornamenti.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+      Me.eui_cmdAggiornamenti.KeyTip = "A"
+      Me.eui_cmdAggiornamenti.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_cmdAggiornamenti.LargeImages.Images"), System.Drawing.Image))})
+      Me.eui_cmdAggiornamenti.Location = New System.Drawing.Point(24, 504)
+      Me.eui_cmdAggiornamenti.Name = "eui_cmdAggiornamenti"
+      Me.eui_cmdAggiornamenti.Size = New System.Drawing.Size(344, 80)
+      Me.eui_cmdAggiornamenti.TabIndex = 4
+      Me.eui_cmdAggiornamenti.Text = "Controlla aggiornamenti"
+      Me.eui_cmdAggiornamenti.TextAlign = System.Drawing.ContentAlignment.TopLeft
+      Me.eui_cmdAggiornamenti.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+      Me.eui_cmdAggiornamenti.WordWrap = True
+      '
+      'eui_cmdMobile
+      '
+      Me.eui_cmdMobile.BackColor = System.Drawing.Color.White
+      Me.eui_cmdMobile.DescriptionText = "Installa Hospitality Solution in un dispositivo USB mobile per l'utilizzo su altr" &
+    "i computer."
+      Me.eui_cmdMobile.Enabled = False
+      Me.eui_cmdMobile.FlatStyle = Elegant.Ui.FlatStyle.Flat
+      Me.eui_cmdMobile.Id = "818d90e4-7ef8-42ef-b3cc-a44414c7c574"
+      Me.eui_cmdMobile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+      Me.eui_cmdMobile.KeyTip = "H"
+      Me.eui_cmdMobile.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_cmdMobile.LargeImages.Images"), System.Drawing.Image))})
+      Me.eui_cmdMobile.Location = New System.Drawing.Point(24, 416)
+      Me.eui_cmdMobile.Name = "eui_cmdMobile"
+      Me.eui_cmdMobile.Size = New System.Drawing.Size(344, 80)
+      Me.eui_cmdMobile.TabIndex = 3
+      Me.eui_cmdMobile.Text = "Hospitality Solution Mobile"
+      Me.eui_cmdMobile.TextAlign = System.Drawing.ContentAlignment.TopLeft
+      Me.eui_cmdMobile.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+      Me.eui_cmdMobile.WordWrap = True
+      '
+      'eui_cmdOpzioni
+      '
+      Me.eui_cmdOpzioni.BackColor = System.Drawing.Color.White
+      Me.eui_cmdOpzioni.DescriptionText = "Consente di effettuare tutte le impostazioni del programma e di personalizzarne l" &
+    "'utilizzo."
+      Me.eui_cmdOpzioni.FlatStyle = Elegant.Ui.FlatStyle.Flat
+      Me.eui_cmdOpzioni.Id = "217bb603-74f8-45f6-9c7c-a2686d2f73f6"
+      Me.eui_cmdOpzioni.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+      Me.eui_cmdOpzioni.KeyTip = "OP"
+      Me.eui_cmdOpzioni.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_cmdOpzioni.LargeImages.Images"), System.Drawing.Image))})
+      Me.eui_cmdOpzioni.Location = New System.Drawing.Point(24, 328)
+      Me.eui_cmdOpzioni.Name = "eui_cmdOpzioni"
+      Me.eui_cmdOpzioni.Size = New System.Drawing.Size(344, 80)
+      Me.eui_cmdOpzioni.TabIndex = 2
+      Me.eui_cmdOpzioni.Text = "Opzioni"
+      Me.eui_cmdOpzioni.TextAlign = System.Drawing.ContentAlignment.TopLeft
+      Me.eui_cmdOpzioni.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+      Me.eui_cmdOpzioni.WordWrap = True
+      '
+      'eui_cmdContattaci
+      '
+      Me.eui_cmdContattaci.BackColor = System.Drawing.Color.White
+      Me.eui_cmdContattaci.DescriptionText = "Richiedi informazioni sull'utilizzo di Hospitality Solution."
+      Me.eui_cmdContattaci.FlatStyle = Elegant.Ui.FlatStyle.Flat
+      Me.eui_cmdContattaci.Id = "2eebbb8d-762c-43dc-af16-1a668c0ce0f8"
+      Me.eui_cmdContattaci.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+      Me.eui_cmdContattaci.KeyTip = "C"
+      Me.eui_cmdContattaci.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_cmdContattaci.LargeImages.Images"), System.Drawing.Image))})
+      Me.eui_cmdContattaci.Location = New System.Drawing.Point(24, 152)
+      Me.eui_cmdContattaci.Name = "eui_cmdContattaci"
+      Me.eui_cmdContattaci.Size = New System.Drawing.Size(344, 80)
+      Me.eui_cmdContattaci.TabIndex = 1
+      Me.eui_cmdContattaci.Text = "Contattaci"
+      Me.eui_cmdContattaci.TextAlign = System.Drawing.ContentAlignment.TopLeft
+      Me.eui_cmdContattaci.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+      Me.eui_cmdContattaci.WordWrap = True
+      '
+      'eui_cmdGuida
+      '
+      Me.eui_cmdGuida.BackColor = System.Drawing.Color.White
+      Me.eui_cmdGuida.DescriptionText = "Informazioni sull'utilizzo di Hospitality Solution."
+      Me.eui_cmdGuida.FlatStyle = Elegant.Ui.FlatStyle.Flat
+      Me.eui_cmdGuida.Id = "3c3f465e-94df-4801-8852-bab4d26a3ca0"
+      Me.eui_cmdGuida.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+      Me.eui_cmdGuida.KeyTip = "X"
+      Me.eui_cmdGuida.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_cmdGuida.LargeImages.Images"), System.Drawing.Image))})
+      Me.eui_cmdGuida.Location = New System.Drawing.Point(24, 64)
+      Me.eui_cmdGuida.Name = "eui_cmdGuida"
+      Me.eui_cmdGuida.Size = New System.Drawing.Size(344, 80)
+      Me.eui_cmdGuida.TabIndex = 0
+      Me.eui_cmdGuida.Text = "Guida di Hospitality Solution."
+      Me.eui_cmdGuida.TextAlign = System.Drawing.ContentAlignment.TopLeft
+      Me.eui_cmdGuida.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+      Me.eui_cmdGuida.WordWrap = True
+      '
+      'Button6
+      '
+      Me.Button6.BackColor = System.Drawing.Color.White
+      Me.Button6.DescriptionText = "E' possibile recuperare gli aggiornamenti più recenti di Hospitality Solution."
+      Me.Button6.FlatStyle = Elegant.Ui.FlatStyle.Flat
+      Me.Button6.Id = "3164e3b2-02c9-4501-b907-1c2608384c8e"
+      Me.Button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+      Me.Button6.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("Button6.LargeImages.Images"), System.Drawing.Image))})
+      Me.Button6.Location = New System.Drawing.Point(32, 448)
+      Me.Button6.Name = "Button6"
+      Me.Button6.Size = New System.Drawing.Size(344, 80)
+      Me.Button6.TabIndex = 5
+      Me.Button6.Text = "Controlla aggiornamenti"
+      Me.Button6.TextAlign = System.Drawing.ContentAlignment.TopLeft
+      Me.Button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+      Me.Button6.WordWrap = True
+      '
+      'Button5
+      '
+      Me.Button5.BackColor = System.Drawing.Color.White
+      Me.Button5.DescriptionText = "Installa Hospitality Solution in un dispositivo USB mobile per l'utilizzo su altr" &
+    "i computer"
+      Me.Button5.FlatStyle = Elegant.Ui.FlatStyle.Flat
+      Me.Button5.Id = "9bdf162d-28cc-4184-93e8-8e1c87241eae"
+      Me.Button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+      Me.Button5.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("Button5.LargeImages.Images"), System.Drawing.Image))})
+      Me.Button5.Location = New System.Drawing.Point(32, 352)
+      Me.Button5.Name = "Button5"
+      Me.Button5.Size = New System.Drawing.Size(344, 80)
+      Me.Button5.TabIndex = 4
+      Me.Button5.Text = "Hospitality Solution Mobile"
+      Me.Button5.TextAlign = System.Drawing.ContentAlignment.TopLeft
+      Me.Button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+      Me.Button5.WordWrap = True
+      '
+      'Button3
+      '
+      Me.Button3.BackColor = System.Drawing.Color.White
+      Me.Button3.DescriptionText = "Consente di effettuare tutte le impostazioni del programma e di personalizzarne l" &
+    "'utilizzo."
+      Me.Button3.FlatStyle = Elegant.Ui.FlatStyle.Flat
+      Me.Button3.Id = "09809a12-e86a-48dd-8bba-10fedb3f8828"
+      Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+      Me.Button3.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("Button3.LargeImages.Images"), System.Drawing.Image))})
+      Me.Button3.Location = New System.Drawing.Point(32, 256)
+      Me.Button3.Name = "Button3"
+      Me.Button3.Size = New System.Drawing.Size(344, 80)
+      Me.Button3.TabIndex = 3
+      Me.Button3.Text = "Opzioni"
+      Me.Button3.TextAlign = System.Drawing.ContentAlignment.TopLeft
+      Me.Button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+      Me.Button3.WordWrap = True
+      '
+      'Button2
+      '
+      Me.Button2.BackColor = System.Drawing.Color.White
+      Me.Button2.DescriptionText = "Richiedi informazioni sull'utilizzo di Hospitality Solution."
+      Me.Button2.FlatStyle = Elegant.Ui.FlatStyle.Flat
+      Me.Button2.Id = "fabae588-5598-4230-be39-b8aa81452c38"
+      Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+      Me.Button2.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("Button2.LargeImages.Images"), System.Drawing.Image))})
+      Me.Button2.Location = New System.Drawing.Point(32, 136)
+      Me.Button2.Name = "Button2"
+      Me.Button2.Size = New System.Drawing.Size(344, 80)
+      Me.Button2.TabIndex = 2
+      Me.Button2.Text = "Contattaci"
+      Me.Button2.TextAlign = System.Drawing.ContentAlignment.TopLeft
+      Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+      Me.Button2.WordWrap = True
+      '
+      'Button34
+      '
+      Me.Button34.BackColor = System.Drawing.Color.White
+      Me.Button34.DescriptionText = "Informazioni sull'utilizzo di Hospitality Solution."
+      Me.Button34.FlatStyle = Elegant.Ui.FlatStyle.Flat
+      Me.Button34.Id = "aa5d4eb2-a6ef-4b5e-a2f5-64c34f016635"
+      Me.Button34.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+      Me.Button34.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("Button34.LargeImages.Images"), System.Drawing.Image))})
+      Me.Button34.Location = New System.Drawing.Point(32, 40)
+      Me.Button34.Name = "Button34"
+      Me.Button34.Size = New System.Drawing.Size(344, 80)
+      Me.Button34.TabIndex = 1
+      Me.Button34.Text = "Guida di Hospitality Solution."
+      Me.Button34.TextAlign = System.Drawing.ContentAlignment.TopLeft
+      Me.Button34.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+      Me.Button34.WordWrap = True
       '
       'eui_Info
       '
@@ -1609,6 +2108,18 @@ Friend Class frmMain
       Me.cmdApriPercorso.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
       Me.cmdApriPercorso.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
       '
+      'eui_GestioneModuli
+      '
+      Me.eui_GestioneModuli.AutoScroll = True
+      Me.eui_GestioneModuli.Controls.Add(Me.lvwGestioneModuli)
+      Me.eui_GestioneModuli.KeyTip = "G"
+      Me.eui_GestioneModuli.Location = New System.Drawing.Point(0, 0)
+      Me.eui_GestioneModuli.Name = "eui_GestioneModuli"
+      Me.eui_GestioneModuli.Padding = New System.Windows.Forms.Padding(0, 1, 2, 1)
+      Me.eui_GestioneModuli.Size = New System.Drawing.Size(1181, 478)
+      Me.eui_GestioneModuli.TabIndex = 0
+      Me.eui_GestioneModuli.Text = "Gestione Moduli    "
+      '
       'BackstageViewSeparator1
       '
       Me.BackstageViewSeparator1.Id = "c365ef30-7323-4c13-8726-3d28dd1304d8"
@@ -1617,513 +2128,6 @@ Friend Class frmMain
       Me.BackstageViewSeparator1.Size = New System.Drawing.Size(142, 2)
       Me.BackstageViewSeparator1.TabIndex = 4
       Me.BackstageViewSeparator1.Text = "BackstageViewSeparator1"
-      '
-      'eui_Guida
-      '
-      Me.eui_Guida.Controls.Add(Me.BackstageViewPage1)
-      Me.eui_Guida.Controls.Add(Me.Button6)
-      Me.eui_Guida.Controls.Add(Me.Button5)
-      Me.eui_Guida.Controls.Add(Me.Button3)
-      Me.eui_Guida.Controls.Add(Me.Button2)
-      Me.eui_Guida.Controls.Add(Me.Button34)
-      Me.eui_Guida.KeyTip = "W"
-      Me.eui_Guida.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_Guida.LargeImages.Images"), System.Drawing.Image))})
-      Me.eui_Guida.Location = New System.Drawing.Point(0, 0)
-      Me.eui_Guida.Name = "eui_Guida"
-      Me.eui_Guida.Padding = New System.Windows.Forms.Padding(0, 1, 2, 1)
-      Me.eui_Guida.Size = New System.Drawing.Size(1165, 472)
-      Me.eui_Guida.TabIndex = 0
-      Me.eui_Guida.Text = "Guida"
-      '
-      'BackstageViewPage1
-      '
-      Me.BackstageViewPage1.Controls.Add(Me.lblGiorniProva)
-      Me.BackstageViewPage1.Controls.Add(Me.lblDemo)
-      Me.BackstageViewPage1.Controls.Add(Me.PictureBox18)
-      Me.BackstageViewPage1.Controls.Add(Me.lnkMsWeb)
-      Me.BackstageViewPage1.Controls.Add(Me.lnkLicenza)
-      Me.BackstageViewPage1.Controls.Add(Me.lblNumSerie)
-      Me.BackstageViewPage1.Controls.Add(Me.lnkSupporto)
-      Me.BackstageViewPage1.Controls.Add(Me.lblInfo)
-      Me.BackstageViewPage1.Controls.Add(Me.lnkInfoSu)
-      Me.BackstageViewPage1.Controls.Add(Me.lblVersione)
-      Me.BackstageViewPage1.Controls.Add(Me.Label24)
-      Me.BackstageViewPage1.Controls.Add(Me.PictureBox17)
-      Me.BackstageViewPage1.Controls.Add(Me.Label26)
-      Me.BackstageViewPage1.Controls.Add(Me.eui_txtDettagliProdotto)
-      Me.BackstageViewPage1.Controls.Add(Me.eui_lstProdottiAttivati)
-      Me.BackstageViewPage1.Controls.Add(Me.Label23)
-      Me.BackstageViewPage1.Controls.Add(Me.PictureBox16)
-      Me.BackstageViewPage1.Controls.Add(Me.Label22)
-      Me.BackstageViewPage1.Controls.Add(Me.PictureBox15)
-      Me.BackstageViewPage1.Controls.Add(Me.PictureBox14)
-      Me.BackstageViewPage1.Controls.Add(Me.PictureBox13)
-      Me.BackstageViewPage1.Controls.Add(Me.PictureBox12)
-      Me.BackstageViewPage1.Controls.Add(Me.PictureBox10)
-      Me.BackstageViewPage1.Controls.Add(Me.Label21)
-      Me.BackstageViewPage1.Controls.Add(Me.Label20)
-      Me.BackstageViewPage1.Controls.Add(Me.eui_cmdAggiornamenti)
-      Me.BackstageViewPage1.Controls.Add(Me.eui_cmdMobile)
-      Me.BackstageViewPage1.Controls.Add(Me.eui_cmdOpzioni)
-      Me.BackstageViewPage1.Controls.Add(Me.eui_cmdContattaci)
-      Me.BackstageViewPage1.Controls.Add(Me.eui_cmdGuida)
-      Me.BackstageViewPage1.KeyTip = "W"
-      Me.BackstageViewPage1.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("BackstageViewPage1.LargeImages.Images"), System.Drawing.Image))})
-      Me.BackstageViewPage1.Location = New System.Drawing.Point(0, 1)
-      Me.BackstageViewPage1.Name = "BackstageViewPage1"
-      Me.BackstageViewPage1.Padding = New System.Windows.Forms.Padding(0, 1, 2, 1)
-      Me.BackstageViewPage1.Size = New System.Drawing.Size(1163, 470)
-      Me.BackstageViewPage1.TabIndex = 6
-      Me.BackstageViewPage1.Text = "Guida"
-      '
-      'lblGiorniProva
-      '
-      Me.lblGiorniProva.AutoSize = True
-      Me.lblGiorniProva.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-      Me.lblGiorniProva.ForeColor = System.Drawing.Color.Gray
-      Me.lblGiorniProva.Location = New System.Drawing.Point(741, 56)
-      Me.lblGiorniProva.Name = "lblGiorniProva"
-      Me.lblGiorniProva.Size = New System.Drawing.Size(117, 13)
-      Me.lblGiorniProva.TabIndex = 46
-      Me.lblGiorniProva.Text = "GIORNI DI PROVA: 30"
-      '
-      'lblDemo
-      '
-      Me.lblDemo.AutoSize = True
-      Me.lblDemo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
-      Me.lblDemo.ForeColor = System.Drawing.Color.DarkOrange
-      Me.lblDemo.Location = New System.Drawing.Point(733, 32)
-      Me.lblDemo.Name = "lblDemo"
-      Me.lblDemo.Size = New System.Drawing.Size(181, 16)
-      Me.lblDemo.TabIndex = 45
-      Me.lblDemo.Text = "VERSIONE DIMOSTRATIVA"
-      '
-      'PictureBox18
-      '
-      Me.PictureBox18.Image = CType(resources.GetObject("PictureBox18.Image"), System.Drawing.Image)
-      Me.PictureBox18.Location = New System.Drawing.Point(48, 240)
-      Me.PictureBox18.Name = "PictureBox18"
-      Me.PictureBox18.Size = New System.Drawing.Size(32, 32)
-      Me.PictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-      Me.PictureBox18.TabIndex = 44
-      Me.PictureBox18.TabStop = False
-      '
-      'lnkMsWeb
-      '
-      Me.lnkMsWeb.ActiveLinkColor = System.Drawing.Color.DarkOrange
-      Me.lnkMsWeb.AutoSize = True
-      Me.lnkMsWeb.LinkColor = System.Drawing.Color.Gray
-      Me.lnkMsWeb.Location = New System.Drawing.Point(112, 248)
-      Me.lnkMsWeb.Name = "lnkMsWeb"
-      Me.lnkMsWeb.Size = New System.Drawing.Size(215, 13)
-      Me.lnkMsWeb.TabIndex = 43
-      Me.lnkMsWeb.TabStop = True
-      Me.lnkMsWeb.Text = "Visita il sito Internet della Montana Software."
-      '
-      'lnkLicenza
-      '
-      Me.lnkLicenza.ActiveLinkColor = System.Drawing.Color.DarkOrange
-      Me.lnkLicenza.AutoSize = True
-      Me.lnkLicenza.LinkColor = System.Drawing.Color.Gray
-      Me.lnkLicenza.Location = New System.Drawing.Point(416, 624)
-      Me.lnkLicenza.Name = "lnkLicenza"
-      Me.lnkLicenza.Size = New System.Drawing.Size(238, 13)
-      Me.lnkLicenza.TabIndex = 9
-      Me.lnkLicenza.TabStop = True
-      Me.lnkLicenza.Text = "Condizioni di licenza software Montana Software."
-      '
-      'lblNumSerie
-      '
-      Me.lblNumSerie.AutoSize = True
-      Me.lblNumSerie.Location = New System.Drawing.Point(416, 600)
-      Me.lblNumSerie.Name = "lblNumSerie"
-      Me.lblNumSerie.Size = New System.Drawing.Size(63, 13)
-      Me.lblNumSerie.TabIndex = 41
-      Me.lblNumSerie.Text = "ID prodotto:"
-      '
-      'lnkSupporto
-      '
-      Me.lnkSupporto.ActiveLinkColor = System.Drawing.Color.DarkOrange
-      Me.lnkSupporto.AutoSize = True
-      Me.lnkSupporto.LinkColor = System.Drawing.Color.Gray
-      Me.lnkSupporto.Location = New System.Drawing.Point(416, 576)
-      Me.lnkSupporto.Name = "lnkSupporto"
-      Me.lnkSupporto.Size = New System.Drawing.Size(225, 13)
-      Me.lnkSupporto.TabIndex = 8
-      Me.lnkSupporto.TabStop = True
-      Me.lnkSupporto.Text = "Servizio Supporto Tecnico Montana Software."
-      '
-      'lblInfo
-      '
-      Me.lblInfo.AutoSize = True
-      Me.lblInfo.Location = New System.Drawing.Point(416, 552)
-      Me.lblInfo.Name = "lblInfo"
-      Me.lblInfo.Size = New System.Drawing.Size(28, 13)
-      Me.lblInfo.TabIndex = 39
-      Me.lblInfo.Text = "Info:"
-      '
-      'lnkInfoSu
-      '
-      Me.lnkInfoSu.ActiveLinkColor = System.Drawing.Color.DarkOrange
-      Me.lnkInfoSu.AutoSize = True
-      Me.lnkInfoSu.LinkColor = System.Drawing.Color.Gray
-      Me.lnkInfoSu.Location = New System.Drawing.Point(416, 528)
-      Me.lnkInfoSu.Name = "lnkInfoSu"
-      Me.lnkInfoSu.Size = New System.Drawing.Size(227, 13)
-      Me.lnkInfoSu.TabIndex = 7
-      Me.lnkInfoSu.TabStop = True
-      Me.lnkInfoSu.Text = "Informazioni aggiuntive su versione e copyrigth"
-      '
-      'lblVersione
-      '
-      Me.lblVersione.AutoSize = True
-      Me.lblVersione.Location = New System.Drawing.Point(416, 504)
-      Me.lblVersione.Name = "lblVersione"
-      Me.lblVersione.Size = New System.Drawing.Size(51, 13)
-      Me.lblVersione.TabIndex = 37
-      Me.lblVersione.Text = "Versione:"
-      '
-      'Label24
-      '
-      Me.Label24.AutoSize = True
-      Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
-      Me.Label24.ForeColor = System.Drawing.Color.DimGray
-      Me.Label24.Location = New System.Drawing.Point(416, 464)
-      Me.Label24.Name = "Label24"
-      Me.Label24.Size = New System.Drawing.Size(249, 16)
-      Me.Label24.TabIndex = 36
-      Me.Label24.Text = "Informazioni su Hospitality Solution"
-      '
-      'PictureBox17
-      '
-      Me.PictureBox17.BackColor = System.Drawing.Color.Transparent
-      Me.PictureBox17.Image = CType(resources.GetObject("PictureBox17.Image"), System.Drawing.Image)
-      Me.PictureBox17.Location = New System.Drawing.Point(416, 480)
-      Me.PictureBox17.Name = "PictureBox17"
-      Me.PictureBox17.Size = New System.Drawing.Size(500, 8)
-      Me.PictureBox17.TabIndex = 35
-      Me.PictureBox17.TabStop = False
-      '
-      'Label26
-      '
-      Me.Label26.AutoSize = True
-      Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
-      Me.Label26.ForeColor = System.Drawing.Color.DimGray
-      Me.Label26.Location = New System.Drawing.Point(416, 339)
-      Me.Label26.Name = "Label26"
-      Me.Label26.Size = New System.Drawing.Size(124, 16)
-      Me.Label26.TabIndex = 34
-      Me.Label26.Text = "Dettagli prodotto"
-      '
-      'eui_txtDettagliProdotto
-      '
-      Me.eui_txtDettagliProdotto.Id = "fbf90a56-48ff-4512-ad51-95b021fe30df"
-      Me.eui_txtDettagliProdotto.KeyTip = "D"
-      Me.eui_txtDettagliProdotto.Location = New System.Drawing.Point(416, 360)
-      Me.eui_txtDettagliProdotto.Multiline = True
-      Me.eui_txtDettagliProdotto.Name = "eui_txtDettagliProdotto"
-      Me.eui_txtDettagliProdotto.ReadOnly = True
-      Me.eui_txtDettagliProdotto.ScreenTip.Caption = "Dettagli prodotto"
-      Me.eui_txtDettagliProdotto.ScreenTip.Text = "Informazioni sul prodotto installato."
-      Me.eui_txtDettagliProdotto.Size = New System.Drawing.Size(500, 80)
-      Me.eui_txtDettagliProdotto.TabIndex = 6
-      Me.eui_txtDettagliProdotto.TextEditorWidth = 506
-      '
-      'eui_lstProdottiAttivati
-      '
-      Me.eui_lstProdottiAttivati.AutoScroll = True
-      Me.eui_lstProdottiAttivati.Id = "12df6a0f-8828-44b9-948d-aff61ccffa9a"
-      Me.eui_lstProdottiAttivati.KeyTip = "P"
-      Me.eui_lstProdottiAttivati.Location = New System.Drawing.Point(416, 152)
-      Me.eui_lstProdottiAttivati.Name = "eui_lstProdottiAttivati"
-      Me.eui_lstProdottiAttivati.ScreenTip.Caption = "Prodotti attivati"
-      Me.eui_lstProdottiAttivati.ScreenTip.Text = "Elenco dei prodotti attivi installati nel software."
-      Me.eui_lstProdottiAttivati.Size = New System.Drawing.Size(500, 168)
-      Me.eui_lstProdottiAttivati.TabIndex = 5
-      Me.eui_lstProdottiAttivati.Text = "ListBox1"
-      '
-      'Label23
-      '
-      Me.Label23.AutoSize = True
-      Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
-      Me.Label23.ForeColor = System.Drawing.Color.DimGray
-      Me.Label23.Location = New System.Drawing.Point(416, 88)
-      Me.Label23.Name = "Label23"
-      Me.Label23.Size = New System.Drawing.Size(193, 16)
-      Me.Label23.TabIndex = 29
-      Me.Label23.Text = "Hospitality Solution Suite 3"
-      '
-      'PictureBox16
-      '
-      Me.PictureBox16.Image = CType(resources.GetObject("PictureBox16.Image"), System.Drawing.Image)
-      Me.PictureBox16.Location = New System.Drawing.Point(416, 104)
-      Me.PictureBox16.Name = "PictureBox16"
-      Me.PictureBox16.Size = New System.Drawing.Size(500, 8)
-      Me.PictureBox16.TabIndex = 28
-      Me.PictureBox16.TabStop = False
-      '
-      'Label22
-      '
-      Me.Label22.AutoSize = True
-      Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
-      Me.Label22.ForeColor = System.Drawing.Color.DimGray
-      Me.Label22.Location = New System.Drawing.Point(416, 132)
-      Me.Label22.Name = "Label22"
-      Me.Label22.Size = New System.Drawing.Size(112, 16)
-      Me.Label22.TabIndex = 27
-      Me.Label22.Text = "Prodotti attivati"
-      '
-      'PictureBox15
-      '
-      Me.PictureBox15.Image = CType(resources.GetObject("PictureBox15.Image"), System.Drawing.Image)
-      Me.PictureBox15.Location = New System.Drawing.Point(462, 30)
-      Me.PictureBox15.Name = "PictureBox15"
-      Me.PictureBox15.Size = New System.Drawing.Size(260, 35)
-      Me.PictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-      Me.PictureBox15.TabIndex = 26
-      Me.PictureBox15.TabStop = False
-      '
-      'PictureBox14
-      '
-      Me.PictureBox14.Image = CType(resources.GetObject("PictureBox14.Image"), System.Drawing.Image)
-      Me.PictureBox14.Location = New System.Drawing.Point(416, 24)
-      Me.PictureBox14.Name = "PictureBox14"
-      Me.PictureBox14.Size = New System.Drawing.Size(40, 40)
-      Me.PictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-      Me.PictureBox14.TabIndex = 25
-      Me.PictureBox14.TabStop = False
-      '
-      'PictureBox13
-      '
-      Me.PictureBox13.BackColor = System.Drawing.Color.Transparent
-      Me.PictureBox13.Image = CType(resources.GetObject("PictureBox13.Image"), System.Drawing.Image)
-      Me.PictureBox13.Location = New System.Drawing.Point(392, 0)
-      Me.PictureBox13.Name = "PictureBox13"
-      Me.PictureBox13.Size = New System.Drawing.Size(8, 823)
-      Me.PictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-      Me.PictureBox13.TabIndex = 24
-      Me.PictureBox13.TabStop = False
-      '
-      'PictureBox12
-      '
-      Me.PictureBox12.Image = CType(resources.GetObject("PictureBox12.Image"), System.Drawing.Image)
-      Me.PictureBox12.Location = New System.Drawing.Point(24, 304)
-      Me.PictureBox12.Name = "PictureBox12"
-      Me.PictureBox12.Size = New System.Drawing.Size(352, 8)
-      Me.PictureBox12.TabIndex = 23
-      Me.PictureBox12.TabStop = False
-      '
-      'PictureBox10
-      '
-      Me.PictureBox10.Image = CType(resources.GetObject("PictureBox10.Image"), System.Drawing.Image)
-      Me.PictureBox10.Location = New System.Drawing.Point(24, 40)
-      Me.PictureBox10.Name = "PictureBox10"
-      Me.PictureBox10.Size = New System.Drawing.Size(352, 8)
-      Me.PictureBox10.TabIndex = 22
-      Me.PictureBox10.TabStop = False
-      '
-      'Label21
-      '
-      Me.Label21.AutoSize = True
-      Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
-      Me.Label21.ForeColor = System.Drawing.Color.DimGray
-      Me.Label21.Location = New System.Drawing.Point(24, 288)
-      Me.Label21.Name = "Label21"
-      Me.Label21.Size = New System.Drawing.Size(313, 16)
-      Me.Label21.TabIndex = 7
-      Me.Label21.Text = "Strumenti per l'utilizzo di Hospitality Solution"
-      '
-      'Label20
-      '
-      Me.Label20.AutoSize = True
-      Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
-      Me.Label20.ForeColor = System.Drawing.Color.DimGray
-      Me.Label20.Location = New System.Drawing.Point(24, 24)
-      Me.Label20.Name = "Label20"
-      Me.Label20.Size = New System.Drawing.Size(71, 16)
-      Me.Label20.TabIndex = 6
-      Me.Label20.Text = "Supporto"
-      '
-      'eui_cmdAggiornamenti
-      '
-      Me.eui_cmdAggiornamenti.BackColor = System.Drawing.Color.White
-      Me.eui_cmdAggiornamenti.DescriptionText = "E' possibile recuperare gli aggiornamenti più recenti di Hospitality Solution."
-      Me.eui_cmdAggiornamenti.Enabled = False
-      Me.eui_cmdAggiornamenti.FlatStyle = Elegant.Ui.FlatStyle.Flat
-      Me.eui_cmdAggiornamenti.Id = "4a13c6bc-7ce5-4d8b-86a4-556a801346e5"
-      Me.eui_cmdAggiornamenti.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-      Me.eui_cmdAggiornamenti.KeyTip = "A"
-      Me.eui_cmdAggiornamenti.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_cmdAggiornamenti.LargeImages.Images"), System.Drawing.Image))})
-      Me.eui_cmdAggiornamenti.Location = New System.Drawing.Point(24, 504)
-      Me.eui_cmdAggiornamenti.Name = "eui_cmdAggiornamenti"
-      Me.eui_cmdAggiornamenti.Size = New System.Drawing.Size(344, 80)
-      Me.eui_cmdAggiornamenti.TabIndex = 4
-      Me.eui_cmdAggiornamenti.Text = "Controlla aggiornamenti"
-      Me.eui_cmdAggiornamenti.TextAlign = System.Drawing.ContentAlignment.TopLeft
-      Me.eui_cmdAggiornamenti.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-      Me.eui_cmdAggiornamenti.WordWrap = True
-      '
-      'eui_cmdMobile
-      '
-      Me.eui_cmdMobile.BackColor = System.Drawing.Color.White
-      Me.eui_cmdMobile.DescriptionText = "Installa Hospitality Solution in un dispositivo USB mobile per l'utilizzo su altr" &
-    "i computer."
-      Me.eui_cmdMobile.Enabled = False
-      Me.eui_cmdMobile.FlatStyle = Elegant.Ui.FlatStyle.Flat
-      Me.eui_cmdMobile.Id = "818d90e4-7ef8-42ef-b3cc-a44414c7c574"
-      Me.eui_cmdMobile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-      Me.eui_cmdMobile.KeyTip = "H"
-      Me.eui_cmdMobile.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_cmdMobile.LargeImages.Images"), System.Drawing.Image))})
-      Me.eui_cmdMobile.Location = New System.Drawing.Point(24, 416)
-      Me.eui_cmdMobile.Name = "eui_cmdMobile"
-      Me.eui_cmdMobile.Size = New System.Drawing.Size(344, 80)
-      Me.eui_cmdMobile.TabIndex = 3
-      Me.eui_cmdMobile.Text = "Hospitality Solution Mobile"
-      Me.eui_cmdMobile.TextAlign = System.Drawing.ContentAlignment.TopLeft
-      Me.eui_cmdMobile.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-      Me.eui_cmdMobile.WordWrap = True
-      '
-      'eui_cmdOpzioni
-      '
-      Me.eui_cmdOpzioni.BackColor = System.Drawing.Color.White
-      Me.eui_cmdOpzioni.DescriptionText = "Consente di effettuare tutte le impostazioni del programma e di personalizzarne l" &
-    "'utilizzo."
-      Me.eui_cmdOpzioni.FlatStyle = Elegant.Ui.FlatStyle.Flat
-      Me.eui_cmdOpzioni.Id = "217bb603-74f8-45f6-9c7c-a2686d2f73f6"
-      Me.eui_cmdOpzioni.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-      Me.eui_cmdOpzioni.KeyTip = "OP"
-      Me.eui_cmdOpzioni.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_cmdOpzioni.LargeImages.Images"), System.Drawing.Image))})
-      Me.eui_cmdOpzioni.Location = New System.Drawing.Point(24, 328)
-      Me.eui_cmdOpzioni.Name = "eui_cmdOpzioni"
-      Me.eui_cmdOpzioni.Size = New System.Drawing.Size(344, 80)
-      Me.eui_cmdOpzioni.TabIndex = 2
-      Me.eui_cmdOpzioni.Text = "Opzioni"
-      Me.eui_cmdOpzioni.TextAlign = System.Drawing.ContentAlignment.TopLeft
-      Me.eui_cmdOpzioni.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-      Me.eui_cmdOpzioni.WordWrap = True
-      '
-      'eui_cmdContattaci
-      '
-      Me.eui_cmdContattaci.BackColor = System.Drawing.Color.White
-      Me.eui_cmdContattaci.DescriptionText = "Richiedi informazioni sull'utilizzo di Hospitality Solution."
-      Me.eui_cmdContattaci.FlatStyle = Elegant.Ui.FlatStyle.Flat
-      Me.eui_cmdContattaci.Id = "2eebbb8d-762c-43dc-af16-1a668c0ce0f8"
-      Me.eui_cmdContattaci.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-      Me.eui_cmdContattaci.KeyTip = "C"
-      Me.eui_cmdContattaci.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_cmdContattaci.LargeImages.Images"), System.Drawing.Image))})
-      Me.eui_cmdContattaci.Location = New System.Drawing.Point(24, 152)
-      Me.eui_cmdContattaci.Name = "eui_cmdContattaci"
-      Me.eui_cmdContattaci.Size = New System.Drawing.Size(344, 80)
-      Me.eui_cmdContattaci.TabIndex = 1
-      Me.eui_cmdContattaci.Text = "Contattaci"
-      Me.eui_cmdContattaci.TextAlign = System.Drawing.ContentAlignment.TopLeft
-      Me.eui_cmdContattaci.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-      Me.eui_cmdContattaci.WordWrap = True
-      '
-      'eui_cmdGuida
-      '
-      Me.eui_cmdGuida.BackColor = System.Drawing.Color.White
-      Me.eui_cmdGuida.DescriptionText = "Informazioni sull'utilizzo di Hospitality Solution."
-      Me.eui_cmdGuida.FlatStyle = Elegant.Ui.FlatStyle.Flat
-      Me.eui_cmdGuida.Id = "3c3f465e-94df-4801-8852-bab4d26a3ca0"
-      Me.eui_cmdGuida.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-      Me.eui_cmdGuida.KeyTip = "X"
-      Me.eui_cmdGuida.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_cmdGuida.LargeImages.Images"), System.Drawing.Image))})
-      Me.eui_cmdGuida.Location = New System.Drawing.Point(24, 64)
-      Me.eui_cmdGuida.Name = "eui_cmdGuida"
-      Me.eui_cmdGuida.Size = New System.Drawing.Size(344, 80)
-      Me.eui_cmdGuida.TabIndex = 0
-      Me.eui_cmdGuida.Text = "Guida di Hospitality Solution."
-      Me.eui_cmdGuida.TextAlign = System.Drawing.ContentAlignment.TopLeft
-      Me.eui_cmdGuida.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-      Me.eui_cmdGuida.WordWrap = True
-      '
-      'Button6
-      '
-      Me.Button6.BackColor = System.Drawing.Color.White
-      Me.Button6.DescriptionText = "E' possibile recuperare gli aggiornamenti più recenti di Hospitality Solution."
-      Me.Button6.FlatStyle = Elegant.Ui.FlatStyle.Flat
-      Me.Button6.Id = "3164e3b2-02c9-4501-b907-1c2608384c8e"
-      Me.Button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-      Me.Button6.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("Button6.LargeImages.Images"), System.Drawing.Image))})
-      Me.Button6.Location = New System.Drawing.Point(32, 448)
-      Me.Button6.Name = "Button6"
-      Me.Button6.Size = New System.Drawing.Size(344, 80)
-      Me.Button6.TabIndex = 5
-      Me.Button6.Text = "Controlla aggiornamenti"
-      Me.Button6.TextAlign = System.Drawing.ContentAlignment.TopLeft
-      Me.Button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-      Me.Button6.WordWrap = True
-      '
-      'Button5
-      '
-      Me.Button5.BackColor = System.Drawing.Color.White
-      Me.Button5.DescriptionText = "Installa Hospitality Solution in un dispositivo USB mobile per l'utilizzo su altr" &
-    "i computer"
-      Me.Button5.FlatStyle = Elegant.Ui.FlatStyle.Flat
-      Me.Button5.Id = "9bdf162d-28cc-4184-93e8-8e1c87241eae"
-      Me.Button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-      Me.Button5.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("Button5.LargeImages.Images"), System.Drawing.Image))})
-      Me.Button5.Location = New System.Drawing.Point(32, 352)
-      Me.Button5.Name = "Button5"
-      Me.Button5.Size = New System.Drawing.Size(344, 80)
-      Me.Button5.TabIndex = 4
-      Me.Button5.Text = "Hospitality Solution Mobile"
-      Me.Button5.TextAlign = System.Drawing.ContentAlignment.TopLeft
-      Me.Button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-      Me.Button5.WordWrap = True
-      '
-      'Button3
-      '
-      Me.Button3.BackColor = System.Drawing.Color.White
-      Me.Button3.DescriptionText = "Consente di effettuare tutte le impostazioni del programma e di personalizzarne l" &
-    "'utilizzo."
-      Me.Button3.FlatStyle = Elegant.Ui.FlatStyle.Flat
-      Me.Button3.Id = "09809a12-e86a-48dd-8bba-10fedb3f8828"
-      Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-      Me.Button3.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("Button3.LargeImages.Images"), System.Drawing.Image))})
-      Me.Button3.Location = New System.Drawing.Point(32, 256)
-      Me.Button3.Name = "Button3"
-      Me.Button3.Size = New System.Drawing.Size(344, 80)
-      Me.Button3.TabIndex = 3
-      Me.Button3.Text = "Opzioni"
-      Me.Button3.TextAlign = System.Drawing.ContentAlignment.TopLeft
-      Me.Button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-      Me.Button3.WordWrap = True
-      '
-      'Button2
-      '
-      Me.Button2.BackColor = System.Drawing.Color.White
-      Me.Button2.DescriptionText = "Richiedi informazioni sull'utilizzo di Hospitality Solution."
-      Me.Button2.FlatStyle = Elegant.Ui.FlatStyle.Flat
-      Me.Button2.Id = "fabae588-5598-4230-be39-b8aa81452c38"
-      Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-      Me.Button2.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("Button2.LargeImages.Images"), System.Drawing.Image))})
-      Me.Button2.Location = New System.Drawing.Point(32, 136)
-      Me.Button2.Name = "Button2"
-      Me.Button2.Size = New System.Drawing.Size(344, 80)
-      Me.Button2.TabIndex = 2
-      Me.Button2.Text = "Contattaci"
-      Me.Button2.TextAlign = System.Drawing.ContentAlignment.TopLeft
-      Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-      Me.Button2.WordWrap = True
-      '
-      'Button34
-      '
-      Me.Button34.BackColor = System.Drawing.Color.White
-      Me.Button34.DescriptionText = "Informazioni sull'utilizzo di Hospitality Solution."
-      Me.Button34.FlatStyle = Elegant.Ui.FlatStyle.Flat
-      Me.Button34.Id = "aa5d4eb2-a6ef-4b5e-a2f5-64c34f016635"
-      Me.Button34.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-      Me.Button34.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("Button34.LargeImages.Images"), System.Drawing.Image))})
-      Me.Button34.Location = New System.Drawing.Point(32, 40)
-      Me.Button34.Name = "Button34"
-      Me.Button34.Size = New System.Drawing.Size(344, 80)
-      Me.Button34.TabIndex = 1
-      Me.Button34.Text = "Guida di Hospitality Solution."
-      Me.Button34.TextAlign = System.Drawing.ContentAlignment.TopLeft
-      Me.Button34.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-      Me.Button34.WordWrap = True
       '
       'eui_Opzioni
       '
@@ -2172,7 +2176,7 @@ Friend Class frmMain
       Me.eui_StrumentiModifica.KeyTip = Nothing
       Me.eui_StrumentiModifica.Location = New System.Drawing.Point(0, 0)
       Me.eui_StrumentiModifica.Name = "eui_StrumentiModifica"
-      Me.eui_StrumentiModifica.Size = New System.Drawing.Size(1308, 99)
+      Me.eui_StrumentiModifica.Size = New System.Drawing.Size(1332, 99)
       Me.eui_StrumentiModifica.TabIndex = 0
       Me.eui_StrumentiModifica.Text = "Modifica"
       '
@@ -2200,11 +2204,11 @@ Friend Class frmMain
       Me.eui_Strumenti_Nuovo.Id = "ec688adb-6632-4b6a-8e9f-93d7d0bbde7c"
       Me.eui_Strumenti_Nuovo.KeyTip = "N"
       Me.eui_Strumenti_Nuovo.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_Strumenti_Nuovo.LargeImages.Images"), System.Drawing.Image))})
-      Me.eui_Strumenti_Nuovo.Location = New System.Drawing.Point(4, 2)
+      Me.eui_Strumenti_Nuovo.Location = New System.Drawing.Point(128, 2)
       Me.eui_Strumenti_Nuovo.Name = "eui_Strumenti_Nuovo"
       Me.eui_Strumenti_Nuovo.ScreenTip.Caption = "Nuovo"
       Me.eui_Strumenti_Nuovo.ScreenTip.Text = "Apre una finestra per l'inserimento di nuovi dati."
-      Me.eui_Strumenti_Nuovo.Size = New System.Drawing.Size(42, 72)
+      Me.eui_Strumenti_Nuovo.Size = New System.Drawing.Size(41, 0)
       Me.eui_Strumenti_Nuovo.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_Strumenti_Nuovo.SmallImages.Images"), System.Drawing.Image))})
       Me.eui_Strumenti_Nuovo.TabIndex = 0
       Me.eui_Strumenti_Nuovo.Text = "Nuovo"
@@ -2214,11 +2218,11 @@ Friend Class frmMain
       Me.eui_Strumenti_Modifica.Id = "0f22e12b-43eb-415a-b344-bcb8d9dfaece"
       Me.eui_Strumenti_Modifica.KeyTip = "M"
       Me.eui_Strumenti_Modifica.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_Strumenti_Modifica.LargeImages.Images"), System.Drawing.Image))})
-      Me.eui_Strumenti_Modifica.Location = New System.Drawing.Point(48, 2)
+      Me.eui_Strumenti_Modifica.Location = New System.Drawing.Point(128, 2)
       Me.eui_Strumenti_Modifica.Name = "eui_Strumenti_Modifica"
       Me.eui_Strumenti_Modifica.ScreenTip.Caption = "Modifica"
       Me.eui_Strumenti_Modifica.ScreenTip.Text = "Apre una finestra per la modifica dei dati selezionati."
-      Me.eui_Strumenti_Modifica.Size = New System.Drawing.Size(51, 72)
+      Me.eui_Strumenti_Modifica.Size = New System.Drawing.Size(49, 0)
       Me.eui_Strumenti_Modifica.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_Strumenti_Modifica.SmallImages.Images"), System.Drawing.Image))})
       Me.eui_Strumenti_Modifica.TabIndex = 3
       Me.eui_Strumenti_Modifica.Text = "Modifica"
@@ -2228,11 +2232,11 @@ Friend Class frmMain
       Me.eui_Strumenti_Duplica.Id = "69f08b0a-99c0-49e0-8b87-545ae1ea299a"
       Me.eui_Strumenti_Duplica.KeyTip = "D"
       Me.eui_Strumenti_Duplica.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_Strumenti_Duplica.LargeImages.Images"), System.Drawing.Image))})
-      Me.eui_Strumenti_Duplica.Location = New System.Drawing.Point(101, 2)
+      Me.eui_Strumenti_Duplica.Location = New System.Drawing.Point(128, 2)
       Me.eui_Strumenti_Duplica.Name = "eui_Strumenti_Duplica"
       Me.eui_Strumenti_Duplica.ScreenTip.Caption = "Duplica"
       Me.eui_Strumenti_Duplica.ScreenTip.Text = "Duplica i dati selezionati."
-      Me.eui_Strumenti_Duplica.Size = New System.Drawing.Size(44, 72)
+      Me.eui_Strumenti_Duplica.Size = New System.Drawing.Size(45, 0)
       Me.eui_Strumenti_Duplica.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_Strumenti_Duplica.SmallImages.Images"), System.Drawing.Image))})
       Me.eui_Strumenti_Duplica.TabIndex = 5
       Me.eui_Strumenti_Duplica.Text = "Duplica"
@@ -2242,11 +2246,11 @@ Friend Class frmMain
       Me.eui_Strumenti_Elimina.Id = "5af7a3f4-dfc0-4ed3-8d5b-aa1ed1b0f8bf"
       Me.eui_Strumenti_Elimina.KeyTip = "E"
       Me.eui_Strumenti_Elimina.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_Strumenti_Elimina.LargeImages.Images"), System.Drawing.Image))})
-      Me.eui_Strumenti_Elimina.Location = New System.Drawing.Point(147, 2)
+      Me.eui_Strumenti_Elimina.Location = New System.Drawing.Point(128, 2)
       Me.eui_Strumenti_Elimina.Name = "eui_Strumenti_Elimina"
       Me.eui_Strumenti_Elimina.ScreenTip.Caption = "Elimina"
       Me.eui_Strumenti_Elimina.ScreenTip.Text = "Elimina i dati selezionati."
-      Me.eui_Strumenti_Elimina.Size = New System.Drawing.Size(43, 72)
+      Me.eui_Strumenti_Elimina.Size = New System.Drawing.Size(42, 0)
       Me.eui_Strumenti_Elimina.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_Strumenti_Elimina.SmallImages.Images"), System.Drawing.Image))})
       Me.eui_Strumenti_Elimina.TabIndex = 1
       Me.eui_Strumenti_Elimina.Text = "Elimina"
@@ -2256,11 +2260,11 @@ Friend Class frmMain
       Me.eui_Strumenti_Annulla.Id = "a2230725-5509-4355-846f-0126ee6faaf5"
       Me.eui_Strumenti_Annulla.KeyTip = "E"
       Me.eui_Strumenti_Annulla.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_Strumenti_Annulla.LargeImages.Images"), System.Drawing.Image))})
-      Me.eui_Strumenti_Annulla.Location = New System.Drawing.Point(192, 2)
+      Me.eui_Strumenti_Annulla.Location = New System.Drawing.Point(128, 2)
       Me.eui_Strumenti_Annulla.Name = "eui_Strumenti_Annulla"
       Me.eui_Strumenti_Annulla.ScreenTip.Caption = "Elimina"
       Me.eui_Strumenti_Annulla.ScreenTip.Text = "Elimina i dati selezionati."
-      Me.eui_Strumenti_Annulla.Size = New System.Drawing.Size(45, 72)
+      Me.eui_Strumenti_Annulla.Size = New System.Drawing.Size(44, 0)
       Me.eui_Strumenti_Annulla.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_Strumenti_Annulla.SmallImages.Images"), System.Drawing.Image))})
       Me.eui_Strumenti_Annulla.TabIndex = 7
       Me.eui_Strumenti_Annulla.Text = "Annulla"
@@ -2268,7 +2272,7 @@ Friend Class frmMain
       'Separator17
       '
       Me.Separator17.Id = "b023b9e3-3057-4879-995b-39dc62dfff2f"
-      Me.Separator17.Location = New System.Drawing.Point(240, 6)
+      Me.Separator17.Location = New System.Drawing.Point(129, 6)
       Me.Separator17.Name = "Separator17"
       Me.Separator17.Size = New System.Drawing.Size(3, 61)
       Me.Separator17.TabIndex = 2
@@ -2279,11 +2283,11 @@ Friend Class frmMain
       Me.eui_Strumenti_Aggiorna.Id = "56f5a6fb-2aab-4640-9e45-4aee9e32019b"
       Me.eui_Strumenti_Aggiorna.KeyTip = "A"
       Me.eui_Strumenti_Aggiorna.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_Strumenti_Aggiorna.LargeImages.Images"), System.Drawing.Image))})
-      Me.eui_Strumenti_Aggiorna.Location = New System.Drawing.Point(246, 2)
+      Me.eui_Strumenti_Aggiorna.Location = New System.Drawing.Point(128, 74)
       Me.eui_Strumenti_Aggiorna.Name = "eui_Strumenti_Aggiorna"
       Me.eui_Strumenti_Aggiorna.ScreenTip.Caption = "Aggiorna"
       Me.eui_Strumenti_Aggiorna.ScreenTip.Text = "Esegue un aggiornamento sui dati."
-      Me.eui_Strumenti_Aggiorna.Size = New System.Drawing.Size(53, 72)
+      Me.eui_Strumenti_Aggiorna.Size = New System.Drawing.Size(51, 0)
       Me.eui_Strumenti_Aggiorna.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_Strumenti_Aggiorna.SmallImages.Images"), System.Drawing.Image))})
       Me.eui_Strumenti_Aggiorna.TabIndex = 4
       Me.eui_Strumenti_Aggiorna.Text = "Aggiorna"
@@ -2291,7 +2295,7 @@ Friend Class frmMain
       'Separator16
       '
       Me.Separator16.Id = "2b0390c5-fe43-4f49-8e74-f0229a6468cc"
-      Me.Separator16.Location = New System.Drawing.Point(302, 6)
+      Me.Separator16.Location = New System.Drawing.Point(182, 6)
       Me.Separator16.Name = "Separator16"
       Me.Separator16.Size = New System.Drawing.Size(3, 61)
       Me.Separator16.TabIndex = 2
@@ -2302,11 +2306,11 @@ Friend Class frmMain
       Me.eui_Strumenti_Esporta.Id = "e4d7d959-37c7-407a-a643-6b10c64c938d"
       Me.eui_Strumenti_Esporta.KeyTip = "S"
       Me.eui_Strumenti_Esporta.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_Strumenti_Esporta.LargeImages.Images"), System.Drawing.Image))})
-      Me.eui_Strumenti_Esporta.Location = New System.Drawing.Point(308, 2)
+      Me.eui_Strumenti_Esporta.Location = New System.Drawing.Point(181, 74)
       Me.eui_Strumenti_Esporta.Name = "eui_Strumenti_Esporta"
       Me.eui_Strumenti_Esporta.ScreenTip.Caption = "Esporta"
       Me.eui_Strumenti_Esporta.ScreenTip.Text = "Esporta i dati in diversi formati."
-      Me.eui_Strumenti_Esporta.Size = New System.Drawing.Size(43, 72)
+      Me.eui_Strumenti_Esporta.Size = New System.Drawing.Size(45, 0)
       Me.eui_Strumenti_Esporta.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_Strumenti_Esporta.SmallImages.Images"), System.Drawing.Image))})
       Me.eui_Strumenti_Esporta.TabIndex = 6
       Me.eui_Strumenti_Esporta.Text = "Esporta"
@@ -2328,11 +2332,11 @@ Friend Class frmMain
       Me.eui_Strumenti_Stampa_Anteprima.Id = "3534b19c-ac6e-4fc8-b46f-9fefc2db756e"
       Me.eui_Strumenti_Stampa_Anteprima.KeyTip = "P"
       Me.eui_Strumenti_Stampa_Anteprima.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_Strumenti_Stampa_Anteprima.LargeImages.Images"), System.Drawing.Image))})
-      Me.eui_Strumenti_Stampa_Anteprima.Location = New System.Drawing.Point(4, 2)
+      Me.eui_Strumenti_Stampa_Anteprima.Location = New System.Drawing.Point(29, 2)
       Me.eui_Strumenti_Stampa_Anteprima.Name = "eui_Strumenti_Stampa_Anteprima"
       Me.eui_Strumenti_Stampa_Anteprima.ScreenTip.Caption = "Anteprima di Stampa"
       Me.eui_Strumenti_Stampa_Anteprima.ScreenTip.Text = "Visualizza l'anteprima di stampa per l'elenco dati."
-      Me.eui_Strumenti_Stampa_Anteprima.Size = New System.Drawing.Size(60, 72)
+      Me.eui_Strumenti_Stampa_Anteprima.Size = New System.Drawing.Size(56, 0)
       Me.eui_Strumenti_Stampa_Anteprima.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_Strumenti_Stampa_Anteprima.SmallImages.Images"), System.Drawing.Image))})
       Me.eui_Strumenti_Stampa_Anteprima.TabIndex = 0
       Me.eui_Strumenti_Stampa_Anteprima.Text = "Anteprima"
@@ -2342,11 +2346,11 @@ Friend Class frmMain
       Me.eui_Strumenti_Stampa_Elenco.Id = "885fed30-0915-40ca-9d08-e218bc9de2fc"
       Me.eui_Strumenti_Stampa_Elenco.KeyTip = "L"
       Me.eui_Strumenti_Stampa_Elenco.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_Strumenti_Stampa_Elenco.LargeImages.Images"), System.Drawing.Image))})
-      Me.eui_Strumenti_Stampa_Elenco.Location = New System.Drawing.Point(66, 2)
+      Me.eui_Strumenti_Stampa_Elenco.Location = New System.Drawing.Point(29, 2)
       Me.eui_Strumenti_Stampa_Elenco.Name = "eui_Strumenti_Stampa_Elenco"
       Me.eui_Strumenti_Stampa_Elenco.ScreenTip.Caption = "Stampa Elenco"
       Me.eui_Strumenti_Stampa_Elenco.ScreenTip.Text = "Stampa l'elenco dati."
-      Me.eui_Strumenti_Stampa_Elenco.Size = New System.Drawing.Size(44, 72)
+      Me.eui_Strumenti_Stampa_Elenco.Size = New System.Drawing.Size(45, 0)
       Me.eui_Strumenti_Stampa_Elenco.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_Strumenti_Stampa_Elenco.SmallImages.Images"), System.Drawing.Image))})
       Me.eui_Strumenti_Stampa_Elenco.TabIndex = 3
       Me.eui_Strumenti_Stampa_Elenco.Text = "Stampa"
@@ -2385,10 +2389,10 @@ Friend Class frmMain
       '
       Me.eui_Strumenti_Periodo_Tutte.Id = "13458d09-04c8-4314-b816-7bc12dc08cb7"
       Me.eui_Strumenti_Periodo_Tutte.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_Strumenti_Periodo_Tutte.LargeImages.Images"), System.Drawing.Image))})
-      Me.eui_Strumenti_Periodo_Tutte.Location = New System.Drawing.Point(4, 2)
+      Me.eui_Strumenti_Periodo_Tutte.Location = New System.Drawing.Point(77, 2)
       Me.eui_Strumenti_Periodo_Tutte.Name = "eui_Strumenti_Periodo_Tutte"
       Me.eui_Strumenti_Periodo_Tutte.Pressed = True
-      Me.eui_Strumenti_Periodo_Tutte.Size = New System.Drawing.Size(42, 72)
+      Me.eui_Strumenti_Periodo_Tutte.Size = New System.Drawing.Size(30, 0)
       Me.eui_Strumenti_Periodo_Tutte.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_Strumenti_Periodo_Tutte.SmallImages.Images"), System.Drawing.Image))})
       Me.eui_Strumenti_Periodo_Tutte.TabIndex = 7
       Me.eui_Strumenti_Periodo_Tutte.Text = "Tutti"
@@ -2396,7 +2400,7 @@ Friend Class frmMain
       'Separator20
       '
       Me.Separator20.Id = "f0314c1a-0a61-47b2-964d-8a602d54cd94"
-      Me.Separator20.Location = New System.Drawing.Point(49, 6)
+      Me.Separator20.Location = New System.Drawing.Point(78, 6)
       Me.Separator20.Name = "Separator20"
       Me.Separator20.Size = New System.Drawing.Size(3, 61)
       Me.Separator20.TabIndex = 5
@@ -2406,9 +2410,9 @@ Friend Class frmMain
       '
       Me.eui_Strumenti_Periodo_Anno.Id = "ef554c52-51ca-4dd1-8574-dc9b5cfc1aeb"
       Me.eui_Strumenti_Periodo_Anno.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_Strumenti_Periodo_Anno.LargeImages.Images"), System.Drawing.Image))})
-      Me.eui_Strumenti_Periodo_Anno.Location = New System.Drawing.Point(55, 2)
+      Me.eui_Strumenti_Periodo_Anno.Location = New System.Drawing.Point(77, 74)
       Me.eui_Strumenti_Periodo_Anno.Name = "eui_Strumenti_Periodo_Anno"
-      Me.eui_Strumenti_Periodo_Anno.Size = New System.Drawing.Size(46, 72)
+      Me.eui_Strumenti_Periodo_Anno.Size = New System.Drawing.Size(74, 0)
       Me.eui_Strumenti_Periodo_Anno.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_Strumenti_Periodo_Anno.SmallImages.Images"), System.Drawing.Image))})
       Me.eui_Strumenti_Periodo_Anno.TabIndex = 9
       Me.eui_Strumenti_Periodo_Anno.Text = "Anno in corso"
@@ -2417,9 +2421,9 @@ Friend Class frmMain
       '
       Me.eui_Strumenti_Periodo_Mese.Id = "a967bcab-51d2-459f-8016-bbb39d16ce4d"
       Me.eui_Strumenti_Periodo_Mese.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_Strumenti_Periodo_Mese.LargeImages.Images"), System.Drawing.Image))})
-      Me.eui_Strumenti_Periodo_Mese.Location = New System.Drawing.Point(103, 2)
+      Me.eui_Strumenti_Periodo_Mese.Location = New System.Drawing.Point(77, 74)
       Me.eui_Strumenti_Periodo_Mese.Name = "eui_Strumenti_Periodo_Mese"
-      Me.eui_Strumenti_Periodo_Mese.Size = New System.Drawing.Size(45, 72)
+      Me.eui_Strumenti_Periodo_Mese.Size = New System.Drawing.Size(75, 0)
       Me.eui_Strumenti_Periodo_Mese.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_Strumenti_Periodo_Mese.SmallImages.Images"), System.Drawing.Image))})
       Me.eui_Strumenti_Periodo_Mese.TabIndex = 9
       Me.eui_Strumenti_Periodo_Mese.Text = "Mese in corso"
@@ -2428,9 +2432,9 @@ Friend Class frmMain
       '
       Me.eui_Strumenti_Periodo_DalAl.Id = "38ab1e23-04d8-4a76-8ae3-2cb9354865ce"
       Me.eui_Strumenti_Periodo_DalAl.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_Strumenti_Periodo_DalAl.LargeImages.Images"), System.Drawing.Image))})
-      Me.eui_Strumenti_Periodo_DalAl.Location = New System.Drawing.Point(150, 2)
+      Me.eui_Strumenti_Periodo_DalAl.Location = New System.Drawing.Point(77, 74)
       Me.eui_Strumenti_Periodo_DalAl.Name = "eui_Strumenti_Periodo_DalAl"
-      Me.eui_Strumenti_Periodo_DalAl.Size = New System.Drawing.Size(42, 72)
+      Me.eui_Strumenti_Periodo_DalAl.Size = New System.Drawing.Size(55, 0)
       Me.eui_Strumenti_Periodo_DalAl.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_Strumenti_Periodo_DalAl.SmallImages.Images"), System.Drawing.Image))})
       Me.eui_Strumenti_Periodo_DalAl.TabIndex = 10
       Me.eui_Strumenti_Periodo_DalAl.Text = "Dal... Al..."
@@ -2438,7 +2442,7 @@ Friend Class frmMain
       'eui_Strumenti_Periodo_Sep1
       '
       Me.eui_Strumenti_Periodo_Sep1.Id = "7591c18c-c76a-4324-abf8-49b23cf67142"
-      Me.eui_Strumenti_Periodo_Sep1.Location = New System.Drawing.Point(195, 6)
+      Me.eui_Strumenti_Periodo_Sep1.Location = New System.Drawing.Point(155, 6)
       Me.eui_Strumenti_Periodo_Sep1.Name = "eui_Strumenti_Periodo_Sep1"
       Me.eui_Strumenti_Periodo_Sep1.Size = New System.Drawing.Size(3, 61)
       Me.eui_Strumenti_Periodo_Sep1.TabIndex = 11
@@ -2448,9 +2452,9 @@ Friend Class frmMain
       '
       Me.eui_Strumenti_Periodo_Arrivo.Id = "63e7b88e-a03f-4d28-af64-6086a8a9d358"
       Me.eui_Strumenti_Periodo_Arrivo.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_Strumenti_Periodo_Arrivo.LargeImages.Images"), System.Drawing.Image))})
-      Me.eui_Strumenti_Periodo_Arrivo.Location = New System.Drawing.Point(201, 2)
+      Me.eui_Strumenti_Periodo_Arrivo.Location = New System.Drawing.Point(154, 74)
       Me.eui_Strumenti_Periodo_Arrivo.Name = "eui_Strumenti_Periodo_Arrivo"
-      Me.eui_Strumenti_Periodo_Arrivo.Size = New System.Drawing.Size(49, 72)
+      Me.eui_Strumenti_Periodo_Arrivo.Size = New System.Drawing.Size(71, 0)
       Me.eui_Strumenti_Periodo_Arrivo.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_Strumenti_Periodo_Arrivo.SmallImages.Images"), System.Drawing.Image))})
       Me.eui_Strumenti_Periodo_Arrivo.TabIndex = 7
       Me.eui_Strumenti_Periodo_Arrivo.Text = "In Arrivo oggi"
@@ -2459,9 +2463,9 @@ Friend Class frmMain
       '
       Me.eui_Strumenti_Periodo_Partenza.Id = "bb229afd-d869-456c-b860-4b39f3d60389"
       Me.eui_Strumenti_Periodo_Partenza.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_Strumenti_Periodo_Partenza.LargeImages.Images"), System.Drawing.Image))})
-      Me.eui_Strumenti_Periodo_Partenza.Location = New System.Drawing.Point(252, 2)
+      Me.eui_Strumenti_Periodo_Partenza.Location = New System.Drawing.Point(154, 74)
       Me.eui_Strumenti_Periodo_Partenza.Name = "eui_Strumenti_Periodo_Partenza"
-      Me.eui_Strumenti_Periodo_Partenza.Size = New System.Drawing.Size(62, 72)
+      Me.eui_Strumenti_Periodo_Partenza.Size = New System.Drawing.Size(86, 0)
       Me.eui_Strumenti_Periodo_Partenza.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_Strumenti_Periodo_Partenza.SmallImages.Images"), System.Drawing.Image))})
       Me.eui_Strumenti_Periodo_Partenza.TabIndex = 8
       Me.eui_Strumenti_Periodo_Partenza.Text = "In Partenza oggi"
@@ -2482,9 +2486,9 @@ Friend Class frmMain
       Me.eui_Strumenti_Visualizza_Presenze.Enabled = False
       Me.eui_Strumenti_Visualizza_Presenze.Id = "07e3c8f2-dc55-42d8-bb1a-f05965817c79"
       Me.eui_Strumenti_Visualizza_Presenze.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_Strumenti_Visualizza_Presenze.LargeImages.Images"), System.Drawing.Image))})
-      Me.eui_Strumenti_Visualizza_Presenze.Location = New System.Drawing.Point(9, 2)
+      Me.eui_Strumenti_Visualizza_Presenze.Location = New System.Drawing.Point(4, 2)
       Me.eui_Strumenti_Visualizza_Presenze.Name = "eui_Strumenti_Visualizza_Presenze"
-      Me.eui_Strumenti_Visualizza_Presenze.Size = New System.Drawing.Size(50, 72)
+      Me.eui_Strumenti_Visualizza_Presenze.Size = New System.Drawing.Size(89, 0)
       Me.eui_Strumenti_Visualizza_Presenze.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_Strumenti_Visualizza_Presenze.SmallImages.Images"), System.Drawing.Image))})
       Me.eui_Strumenti_Visualizza_Presenze.TabIndex = 10
       Me.eui_Strumenti_Visualizza_Presenze.Text = "Storico Presenze"
@@ -2518,11 +2522,11 @@ Friend Class frmMain
       '
       Me.Button9.Id = "ed4d06e2-69ee-46d8-8703-f665763e7b5e"
       Me.Button9.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("Button9.LargeImages.Images"), System.Drawing.Image))})
-      Me.Button9.Location = New System.Drawing.Point(4, 2)
+      Me.Button9.Location = New System.Drawing.Point(38, 2)
       Me.Button9.Name = "Button9"
       Me.Button9.ScreenTip.Caption = "Importa dati"
       Me.Button9.ScreenTip.Text = "Apre la finestra per l'importazione dei dati dal gestionale Amica."
-      Me.Button9.Size = New System.Drawing.Size(42, 72)
+      Me.Button9.Size = New System.Drawing.Size(42, 0)
       Me.Button9.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("Button9.SmallImages.Images"), System.Drawing.Image))})
       Me.Button9.TabIndex = 0
       Me.Button9.Text = "Fattura"
@@ -2531,11 +2535,11 @@ Friend Class frmMain
       '
       Me.Button10.Id = "40fb78a2-d1a2-4d76-9d83-c420f1b36310"
       Me.Button10.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("Button10.LargeImages.Images"), System.Drawing.Image))})
-      Me.Button10.Location = New System.Drawing.Point(48, 2)
+      Me.Button10.Location = New System.Drawing.Point(38, 2)
       Me.Button10.Name = "Button10"
       Me.Button10.ScreenTip.Caption = "Esporta dati"
       Me.Button10.ScreenTip.Text = "Apre la finestra per l'esportazione dei dati nel gestionale Amica."
-      Me.Button10.Size = New System.Drawing.Size(49, 72)
+      Me.Button10.Size = New System.Drawing.Size(85, 0)
       Me.Button10.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("Button10.SmallImages.Images"), System.Drawing.Image))})
       Me.Button10.TabIndex = 3
       Me.Button10.Text = "Ricevuta fiscale"
@@ -2543,7 +2547,7 @@ Friend Class frmMain
       'Separator23
       '
       Me.Separator23.Id = "4a143a9b-d4d1-4655-bc13-df4474f55c31"
-      Me.Separator23.Location = New System.Drawing.Point(100, 6)
+      Me.Separator23.Location = New System.Drawing.Point(39, 6)
       Me.Separator23.Name = "Separator23"
       Me.Separator23.Size = New System.Drawing.Size(3, 61)
       Me.Separator23.TabIndex = 4
@@ -2553,11 +2557,11 @@ Friend Class frmMain
       '
       Me.Button11.Id = "8ff6c145-83eb-4912-8e1f-214058db0341"
       Me.Button11.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("Button11.LargeImages.Images"), System.Drawing.Image))})
-      Me.Button11.Location = New System.Drawing.Point(106, 2)
+      Me.Button11.Location = New System.Drawing.Point(38, 74)
       Me.Button11.Name = "Button11"
       Me.Button11.ScreenTip.Caption = "Esporta dati"
       Me.Button11.ScreenTip.Text = "Apre la finestra per l'esportazione dei dati nel gestionale Amica."
-      Me.Button11.Size = New System.Drawing.Size(52, 72)
+      Me.Button11.Size = New System.Drawing.Size(77, 0)
       Me.Button11.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("Button11.SmallImages.Images"), System.Drawing.Image))})
       Me.Button11.TabIndex = 5
       Me.Button11.Text = "Schedina P.S."
@@ -2593,9 +2597,9 @@ Friend Class frmMain
       '
       Me.eui_Strumenti_Sospesi_Filtra.Id = "2bbbb142-390f-4244-a27e-f7d97951fc9a"
       Me.eui_Strumenti_Sospesi_Filtra.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_Strumenti_Sospesi_Filtra.LargeImages.Images"), System.Drawing.Image))})
-      Me.eui_Strumenti_Sospesi_Filtra.Location = New System.Drawing.Point(4, 2)
+      Me.eui_Strumenti_Sospesi_Filtra.Location = New System.Drawing.Point(53, 2)
       Me.eui_Strumenti_Sospesi_Filtra.Name = "eui_Strumenti_Sospesi_Filtra"
-      Me.eui_Strumenti_Sospesi_Filtra.Size = New System.Drawing.Size(43, 72)
+      Me.eui_Strumenti_Sospesi_Filtra.Size = New System.Drawing.Size(46, 0)
       Me.eui_Strumenti_Sospesi_Filtra.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_Strumenti_Sospesi_Filtra.SmallImages.Images"), System.Drawing.Image))})
       Me.eui_Strumenti_Sospesi_Filtra.TabIndex = 8
       Me.eui_Strumenti_Sospesi_Filtra.Text = "Sospesi"
@@ -2603,7 +2607,7 @@ Friend Class frmMain
       'Separator10
       '
       Me.Separator10.Id = "cecacd73-3cd0-4b9b-b5b8-8c0d0abc80ec"
-      Me.Separator10.Location = New System.Drawing.Point(50, 6)
+      Me.Separator10.Location = New System.Drawing.Point(54, 6)
       Me.Separator10.Name = "Separator10"
       Me.Separator10.Size = New System.Drawing.Size(3, 61)
       Me.Separator10.TabIndex = 10
@@ -2614,11 +2618,11 @@ Friend Class frmMain
       Me.eui_Strumenti_Sospesi_Incassa.Id = "8149d0aa-ab4d-47dc-882d-fde6c5636944"
       Me.eui_Strumenti_Sospesi_Incassa.KeyTip = "M"
       Me.eui_Strumenti_Sospesi_Incassa.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_Strumenti_Sospesi_Incassa.LargeImages.Images"), System.Drawing.Image))})
-      Me.eui_Strumenti_Sospesi_Incassa.Location = New System.Drawing.Point(56, 2)
+      Me.eui_Strumenti_Sospesi_Incassa.Location = New System.Drawing.Point(53, 74)
       Me.eui_Strumenti_Sospesi_Incassa.Name = "eui_Strumenti_Sospesi_Incassa"
       Me.eui_Strumenti_Sospesi_Incassa.ScreenTip.Caption = "Modifica"
       Me.eui_Strumenti_Sospesi_Incassa.ScreenTip.Text = "Apre una finestra per la modifica dei dati selezionati."
-      Me.eui_Strumenti_Sospesi_Incassa.Size = New System.Drawing.Size(42, 72)
+      Me.eui_Strumenti_Sospesi_Incassa.Size = New System.Drawing.Size(46, 0)
       Me.eui_Strumenti_Sospesi_Incassa.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_Strumenti_Sospesi_Incassa.SmallImages.Images"), System.Drawing.Image))})
       Me.eui_Strumenti_Sospesi_Incassa.TabIndex = 8
       Me.eui_Strumenti_Sospesi_Incassa.Text = "Incassa"
@@ -2628,11 +2632,11 @@ Friend Class frmMain
       Me.eui_Strumenti_Sospesi_Annulla.Id = "d87911c4-43c2-4ead-b840-d407567d4bfa"
       Me.eui_Strumenti_Sospesi_Annulla.KeyTip = "E"
       Me.eui_Strumenti_Sospesi_Annulla.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_Strumenti_Sospesi_Annulla.LargeImages.Images"), System.Drawing.Image))})
-      Me.eui_Strumenti_Sospesi_Annulla.Location = New System.Drawing.Point(100, 2)
+      Me.eui_Strumenti_Sospesi_Annulla.Location = New System.Drawing.Point(53, 74)
       Me.eui_Strumenti_Sospesi_Annulla.Name = "eui_Strumenti_Sospesi_Annulla"
       Me.eui_Strumenti_Sospesi_Annulla.ScreenTip.Caption = "Elimina"
       Me.eui_Strumenti_Sospesi_Annulla.ScreenTip.Text = "Elimina i dati selezionati."
-      Me.eui_Strumenti_Sospesi_Annulla.Size = New System.Drawing.Size(45, 72)
+      Me.eui_Strumenti_Sospesi_Annulla.Size = New System.Drawing.Size(44, 0)
       Me.eui_Strumenti_Sospesi_Annulla.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_Strumenti_Sospesi_Annulla.SmallImages.Images"), System.Drawing.Image))})
       Me.eui_Strumenti_Sospesi_Annulla.TabIndex = 7
       Me.eui_Strumenti_Sospesi_Annulla.Text = "Annulla"
@@ -2642,11 +2646,11 @@ Friend Class frmMain
       Me.eui_Strumenti_Sospesi_Passa.Id = "0bb61b8d-9a7b-433b-9192-beda49cdbc13"
       Me.eui_Strumenti_Sospesi_Passa.KeyTip = "D"
       Me.eui_Strumenti_Sospesi_Passa.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_Strumenti_Sospesi_Passa.LargeImages.Images"), System.Drawing.Image))})
-      Me.eui_Strumenti_Sospesi_Passa.Location = New System.Drawing.Point(147, 2)
+      Me.eui_Strumenti_Sospesi_Passa.Location = New System.Drawing.Point(53, 74)
       Me.eui_Strumenti_Sospesi_Passa.Name = "eui_Strumenti_Sospesi_Passa"
       Me.eui_Strumenti_Sospesi_Passa.ScreenTip.Caption = "Duplica"
       Me.eui_Strumenti_Sospesi_Passa.ScreenTip.Text = "Duplica i dati selezionati."
-      Me.eui_Strumenti_Sospesi_Passa.Size = New System.Drawing.Size(46, 72)
+      Me.eui_Strumenti_Sospesi_Passa.Size = New System.Drawing.Size(91, 0)
       Me.eui_Strumenti_Sospesi_Passa.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_Strumenti_Sospesi_Passa.SmallImages.Images"), System.Drawing.Image))})
       Me.eui_Strumenti_Sospesi_Passa.TabIndex = 9
       Me.eui_Strumenti_Sospesi_Passa.Text = "Passa in sospeso"
@@ -2666,11 +2670,11 @@ Friend Class frmMain
       Me.eui_Strumenti_Buoni_Pasto.Id = "c9385b76-e8e1-448b-8ba7-a7a494160ca0"
       Me.eui_Strumenti_Buoni_Pasto.KeyTip = "S"
       Me.eui_Strumenti_Buoni_Pasto.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_Strumenti_Buoni_Pasto.LargeImages.Images"), System.Drawing.Image))})
-      Me.eui_Strumenti_Buoni_Pasto.Location = New System.Drawing.Point(11, 2)
+      Me.eui_Strumenti_Buoni_Pasto.Location = New System.Drawing.Point(4, 2)
       Me.eui_Strumenti_Buoni_Pasto.Name = "eui_Strumenti_Buoni_Pasto"
       Me.eui_Strumenti_Buoni_Pasto.ScreenTip.Caption = "Esporta"
       Me.eui_Strumenti_Buoni_Pasto.ScreenTip.Text = "Esporta i dati in diversi formati."
-      Me.eui_Strumenti_Buoni_Pasto.Size = New System.Drawing.Size(60, 72)
+      Me.eui_Strumenti_Buoni_Pasto.Size = New System.Drawing.Size(95, 0)
       Me.eui_Strumenti_Buoni_Pasto.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_Strumenti_Buoni_Pasto.SmallImages.Images"), System.Drawing.Image))})
       Me.eui_Strumenti_Buoni_Pasto.TabIndex = 7
       Me.eui_Strumenti_Buoni_Pasto.Text = "Apri Buoni pasto..."
@@ -2771,11 +2775,11 @@ Friend Class frmMain
       '
       Me.eui_PCamere_PrenNuova.Id = "4f5ffd8e-11f1-45e2-8a7b-d448771151ea"
       Me.eui_PCamere_PrenNuova.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_PCamere_PrenNuova.LargeImages.Images"), System.Drawing.Image))})
-      Me.eui_PCamere_PrenNuova.Location = New System.Drawing.Point(4, 2)
+      Me.eui_PCamere_PrenNuova.Location = New System.Drawing.Point(64, 2)
       Me.eui_PCamere_PrenNuova.Name = "eui_PCamere_PrenNuova"
       Me.eui_PCamere_PrenNuova.ScreenTip.Caption = "Importa dati"
       Me.eui_PCamere_PrenNuova.ScreenTip.Text = "Apre la finestra per l'importazione dei dati dal gestionale Amica."
-      Me.eui_PCamere_PrenNuova.Size = New System.Drawing.Size(42, 72)
+      Me.eui_PCamere_PrenNuova.Size = New System.Drawing.Size(41, 0)
       Me.eui_PCamere_PrenNuova.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_PCamere_PrenNuova.SmallImages.Images"), System.Drawing.Image))})
       Me.eui_PCamere_PrenNuova.TabIndex = 0
       Me.eui_PCamere_PrenNuova.Text = "Nuova"
@@ -2784,11 +2788,11 @@ Friend Class frmMain
       '
       Me.eui_PCamere_PrenModifica.Id = "146f175d-1704-43f5-8b47-ac8b845f926b"
       Me.eui_PCamere_PrenModifica.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_PCamere_PrenModifica.LargeImages.Images"), System.Drawing.Image))})
-      Me.eui_PCamere_PrenModifica.Location = New System.Drawing.Point(48, 2)
+      Me.eui_PCamere_PrenModifica.Location = New System.Drawing.Point(64, 2)
       Me.eui_PCamere_PrenModifica.Name = "eui_PCamere_PrenModifica"
       Me.eui_PCamere_PrenModifica.ScreenTip.Caption = "Importa dati"
       Me.eui_PCamere_PrenModifica.ScreenTip.Text = "Apre la finestra per l'importazione dei dati dal gestionale Amica."
-      Me.eui_PCamere_PrenModifica.Size = New System.Drawing.Size(51, 72)
+      Me.eui_PCamere_PrenModifica.Size = New System.Drawing.Size(49, 0)
       Me.eui_PCamere_PrenModifica.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_PCamere_PrenModifica.SmallImages.Images"), System.Drawing.Image))})
       Me.eui_PCamere_PrenModifica.TabIndex = 7
       Me.eui_PCamere_PrenModifica.Text = "Modifica"
@@ -2797,11 +2801,11 @@ Friend Class frmMain
       '
       Me.eui_PCamere_PrenElimina.Id = "403ae566-6647-4ca1-92f2-8cc53f819c21"
       Me.eui_PCamere_PrenElimina.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_PCamere_PrenElimina.LargeImages.Images"), System.Drawing.Image))})
-      Me.eui_PCamere_PrenElimina.Location = New System.Drawing.Point(101, 2)
+      Me.eui_PCamere_PrenElimina.Location = New System.Drawing.Point(64, 2)
       Me.eui_PCamere_PrenElimina.Name = "eui_PCamere_PrenElimina"
       Me.eui_PCamere_PrenElimina.ScreenTip.Caption = "Esporta dati"
       Me.eui_PCamere_PrenElimina.ScreenTip.Text = "Apre la finestra per l'esportazione dei dati nel gestionale Amica."
-      Me.eui_PCamere_PrenElimina.Size = New System.Drawing.Size(43, 72)
+      Me.eui_PCamere_PrenElimina.Size = New System.Drawing.Size(42, 0)
       Me.eui_PCamere_PrenElimina.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_PCamere_PrenElimina.SmallImages.Images"), System.Drawing.Image))})
       Me.eui_PCamere_PrenElimina.TabIndex = 1
       Me.eui_PCamere_PrenElimina.Text = "Elimina"
@@ -2809,7 +2813,7 @@ Friend Class frmMain
       'Separator19
       '
       Me.Separator19.Id = "01947619-ff31-404d-a008-6a27351044c5"
-      Me.Separator19.Location = New System.Drawing.Point(147, 6)
+      Me.Separator19.Location = New System.Drawing.Point(65, 6)
       Me.Separator19.Name = "Separator19"
       Me.Separator19.Size = New System.Drawing.Size(3, 61)
       Me.Separator19.TabIndex = 6
@@ -2819,11 +2823,11 @@ Friend Class frmMain
       '
       Me.eui_PCamere_PrenAggiorna.Id = "15da7ec0-94d5-4618-85bd-0dfaa2fe696c"
       Me.eui_PCamere_PrenAggiorna.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_PCamere_PrenAggiorna.LargeImages.Images"), System.Drawing.Image))})
-      Me.eui_PCamere_PrenAggiorna.Location = New System.Drawing.Point(153, 2)
+      Me.eui_PCamere_PrenAggiorna.Location = New System.Drawing.Point(64, 74)
       Me.eui_PCamere_PrenAggiorna.Name = "eui_PCamere_PrenAggiorna"
       Me.eui_PCamere_PrenAggiorna.ScreenTip.Caption = "Esporta dati"
       Me.eui_PCamere_PrenAggiorna.ScreenTip.Text = "Apre la finestra per l'esportazione dei dati nel gestionale Amica."
-      Me.eui_PCamere_PrenAggiorna.Size = New System.Drawing.Size(53, 72)
+      Me.eui_PCamere_PrenAggiorna.Size = New System.Drawing.Size(51, 0)
       Me.eui_PCamere_PrenAggiorna.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_PCamere_PrenAggiorna.SmallImages.Images"), System.Drawing.Image))})
       Me.eui_PCamere_PrenAggiorna.TabIndex = 5
       Me.eui_PCamere_PrenAggiorna.Text = "Aggiorna"
@@ -2831,7 +2835,7 @@ Friend Class frmMain
       'Separator5
       '
       Me.Separator5.Id = "7d00ee35-f748-4560-a866-97722e4dbec7"
-      Me.Separator5.Location = New System.Drawing.Point(209, 6)
+      Me.Separator5.Location = New System.Drawing.Point(118, 6)
       Me.Separator5.Name = "Separator5"
       Me.Separator5.Size = New System.Drawing.Size(3, 61)
       Me.Separator5.TabIndex = 2
@@ -2841,11 +2845,11 @@ Friend Class frmMain
       '
       Me.eui_PCamere_PrenElencoCamere.Id = "0006492e-5487-434c-a764-dc30565fc195"
       Me.eui_PCamere_PrenElencoCamere.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_PCamere_PrenElencoCamere.LargeImages.Images"), System.Drawing.Image))})
-      Me.eui_PCamere_PrenElencoCamere.Location = New System.Drawing.Point(215, 2)
+      Me.eui_PCamere_PrenElencoCamere.Location = New System.Drawing.Point(117, 74)
       Me.eui_PCamere_PrenElencoCamere.Name = "eui_PCamere_PrenElencoCamere"
       Me.eui_PCamere_PrenElencoCamere.ScreenTip.Caption = "Esporta dati"
       Me.eui_PCamere_PrenElencoCamere.ScreenTip.Text = "Apre la finestra per l'esportazione dei dati nel gestionale Amica."
-      Me.eui_PCamere_PrenElencoCamere.Size = New System.Drawing.Size(69, 72)
+      Me.eui_PCamere_PrenElencoCamere.Size = New System.Drawing.Size(107, 0)
       Me.eui_PCamere_PrenElencoCamere.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_PCamere_PrenElencoCamere.SmallImages.Images"), System.Drawing.Image))})
       Me.eui_PCamere_PrenElencoCamere.TabIndex = 3
       Me.eui_PCamere_PrenElencoCamere.Text = "Elenco pren. camere"
@@ -2869,11 +2873,11 @@ Friend Class frmMain
       '
       Me.eui_PCamere_PrenListini.Id = "d7eaaeae-b2a3-453d-82d8-42df893473b7"
       Me.eui_PCamere_PrenListini.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_PCamere_PrenListini.LargeImages.Images"), System.Drawing.Image))})
-      Me.eui_PCamere_PrenListini.Location = New System.Drawing.Point(4, 2)
+      Me.eui_PCamere_PrenListini.Location = New System.Drawing.Point(75, 2)
       Me.eui_PCamere_PrenListini.Name = "eui_PCamere_PrenListini"
       Me.eui_PCamere_PrenListini.ScreenTip.Caption = "Importa dati"
       Me.eui_PCamere_PrenListini.ScreenTip.Text = "Apre la finestra per l'importazione dei dati dal gestionale Amica."
-      Me.eui_PCamere_PrenListini.Size = New System.Drawing.Size(42, 72)
+      Me.eui_PCamere_PrenListini.Size = New System.Drawing.Size(35, 0)
       Me.eui_PCamere_PrenListini.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_PCamere_PrenListini.SmallImages.Images"), System.Drawing.Image))})
       Me.eui_PCamere_PrenListini.TabIndex = 0
       Me.eui_PCamere_PrenListini.Text = "Listini"
@@ -2882,11 +2886,11 @@ Friend Class frmMain
       '
       Me.eui_PCamere_PrenStagioni.Id = "728c7270-e804-4e64-be60-208b7bd5dd18"
       Me.eui_PCamere_PrenStagioni.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_PCamere_PrenStagioni.LargeImages.Images"), System.Drawing.Image))})
-      Me.eui_PCamere_PrenStagioni.Location = New System.Drawing.Point(48, 2)
+      Me.eui_PCamere_PrenStagioni.Location = New System.Drawing.Point(75, 2)
       Me.eui_PCamere_PrenStagioni.Name = "eui_PCamere_PrenStagioni"
       Me.eui_PCamere_PrenStagioni.ScreenTip.Caption = "Esporta dati"
       Me.eui_PCamere_PrenStagioni.ScreenTip.Text = "Apre la finestra per l'esportazione dei dati nel gestionale Amica."
-      Me.eui_PCamere_PrenStagioni.Size = New System.Drawing.Size(47, 72)
+      Me.eui_PCamere_PrenStagioni.Size = New System.Drawing.Size(47, 0)
       Me.eui_PCamere_PrenStagioni.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_PCamere_PrenStagioni.SmallImages.Images"), System.Drawing.Image))})
       Me.eui_PCamere_PrenStagioni.TabIndex = 1
       Me.eui_PCamere_PrenStagioni.Text = "Stagioni"
@@ -2894,7 +2898,7 @@ Friend Class frmMain
       'Separator6
       '
       Me.Separator6.Id = "520f566d-3b09-4e21-9c2a-3e5339b95f7a"
-      Me.Separator6.Location = New System.Drawing.Point(98, 6)
+      Me.Separator6.Location = New System.Drawing.Point(76, 6)
       Me.Separator6.Name = "Separator6"
       Me.Separator6.Size = New System.Drawing.Size(3, 61)
       Me.Separator6.TabIndex = 2
@@ -2904,11 +2908,11 @@ Friend Class frmMain
       '
       Me.eui_PCamere_PrenCamere.Id = "15b09ce6-9660-4e90-a29f-af38e05662ba"
       Me.eui_PCamere_PrenCamere.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_PCamere_PrenCamere.LargeImages.Images"), System.Drawing.Image))})
-      Me.eui_PCamere_PrenCamere.Location = New System.Drawing.Point(104, 2)
+      Me.eui_PCamere_PrenCamere.Location = New System.Drawing.Point(75, 74)
       Me.eui_PCamere_PrenCamere.Name = "eui_PCamere_PrenCamere"
       Me.eui_PCamere_PrenCamere.ScreenTip.Caption = "Esporta dati"
       Me.eui_PCamere_PrenCamere.ScreenTip.Text = "Apre la finestra per l'esportazione dei dati nel gestionale Amica."
-      Me.eui_PCamere_PrenCamere.Size = New System.Drawing.Size(45, 72)
+      Me.eui_PCamere_PrenCamere.Size = New System.Drawing.Size(45, 0)
       Me.eui_PCamere_PrenCamere.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_PCamere_PrenCamere.SmallImages.Images"), System.Drawing.Image))})
       Me.eui_PCamere_PrenCamere.TabIndex = 3
       Me.eui_PCamere_PrenCamere.Text = "Camere"
@@ -2917,11 +2921,11 @@ Friend Class frmMain
       '
       Me.eui_PCamere_PrenClienti.Id = "b2873928-94d5-41d5-924f-c1cc799d0a25"
       Me.eui_PCamere_PrenClienti.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_PCamere_PrenClienti.LargeImages.Images"), System.Drawing.Image))})
-      Me.eui_PCamere_PrenClienti.Location = New System.Drawing.Point(151, 2)
+      Me.eui_PCamere_PrenClienti.Location = New System.Drawing.Point(75, 74)
       Me.eui_PCamere_PrenClienti.Name = "eui_PCamere_PrenClienti"
       Me.eui_PCamere_PrenClienti.ScreenTip.Caption = "Esporta dati"
       Me.eui_PCamere_PrenClienti.ScreenTip.Text = "Apre la finestra per l'esportazione dei dati nel gestionale Amica."
-      Me.eui_PCamere_PrenClienti.Size = New System.Drawing.Size(42, 72)
+      Me.eui_PCamere_PrenClienti.Size = New System.Drawing.Size(37, 0)
       Me.eui_PCamere_PrenClienti.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_PCamere_PrenClienti.SmallImages.Images"), System.Drawing.Image))})
       Me.eui_PCamere_PrenClienti.TabIndex = 4
       Me.eui_PCamere_PrenClienti.Text = "Clienti"
@@ -2942,11 +2946,11 @@ Friend Class frmMain
       '
       Me.eui_PCamere_PrenIstat.Id = "00c43a66-311d-4bdc-a0b1-a3f889630c99"
       Me.eui_PCamere_PrenIstat.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_PCamere_PrenIstat.LargeImages.Images"), System.Drawing.Image))})
-      Me.eui_PCamere_PrenIstat.Location = New System.Drawing.Point(4, 2)
+      Me.eui_PCamere_PrenIstat.Location = New System.Drawing.Point(10, 2)
       Me.eui_PCamere_PrenIstat.Name = "eui_PCamere_PrenIstat"
       Me.eui_PCamere_PrenIstat.ScreenTip.Caption = "Importa dati"
       Me.eui_PCamere_PrenIstat.ScreenTip.Text = "Apre la finestra per l'importazione dei dati dal gestionale Amica."
-      Me.eui_PCamere_PrenIstat.Size = New System.Drawing.Size(54, 72)
+      Me.eui_PCamere_PrenIstat.Size = New System.Drawing.Size(96, 0)
       Me.eui_PCamere_PrenIstat.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_PCamere_PrenIstat.SmallImages.Images"), System.Drawing.Image))})
       Me.eui_PCamere_PrenIstat.TabIndex = 0
       Me.eui_PCamere_PrenIstat.Text = "Modello Istat C/59"
@@ -2955,11 +2959,11 @@ Friend Class frmMain
       '
       Me.Button12.Id = "93036274-e320-464c-b007-042c9ee1a852"
       Me.Button12.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("Button12.LargeImages.Images"), System.Drawing.Image))})
-      Me.Button12.Location = New System.Drawing.Point(60, 2)
+      Me.Button12.Location = New System.Drawing.Point(10, 2)
       Me.Button12.Name = "Button12"
       Me.Button12.ScreenTip.Caption = "Esporta dati"
       Me.Button12.ScreenTip.Text = "Apre la finestra per l'esportazione dei dati nel gestionale Amica."
-      Me.Button12.Size = New System.Drawing.Size(52, 72)
+      Me.Button12.Size = New System.Drawing.Size(77, 0)
       Me.Button12.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("Button12.SmallImages.Images"), System.Drawing.Image))})
       Me.Button12.TabIndex = 6
       Me.Button12.Text = "Schedina P.S."
@@ -2995,11 +2999,11 @@ Friend Class frmMain
       '
       Me.eui_PCamere_VisIndieto.Id = "1c757c9c-4acc-4d70-910e-a99f21817fa7"
       Me.eui_PCamere_VisIndieto.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_PCamere_VisIndieto.LargeImages.Images"), System.Drawing.Image))})
-      Me.eui_PCamere_VisIndieto.Location = New System.Drawing.Point(4, 2)
+      Me.eui_PCamere_VisIndieto.Location = New System.Drawing.Point(74, 2)
       Me.eui_PCamere_VisIndieto.Name = "eui_PCamere_VisIndieto"
       Me.eui_PCamere_VisIndieto.ScreenTip.Caption = "Importa dati"
       Me.eui_PCamere_VisIndieto.ScreenTip.Text = "Apre la finestra per l'importazione dei dati dal gestionale Amica."
-      Me.eui_PCamere_VisIndieto.Size = New System.Drawing.Size(45, 72)
+      Me.eui_PCamere_VisIndieto.Size = New System.Drawing.Size(44, 0)
       Me.eui_PCamere_VisIndieto.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_PCamere_VisIndieto.SmallImages.Images"), System.Drawing.Image))})
       Me.eui_PCamere_VisIndieto.TabIndex = 0
       Me.eui_PCamere_VisIndieto.Text = "Indietro"
@@ -3008,11 +3012,11 @@ Friend Class frmMain
       '
       Me.eui_PCamere_VisAvanti.Id = "ee707384-c3f9-4472-9b8d-a3648a2a8513"
       Me.eui_PCamere_VisAvanti.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_PCamere_VisAvanti.LargeImages.Images"), System.Drawing.Image))})
-      Me.eui_PCamere_VisAvanti.Location = New System.Drawing.Point(51, 2)
+      Me.eui_PCamere_VisAvanti.Location = New System.Drawing.Point(74, 2)
       Me.eui_PCamere_VisAvanti.Name = "eui_PCamere_VisAvanti"
       Me.eui_PCamere_VisAvanti.ScreenTip.Caption = "Importa dati"
       Me.eui_PCamere_VisAvanti.ScreenTip.Text = "Apre la finestra per l'importazione dei dati dal gestionale Amica."
-      Me.eui_PCamere_VisAvanti.Size = New System.Drawing.Size(42, 72)
+      Me.eui_PCamere_VisAvanti.Size = New System.Drawing.Size(39, 0)
       Me.eui_PCamere_VisAvanti.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_PCamere_VisAvanti.SmallImages.Images"), System.Drawing.Image))})
       Me.eui_PCamere_VisAvanti.TabIndex = 1
       Me.eui_PCamere_VisAvanti.Text = "Avanti"
@@ -3020,7 +3024,7 @@ Friend Class frmMain
       'Separator12
       '
       Me.Separator12.Id = "8f0c343d-6148-46c4-8cbf-c09598bdfbe6"
-      Me.Separator12.Location = New System.Drawing.Point(96, 6)
+      Me.Separator12.Location = New System.Drawing.Point(75, 6)
       Me.Separator12.Name = "Separator12"
       Me.Separator12.Size = New System.Drawing.Size(3, 61)
       Me.Separator12.TabIndex = 2
@@ -3030,11 +3034,11 @@ Friend Class frmMain
       '
       Me.eui_PCamere_VisSu.Id = "de3bcd86-4de3-4002-b9eb-089101ecfae8"
       Me.eui_PCamere_VisSu.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_PCamere_VisSu.LargeImages.Images"), System.Drawing.Image))})
-      Me.eui_PCamere_VisSu.Location = New System.Drawing.Point(102, 2)
+      Me.eui_PCamere_VisSu.Location = New System.Drawing.Point(74, 74)
       Me.eui_PCamere_VisSu.Name = "eui_PCamere_VisSu"
       Me.eui_PCamere_VisSu.ScreenTip.Caption = "Importa dati"
       Me.eui_PCamere_VisSu.ScreenTip.Text = "Apre la finestra per l'importazione dei dati dal gestionale Amica."
-      Me.eui_PCamere_VisSu.Size = New System.Drawing.Size(42, 72)
+      Me.eui_PCamere_VisSu.Size = New System.Drawing.Size(22, 0)
       Me.eui_PCamere_VisSu.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_PCamere_VisSu.SmallImages.Images"), System.Drawing.Image))})
       Me.eui_PCamere_VisSu.TabIndex = 2
       Me.eui_PCamere_VisSu.Text = "Su"
@@ -3043,11 +3047,11 @@ Friend Class frmMain
       '
       Me.eui_PCamere_VisGiù.Id = "3cd61c7b-b245-4182-b3eb-fa9fa78b5ad8"
       Me.eui_PCamere_VisGiù.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_PCamere_VisGiù.LargeImages.Images"), System.Drawing.Image))})
-      Me.eui_PCamere_VisGiù.Location = New System.Drawing.Point(146, 2)
+      Me.eui_PCamere_VisGiù.Location = New System.Drawing.Point(74, 74)
       Me.eui_PCamere_VisGiù.Name = "eui_PCamere_VisGiù"
       Me.eui_PCamere_VisGiù.ScreenTip.Caption = "Importa dati"
       Me.eui_PCamere_VisGiù.ScreenTip.Text = "Apre la finestra per l'importazione dei dati dal gestionale Amica."
-      Me.eui_PCamere_VisGiù.Size = New System.Drawing.Size(42, 72)
+      Me.eui_PCamere_VisGiù.Size = New System.Drawing.Size(25, 0)
       Me.eui_PCamere_VisGiù.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_PCamere_VisGiù.SmallImages.Images"), System.Drawing.Image))})
       Me.eui_PCamere_VisGiù.TabIndex = 3
       Me.eui_PCamere_VisGiù.Text = "Giù"
@@ -3076,11 +3080,11 @@ Friend Class frmMain
       '
       Me.eui_PCamere_VisOggi.Id = "228a6f2c-300d-4bf9-8f72-88e8dd785843"
       Me.eui_PCamere_VisOggi.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_PCamere_VisOggi.LargeImages.Images"), System.Drawing.Image))})
-      Me.eui_PCamere_VisOggi.Location = New System.Drawing.Point(4, 2)
+      Me.eui_PCamere_VisOggi.Location = New System.Drawing.Point(58, 2)
       Me.eui_PCamere_VisOggi.Name = "eui_PCamere_VisOggi"
       Me.eui_PCamere_VisOggi.ScreenTip.Caption = "Importa dati"
       Me.eui_PCamere_VisOggi.ScreenTip.Text = "Apre la finestra per l'importazione dei dati dal gestionale Amica."
-      Me.eui_PCamere_VisOggi.Size = New System.Drawing.Size(42, 72)
+      Me.eui_PCamere_VisOggi.Size = New System.Drawing.Size(31, 0)
       Me.eui_PCamere_VisOggi.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_PCamere_VisOggi.SmallImages.Images"), System.Drawing.Image))})
       Me.eui_PCamere_VisOggi.TabIndex = 0
       Me.eui_PCamere_VisOggi.Text = "Oggi"
@@ -3088,7 +3092,7 @@ Friend Class frmMain
       'Separator2
       '
       Me.Separator2.Id = "0ec20f16-4126-4c98-8cf1-90aa6dcb4636"
-      Me.Separator2.Location = New System.Drawing.Point(49, 6)
+      Me.Separator2.Location = New System.Drawing.Point(59, 6)
       Me.Separator2.Name = "Separator2"
       Me.Separator2.Size = New System.Drawing.Size(3, 61)
       Me.Separator2.TabIndex = 2
@@ -3098,11 +3102,11 @@ Friend Class frmMain
       '
       Me.eui_PCamere_VisAnnoIndietro.Id = "6c3dc5ea-0d88-4eef-b6b8-ea46fa44241f"
       Me.eui_PCamere_VisAnnoIndietro.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_PCamere_VisAnnoIndietro.LargeImages.Images"), System.Drawing.Image))})
-      Me.eui_PCamere_VisAnnoIndietro.Location = New System.Drawing.Point(55, 2)
+      Me.eui_PCamere_VisAnnoIndietro.Location = New System.Drawing.Point(58, 74)
       Me.eui_PCamere_VisAnnoIndietro.Name = "eui_PCamere_VisAnnoIndietro"
       Me.eui_PCamere_VisAnnoIndietro.ScreenTip.Caption = "Importa dati"
       Me.eui_PCamere_VisAnnoIndietro.ScreenTip.Text = "Apre la finestra per l'importazione dei dati dal gestionale Amica."
-      Me.eui_PCamere_VisAnnoIndietro.Size = New System.Drawing.Size(55, 72)
+      Me.eui_PCamere_VisAnnoIndietro.Size = New System.Drawing.Size(92, 0)
       Me.eui_PCamere_VisAnnoIndietro.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_PCamere_VisAnnoIndietro.SmallImages.Images"), System.Drawing.Image))})
       Me.eui_PCamere_VisAnnoIndietro.TabIndex = 1
       Me.eui_PCamere_VisAnnoIndietro.Text = "Indietro di 1 Anno"
@@ -3111,11 +3115,11 @@ Friend Class frmMain
       '
       Me.eui_PCamere_VisAnnoAvanti.Id = "b37941e1-caef-4d85-85f4-ab38f376e3ef"
       Me.eui_PCamere_VisAnnoAvanti.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_PCamere_VisAnnoAvanti.LargeImages.Images"), System.Drawing.Image))})
-      Me.eui_PCamere_VisAnnoAvanti.Location = New System.Drawing.Point(112, 2)
+      Me.eui_PCamere_VisAnnoAvanti.Location = New System.Drawing.Point(58, 74)
       Me.eui_PCamere_VisAnnoAvanti.Name = "eui_PCamere_VisAnnoAvanti"
       Me.eui_PCamere_VisAnnoAvanti.ScreenTip.Caption = "Importa dati"
       Me.eui_PCamere_VisAnnoAvanti.ScreenTip.Text = "Apre la finestra per l'importazione dei dati dal gestionale Amica."
-      Me.eui_PCamere_VisAnnoAvanti.Size = New System.Drawing.Size(51, 72)
+      Me.eui_PCamere_VisAnnoAvanti.Size = New System.Drawing.Size(87, 0)
       Me.eui_PCamere_VisAnnoAvanti.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_PCamere_VisAnnoAvanti.SmallImages.Images"), System.Drawing.Image))})
       Me.eui_PCamere_VisAnnoAvanti.TabIndex = 3
       Me.eui_PCamere_VisAnnoAvanti.Text = "Avanti di 1 Anno"
@@ -3123,7 +3127,7 @@ Friend Class frmMain
       'Separator13
       '
       Me.Separator13.Id = "384c08a9-2f1f-47b1-8192-9ec0de32912f"
-      Me.Separator13.Location = New System.Drawing.Point(166, 6)
+      Me.Separator13.Location = New System.Drawing.Point(153, 6)
       Me.Separator13.Name = "Separator13"
       Me.Separator13.Size = New System.Drawing.Size(3, 61)
       Me.Separator13.TabIndex = 2
@@ -3133,11 +3137,11 @@ Friend Class frmMain
       '
       Me.eui_PCamere_VisMeseIndietro.Id = "6443740a-f9e6-4336-9bc1-81156917a6b2"
       Me.eui_PCamere_VisMeseIndietro.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_PCamere_VisMeseIndietro.LargeImages.Images"), System.Drawing.Image))})
-      Me.eui_PCamere_VisMeseIndietro.Location = New System.Drawing.Point(172, 2)
+      Me.eui_PCamere_VisMeseIndietro.Location = New System.Drawing.Point(152, 74)
       Me.eui_PCamere_VisMeseIndietro.Name = "eui_PCamere_VisMeseIndietro"
       Me.eui_PCamere_VisMeseIndietro.ScreenTip.Caption = "Importa dati"
       Me.eui_PCamere_VisMeseIndietro.ScreenTip.Text = "Apre la finestra per l'importazione dei dati dal gestionale Amica."
-      Me.eui_PCamere_VisMeseIndietro.Size = New System.Drawing.Size(54, 72)
+      Me.eui_PCamere_VisMeseIndietro.Size = New System.Drawing.Size(93, 0)
       Me.eui_PCamere_VisMeseIndietro.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_PCamere_VisMeseIndietro.SmallImages.Images"), System.Drawing.Image))})
       Me.eui_PCamere_VisMeseIndietro.TabIndex = 4
       Me.eui_PCamere_VisMeseIndietro.Text = "Indietro di 1 Mese"
@@ -3146,11 +3150,11 @@ Friend Class frmMain
       '
       Me.eui_PCamere_VisMeseAvanti.Id = "a07fa684-49f9-4e71-a481-721aaedd6c51"
       Me.eui_PCamere_VisMeseAvanti.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_PCamere_VisMeseAvanti.LargeImages.Images"), System.Drawing.Image))})
-      Me.eui_PCamere_VisMeseAvanti.Location = New System.Drawing.Point(228, 2)
+      Me.eui_PCamere_VisMeseAvanti.Location = New System.Drawing.Point(152, 74)
       Me.eui_PCamere_VisMeseAvanti.Name = "eui_PCamere_VisMeseAvanti"
       Me.eui_PCamere_VisMeseAvanti.ScreenTip.Caption = "Importa dati"
       Me.eui_PCamere_VisMeseAvanti.ScreenTip.Text = "Apre la finestra per l'importazione dei dati dal gestionale Amica."
-      Me.eui_PCamere_VisMeseAvanti.Size = New System.Drawing.Size(51, 72)
+      Me.eui_PCamere_VisMeseAvanti.Size = New System.Drawing.Size(88, 0)
       Me.eui_PCamere_VisMeseAvanti.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_PCamere_VisMeseAvanti.SmallImages.Images"), System.Drawing.Image))})
       Me.eui_PCamere_VisMeseAvanti.TabIndex = 5
       Me.eui_PCamere_VisMeseAvanti.Text = "Avanti di 1 Mese"
@@ -3158,7 +3162,7 @@ Friend Class frmMain
       'Separator14
       '
       Me.Separator14.Id = "e627ef79-b7b2-4d52-bcc3-e75307efc5a4"
-      Me.Separator14.Location = New System.Drawing.Point(282, 6)
+      Me.Separator14.Location = New System.Drawing.Point(248, 6)
       Me.Separator14.Name = "Separator14"
       Me.Separator14.Size = New System.Drawing.Size(3, 61)
       Me.Separator14.TabIndex = 5
@@ -3169,11 +3173,11 @@ Friend Class frmMain
       '
       Me.eui_PCamere_VisGiorniMeno.Id = "c8f23e76-9431-4a15-a34a-ed4e09f758ca"
       Me.eui_PCamere_VisGiorniMeno.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_PCamere_VisGiorniMeno.LargeImages.Images"), System.Drawing.Image))})
-      Me.eui_PCamere_VisGiorniMeno.Location = New System.Drawing.Point(288, 2)
+      Me.eui_PCamere_VisGiorniMeno.Location = New System.Drawing.Point(247, 74)
       Me.eui_PCamere_VisGiorniMeno.Name = "eui_PCamere_VisGiorniMeno"
       Me.eui_PCamere_VisGiorniMeno.ScreenTip.Caption = "Importa dati"
       Me.eui_PCamere_VisGiorniMeno.ScreenTip.Text = "Apre la finestra per l'importazione dei dati dal gestionale Amica."
-      Me.eui_PCamere_VisGiorniMeno.Size = New System.Drawing.Size(50, 72)
+      Me.eui_PCamere_VisGiorniMeno.Size = New System.Drawing.Size(81, 0)
       Me.eui_PCamere_VisGiorniMeno.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_PCamere_VisGiorniMeno.SmallImages.Images"), System.Drawing.Image))})
       Me.eui_PCamere_VisGiorniMeno.TabIndex = 6
       Me.eui_PCamere_VisGiorniMeno.Text = "Meno 15 Giorni"
@@ -3183,11 +3187,11 @@ Friend Class frmMain
       '
       Me.eui_PCamere_VisGiorniPiù.Id = "0894fe18-fd6f-4f58-ac2e-66db5e2f0c80"
       Me.eui_PCamere_VisGiorniPiù.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_PCamere_VisGiorniPiù.LargeImages.Images"), System.Drawing.Image))})
-      Me.eui_PCamere_VisGiorniPiù.Location = New System.Drawing.Point(340, 2)
+      Me.eui_PCamere_VisGiorniPiù.Location = New System.Drawing.Point(247, 74)
       Me.eui_PCamere_VisGiorniPiù.Name = "eui_PCamere_VisGiorniPiù"
       Me.eui_PCamere_VisGiorniPiù.ScreenTip.Caption = "Importa dati"
       Me.eui_PCamere_VisGiorniPiù.ScreenTip.Text = "Apre la finestra per l'importazione dei dati dal gestionale Amica."
-      Me.eui_PCamere_VisGiorniPiù.Size = New System.Drawing.Size(42, 72)
+      Me.eui_PCamere_VisGiorniPiù.Size = New System.Drawing.Size(69, 0)
       Me.eui_PCamere_VisGiorniPiù.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_PCamere_VisGiorniPiù.SmallImages.Images"), System.Drawing.Image))})
       Me.eui_PCamere_VisGiorniPiù.TabIndex = 7
       Me.eui_PCamere_VisGiorniPiù.Text = "Più 15 Giorni"
@@ -3203,7 +3207,7 @@ Friend Class frmMain
       Me.eui_Gestione.KeyTip = "G"
       Me.eui_Gestione.Location = New System.Drawing.Point(0, 0)
       Me.eui_Gestione.Name = "eui_Gestione"
-      Me.eui_Gestione.Size = New System.Drawing.Size(1308, 99)
+      Me.eui_Gestione.Size = New System.Drawing.Size(1356, 99)
       Me.eui_Gestione.TabIndex = 0
       Me.eui_Gestione.Text = "Gestione"
       '
@@ -4971,10 +4975,10 @@ Friend Class frmMain
       Me.eui_sbrMain.ControlsArea = Me.StatusBarControlsArea1
       Me.eui_sbrMain.Dock = System.Windows.Forms.DockStyle.Bottom
       Me.eui_sbrMain.ForeColor = System.Drawing.SystemColors.ControlText
-      Me.eui_sbrMain.Location = New System.Drawing.Point(0, 529)
+      Me.eui_sbrMain.Location = New System.Drawing.Point(0, 727)
       Me.eui_sbrMain.Name = "eui_sbrMain"
       Me.eui_sbrMain.NotificationsArea = Me.StatusBarNotificationsArea1
-      Me.eui_sbrMain.Size = New System.Drawing.Size(1308, 22)
+      Me.eui_sbrMain.Size = New System.Drawing.Size(1356, 22)
       Me.eui_sbrMain.TabIndex = 20
       '
       'StatusBarNotificationsArea1
@@ -4986,7 +4990,7 @@ Friend Class frmMain
       Me.StatusBarNotificationsArea1.MaximumSize = New System.Drawing.Size(0, 22)
       Me.StatusBarNotificationsArea1.MinimumSize = New System.Drawing.Size(0, 22)
       Me.StatusBarNotificationsArea1.Name = "StatusBarNotificationsArea1"
-      Me.StatusBarNotificationsArea1.Size = New System.Drawing.Size(888, 22)
+      Me.StatusBarNotificationsArea1.Size = New System.Drawing.Size(892, 22)
       Me.StatusBarNotificationsArea1.TabIndex = 1
       Me.StatusBarNotificationsArea1.Text = "Prova 2"
       '
@@ -5060,12 +5064,13 @@ Friend Class frmMain
       Me.StatusBarControlsArea1.Controls.Add(Me.StatusBarPane3)
       Me.StatusBarControlsArea1.Controls.Add(Me.StatusBarPane4)
       Me.StatusBarControlsArea1.Controls.Add(Me.StatusBarPane6)
+      Me.StatusBarControlsArea1.Controls.Add(Me.StatusBarPane2)
       Me.StatusBarControlsArea1.Dock = System.Windows.Forms.DockStyle.Right
-      Me.StatusBarControlsArea1.Location = New System.Drawing.Point(888, 0)
+      Me.StatusBarControlsArea1.Location = New System.Drawing.Point(892, 0)
       Me.StatusBarControlsArea1.MaximumSize = New System.Drawing.Size(0, 22)
       Me.StatusBarControlsArea1.MinimumSize = New System.Drawing.Size(0, 22)
       Me.StatusBarControlsArea1.Name = "StatusBarControlsArea1"
-      Me.StatusBarControlsArea1.Size = New System.Drawing.Size(420, 22)
+      Me.StatusBarControlsArea1.Size = New System.Drawing.Size(464, 22)
       Me.StatusBarControlsArea1.TabIndex = 0
       Me.StatusBarControlsArea1.Text = "Prova"
       '
@@ -5207,6 +5212,31 @@ Friend Class frmMain
       Me.eui_cmdData.TabIndex = 0
       Me.eui_cmdData.Text = "Data"
       '
+      'StatusBarPane2
+      '
+      Me.StatusBarPane2.Controls.Add(Me.eui_picAggiornamenti)
+      Me.StatusBarPane2.Location = New System.Drawing.Point(368, 0)
+      Me.StatusBarPane2.MaximumSize = New System.Drawing.Size(0, 22)
+      Me.StatusBarPane2.MinimumSize = New System.Drawing.Size(0, 22)
+      Me.StatusBarPane2.Name = "StatusBarPane2"
+      Me.StatusBarPane2.Size = New System.Drawing.Size(44, 22)
+      Me.StatusBarPane2.TabIndex = 4
+      '
+      'eui_picAggiornamenti
+      '
+      Me.eui_picAggiornamenti.Image = CType(resources.GetObject("eui_picAggiornamenti.Image"), System.Drawing.Image)
+      Me.eui_picAggiornamenti.Location = New System.Drawing.Point(2, 3)
+      Me.eui_picAggiornamenti.Name = "eui_picAggiornamenti"
+      Me.eui_picAggiornamenti.ScreenTip.Caption = "Aggiornamenti"
+      Me.eui_picAggiornamenti.ScreenTip.Text = "E' disponibile una nuova versione del software. Visitare il sito Internet www.mon" &
+    "tanasoftware.it." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+      Me.eui_picAggiornamenti.Size = New System.Drawing.Size(16, 16)
+      Me.eui_picAggiornamenti.SizeMode = Elegant.Ui.PictureBoxSizeMode.StretchImage
+      Me.eui_picAggiornamenti.TabIndex = 2
+      Me.eui_picAggiornamenti.TabStop = False
+      Me.eui_picAggiornamenti.Text = "PictureBox20"
+      Me.eui_picAggiornamenti.Visible = False
+      '
       'NavigationBarItem6
       '
       Me.NavigationBarItem6.Id = "38e77737-afd9-4b4a-b37b-6de24a64ee1a"
@@ -5291,7 +5321,7 @@ Friend Class frmMain
       '
       Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
       Me.BackColor = System.Drawing.Color.White
-      Me.ClientSize = New System.Drawing.Size(1308, 551)
+      Me.ClientSize = New System.Drawing.Size(1356, 749)
       Me.Controls.Add(Me.eui_BackstageView1)
       Me.Controls.Add(Me.eui_File)
       Me.Controls.Add(Me.eui_sbrMain)
@@ -5305,14 +5335,6 @@ Friend Class frmMain
       CType(Me.picProg, System.ComponentModel.ISupportInitialize).EndInit()
       CType(Me.eui_File, System.ComponentModel.ISupportInitialize).EndInit()
       CType(Me.eui_BackstageView1, System.ComponentModel.ISupportInitialize).EndInit()
-      Me.eui_GestioneModuli.ResumeLayout(False)
-      Me.eui_Info.ResumeLayout(False)
-      Me.eui_Info.PerformLayout()
-      CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
-      CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
-      CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
-      CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
-      CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
       Me.eui_Guida.ResumeLayout(False)
       Me.BackstageViewPage1.ResumeLayout(False)
       Me.BackstageViewPage1.PerformLayout()
@@ -5325,6 +5347,14 @@ Friend Class frmMain
       CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
       CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
       CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
+      Me.eui_Info.ResumeLayout(False)
+      Me.eui_Info.PerformLayout()
+      CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
+      CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
+      CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
+      CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
+      CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
+      Me.eui_GestioneModuli.ResumeLayout(False)
       CType(Me.eui_StrumentiModifica, System.ComponentModel.ISupportInitialize).EndInit()
       Me.eui_StrumentiModifica.ResumeLayout(False)
       Me.eui_StrumentiModifica.PerformLayout()
@@ -5497,6 +5527,7 @@ Friend Class frmMain
       Me.StatusBarPane4.PerformLayout()
       Me.StatusBarPane6.ResumeLayout(False)
       Me.StatusBarPane6.PerformLayout()
+      Me.StatusBarPane2.ResumeLayout(False)
       CType(Me.PopupMenu7, System.ComponentModel.ISupportInitialize).EndInit()
       CType(Me.PopupMenu8, System.ComponentModel.ISupportInitialize).EndInit()
       CType(Me.PopupMenu9, System.ComponentModel.ISupportInitialize).EndInit()
@@ -5513,3046 +5544,2789 @@ Friend Class frmMain
 #Region "Dichiarazioni"
 
    Const NOME_TABELLA_AZIENDA As String = "Azienda"
-    Const NOME_TABELLA_PREN As String = "Prenotazioni"
-    Const NOME_TABELLA As String = "Operazioni"
-    Const ANA_TAVOLI As String = "Tavoli"
+   Const NOME_TABELLA_PREN As String = "Prenotazioni"
+   Const NOME_TABELLA As String = "Operazioni"
+   Const ANA_TAVOLI As String = "Tavoli"
 
-    Const NOME_CMD_ATTIVA_MODULO As String = "Attiva modulo"
-    Const NOME_CMD_DISATTIVA_MODULO As String = "Disattiva modulo"
-    Const NOME_CMD_ATTIVA_PRODOTTO As String = "Attiva prodotto"
-    Const NOME_CMD_DISATTIVA_PRODOTTO As String = "Disattiva prodotto"
+   Const NOME_CMD_ATTIVA_MODULO As String = "Attiva modulo"
+   Const NOME_CMD_DISATTIVA_MODULO As String = "Disattiva modulo"
+   Const NOME_CMD_ATTIVA_PRODOTTO As String = "Attiva prodotto"
+   Const NOME_CMD_DISATTIVA_PRODOTTO As String = "Disattiva prodotto"
 
-    Const MSG_ATTIVA_PRODOTTO As String = "Procedendo con l'operazione verrà attivato il prodotto o modulo selezionato e aggiunte ulteriori funzionalità al software. Procedere?"
-    Const MSG_DISATTIVA_PRODOTTO As String = "Procedendo con l'operazione verrà disattivato il prodotto o modulo selezionato e rimosse le relative funzionalità al software. Procedere?"
-    Const MSG_RIMOSSI_TUTTI_PRODOTTI As String = "Sono stati rimossi tutti i prodotti, per utilizzare nuovamente il software è necessario inserire almeno un codice di attivazione per il prodotto desiderato."
-    Const MSG_PRODOTTO_DISATTIVATO As String = "Il modulo o prodotto è stato disattivato!"
-    Const MSG_PRODOTTO_NON_DISPONIBILE As String = "Il prodotto non può essere attivato perchè non ancora disponibile!"
-    Const MSG_ATTIVARE_IL_PRODOTTO As String = "Il modulo non può essere attivato! E' necessario attivare prima il prodotto "
-    Const MSG_ATTIVARE_UN_PRODOTTO As String = "Il modulo non può essere attivato! E' necessario attivare prima un prodotto."
+   Const MSG_ATTIVA_PRODOTTO As String = "Procedendo con l'operazione verrà attivato il prodotto o modulo selezionato e aggiunte ulteriori funzionalità al software. Procedere?"
+   Const MSG_DISATTIVA_PRODOTTO As String = "Procedendo con l'operazione verrà disattivato il prodotto o modulo selezionato e rimosse le relative funzionalità al software. Procedere?"
+   Const MSG_RIMOSSI_TUTTI_PRODOTTI As String = "Sono stati rimossi tutti i prodotti, per utilizzare nuovamente il software è necessario inserire almeno un codice di attivazione per il prodotto desiderato."
+   Const MSG_PRODOTTO_DISATTIVATO As String = "Il modulo o prodotto è stato disattivato!"
+   Const MSG_PRODOTTO_NON_DISPONIBILE As String = "Il prodotto non può essere attivato perchè non ancora disponibile!"
+   Const MSG_ATTIVARE_IL_PRODOTTO As String = "Il modulo non può essere attivato! E' necessario attivare prima il prodotto "
+   Const MSG_ATTIVARE_UN_PRODOTTO As String = "Il modulo non può essere attivato! E' necessario attivare prima un prodotto."
 
-    Public Const TESTO_FILTRO_PERIODO As String = "Dal... Al..."
+   Public Const TESTO_FILTRO_PERIODO As String = "Dal... Al..."
 
-    Private DatiConfig As AppConfig
-    Private Pwd As String
-    Private impostaListaModuli As Boolean = False
+   Private DatiConfig As AppConfig
+   Private Pwd As String
+   Private impostaListaModuli As Boolean = False
 
 #End Region
 
 #Region "Procedure per Tavoloso"
 
-    Public Sub LeggiFilePrenTavoloso(ByVal abilita As Boolean)
-        Try
-            Const NOME_FILE_PREN As String = "tvlagt*"
-            If abilita = False Then
-                Exit Sub
+   Public Sub LeggiFilePrenTavoloso(ByVal abilita As Boolean)
+      Try
+         Const NOME_FILE_PREN As String = "tvlagt*"
+         If abilita = False Then
+            Exit Sub
+         End If
+
+         Dim riga As String
+         Dim fileComandi() As String
+
+         ' Controlla se ci sono file da leggere.
+         fileComandi = Directory.GetFiles(PercorsoCartellaTavAgent, NOME_FILE_PREN)
+
+         ' Se non ci sono file da leggere...
+         If fileComandi.Length = 0 Then
+            Exit Sub
+         End If
+
+         Timer2.Enabled = False
+
+         Array.Sort(fileComandi)
+
+         Dim i As Integer
+         For i = 0 To fileComandi.Length - 1
+            If File.Exists(fileComandi(i)) = True Then
+               Dim leggiFile As New StreamReader(fileComandi(i))
+               Dim datiRiga As String() = Nothing
+
+               Do While leggiFile.Peek >= 0
+                  riga = leggiFile.ReadLine()
+
+                  ' Altrimenti vengono identificati i dati.
+                  datiRiga = riga.Split(vbTab)
+               Loop
+
+               ' Salva i dati nel database.
+               Dim campiPren(8) As String
+               Dim y As Integer
+               For y = 0 To datiRiga.Length - 1
+                  campiPren(y) = datiRiga(y)
+               Next
+
+               If SalvaPrenTavoloso(campiPren(0), campiPren(1), campiPren(2), campiPren(3), campiPren(4), campiPren(5), campiPren(6), campiPren(7), campiPren(8)) = True Then
+                  If IsNothing(g_frmPren) = False Then
+                     ' Aggiorna la griglia dati.
+                     g_frmPren.AggiornaDati()
+                  End If
+
+                  leggiFile.Close()
+
+                  ' Se il file è stato letto correttamente lo cancella. 
+                  If File.Exists(fileComandi(i)) = True Then
+                     File.Delete(fileComandi(i))
+                  End If
+               End If
             End If
+         Next
 
-            Dim riga As String
-            Dim fileComandi() As String
+         ' Riproduce un effetto sonoro.
+         If EffettoSonoroPren = True Then
+            RiproduciEffettoSonoro(My.Resources.notifica_Prenotazioni, EffettoSonoroPren)
+         End If
 
-            ' Controlla se ci sono file da leggere.
-            fileComandi = Directory.GetFiles(PercorsoCartellaTavAgent, NOME_FILE_PREN)
+         ' Visualizza un messaggio nella barra di stato.
+         Me.eui_Informazioni.Text = "Sono arrivate nuove prenotazioni!"
 
-            ' Se non ci sono file da leggere...
-            If fileComandi.Length = 0 Then
-                Exit Sub
-            End If
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-            Timer2.Enabled = False
+      Finally
+         Timer2.Enabled = True
+      End Try
+   End Sub
 
-            Array.Sort(fileComandi)
+   Public Function LeggiPrimoIdRisorsa(ByVal tabella As String) As Integer
+      ' Dichiara un oggetto connessione.
+      Dim cn As New OleDbConnection(ConnString)
 
-            Dim i As Integer
-            For i = 0 To fileComandi.Length - 1
-                If File.Exists(fileComandi(i)) = True Then
-                    Dim leggiFile As New StreamReader(fileComandi(i))
-                    Dim datiRiga As String() = Nothing
+      Try
+         cn.Open()
 
-                    Do While leggiFile.Peek >= 0
-                        riga = leggiFile.ReadLine()
+         Dim cmd As New OleDbCommand("SELECT MIN(Id) FROM " & tabella, cn)
+         Return Convert.ToInt32(cmd.ExecuteScalar())
 
-                        ' Altrimenti vengono identificati i dati.
-                        datiRiga = riga.Split(vbTab)
-                    Loop
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-                    ' Salva i dati nel database.
-                    Dim campiPren(8) As String
-                    Dim y As Integer
-                    For y = 0 To datiRiga.Length - 1
-                        campiPren(y) = datiRiga(y)
-                    Next
+      Finally
+         cn.Close()
 
-                    If SalvaPrenTavoloso(campiPren(0), campiPren(1), campiPren(2), campiPren(3), campiPren(4), campiPren(5), campiPren(6), campiPren(7), campiPren(8)) = True Then
-                        If IsNothing(g_frmPren) = False Then
-                            ' Aggiorna la griglia dati.
-                            g_frmPren.AggiornaDati()
-                        End If
+      End Try
+   End Function
 
-                        leggiFile.Close()
+   Public Function LeggiPrimaDescrizioneRisorsa(ByVal tabella As String, ByVal Id As Integer) As String
+      ' Dichiara un oggetto connessione.
+      Dim cn As New OleDbConnection(ConnString)
 
-                        ' Se il file è stato letto correttamente lo cancella. 
-                        If File.Exists(fileComandi(i)) = True Then
-                            File.Delete(fileComandi(i))
-                        End If
-                    End If
-                End If
-            Next
+      Try
+         cn.Open()
 
-            ' Riproduce un effetto sonoro.
-            If EffettoSonoroPren = True Then
-                RiproduciEffettoSonoro(My.Resources.notifica_Prenotazioni, EffettoSonoroPren)
-            End If
+         Dim cmd As New OleDbCommand("SELECT * FROM " & tabella & " WHERE Id = " & Id, cn)
+         Dim dr As OleDbDataReader = cmd.ExecuteReader()
 
-            ' Visualizza un messaggio nella barra di stato.
-            Me.eui_Informazioni.Text = "Sono arrivate nuove prenotazioni!"
+         Do While dr.Read
+            Return dr.Item("Descrizione")
+         Loop
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-        Finally
-            Timer2.Enabled = True
-        End Try
-    End Sub
+      Finally
+         cn.Close()
 
-    Public Function LeggiPrimoIdRisorsa(ByVal tabella As String) As Integer
-        ' Dichiara un oggetto connessione.
-        Dim cn As New OleDbConnection(ConnString)
+      End Try
+   End Function
 
-        Try
-            cn.Open()
-
-            Dim cmd As New OleDbCommand("SELECT MIN(Id) FROM " & tabella, cn)
-            Return Convert.ToInt32(cmd.ExecuteScalar())
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-
-        Finally
-            cn.Close()
-
-        End Try
-    End Function
-
-    Public Function LeggiPrimaDescrizioneRisorsa(ByVal tabella As String, ByVal Id As Integer) As String
-        ' Dichiara un oggetto connessione.
-        Dim cn As New OleDbConnection(ConnString)
-
-        Try
-            cn.Open()
-
-            Dim cmd As New OleDbCommand("SELECT * FROM " & tabella & " WHERE Id = " & Id, cn)
-            Dim dr As OleDbDataReader = cmd.ExecuteReader()
-
-            Do While dr.Read
-                Return dr.Item("Descrizione")
-            Loop
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-
-        Finally
-            cn.Close()
-
-        End Try
-    End Function
-
-    Private Function SalvaPrenTavoloso(ByVal idPren As String, ByVal cognomeCliente As String, ByVal nomeCliente As String, ByVal telefono As String, ByVal eMail As String,
+   Private Function SalvaPrenTavoloso(ByVal idPren As String, ByVal cognomeCliente As String, ByVal nomeCliente As String, ByVal telefono As String, ByVal eMail As String,
                               ByVal dataPren As String, ByVal oraPren As String, ByVal numPersone As String, ByVal note As String) As Boolean
-        Try
-            Dim IPren As New Prenotazione
+      Try
+         Dim IPren As New Prenotazione
 
-            With IPren
-                ' Assegna i dati dei campi della classe alle caselle di testo.
+         With IPren
+            ' Assegna i dati dei campi della classe alle caselle di testo.
 
-                ' ID prenotazione da Tavoloso. Non viene utilizzata!
-                .IdPren = idPren
+            ' ID prenotazione da Tavoloso. Non viene utilizzata!
+            .IdPren = idPren
 
-                ' Data prenotazione.
-                .Data = FormattaData(Convert.ToDateTime(dataPren), True)
+            ' Data prenotazione.
+            .Data = FormattaData(Convert.ToDateTime(dataPren), True)
 
-                ' Nome cliente.
-                .Cliente = FormattaApici(cognomeCliente) & " " & FormattaApici(nomeCliente)
+            ' Nome cliente.
+            .Cliente = FormattaApici(cognomeCliente) & " " & FormattaApici(nomeCliente)
 
-                ' Telefono.
-                .Telefono = telefono
+            ' Telefono.
+            .Telefono = telefono
 
-                ' E-mail.
-                .eMail = eMail
+            ' E-mail.
+            .eMail = eMail
 
-                ' Dati del Tavolo. Per Tavoloso non vengono inseriti.
-                .IdRisorsa = LeggiPrimoIdRisorsa(ANA_TAVOLI)
-                .DescrizioneRisorsa = LeggiPrimaDescrizioneRisorsa(ANA_TAVOLI, .IdRisorsa)
+            ' Dati del Tavolo. Per Tavoloso non vengono inseriti.
+            .IdRisorsa = LeggiPrimoIdRisorsa(ANA_TAVOLI)
+            .DescrizioneRisorsa = LeggiPrimaDescrizioneRisorsa(ANA_TAVOLI, .IdRisorsa)
 
-                'Numero persone.
-                .Persone = numPersone
+            'Numero persone.
+            .Persone = numPersone
 
-                ' Ora prenotazione.
-                Dim timeInizio As DateTime = Convert.ToDateTime(oraPren)
-                Dim timeFine As DateTime = timeInizio.AddMinutes(30)
-                .OraInizio = RimuoviSecondi(oraPren)
-                .OraFine = timeFine.Hour.ToString & ":" & timeFine.Minute.ToString
+            ' Ora prenotazione.
+            Dim timeInizio As DateTime = Convert.ToDateTime(oraPren)
+            Dim timeFine As DateTime = timeInizio.AddMinutes(30)
+            .OraInizio = RimuoviSecondi(oraPren)
+            .OraFine = timeFine.Hour.ToString & ":" & timeFine.Minute.ToString
 
-                ' Note.
-                .Note = FormattaApici(note)
+            ' Note.
+            .Note = FormattaApici(note)
 
-                ' Colore.
-                If .Colore = 0 Then
-                    .Colore = Convert.ToInt32(ColorePrenTavAgent.ToArgb)
-                End If
+            ' Colore.
+            If .Colore = 0 Then
+               .Colore = Convert.ToInt32(ColorePrenTavAgent.ToArgb)
+            End If
 
-                Return .InserisciDati(NOME_TABELLA_PREN)
-            End With
+            Return .InserisciDati(NOME_TABELLA_PREN)
+         End With
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-        End Try
-    End Function
+      End Try
+   End Function
 
 
 #End Region
 
 #Region "Procedure"
 
-    Private Sub LeggiDatiConfig()
-        Try
-            ' Nel caso la directory corrente venga cambiata.
-            Environment.CurrentDirectory = Application.StartupPath
+   Private Sub LeggiDatiConfig()
+      Try
+         ' Nel caso la directory corrente venga cambiata.
+         Environment.CurrentDirectory = Application.StartupPath
 
-            If DatiConfig.GetValue("NomePostazione") = String.Empty Then
-                eui_cmdPostazione.Text = "P0001"
-                eui_cmdPostazione.ScreenTip.Text = "Postazione di lavoro"
-            Else
-                eui_cmdPostazione.Text = DatiConfig.GetValue("NomePostazione")
-                eui_cmdPostazione.ScreenTip.Text = DatiConfig.GetValue("DescrizionePostazione")
-            End If
+         If DatiConfig.GetValue("NomePostazione") = String.Empty Then
+            eui_cmdPostazione.Text = "P0001"
+            eui_cmdPostazione.ScreenTip.Text = "Postazione di lavoro"
+         Else
+            eui_cmdPostazione.Text = DatiConfig.GetValue("NomePostazione")
+            eui_cmdPostazione.ScreenTip.Text = DatiConfig.GetValue("DescrizionePostazione")
+         End If
 
-            If DatiConfig.GetValue(Modulo.NOME_PENDRIVE_PORTABLE_CONFIG) = String.Empty Then
-                PercorsoDB = DatiConfig.GetValue("PercorsoDB")
-                If PercorsoDB.Length = 0 Then
-                    PercorsoDB = Application.StartupPath & PERCORSO_DB
-
-                ElseIf File.Exists(PercorsoDB) = False Then
-                    ' In caso di Recovery su computer diversi dall'installazione imposta il percoso di base per evitare errori.
-                    PercorsoDB = Application.StartupPath & PERCORSO_DB
-                End If
-
-                PercorsoDBClienti = DatiConfig.GetValue("PercorsoDBClienti")
-                If PercorsoDBClienti.Length = 0 Then
-                    PercorsoDBClienti = Application.StartupPath & PERCORSO_DB_CLIENTI
-
-                ElseIf File.Exists(PercorsoDBClienti) = False Then
-                    ' In caso di Recovery su computer diversi dall'installazione imposta il percoso di base per evitare errori.
-                    PercorsoDBClienti = Application.StartupPath & PERCORSO_DB_CLIENTI
-                End If
-
-                PercorsoBKP = DatiConfig.GetValue("PercorsoBKP")
-                If PercorsoBKP.Length = 0 Then
-                    PercorsoBKP = Application.StartupPath & PERCORSO_BKP
-
-                ElseIf File.Exists(PercorsoBKP) = False Then
-                    ' In caso di Recovery su computer diversi dall'installazione imposta il percoso di base per evitare errori.
-                    PercorsoBKP = Application.StartupPath & PERCORSO_BKP
-                End If
-
-            Else
-                PercorsoDB = Application.StartupPath & PERCORSO_DB
-                PercorsoDBClienti = Application.StartupPath & PERCORSO_DB_CLIENTI
-                PercorsoBKP = Application.StartupPath & PERCORSO_BKP
-
-            End If
-
-            If DatiConfig.GetValue("SalvaBKP") <> "" Then
-                SalvaBKP = DatiConfig.GetValue("SalvaBKP")
-            Else
-                SalvaBKP = True
-            End If
-
-            dimPagina = CInt(DatiConfig.GetValue("NumElememti"))
-
-            If DatiConfig.GetValue("WindowState") = CStr(FormWindowState.Maximized) Then
-                Me.WindowState = FormWindowState.Maximized
-            Else
-                If DatiConfig.GetValue("AMain") <> "" Then
-                    Me.Height = CInt(DatiConfig.GetValue("AMain"))
-                Else
-                    Me.Height = FORM_MAIN_ALTEZZA
-                End If
-
-                If DatiConfig.GetValue("LMain") <> "" Then
-                    Me.Width = CInt(DatiConfig.GetValue("LMain"))
-                Else
-                    Me.Width = FORM_MAIN_LARGHEZZA
-                End If
-
-                If DatiConfig.GetValue("MainX") <> "" Then
-                    Me.Location = New Point(CInt(DatiConfig.GetValue("MainX")), Me.Location.Y)
-                Else
-                    Me.CenterToScreen()
-                End If
-
-                If DatiConfig.GetValue("MainY") <> "" Then
-                    Me.Location = New Point(Me.Location.X, CInt(DatiConfig.GetValue("MainY")))
-                Else
-                    Me.CenterToScreen()
-                End If
-            End If
-
-            Dim reparto As String
-            Dim stampante As String
-            Dim report As String
-            ' Comanda - Percorso 1.
-            reparto = DatiConfig.GetValue("Reparto1")
-            If reparto.Length = 0 Then
-                reparto = "Nessuno"
-            End If
-            stampante = DatiConfig.GetValue("PercorsoStampaComanda1")
-            If stampante.Length = 0 Then
-                stampante = "Nessuna"
-            End If
-            report = DatiConfig.GetValue("ReportComanda1")
-            If report.Length = 0 Then
-                report = String.Empty
-            End If
-            PercorsiStampantiComande(0) = reparto & ";" & stampante & ";" & report
-
-            ' Comanda - Percorso 2.
-            reparto = DatiConfig.GetValue("Reparto2")
-            If reparto.Length = 0 Then
-                reparto = "Nessuno"
-            End If
-            stampante = DatiConfig.GetValue("PercorsoStampaComanda2")
-            If stampante.Length = 0 Then
-                stampante = "Nessuna"
-            End If
-            report = DatiConfig.GetValue("ReportComanda2")
-            If report.Length = 0 Then
-                report = String.Empty
-            End If
-            PercorsiStampantiComande(1) = reparto & ";" & stampante & ";" & report
-
-            ' Comanda - Percorso 3.
-            reparto = DatiConfig.GetValue("Reparto3")
-            If reparto.Length = 0 Then
-                reparto = "Nessuno"
-            End If
-            stampante = DatiConfig.GetValue("PercorsoStampaComanda3")
-            If stampante.Length = 0 Then
-                stampante = "Nessuna"
-            End If
-            report = DatiConfig.GetValue("ReportComanda3")
-            If report.Length = 0 Then
-                report = String.Empty
-            End If
-            PercorsiStampantiComande(2) = reparto & ";" & stampante & ";" & report
-
-            ' Comanda - Percorso 4.
-            reparto = DatiConfig.GetValue("Reparto4")
-            If reparto.Length = 0 Then
-                reparto = "Nessuno"
-            End If
-            stampante = DatiConfig.GetValue("PercorsoStampaComanda4")
-            If stampante.Length = 0 Then
-                stampante = "Nessuna"
-            End If
-            report = DatiConfig.GetValue("ReportComanda4")
-            If report.Length = 0 Then
-                report = String.Empty
-            End If
-            PercorsiStampantiComande(3) = reparto & ";" & stampante & ";" & report
-
-            ' Comanda - Percorso 5.
-            reparto = DatiConfig.GetValue("Reparto5")
-            If reparto.Length = 0 Then
-                reparto = "Nessuno"
-            End If
-            stampante = DatiConfig.GetValue("PercorsoStampaComanda5")
-            If stampante.Length = 0 Then
-                stampante = "Nessuna"
-            End If
-            report = DatiConfig.GetValue("ReportComanda5")
-            If report.Length = 0 Then
-                report = String.Empty
-            End If
-            PercorsiStampantiComande(4) = reparto & ";" & stampante & ";" & report
-
-            ' Comanda - Percorso 6.
-            reparto = DatiConfig.GetValue("Reparto6")
-            If reparto.Length = 0 Then
-                reparto = "Nessuno"
-            End If
-            stampante = DatiConfig.GetValue("PercorsoStampaComanda6")
-            If stampante.Length = 0 Then
-                stampante = "Nessuna"
-            End If
-            report = DatiConfig.GetValue("ReportComanda6")
-            If report.Length = 0 Then
-                report = String.Empty
-            End If
-            PercorsiStampantiComande(5) = reparto & ";" & stampante & ";" & report
-
-            ' Comanda - Percorso 7.
-            reparto = DatiConfig.GetValue("Reparto7")
-            If reparto.Length = 0 Then
-                reparto = "Nessuno"
-            End If
-            stampante = DatiConfig.GetValue("PercorsoStampaComanda7")
-            If stampante.Length = 0 Then
-                stampante = "Nessuna"
-            End If
-            report = DatiConfig.GetValue("ReportComanda7")
-            If report.Length = 0 Then
-                report = String.Empty
-            End If
-            PercorsiStampantiComande(6) = reparto & ";" & stampante & ";" & report
-
-            ' Comanda - Percorso 8.
-            reparto = DatiConfig.GetValue("Reparto8")
-            If reparto.Length = 0 Then
-                reparto = "Nessuno"
-            End If
-            stampante = DatiConfig.GetValue("PercorsoStampaComanda8")
-            If stampante.Length = 0 Then
-                stampante = "Nessuna"
-            End If
-            report = DatiConfig.GetValue("ReportComanda8")
-            If report.Length = 0 Then
-                report = String.Empty
-            End If
-            PercorsiStampantiComande(7) = reparto & ";" & stampante & ";" & report
-
-            ' Comanda - Percorso 9.
-            reparto = DatiConfig.GetValue("Reparto9")
-            If reparto.Length = 0 Then
-                reparto = "Nessuno"
-            End If
-            stampante = DatiConfig.GetValue("PercorsoStampaComanda9")
-            If stampante.Length = 0 Then
-                stampante = "Nessuna"
-            End If
-            report = DatiConfig.GetValue("ReportComanda9")
-            If report.Length = 0 Then
-                report = String.Empty
-            End If
-            PercorsiStampantiComande(8) = reparto & ";" & stampante & ";" & report
-
-            ' Comanda - Percorso 10.
-            reparto = DatiConfig.GetValue("Reparto10")
-            If reparto.Length = 0 Then
-                reparto = "Nessuno"
-            End If
-            stampante = DatiConfig.GetValue("PercorsoStampaComanda10")
-            If stampante.Length = 0 Then
-                stampante = "Nessuna"
-            End If
-            report = DatiConfig.GetValue("ReportComanda10")
-            If report.Length = 0 Then
-                report = String.Empty
-            End If
-            PercorsiStampantiComande(9) = reparto & ";" & stampante & ";" & report
-
-            ' Comanda aggiuntiva.
-            stampante = DatiConfig.GetValue("PercorsoStampaComandaAgg")
-            If stampante.Length = 0 Then
-                stampante = "Nessuna"
-            End If
-            report = DatiConfig.GetValue("ReportComandaAgg")
-            If report.Length = 0 Then
-                report = String.Empty
-            End If
-            PercorsiStampantiComande(10) = "Agg" & ";" & stampante & ";" & report
-
-            ' Ricevuta.
-            stampante = DatiConfig.GetValue("PercorsoStampaRicevute")
-            If stampante.Length = 0 Then
-                stampante = "Nessuna"
-            End If
-            report = DatiConfig.GetValue("ReportRicevute")
-            If report.Length = 0 Then
-                report = String.Empty
-            End If
-            PercorsiStampantiDocumenti(0) = "RICEVUTA" & ";" & stampante & ";" & report
-
-            ' Fattura.
-            stampante = DatiConfig.GetValue("PercorsoStampaFatture")
-            If stampante.Length = 0 Then
-                stampante = "Nessuna"
-            End If
-            report = DatiConfig.GetValue("ReportFatture")
-            If report.Length = 0 Then
-                report = String.Empty
-            End If
-            PercorsiStampantiDocumenti(1) = "FATTURA" & ";" & stampante & ";" & report
-
-            ' Proforma.
-            stampante = DatiConfig.GetValue("PercorsoStampaProforma")
-            If stampante.Length = 0 Then
-                stampante = "Nessuna"
-            End If
-            report = DatiConfig.GetValue("ReportProforma")
-            If report.Length = 0 Then
-                report = String.Empty
-            End If
-            PercorsiStampantiDocumenti(2) = "PROFORMA" & ";" & stampante & ";" & report
-
-            ' Scontrino.
-            stampante = DatiConfig.GetValue("PercorsoStampaScontrini")
-            If stampante.Length = 0 Then
-                stampante = "Nessuna"
-            End If
-            report = DatiConfig.GetValue("ReportScontrini")
-            If report.Length = 0 Then
-                report = String.Empty
-            End If
-            PercorsiStampantiDocumenti(3) = "SCONTRINO" & ";" & stampante & ";" & report
-
-            ' SCHEDA STAMPANTI FISCALI
-
-            ProduttoreSF = DatiConfig.GetValue("ProduttoreSF")
-            If ProduttoreSF.Length = 0 Then
-                ProduttoreSF = ""
-            End If
-            ModelloSF = DatiConfig.GetValue("ModelloSF")
-            If ModelloSF.Length = 0 Then
-                ModelloSF = ""
-            End If
-
-            ' RCH Swing ECR A/65
-            PortaSF = DatiConfig.GetValue("PortaSF")
-            If PortaSF.Length = 0 Then
-                PortaSF = ""
-            End If
-            ParametriSF = DatiConfig.GetValue("ParametriSF")
-            If ParametriSF.Length = 0 Then
-                ParametriSF = ""
-            End If
-            NomeScontrinoSF = DatiConfig.GetValue("NomeScontrinoSF")
-            If NomeScontrinoSF.Length = 0 Then
-                NomeScontrinoSF = ""
-            End If
-            PercorsoOutputSF = DatiConfig.GetValue("PercorsoOutputSF")
-            If PercorsoOutputSF.Length = 0 Then
-                PercorsoOutputSF = ""
-            End If
-            PercorsoDriverSF = DatiConfig.GetValue("PercorsoDriverSF")
-            If PercorsoDriverSF.Length = 0 Then
-                PercorsoDriverSF = ""
-            End If
-
-            ' Driver RTS WPOS1.
-            PercorsoDriverWpos1 = DatiConfig.GetValue("PercorsoDriverWpos1")
-            If PercorsoDriverWpos1.Length = 0 Then
-                PercorsoDriverWpos1 = ""
-            End If
-
-            PercorsoLavoroWpos1 = DatiConfig.GetValue("PercorsoLavoroWpos1")
-            If PercorsoLavoroWpos1.Length = 0 Then
-                PercorsoLavoroWpos1 = ""
-            End If
-
-            PwdDriverWpos1 = DatiConfig.GetValue("PwdDriverWpos1")
-            If PwdDriverWpos1.Length = 0 Then
-                PwdDriverWpos1 = ""
-            End If
-            EstensioneFileWpos1 = DatiConfig.GetValue("EstensioneFileWpos1")
-            If EstensioneFileWpos1.Length = 0 Then
-                EstensioneFileWpos1 = ""
-            End If
-
-            ' DISPOSITIVO PALMARE
-            PercorsoRP = DatiConfig.GetValue("PercorsoRP")
-            If PercorsoRP.Length = 0 Then
-                PercorsoRP = ""
-            End If
-            If DatiConfig.GetValue("AbilitaPalmareWindows") <> "" Then
-                AbilitaPalmareWindows = DatiConfig.GetValue("AbilitaPalmareWindows")
-            Else
-                AbilitaPalmareWindows = False
-            End If
-            If DatiConfig.GetValue("AbilitaPalmareAndroid") <> "" Then
-                AbilitaPalmareAndroid = DatiConfig.GetValue("AbilitaPalmareAndroid")
-            Else
-                AbilitaPalmareAndroid = False
-            End If
-
-            FreqAggPalmare = Convert.ToInt16(DatiConfig.GetValue("FreqAggPalmare"))
-
-            ' SCHEDA BAR / RISTORANTE.
-
-            ' Aliquota IVA standard.
-            If DatiConfig.GetValue("AliquotaIvaRistorante") = String.Empty Then
-                AliquotaIvaRistorante = String.Empty
-            Else
-                AliquotaIvaRistorante = DatiConfig.GetValue("AliquotaIvaRistorante")
-            End If
-
-            ' Prezzo del Coperto.
-            If DatiConfig.GetValue("CopertoRistorante") = String.Empty Then
-                CopertoRistorante = VALORE_ZERO
-            Else
-                CopertoRistorante = DatiConfig.GetValue("CopertoRistorante")
-            End If
-
-            ' Percentuale per il Servizio.
-            If DatiConfig.GetValue("ServizioRistorante") = String.Empty Then
-                ServizioRistorante = VALORE_ZERO
-            Else
-                ServizioRistorante = DatiConfig.GetValue("ServizioRistorante")
-            End If
-
-            ' Effetti sonori per il Punto cassa.
-            If DatiConfig.GetValue("EffettiSonoriPOS") = String.Empty Then
-                EffettiSonoriPOS = True
-            Else
-                EffettiSonoriPOS = DatiConfig.GetValue("EffettiSonoriPOS")
-            End If
-
-            ' IMPOSTAZIONI PER LE PRENOTAZIONI DEI TAVOLI FATTE DA INTERNET. (WWW.TAVOLOSO.IT)
-
-            ' Percorso cartella di lavoro Tavoloso Agent.
-            If DatiConfig.GetValue("PercorsoCartellaTavAgent") <> String.Empty Then
-                PercorsoCartellaTavAgent = DatiConfig.GetValue("PercorsoCartellaTavAgent")
-            Else
-                PercorsoCartellaTavAgent = String.Empty
-            End If
-
-            ' Abilita ricezione delle prenotazioni.
-            If DatiConfig.GetValue("AbilitaRicezionePren") <> String.Empty Then
-                AbilitaRicezionePren = DatiConfig.GetValue("AbilitaRicezionePren")
-            Else
-                AbilitaRicezionePren = True
-            End If
-
-            ' Effetto sonoro per la notifica delle prenotazioni.
-            If DatiConfig.GetValue("EffettoSonoroPren") <> String.Empty Then
-                EffettoSonoroPren = DatiConfig.GetValue("EffettoSonoroPren")
-            Else
-                EffettoSonoroPren = True
-            End If
-
-            ' Colore della prenotazione.
-            If DatiConfig.GetValue("ColorePrenTavAgent") <> String.Empty Then
-                Dim colore As Integer = Convert.ToInt32(DatiConfig.GetValue("ColorePrenTavAgent"))
-                ColorePrenTavAgent = Color.FromArgb(colore)
-            Else
-                ColorePrenTavAgent = Color.White
-            End If
-
-            ' SCHEDA CENTRO SPORTIVO.
-
-            ' Aliquota IVA standard.
-            If DatiConfig.GetValue("AliquotaIvaCentroSportivo") = String.Empty Then
-                AliquotaIvaCentroSportivo = String.Empty
-            Else
-                AliquotaIvaCentroSportivo = DatiConfig.GetValue("AliquotaIvaCentroSportivo")
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-
-        Finally
-            If dimPagina = 0 Then
-                dimPagina = DIM_PAGINA
-            End If
-
-            If FreqAggPalmare = 0 Then
-                FreqAggPalmare = 15
-            End If
-        End Try
-    End Sub
-
-    Public Sub SalvaDatiConfig()
-        Try
-            ' Nel caso la directory corrente venga cambiata.
-            Environment.CurrentDirectory = Application.StartupPath
-
-            ' Salva il nome del prodotto attivo che viene letto nel form App_Load per impostare le immagini.
-            DatiConfig.SetValue("NomeProdotto", NOME_PRODOTTO)
-
+         If DatiConfig.GetValue(Modulo.NOME_PENDRIVE_PORTABLE_CONFIG) = String.Empty Then
+            PercorsoDB = DatiConfig.GetValue("PercorsoDB")
             If PercorsoDB.Length = 0 Then
-                DatiConfig.SetValue("PercorsoDB", Application.StartupPath & PERCORSO_DB)
-            Else
-                DatiConfig.SetValue("PercorsoDB", PercorsoDB)
+               PercorsoDB = Application.StartupPath & PERCORSO_DB
+
+            ElseIf File.Exists(PercorsoDB) = False Then
+               ' In caso di Recovery su computer diversi dall'installazione imposta il percoso di base per evitare errori.
+               PercorsoDB = Application.StartupPath & PERCORSO_DB
             End If
 
+            PercorsoDBClienti = DatiConfig.GetValue("PercorsoDBClienti")
             If PercorsoDBClienti.Length = 0 Then
-                DatiConfig.SetValue("PercorsoDBClienti", Application.StartupPath & PERCORSO_DB_CLIENTI)
+               PercorsoDBClienti = Application.StartupPath & PERCORSO_DB_CLIENTI
+
+            ElseIf File.Exists(PercorsoDBClienti) = False Then
+               ' In caso di Recovery su computer diversi dall'installazione imposta il percoso di base per evitare errori.
+               PercorsoDBClienti = Application.StartupPath & PERCORSO_DB_CLIENTI
+            End If
+
+            PercorsoBKP = DatiConfig.GetValue("PercorsoBKP")
+            If PercorsoBKP.Length = 0 Then
+               PercorsoBKP = Application.StartupPath & PERCORSO_BKP
+
+            ElseIf File.Exists(PercorsoBKP) = False Then
+               ' In caso di Recovery su computer diversi dall'installazione imposta il percoso di base per evitare errori.
+               PercorsoBKP = Application.StartupPath & PERCORSO_BKP
+            End If
+
+         Else
+            PercorsoDB = Application.StartupPath & PERCORSO_DB
+            PercorsoDBClienti = Application.StartupPath & PERCORSO_DB_CLIENTI
+            PercorsoBKP = Application.StartupPath & PERCORSO_BKP
+
+         End If
+
+         If DatiConfig.GetValue("SalvaBKP") <> "" Then
+            SalvaBKP = DatiConfig.GetValue("SalvaBKP")
+         Else
+            SalvaBKP = True
+         End If
+
+         dimPagina = CInt(DatiConfig.GetValue("NumElememti"))
+
+         If DatiConfig.GetValue("WindowState") = CStr(FormWindowState.Maximized) Then
+            Me.WindowState = FormWindowState.Maximized
+         Else
+            If DatiConfig.GetValue("AMain") <> "" Then
+               Me.Height = CInt(DatiConfig.GetValue("AMain"))
             Else
-                DatiConfig.SetValue("PercorsoDBClienti", PercorsoDBClienti)
+               Me.Height = FORM_MAIN_ALTEZZA
             End If
 
-            DatiConfig.SetValue("NumElememti", dimPagina)
-
-            DatiConfig.SetValue("WindowState", Me.WindowState)
-            DatiConfig.SetValue("MainX", Me.Location.X)
-            DatiConfig.SetValue("MainY", Me.Location.Y)
-            DatiConfig.SetValue("AMain", Me.Height)
-            DatiConfig.SetValue("LMain", Me.Width)
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-
-        End Try
-    End Sub
-
-    Public Function LeggiGiudizioInviatoConfig() As String
-        Try
-
-            Return DatiConfig.GetValue("GiudizioInviato")
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-
-            Return "No"
-        End Try
-
-    End Function
-
-    Public Sub SalvaGiudizioInviatoConfig(ByVal inviato As String)
-        Try
-
-            DatiConfig.SetValue("GiudizioInviato", inviato)
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-
-        End Try
-
-    End Sub
-
-    Public Sub ImpostaFunzioniOperatore(ByVal wnd As String)
-
-        Select Case wnd
-            Case Finestra.Aziende
-                If operatore.AnagAziende = VALORE_NESSUNO Then
-                    eui_cmdArchiviAnagraficheAziende.Enabled = False
-                Else
-                    eui_cmdArchiviAnagraficheAziende.Enabled = True
-                End If
-            Case Finestra.Camerieri
-                If operatore.AnagCamerieri = VALORE_NESSUNO Then
-                    eui_cmdArchiviAnagraficheCamerieri.Enabled = False
-                Else
-                    eui_cmdArchiviAnagraficheCamerieri.Enabled = True
-                End If
-            Case Finestra.CatPiatti
-                If operatore.AnagCatPiatti = VALORE_NESSUNO Then
-                    eui_cmdArchiviAnagraficheCategoriePiatti.Enabled = False
-                Else
-                    eui_cmdArchiviAnagraficheCategoriePiatti.Enabled = True
-                End If
-            Case Finestra.Clienti
-                If operatore.AnagClienti = VALORE_NESSUNO Then
-                    eui_cmdArchiviAnagraficheClienti.Enabled = False
-                Else
-                    eui_cmdArchiviAnagraficheClienti.Enabled = True
-                End If
-
-            Case Finestra.DatiAzienda
-                If operatore.AnagDatiAzienda = VALORE_NESSUNO Then
-                    eui_cmdArchiviAnagraficheDatiAzienda.Enabled = False
-                Else
-                    eui_cmdArchiviAnagraficheDatiAzienda.Enabled = True
-                End If
-            Case Finestra.Fornitori
-                If operatore.AnagFornitori = VALORE_NESSUNO Then
-                    eui_cmdArchiviAnagraficheFornitori.Enabled = False
-                Else
-                    eui_cmdArchiviAnagraficheFornitori.Enabled = True
-                End If
-
-            Case Finestra.Piatti
-                If operatore.AnagPiatti = VALORE_NESSUNO Then
-                    eui_cmdArchiviAnagrafichePiatti.Enabled = False
-                Else
-                    eui_cmdArchiviAnagrafichePiatti.Enabled = True
-                End If
-
-            Case Finestra.Sale
-                If operatore.AnagSale = VALORE_NESSUNO Then
-                    eui_cmdArchiviAnagraficheSale.Enabled = False
-                Else
-                    eui_cmdArchiviAnagraficheSale.Enabled = True
-                End If
-
-            Case Finestra.Tavoli
-                If operatore.AnagTavoli = VALORE_NESSUNO Then
-                    eui_cmdArchiviAnagraficheTavoli.Enabled = False
-                Else
-                    eui_cmdArchiviAnagraficheTavoli.Enabled = True
-                End If
-
-            Case Finestra.Risorse
-                If operatore.AnagRisorse = VALORE_NESSUNO Then
-                    eui_cmdArchiviAnagraficheRisorse.Enabled = False
-                Else
-                    eui_cmdArchiviAnagraficheRisorse.Enabled = True
-                End If
-
-            Case Finestra.AccessoriServizi
-                If operatore.AnagAccessoriServizi = VALORE_NESSUNO Then
-                    eui_cmdArchiviAnagraficheAccServ.Enabled = False
-                Else
-                    eui_cmdArchiviAnagraficheAccServ.Enabled = True
-                End If
-
-            Case Finestra.Backup
-                If operatore.ArchiviBackup = VALORE_NESSUNO Then
-                    eui_cmdArchiviBackup.Enabled = False
-                Else
-                    eui_cmdArchiviBackup.Enabled = True
-                End If
-
-            Case Finestra.Compatta
-                If operatore.ArchiviCompatta = VALORE_NESSUNO Then
-                    eui_cmdArchiviCompatta.Enabled = False
-                Else
-                    eui_cmdArchiviCompatta.Enabled = True
-                End If
-
-            Case Finestra.Pulizia
-                If operatore.ArchiviPulizia = VALORE_NESSUNO Then
-                    eui_cmdArchiviPulizia.Enabled = False
-                Else
-                    eui_cmdArchiviPulizia.Enabled = True
-                End If
-
-            Case Finestra.Attività
-                If operatore.TabAttività = VALORE_NESSUNO Then
-                    eui_cmdArchiviTabelleAttività.Enabled = False
-                Else
-                    eui_cmdArchiviTabelleAttività.Enabled = True
-                End If
-
-            Case Finestra.CatCliente
-                If operatore.TabCatClienti = VALORE_NESSUNO Then
-                    eui_cmdArchiviTabelleCategorieCliente.Enabled = False
-                Else
-                    eui_cmdArchiviTabelleCategorieCliente.Enabled = True
-                End If
-
-            Case Finestra.CatMerce
-                If operatore.TabCatMerce = VALORE_NESSUNO Then
-                    eui_cmdArchiviTabelleCategorieMerce.Enabled = False
-                Else
-                    eui_cmdArchiviTabelleCategorieMerce.Enabled = True
-                End If
-
-            Case Finestra.FormeCortesia
-                If operatore.TabFormeCortesia = VALORE_NESSUNO Then
-                    eui_cmdArchiviTabelleTitoli.Enabled = False
-                Else
-                    eui_cmdArchiviTabelleTitoli.Enabled = True
-                End If
-
-            Case Finestra.Magazzini
-                If operatore.TabMagazzini = VALORE_NESSUNO Then
-                    eui_cmdArchiviTabelleMagazzini.Enabled = False
-                Else
-                    eui_cmdArchiviTabelleMagazzini.Enabled = True
-                End If
-
-            Case Finestra.MsgReparti
-                If operatore.TabMsg = VALORE_NESSUNO Then
-                    eui_cmdArchiviTabelleMsgReparti.Enabled = False
-                Else
-                    eui_cmdArchiviTabelleMsgReparti.Enabled = True
-                End If
-
-            Case Finestra.Nazioni
-                If operatore.TabNazioni = VALORE_NESSUNO Then
-                    eui_cmdArchiviTabelleNazioni.Enabled = False
-                Else
-                    eui_cmdArchiviTabelleNazioni.Enabled = True
-                End If
-
-            Case Finestra.Pagamenti
-                If operatore.TabPagamenti = VALORE_NESSUNO Then
-                    eui_cmdArchiviTabellePagamenti.Enabled = False
-                Else
-                    eui_cmdArchiviTabellePagamenti.Enabled = True
-                End If
-
-            Case Finestra.Reparti
-                If operatore.TabReparti = VALORE_NESSUNO Then
-                    eui_cmdArchiviTabelleReparti.Enabled = False
-                Else
-                    eui_cmdArchiviTabelleReparti.Enabled = True
-                End If
-
-            Case Finestra.Scaffali
-                If operatore.TabScaffali = VALORE_NESSUNO Then
-                    eui_cmdArchiviTabelleScaffali.Enabled = False
-                Else
-                    eui_cmdArchiviTabelleScaffali.Enabled = True
-                End If
-
-            Case Finestra.CausaliDoc
-                If operatore.TabCausaliDoc = VALORE_NESSUNO Then
-                    eui_cmdArchiviTabelleCausaliDoc.Enabled = False
-                Else
-                    eui_cmdArchiviTabelleCausaliDoc.Enabled = True
-                End If
-
-            Case Finestra.Ubicazioni
-                If operatore.TabUbicazioni = VALORE_NESSUNO Then
-                    eui_cmdArchiviTabelleUbicazioni.Enabled = False
-                Else
-                    eui_cmdArchiviTabelleUbicazioni.Enabled = True
-                End If
-
-            Case Finestra.UnitàMisura
-                If operatore.TabUM = VALORE_NESSUNO Then
-                    eui_cmdArchiviTabelleUM.Enabled = False
-                Else
-                    eui_cmdArchiviTabelleUM.Enabled = True
-                End If
-
-            Case Finestra.TipologieRisorse
-                If operatore.TabTipoRisorse = VALORE_NESSUNO Then
-                    eui_cmdArchiviTabelleTipoRisorse.Enabled = False
-                Else
-                    eui_cmdArchiviTabelleTipoRisorse.Enabled = True
-                End If
-
-            Case Finestra.ChiusuraGiornaliera
-                If operatore.ContChiusura = VALORE_NESSUNO Then
-                    eui_ContabilitàChiusura.Enabled = False
-                Else
-                    eui_ContabilitàChiusura.Enabled = True
-                End If
-
-            Case Finestra.Corrispettivi
-                If operatore.ContCorrispettivi = VALORE_NESSUNO Then
-                    eui_ContabilitàCorrispettivi.Enabled = False
-                Else
-                    eui_ContabilitàCorrispettivi.Enabled = True
-                End If
-
-            Case Finestra.Documenti
-                If operatore.ContDoc = VALORE_NESSUNO Then
-                    eui_ContabilitàElencoDoc.Enabled = False
-                Else
-                    eui_ContabilitàElencoDoc.Enabled = True
-                End If
-
-            Case Finestra.PrimaNota
-                If operatore.ContPrimaNota = VALORE_NESSUNO Then
-                    eui_ContabilitàPrimaNota.Enabled = False
-                Else
-                    eui_ContabilitàPrimaNota.Enabled = True
-                End If
-
-            Case Finestra.Acquisti
-                If operatore.GestAcquisti = VALORE_NESSUNO Then
-                    eui_cmdGestioneAcquisti.Enabled = False
-                Else
-                    eui_cmdGestioneAcquisti.Enabled = True
-                End If
-
-            Case Finestra.Menù
-                If operatore.StruMenù = VALORE_NESSUNO Then
-                    eui_StrumentiMenù.Enabled = False
-                Else
-                    eui_StrumentiMenù.Enabled = True
-                End If
-
-            Case Finestra.Gruppi
-                If operatore.GestGruppi = VALORE_NESSUNO Then
-                    eui_cmdGestioneGruppiOp.Enabled = False
-                Else
-                    eui_cmdGestioneGruppiOp.Enabled = True
-                End If
-
-            Case Finestra.Operatori
-                If operatore.GestOperatori = VALORE_NESSUNO Then
-                    eui_cmdGestioneOperatori.Enabled = False
-                Else
-                    eui_cmdGestioneOperatori.Enabled = True
-                End If
-
-            Case Finestra.PrenSale
-                If operatore.GestPrenSale = VALORE_NESSUNO Then
-                    eui_cmdGestionePrenSale.Enabled = False
-                Else
-                    eui_cmdGestionePrenSale.Enabled = True
-                End If
-
-            Case Finestra.PrenTavoli
-                If operatore.GestPrenTavoli = VALORE_NESSUNO Then
-                    eui_cmdGestionePrenTavoli.Enabled = False
-                Else
-                    eui_cmdGestionePrenTavoli.Enabled = True
-                End If
-
-            Case Finestra.PrenRisorse
-                If operatore.GestPrenRisorse = VALORE_NESSUNO Then
-                    eui_cmdGestionePrenRisorse.Enabled = False
-                Else
-                    eui_cmdGestionePrenRisorse.Enabled = True
-                End If
-
-            Case Finestra.PlanningRisorse
-                If operatore.GestPlanningRisorse = VALORE_NESSUNO Then
-                    eui_cmdGestionePlanningRisorseSport.Enabled = False
-                Else
-                    eui_cmdGestionePlanningRisorseSport.Enabled = True
-                End If
-
-            Case Finestra.StatisticheRisorse
-                If operatore.GestStatRisorse = VALORE_NESSUNO Then
-                    eui_cmdGestioneStatisticheRisorse.Enabled = False
-                Else
-                    eui_cmdGestioneStatisticheRisorse.Enabled = True
-                End If
-
-            Case Finestra.PuntoCassa
-                If operatore.GestPuntoCassa = VALORE_NESSUNO Then
-                    eui_cmdGestionePosCassa.Enabled = False
-                Else
-                    eui_cmdGestionePosCassa.Enabled = True
-                End If
-
-            Case Finestra.Statistiche
-                If operatore.GestStatistiche = VALORE_NESSUNO Then
-                    eui_cmdGestioneStatistiche.Enabled = False
-                Else
-                    eui_cmdGestioneStatistiche.Enabled = True
-                End If
-
-            Case Finestra.TavoliConto
-                If operatore.GestTavoli = VALORE_NESSUNO Then
-                    eui_cmdGestionePosTavoli.Enabled = False
-                Else
-                    eui_cmdGestionePosTavoli.Enabled = True
-                End If
-
-            Case Finestra.Articoli
-                If operatore.MagArticoli = VALORE_NESSUNO Then
-                    eui_MagazzinoArticoli.Enabled = False
-                Else
-                    eui_MagazzinoArticoli.Enabled = True
-                End If
-
-            Case Finestra.Inventario
-                If operatore.MagInventario = VALORE_NESSUNO Then
-                    eui_MagazzinoInventario.Enabled = False
-                Else
-                    eui_MagazzinoInventario.Enabled = True
-                End If
-
-            Case Finestra.Scorte
-                If operatore.MagScorte = VALORE_NESSUNO Then
-                    eui_MagazzinoScorte.Enabled = False
-                Else
-                    eui_MagazzinoScorte.Enabled = True
-                End If
-
-            Case Finestra.MovimentiMag
-                If operatore.MagMovimenti = VALORE_NESSUNO Then
-                    eui_MagazzinoMovimenti.Enabled = False
-                Else
-                    eui_MagazzinoMovimenti.Enabled = True
-                End If
-
-            Case Finestra.DisponiTavoli
-                If operatore.StruDispTavoli = VALORE_NESSUNO Then
-                    eui_StrumentiDispTavoli.Enabled = False
-                Else
-                    eui_StrumentiDispTavoli.Enabled = True
-                End If
-
-            Case Finestra.ElencoCap
-                If operatore.StruCap = VALORE_NESSUNO Then
-                    eui_StrumentiCap.Enabled = False
-                Else
-                    eui_StrumentiCap.Enabled = True
-                End If
-
-            Case Finestra.ElencoMsg
-                If operatore.StruMsg = VALORE_NESSUNO Then
-                    eui_StrumentiMsgReparti.Enabled = False
-                Else
-                    eui_StrumentiMsgReparti.Enabled = True
-                End If
-
-            Case Finestra.CodiciBarre
-                If operatore.StruCodiciBarre = VALORE_NESSUNO Then
-                    eui_StrumentiEtichette.Enabled = False
-                Else
-                    eui_StrumentiEtichette.Enabled = True
-                End If
-
-            Case Finestra.Opzioni
-                If operatore.VisOpzioni = VALORE_NESSUNO Then
-                    eui_Opzioni.Enabled = False
-                Else
-                    eui_Opzioni.Enabled = True
-                End If
-
-            Case Finestra.RegErrori
-                If operatore.VisErrori = VALORE_NESSUNO Then
-                    eui_VisualizzaRegErrori.Enabled = False
-                Else
-                    eui_VisualizzaRegErrori.Enabled = True
-                End If
-
-            Case Finestra.RegOperazioni
-                If operatore.VisOperazioni = VALORE_NESSUNO Then
-                    eui_VisualizzaRegOperazioni.Enabled = False
-                Else
-                    eui_VisualizzaRegOperazioni.Enabled = True
-                End If
-
-        End Select
-
-    End Sub
-
-    Public Sub RegistraOperazione(ByVal Operazione As String, ByVal descrizione As String, ByVal modulo As String)
-        Try
-            Dim COperazioni As New Operazioni
-            Dim descrizioneOp As String
-
-            Select Case Operazione
-                Case TipoOperazione.Login
-                    descrizioneOp = "Effettuata IDENTIFICAZIONE per l'operatore. " & descrizione
-
-                Case TipoOperazione.Logout
-                    descrizioneOp = "Eseguito comando CAMBIA OPERATORE. " & descrizione
-
-                Case TipoOperazione.Apri
-                    descrizioneOp = "Eseguito comando APRI per " & descrizione
-
-                Case TipoOperazione.Chiudi
-                    descrizioneOp = "Eseguito comando CHIUDI per " & descrizione
-
-                Case TipoOperazione.Nuovo
-                    descrizioneOp = "Eseguito comando NUOVO per " & descrizione
-
-                Case TipoOperazione.Modifica
-                    descrizioneOp = "Eseguito comando MODIFICA. " & descrizione
-
-                Case TipoOperazione.Elimina
-                    descrizioneOp = "Eseguito comando ELIMINA. " & descrizione
-
-                Case TipoOperazione.EliminaTutto
-                    descrizioneOp = "Eseguito comando ELIMINA TUTTO. " & descrizione
-
-                Case TipoOperazione.Aggiorna
-                    descrizioneOp = "Eseguito comando AGGIORNA per " & descrizione
-
-                Case TipoOperazione.Anteprima
-                    descrizioneOp = "Eseguito comando ANTEPRIMA DI STAMPA per " & descrizione
-
-                Case TipoOperazione.Stampa
-                    descrizioneOp = "Eseguito comando STAMPA per " & descrizione
-
-                Case TipoOperazione.Annulla
-                    descrizioneOp = "Eseguito comando ANNULLA per operazione di Inserimeno o Modifica dati."
-
-                Case TipoOperazione.Salva
-                    descrizioneOp = "Eseguito comando SALVA. " & descrizione
-
-                Case TipoOperazione.Carico
-                    descrizioneOp = "Eseguito comando CARICO. " & descrizione
-
-                Case TipoOperazione.Scarico
-                    descrizioneOp = "Eseguito comando SCARICO. " & descrizione
-
-                Case TipoOperazione.Backup
-                    descrizioneOp = "Eseguito comando BACKUP DEI DATI."
-
-                Case TipoOperazione.Pulizia
-                    descrizioneOp = "Eseguito comando PULIZIA DEGLI ARCHIVI."
-
-                Case TipoOperazione.Compatta
-                    descrizioneOp = "Eseguito comando COMPATTA E RIPRISTINA per i dati degli archivi."
-
-                Case TipoOperazione.Chiusura
-                    descrizioneOp = "Eseguito comando CHIUSURA GIORNALIERA."
-
-                Case TipoOperazione.AnnullaDoc
-                    descrizioneOp = "Eseguito comando ANNULLA DOCUMENTO. " & descrizione
-
-                Case TipoOperazione.IncassaSospeso
-                    descrizioneOp = "Eseguito comando INCASSA SOSPESO. " & descrizione
-
-                Case TipoOperazione.PassaSospeso
-                    descrizioneOp = "Eseguito comando PASSA A SOSPESO. " & descrizione
-
-                Case TipoOperazione.AnnullaSospeso
-                    descrizioneOp = "Eseguito comando ANNULLA SOSPESO. " & descrizione
-
-                Case TipoOperazione.ModificaMenù
-                    descrizioneOp = "Eseguito comando di MODIFICA. " & descrizione
-
-                Case TipoOperazione.InviaMsg
-                    descrizioneOp = "Eseguito comando INVIA MESSAGGIO ai reparti. " & descrizione
-
-                Case TipoOperazione.SelezionaPiatto
-                    descrizioneOp = "Eseguito comando SELEZIONE PIATTO. " & descrizione
-
-                Case TipoOperazione.Listino
-                    descrizioneOp = "Eseguito comando SELEZIONE LISTINO. " & descrizione
-
-                Case TipoOperazione.QuantitàMeno
-                    descrizioneOp = "Eseguito comando QUANTITA' MENO. " & descrizione
-
-                Case TipoOperazione.QuantitàPiù
-                    descrizioneOp = "Eseguito comando QUANTITA' PIU'. " & descrizione
-
-                Case TipoOperazione.Cancella
-                    descrizioneOp = "Eseguito comando CANCELLA PIATTO. " & descrizione
-
-                Case TipoOperazione.CancellaTutto
-                    descrizioneOp = "Eseguito comando CANCELLA TUTTI I PIATTI. " & descrizione
-
-                Case TipoOperazione.Escludi
-                    descrizioneOp = "Eseguito comando ESCLUDI PIATTO DAL CONTO. " & descrizione
-
-                Case TipoOperazione.Offerto
-                    descrizioneOp = "Eseguito comando PIATTO OFFERTO . " & descrizione
-
-                Case TipoOperazione.Conferma
-                    descrizioneOp = "Eseguito comando CONFERMA. " & descrizione
-
-                Case TipoOperazione.Proforma
-                    descrizioneOp = "Eseguito comando STAMPA PROFORMA. " & descrizione
-
-                Case TipoOperazione.Scontrino
-                    descrizioneOp = "Eseguito comando STAMPA SCONTRINO. " & descrizione
-
-                Case TipoOperazione.Ricevuta
-                    descrizioneOp = "Eseguito comando STAMPA RICEVUTA FISCALE. " & descrizione
-
-                Case TipoOperazione.Fattura
-                    descrizioneOp = "Eseguito comando STAMPA FATTURA. " & descrizione
-
-                Case TipoOperazione.ApriTavolo
-                    descrizioneOp = "Eseguito comando APRI TAVOLO. " & descrizione
-
-                Case TipoOperazione.ChiudiTavolo
-                    descrizioneOp = "Eseguito comando CHIUDI TAVOLO. " & descrizione
-
-                Case TipoOperazione.SpostaTavolo
-                    descrizioneOp = "Eseguito comando SPOSTA TAVOLO. " & descrizione
-
-                Case TipoOperazione.OccupaTavolo
-                    descrizioneOp = "Eseguito comando OCCUPA TAVOLO. " & descrizione
-
-                Case TipoOperazione.LiberaTavolo
-                    descrizioneOp = "Eseguito comando LIBERA TAVOLO. " & descrizione
-
-                Case TipoOperazione.ApriAsporto
-                    descrizioneOp = "Eseguito comando APRI ASPORTO. " & descrizione
-
-                Case TipoOperazione.ChiudiAsporto
-                    descrizioneOp = "Eseguito comando CHIUDI ASPORTO. " & descrizione
-
-                Case TipoOperazione.RimuoviPiatto
-                    descrizioneOp = "Eseguito comando RIMUOVI PIATTO. " & descrizione
-
-                Case TipoOperazione.ProprietàRisorsa
-                    descrizioneOp = "Eseguito comando PROPRIETA' RISORSA per " & descrizione
-
-            End Select
-
-            ' Assegna i dati dei campi della classe alle caselle di testo.
-            With COperazioni
-                .Data = Convert.ToString(Now)
-                .Operatore = operatore.Nome
-                .Modulo = modulo
-                .Descrizione = descrizioneOp
-
-                ' Salva i dati nel database.
-                .InserisciDati(NOME_TABELLA)
-            End With
-
-            ' Se la finestra è aperta aggiorna la griglia dati.
-            If IsNothing(g_frmOperazioni) = False Then
-                g_frmOperazioni.AggiornaDati()
+            If DatiConfig.GetValue("LMain") <> "" Then
+               Me.Width = CInt(DatiConfig.GetValue("LMain"))
+            Else
+               Me.Width = FORM_MAIN_LARGHEZZA
             End If
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Public Sub SalvaCopiaBackup()
-        Try
-            ' Visualizza un messaggio nella barra di stato.
-            Me.eui_Informazioni.Text = SALVA_BKP
-
-            If SalvaBKP = True Then
-                If File.Exists(PercorsoDB) = True Then
-                    File.Copy(PercorsoDB, PercorsoBKP, True)
-                End If
+            If DatiConfig.GetValue("MainX") <> "" Then
+               Me.Location = New Point(CInt(DatiConfig.GetValue("MainX")), Me.Location.Y)
+            Else
+               Me.CenterToScreen()
             End If
 
-            ' Visualizza un messaggio nella barra di stato.
-            Me.eui_Informazioni.Text = LeggiDatiRivenditore()
+            If DatiConfig.GetValue("MainY") <> "" Then
+               Me.Location = New Point(Me.Location.X, CInt(DatiConfig.GetValue("MainY")))
+            Else
+               Me.CenterToScreen()
+            End If
+         End If
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+         Dim reparto As String
+         Dim stampante As String
+         Dim report As String
+         ' Comanda - Percorso 1.
+         reparto = DatiConfig.GetValue("Reparto1")
+         If reparto.Length = 0 Then
+            reparto = "Nessuno"
+         End If
+         stampante = DatiConfig.GetValue("PercorsoStampaComanda1")
+         If stampante.Length = 0 Then
+            stampante = "Nessuna"
+         End If
+         report = DatiConfig.GetValue("ReportComanda1")
+         If report.Length = 0 Then
+            report = String.Empty
+         End If
+         PercorsiStampantiComande(0) = reparto & ";" & stampante & ";" & report
 
-        End Try
-    End Sub
+         ' Comanda - Percorso 2.
+         reparto = DatiConfig.GetValue("Reparto2")
+         If reparto.Length = 0 Then
+            reparto = "Nessuno"
+         End If
+         stampante = DatiConfig.GetValue("PercorsoStampaComanda2")
+         If stampante.Length = 0 Then
+            stampante = "Nessuna"
+         End If
+         report = DatiConfig.GetValue("ReportComanda2")
+         If report.Length = 0 Then
+            report = String.Empty
+         End If
+         PercorsiStampantiComande(1) = reparto & ";" & stampante & ";" & report
 
-    Public Sub ScriviDatiTavoli(ByVal sw As StreamWriter)
-        Dim cn As New OleDbConnection(ConnString)
-        Dim strSql As String = "SELECT * FROM Tavoli WHERE Escludi = 'No' ORDER BY Descrizione ASC"
+         ' Comanda - Percorso 3.
+         reparto = DatiConfig.GetValue("Reparto3")
+         If reparto.Length = 0 Then
+            reparto = "Nessuno"
+         End If
+         stampante = DatiConfig.GetValue("PercorsoStampaComanda3")
+         If stampante.Length = 0 Then
+            stampante = "Nessuna"
+         End If
+         report = DatiConfig.GetValue("ReportComanda3")
+         If report.Length = 0 Then
+            report = String.Empty
+         End If
+         PercorsiStampantiComande(2) = reparto & ";" & stampante & ";" & report
 
-        Try
-            cn.Open()
+         ' Comanda - Percorso 4.
+         reparto = DatiConfig.GetValue("Reparto4")
+         If reparto.Length = 0 Then
+            reparto = "Nessuno"
+         End If
+         stampante = DatiConfig.GetValue("PercorsoStampaComanda4")
+         If stampante.Length = 0 Then
+            stampante = "Nessuna"
+         End If
+         report = DatiConfig.GetValue("ReportComanda4")
+         If report.Length = 0 Then
+            report = String.Empty
+         End If
+         PercorsiStampantiComande(3) = reparto & ";" & stampante & ";" & report
 
-            Dim cmd As New OleDbCommand(strSql, cn)
-            Dim dr As OleDbDataReader = cmd.ExecuteReader()
+         ' Comanda - Percorso 5.
+         reparto = DatiConfig.GetValue("Reparto5")
+         If reparto.Length = 0 Then
+            reparto = "Nessuno"
+         End If
+         stampante = DatiConfig.GetValue("PercorsoStampaComanda5")
+         If stampante.Length = 0 Then
+            stampante = "Nessuna"
+         End If
+         report = DatiConfig.GetValue("ReportComanda5")
+         If report.Length = 0 Then
+            report = String.Empty
+         End If
+         PercorsiStampantiComande(4) = reparto & ";" & stampante & ";" & report
 
-            sw.WriteLine("[TAVOLI]")
+         ' Comanda - Percorso 6.
+         reparto = DatiConfig.GetValue("Reparto6")
+         If reparto.Length = 0 Then
+            reparto = "Nessuno"
+         End If
+         stampante = DatiConfig.GetValue("PercorsoStampaComanda6")
+         If stampante.Length = 0 Then
+            stampante = "Nessuna"
+         End If
+         report = DatiConfig.GetValue("ReportComanda6")
+         If report.Length = 0 Then
+            report = String.Empty
+         End If
+         PercorsiStampantiComande(5) = reparto & ";" & stampante & ";" & report
 
-            Do While dr.Read
-                sw.WriteLine(dr.Item("Id") & ";" & dr.Item("Descrizione") & ";" & dr.Item("Posti") & ";" & dr.Item("Listino"))
-            Loop
+         ' Comanda - Percorso 7.
+         reparto = DatiConfig.GetValue("Reparto7")
+         If reparto.Length = 0 Then
+            reparto = "Nessuno"
+         End If
+         stampante = DatiConfig.GetValue("PercorsoStampaComanda7")
+         If stampante.Length = 0 Then
+            stampante = "Nessuna"
+         End If
+         report = DatiConfig.GetValue("ReportComanda7")
+         If report.Length = 0 Then
+            report = String.Empty
+         End If
+         PercorsiStampantiComande(6) = reparto & ";" & stampante & ";" & report
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+         ' Comanda - Percorso 8.
+         reparto = DatiConfig.GetValue("Reparto8")
+         If reparto.Length = 0 Then
+            reparto = "Nessuno"
+         End If
+         stampante = DatiConfig.GetValue("PercorsoStampaComanda8")
+         If stampante.Length = 0 Then
+            stampante = "Nessuna"
+         End If
+         report = DatiConfig.GetValue("ReportComanda8")
+         If report.Length = 0 Then
+            report = String.Empty
+         End If
+         PercorsiStampantiComande(7) = reparto & ";" & stampante & ";" & report
 
-        Finally
-            cn.Close()
+         ' Comanda - Percorso 9.
+         reparto = DatiConfig.GetValue("Reparto9")
+         If reparto.Length = 0 Then
+            reparto = "Nessuno"
+         End If
+         stampante = DatiConfig.GetValue("PercorsoStampaComanda9")
+         If stampante.Length = 0 Then
+            stampante = "Nessuna"
+         End If
+         report = DatiConfig.GetValue("ReportComanda9")
+         If report.Length = 0 Then
+            report = String.Empty
+         End If
+         PercorsiStampantiComande(8) = reparto & ";" & stampante & ";" & report
 
-        End Try
-    End Sub
+         ' Comanda - Percorso 10.
+         reparto = DatiConfig.GetValue("Reparto10")
+         If reparto.Length = 0 Then
+            reparto = "Nessuno"
+         End If
+         stampante = DatiConfig.GetValue("PercorsoStampaComanda10")
+         If stampante.Length = 0 Then
+            stampante = "Nessuna"
+         End If
+         report = DatiConfig.GetValue("ReportComanda10")
+         If report.Length = 0 Then
+            report = String.Empty
+         End If
+         PercorsiStampantiComande(9) = reparto & ";" & stampante & ";" & report
 
-    Public Sub ScriviDatiCategorie(ByVal sw As StreamWriter)
-        Dim cn As New OleDbConnection(ConnString)
-        Dim strSql As String = "SELECT * FROM CategoriePiatti ORDER BY IdOrd ASC"
+         ' Comanda aggiuntiva.
+         stampante = DatiConfig.GetValue("PercorsoStampaComandaAgg")
+         If stampante.Length = 0 Then
+            stampante = "Nessuna"
+         End If
+         report = DatiConfig.GetValue("ReportComandaAgg")
+         If report.Length = 0 Then
+            report = String.Empty
+         End If
+         PercorsiStampantiComande(10) = "Agg" & ";" & stampante & ";" & report
 
-        Try
-            cn.Open()
+         ' Ricevuta.
+         stampante = DatiConfig.GetValue("PercorsoStampaRicevute")
+         If stampante.Length = 0 Then
+            stampante = "Nessuna"
+         End If
+         report = DatiConfig.GetValue("ReportRicevute")
+         If report.Length = 0 Then
+            report = String.Empty
+         End If
+         PercorsiStampantiDocumenti(0) = "RICEVUTA" & ";" & stampante & ";" & report
 
-            Dim cmd As New OleDbCommand(strSql, cn)
-            Dim dr As OleDbDataReader = cmd.ExecuteReader()
+         ' Fattura.
+         stampante = DatiConfig.GetValue("PercorsoStampaFatture")
+         If stampante.Length = 0 Then
+            stampante = "Nessuna"
+         End If
+         report = DatiConfig.GetValue("ReportFatture")
+         If report.Length = 0 Then
+            report = String.Empty
+         End If
+         PercorsiStampantiDocumenti(1) = "FATTURA" & ";" & stampante & ";" & report
 
-            sw.WriteLine("[CATEGORIE]")
+         ' Proforma.
+         stampante = DatiConfig.GetValue("PercorsoStampaProforma")
+         If stampante.Length = 0 Then
+            stampante = "Nessuna"
+         End If
+         report = DatiConfig.GetValue("ReportProforma")
+         If report.Length = 0 Then
+            report = String.Empty
+         End If
+         PercorsiStampantiDocumenti(2) = "PROFORMA" & ";" & stampante & ";" & report
 
-            Do While dr.Read
-                sw.WriteLine(dr.Item("Id") & ";" & dr.Item("Descrizione") & ";" & dr.Item("Colore"))
-            Loop
+         ' Scontrino.
+         stampante = DatiConfig.GetValue("PercorsoStampaScontrini")
+         If stampante.Length = 0 Then
+            stampante = "Nessuna"
+         End If
+         report = DatiConfig.GetValue("ReportScontrini")
+         If report.Length = 0 Then
+            report = String.Empty
+         End If
+         PercorsiStampantiDocumenti(3) = "SCONTRINO" & ";" & stampante & ";" & report
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+         ' SCHEDA STAMPANTI FISCALI
 
-        Finally
-            cn.Close()
+         ProduttoreSF = DatiConfig.GetValue("ProduttoreSF")
+         If ProduttoreSF.Length = 0 Then
+            ProduttoreSF = ""
+         End If
+         ModelloSF = DatiConfig.GetValue("ModelloSF")
+         If ModelloSF.Length = 0 Then
+            ModelloSF = ""
+         End If
 
-        End Try
-    End Sub
+         ' RCH Swing ECR A/65
+         PortaSF = DatiConfig.GetValue("PortaSF")
+         If PortaSF.Length = 0 Then
+            PortaSF = ""
+         End If
+         ParametriSF = DatiConfig.GetValue("ParametriSF")
+         If ParametriSF.Length = 0 Then
+            ParametriSF = ""
+         End If
+         NomeScontrinoSF = DatiConfig.GetValue("NomeScontrinoSF")
+         If NomeScontrinoSF.Length = 0 Then
+            NomeScontrinoSF = ""
+         End If
+         PercorsoOutputSF = DatiConfig.GetValue("PercorsoOutputSF")
+         If PercorsoOutputSF.Length = 0 Then
+            PercorsoOutputSF = ""
+         End If
+         PercorsoDriverSF = DatiConfig.GetValue("PercorsoDriverSF")
+         If PercorsoDriverSF.Length = 0 Then
+            PercorsoDriverSF = ""
+         End If
 
-    Public Sub ScriviDatiPiatti(ByVal sw As StreamWriter)
-        Dim cn As New OleDbConnection(ConnString)
-        Dim strSql As String = "SELECT * FROM Piatti WHERE Variazione = 'No' ORDER BY DescrizionePos ASC"
+         ' Driver RTS WPOS1.
+         PercorsoDriverWpos1 = DatiConfig.GetValue("PercorsoDriverWpos1")
+         If PercorsoDriverWpos1.Length = 0 Then
+            PercorsoDriverWpos1 = ""
+         End If
 
-        Try
-            cn.Open()
+         PercorsoLavoroWpos1 = DatiConfig.GetValue("PercorsoLavoroWpos1")
+         If PercorsoLavoroWpos1.Length = 0 Then
+            PercorsoLavoroWpos1 = ""
+         End If
 
-            Dim cmd As New OleDbCommand(strSql, cn)
-            Dim dr As OleDbDataReader = cmd.ExecuteReader()
+         PwdDriverWpos1 = DatiConfig.GetValue("PwdDriverWpos1")
+         If PwdDriverWpos1.Length = 0 Then
+            PwdDriverWpos1 = ""
+         End If
+         EstensioneFileWpos1 = DatiConfig.GetValue("EstensioneFileWpos1")
+         If EstensioneFileWpos1.Length = 0 Then
+            EstensioneFileWpos1 = ""
+         End If
 
-            sw.WriteLine("[PIATTI]")
+         ' DISPOSITIVO PALMARE
+         PercorsoRP = DatiConfig.GetValue("PercorsoRP")
+         If PercorsoRP.Length = 0 Then
+            PercorsoRP = ""
+         End If
+         If DatiConfig.GetValue("AbilitaPalmareWindows") <> "" Then
+            AbilitaPalmareWindows = DatiConfig.GetValue("AbilitaPalmareWindows")
+         Else
+            AbilitaPalmareWindows = False
+         End If
+         If DatiConfig.GetValue("AbilitaPalmareAndroid") <> "" Then
+            AbilitaPalmareAndroid = DatiConfig.GetValue("AbilitaPalmareAndroid")
+         Else
+            AbilitaPalmareAndroid = False
+         End If
 
-            Do While dr.Read
-                sw.WriteLine(dr.Item("Id") & ";" & dr.Item("Categoria") & ";" & dr.Item("DescrizionePos") & ";" &
+         FreqAggPalmare = Convert.ToInt16(DatiConfig.GetValue("FreqAggPalmare"))
+
+         ' SCHEDA BAR / RISTORANTE.
+
+         ' Aliquota IVA standard.
+         If DatiConfig.GetValue("AliquotaIvaRistorante") = String.Empty Then
+            AliquotaIvaRistorante = String.Empty
+         Else
+            AliquotaIvaRistorante = DatiConfig.GetValue("AliquotaIvaRistorante")
+         End If
+
+         ' Prezzo del Coperto.
+         If DatiConfig.GetValue("CopertoRistorante") = String.Empty Then
+            CopertoRistorante = VALORE_ZERO
+         Else
+            CopertoRistorante = DatiConfig.GetValue("CopertoRistorante")
+         End If
+
+         ' Percentuale per il Servizio.
+         If DatiConfig.GetValue("ServizioRistorante") = String.Empty Then
+            ServizioRistorante = VALORE_ZERO
+         Else
+            ServizioRistorante = DatiConfig.GetValue("ServizioRistorante")
+         End If
+
+         ' Effetti sonori per il Punto cassa.
+         If DatiConfig.GetValue("EffettiSonoriPOS") = String.Empty Then
+            EffettiSonoriPOS = True
+         Else
+            EffettiSonoriPOS = DatiConfig.GetValue("EffettiSonoriPOS")
+         End If
+
+         ' IMPOSTAZIONI PER LE PRENOTAZIONI DEI TAVOLI FATTE DA INTERNET. (WWW.TAVOLOSO.IT)
+
+         ' Percorso cartella di lavoro Tavoloso Agent.
+         If DatiConfig.GetValue("PercorsoCartellaTavAgent") <> String.Empty Then
+            PercorsoCartellaTavAgent = DatiConfig.GetValue("PercorsoCartellaTavAgent")
+         Else
+            PercorsoCartellaTavAgent = String.Empty
+         End If
+
+         ' Abilita ricezione delle prenotazioni.
+         If DatiConfig.GetValue("AbilitaRicezionePren") <> String.Empty Then
+            AbilitaRicezionePren = DatiConfig.GetValue("AbilitaRicezionePren")
+         Else
+            AbilitaRicezionePren = True
+         End If
+
+         ' Effetto sonoro per la notifica delle prenotazioni.
+         If DatiConfig.GetValue("EffettoSonoroPren") <> String.Empty Then
+            EffettoSonoroPren = DatiConfig.GetValue("EffettoSonoroPren")
+         Else
+            EffettoSonoroPren = True
+         End If
+
+         ' Colore della prenotazione.
+         If DatiConfig.GetValue("ColorePrenTavAgent") <> String.Empty Then
+            Dim colore As Integer = Convert.ToInt32(DatiConfig.GetValue("ColorePrenTavAgent"))
+            ColorePrenTavAgent = Color.FromArgb(colore)
+         Else
+            ColorePrenTavAgent = Color.White
+         End If
+
+         ' SCHEDA CENTRO SPORTIVO.
+
+         ' Aliquota IVA standard.
+         If DatiConfig.GetValue("AliquotaIvaCentroSportivo") = String.Empty Then
+            AliquotaIvaCentroSportivo = String.Empty
+         Else
+            AliquotaIvaCentroSportivo = DatiConfig.GetValue("AliquotaIvaCentroSportivo")
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      Finally
+         If dimPagina = 0 Then
+            dimPagina = DIM_PAGINA
+         End If
+
+         If FreqAggPalmare = 0 Then
+            FreqAggPalmare = 15
+         End If
+      End Try
+   End Sub
+
+   Public Sub SalvaDatiConfig()
+      Try
+         ' Nel caso la directory corrente venga cambiata.
+         Environment.CurrentDirectory = Application.StartupPath
+
+         ' Salva il nome del prodotto attivo che viene letto nel form App_Load per impostare le immagini.
+         DatiConfig.SetValue("NomeProdotto", NOME_PRODOTTO)
+
+         If PercorsoDB.Length = 0 Then
+            DatiConfig.SetValue("PercorsoDB", Application.StartupPath & PERCORSO_DB)
+         Else
+            DatiConfig.SetValue("PercorsoDB", PercorsoDB)
+         End If
+
+         If PercorsoDBClienti.Length = 0 Then
+            DatiConfig.SetValue("PercorsoDBClienti", Application.StartupPath & PERCORSO_DB_CLIENTI)
+         Else
+            DatiConfig.SetValue("PercorsoDBClienti", PercorsoDBClienti)
+         End If
+
+         DatiConfig.SetValue("NumElememti", dimPagina)
+
+         DatiConfig.SetValue("WindowState", Me.WindowState)
+         DatiConfig.SetValue("MainX", Me.Location.X)
+         DatiConfig.SetValue("MainY", Me.Location.Y)
+         DatiConfig.SetValue("AMain", Me.Height)
+         DatiConfig.SetValue("LMain", Me.Width)
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
+   End Sub
+
+   Public Function LeggiGiudizioInviatoConfig() As String
+      Try
+
+         Return DatiConfig.GetValue("GiudizioInviato")
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+         Return "No"
+      End Try
+
+   End Function
+
+   Public Sub SalvaGiudizioInviatoConfig(ByVal inviato As String)
+      Try
+
+         DatiConfig.SetValue("GiudizioInviato", inviato)
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
+
+   End Sub
+
+   Public Sub ImpostaFunzioniOperatore(ByVal wnd As String)
+
+      Select Case wnd
+         Case Finestra.Aziende
+            If operatore.AnagAziende = VALORE_NESSUNO Then
+               eui_cmdArchiviAnagraficheAziende.Enabled = False
+            Else
+               eui_cmdArchiviAnagraficheAziende.Enabled = True
+            End If
+         Case Finestra.Camerieri
+            If operatore.AnagCamerieri = VALORE_NESSUNO Then
+               eui_cmdArchiviAnagraficheCamerieri.Enabled = False
+            Else
+               eui_cmdArchiviAnagraficheCamerieri.Enabled = True
+            End If
+         Case Finestra.CatPiatti
+            If operatore.AnagCatPiatti = VALORE_NESSUNO Then
+               eui_cmdArchiviAnagraficheCategoriePiatti.Enabled = False
+            Else
+               eui_cmdArchiviAnagraficheCategoriePiatti.Enabled = True
+            End If
+         Case Finestra.Clienti
+            If operatore.AnagClienti = VALORE_NESSUNO Then
+               eui_cmdArchiviAnagraficheClienti.Enabled = False
+            Else
+               eui_cmdArchiviAnagraficheClienti.Enabled = True
+            End If
+
+         Case Finestra.DatiAzienda
+            If operatore.AnagDatiAzienda = VALORE_NESSUNO Then
+               eui_cmdArchiviAnagraficheDatiAzienda.Enabled = False
+            Else
+               eui_cmdArchiviAnagraficheDatiAzienda.Enabled = True
+            End If
+         Case Finestra.Fornitori
+            If operatore.AnagFornitori = VALORE_NESSUNO Then
+               eui_cmdArchiviAnagraficheFornitori.Enabled = False
+            Else
+               eui_cmdArchiviAnagraficheFornitori.Enabled = True
+            End If
+
+         Case Finestra.Piatti
+            If operatore.AnagPiatti = VALORE_NESSUNO Then
+               eui_cmdArchiviAnagrafichePiatti.Enabled = False
+            Else
+               eui_cmdArchiviAnagrafichePiatti.Enabled = True
+            End If
+
+         Case Finestra.Sale
+            If operatore.AnagSale = VALORE_NESSUNO Then
+               eui_cmdArchiviAnagraficheSale.Enabled = False
+            Else
+               eui_cmdArchiviAnagraficheSale.Enabled = True
+            End If
+
+         Case Finestra.Tavoli
+            If operatore.AnagTavoli = VALORE_NESSUNO Then
+               eui_cmdArchiviAnagraficheTavoli.Enabled = False
+            Else
+               eui_cmdArchiviAnagraficheTavoli.Enabled = True
+            End If
+
+         Case Finestra.Risorse
+            If operatore.AnagRisorse = VALORE_NESSUNO Then
+               eui_cmdArchiviAnagraficheRisorse.Enabled = False
+            Else
+               eui_cmdArchiviAnagraficheRisorse.Enabled = True
+            End If
+
+         Case Finestra.AccessoriServizi
+            If operatore.AnagAccessoriServizi = VALORE_NESSUNO Then
+               eui_cmdArchiviAnagraficheAccServ.Enabled = False
+            Else
+               eui_cmdArchiviAnagraficheAccServ.Enabled = True
+            End If
+
+         Case Finestra.Backup
+            If operatore.ArchiviBackup = VALORE_NESSUNO Then
+               eui_cmdArchiviBackup.Enabled = False
+            Else
+               eui_cmdArchiviBackup.Enabled = True
+            End If
+
+         Case Finestra.Compatta
+            If operatore.ArchiviCompatta = VALORE_NESSUNO Then
+               eui_cmdArchiviCompatta.Enabled = False
+            Else
+               eui_cmdArchiviCompatta.Enabled = True
+            End If
+
+         Case Finestra.Pulizia
+            If operatore.ArchiviPulizia = VALORE_NESSUNO Then
+               eui_cmdArchiviPulizia.Enabled = False
+            Else
+               eui_cmdArchiviPulizia.Enabled = True
+            End If
+
+         Case Finestra.Attività
+            If operatore.TabAttività = VALORE_NESSUNO Then
+               eui_cmdArchiviTabelleAttività.Enabled = False
+            Else
+               eui_cmdArchiviTabelleAttività.Enabled = True
+            End If
+
+         Case Finestra.CatCliente
+            If operatore.TabCatClienti = VALORE_NESSUNO Then
+               eui_cmdArchiviTabelleCategorieCliente.Enabled = False
+            Else
+               eui_cmdArchiviTabelleCategorieCliente.Enabled = True
+            End If
+
+         Case Finestra.CatMerce
+            If operatore.TabCatMerce = VALORE_NESSUNO Then
+               eui_cmdArchiviTabelleCategorieMerce.Enabled = False
+            Else
+               eui_cmdArchiviTabelleCategorieMerce.Enabled = True
+            End If
+
+         Case Finestra.FormeCortesia
+            If operatore.TabFormeCortesia = VALORE_NESSUNO Then
+               eui_cmdArchiviTabelleTitoli.Enabled = False
+            Else
+               eui_cmdArchiviTabelleTitoli.Enabled = True
+            End If
+
+         Case Finestra.Magazzini
+            If operatore.TabMagazzini = VALORE_NESSUNO Then
+               eui_cmdArchiviTabelleMagazzini.Enabled = False
+            Else
+               eui_cmdArchiviTabelleMagazzini.Enabled = True
+            End If
+
+         Case Finestra.MsgReparti
+            If operatore.TabMsg = VALORE_NESSUNO Then
+               eui_cmdArchiviTabelleMsgReparti.Enabled = False
+            Else
+               eui_cmdArchiviTabelleMsgReparti.Enabled = True
+            End If
+
+         Case Finestra.Nazioni
+            If operatore.TabNazioni = VALORE_NESSUNO Then
+               eui_cmdArchiviTabelleNazioni.Enabled = False
+            Else
+               eui_cmdArchiviTabelleNazioni.Enabled = True
+            End If
+
+         Case Finestra.Pagamenti
+            If operatore.TabPagamenti = VALORE_NESSUNO Then
+               eui_cmdArchiviTabellePagamenti.Enabled = False
+            Else
+               eui_cmdArchiviTabellePagamenti.Enabled = True
+            End If
+
+         Case Finestra.Reparti
+            If operatore.TabReparti = VALORE_NESSUNO Then
+               eui_cmdArchiviTabelleReparti.Enabled = False
+            Else
+               eui_cmdArchiviTabelleReparti.Enabled = True
+            End If
+
+         Case Finestra.Scaffali
+            If operatore.TabScaffali = VALORE_NESSUNO Then
+               eui_cmdArchiviTabelleScaffali.Enabled = False
+            Else
+               eui_cmdArchiviTabelleScaffali.Enabled = True
+            End If
+
+         Case Finestra.CausaliDoc
+            If operatore.TabCausaliDoc = VALORE_NESSUNO Then
+               eui_cmdArchiviTabelleCausaliDoc.Enabled = False
+            Else
+               eui_cmdArchiviTabelleCausaliDoc.Enabled = True
+            End If
+
+         Case Finestra.Ubicazioni
+            If operatore.TabUbicazioni = VALORE_NESSUNO Then
+               eui_cmdArchiviTabelleUbicazioni.Enabled = False
+            Else
+               eui_cmdArchiviTabelleUbicazioni.Enabled = True
+            End If
+
+         Case Finestra.UnitàMisura
+            If operatore.TabUM = VALORE_NESSUNO Then
+               eui_cmdArchiviTabelleUM.Enabled = False
+            Else
+               eui_cmdArchiviTabelleUM.Enabled = True
+            End If
+
+         Case Finestra.TipologieRisorse
+            If operatore.TabTipoRisorse = VALORE_NESSUNO Then
+               eui_cmdArchiviTabelleTipoRisorse.Enabled = False
+            Else
+               eui_cmdArchiviTabelleTipoRisorse.Enabled = True
+            End If
+
+         Case Finestra.ChiusuraGiornaliera
+            If operatore.ContChiusura = VALORE_NESSUNO Then
+               eui_ContabilitàChiusura.Enabled = False
+            Else
+               eui_ContabilitàChiusura.Enabled = True
+            End If
+
+         Case Finestra.Corrispettivi
+            If operatore.ContCorrispettivi = VALORE_NESSUNO Then
+               eui_ContabilitàCorrispettivi.Enabled = False
+            Else
+               eui_ContabilitàCorrispettivi.Enabled = True
+            End If
+
+         Case Finestra.Documenti
+            If operatore.ContDoc = VALORE_NESSUNO Then
+               eui_ContabilitàElencoDoc.Enabled = False
+            Else
+               eui_ContabilitàElencoDoc.Enabled = True
+            End If
+
+         Case Finestra.PrimaNota
+            If operatore.ContPrimaNota = VALORE_NESSUNO Then
+               eui_ContabilitàPrimaNota.Enabled = False
+            Else
+               eui_ContabilitàPrimaNota.Enabled = True
+            End If
+
+         Case Finestra.Acquisti
+            If operatore.GestAcquisti = VALORE_NESSUNO Then
+               eui_cmdGestioneAcquisti.Enabled = False
+            Else
+               eui_cmdGestioneAcquisti.Enabled = True
+            End If
+
+         Case Finestra.Menù
+            If operatore.StruMenù = VALORE_NESSUNO Then
+               eui_StrumentiMenù.Enabled = False
+            Else
+               eui_StrumentiMenù.Enabled = True
+            End If
+
+         Case Finestra.Gruppi
+            If operatore.GestGruppi = VALORE_NESSUNO Then
+               eui_cmdGestioneGruppiOp.Enabled = False
+            Else
+               eui_cmdGestioneGruppiOp.Enabled = True
+            End If
+
+         Case Finestra.Operatori
+            If operatore.GestOperatori = VALORE_NESSUNO Then
+               eui_cmdGestioneOperatori.Enabled = False
+            Else
+               eui_cmdGestioneOperatori.Enabled = True
+            End If
+
+         Case Finestra.PrenSale
+            If operatore.GestPrenSale = VALORE_NESSUNO Then
+               eui_cmdGestionePrenSale.Enabled = False
+            Else
+               eui_cmdGestionePrenSale.Enabled = True
+            End If
+
+         Case Finestra.PrenTavoli
+            If operatore.GestPrenTavoli = VALORE_NESSUNO Then
+               eui_cmdGestionePrenTavoli.Enabled = False
+            Else
+               eui_cmdGestionePrenTavoli.Enabled = True
+            End If
+
+         Case Finestra.PrenRisorse
+            If operatore.GestPrenRisorse = VALORE_NESSUNO Then
+               eui_cmdGestionePrenRisorse.Enabled = False
+            Else
+               eui_cmdGestionePrenRisorse.Enabled = True
+            End If
+
+         Case Finestra.PlanningRisorse
+            If operatore.GestPlanningRisorse = VALORE_NESSUNO Then
+               eui_cmdGestionePlanningRisorseSport.Enabled = False
+            Else
+               eui_cmdGestionePlanningRisorseSport.Enabled = True
+            End If
+
+         Case Finestra.StatisticheRisorse
+            If operatore.GestStatRisorse = VALORE_NESSUNO Then
+               eui_cmdGestioneStatisticheRisorse.Enabled = False
+            Else
+               eui_cmdGestioneStatisticheRisorse.Enabled = True
+            End If
+
+         Case Finestra.PuntoCassa
+            If operatore.GestPuntoCassa = VALORE_NESSUNO Then
+               eui_cmdGestionePosCassa.Enabled = False
+            Else
+               eui_cmdGestionePosCassa.Enabled = True
+            End If
+
+         Case Finestra.Statistiche
+            If operatore.GestStatistiche = VALORE_NESSUNO Then
+               eui_cmdGestioneStatistiche.Enabled = False
+            Else
+               eui_cmdGestioneStatistiche.Enabled = True
+            End If
+
+         Case Finestra.TavoliConto
+            If operatore.GestTavoli = VALORE_NESSUNO Then
+               eui_cmdGestionePosTavoli.Enabled = False
+            Else
+               eui_cmdGestionePosTavoli.Enabled = True
+            End If
+
+         Case Finestra.Articoli
+            If operatore.MagArticoli = VALORE_NESSUNO Then
+               eui_MagazzinoArticoli.Enabled = False
+            Else
+               eui_MagazzinoArticoli.Enabled = True
+            End If
+
+         Case Finestra.Inventario
+            If operatore.MagInventario = VALORE_NESSUNO Then
+               eui_MagazzinoInventario.Enabled = False
+            Else
+               eui_MagazzinoInventario.Enabled = True
+            End If
+
+         Case Finestra.Scorte
+            If operatore.MagScorte = VALORE_NESSUNO Then
+               eui_MagazzinoScorte.Enabled = False
+            Else
+               eui_MagazzinoScorte.Enabled = True
+            End If
+
+         Case Finestra.MovimentiMag
+            If operatore.MagMovimenti = VALORE_NESSUNO Then
+               eui_MagazzinoMovimenti.Enabled = False
+            Else
+               eui_MagazzinoMovimenti.Enabled = True
+            End If
+
+         Case Finestra.DisponiTavoli
+            If operatore.StruDispTavoli = VALORE_NESSUNO Then
+               eui_StrumentiDispTavoli.Enabled = False
+            Else
+               eui_StrumentiDispTavoli.Enabled = True
+            End If
+
+         Case Finestra.ElencoCap
+            If operatore.StruCap = VALORE_NESSUNO Then
+               eui_StrumentiCap.Enabled = False
+            Else
+               eui_StrumentiCap.Enabled = True
+            End If
+
+         Case Finestra.ElencoMsg
+            If operatore.StruMsg = VALORE_NESSUNO Then
+               eui_StrumentiMsgReparti.Enabled = False
+            Else
+               eui_StrumentiMsgReparti.Enabled = True
+            End If
+
+         Case Finestra.CodiciBarre
+            If operatore.StruCodiciBarre = VALORE_NESSUNO Then
+               eui_StrumentiEtichette.Enabled = False
+            Else
+               eui_StrumentiEtichette.Enabled = True
+            End If
+
+         Case Finestra.Opzioni
+            If operatore.VisOpzioni = VALORE_NESSUNO Then
+               eui_Opzioni.Enabled = False
+            Else
+               eui_Opzioni.Enabled = True
+            End If
+
+         Case Finestra.RegErrori
+            If operatore.VisErrori = VALORE_NESSUNO Then
+               eui_VisualizzaRegErrori.Enabled = False
+            Else
+               eui_VisualizzaRegErrori.Enabled = True
+            End If
+
+         Case Finestra.RegOperazioni
+            If operatore.VisOperazioni = VALORE_NESSUNO Then
+               eui_VisualizzaRegOperazioni.Enabled = False
+            Else
+               eui_VisualizzaRegOperazioni.Enabled = True
+            End If
+
+      End Select
+
+   End Sub
+
+   Public Sub RegistraOperazione(ByVal Operazione As String, ByVal descrizione As String, ByVal modulo As String)
+      Try
+         Dim COperazioni As New Operazioni
+         Dim descrizioneOp As String
+
+         Select Case Operazione
+            Case TipoOperazione.Login
+               descrizioneOp = "Effettuata IDENTIFICAZIONE per l'operatore. " & descrizione
+
+            Case TipoOperazione.Logout
+               descrizioneOp = "Eseguito comando CAMBIA OPERATORE. " & descrizione
+
+            Case TipoOperazione.Apri
+               descrizioneOp = "Eseguito comando APRI per " & descrizione
+
+            Case TipoOperazione.Chiudi
+               descrizioneOp = "Eseguito comando CHIUDI per " & descrizione
+
+            Case TipoOperazione.Nuovo
+               descrizioneOp = "Eseguito comando NUOVO per " & descrizione
+
+            Case TipoOperazione.Modifica
+               descrizioneOp = "Eseguito comando MODIFICA. " & descrizione
+
+            Case TipoOperazione.Elimina
+               descrizioneOp = "Eseguito comando ELIMINA. " & descrizione
+
+            Case TipoOperazione.EliminaTutto
+               descrizioneOp = "Eseguito comando ELIMINA TUTTO. " & descrizione
+
+            Case TipoOperazione.Aggiorna
+               descrizioneOp = "Eseguito comando AGGIORNA per " & descrizione
+
+            Case TipoOperazione.Anteprima
+               descrizioneOp = "Eseguito comando ANTEPRIMA DI STAMPA per " & descrizione
+
+            Case TipoOperazione.Stampa
+               descrizioneOp = "Eseguito comando STAMPA per " & descrizione
+
+            Case TipoOperazione.Annulla
+               descrizioneOp = "Eseguito comando ANNULLA per operazione di Inserimeno o Modifica dati."
+
+            Case TipoOperazione.Salva
+               descrizioneOp = "Eseguito comando SALVA. " & descrizione
+
+            Case TipoOperazione.Carico
+               descrizioneOp = "Eseguito comando CARICO. " & descrizione
+
+            Case TipoOperazione.Scarico
+               descrizioneOp = "Eseguito comando SCARICO. " & descrizione
+
+            Case TipoOperazione.Backup
+               descrizioneOp = "Eseguito comando BACKUP DEI DATI."
+
+            Case TipoOperazione.Pulizia
+               descrizioneOp = "Eseguito comando PULIZIA DEGLI ARCHIVI."
+
+            Case TipoOperazione.Compatta
+               descrizioneOp = "Eseguito comando COMPATTA E RIPRISTINA per i dati degli archivi."
+
+            Case TipoOperazione.Chiusura
+               descrizioneOp = "Eseguito comando CHIUSURA GIORNALIERA."
+
+            Case TipoOperazione.AnnullaDoc
+               descrizioneOp = "Eseguito comando ANNULLA DOCUMENTO. " & descrizione
+
+            Case TipoOperazione.IncassaSospeso
+               descrizioneOp = "Eseguito comando INCASSA SOSPESO. " & descrizione
+
+            Case TipoOperazione.PassaSospeso
+               descrizioneOp = "Eseguito comando PASSA A SOSPESO. " & descrizione
+
+            Case TipoOperazione.AnnullaSospeso
+               descrizioneOp = "Eseguito comando ANNULLA SOSPESO. " & descrizione
+
+            Case TipoOperazione.ModificaMenù
+               descrizioneOp = "Eseguito comando di MODIFICA. " & descrizione
+
+            Case TipoOperazione.InviaMsg
+               descrizioneOp = "Eseguito comando INVIA MESSAGGIO ai reparti. " & descrizione
+
+            Case TipoOperazione.SelezionaPiatto
+               descrizioneOp = "Eseguito comando SELEZIONE PIATTO. " & descrizione
+
+            Case TipoOperazione.Listino
+               descrizioneOp = "Eseguito comando SELEZIONE LISTINO. " & descrizione
+
+            Case TipoOperazione.QuantitàMeno
+               descrizioneOp = "Eseguito comando QUANTITA' MENO. " & descrizione
+
+            Case TipoOperazione.QuantitàPiù
+               descrizioneOp = "Eseguito comando QUANTITA' PIU'. " & descrizione
+
+            Case TipoOperazione.Cancella
+               descrizioneOp = "Eseguito comando CANCELLA PIATTO. " & descrizione
+
+            Case TipoOperazione.CancellaTutto
+               descrizioneOp = "Eseguito comando CANCELLA TUTTI I PIATTI. " & descrizione
+
+            Case TipoOperazione.Escludi
+               descrizioneOp = "Eseguito comando ESCLUDI PIATTO DAL CONTO. " & descrizione
+
+            Case TipoOperazione.Offerto
+               descrizioneOp = "Eseguito comando PIATTO OFFERTO . " & descrizione
+
+            Case TipoOperazione.Conferma
+               descrizioneOp = "Eseguito comando CONFERMA. " & descrizione
+
+            Case TipoOperazione.Proforma
+               descrizioneOp = "Eseguito comando STAMPA PROFORMA. " & descrizione
+
+            Case TipoOperazione.Scontrino
+               descrizioneOp = "Eseguito comando STAMPA SCONTRINO. " & descrizione
+
+            Case TipoOperazione.Ricevuta
+               descrizioneOp = "Eseguito comando STAMPA RICEVUTA FISCALE. " & descrizione
+
+            Case TipoOperazione.Fattura
+               descrizioneOp = "Eseguito comando STAMPA FATTURA. " & descrizione
+
+            Case TipoOperazione.ApriTavolo
+               descrizioneOp = "Eseguito comando APRI TAVOLO. " & descrizione
+
+            Case TipoOperazione.ChiudiTavolo
+               descrizioneOp = "Eseguito comando CHIUDI TAVOLO. " & descrizione
+
+            Case TipoOperazione.SpostaTavolo
+               descrizioneOp = "Eseguito comando SPOSTA TAVOLO. " & descrizione
+
+            Case TipoOperazione.OccupaTavolo
+               descrizioneOp = "Eseguito comando OCCUPA TAVOLO. " & descrizione
+
+            Case TipoOperazione.LiberaTavolo
+               descrizioneOp = "Eseguito comando LIBERA TAVOLO. " & descrizione
+
+            Case TipoOperazione.ApriAsporto
+               descrizioneOp = "Eseguito comando APRI ASPORTO. " & descrizione
+
+            Case TipoOperazione.ChiudiAsporto
+               descrizioneOp = "Eseguito comando CHIUDI ASPORTO. " & descrizione
+
+            Case TipoOperazione.RimuoviPiatto
+               descrizioneOp = "Eseguito comando RIMUOVI PIATTO. " & descrizione
+
+            Case TipoOperazione.ProprietàRisorsa
+               descrizioneOp = "Eseguito comando PROPRIETA' RISORSA per " & descrizione
+
+         End Select
+
+         ' Assegna i dati dei campi della classe alle caselle di testo.
+         With COperazioni
+            .Data = Convert.ToString(Now)
+            .Operatore = operatore.Nome
+            .Modulo = modulo
+            .Descrizione = descrizioneOp
+
+            ' Salva i dati nel database.
+            .InserisciDati(NOME_TABELLA)
+         End With
+
+         ' Se la finestra è aperta aggiorna la griglia dati.
+         If IsNothing(g_frmOperazioni) = False Then
+            g_frmOperazioni.AggiornaDati()
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
+
+   Public Sub SalvaCopiaBackup()
+      Try
+         ' Visualizza un messaggio nella barra di stato.
+         Me.eui_Informazioni.Text = SALVA_BKP
+
+         If SalvaBKP = True Then
+            If File.Exists(PercorsoDB) = True Then
+               File.Copy(PercorsoDB, PercorsoBKP, True)
+            End If
+         End If
+
+         ' Visualizza un messaggio nella barra di stato.
+         Me.eui_Informazioni.Text = LeggiDatiRivenditore()
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
+   End Sub
+
+   Public Sub ScriviDatiTavoli(ByVal sw As StreamWriter)
+      Dim cn As New OleDbConnection(ConnString)
+      Dim strSql As String = "SELECT * FROM Tavoli WHERE Escludi = 'No' ORDER BY Descrizione ASC"
+
+      Try
+         cn.Open()
+
+         Dim cmd As New OleDbCommand(strSql, cn)
+         Dim dr As OleDbDataReader = cmd.ExecuteReader()
+
+         sw.WriteLine("[TAVOLI]")
+
+         Do While dr.Read
+            sw.WriteLine(dr.Item("Id") & ";" & dr.Item("Descrizione") & ";" & dr.Item("Posti") & ";" & dr.Item("Listino"))
+         Loop
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      Finally
+         cn.Close()
+
+      End Try
+   End Sub
+
+   Public Sub ScriviDatiCategorie(ByVal sw As StreamWriter)
+      Dim cn As New OleDbConnection(ConnString)
+      Dim strSql As String = "SELECT * FROM CategoriePiatti ORDER BY IdOrd ASC"
+
+      Try
+         cn.Open()
+
+         Dim cmd As New OleDbCommand(strSql, cn)
+         Dim dr As OleDbDataReader = cmd.ExecuteReader()
+
+         sw.WriteLine("[CATEGORIE]")
+
+         Do While dr.Read
+            sw.WriteLine(dr.Item("Id") & ";" & dr.Item("Descrizione") & ";" & dr.Item("Colore"))
+         Loop
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      Finally
+         cn.Close()
+
+      End Try
+   End Sub
+
+   Public Sub ScriviDatiPiatti(ByVal sw As StreamWriter)
+      Dim cn As New OleDbConnection(ConnString)
+      Dim strSql As String = "SELECT * FROM Piatti WHERE Variazione = 'No' ORDER BY DescrizionePos ASC"
+
+      Try
+         cn.Open()
+
+         Dim cmd As New OleDbCommand(strSql, cn)
+         Dim dr As OleDbDataReader = cmd.ExecuteReader()
+
+         sw.WriteLine("[PIATTI]")
+
+         Do While dr.Read
+            sw.WriteLine(dr.Item("Id") & ";" & dr.Item("Categoria") & ";" & dr.Item("DescrizionePos") & ";" &
                          dr.Item("Listino1") & ";" & dr.Item("Listino2") & ";" & dr.Item("Listino3") & ";" & dr.Item("Listino4"))
-            Loop
+         Loop
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-        Finally
-            cn.Close()
+      Finally
+         cn.Close()
 
-        End Try
-    End Sub
+      End Try
+   End Sub
 
-    Public Sub ScriviDatiVarianti(ByVal sw As StreamWriter)
-        Dim cn As New OleDbConnection(ConnString)
-        Dim strSql As String = "SELECT * FROM Piatti WHERE Variazione = 'Sì' ORDER BY DescrizionePos ASC"
+   Public Sub ScriviDatiVarianti(ByVal sw As StreamWriter)
+      Dim cn As New OleDbConnection(ConnString)
+      Dim strSql As String = "SELECT * FROM Piatti WHERE Variazione = 'Sì' ORDER BY DescrizionePos ASC"
 
-        Try
-            cn.Open()
+      Try
+         cn.Open()
 
-            Dim cmd As New OleDbCommand(strSql, cn)
-            Dim dr As OleDbDataReader = cmd.ExecuteReader()
+         Dim cmd As New OleDbCommand(strSql, cn)
+         Dim dr As OleDbDataReader = cmd.ExecuteReader()
 
-            sw.WriteLine("[VARIANTI]")
+         sw.WriteLine("[VARIANTI]")
 
-            Do While dr.Read
-                sw.WriteLine(dr.Item("Id") & ";" & dr.Item("Categoria") & ";" & dr.Item("DescrizionePos") & ";" &
+         Do While dr.Read
+            sw.WriteLine(dr.Item("Id") & ";" & dr.Item("Categoria") & ";" & dr.Item("DescrizionePos") & ";" &
                                  dr.Item("Listino1") & ";" & dr.Item("Listino2") & ";" & dr.Item("Listino3") & ";" & dr.Item("Listino4"))
+         Loop
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      Finally
+         cn.Close()
+
+      End Try
+   End Sub
+
+   Public Sub ScriviDatiCamerieri(ByVal sw As StreamWriter)
+      Dim cn As New OleDbConnection(ConnString)
+      Dim strSql As String = "SELECT * FROM Camerieri ORDER BY Nome ASC"
+
+      Try
+         cn.Open()
+
+         Dim cmd As New OleDbCommand(strSql, cn)
+         Dim dr As OleDbDataReader = cmd.ExecuteReader()
+
+         sw.WriteLine("[CAMERIERI]")
+
+         Do While dr.Read
+            sw.WriteLine(dr.Item("Id") & ";" & dr.Item("Nome"))
+         Loop
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      Finally
+         cn.Close()
+
+      End Try
+   End Sub
+
+   Public Sub ScriviDatiMessaggi(ByVal sw As StreamWriter)
+      Dim cn As New OleDbConnection(ConnString)
+      Dim strSql As String = "SELECT * FROM MessaggiReparti ORDER BY Descrizione ASC"
+
+      Try
+         cn.Open()
+
+         Dim cmd As New OleDbCommand(strSql, cn)
+         Dim dr As OleDbDataReader = cmd.ExecuteReader()
+
+         sw.WriteLine("[MESSAGGI]")
+
+         Do While dr.Read
+            sw.WriteLine(dr.Item("Id") & ";" & dr.Item("Descrizione"))
+         Loop
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      Finally
+         cn.Close()
+
+      End Try
+   End Sub
+
+   Public Sub ScriviDatiImpostazione(ByVal sw As StreamWriter)
+      Try
+         sw.WriteLine("[PERCORSO]")
+         sw.WriteLine(PercorsoRP)
+         sw.WriteLine("[FREQUENZA]")
+         sw.WriteLine(FreqAggPalmare)
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
+   End Sub
+
+   Public Sub ScriviDatiStatoTavoli(ByVal sw As StreamWriter)
+      Dim cn As New OleDbConnection(ConnString)
+      Dim strSql As String = "SELECT * FROM Tavoli WHERE Escludi = 'No' ORDER BY Descrizione ASC"
+
+      Try
+         cn.Open()
+
+         Dim cmd As New OleDbCommand(strSql, cn)
+         Dim dr As OleDbDataReader = cmd.ExecuteReader()
+
+         sw.WriteLine("[TAVOLI]")
+
+         Do While dr.Read
+            Dim coperti As String
+            If dr.Item("Coperti") <> "" Then
+               coperti = dr.Item("Coperti")
+            Else
+               coperti = dr.Item("Posti")
+            End If
+            sw.WriteLine(dr.Item("Id") & ";" & dr.Item("Descrizione") & ";" & coperti & ";" & dr.Item("Colore"))
+         Loop
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      Finally
+         cn.Close()
+
+      End Try
+   End Sub
+
+   Public Sub ScriviDatiStatoPiatti(ByVal sw As StreamWriter)
+      Dim cn As New OleDbConnection(ConnString)
+      Dim strSqlPiatti As String = "SELECT * FROM Piatti WHERE Variazione = 'No' ORDER BY DescrizionePos ASC"
+      Dim valEsaurito As String
+
+      Try
+         Dim strSql As String
+         Dim cmd As New OleDbCommand(strSql, cn)
+         Dim numRecEsauriti As Integer = LeggiNumRecord("PiattiEsauriti", cn, cmd)
+         Dim idPiattiEsauriti(numRecEsauriti - 1) As String
+
+         cmd.Dispose()
+
+         cn.Open()
+
+         If numRecEsauriti > 0 Then
+            Dim strSqlEsauriti As String = "SELECT * FROM PiattiEsauriti ORDER BY Id ASC"
+            Dim cmdEsauriti As New OleDbCommand(strSqlEsauriti, cn)
+            Dim drEsauriti As OleDbDataReader = cmdEsauriti.ExecuteReader()
+
+            Dim i As Integer = 0
+            Do While drEsauriti.Read
+               idPiattiEsauriti(i) = drEsauriti.Item("IdPiatto")
+               i += 1
             Loop
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+            cmdEsauriti.Dispose()
+            drEsauriti.Close()
+         End If
 
-        Finally
-            cn.Close()
+         Dim cmdPiatti As New OleDbCommand(strSqlPiatti, cn)
+         Dim drPiatti As OleDbDataReader = cmdPiatti.ExecuteReader()
 
-        End Try
-    End Sub
+         sw.WriteLine("[PIATTI]")
 
-    Public Sub ScriviDatiCamerieri(ByVal sw As StreamWriter)
-        Dim cn As New OleDbConnection(ConnString)
-        Dim strSql As String = "SELECT * FROM Camerieri ORDER BY Nome ASC"
-
-        Try
-            cn.Open()
-
-            Dim cmd As New OleDbCommand(strSql, cn)
-            Dim dr As OleDbDataReader = cmd.ExecuteReader()
-
-            sw.WriteLine("[CAMERIERI]")
-
-            Do While dr.Read
-                sw.WriteLine(dr.Item("Id") & ";" & dr.Item("Nome"))
-            Loop
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-
-        Finally
-            cn.Close()
-
-        End Try
-    End Sub
-
-    Public Sub ScriviDatiMessaggi(ByVal sw As StreamWriter)
-        Dim cn As New OleDbConnection(ConnString)
-        Dim strSql As String = "SELECT * FROM MessaggiReparti ORDER BY Descrizione ASC"
-
-        Try
-            cn.Open()
-
-            Dim cmd As New OleDbCommand(strSql, cn)
-            Dim dr As OleDbDataReader = cmd.ExecuteReader()
-
-            sw.WriteLine("[MESSAGGI]")
-
-            Do While dr.Read
-                sw.WriteLine(dr.Item("Id") & ";" & dr.Item("Descrizione"))
-            Loop
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-
-        Finally
-            cn.Close()
-
-        End Try
-    End Sub
-
-    Public Sub ScriviDatiImpostazione(ByVal sw As StreamWriter)
-        Try
-            sw.WriteLine("[PERCORSO]")
-            sw.WriteLine(PercorsoRP)
-            sw.WriteLine("[FREQUENZA]")
-            sw.WriteLine(FreqAggPalmare)
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-
-        End Try
-    End Sub
-
-    Public Sub ScriviDatiStatoTavoli(ByVal sw As StreamWriter)
-        Dim cn As New OleDbConnection(ConnString)
-        Dim strSql As String = "SELECT * FROM Tavoli WHERE Escludi = 'No' ORDER BY Descrizione ASC"
-
-        Try
-            cn.Open()
-
-            Dim cmd As New OleDbCommand(strSql, cn)
-            Dim dr As OleDbDataReader = cmd.ExecuteReader()
-
-            sw.WriteLine("[TAVOLI]")
-
-            Do While dr.Read
-                Dim coperti As String
-                If dr.Item("Coperti") <> "" Then
-                    coperti = dr.Item("Coperti")
-                Else
-                    coperti = dr.Item("Posti")
-                End If
-                sw.WriteLine(dr.Item("Id") & ";" & dr.Item("Descrizione") & ";" & coperti & ";" & dr.Item("Colore"))
-            Loop
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-
-        Finally
-            cn.Close()
-
-        End Try
-    End Sub
-
-    Public Sub ScriviDatiStatoPiatti(ByVal sw As StreamWriter)
-        Dim cn As New OleDbConnection(ConnString)
-        Dim strSqlPiatti As String = "SELECT * FROM Piatti WHERE Variazione = 'No' ORDER BY DescrizionePos ASC"
-        Dim valEsaurito As String
-
-        Try
-            Dim strSql As String
-            Dim cmd As New OleDbCommand(strSql, cn)
-            Dim numRecEsauriti As Integer = LeggiNumRecord("PiattiEsauriti", cn, cmd)
-            Dim idPiattiEsauriti(numRecEsauriti - 1) As String
-
-            cmd.Dispose()
-
-            cn.Open()
-
+         Do While drPiatti.Read
             If numRecEsauriti > 0 Then
-                Dim strSqlEsauriti As String = "SELECT * FROM PiattiEsauriti ORDER BY Id ASC"
-                Dim cmdEsauriti As New OleDbCommand(strSqlEsauriti, cn)
-                Dim drEsauriti As OleDbDataReader = cmdEsauriti.ExecuteReader()
-
-                Dim i As Integer = 0
-                Do While drEsauriti.Read
-                    idPiattiEsauriti(i) = drEsauriti.Item("IdPiatto")
-                    i += 1
-                Loop
-
-                cmdEsauriti.Dispose()
-                drEsauriti.Close()
+               valEsaurito = 1
+               Dim i As Integer = 0
+               For i = 0 To numRecEsauriti - 1
+                  If drPiatti.Item("Id") = idPiattiEsauriti(i) Then
+                     valEsaurito = 0
+                     Exit For
+                  End If
+               Next
+            Else
+               valEsaurito = 1
             End If
 
-            Dim cmdPiatti As New OleDbCommand(strSqlPiatti, cn)
-            Dim drPiatti As OleDbDataReader = cmdPiatti.ExecuteReader()
+            sw.WriteLine(drPiatti.Item("Id") & ";" & drPiatti.Item("Categoria") & ";" & drPiatti.Item("DescrizionePos") & ";" & valEsaurito)
+         Loop
 
-            sw.WriteLine("[PIATTI]")
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-            Do While drPiatti.Read
-                If numRecEsauriti > 0 Then
-                    valEsaurito = 1
-                    Dim i As Integer = 0
-                    For i = 0 To numRecEsauriti - 1
-                        If drPiatti.Item("Id") = idPiattiEsauriti(i) Then
-                            valEsaurito = 0
-                            Exit For
-                        End If
-                    Next
-                Else
-                    valEsaurito = 1
-                End If
+      Finally
+         cn.Close()
 
-                sw.WriteLine(drPiatti.Item("Id") & ";" & drPiatti.Item("Categoria") & ";" & drPiatti.Item("DescrizionePos") & ";" & valEsaurito)
+      End Try
+   End Sub
+
+   Public Sub ScriviDatiStatoVarianti(ByVal sw As StreamWriter)
+      Dim cn As New OleDbConnection(ConnString)
+      Dim strSqlPiatti As String = "SELECT * FROM Piatti WHERE Variazione = 'Sì' ORDER BY DescrizionePos ASC"
+      Dim valEsaurito As String
+
+      Try
+         Dim strSql As String
+         Dim cmd As New OleDbCommand(strSql, cn)
+         Dim numRecEsauriti As Integer = LeggiNumRecord("PiattiEsauriti", cn, cmd)
+         Dim idPiattiEsauriti(numRecEsauriti - 1) As String
+
+         cmd.Dispose()
+
+         cn.Open()
+
+         If numRecEsauriti > 0 Then
+            Dim strSqlEsauriti As String = "SELECT * FROM PiattiEsauriti ORDER BY Id ASC"
+            Dim cmdEsauriti As New OleDbCommand(strSqlEsauriti, cn)
+            Dim drEsauriti As OleDbDataReader = cmdEsauriti.ExecuteReader()
+
+            Dim i As Integer = 0
+            Do While drEsauriti.Read
+               idPiattiEsauriti(i) = drEsauriti.Item("IdPiatto")
+               i += 1
             Loop
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+            cmdEsauriti.Dispose()
+            drEsauriti.Close()
+         End If
 
-        Finally
-            cn.Close()
+         Dim cmdPiatti As New OleDbCommand(strSqlPiatti, cn)
+         Dim drPiatti As OleDbDataReader = cmdPiatti.ExecuteReader()
 
-        End Try
-    End Sub
+         sw.WriteLine("[VARIANTI]")
 
-    Public Sub ScriviDatiStatoVarianti(ByVal sw As StreamWriter)
-        Dim cn As New OleDbConnection(ConnString)
-        Dim strSqlPiatti As String = "SELECT * FROM Piatti WHERE Variazione = 'Sì' ORDER BY DescrizionePos ASC"
-        Dim valEsaurito As String
-
-        Try
-            Dim strSql As String
-            Dim cmd As New OleDbCommand(strSql, cn)
-            Dim numRecEsauriti As Integer = LeggiNumRecord("PiattiEsauriti", cn, cmd)
-            Dim idPiattiEsauriti(numRecEsauriti - 1) As String
-
-            cmd.Dispose()
-
-            cn.Open()
-
+         Do While drPiatti.Read
             If numRecEsauriti > 0 Then
-                Dim strSqlEsauriti As String = "SELECT * FROM PiattiEsauriti ORDER BY Id ASC"
-                Dim cmdEsauriti As New OleDbCommand(strSqlEsauriti, cn)
-                Dim drEsauriti As OleDbDataReader = cmdEsauriti.ExecuteReader()
-
-                Dim i As Integer = 0
-                Do While drEsauriti.Read
-                    idPiattiEsauriti(i) = drEsauriti.Item("IdPiatto")
-                    i += 1
-                Loop
-
-                cmdEsauriti.Dispose()
-                drEsauriti.Close()
+               valEsaurito = 1
+               Dim i As Integer = 0
+               For i = 0 To numRecEsauriti - 1
+                  If drPiatti.Item("Id") = idPiattiEsauriti(i) Then
+                     valEsaurito = 0
+                  Else
+                     valEsaurito = 1
+                  End If
+               Next
+            Else
+               valEsaurito = 1
             End If
 
-            Dim cmdPiatti As New OleDbCommand(strSqlPiatti, cn)
-            Dim drPiatti As OleDbDataReader = cmdPiatti.ExecuteReader()
+            sw.WriteLine(drPiatti.Item("Id") & ";" & drPiatti.Item("Categoria") & ";" & drPiatti.Item("DescrizionePos") & ";" & valEsaurito)
+         Loop
 
-            sw.WriteLine("[VARIANTI]")
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-            Do While drPiatti.Read
-                If numRecEsauriti > 0 Then
-                    valEsaurito = 1
-                    Dim i As Integer = 0
-                    For i = 0 To numRecEsauriti - 1
-                        If drPiatti.Item("Id") = idPiattiEsauriti(i) Then
-                            valEsaurito = 0
-                        Else
-                            valEsaurito = 1
-                        End If
-                    Next
-                Else
-                    valEsaurito = 1
-                End If
+      Finally
+         cn.Close()
 
-                sw.WriteLine(drPiatti.Item("Id") & ";" & drPiatti.Item("Categoria") & ";" & drPiatti.Item("DescrizionePos") & ";" & valEsaurito)
-            Loop
+      End Try
+   End Sub
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+   Public Sub ScriviDatiTavoliSQLite()
+      Dim cn As New OleDbConnection(ConnString)
+      Dim strSql As String = "SELECT * FROM Tavoli WHERE Escludi = 'No' ORDER BY Descrizione ASC"
 
-        Finally
-            cn.Close()
+      Try
+         cn.Open()
 
-        End Try
-    End Sub
+         Dim cmd As New OleDbCommand(strSql, cn)
+         Dim dr As OleDbDataReader = cmd.ExecuteReader()
 
-    Public Sub ScriviDatiTavoliSQLite()
-        Dim cn As New OleDbConnection(ConnString)
-        Dim strSql As String = "SELECT * FROM Tavoli WHERE Escludi = 'No' ORDER BY Descrizione ASC"
+         Dim CTavoli As New TavoliSQLite()
 
-        Try
-            cn.Open()
+         CTavoli.CreaTabella("Tavoli")
 
-            Dim cmd As New OleDbCommand(strSql, cn)
-            Dim dr As OleDbDataReader = cmd.ExecuteReader()
-
-            Dim CTavoli As New TavoliSQLite()
-
-            CTavoli.CreaTabella("Tavoli")
-
-            Do While dr.Read
-
-                With CTavoli
-                    .CancellaCampi()
-
-                    .Codice = dr.Item("Id").ToString
-                    .Descrizione = SostituisciCaratteri(dr.Item("Descrizione").ToString)
-                    .Posti = dr.Item("Posti").ToString
-                    .Listino = dr.Item("Listino").ToString
-                    .Sala = SostituisciCaratteri(dr.Item("Sala").ToString)
-
-                    .InserisciDati("Tavoli")
-                End With
-            Loop
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-
-        Finally
-            cn.Close()
-
-        End Try
-    End Sub
-
-    Public Sub ScriviDatiCategoriePiattiSQLite()
-        Dim cn As New OleDbConnection(ConnString)
-        Dim strSql As String = "SELECT * FROM CategoriePiatti ORDER BY Id ASC"
-
-        Try
-            cn.Open()
-
-            Dim cmd As New OleDbCommand(strSql, cn)
-            Dim dr As OleDbDataReader = cmd.ExecuteReader()
-
-            Dim CCategorie As New CategoriePiattiSQLite()
-
-            CCategorie.CreaTabella("Categorie")
-
-            Do While dr.Read
-
-                With CCategorie
-                    .CancellaCampi()
-
-                    .Codice = dr.Item("Id").ToString
-                    .Descrizione = SostituisciCaratteri(dr.Item("Descrizione").ToString)
-                    .Colore = dr.Item("ColoreSfondo").ToString
-
-                    .InserisciDati("Categorie")
-                End With
-            Loop
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-
-        Finally
-            cn.Close()
-
-        End Try
-    End Sub
-
-    Public Sub ScriviDatiPiattiSQLite()
-        Dim cn As New OleDbConnection(ConnString)
-        Dim strSql As String = "SELECT * FROM Piatti WHERE Variazione = 'No' ORDER BY DescrizionePos ASC"
-
-        Try
-            cn.Open()
-
-            Dim cmd As New OleDbCommand(strSql, cn)
-            Dim dr As OleDbDataReader = cmd.ExecuteReader()
-
-            Dim CPiatti As New PiattiSQLite()
-
-            CPiatti.CreaTabella("Piatti")
-
-            Do While dr.Read
-
-                With CPiatti
-                    .CancellaCampi()
-
-                    .Codice = dr.Item("Id").ToString
-                    .Descrizione = SostituisciCaratteri(dr.Item("DescrizionePos").ToString)
-                    .Categoria = SostituisciCaratteri(dr.Item("Categoria").ToString)
-                    .Listino1 = dr.Item("Listino1").ToString
-                    .Listino2 = dr.Item("Listino2").ToString
-                    .Listino3 = dr.Item("Listino3").ToString
-                    .Listino4 = dr.Item("Listino4").ToString
-
-                    .InserisciDati("Piatti")
-                End With
-            Loop
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-
-        Finally
-            cn.Close()
-
-        End Try
-    End Sub
-
-    Public Sub ScriviDatiVariantiSQLite()
-        Dim cn As New OleDbConnection(ConnString)
-        Dim strSql As String = "SELECT * FROM Piatti WHERE Variazione = 'Sì' ORDER BY Id ASC"
-
-        Try
-            cn.Open()
-
-            Dim cmd As New OleDbCommand(strSql, cn)
-            Dim dr As OleDbDataReader = cmd.ExecuteReader()
-
-            Dim CVarianti As New VariantiSQLite()
-
-            CVarianti.CreaTabella("Varianti")
-
-            Do While dr.Read
-
-                With CVarianti
-                    .CancellaCampi()
-
-                    .Codice = dr.Item("Id").ToString
-                    .Descrizione = SostituisciCaratteri(dr.Item("DescrizionePos").ToString)
-                    .Categoria = SostituisciCaratteri(dr.Item("Categoria").ToString)
-                    .Listino1 = dr.Item("Listino1").ToString
-                    .Listino2 = dr.Item("Listino2").ToString
-                    .Listino3 = dr.Item("Listino3").ToString
-                    .Listino4 = dr.Item("Listino4").ToString
-
-                    .InserisciDati("Varianti")
-                End With
-            Loop
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-
-        Finally
-            cn.Close()
-
-        End Try
-    End Sub
-
-    Public Sub ScriviDatiCamerieriSQLite()
-        Dim cn As New OleDbConnection(ConnString)
-        Dim strSql As String = "SELECT * FROM Camerieri ORDER BY Id ASC"
-
-        Try
-            cn.Open()
-
-            Dim cmd As New OleDbCommand(strSql, cn)
-            Dim dr As OleDbDataReader = cmd.ExecuteReader()
-
-            Dim CCamerieri As New CamerieriSQLite()
-
-            CCamerieri.CreaTabella("Camerieri")
-
-            Do While dr.Read
-
-                With CCamerieri
-                    .CancellaCampi()
-
-                    .Codice = dr.Item("Id").ToString
-                    .Nome = SostituisciCaratteri(dr.Item("Nome").ToString)
-
-                    .InserisciDati("Camerieri")
-                End With
-            Loop
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-
-        Finally
-            cn.Close()
-
-        End Try
-    End Sub
-
-    Public Sub ScriviDatiMessaggiSQLite()
-        Dim cn As New OleDbConnection(ConnString)
-        Dim strSql As String = "SELECT * FROM MessaggiReparti ORDER BY Id ASC"
-
-        Try
-            cn.Open()
-
-            Dim cmd As New OleDbCommand(strSql, cn)
-            Dim dr As OleDbDataReader = cmd.ExecuteReader()
-
-            Dim CMessaggi As New MessaggiSQLite
-
-            CMessaggi.CreaTabella("Messaggi")
-
-            Do While dr.Read
-
-                With CMessaggi
-                    .CancellaCampi()
-
-                    .Codice = dr.Item("Id").ToString
-                    .Descrizione = SostituisciCaratteri(dr.Item("Descrizione").ToString)
-
-                    .InserisciDati("Messaggi")
-                End With
-            Loop
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-
-        Finally
-            cn.Close()
-
-        End Try
-    End Sub
-
-    Public Sub ScriviDatiImpostazioneSQLite()
-        Dim cn As New OleDbConnection(ConnString)
-
-        Try
-            cn.Open()
-
-            Dim CImpostazioni As New ImpostazioniSQLite
-
-            CImpostazioni.CreaTabella("Impostazioni")
-
-            With CImpostazioni
-                .CancellaCampi()
-
-                .Percorso = PercorsoRP
-                .Frequenza = FreqAggPalmare
-
-                .InserisciDati("Impostazioni")
-            End With
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-
-        Finally
-            cn.Close()
-
-        End Try
-    End Sub
-
-    Public Sub ScriviDatiStatoTavoliSQLite()
-        Dim cn As New OleDbConnection(ConnString)
-        Dim strSql As String = "SELECT * FROM Tavoli WHERE Escludi = 'No' ORDER BY Descrizione ASC"
-
-        Try
-            cn.Open()
-
-            Dim cmd As New OleDbCommand(strSql, cn)
-            Dim dr As OleDbDataReader = cmd.ExecuteReader()
-
-            Dim CTavoli As New StatoTavoliSQLite()
-
-            CTavoli.CreaTabella("Tavoli")
-
-            Do While dr.Read
-                With CTavoli
-                    .CancellaCampi()
-
-                    .Codice = dr.Item("Id").ToString
-                    .Descrizione = SostituisciCaratteri(dr.Item("Descrizione").ToString)
-                    .Coperti = dr.Item("Posti").ToString
-                    .Colore = dr.Item("Colore").ToString
-                    .Sala = SostituisciCaratteri(dr.Item("Sala").ToString)
-
-                    .InserisciDati("Tavoli")
-                End With
-            Loop
-
-            cmd.Dispose()
-            dr.Close()
-
-            CTavoli.Close()
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-
-        Finally
-            cn.Close()
-
-        End Try
-    End Sub
-
-    Public Sub ScriviDatiStatoPiattiSQLite()
-        Dim cn As New OleDbConnection(ConnString)
-        Dim strSqlPiatti As String = "SELECT * FROM Piatti WHERE Variazione = 'No' ORDER BY DescrizionePos ASC"
-        Dim valEsaurito As String
-
-        Try
-            Dim strSql As String
-            Dim cmd As New OleDbCommand(strSql, cn)
-            Dim numRecEsauriti As Integer = LeggiNumRecord("PiattiEsauriti", cn, cmd)
-            Dim idPiattiEsauriti(numRecEsauriti - 1) As String
-
-            cmd.Dispose()
-
-            cn.Open()
-
-            If numRecEsauriti > 0 Then
-                Dim strSqlEsauriti As String = "SELECT * FROM PiattiEsauriti ORDER BY Id ASC"
-                Dim cmdEsauriti As New OleDbCommand(strSqlEsauriti, cn)
-                Dim drEsauriti As OleDbDataReader = cmdEsauriti.ExecuteReader()
-
-                Dim i As Integer = 0
-                Do While drEsauriti.Read
-                    idPiattiEsauriti(i) = drEsauriti.Item("IdPiatto")
-                    i += 1
-                Loop
-
-                cmdEsauriti.Dispose()
-                drEsauriti.Close()
-            End If
-
-            Dim cmdPiatti As New OleDbCommand(strSqlPiatti, cn)
-            Dim drPiatti As OleDbDataReader = cmdPiatti.ExecuteReader()
-
-            Dim CPiatti As New StatoPiattiSQLite
-
-            CPiatti.CreaTabella("Piatti")
-
-            Do While drPiatti.Read
-                If numRecEsauriti > 0 Then
-                    valEsaurito = 1
-                    Dim i As Integer = 0
-                    For i = 0 To numRecEsauriti - 1
-                        If drPiatti.Item("Id") = idPiattiEsauriti(i) Then
-                            valEsaurito = 0
-                            Exit For
-                        End If
-                    Next
-                Else
-                    valEsaurito = 1
-                End If
-
-                With CPiatti
-                    .CancellaCampi()
-
-                    .Codice = drPiatti.Item("Id").ToString
-                    .Descrizione = SostituisciCaratteri(drPiatti.Item("DescrizionePos").ToString)
-                    .Categoria = SostituisciCaratteri(drPiatti.Item("Categoria").ToString)
-                    .Esaurito = valEsaurito
-
-                    .InserisciDati("Piatti")
-                End With
-            Loop
-
-            cmdPiatti.Dispose()
-            drPiatti.Close()
-
-            CPiatti.Close()
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-
-        Finally
-            cn.Close()
-
-        End Try
-    End Sub
-
-    Public Sub ScriviDatiStatoVariantiSQLite()
-        Dim cn As New OleDbConnection(ConnString)
-        Dim strSqlPiatti As String = "SELECT * FROM Piatti WHERE Variazione = 'Sì' ORDER BY DescrizionePos ASC"
-        Dim valEsaurito As String
-
-        Try
-            Dim strSql As String
-            Dim cmd As New OleDbCommand(strSql, cn)
-            Dim numRecEsauriti As Integer = LeggiNumRecord("PiattiEsauriti", cn, cmd)
-            Dim idPiattiEsauriti(numRecEsauriti - 1) As String
-
-            cmd.Dispose()
-
-            cn.Open()
-
-            If numRecEsauriti > 0 Then
-                Dim strSqlEsauriti As String = "SELECT * FROM PiattiEsauriti ORDER BY Id ASC"
-                Dim cmdEsauriti As New OleDbCommand(strSqlEsauriti, cn)
-                Dim drEsauriti As OleDbDataReader = cmdEsauriti.ExecuteReader()
-
-                Dim i As Integer = 0
-                Do While drEsauriti.Read
-                    idPiattiEsauriti(i) = drEsauriti.Item("IdPiatto")
-                    i += 1
-                Loop
-
-                cmdEsauriti.Dispose()
-                drEsauriti.Close()
-            End If
-
-            Dim cmdPiatti As New OleDbCommand(strSqlPiatti, cn)
-            Dim drPiatti As OleDbDataReader = cmdPiatti.ExecuteReader()
-
-            Dim CVarianti As New StatoVariantiSQLite
-
-            CVarianti.CreaTabella("Varianti")
-
-            Do While drPiatti.Read
-                If numRecEsauriti > 0 Then
-                    valEsaurito = 1
-                    Dim i As Integer = 0
-                    For i = 0 To numRecEsauriti - 1
-                        If drPiatti.Item("Id") = idPiattiEsauriti(i) Then
-                            valEsaurito = 0
-                            Exit For
-                        End If
-                    Next
-                Else
-                    valEsaurito = 1
-                End If
-
-                With CVarianti
-                    .CancellaCampi()
-
-                    .Codice = drPiatti.Item("Id").ToString
-                    .Descrizione = SostituisciCaratteri(drPiatti.Item("DescrizionePos").ToString)
-                    .Categoria = SostituisciCaratteri(drPiatti.Item("Categoria").ToString)
-                    .Esaurito = valEsaurito
-
-                    .InserisciDati("Varianti")
-                End With
-            Loop
-
-            cmdPiatti.Dispose()
-            drPiatti.Close()
-
-            CVarianti.Close()
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-
-        Finally
-            cn.Close()
-
-        End Try
-    End Sub
-
-    Public Sub ScriviDatiStatoComandeSQLite()
-        Dim cn As New OleDbConnection(ConnString)
-        Dim strSql As String = "SELECT * FROM Comande ORDER BY Id ASC"
-
-        Try
-            cn.Open()
-
-            Dim cmd As New OleDbCommand(strSql, cn)
-            Dim dr As OleDbDataReader = cmd.ExecuteReader()
-
-            Dim CComande As New StatoComandeSQLite()
-
-            CComande.CreaTabella("Comande")
-
-            Do While dr.Read
-
-                With CComande
-                    .CancellaCampi()
-
-                    .IdTavolo = dr.Item("IdRisorsa").ToString
-                    .IdPiatto = dr.Item("IdPiatto").ToString
-                    .Quantità = dr.Item("Quantità").ToString
-                    .Piatto = SostituisciCaratteri(dr.Item("Descrizione").ToString)
-                    .Importo = dr.Item("ImportoNetto").ToString
-                    .Variante = String.Empty
-                    If dr.Item("Inviata").ToString = "Sì" Then
-                        .Inviata = "Si"
-                    Else
-                        .Inviata = dr.Item("Inviata").ToString
-                    End If
-
-                    .InserisciDati("Comande")
-                End With
-            Loop
-
-            cmd.Dispose()
-            dr.Close()
-
-            CComande.Close()
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-
-        Finally
-            cn.Close()
-
-        End Try
-    End Sub
-
-    Public Sub ScriviDatiCmdTavoliSQLite()
-        Dim cn As New OleDbConnection(ConnString)
-
-        Try
-            cn.Open()
-
-            Dim CTavoli As New CmdTavoliSQLite
-
-            CTavoli.CreaTabella("Tavoli")
+         Do While dr.Read
 
             With CTavoli
-                .CancellaCampi()
+               .CancellaCampi()
 
-                .CodiceDispositivo = String.Empty
-                .IdTavolo = String.Empty
-                .Descrizione = String.Empty
-                .Coperti = String.Empty
-                .Colore = String.Empty
-                .Comando = String.Empty
+               .Codice = dr.Item("Id").ToString
+               .Descrizione = SostituisciCaratteri(dr.Item("Descrizione").ToString)
+               .Posti = dr.Item("Posti").ToString
+               .Listino = dr.Item("Listino").ToString
+               .Sala = SostituisciCaratteri(dr.Item("Sala").ToString)
 
-                .InserisciDati("Tavoli")
+               .InserisciDati("Tavoli")
             End With
+         Loop
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-        Finally
-            cn.Close()
+      Finally
+         cn.Close()
 
-        End Try
-    End Sub
+      End Try
+   End Sub
 
-    Public Sub ScriviDatiCmdComandeSQLite()
-        Dim cn As New OleDbConnection(ConnString)
+   Public Sub ScriviDatiCategoriePiattiSQLite()
+      Dim cn As New OleDbConnection(ConnString)
+      Dim strSql As String = "SELECT * FROM CategoriePiatti ORDER BY Id ASC"
 
-        Try
-            cn.Open()
+      Try
+         cn.Open()
 
-            Dim CComande As New CmdComandeSQLite
+         Dim cmd As New OleDbCommand(strSql, cn)
+         Dim dr As OleDbDataReader = cmd.ExecuteReader()
 
-            CComande.CreaTabella("Comande")
+         Dim CCategorie As New CategoriePiattiSQLite()
+
+         CCategorie.CreaTabella("Categorie")
+
+         Do While dr.Read
+
+            With CCategorie
+               .CancellaCampi()
+
+               .Codice = dr.Item("Id").ToString
+               .Descrizione = SostituisciCaratteri(dr.Item("Descrizione").ToString)
+               .Colore = dr.Item("ColoreSfondo").ToString
+
+               .InserisciDati("Categorie")
+            End With
+         Loop
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      Finally
+         cn.Close()
+
+      End Try
+   End Sub
+
+   Public Sub ScriviDatiPiattiSQLite()
+      Dim cn As New OleDbConnection(ConnString)
+      Dim strSql As String = "SELECT * FROM Piatti WHERE Variazione = 'No' ORDER BY DescrizionePos ASC"
+
+      Try
+         cn.Open()
+
+         Dim cmd As New OleDbCommand(strSql, cn)
+         Dim dr As OleDbDataReader = cmd.ExecuteReader()
+
+         Dim CPiatti As New PiattiSQLite()
+
+         CPiatti.CreaTabella("Piatti")
+
+         Do While dr.Read
+
+            With CPiatti
+               .CancellaCampi()
+
+               .Codice = dr.Item("Id").ToString
+               .Descrizione = SostituisciCaratteri(dr.Item("DescrizionePos").ToString)
+               .Categoria = SostituisciCaratteri(dr.Item("Categoria").ToString)
+               .Listino1 = dr.Item("Listino1").ToString
+               .Listino2 = dr.Item("Listino2").ToString
+               .Listino3 = dr.Item("Listino3").ToString
+               .Listino4 = dr.Item("Listino4").ToString
+
+               .InserisciDati("Piatti")
+            End With
+         Loop
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      Finally
+         cn.Close()
+
+      End Try
+   End Sub
+
+   Public Sub ScriviDatiVariantiSQLite()
+      Dim cn As New OleDbConnection(ConnString)
+      Dim strSql As String = "SELECT * FROM Piatti WHERE Variazione = 'Sì' ORDER BY Id ASC"
+
+      Try
+         cn.Open()
+
+         Dim cmd As New OleDbCommand(strSql, cn)
+         Dim dr As OleDbDataReader = cmd.ExecuteReader()
+
+         Dim CVarianti As New VariantiSQLite()
+
+         CVarianti.CreaTabella("Varianti")
+
+         Do While dr.Read
+
+            With CVarianti
+               .CancellaCampi()
+
+               .Codice = dr.Item("Id").ToString
+               .Descrizione = SostituisciCaratteri(dr.Item("DescrizionePos").ToString)
+               .Categoria = SostituisciCaratteri(dr.Item("Categoria").ToString)
+               .Listino1 = dr.Item("Listino1").ToString
+               .Listino2 = dr.Item("Listino2").ToString
+               .Listino3 = dr.Item("Listino3").ToString
+               .Listino4 = dr.Item("Listino4").ToString
+
+               .InserisciDati("Varianti")
+            End With
+         Loop
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      Finally
+         cn.Close()
+
+      End Try
+   End Sub
+
+   Public Sub ScriviDatiCamerieriSQLite()
+      Dim cn As New OleDbConnection(ConnString)
+      Dim strSql As String = "SELECT * FROM Camerieri ORDER BY Id ASC"
+
+      Try
+         cn.Open()
+
+         Dim cmd As New OleDbCommand(strSql, cn)
+         Dim dr As OleDbDataReader = cmd.ExecuteReader()
+
+         Dim CCamerieri As New CamerieriSQLite()
+
+         CCamerieri.CreaTabella("Camerieri")
+
+         Do While dr.Read
+
+            With CCamerieri
+               .CancellaCampi()
+
+               .Codice = dr.Item("Id").ToString
+               .Nome = SostituisciCaratteri(dr.Item("Nome").ToString)
+
+               .InserisciDati("Camerieri")
+            End With
+         Loop
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      Finally
+         cn.Close()
+
+      End Try
+   End Sub
+
+   Public Sub ScriviDatiMessaggiSQLite()
+      Dim cn As New OleDbConnection(ConnString)
+      Dim strSql As String = "SELECT * FROM MessaggiReparti ORDER BY Id ASC"
+
+      Try
+         cn.Open()
+
+         Dim cmd As New OleDbCommand(strSql, cn)
+         Dim dr As OleDbDataReader = cmd.ExecuteReader()
+
+         Dim CMessaggi As New MessaggiSQLite
+
+         CMessaggi.CreaTabella("Messaggi")
+
+         Do While dr.Read
+
+            With CMessaggi
+               .CancellaCampi()
+
+               .Codice = dr.Item("Id").ToString
+               .Descrizione = SostituisciCaratteri(dr.Item("Descrizione").ToString)
+
+               .InserisciDati("Messaggi")
+            End With
+         Loop
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      Finally
+         cn.Close()
+
+      End Try
+   End Sub
+
+   Public Sub ScriviDatiImpostazioneSQLite()
+      Dim cn As New OleDbConnection(ConnString)
+
+      Try
+         cn.Open()
+
+         Dim CImpostazioni As New ImpostazioniSQLite
+
+         CImpostazioni.CreaTabella("Impostazioni")
+
+         With CImpostazioni
+            .CancellaCampi()
+
+            .Percorso = PercorsoRP
+            .Frequenza = FreqAggPalmare
+
+            .InserisciDati("Impostazioni")
+         End With
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      Finally
+         cn.Close()
+
+      End Try
+   End Sub
+
+   Public Sub ScriviDatiStatoTavoliSQLite()
+      Dim cn As New OleDbConnection(ConnString)
+      Dim strSql As String = "SELECT * FROM Tavoli WHERE Escludi = 'No' ORDER BY Descrizione ASC"
+
+      Try
+         cn.Open()
+
+         Dim cmd As New OleDbCommand(strSql, cn)
+         Dim dr As OleDbDataReader = cmd.ExecuteReader()
+
+         Dim CTavoli As New StatoTavoliSQLite()
+
+         CTavoli.CreaTabella("Tavoli")
+
+         Do While dr.Read
+            With CTavoli
+               .CancellaCampi()
+
+               .Codice = dr.Item("Id").ToString
+               .Descrizione = SostituisciCaratteri(dr.Item("Descrizione").ToString)
+               .Coperti = dr.Item("Posti").ToString
+               .Colore = dr.Item("Colore").ToString
+               .Sala = SostituisciCaratteri(dr.Item("Sala").ToString)
+
+               .InserisciDati("Tavoli")
+            End With
+         Loop
+
+         cmd.Dispose()
+         dr.Close()
+
+         CTavoli.Close()
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      Finally
+         cn.Close()
+
+      End Try
+   End Sub
+
+   Public Sub ScriviDatiStatoPiattiSQLite()
+      Dim cn As New OleDbConnection(ConnString)
+      Dim strSqlPiatti As String = "SELECT * FROM Piatti WHERE Variazione = 'No' ORDER BY DescrizionePos ASC"
+      Dim valEsaurito As String
+
+      Try
+         Dim strSql As String
+         Dim cmd As New OleDbCommand(strSql, cn)
+         Dim numRecEsauriti As Integer = LeggiNumRecord("PiattiEsauriti", cn, cmd)
+         Dim idPiattiEsauriti(numRecEsauriti - 1) As String
+
+         cmd.Dispose()
+
+         cn.Open()
+
+         If numRecEsauriti > 0 Then
+            Dim strSqlEsauriti As String = "SELECT * FROM PiattiEsauriti ORDER BY Id ASC"
+            Dim cmdEsauriti As New OleDbCommand(strSqlEsauriti, cn)
+            Dim drEsauriti As OleDbDataReader = cmdEsauriti.ExecuteReader()
+
+            Dim i As Integer = 0
+            Do While drEsauriti.Read
+               idPiattiEsauriti(i) = drEsauriti.Item("IdPiatto")
+               i += 1
+            Loop
+
+            cmdEsauriti.Dispose()
+            drEsauriti.Close()
+         End If
+
+         Dim cmdPiatti As New OleDbCommand(strSqlPiatti, cn)
+         Dim drPiatti As OleDbDataReader = cmdPiatti.ExecuteReader()
+
+         Dim CPiatti As New StatoPiattiSQLite
+
+         CPiatti.CreaTabella("Piatti")
+
+         Do While drPiatti.Read
+            If numRecEsauriti > 0 Then
+               valEsaurito = 1
+               Dim i As Integer = 0
+               For i = 0 To numRecEsauriti - 1
+                  If drPiatti.Item("Id") = idPiattiEsauriti(i) Then
+                     valEsaurito = 0
+                     Exit For
+                  End If
+               Next
+            Else
+               valEsaurito = 1
+            End If
+
+            With CPiatti
+               .CancellaCampi()
+
+               .Codice = drPiatti.Item("Id").ToString
+               .Descrizione = SostituisciCaratteri(drPiatti.Item("DescrizionePos").ToString)
+               .Categoria = SostituisciCaratteri(drPiatti.Item("Categoria").ToString)
+               .Esaurito = valEsaurito
+
+               .InserisciDati("Piatti")
+            End With
+         Loop
+
+         cmdPiatti.Dispose()
+         drPiatti.Close()
+
+         CPiatti.Close()
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      Finally
+         cn.Close()
+
+      End Try
+   End Sub
+
+   Public Sub ScriviDatiStatoVariantiSQLite()
+      Dim cn As New OleDbConnection(ConnString)
+      Dim strSqlPiatti As String = "SELECT * FROM Piatti WHERE Variazione = 'Sì' ORDER BY DescrizionePos ASC"
+      Dim valEsaurito As String
+
+      Try
+         Dim strSql As String
+         Dim cmd As New OleDbCommand(strSql, cn)
+         Dim numRecEsauriti As Integer = LeggiNumRecord("PiattiEsauriti", cn, cmd)
+         Dim idPiattiEsauriti(numRecEsauriti - 1) As String
+
+         cmd.Dispose()
+
+         cn.Open()
+
+         If numRecEsauriti > 0 Then
+            Dim strSqlEsauriti As String = "SELECT * FROM PiattiEsauriti ORDER BY Id ASC"
+            Dim cmdEsauriti As New OleDbCommand(strSqlEsauriti, cn)
+            Dim drEsauriti As OleDbDataReader = cmdEsauriti.ExecuteReader()
+
+            Dim i As Integer = 0
+            Do While drEsauriti.Read
+               idPiattiEsauriti(i) = drEsauriti.Item("IdPiatto")
+               i += 1
+            Loop
+
+            cmdEsauriti.Dispose()
+            drEsauriti.Close()
+         End If
+
+         Dim cmdPiatti As New OleDbCommand(strSqlPiatti, cn)
+         Dim drPiatti As OleDbDataReader = cmdPiatti.ExecuteReader()
+
+         Dim CVarianti As New StatoVariantiSQLite
+
+         CVarianti.CreaTabella("Varianti")
+
+         Do While drPiatti.Read
+            If numRecEsauriti > 0 Then
+               valEsaurito = 1
+               Dim i As Integer = 0
+               For i = 0 To numRecEsauriti - 1
+                  If drPiatti.Item("Id") = idPiattiEsauriti(i) Then
+                     valEsaurito = 0
+                     Exit For
+                  End If
+               Next
+            Else
+               valEsaurito = 1
+            End If
+
+            With CVarianti
+               .CancellaCampi()
+
+               .Codice = drPiatti.Item("Id").ToString
+               .Descrizione = SostituisciCaratteri(drPiatti.Item("DescrizionePos").ToString)
+               .Categoria = SostituisciCaratteri(drPiatti.Item("Categoria").ToString)
+               .Esaurito = valEsaurito
+
+               .InserisciDati("Varianti")
+            End With
+         Loop
+
+         cmdPiatti.Dispose()
+         drPiatti.Close()
+
+         CVarianti.Close()
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      Finally
+         cn.Close()
+
+      End Try
+   End Sub
+
+   Public Sub ScriviDatiStatoComandeSQLite()
+      Dim cn As New OleDbConnection(ConnString)
+      Dim strSql As String = "SELECT * FROM Comande ORDER BY Id ASC"
+
+      Try
+         cn.Open()
+
+         Dim cmd As New OleDbCommand(strSql, cn)
+         Dim dr As OleDbDataReader = cmd.ExecuteReader()
+
+         Dim CComande As New StatoComandeSQLite()
+
+         CComande.CreaTabella("Comande")
+
+         Do While dr.Read
 
             With CComande
-                .CancellaCampi()
+               .CancellaCampi()
 
-                .IdTavolo = String.Empty
-                .IdPiatto = String.Empty
-                .Quantità = String.Empty
-                .Piatto = String.Empty
-                .Importo = String.Empty
-                .Variante = String.Empty
-                .ConVar = False
+               .IdTavolo = dr.Item("IdRisorsa").ToString
+               .IdPiatto = dr.Item("IdPiatto").ToString
+               .Quantità = dr.Item("Quantità").ToString
+               .Piatto = SostituisciCaratteri(dr.Item("Descrizione").ToString)
+               .Importo = dr.Item("ImportoNetto").ToString
+               .Variante = String.Empty
+               If dr.Item("Inviata").ToString = "Sì" Then
+                  .Inviata = "Si"
+               Else
+                  .Inviata = dr.Item("Inviata").ToString
+               End If
 
-                .InserisciDati("Comande")
+               .InserisciDati("Comande")
             End With
+         Loop
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+         cmd.Dispose()
+         dr.Close()
 
-        Finally
-            cn.Close()
+         CComande.Close()
 
-        End Try
-    End Sub
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-    Public Sub CreaFileAnagrafiche(ByVal abilitaWindows As Boolean, ByVal abilitaAndroid As Boolean)
-        Try
-            ' Modifica il cursore del mouse.
-            Cursor.Current = Cursors.AppStarting
+      Finally
+         cn.Close()
 
-            If PercorsoRP = String.Empty Then
-                Exit Sub
-            End If
+      End Try
+   End Sub
 
-            ' SQLite per Android.
-            If abilitaAndroid = True Then
+   Public Sub ScriviDatiCmdTavoliSQLite()
+      Dim cn As New OleDbConnection(ConnString)
 
-                If File.Exists(Application.StartupPath & NOME_PERCORSO_FILE_ANAG_ANDROID) = True Then
-                    File.Delete(Application.StartupPath & NOME_PERCORSO_FILE_ANAG_ANDROID)
-                End If
+      Try
+         cn.Open()
 
-                ScriviDatiTavoliSQLite()
-                ScriviDatiCategoriePiattiSQLite()
-                ScriviDatiPiattiSQLite()
-                ScriviDatiVariantiSQLite()
-                ScriviDatiCamerieriSQLite()
-                ScriviDatiMessaggiSQLite()
-                ScriviDatiImpostazioneSQLite()
+         Dim CTavoli As New CmdTavoliSQLite
 
-                ' Se esiste crea una copia nel percorso di rete della cartella condivisa.
-                If File.Exists(Application.StartupPath & NOME_PERCORSO_FILE_ANAG_ANDROID) = True Then
-                    ' Verifica se nel percorso di rete il file esiste già e lo elimina.
-                    If File.Exists(PercorsoRP & NOME_FILE_ANAG_ANDROID) = True Then
-                        File.Delete(PercorsoRP & NOME_FILE_ANAG_ANDROID)
-                    End If
+         CTavoli.CreaTabella("Tavoli")
 
-                    ' Crea la copia del file.
-                    File.Copy(Application.StartupPath & NOME_PERCORSO_FILE_ANAG_ANDROID, PercorsoRP & NOME_FILE_ANAG_ANDROID)
-                End If
+         With CTavoli
+            .CancellaCampi()
 
-            End If
+            .CodiceDispositivo = String.Empty
+            .IdTavolo = String.Empty
+            .Descrizione = String.Empty
+            .Coperti = String.Empty
+            .Colore = String.Empty
+            .Comando = String.Empty
 
-            ' File di testo per Windows Mobile/CE
-            If abilitaWindows = True Then
+            .InserisciDati("Tavoli")
+         End With
 
-                Dim sw As StreamWriter
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-                If File.Exists(PercorsoRP & NOME_FILE_ANAG) = True Then
-                    sw = File.AppendText(PercorsoRP & NOME_FILE_TEMP)
-                Else
-                    sw = File.CreateText(PercorsoRP & NOME_FILE_ANAG)
-                End If
+      Finally
+         cn.Close()
 
-                ScriviDatiTavoli(sw)
-                ScriviDatiCategorie(sw)
-                ScriviDatiPiatti(sw)
-                ScriviDatiVarianti(sw)
-                ScriviDatiCamerieri(sw)
-                ScriviDatiMessaggi(sw)
-                ScriviDatiImpostazione(sw)
+      End Try
+   End Sub
 
-                sw.Close()
+   Public Sub ScriviDatiCmdComandeSQLite()
+      Dim cn As New OleDbConnection(ConnString)
 
-                If File.Exists(PercorsoRP & NOME_FILE_TEMP) = True Then
-                    ' Se esiste cancella il vecchio file... 
-                    File.Delete(PercorsoRP & NOME_FILE_ANAG)
-                    File.Move(PercorsoRP & NOME_FILE_TEMP, PercorsoRP & NOME_FILE_ANAG)
-                End If
+      Try
+         cn.Open()
 
-            End If
+         Dim CComande As New CmdComandeSQLite
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+         CComande.CreaTabella("Comande")
 
-        Finally
-            ' Modifica il cursore del mouse.
-            Cursor.Current = Cursors.Default
+         With CComande
+            .CancellaCampi()
 
-        End Try
-    End Sub
+            .IdTavolo = String.Empty
+            .IdPiatto = String.Empty
+            .Quantità = String.Empty
+            .Piatto = String.Empty
+            .Importo = String.Empty
+            .Variante = String.Empty
+            .ConVar = False
 
-    Public Sub CreaFileStatoTavoli(ByVal abilitaWindows As Boolean, ByVal abilitaAndroid As Boolean)
-        Try
-            ' Modifica il cursore del mouse.
-            Cursor.Current = Cursors.AppStarting
+            .InserisciDati("Comande")
+         End With
 
-            If PercorsoRP = String.Empty Then
-                Exit Sub
-            End If
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-            ' SQLite per Android.
-            If abilitaAndroid = True Then
+      Finally
+         cn.Close()
 
-                If File.Exists(Application.StartupPath & NOME_PERCORSO_FILE_TAVOLI_ANDROID) = True Then
-                    File.Delete(Application.StartupPath & NOME_PERCORSO_FILE_TAVOLI_ANDROID)
-                End If
+      End Try
+   End Sub
 
-                ScriviDatiStatoTavoliSQLite()
-                ScriviDatiStatoComandeSQLite()
+   Public Sub CreaFileAnagrafiche(ByVal abilitaWindows As Boolean, ByVal abilitaAndroid As Boolean)
+      Try
+         ' Modifica il cursore del mouse.
+         Cursor.Current = Cursors.AppStarting
 
-                ' ATTENZIONE! Scvivendo troppi dati si verifica un blocco di diversi secondi...
-                ' ScriviDatiStatoPiattiSQLite()
-                ' ScriviDatiStatoVariantiSQLite()
-
-                ' Se esiste crea una copia nel percorso di rete della cartella condivisa.
-                If File.Exists(Application.StartupPath & NOME_PERCORSO_FILE_TAVOLI_ANDROID) = True Then
-                    ' Verifica se nel percorso di rete il file esiste già e lo elimina.
-                    If File.Exists(PercorsoRP & NOME_FILE_TAVOLI_ANDROID) = True Then
-                        File.Delete(PercorsoRP & NOME_FILE_TAVOLI_ANDROID)
-                    End If
-
-                    ' Crea la copia del file.
-                    File.Copy(Application.StartupPath & NOME_PERCORSO_FILE_TAVOLI_ANDROID, PercorsoRP & NOME_FILE_TAVOLI_ANDROID)
-                End If
-            End If
-
-            ' File di testo per Windows Mobile/CE
-            If abilitaWindows = True Then
-
-                Dim sw As StreamWriter
-                If File.Exists(PercorsoRP & NOME_FILE_TAVOLI) = True Then
-                    sw = File.AppendText(PercorsoRP & NOME_FILE_TEMP)
-                Else
-                    sw = File.CreateText(PercorsoRP & NOME_FILE_TAVOLI)
-                End If
-
-                ScriviDatiStatoTavoli(sw)
-                ScriviDatiStatoPiatti(sw)
-                ScriviDatiStatoVarianti(sw)
-
-                sw.Close()
-
-                If File.Exists(PercorsoRP & NOME_FILE_TEMP) = True Then
-                    ' Se esiste cancella il vecchio file... 
-                    File.Delete(PercorsoRP & NOME_FILE_TAVOLI)
-                    File.Move(PercorsoRP & NOME_FILE_TEMP, PercorsoRP & NOME_FILE_TAVOLI)
-                End If
-
-            End If
-
-        Catch ex As IOException
-            ' Errore: Il processo non può acedere al file perchè in uso da un altro processo.
+         If PercorsoRP = String.Empty Then
             Exit Sub
+         End If
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+         ' SQLite per Android.
+         If abilitaAndroid = True Then
 
-        Finally
-            ' Modifica il cursore del mouse.
-            Cursor.Current = Cursors.Default
-
-        End Try
-    End Sub
-
-    Public Sub CreaFileSQLiteComande(ByVal abilitaAndroid As Boolean)
-        ' Modifica il cursore del mouse.
-        Cursor.Current = Cursors.AppStarting
-
-        Dim sw As StreamWriter
-
-        Try
-            If abilitaAndroid = False Then
-                Exit Sub
+            If File.Exists(Application.StartupPath & NOME_PERCORSO_FILE_ANAG_ANDROID) = True Then
+               File.Delete(Application.StartupPath & NOME_PERCORSO_FILE_ANAG_ANDROID)
             End If
 
-            If PercorsoRP = String.Empty Then
-                Exit Sub
-            End If
-
-            ' SQLite per Android.
-            If File.Exists(Application.StartupPath & NOME_PERCORSO_FILE_COMANDI_ANDROID) = True Then
-                File.Delete(Application.StartupPath & NOME_PERCORSO_FILE_COMANDI_ANDROID)
-            End If
-
-            ScriviDatiCmdComandeSQLite()
-            ScriviDatiCmdTavoliSQLite()
+            ScriviDatiTavoliSQLite()
+            ScriviDatiCategoriePiattiSQLite()
+            ScriviDatiPiattiSQLite()
+            ScriviDatiVariantiSQLite()
+            ScriviDatiCamerieriSQLite()
+            ScriviDatiMessaggiSQLite()
+            ScriviDatiImpostazioneSQLite()
 
             ' Se esiste crea una copia nel percorso di rete della cartella condivisa.
-            If File.Exists(Application.StartupPath & NOME_PERCORSO_FILE_COMANDI_ANDROID) = True Then
-                ' Verifica se nel percorso di rete il file esiste già e lo elimina.
-                If File.Exists(PercorsoRP & NOME_FILE_COMANDI_ANDROID) = True Then
-                    File.Delete(PercorsoRP & NOME_FILE_COMANDI_ANDROID)
-                End If
+            If File.Exists(Application.StartupPath & NOME_PERCORSO_FILE_ANAG_ANDROID) = True Then
+               ' Verifica se nel percorso di rete il file esiste già e lo elimina.
+               If File.Exists(PercorsoRP & NOME_FILE_ANAG_ANDROID) = True Then
+                  File.Delete(PercorsoRP & NOME_FILE_ANAG_ANDROID)
+               End If
 
-                ' Crea la copia del file.
-                File.Copy(Application.StartupPath & NOME_PERCORSO_FILE_COMANDI_ANDROID, PercorsoRP & NOME_FILE_COMANDI_ANDROID)
+               ' Crea la copia del file.
+               File.Copy(Application.StartupPath & NOME_PERCORSO_FILE_ANAG_ANDROID, PercorsoRP & NOME_FILE_ANAG_ANDROID)
             End If
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+         End If
 
-        Finally
-            ' Modifica il cursore del mouse.
-            Cursor.Current = Cursors.Default
+         ' File di testo per Windows Mobile/CE
+         If abilitaWindows = True Then
 
-        End Try
-    End Sub
+            Dim sw As StreamWriter
 
-    Public Sub ApriAzienda()
-        Try
-            ' Se il form non è aperto lo apre.
-            If IsNothing(g_frmAzienda) = True Then
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.AppStarting
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = CAR_ANAG_AZIENDA
-
-                g_frmAzienda = New frmAzienda
-                g_frmAzienda.MdiParent = Me
-
-                ' Visualizza l'anagrafica Hotel.
-                g_frmAzienda.Show()
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = LeggiDatiRivenditore()
-
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.Default
+            If File.Exists(PercorsoRP & NOME_FILE_ANAG) = True Then
+               sw = File.AppendText(PercorsoRP & NOME_FILE_TEMP)
             Else
-                ' Altrimenti lo attiva.
-                g_frmAzienda.Activate()
+               sw = File.CreateText(PercorsoRP & NOME_FILE_ANAG)
             End If
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
+            ScriviDatiTavoli(sw)
+            ScriviDatiCategorie(sw)
+            ScriviDatiPiatti(sw)
+            ScriviDatiVarianti(sw)
+            ScriviDatiCamerieri(sw)
+            ScriviDatiMessaggi(sw)
+            ScriviDatiImpostazione(sw)
 
-    Public Sub ApriReports(ByVal sql As String, ByVal tabella As String, ByVal percorso As String, Optional ByVal frmId As String = "")
-        Try
+            sw.Close()
+
+            If File.Exists(PercorsoRP & NOME_FILE_TEMP) = True Then
+               ' Se esiste cancella il vecchio file... 
+               File.Delete(PercorsoRP & NOME_FILE_ANAG)
+               File.Move(PercorsoRP & NOME_FILE_TEMP, PercorsoRP & NOME_FILE_ANAG)
+            End If
+
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      Finally
+         ' Modifica il cursore del mouse.
+         Cursor.Current = Cursors.Default
+
+      End Try
+   End Sub
+
+   Public Sub CreaFileStatoTavoli(ByVal abilitaWindows As Boolean, ByVal abilitaAndroid As Boolean)
+      Try
+         ' Modifica il cursore del mouse.
+         Cursor.Current = Cursors.AppStarting
+
+         If PercorsoRP = String.Empty Then
+            Exit Sub
+         End If
+
+         ' SQLite per Android.
+         If abilitaAndroid = True Then
+
+            If File.Exists(Application.StartupPath & NOME_PERCORSO_FILE_TAVOLI_ANDROID) = True Then
+               File.Delete(Application.StartupPath & NOME_PERCORSO_FILE_TAVOLI_ANDROID)
+            End If
+
+            ScriviDatiStatoTavoliSQLite()
+            ScriviDatiStatoComandeSQLite()
+
+            ' ATTENZIONE! Scvivendo troppi dati si verifica un blocco di diversi secondi...
+            ' ScriviDatiStatoPiattiSQLite()
+            ' ScriviDatiStatoVariantiSQLite()
+
+            ' Se esiste crea una copia nel percorso di rete della cartella condivisa.
+            If File.Exists(Application.StartupPath & NOME_PERCORSO_FILE_TAVOLI_ANDROID) = True Then
+               ' Verifica se nel percorso di rete il file esiste già e lo elimina.
+               If File.Exists(PercorsoRP & NOME_FILE_TAVOLI_ANDROID) = True Then
+                  File.Delete(PercorsoRP & NOME_FILE_TAVOLI_ANDROID)
+               End If
+
+               ' Crea la copia del file.
+               File.Copy(Application.StartupPath & NOME_PERCORSO_FILE_TAVOLI_ANDROID, PercorsoRP & NOME_FILE_TAVOLI_ANDROID)
+            End If
+         End If
+
+         ' File di testo per Windows Mobile/CE
+         If abilitaWindows = True Then
+
+            Dim sw As StreamWriter
+            If File.Exists(PercorsoRP & NOME_FILE_TAVOLI) = True Then
+               sw = File.AppendText(PercorsoRP & NOME_FILE_TEMP)
+            Else
+               sw = File.CreateText(PercorsoRP & NOME_FILE_TAVOLI)
+            End If
+
+            ScriviDatiStatoTavoli(sw)
+            ScriviDatiStatoPiatti(sw)
+            ScriviDatiStatoVarianti(sw)
+
+            sw.Close()
+
+            If File.Exists(PercorsoRP & NOME_FILE_TEMP) = True Then
+               ' Se esiste cancella il vecchio file... 
+               File.Delete(PercorsoRP & NOME_FILE_TAVOLI)
+               File.Move(PercorsoRP & NOME_FILE_TEMP, PercorsoRP & NOME_FILE_TAVOLI)
+            End If
+
+         End If
+
+      Catch ex As IOException
+         ' Errore: Il processo non può acedere al file perchè in uso da un altro processo.
+         Exit Sub
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      Finally
+         ' Modifica il cursore del mouse.
+         Cursor.Current = Cursors.Default
+
+      End Try
+   End Sub
+
+   Public Sub CreaFileSQLiteComande(ByVal abilitaAndroid As Boolean)
+      ' Modifica il cursore del mouse.
+      Cursor.Current = Cursors.AppStarting
+
+      Dim sw As StreamWriter
+
+      Try
+         If abilitaAndroid = False Then
+            Exit Sub
+         End If
+
+         If PercorsoRP = String.Empty Then
+            Exit Sub
+         End If
+
+         ' SQLite per Android.
+         If File.Exists(Application.StartupPath & NOME_PERCORSO_FILE_COMANDI_ANDROID) = True Then
+            File.Delete(Application.StartupPath & NOME_PERCORSO_FILE_COMANDI_ANDROID)
+         End If
+
+         ScriviDatiCmdComandeSQLite()
+         ScriviDatiCmdTavoliSQLite()
+
+         ' Se esiste crea una copia nel percorso di rete della cartella condivisa.
+         If File.Exists(Application.StartupPath & NOME_PERCORSO_FILE_COMANDI_ANDROID) = True Then
+            ' Verifica se nel percorso di rete il file esiste già e lo elimina.
+            If File.Exists(PercorsoRP & NOME_FILE_COMANDI_ANDROID) = True Then
+               File.Delete(PercorsoRP & NOME_FILE_COMANDI_ANDROID)
+            End If
+
+            ' Crea la copia del file.
+            File.Copy(Application.StartupPath & NOME_PERCORSO_FILE_COMANDI_ANDROID, PercorsoRP & NOME_FILE_COMANDI_ANDROID)
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      Finally
+         ' Modifica il cursore del mouse.
+         Cursor.Current = Cursors.Default
+
+      End Try
+   End Sub
+
+   Public Sub ApriAzienda()
+      Try
+         ' Se il form non è aperto lo apre.
+         If IsNothing(g_frmAzienda) = True Then
             ' Modifica il cursore del mouse.
             Cursor.Current = Cursors.AppStarting
 
             ' Visualizza un messaggio nella barra di stato.
-            Me.eui_Informazioni.Text = CAR_REPORTS
-            Dim frm As New frmReports(sql, tabella, percorso, frmId)
-            frm.MdiParent = Me
-            frm.Show()
+            Me.eui_Informazioni.Text = CAR_ANAG_AZIENDA
+
+            g_frmAzienda = New frmAzienda
+            g_frmAzienda.MdiParent = Me
+
+            ' Visualizza l'anagrafica Hotel.
+            g_frmAzienda.Show()
 
             ' Visualizza un messaggio nella barra di stato.
             Me.eui_Informazioni.Text = LeggiDatiRivenditore()
 
             ' Modifica il cursore del mouse.
             Cursor.Current = Cursors.Default
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Public Sub ApriInfo()
-        Dim frm As New frmAbout
-        frm.ShowDialog()
-    End Sub
-
-    Public Sub ApriGuida()
-        ' Apre il file della guida in linea.
-        ApriFileGuida(Application.StartupPath & PERCORSO_GUIDA)
-    End Sub
-
-    Public Sub ApriClienti()
-        Try
-            ' Se il form non è aperto lo apre.
-            If IsNothing(g_frmClienti) = True Then
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.AppStarting
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = CAR_ANAG_CLIENTI
-
-                ConnStringAnagrafiche = CreaConnString(PercorsoDBClienti)
-
-                g_frmClienti = New frmElencoDati(Elenco.Clienti)
-                g_frmClienti.MdiParent = Me
-
-                ' Visualizza l'anagrafica clienti.
-                g_frmClienti.Show()
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = LeggiDatiRivenditore()
-
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.Default
-            Else
-                ' Altrimenti lo attiva.
-                g_frmClienti.Activate()
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Public Sub ApriAziende()
-        Try
-            ' Se il form non è aperto lo apre.
-            If IsNothing(g_frmAziende) = True Then
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.AppStarting
-
-                'Dim frmCaricamento As New Caricamento
-                'frmCaricamento.Show()
-                'Application.DoEvents()
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = CAR_ANAG_AZIENDE
-
-                ConnStringAnagrafiche = CreaConnString(PercorsoDBClienti)
-
-                g_frmAziende = New frmElencoDati(Elenco.Aziende)
-                g_frmAziende.MdiParent = Me
-
-                ' Visualizza l'anagrafica clienti.
-                g_frmAziende.Show()
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = LeggiDatiRivenditore()
-
-                'frmCaricamento.Close()
-
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.Default
-            Else
-                ' Altrimenti lo attiva.
-                g_frmAziende.Activate()
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Public Sub ApriFornitori()
-        Try
-            ' Se il form non è aperto lo apre.
-            If IsNothing(g_frmFornitori) = True Then
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.AppStarting
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = CAR_ANAG_FORNITORI
-
-                ConnStringAnagrafiche = CreaConnString(PercorsoDB)
-
-                g_frmFornitori = New frmElencoDati(Elenco.Fornitori)
-                g_frmFornitori.MdiParent = Me
-
-                ' Visualizza l'anagrafica clienti.
-                g_frmFornitori.Show()
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = LeggiDatiRivenditore()
-
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.Default
-            Else
-                ' Altrimenti lo attiva.
-                g_frmFornitori.Activate()
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Public Sub ApriArticoli()
-        Try
-            ' Se il form non è aperto lo apre.
-            If IsNothing(g_frmArticoli) = True Then
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.AppStarting
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = CAR_ANAG_ARTICOLI
-
-                ConnStringAnagrafiche = CreaConnString(PercorsoDB)
-
-                g_frmArticoli = New frmElencoDati(Elenco.Articoli)
-                g_frmArticoli.MdiParent = Me
-
-                ' Visualizza l'anagrafica clienti.
-                g_frmArticoli.Show()
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = LeggiDatiRivenditore()
-
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.Default
-            Else
-                ' Altrimenti lo attiva.
-                g_frmArticoli.Activate()
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Public Sub ApriCamerieri()
-        Try
-            ' Se il form non è aperto lo apre.
-            If IsNothing(g_frmCamerieri) = True Then
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.AppStarting
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = CAR_ANAG_CAMERIERI
-
-                ConnStringAnagrafiche = CreaConnString(PercorsoDB)
-
-                g_frmCamerieri = New frmElencoDati(Elenco.Camerieri)
-                g_frmCamerieri.MdiParent = Me
-
-                ' Visualizza l'anagrafica clienti.
-                g_frmCamerieri.Show()
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = LeggiDatiRivenditore()
-
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.Default
-            Else
-                ' Altrimenti lo attiva.
-                g_frmCamerieri.Activate()
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Public Sub ApriSale()
-        Try
-            ' Se il form non è aperto lo apre.
-            If IsNothing(g_frmSale) = True Then
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.AppStarting
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = CAR_ANAG_SALE
-
-                ConnStringAnagrafiche = CreaConnString(PercorsoDB)
-
-                g_frmSale = New frmElencoDati(Elenco.Sale)
-                g_frmSale.MdiParent = Me
-
-                ' Visualizza l'anagrafica clienti.
-                g_frmSale.Show()
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = LeggiDatiRivenditore()
-
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.Default
-            Else
-                ' Altrimenti lo attiva.
-                g_frmSale.Activate()
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Public Sub ApriPiatti()
-        Try
-            ' Se il form non è aperto lo apre.
-            If IsNothing(g_frmPiatti) = True Then
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.AppStarting
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = CAR_ANAG_PIATTI
-
-                g_frmPiatti = New frmElencoPiatti
-                g_frmPiatti.MdiParent = Me
-
-                ' Visualizza l'anagrafica clienti.
-                g_frmPiatti.Show()
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = LeggiDatiRivenditore()
-
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.Default
-            Else
-                ' Altrimenti lo attiva.
-                g_frmPiatti.Activate()
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Public Sub ApriCategoriePiatti()
-        Try
-            ' Se il form non è aperto lo apre.
-            If IsNothing(g_frmCatPiatti) = True Then
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.AppStarting
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = CAR_ANAG_CAT_PIATTI
-
-                ConnStringAnagrafiche = CreaConnString(PercorsoDB)
-
-                g_frmCatPiatti = New frmElencoDati(Elenco.CatPiatti)
-                g_frmCatPiatti.MdiParent = Me
-
-                ' Visualizza l'anagrafica clienti.
-                g_frmCatPiatti.Show()
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = LeggiDatiRivenditore()
-
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.Default
-            Else
-                ' Altrimenti lo attiva.
-                g_frmCatPiatti.Activate()
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Public Sub ApriStatoPrenotazioni()
-        Try
-            ' Se il form non è aperto lo apre.
-            If IsNothing(g_frmStatoPren) = True Then
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.AppStarting
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = CAR_TAB_STATO_PREN
-
-                ConnStringAnagrafiche = CreaConnString(PercorsoDB)
-
-                g_frmStatoPren = New frmElencoDati(Elenco.StatoPren)
-                g_frmStatoPren.MdiParent = Me
-
-                ' Visualizza l'anagrafica clienti.
-                g_frmStatoPren.Show()
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = LeggiDatiRivenditore()
-
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.Default
-            Else
-                ' Altrimenti lo attiva.
-                g_frmStatoPren.Activate()
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Public Sub ApriPos(ByVal idTavolo As Integer, ByVal tavolo As String, ByVal oraOcc As String, ByVal cameriere As String)
-        Try
-            ' Se il form non è aperto lo apre.
-            If IsNothing(g_frmPos) = True Then
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.AppStarting
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = CAR_POS
-
-                g_frmPos = New frmPos(idTavolo, tavolo, oraOcc, cameriere)
-
-                g_frmPos.WindowState = FormWindowState.Maximized
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = LeggiDatiRivenditore()
-
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.Default
-
-                ' Visualizza l'anagrafica clienti.
-                g_frmPos.ShowDialog()
-
-            Else
-                ' Altrimenti lo attiva.
-                g_frmPos.Activate()
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Public Sub ApriStatistiche()
-        Try
-            ' Se il form non è aperto lo apre.
-            If IsNothing(g_frmStatistiche) = True Then
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.AppStarting
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = CAR_STAT
-
-                g_frmStatistiche = New frmStatistiche
-                g_frmStatistiche.MdiParent = Me
-
-                ' Visualizza l'anagrafica clienti.
-                g_frmStatistiche.Show()
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = LeggiDatiRivenditore()
-
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.Default
-            Else
-                ' Altrimenti lo attiva.
-                g_frmStatistiche.Activate()
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Public Sub ApriStatisticheRisorse()
-        Try
-            ' Se il form non è aperto lo apre.
-            If IsNothing(g_frmStatisticheRisorse) = True Then
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.AppStarting
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = CAR_STAT
-
-                g_frmStatisticheRisorse = New frmStatisticheRisorse
-                g_frmStatisticheRisorse.MdiParent = Me
-
-                ' Visualizza l'anagrafica clienti.
-                g_frmStatisticheRisorse.Show()
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = LeggiDatiRivenditore()
-
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.Default
-            Else
-                ' Altrimenti lo attiva.
-                g_frmStatisticheRisorse.Activate()
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Public Sub ApriPrimaNota()
-        Try
-            ' Se il form non è aperto lo apre.
-            If IsNothing(g_frmPrimaNota) = True Then
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.AppStarting
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = CAR_PRIMA_NOTA
-
-                g_frmPrimaNota = New PrimaNota
-                g_frmPrimaNota.MdiParent = Me
-
-                ' Visualizza l'anagrafica clienti.
-                g_frmPrimaNota.Show()
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = LeggiDatiRivenditore()
-
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.Default
-            Else
-                ' Altrimenti lo attiva.
-                g_frmPrimaNota.Activate()
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Public Sub ApriMenu()
-        Try
-            ' Se il form non è aperto lo apre.
-            If IsNothing(g_frmMenu) = True Then
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.AppStarting
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = "Caricamento finestra in corso..."
-
-                g_frmMenu = New Menu
-                g_frmMenu.MdiParent = Me
-
-                ' Visualizza l'anagrafica clienti.
-                g_frmMenu.Show()
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = LeggiDatiRivenditore()
-
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.Default
-            Else
-                ' Altrimenti lo attiva.
-                g_frmMenu.Activate()
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Public Sub ApriAcquisti()
-        Try
-            ' Se il form non è aperto lo apre.
-            If IsNothing(g_frmAcquisti) = True Then
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.AppStarting
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = CAR_ACQUISTI
-
-                g_frmAcquisti = New frmElencoAcquisti
-                g_frmAcquisti.MdiParent = Me
-
-                ' Visualizza l'anagrafica clienti.
-                g_frmAcquisti.Show()
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = LeggiDatiRivenditore()
-
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.Default
-            Else
-                ' Altrimenti lo attiva.
-                g_frmAcquisti.Activate()
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Public Sub ApriEtichette()
-        Try
-            ' Se il form non è aperto lo apre.
-            If IsNothing(g_frmEtichette) = True Then
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.AppStarting
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = CAR_ETICHETTE
-
-                g_frmEtichette = New ElencoEtichette
-                g_frmEtichette.MdiParent = Me
-
-                ' Visualizza l'anagrafica clienti.
-                g_frmEtichette.Show()
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = LeggiDatiRivenditore()
-
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.Default
-            Else
-                ' Altrimenti lo attiva.
-                g_frmEtichette.Activate()
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Public Sub ApriDoc()
-        Try
-            ' Se il form non è aperto lo apre.
-            If IsNothing(g_frmDocumenti) = True Then
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.AppStarting
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = CAR_DOCUMENTI
-
-                g_frmDocumenti = New ElencoDoc
-                g_frmDocumenti.MdiParent = Me
-
-                ' Visualizza l'anagrafica clienti.
-                g_frmDocumenti.Show()
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = LeggiDatiRivenditore()
-
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.Default
-            Else
-                ' Altrimenti lo attiva.
-                g_frmDocumenti.Activate()
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Public Sub ApriChiusuraGiornaliera()
-        Try
+         Else
+            ' Altrimenti lo attiva.
+            g_frmAzienda.Activate()
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
+
+   Public Sub ApriReports(ByVal sql As String, ByVal tabella As String, ByVal percorso As String, Optional ByVal frmId As String = "")
+      Try
+         ' Modifica il cursore del mouse.
+         Cursor.Current = Cursors.AppStarting
+
+         ' Visualizza un messaggio nella barra di stato.
+         Me.eui_Informazioni.Text = CAR_REPORTS
+         Dim frm As New frmReports(sql, tabella, percorso, frmId)
+         frm.MdiParent = Me
+         frm.Show()
+
+         ' Visualizza un messaggio nella barra di stato.
+         Me.eui_Informazioni.Text = LeggiDatiRivenditore()
+
+         ' Modifica il cursore del mouse.
+         Cursor.Current = Cursors.Default
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
+
+   Public Sub ApriInfo()
+      Dim frm As New frmAbout
+      frm.ShowDialog()
+   End Sub
+
+   Public Sub ApriGuida()
+      ' Apre il file della guida in linea.
+      ApriFileGuida(Application.StartupPath & PERCORSO_GUIDA)
+   End Sub
+
+   Public Sub ApriClienti()
+      Try
+         ' Se il form non è aperto lo apre.
+         If IsNothing(g_frmClienti) = True Then
             ' Modifica il cursore del mouse.
             Cursor.Current = Cursors.AppStarting
 
             ' Visualizza un messaggio nella barra di stato.
-            Me.eui_Informazioni.Text = CAR_CHIUSURA
+            Me.eui_Informazioni.Text = CAR_ANAG_CLIENTI
 
-            Dim frm As New Chiusura
+            ConnStringAnagrafiche = CreaConnString(PercorsoDBClienti)
+
+            g_frmClienti = New frmElencoDati(Elenco.Clienti)
+            g_frmClienti.MdiParent = Me
 
             ' Visualizza l'anagrafica clienti.
-            frm.ShowDialog()
+            g_frmClienti.Show()
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = LeggiDatiRivenditore()
+
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.Default
+         Else
+            ' Altrimenti lo attiva.
+            g_frmClienti.Activate()
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
+
+   Public Sub ApriAziende()
+      Try
+         ' Se il form non è aperto lo apre.
+         If IsNothing(g_frmAziende) = True Then
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.AppStarting
+
+            'Dim frmCaricamento As New Caricamento
+            'frmCaricamento.Show()
+            'Application.DoEvents()
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = CAR_ANAG_AZIENDE
+
+            ConnStringAnagrafiche = CreaConnString(PercorsoDBClienti)
+
+            g_frmAziende = New frmElencoDati(Elenco.Aziende)
+            g_frmAziende.MdiParent = Me
+
+            ' Visualizza l'anagrafica clienti.
+            g_frmAziende.Show()
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = LeggiDatiRivenditore()
+
+            'frmCaricamento.Close()
+
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.Default
+         Else
+            ' Altrimenti lo attiva.
+            g_frmAziende.Activate()
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
+
+   Public Sub ApriFornitori()
+      Try
+         ' Se il form non è aperto lo apre.
+         If IsNothing(g_frmFornitori) = True Then
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.AppStarting
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = CAR_ANAG_FORNITORI
+
+            ConnStringAnagrafiche = CreaConnString(PercorsoDB)
+
+            g_frmFornitori = New frmElencoDati(Elenco.Fornitori)
+            g_frmFornitori.MdiParent = Me
+
+            ' Visualizza l'anagrafica clienti.
+            g_frmFornitori.Show()
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = LeggiDatiRivenditore()
+
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.Default
+         Else
+            ' Altrimenti lo attiva.
+            g_frmFornitori.Activate()
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
+
+   Public Sub ApriArticoli()
+      Try
+         ' Se il form non è aperto lo apre.
+         If IsNothing(g_frmArticoli) = True Then
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.AppStarting
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = CAR_ANAG_ARTICOLI
+
+            ConnStringAnagrafiche = CreaConnString(PercorsoDB)
+
+            g_frmArticoli = New frmElencoDati(Elenco.Articoli)
+            g_frmArticoli.MdiParent = Me
+
+            ' Visualizza l'anagrafica clienti.
+            g_frmArticoli.Show()
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = LeggiDatiRivenditore()
+
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.Default
+         Else
+            ' Altrimenti lo attiva.
+            g_frmArticoli.Activate()
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
+
+   Public Sub ApriCamerieri()
+      Try
+         ' Se il form non è aperto lo apre.
+         If IsNothing(g_frmCamerieri) = True Then
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.AppStarting
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = CAR_ANAG_CAMERIERI
+
+            ConnStringAnagrafiche = CreaConnString(PercorsoDB)
+
+            g_frmCamerieri = New frmElencoDati(Elenco.Camerieri)
+            g_frmCamerieri.MdiParent = Me
+
+            ' Visualizza l'anagrafica clienti.
+            g_frmCamerieri.Show()
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = LeggiDatiRivenditore()
+
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.Default
+         Else
+            ' Altrimenti lo attiva.
+            g_frmCamerieri.Activate()
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
+
+   Public Sub ApriSale()
+      Try
+         ' Se il form non è aperto lo apre.
+         If IsNothing(g_frmSale) = True Then
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.AppStarting
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = CAR_ANAG_SALE
+
+            ConnStringAnagrafiche = CreaConnString(PercorsoDB)
+
+            g_frmSale = New frmElencoDati(Elenco.Sale)
+            g_frmSale.MdiParent = Me
+
+            ' Visualizza l'anagrafica clienti.
+            g_frmSale.Show()
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = LeggiDatiRivenditore()
+
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.Default
+         Else
+            ' Altrimenti lo attiva.
+            g_frmSale.Activate()
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
+
+   Public Sub ApriPiatti()
+      Try
+         ' Se il form non è aperto lo apre.
+         If IsNothing(g_frmPiatti) = True Then
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.AppStarting
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = CAR_ANAG_PIATTI
+
+            g_frmPiatti = New frmElencoPiatti
+            g_frmPiatti.MdiParent = Me
+
+            ' Visualizza l'anagrafica clienti.
+            g_frmPiatti.Show()
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = LeggiDatiRivenditore()
+
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.Default
+         Else
+            ' Altrimenti lo attiva.
+            g_frmPiatti.Activate()
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
+
+   Public Sub ApriCategoriePiatti()
+      Try
+         ' Se il form non è aperto lo apre.
+         If IsNothing(g_frmCatPiatti) = True Then
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.AppStarting
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = CAR_ANAG_CAT_PIATTI
+
+            ConnStringAnagrafiche = CreaConnString(PercorsoDB)
+
+            g_frmCatPiatti = New frmElencoDati(Elenco.CatPiatti)
+            g_frmCatPiatti.MdiParent = Me
+
+            ' Visualizza l'anagrafica clienti.
+            g_frmCatPiatti.Show()
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = LeggiDatiRivenditore()
+
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.Default
+         Else
+            ' Altrimenti lo attiva.
+            g_frmCatPiatti.Activate()
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
+
+   Public Sub ApriStatoPrenotazioni()
+      Try
+         ' Se il form non è aperto lo apre.
+         If IsNothing(g_frmStatoPren) = True Then
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.AppStarting
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = CAR_TAB_STATO_PREN
+
+            ConnStringAnagrafiche = CreaConnString(PercorsoDB)
+
+            g_frmStatoPren = New frmElencoDati(Elenco.StatoPren)
+            g_frmStatoPren.MdiParent = Me
+
+            ' Visualizza l'anagrafica clienti.
+            g_frmStatoPren.Show()
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = LeggiDatiRivenditore()
+
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.Default
+         Else
+            ' Altrimenti lo attiva.
+            g_frmStatoPren.Activate()
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
+
+   Public Sub ApriPos(ByVal idTavolo As Integer, ByVal tavolo As String, ByVal oraOcc As String, ByVal cameriere As String)
+      Try
+         ' Se il form non è aperto lo apre.
+         If IsNothing(g_frmPos) = True Then
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.AppStarting
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = CAR_POS
+
+            g_frmPos = New frmPos(idTavolo, tavolo, oraOcc, cameriere)
+
+            g_frmPos.WindowState = FormWindowState.Maximized
 
             ' Visualizza un messaggio nella barra di stato.
             Me.eui_Informazioni.Text = LeggiDatiRivenditore()
@@ -8560,1389 +8334,1646 @@ Friend Class frmMain
             ' Modifica il cursore del mouse.
             Cursor.Current = Cursors.Default
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Public Sub ApriCorrispettivi()
-        Try
-            ' Se il form non è aperto lo apre.
-            If IsNothing(g_frmCorrispettivi) = True Then
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.AppStarting
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = CAR_CORRISPETTIVI
-
-                g_frmCorrispettivi = New ElencoCorrispettivi
-                g_frmCorrispettivi.MdiParent = Me
-
-                ' Visualizza l'anagrafica clienti.
-                g_frmCorrispettivi.Show()
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = LeggiDatiRivenditore()
-
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.Default
-            Else
-                ' Altrimenti lo attiva.
-                g_frmCorrispettivi.Activate()
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Public Sub ApriTavoli()
-        Try
-            ' Se il form non è aperto lo apre.
-            If IsNothing(g_frmTavoli) = True Then
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.AppStarting
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = CAR_ANAG_TAVOLI
-
-                ConnStringAnagrafiche = CreaConnString(PercorsoDB)
-
-                g_frmTavoli = New frmElencoDati(Elenco.Tavoli)
-                g_frmTavoli.MdiParent = Me
-
-                ' Visualizza l'elenco Tavoli.
-                g_frmTavoli.Show()
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = LeggiDatiRivenditore()
-
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.Default
-            Else
-                ' Altrimenti lo attiva.
-                g_frmTavoli.Activate()
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Public Sub ApriCamere()
-        Try
-            ' Se il form non è aperto lo apre.
-            If IsNothing(g_frmCamere) = True Then
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.AppStarting
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = CAR_ANAG_CAMERE
-
-                ConnStringAnagrafiche = CreaConnString(PercorsoDB)
-
-                g_frmCamere = New frmElencoDati(Elenco.Camere)
-                g_frmCamere.MdiParent = Me
-
-                ' Visualizza l'elenco Tavoli.
-                g_frmCamere.Show()
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = LeggiDatiRivenditore()
-
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.Default
-            Else
-                ' Altrimenti lo attiva.
-                g_frmCamere.Activate()
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Public Sub ApriListiniCamere()
-        Try
-            ' Se il form non è aperto lo apre.
-            If IsNothing(g_frmListiniCamere) = True Then
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.AppStarting
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = CAR_TAB_LISTINI_CAMERE
-
-                ConnStringAnagrafiche = CreaConnString(PercorsoDB)
-
-                g_frmListiniCamere = New ElencoListiniCamere
-                g_frmListiniCamere.MdiParent = Me
-
-                ' Visualizza l'anagrafica clienti.
-                g_frmListiniCamere.Show()
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = LeggiDatiRivenditore()
-
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.Default
-            Else
-                ' Altrimenti lo attiva.
-                g_frmListiniCamere.Activate()
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Public Sub ApriStagioni()
-        Try
-            ' Se il form non è aperto lo apre.
-            If IsNothing(g_frmStagioni) = True Then
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.AppStarting
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = CAR_TAB_STAGIONI
-
-                ConnStringAnagrafiche = CreaConnString(PercorsoDB)
-
-                g_frmStagioni = New frmStagioni
-                'g_frmStagioni.MdiParent = Me
-
-                ' Visualizza l'anagrafica clienti.
-                g_frmStagioni.ShowDialog()
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = LeggiDatiRivenditore()
-
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.Default
-            Else
-                ' Altrimenti lo attiva.
-                g_frmStagioni.Activate()
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Public Sub ApriVCTavoli()
-        Try
-            If LeggiNumTavoli() = 0 Then
-                MessageBox.Show("Non ci sono Tavoli! Visual POS - Gestione Tavoli non può essere aperto.", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-                Exit Sub
-            End If
-
-            ' Se il form non è aperto lo apre.
-            If IsNothing(g_frmVCTavoli) = True Then
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.AppStarting
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = CAR_VC_TAVOLI
-
-                g_frmVCTavoli = New frmVCTavoli
-
-                g_frmVCTavoli.WindowState = FormWindowState.Maximized
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = LeggiDatiRivenditore()
-
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.Default
-
-                ' Visualizza la gestione in modalità grafica dei Tavoli.
-                g_frmVCTavoli.Show()
-            Else
-                ' Altrimenti lo attiva.
-                g_frmVCTavoli.Activate()
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Public Sub ApriPrenCamere()
-        Try
-            ' Se il form non è aperto lo apre.
-            If IsNothing(g_frmPrenCamere) = True Then
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.AppStarting
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = CAR_ANAG_PREN_CAMERE
-
-                ConnStringAnagrafiche = CreaConnString(PercorsoDB)
-
-                g_frmPrenCamere = New ElencoPrenCamere()
-                g_frmPrenCamere.MdiParent = Me
-
-                ' Visualizza l'anagrafica clienti.
-                g_frmPrenCamere.Show()
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = LeggiDatiRivenditore()
-
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.Default
-            Else
-                ' Altrimenti lo attiva.
-                g_frmPrenCamere.Activate()
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Public Sub ApriPrenTavoli()
-        Try
-            ' Se il form non è aperto lo apre.
-            If IsNothing(g_frmPren) = True Then
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.AppStarting
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = CAR_ANAG_PREN
-
-                ConnStringAnagrafiche = CreaConnString(PercorsoDB)
-
-                g_frmPren = New frmElencoDati(Elenco.Prenotazioni)
-                g_frmPren.MdiParent = Me
-
-                ' Visualizza l'anagrafica clienti.
-                g_frmPren.Show()
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = LeggiDatiRivenditore()
-
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.Default
-            Else
-                ' Altrimenti lo attiva.
-                g_frmPren.Activate()
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Public Sub ApriPrenSale()
-        Try
-            ' Se il form non è aperto lo apre.
-            If IsNothing(g_frmPrenSale) = True Then
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.AppStarting
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = CAR_ANAG_PREN_SALE
-
-                ConnStringAnagrafiche = CreaConnString(PercorsoDB)
-
-                g_frmPrenSale = New frmElencoDati(Elenco.PrenSale)
-                g_frmPrenSale.MdiParent = Me
-
-                ' Visualizza l'anagrafica clienti.
-                g_frmPrenSale.Show()
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = LeggiDatiRivenditore()
-
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.Default
-            Else
-                ' Altrimenti lo attiva.
-                g_frmPrenSale.Activate()
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Public Sub ApriPrenRisorse()
-        Try
-            ' Se il form non è aperto lo apre.
-            If IsNothing(g_frmPrenRisorse) = True Then
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.AppStarting
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = CAR_ANAG_PREN_RISORSE
-
-                ConnStringAnagrafiche = CreaConnString(PercorsoDB)
-
-                g_frmPrenRisorse = New frmElencoDatiSport(Elenco.Prenotazioni)
-                g_frmPrenRisorse.MdiParent = Me
-
-                ' Visualizza l'anagrafica clienti.
-                g_frmPrenRisorse.Show()
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = LeggiDatiRivenditore()
-
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.Default
-            Else
-                ' Altrimenti lo attiva.
-                g_frmPrenRisorse.Activate()
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Public Sub ApriPlanningSport1()
-        Try
-            ' Se il form non è aperto lo apre.
-            If IsNothing(g_frmPlanningSport1) = True Then
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.AppStarting
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = CAR_PLANNING_P
-
-                g_frmPlanningSport1 = New frmPlanningP(TipoPlanning.Planning1)
-                g_frmPlanningSport1.MdiParent = Me
-
-                ' Visualizza l'anagrafica Hotel.
-                g_frmPlanningSport1.Show()
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = LeggiDatiRivenditore()
-
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.Default
-            Else
-                ' Altrimenti lo attiva.
-                g_frmPlanningSport1.Activate()
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Public Sub ApriPlanningSport2()
-        Try
-            ' Se il form non è aperto lo apre.
-            If IsNothing(g_frmPlanningSport2) = True Then
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.AppStarting
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = CAR_PLANNING_P
-
-                g_frmPlanningSport2 = New frmPlanningP(TipoPlanning.Planning2)
-                g_frmPlanningSport2.MdiParent = Me
-
-                ' Visualizza l'anagrafica Hotel.
-                g_frmPlanningSport2.Show()
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = LeggiDatiRivenditore()
-
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.Default
-            Else
-                ' Altrimenti lo attiva.
-                g_frmPlanningSport2.Activate()
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Public Sub ApriPlanningSport3()
-        Try
-            ' Se il form non è aperto lo apre.
-            If IsNothing(g_frmPlanningSport3) = True Then
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.AppStarting
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = CAR_PLANNING_P
-
-                g_frmPlanningSport3 = New frmPlanningP(TipoPlanning.Planning3)
-                g_frmPlanningSport3.MdiParent = Me
-
-                ' Visualizza l'anagrafica Hotel.
-                g_frmPlanningSport3.Show()
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = LeggiDatiRivenditore()
-
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.Default
-            Else
-                ' Altrimenti lo attiva.
-                g_frmPlanningSport3.Activate()
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Public Sub ApriPlanningSport4()
-        Try
-            ' Se il form non è aperto lo apre.
-            If IsNothing(g_frmPlanningSport4) = True Then
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.AppStarting
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = CAR_PLANNING_P
-
-                g_frmPlanningSport4 = New frmPlanningP(TipoPlanning.Planning4)
-                g_frmPlanningSport4.MdiParent = Me
-
-                ' Visualizza l'anagrafica Hotel.
-                g_frmPlanningSport4.Show()
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = LeggiDatiRivenditore()
-
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.Default
-            Else
-                ' Altrimenti lo attiva.
-                g_frmPlanningSport4.Activate()
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Public Sub ApriPlanningCamere()
-        Try
-            ' Se il form non è aperto lo apre.
-            If IsNothing(g_frmPlanningCamere) = True Then
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.AppStarting
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = CAR_PLANNING_CAMERE
-
-                g_frmPlanningCamere = New PlanningCamere
-                g_frmPlanningCamere.MdiParent = Me
-
-                ' Visualizza l'anagrafica Hotel.
-                g_frmPlanningCamere.Show()
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = LeggiDatiRivenditore()
-
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.Default
-            Else
-                ' Altrimenti lo attiva.
-                g_frmPlanningCamere.Activate()
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Public Sub ApriScorte()
-        Try
-            ' Se il form non è aperto lo apre.
-            If IsNothing(g_frmScorte) = True Then
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.AppStarting
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = CAR_SITUAZIONE_SCORTE
-
-                ConnStringAnagrafiche = CreaConnString(PercorsoDB)
-
-                g_frmScorte = New ElencoScorte
-                g_frmScorte.MdiParent = Me
-
-                ' Visualizza l'anagrafica clienti.
-                g_frmScorte.Show()
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = LeggiDatiRivenditore()
-
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.Default
-            Else
-                ' Altrimenti lo attiva.
-                g_frmScorte.Activate()
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Public Sub ApriInventario()
-        Try
-            ' Se il form non è aperto lo apre.
-            If IsNothing(g_frmInventario) = True Then
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.AppStarting
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = CAR_INVENTARIO
-
-                ConnStringAnagrafiche = CreaConnString(PercorsoDB)
-
-                g_frmInventario = New ElencoInventario
-                g_frmInventario.MdiParent = Me
-
-                ' Visualizza l'anagrafica clienti.
-                g_frmInventario.Show()
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = LeggiDatiRivenditore()
-
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.Default
-            Else
-                ' Altrimenti lo attiva.
-                g_frmInventario.Activate()
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Public Sub ApriMovMag()
-        Try
-            ' Se il form non è aperto lo apre.
-            If IsNothing(g_frmMovMag) = True Then
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.AppStarting
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = CAR_MOV_MAG
-
-                ConnStringAnagrafiche = CreaConnString(PercorsoDB)
-
-                g_frmMovMag = New ElencoMovMag
-                g_frmMovMag.MdiParent = Me
-
-                ' Visualizza l'anagrafica clienti.
-                g_frmMovMag.Show()
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = LeggiDatiRivenditore()
-
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.Default
-            Else
-                ' Altrimenti lo attiva.
-                g_frmMovMag.Activate()
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Public Sub ApriCAP()
-        Try
-            ' Se il form non è aperto lo apre.
-            If IsNothing(g_frmCap) = True Then
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.AppStarting
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = CAR_CAP
-
-                ConnStringCAP = CreaConnString(Application.StartupPath & PERCORSO_DB_CAP)
-
-                g_frmCap = New ElencoCAP
-                g_frmCap.MdiParent = Me
-
-                ' Visualizza l'elenco CAP.
-                g_frmCap.Show()
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = LeggiDatiRivenditore()
-
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.Default
-            Else
-                ' Altrimenti lo attiva.
-                g_frmCap.Activate()
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Public Sub ApriMessaggi()
-        Try
-            ' Se il form non è aperto lo apre.
-            If IsNothing(g_frmMessaggi) = True Then
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.AppStarting
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = CAR_MESSAGGI
-
-                g_frmMessaggi = New ElencoMessaggi
-                g_frmMessaggi.MdiParent = Me
-
-                ' Visualizza l'anagrafica clienti.
-                g_frmMessaggi.Show()
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = LeggiDatiRivenditore()
-
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.Default
-            Else
-                ' Altrimenti lo attiva.
-                g_frmMessaggi.Activate()
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Public Sub ApriRisorse()
-        Try
-            ' Se il form non è aperto lo apre.
-            If IsNothing(g_frmRisorse) = True Then
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.AppStarting
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = CAR_ANAG_RISORSE
-
-                ConnStringAnagrafiche = CreaConnString(PercorsoDB)
-
-                g_frmRisorse = New frmElencoDatiSport(Elenco.Risorse)
-                g_frmRisorse.MdiParent = Me
-
-                ' Visualizza l'anagrafica Hotel.
-                g_frmRisorse.Show()
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = LeggiDatiRivenditore()
-
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.Default
-            Else
-                ' Altrimenti lo attiva.
-                g_frmRisorse.Activate()
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Public Sub ApriTipologieUtilizzoRisorse()
-        Try
-            ' Se il form non è aperto lo apre.
-            If IsNothing(g_frmCaratteristicheRisorse) = True Then
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.AppStarting
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = CAR_ANAG_TIPOLOGIE_UTILIZZO_RISORSE
-
-                ConnStringAnagrafiche = CreaConnString(PercorsoDB)
-
-                g_frmCaratteristicheRisorse = New frmElencoDati(Elenco.CaratteristicheRisorse)
-                g_frmCaratteristicheRisorse.MdiParent = Me
-
-                ' Visualizza l'anagrafica Hotel.
-                g_frmCaratteristicheRisorse.Show()
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = LeggiDatiRivenditore()
-
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.Default
-            Else
-                ' Altrimenti lo attiva.
-                g_frmCaratteristicheRisorse.Activate()
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Public Sub ApriAccessoriServizi()
-        Try
-            ' Se il form non è aperto lo apre.
-            If IsNothing(g_frmAccessoriServizi) = True Then
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.AppStarting
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = CAR_ANAG_ACCESSORI_SERVIZI
-
-                ConnStringAnagrafiche = CreaConnString(PercorsoDB)
-
-                g_frmAccessoriServizi = New frmElencoDatiSport(Elenco.AccessoriServizi)
-                g_frmAccessoriServizi.MdiParent = Me
-
-                ' Visualizza l'anagrafica Hotel.
-                g_frmAccessoriServizi.Show()
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = LeggiDatiRivenditore()
-
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.Default
-            Else
-                ' Altrimenti lo attiva.
-                g_frmAccessoriServizi.Activate()
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Public Sub ApriPlanningP()
-        Try
-            '   ' Se il form non è aperto lo apre.
-            '   If IsNothing(g_frmPP) = True Then
-            '      ' Modifica il cursore del mouse.
-            '      Cursor.Current = Cursors.AppStarting
-
-            '      ' Visualizza un messaggio nella barra di stato.
-            '      Me.eui_Informazioni.Text = CAR_PLANNING_P
-
-            '      g_frmPP = New frmPlanningP
-            '      g_frmPP.MdiParent = Me
-
-            '      ' Visualizza l'anagrafica Hotel.
-            '      g_frmPP.Show()
-
-            '      ' Visualizza un messaggio nella barra di stato.
-            '      Me.eui_Informazioni.Text = LeggiDatiRivenditore()
-
-            '      ' Modifica il cursore del mouse.
-            '      Cursor.Current = Cursors.Default
-            '   Else
-            '      ' Altrimenti lo attiva.
-            '      g_frmPP.Activate()
-            '   End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Public Sub ApriOperazioni()
-        Try
-            ' Se il form non è aperto lo apre.
-            If IsNothing(g_frmOperazioni) = True Then
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.AppStarting
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = CAR_ANAG_OPERAZIONI
-
-                ConnStringAnagrafiche = CreaConnString(PercorsoDB)
-
-                g_frmOperazioni = New RegOperazioni
-                g_frmOperazioni.MdiParent = Me
-
-                ' Visualizza l'anagrafica clienti.
-                g_frmOperazioni.Show()
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = LeggiDatiRivenditore()
-
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.Default
-            Else
-                ' Altrimenti lo attiva.
-                g_frmOperazioni.Activate()
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Public Sub ApriOperatori()
-        Try
-            ' Se il form non è aperto lo apre.
-            If IsNothing(g_frmOperatori) = True Then
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.AppStarting
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = CAR_ANAG_OPERATORI
-
-                ConnStringAnagrafiche = CreaConnString(PercorsoDB)
-
-                g_frmOperatori = New frmElencoDati(Elenco.Operatori)
-                g_frmOperatori.MdiParent = Me
-
-                ' Visualizza l'anagrafica clienti.
-                g_frmOperatori.Show()
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = LeggiDatiRivenditore()
-
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.Default
-            Else
-                ' Altrimenti lo attiva.
-                g_frmOperatori.Activate()
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Public Sub ApriGruppi()
-        Try
-            ' Se il form non è aperto lo apre.
-            If IsNothing(g_frmGruppi) = True Then
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.AppStarting
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = CAR_ANAG_GRUPPI
-
-                ConnStringAnagrafiche = CreaConnString(PercorsoDB)
-
-                g_frmGruppi = New frmElencoDati(Elenco.Gruppi)
-                g_frmGruppi.MdiParent = Me
-
-                ' Visualizza l'anagrafica clienti.
-                g_frmGruppi.Show()
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = LeggiDatiRivenditore()
-
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.Default
-            Else
-                ' Altrimenti lo attiva.
-                g_frmGruppi.Activate()
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Public Sub ApriTabelle(ByVal tabella As String)
-        Try
-            Dim frm As New TabelleDati
-
+            ' Visualizza l'anagrafica clienti.
+            g_frmPos.ShowDialog()
+
+         Else
+            ' Altrimenti lo attiva.
+            g_frmPos.Activate()
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
+
+   Public Sub ApriStatistiche()
+      Try
+         ' Se il form non è aperto lo apre.
+         If IsNothing(g_frmStatistiche) = True Then
             ' Modifica il cursore del mouse.
             Cursor.Current = Cursors.AppStarting
-            Select Case tabella
-                Case "CategorieClienti"
-                    ' Visualizza un messaggio nella barra di stato.
-                    Me.eui_Informazioni.Text = "Attendere prego. Caricamento della Tabella Categorie Clienti in corso..."
 
-                Case "CategoriePiatti"
-                    ' Visualizza un messaggio nella barra di stato.
-                    Me.eui_Informazioni.Text = "Attendere prego. Caricamento della Tabella Categorie Piatti in corso..."
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = CAR_STAT
 
-                Case "Attività"
-                    ' Visualizza un messaggio nella barra di stato.
-                    Me.eui_Informazioni.Text = "Attendere prego. Caricamento della Tabella Attività in corso..."
+            g_frmStatistiche = New frmStatistiche
+            g_frmStatistiche.MdiParent = Me
 
-                Case "CausaliDocumento"
-                    ' Visualizza un messaggio nella barra di stato.
-                    Me.eui_Informazioni.Text = "Attendere prego. Caricamento della Tabella Causali documento in corso..."
+            ' Visualizza l'anagrafica clienti.
+            g_frmStatistiche.Show()
 
-                Case "ModPagamento"
-                    ' Visualizza un messaggio nella barra di stato.
-                    Me.eui_Informazioni.Text = "Attendere prego. Caricamento della Tabella Modalità di pagamento in corso..."
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = LeggiDatiRivenditore()
 
-                Case "Qualifiche"
-                    ' Visualizza un messaggio nella barra di stato.
-                    Me.eui_Informazioni.Text = "Attendere prego. Caricamento della Tabella Forme di cortesia in corso..."
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.Default
+         Else
+            ' Altrimenti lo attiva.
+            g_frmStatistiche.Activate()
+         End If
 
-                Case "CategorieMerce"
-                    ' Visualizza un messaggio nella barra di stato.
-                    Me.eui_Informazioni.Text = "Attendere prego. Caricamento della Tabella Categorie merceologiche in corso..."
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
 
-                Case "UnitàMisura"
-                    ' Visualizza un messaggio nella barra di stato.
-                    Me.eui_Informazioni.Text = "Attendere prego. Caricamento della Tabella Unità di misura in corso..."
+   Public Sub ApriStatisticheRisorse()
+      Try
+         ' Se il form non è aperto lo apre.
+         If IsNothing(g_frmStatisticheRisorse) = True Then
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.AppStarting
 
-                Case "MessaggiReparti"
-                    ' Visualizza un messaggio nella barra di stato.
-                    Me.eui_Informazioni.Text = "Attendere prego. Caricamento della Tabella Messaggi per i reparti in corso..."
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = CAR_STAT
 
-                Case "TipologieCamere"
-                    ' Visualizza un messaggio nella barra di stato.
-                    Me.eui_Informazioni.Text = "Attendere prego. Caricamento della Tabella Tipologie camere in corso..."
+            g_frmStatisticheRisorse = New frmStatisticheRisorse
+            g_frmStatisticheRisorse.MdiParent = Me
 
-                Case "UbicazioniCamere"
-                    ' Visualizza un messaggio nella barra di stato.
-                    Me.eui_Informazioni.Text = "Attendere prego. Caricamento della Tabella Ubicazioni camere in corso..."
+            ' Visualizza l'anagrafica clienti.
+            g_frmStatisticheRisorse.Show()
 
-                Case "PosizioniCamere"
-                    ' Visualizza un messaggio nella barra di stato.
-                    Me.eui_Informazioni.Text = "Attendere prego. Caricamento della Tabella Posizioni camere in corso..."
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = LeggiDatiRivenditore()
 
-                Case "DocIdentità"
-                    ' Visualizza un messaggio nella barra di stato.
-                    Me.eui_Informazioni.Text = "Attendere prego. Caricamento della Tabella Documenti d'identità in corso..."
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.Default
+         Else
+            ' Altrimenti lo attiva.
+            g_frmStatisticheRisorse.Activate()
+         End If
 
-                Case Else
-                    ' Visualizza un messaggio nella barra di stato.
-                    Me.eui_Informazioni.Text = "Attendere prego. Caricamento della Tabella " & tabella & " in corso..."
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
 
-            End Select
+   Public Sub ApriPrimaNota()
+      Try
+         ' Se il form non è aperto lo apre.
+         If IsNothing(g_frmPrimaNota) = True Then
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.AppStarting
 
-            frm.MdiParent = Me
-            frm.Tag = tabella
-            frm.Show()
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = CAR_PRIMA_NOTA
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
+            g_frmPrimaNota = New PrimaNota
+            g_frmPrimaNota.MdiParent = Me
+
+            ' Visualizza l'anagrafica clienti.
+            g_frmPrimaNota.Show()
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = LeggiDatiRivenditore()
+
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.Default
+         Else
+            ' Altrimenti lo attiva.
+            g_frmPrimaNota.Activate()
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
+
+   Public Sub ApriMenu()
+      Try
+         ' Se il form non è aperto lo apre.
+         If IsNothing(g_frmMenu) = True Then
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.AppStarting
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = "Caricamento finestra in corso..."
+
+            g_frmMenu = New Menu
+            g_frmMenu.MdiParent = Me
+
+            ' Visualizza l'anagrafica clienti.
+            g_frmMenu.Show()
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = LeggiDatiRivenditore()
+
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.Default
+         Else
+            ' Altrimenti lo attiva.
+            g_frmMenu.Activate()
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
+
+   Public Sub ApriAcquisti()
+      Try
+         ' Se il form non è aperto lo apre.
+         If IsNothing(g_frmAcquisti) = True Then
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.AppStarting
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = CAR_ACQUISTI
+
+            g_frmAcquisti = New frmElencoAcquisti
+            g_frmAcquisti.MdiParent = Me
+
+            ' Visualizza l'anagrafica clienti.
+            g_frmAcquisti.Show()
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = LeggiDatiRivenditore()
+
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.Default
+         Else
+            ' Altrimenti lo attiva.
+            g_frmAcquisti.Activate()
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
+
+   Public Sub ApriEtichette()
+      Try
+         ' Se il form non è aperto lo apre.
+         If IsNothing(g_frmEtichette) = True Then
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.AppStarting
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = CAR_ETICHETTE
+
+            g_frmEtichette = New ElencoEtichette
+            g_frmEtichette.MdiParent = Me
+
+            ' Visualizza l'anagrafica clienti.
+            g_frmEtichette.Show()
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = LeggiDatiRivenditore()
+
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.Default
+         Else
+            ' Altrimenti lo attiva.
+            g_frmEtichette.Activate()
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
+
+   Public Sub ApriDoc()
+      Try
+         ' Se il form non è aperto lo apre.
+         If IsNothing(g_frmDocumenti) = True Then
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.AppStarting
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = CAR_DOCUMENTI
+
+            g_frmDocumenti = New ElencoDoc
+            g_frmDocumenti.MdiParent = Me
+
+            ' Visualizza l'anagrafica clienti.
+            g_frmDocumenti.Show()
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = LeggiDatiRivenditore()
+
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.Default
+         Else
+            ' Altrimenti lo attiva.
+            g_frmDocumenti.Activate()
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
+
+   Public Sub ApriChiusuraGiornaliera()
+      Try
+         ' Modifica il cursore del mouse.
+         Cursor.Current = Cursors.AppStarting
+
+         ' Visualizza un messaggio nella barra di stato.
+         Me.eui_Informazioni.Text = CAR_CHIUSURA
+
+         Dim frm As New Chiusura
+
+         ' Visualizza l'anagrafica clienti.
+         frm.ShowDialog()
+
+         ' Visualizza un messaggio nella barra di stato.
+         Me.eui_Informazioni.Text = LeggiDatiRivenditore()
+
+         ' Modifica il cursore del mouse.
+         Cursor.Current = Cursors.Default
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
+
+   Public Sub ApriCorrispettivi()
+      Try
+         ' Se il form non è aperto lo apre.
+         If IsNothing(g_frmCorrispettivi) = True Then
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.AppStarting
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = CAR_CORRISPETTIVI
+
+            g_frmCorrispettivi = New ElencoCorrispettivi
+            g_frmCorrispettivi.MdiParent = Me
+
+            ' Visualizza l'anagrafica clienti.
+            g_frmCorrispettivi.Show()
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = LeggiDatiRivenditore()
+
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.Default
+         Else
+            ' Altrimenti lo attiva.
+            g_frmCorrispettivi.Activate()
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
+
+   Public Sub ApriTavoli()
+      Try
+         ' Se il form non è aperto lo apre.
+         If IsNothing(g_frmTavoli) = True Then
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.AppStarting
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = CAR_ANAG_TAVOLI
+
+            ConnStringAnagrafiche = CreaConnString(PercorsoDB)
+
+            g_frmTavoli = New frmElencoDati(Elenco.Tavoli)
+            g_frmTavoli.MdiParent = Me
+
+            ' Visualizza l'elenco Tavoli.
+            g_frmTavoli.Show()
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = LeggiDatiRivenditore()
+
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.Default
+         Else
+            ' Altrimenti lo attiva.
+            g_frmTavoli.Activate()
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
+
+   Public Sub ApriCamere()
+      Try
+         ' Se il form non è aperto lo apre.
+         If IsNothing(g_frmCamere) = True Then
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.AppStarting
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = CAR_ANAG_CAMERE
+
+            ConnStringAnagrafiche = CreaConnString(PercorsoDB)
+
+            g_frmCamere = New frmElencoDati(Elenco.Camere)
+            g_frmCamere.MdiParent = Me
+
+            ' Visualizza l'elenco Tavoli.
+            g_frmCamere.Show()
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = LeggiDatiRivenditore()
+
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.Default
+         Else
+            ' Altrimenti lo attiva.
+            g_frmCamere.Activate()
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
+
+   Public Sub ApriListiniCamere()
+      Try
+         ' Se il form non è aperto lo apre.
+         If IsNothing(g_frmListiniCamere) = True Then
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.AppStarting
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = CAR_TAB_LISTINI_CAMERE
+
+            ConnStringAnagrafiche = CreaConnString(PercorsoDB)
+
+            g_frmListiniCamere = New ElencoListiniCamere
+            g_frmListiniCamere.MdiParent = Me
+
+            ' Visualizza l'anagrafica clienti.
+            g_frmListiniCamere.Show()
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = LeggiDatiRivenditore()
+
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.Default
+         Else
+            ' Altrimenti lo attiva.
+            g_frmListiniCamere.Activate()
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
+
+   Public Sub ApriStagioni()
+      Try
+         ' Se il form non è aperto lo apre.
+         If IsNothing(g_frmStagioni) = True Then
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.AppStarting
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = CAR_TAB_STAGIONI
+
+            ConnStringAnagrafiche = CreaConnString(PercorsoDB)
+
+            g_frmStagioni = New frmStagioni
+            'g_frmStagioni.MdiParent = Me
+
+            ' Visualizza l'anagrafica clienti.
+            g_frmStagioni.ShowDialog()
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = LeggiDatiRivenditore()
+
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.Default
+         Else
+            ' Altrimenti lo attiva.
+            g_frmStagioni.Activate()
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
+
+   Public Sub ApriVCTavoli()
+      Try
+         If LeggiNumTavoli() = 0 Then
+            MessageBox.Show("Non ci sono Tavoli! Visual POS - Gestione Tavoli non può essere aperto.", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            Exit Sub
+         End If
+
+         ' Se il form non è aperto lo apre.
+         If IsNothing(g_frmVCTavoli) = True Then
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.AppStarting
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = CAR_VC_TAVOLI
+
+            g_frmVCTavoli = New frmVCTavoli
+
+            g_frmVCTavoli.WindowState = FormWindowState.Maximized
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = LeggiDatiRivenditore()
+
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.Default
+
+            ' Visualizza la gestione in modalità grafica dei Tavoli.
+            g_frmVCTavoli.Show()
+         Else
+            ' Altrimenti lo attiva.
+            g_frmVCTavoli.Activate()
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
+
+   Public Sub ApriPrenCamere()
+      Try
+         ' Se il form non è aperto lo apre.
+         If IsNothing(g_frmPrenCamere) = True Then
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.AppStarting
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = CAR_ANAG_PREN_CAMERE
+
+            ConnStringAnagrafiche = CreaConnString(PercorsoDB)
+
+            g_frmPrenCamere = New ElencoPrenCamere()
+            g_frmPrenCamere.MdiParent = Me
+
+            ' Visualizza l'anagrafica clienti.
+            g_frmPrenCamere.Show()
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = LeggiDatiRivenditore()
+
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.Default
+         Else
+            ' Altrimenti lo attiva.
+            g_frmPrenCamere.Activate()
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
+
+   Public Sub ApriPrenTavoli()
+      Try
+         ' Se il form non è aperto lo apre.
+         If IsNothing(g_frmPren) = True Then
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.AppStarting
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = CAR_ANAG_PREN
+
+            ConnStringAnagrafiche = CreaConnString(PercorsoDB)
+
+            g_frmPren = New frmElencoDati(Elenco.Prenotazioni)
+            g_frmPren.MdiParent = Me
+
+            ' Visualizza l'anagrafica clienti.
+            g_frmPren.Show()
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = LeggiDatiRivenditore()
+
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.Default
+         Else
+            ' Altrimenti lo attiva.
+            g_frmPren.Activate()
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
+
+   Public Sub ApriPrenSale()
+      Try
+         ' Se il form non è aperto lo apre.
+         If IsNothing(g_frmPrenSale) = True Then
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.AppStarting
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = CAR_ANAG_PREN_SALE
+
+            ConnStringAnagrafiche = CreaConnString(PercorsoDB)
+
+            g_frmPrenSale = New frmElencoDati(Elenco.PrenSale)
+            g_frmPrenSale.MdiParent = Me
+
+            ' Visualizza l'anagrafica clienti.
+            g_frmPrenSale.Show()
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = LeggiDatiRivenditore()
+
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.Default
+         Else
+            ' Altrimenti lo attiva.
+            g_frmPrenSale.Activate()
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
+
+   Public Sub ApriPrenRisorse()
+      Try
+         ' Se il form non è aperto lo apre.
+         If IsNothing(g_frmPrenRisorse) = True Then
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.AppStarting
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = CAR_ANAG_PREN_RISORSE
+
+            ConnStringAnagrafiche = CreaConnString(PercorsoDB)
+
+            g_frmPrenRisorse = New frmElencoDatiSport(Elenco.Prenotazioni)
+            g_frmPrenRisorse.MdiParent = Me
+
+            ' Visualizza l'anagrafica clienti.
+            g_frmPrenRisorse.Show()
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = LeggiDatiRivenditore()
+
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.Default
+         Else
+            ' Altrimenti lo attiva.
+            g_frmPrenRisorse.Activate()
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
+
+   Public Sub ApriPlanningSport1()
+      Try
+         ' Se il form non è aperto lo apre.
+         If IsNothing(g_frmPlanningSport1) = True Then
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.AppStarting
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = CAR_PLANNING_P
+
+            g_frmPlanningSport1 = New frmPlanningP(TipoPlanning.Planning1)
+            g_frmPlanningSport1.MdiParent = Me
+
+            ' Visualizza l'anagrafica Hotel.
+            g_frmPlanningSport1.Show()
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = LeggiDatiRivenditore()
+
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.Default
+         Else
+            ' Altrimenti lo attiva.
+            g_frmPlanningSport1.Activate()
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
+
+   Public Sub ApriPlanningSport2()
+      Try
+         ' Se il form non è aperto lo apre.
+         If IsNothing(g_frmPlanningSport2) = True Then
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.AppStarting
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = CAR_PLANNING_P
+
+            g_frmPlanningSport2 = New frmPlanningP(TipoPlanning.Planning2)
+            g_frmPlanningSport2.MdiParent = Me
+
+            ' Visualizza l'anagrafica Hotel.
+            g_frmPlanningSport2.Show()
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = LeggiDatiRivenditore()
+
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.Default
+         Else
+            ' Altrimenti lo attiva.
+            g_frmPlanningSport2.Activate()
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
+
+   Public Sub ApriPlanningSport3()
+      Try
+         ' Se il form non è aperto lo apre.
+         If IsNothing(g_frmPlanningSport3) = True Then
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.AppStarting
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = CAR_PLANNING_P
+
+            g_frmPlanningSport3 = New frmPlanningP(TipoPlanning.Planning3)
+            g_frmPlanningSport3.MdiParent = Me
+
+            ' Visualizza l'anagrafica Hotel.
+            g_frmPlanningSport3.Show()
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = LeggiDatiRivenditore()
+
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.Default
+         Else
+            ' Altrimenti lo attiva.
+            g_frmPlanningSport3.Activate()
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
+
+   Public Sub ApriPlanningSport4()
+      Try
+         ' Se il form non è aperto lo apre.
+         If IsNothing(g_frmPlanningSport4) = True Then
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.AppStarting
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = CAR_PLANNING_P
+
+            g_frmPlanningSport4 = New frmPlanningP(TipoPlanning.Planning4)
+            g_frmPlanningSport4.MdiParent = Me
+
+            ' Visualizza l'anagrafica Hotel.
+            g_frmPlanningSport4.Show()
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = LeggiDatiRivenditore()
+
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.Default
+         Else
+            ' Altrimenti lo attiva.
+            g_frmPlanningSport4.Activate()
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
+
+   Public Sub ApriPlanningCamere()
+      Try
+         ' Se il form non è aperto lo apre.
+         If IsNothing(g_frmPlanningCamere) = True Then
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.AppStarting
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = CAR_PLANNING_CAMERE
+
+            g_frmPlanningCamere = New PlanningCamere
+            g_frmPlanningCamere.MdiParent = Me
+
+            ' Visualizza l'anagrafica Hotel.
+            g_frmPlanningCamere.Show()
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = LeggiDatiRivenditore()
+
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.Default
+         Else
+            ' Altrimenti lo attiva.
+            g_frmPlanningCamere.Activate()
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
+
+   Public Sub ApriScorte()
+      Try
+         ' Se il form non è aperto lo apre.
+         If IsNothing(g_frmScorte) = True Then
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.AppStarting
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = CAR_SITUAZIONE_SCORTE
+
+            ConnStringAnagrafiche = CreaConnString(PercorsoDB)
+
+            g_frmScorte = New ElencoScorte
+            g_frmScorte.MdiParent = Me
+
+            ' Visualizza l'anagrafica clienti.
+            g_frmScorte.Show()
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = LeggiDatiRivenditore()
+
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.Default
+         Else
+            ' Altrimenti lo attiva.
+            g_frmScorte.Activate()
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
+
+   Public Sub ApriInventario()
+      Try
+         ' Se il form non è aperto lo apre.
+         If IsNothing(g_frmInventario) = True Then
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.AppStarting
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = CAR_INVENTARIO
+
+            ConnStringAnagrafiche = CreaConnString(PercorsoDB)
+
+            g_frmInventario = New ElencoInventario
+            g_frmInventario.MdiParent = Me
+
+            ' Visualizza l'anagrafica clienti.
+            g_frmInventario.Show()
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = LeggiDatiRivenditore()
+
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.Default
+         Else
+            ' Altrimenti lo attiva.
+            g_frmInventario.Activate()
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
+
+   Public Sub ApriMovMag()
+      Try
+         ' Se il form non è aperto lo apre.
+         If IsNothing(g_frmMovMag) = True Then
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.AppStarting
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = CAR_MOV_MAG
+
+            ConnStringAnagrafiche = CreaConnString(PercorsoDB)
+
+            g_frmMovMag = New ElencoMovMag
+            g_frmMovMag.MdiParent = Me
+
+            ' Visualizza l'anagrafica clienti.
+            g_frmMovMag.Show()
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = LeggiDatiRivenditore()
+
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.Default
+         Else
+            ' Altrimenti lo attiva.
+            g_frmMovMag.Activate()
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
+
+   Public Sub ApriCAP()
+      Try
+         ' Se il form non è aperto lo apre.
+         If IsNothing(g_frmCap) = True Then
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.AppStarting
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = CAR_CAP
+
+            ConnStringCAP = CreaConnString(Application.StartupPath & PERCORSO_DB_CAP)
+
+            g_frmCap = New ElencoCAP
+            g_frmCap.MdiParent = Me
+
+            ' Visualizza l'elenco CAP.
+            g_frmCap.Show()
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = LeggiDatiRivenditore()
+
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.Default
+         Else
+            ' Altrimenti lo attiva.
+            g_frmCap.Activate()
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
+
+   Public Sub ApriMessaggi()
+      Try
+         ' Se il form non è aperto lo apre.
+         If IsNothing(g_frmMessaggi) = True Then
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.AppStarting
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = CAR_MESSAGGI
+
+            g_frmMessaggi = New ElencoMessaggi
+            g_frmMessaggi.MdiParent = Me
+
+            ' Visualizza l'anagrafica clienti.
+            g_frmMessaggi.Show()
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = LeggiDatiRivenditore()
+
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.Default
+         Else
+            ' Altrimenti lo attiva.
+            g_frmMessaggi.Activate()
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
+
+   Public Sub ApriRisorse()
+      Try
+         ' Se il form non è aperto lo apre.
+         If IsNothing(g_frmRisorse) = True Then
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.AppStarting
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = CAR_ANAG_RISORSE
+
+            ConnStringAnagrafiche = CreaConnString(PercorsoDB)
+
+            g_frmRisorse = New frmElencoDatiSport(Elenco.Risorse)
+            g_frmRisorse.MdiParent = Me
+
+            ' Visualizza l'anagrafica Hotel.
+            g_frmRisorse.Show()
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = LeggiDatiRivenditore()
+
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.Default
+         Else
+            ' Altrimenti lo attiva.
+            g_frmRisorse.Activate()
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
+
+   Public Sub ApriTipologieUtilizzoRisorse()
+      Try
+         ' Se il form non è aperto lo apre.
+         If IsNothing(g_frmCaratteristicheRisorse) = True Then
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.AppStarting
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = CAR_ANAG_TIPOLOGIE_UTILIZZO_RISORSE
+
+            ConnStringAnagrafiche = CreaConnString(PercorsoDB)
+
+            g_frmCaratteristicheRisorse = New frmElencoDati(Elenco.CaratteristicheRisorse)
+            g_frmCaratteristicheRisorse.MdiParent = Me
+
+            ' Visualizza l'anagrafica Hotel.
+            g_frmCaratteristicheRisorse.Show()
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = LeggiDatiRivenditore()
+
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.Default
+         Else
+            ' Altrimenti lo attiva.
+            g_frmCaratteristicheRisorse.Activate()
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
+
+   Public Sub ApriAccessoriServizi()
+      Try
+         ' Se il form non è aperto lo apre.
+         If IsNothing(g_frmAccessoriServizi) = True Then
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.AppStarting
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = CAR_ANAG_ACCESSORI_SERVIZI
+
+            ConnStringAnagrafiche = CreaConnString(PercorsoDB)
+
+            g_frmAccessoriServizi = New frmElencoDatiSport(Elenco.AccessoriServizi)
+            g_frmAccessoriServizi.MdiParent = Me
+
+            ' Visualizza l'anagrafica Hotel.
+            g_frmAccessoriServizi.Show()
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = LeggiDatiRivenditore()
+
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.Default
+         Else
+            ' Altrimenti lo attiva.
+            g_frmAccessoriServizi.Activate()
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
+
+   Public Sub ApriPlanningP()
+      Try
+         '   ' Se il form non è aperto lo apre.
+         '   If IsNothing(g_frmPP) = True Then
+         '      ' Modifica il cursore del mouse.
+         '      Cursor.Current = Cursors.AppStarting
+
+         '      ' Visualizza un messaggio nella barra di stato.
+         '      Me.eui_Informazioni.Text = CAR_PLANNING_P
+
+         '      g_frmPP = New frmPlanningP
+         '      g_frmPP.MdiParent = Me
+
+         '      ' Visualizza l'anagrafica Hotel.
+         '      g_frmPP.Show()
+
+         '      ' Visualizza un messaggio nella barra di stato.
+         '      Me.eui_Informazioni.Text = LeggiDatiRivenditore()
+
+         '      ' Modifica il cursore del mouse.
+         '      Cursor.Current = Cursors.Default
+         '   Else
+         '      ' Altrimenti lo attiva.
+         '      g_frmPP.Activate()
+         '   End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
+
+   Public Sub ApriOperazioni()
+      Try
+         ' Se il form non è aperto lo apre.
+         If IsNothing(g_frmOperazioni) = True Then
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.AppStarting
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = CAR_ANAG_OPERAZIONI
+
+            ConnStringAnagrafiche = CreaConnString(PercorsoDB)
+
+            g_frmOperazioni = New RegOperazioni
+            g_frmOperazioni.MdiParent = Me
+
+            ' Visualizza l'anagrafica clienti.
+            g_frmOperazioni.Show()
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = LeggiDatiRivenditore()
+
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.Default
+         Else
+            ' Altrimenti lo attiva.
+            g_frmOperazioni.Activate()
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
+
+   Public Sub ApriOperatori()
+      Try
+         ' Se il form non è aperto lo apre.
+         If IsNothing(g_frmOperatori) = True Then
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.AppStarting
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = CAR_ANAG_OPERATORI
+
+            ConnStringAnagrafiche = CreaConnString(PercorsoDB)
+
+            g_frmOperatori = New frmElencoDati(Elenco.Operatori)
+            g_frmOperatori.MdiParent = Me
+
+            ' Visualizza l'anagrafica clienti.
+            g_frmOperatori.Show()
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = LeggiDatiRivenditore()
+
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.Default
+         Else
+            ' Altrimenti lo attiva.
+            g_frmOperatori.Activate()
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
+
+   Public Sub ApriGruppi()
+      Try
+         ' Se il form non è aperto lo apre.
+         If IsNothing(g_frmGruppi) = True Then
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.AppStarting
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = CAR_ANAG_GRUPPI
+
+            ConnStringAnagrafiche = CreaConnString(PercorsoDB)
+
+            g_frmGruppi = New frmElencoDati(Elenco.Gruppi)
+            g_frmGruppi.MdiParent = Me
+
+            ' Visualizza l'anagrafica clienti.
+            g_frmGruppi.Show()
+
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = LeggiDatiRivenditore()
+
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.Default
+         Else
+            ' Altrimenti lo attiva.
+            g_frmGruppi.Activate()
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
+
+   Public Sub ApriTabelle(ByVal tabella As String)
+      Try
+         Dim frm As New TabelleDati
+
+         ' Modifica il cursore del mouse.
+         Cursor.Current = Cursors.AppStarting
+         Select Case tabella
+            Case "CategorieClienti"
+               ' Visualizza un messaggio nella barra di stato.
+               Me.eui_Informazioni.Text = "Attendere prego. Caricamento della Tabella Categorie Clienti in corso..."
+
+            Case "CategoriePiatti"
+               ' Visualizza un messaggio nella barra di stato.
+               Me.eui_Informazioni.Text = "Attendere prego. Caricamento della Tabella Categorie Piatti in corso..."
+
+            Case "Attività"
+               ' Visualizza un messaggio nella barra di stato.
+               Me.eui_Informazioni.Text = "Attendere prego. Caricamento della Tabella Attività in corso..."
+
+            Case "CausaliDocumento"
+               ' Visualizza un messaggio nella barra di stato.
+               Me.eui_Informazioni.Text = "Attendere prego. Caricamento della Tabella Causali documento in corso..."
+
+            Case "ModPagamento"
+               ' Visualizza un messaggio nella barra di stato.
+               Me.eui_Informazioni.Text = "Attendere prego. Caricamento della Tabella Modalità di pagamento in corso..."
+
+            Case "Qualifiche"
+               ' Visualizza un messaggio nella barra di stato.
+               Me.eui_Informazioni.Text = "Attendere prego. Caricamento della Tabella Forme di cortesia in corso..."
+
+            Case "CategorieMerce"
+               ' Visualizza un messaggio nella barra di stato.
+               Me.eui_Informazioni.Text = "Attendere prego. Caricamento della Tabella Categorie merceologiche in corso..."
+
+            Case "UnitàMisura"
+               ' Visualizza un messaggio nella barra di stato.
+               Me.eui_Informazioni.Text = "Attendere prego. Caricamento della Tabella Unità di misura in corso..."
+
+            Case "MessaggiReparti"
+               ' Visualizza un messaggio nella barra di stato.
+               Me.eui_Informazioni.Text = "Attendere prego. Caricamento della Tabella Messaggi per i reparti in corso..."
+
+            Case "TipologieCamere"
+               ' Visualizza un messaggio nella barra di stato.
+               Me.eui_Informazioni.Text = "Attendere prego. Caricamento della Tabella Tipologie camere in corso..."
+
+            Case "UbicazioniCamere"
+               ' Visualizza un messaggio nella barra di stato.
+               Me.eui_Informazioni.Text = "Attendere prego. Caricamento della Tabella Ubicazioni camere in corso..."
+
+            Case "PosizioniCamere"
+               ' Visualizza un messaggio nella barra di stato.
+               Me.eui_Informazioni.Text = "Attendere prego. Caricamento della Tabella Posizioni camere in corso..."
+
+            Case "DocIdentità"
+               ' Visualizza un messaggio nella barra di stato.
+               Me.eui_Informazioni.Text = "Attendere prego. Caricamento della Tabella Documenti d'identità in corso..."
+
+            Case Else
+               ' Visualizza un messaggio nella barra di stato.
+               Me.eui_Informazioni.Text = "Attendere prego. Caricamento della Tabella " & tabella & " in corso..."
+
+         End Select
+
+         frm.MdiParent = Me
+         frm.Tag = tabella
+         frm.Show()
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
 
 #End Region
 
 #Region "Funzioni"
 
-    Private Function SalvaArchivio() As String
-        Try
-            SaveFileDialog1.InitialDirectory = Application.StartupPath & PERCORSO_BKP
+   Private Function SalvaArchivio() As String
+      Try
+         SaveFileDialog1.InitialDirectory = Application.StartupPath & PERCORSO_BKP
 
-            SaveFileDialog1.Filter = "Microsoft Database Access (.mdb)|*.mdb"
+         SaveFileDialog1.Filter = "Microsoft Database Access (.mdb)|*.mdb"
 
-            SaveFileDialog1.FilterIndex = 1
+         SaveFileDialog1.FilterIndex = 1
 
-            SaveFileDialog1.FileName = Application.StartupPath & "\Backup\" & "Chef_" & FormattaDataBackup() & ".mdb"
+         SaveFileDialog1.FileName = Application.StartupPath & "\Backup\" & "Chef_" & FormattaDataBackup() & ".mdb"
 
-            If (SaveFileDialog1.ShowDialog() = DialogResult.OK) Then
-                ' Nome dell'archivio i uso completo di percorso.
-                Return SaveFileDialog1.FileName()
-            End If
+         If (SaveFileDialog1.ShowDialog() = DialogResult.OK) Then
+            ' Nome dell'archivio i uso completo di percorso.
+            Return SaveFileDialog1.FileName()
+         End If
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-        Finally
-            ChDir(Application.StartupPath)
+      Finally
+         ChDir(Application.StartupPath)
 
-        End Try
-    End Function
+      End Try
+   End Function
 
-    Public Function LeggiNumTavoli() As Integer
-        Dim cn As New OleDbConnection(ConnString)
-        Dim sql As String
-        Dim cmd As New OleDbCommand(sql, cn)
+   Public Function LeggiNumTavoli() As Integer
+      Dim cn As New OleDbConnection(ConnString)
+      Dim sql As String
+      Dim cmd As New OleDbCommand(sql, cn)
 
-        Dim closeOnExit As Boolean
-        Dim numRec As Integer
+      Dim closeOnExit As Boolean
+      Dim numRec As Integer
 
-        Try
-            ' Se necessario apre la connessione.
-            If cn.State = ConnectionState.Closed Then
-                cn.Open()
-                closeOnExit = True
-            End If
+      Try
+         ' Se necessario apre la connessione.
+         If cn.State = ConnectionState.Closed Then
+            cn.Open()
+            closeOnExit = True
+         End If
 
-            ' Ottiene il numero di record.
-            cmd.CommandText = "SELECT COUNT(*) FROM Tavoli"
-            numRec = CInt(cmd.ExecuteScalar())
+         ' Ottiene il numero di record.
+         cmd.CommandText = "SELECT COUNT(*) FROM Tavoli"
+         numRec = CInt(cmd.ExecuteScalar())
 
-            Return numRec
+         Return numRec
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-        Finally
-            ' Chiude la connessione.
-            cn.Close()
+      Finally
+         ' Chiude la connessione.
+         cn.Close()
 
-        End Try
-    End Function
+      End Try
+   End Function
 
-    Public Function LeggiDatiRivenditore() As String
-        Try
-            Dim datiRivenditore As String = String.Empty
-            Dim ragSociale As String = String.Empty
-            Dim nome As String = String.Empty
-            Dim telefono As String = String.Empty
-            Dim email As String = String.Empty
+   Public Function LeggiDatiRivenditore() As String
+      Try
+         Dim datiRivenditore As String = String.Empty
+         Dim ragSociale As String = String.Empty
+         Dim nome As String = String.Empty
+         Dim telefono As String = String.Empty
+         Dim email As String = String.Empty
 
-            Application.DoEvents()
+         Application.DoEvents()
 
-            DatiConfig = New AppConfig
-            DatiConfig.ConfigType = ConfigFileType.AppConfig
+         DatiConfig = New AppConfig
+         DatiConfig.ConfigType = ConfigFileType.AppConfig
 
 
-            If DatiConfig.GetValue("RagioneSocialeRiv") <> String.Empty Then
-                ragSociale = DatiConfig.GetValue("RagioneSocialeRiv")
-                datiRivenditore = ragSociale
-            End If
+         If DatiConfig.GetValue("RagioneSocialeRiv") <> String.Empty Then
+            ragSociale = DatiConfig.GetValue("RagioneSocialeRiv")
+            datiRivenditore = ragSociale
+         End If
 
-            If DatiConfig.GetValue("NomeRiv") <> String.Empty Then
-                nome = DatiConfig.GetValue("NomeRiv")
-
-                If datiRivenditore <> String.Empty Then
-                    datiRivenditore = datiRivenditore & " - " & nome
-                Else
-                    datiRivenditore = nome
-                End If
-            End If
+         If DatiConfig.GetValue("NomeRiv") <> String.Empty Then
+            nome = DatiConfig.GetValue("NomeRiv")
 
             If datiRivenditore <> String.Empty Then
+               datiRivenditore = datiRivenditore & " - " & nome
+            Else
+               datiRivenditore = nome
+            End If
+         End If
 
-                If DatiConfig.GetValue("TelefonoRiv") <> String.Empty Then
-                    telefono = DatiConfig.GetValue("TelefonoRiv")
-                    datiRivenditore = datiRivenditore & " - Tel. " & telefono
-                End If
+         If datiRivenditore <> String.Empty Then
 
-                If DatiConfig.GetValue("EmailRiv") <> String.Empty Then
-                    email = DatiConfig.GetValue("EmailRiv")
-                    datiRivenditore = datiRivenditore & " - Email: " & email
-                End If
+            If DatiConfig.GetValue("TelefonoRiv") <> String.Empty Then
+               telefono = DatiConfig.GetValue("TelefonoRiv")
+               datiRivenditore = datiRivenditore & " - Tel. " & telefono
             End If
 
-            Return datiRivenditore
+            If DatiConfig.GetValue("EmailRiv") <> String.Empty Then
+               email = DatiConfig.GetValue("EmailRiv")
+               datiRivenditore = datiRivenditore & " - Email: " & email
+            End If
+         End If
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+         Return datiRivenditore
 
-            Return String.Empty
-        End Try
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-    End Function
+         Return String.Empty
+      End Try
+
+   End Function
 
 #End Region
 
 #Region "Eventi"
 
-    Private Sub frmMain_Load(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles MyBase.Load
-        Try
-            ' Imposta il titolo della finestra in base al prodotto installato.
-            Me.Text = NOME_PRODOTTO
-            ' Visualizza un messaggio nella barra di stato.
-            Me.eui_Informazioni.Text = LeggiDatiRivenditore()
+   Private Sub frmMain_Load(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles MyBase.Load
+      Try
+         ' Imposta il titolo della finestra in base al prodotto installato.
+         Me.Text = NOME_PRODOTTO
+         ' Visualizza un messaggio nella barra di stato.
+         Me.eui_Informazioni.Text = LeggiDatiRivenditore()
 
-            ' Imposta l'icona della finestra in base al prodotto installato.
-            ImpostaIcona(Me)
+         ' Imposta l'icona della finestra in base al prodotto installato.
+         ImpostaIcona(Me)
 
-            ' Imposta il titolo e l'icona della finestra in base al prodotto installato.
-            ' Per la versione demo.
+         ' Imposta il titolo e l'icona della finestra in base al prodotto installato.
+         ' Per la versione demo.
+         If g_VerDemo = True Then
+            Me.Text = Me.Text & " - " & VER_DEMO
+
+            ' Visualizza o nasconde l'etichetta Versione dimostrativa.
+            If eui_lstProdottiAttivati.Items.Count = 0 Then
+               lblDemo.Visible = True
+               lblGiorniProva.Visible = True
+               lblGiorniProva.Text = "GIORNI DI PROVA: " & giorniVerDemo
+            Else
+               lblDemo.Visible = False
+               lblGiorniProva.Visible = False
+            End If
+         Else
+            ' Visualizza le varie funzionalità in base ai moduli installati.
+            ImpostaModuli()
+         End If
+
+         DatiConfig = New AppConfig
+         DatiConfig.ConfigType = ConfigFileType.AppConfig
+         LeggiDatiConfig()
+
+         ' Effettua le impostazioni necessarie per l'archivio.
+         ImpostaArchivio(eui_cmdArchivio)
+         ImpostaProprietàArchivio()
+
+         ' Effettua le impostazioni per la versione e il numero di serie.
+         ImpostaInfoSu()
+
+         ' Visualizza il nome dell'azienda nella barra di stato.
+         Dim AAzienda As New Anagrafiche.Azienda(ConnString)
+         AAzienda.LeggiDati(NOME_TABELLA_AZIENDA)
+         eui_cmdAzienda.Text = AAzienda.RagSociale
+
+         ' Carica le impostazioni dei moduli nella lista.
+         CaricaListaModuli()
+
+         ' Senza questa variabile viene richiamato l'evento ItemChecked per la lista dei moduli.
+         impostaListaModuli = True
+
+         ' Imposta la pagina iniziale.
+         eui_File.CurrentTabPage = eui_Gestione
+
+         ' Se il modulo Prenotazioni On-line è attivo, attiva/disattiva la ricezione delle prenotazioni da internet. (www.tavoloso.it)
+         If moduloAttivo.PrenOnLine = True Then
+            Timer2.Enabled = AbilitaRicezionePren
+         End If
+
+         Me.Focus()
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
+   End Sub
+
+   Private Sub frmMain_Closed(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles MyBase.FormClosed
+      ' Modifica il cursore del mouse.
+      Cursor.Current = Cursors.AppStarting
+
+      Dim frm As New frmElaborazione
+      frm.ShowDialog()
+
+      Application.Exit()
+
+      ' Modifica il cursore del mouse.
+      Cursor.Current = Cursors.Default
+
+      ' Se viene premuto il tasto Annulla prima di effettuare il Login - Operatore non identificato.
+      If operatore.Nome = String.Empty Then
+         operatore.Nome = "Nessuno"
+      End If
+
+      ' Registra loperazione effettuata dall'operatore identificato.
+      RegistraOperazione(TipoOperazione.Chiudi, STR_HOSPITALITY, MODULO_HOSPITALITY_SOLUTION)
+   End Sub
+
+   Private Sub frmMain_Closing(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles MyBase.Closing
+      Try
+         Dim risposta As MsgBoxResult = MsgBox("Sicuro di voler uscire?.", MsgBoxStyle.YesNo + MsgBoxStyle.Question, NOME_PRODOTTO)
+
+         If risposta = MsgBoxResult.No Then
+            ' Non esce dal programma.
+            e.Cancel = True
+         Else
+            ' Solo per la versione demo prima di uscire chiede un giudizio.
             If g_VerDemo = True Then
-                Me.Text = Me.Text & " - " & VER_DEMO
-
-                ' Visualizza o nasconde l'etichetta Versione dimostrativa.
-                If eui_lstProdottiAttivati.Items.Count = 0 Then
-                    lblDemo.Visible = True
-                    lblGiorniProva.Visible = True
-                    lblGiorniProva.Text = "GIORNI DI PROVA: " & giorniVerDemo
-                Else
-                    lblDemo.Visible = False
-                    lblGiorniProva.Visible = False
-                End If
-            Else
-                ' Visualizza le varie funzionalità in base ai moduli installati.
-                ImpostaModuli()
+               If LeggiGiudizioInviatoConfig() = String.Empty Then
+                  Dim frm As New frmGiudizioDemo
+                  frm.ShowDialog()
+               End If
             End If
+         End If
 
-            DatiConfig = New AppConfig
-            DatiConfig.ConfigType = ConfigFileType.AppConfig
-            LeggiDatiConfig()
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
 
-            ' Effettua le impostazioni necessarie per l'archivio.
-            ImpostaArchivio(eui_cmdArchivio)
-            ImpostaProprietàArchivio()
+   Private Sub eui_Opzioni_Click(sender As System.Object, e As System.EventArgs) Handles eui_Opzioni.Click
+      Dim frm As New frmOpzioni
+      frm.ShowDialog()
+   End Sub
 
-            ' Effettua le impostazioni per la versione e il numero di serie.
-            ImpostaInfoSu()
+   Private Sub eui_Esci_Click(sender As System.Object, e As System.EventArgs) Handles eui_Esci.Click
+      ' Scarica il form
+      Me.Close()
+   End Sub
 
-            ' Visualizza il nome dell'azienda nella barra di stato.
-            Dim AAzienda As New Anagrafiche.Azienda(ConnString)
-            AAzienda.LeggiDati(NOME_TABELLA_AZIENDA)
-            eui_cmdAzienda.Text = AAzienda.RagSociale
+   Private Sub Timer1_Tick(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Timer1.Tick
+      Try
+         ' Visualizza la data estesa sulla barra di stato.
+         g_frmMain.eui_cmdData.Text = Now.Date.ToLongDateString
 
-            ' Carica le impostazioni dei moduli nella lista.
-            CaricaListaModuli()
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
 
-            ' Senza questa variabile viene richiamato l'evento ItemChecked per la lista dei moduli.
-            impostaListaModuli = True
+   Protected Overrides Sub Finalize()
+      MyBase.Finalize()
+   End Sub
 
-            ' Imposta la pagina iniziale.
-            eui_File.CurrentTabPage = eui_Gestione
+   Private Function ApriArchivio() As String
+      Try
+         OpenFileDialog1.Filter = "Microsoft Database Access (.mdb)|*.mdb"
 
-            ' Se il modulo Prenotazioni On-line è attivo, attiva/disattiva la ricezione delle prenotazioni da internet. (www.tavoloso.it)
-            If moduloAttivo.PrenOnLine = True Then
-                Timer2.Enabled = AbilitaRicezionePren
+         OpenFileDialog1.FilterIndex = 1
+
+         If (OpenFileDialog1.ShowDialog() = DialogResult.OK) Then
+            ' Nome dell'archivio i uso completo di percorso.
+            Return OpenFileDialog1.FileName()
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
+   End Function
+
+   Private Sub finestreMDI_Showing(ByVal sender As Object, ByVal e As EventArgs)
+      Try
+         For Each button As ToggleButton In FinestreMDI.Items
+            If button.Tag Is ActiveMdiChild Then
+               button.Pressed = True
+               Exit For
             End If
+         Next button
 
-            Me.Focus()
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
 
-        End Try
-    End Sub
+   Private Sub FormMenuSeleziona_PressedChanged(ByVal sender As Object, e As System.EventArgs)
+      Try
+         Dim tb As ToggleButton = TryCast(sender, ToggleButton)
+         If tb Is Nothing Then
+            Return
+         End If
 
-    Private Sub frmMain_Closed(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles MyBase.FormClosed
-        ' Modifica il cursore del mouse.
-        Cursor.Current = Cursors.AppStarting
-
-        Dim frm As New frmElaborazione
-        frm.ShowDialog()
-
-        Application.Exit()
-
-        ' Modifica il cursore del mouse.
-        Cursor.Current = Cursors.Default
-
-        ' Se viene premuto il tasto Annulla prima di effettuare il Login - Operatore non identificato.
-        If operatore.Nome = String.Empty Then
-            operatore.Nome = "Nessuno"
-        End If
-
-        ' Registra loperazione effettuata dall'operatore identificato.
-        RegistraOperazione(TipoOperazione.Chiudi, STR_HOSPITALITY, MODULO_HOSPITALITY_SOLUTION)
-    End Sub
-
-    Private Sub frmMain_Closing(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles MyBase.Closing
-        Try
-            Dim risposta As MsgBoxResult = MsgBox("Sicuro di voler uscire?.", MsgBoxStyle.YesNo + MsgBoxStyle.Question, NOME_PRODOTTO)
-
-            If risposta = MsgBoxResult.No Then
-                ' Non esce dal programma.
-                e.Cancel = True
-            Else
-                ' Solo per la versione demo prima di uscire chiede un giudizio.
-                If g_VerDemo = True Then
-                    If LeggiGiudizioInviatoConfig() = String.Empty Then
-                        Dim frm As New frmGiudizioDemo
-                        frm.ShowDialog()
-                    End If
-                End If
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Private Sub eui_Opzioni_Click(sender As System.Object, e As System.EventArgs) Handles eui_Opzioni.Click
-        Dim frm As New frmOpzioni
-        frm.ShowDialog()
-    End Sub
-
-    Private Sub eui_Esci_Click(sender As System.Object, e As System.EventArgs) Handles eui_Esci.Click
-        ' Scarica il form
-        Me.Close()
-    End Sub
-
-    Private Sub Timer1_Tick(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Timer1.Tick
-        Try
-            ' Visualizza la data estesa sulla barra di stato.
-            g_frmMain.eui_cmdData.Text = Now.Date.ToLongDateString 'dtpData.Text
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
-
-    Protected Overrides Sub Finalize()
-        MyBase.Finalize()
-    End Sub
-
-    Private Function ApriArchivio() As String
-        Try
-            OpenFileDialog1.Filter = "Microsoft Database Access (.mdb)|*.mdb"
-
-            OpenFileDialog1.FilterIndex = 1
-
-            If (OpenFileDialog1.ShowDialog() = DialogResult.OK) Then
-                ' Nome dell'archivio i uso completo di percorso.
-                Return OpenFileDialog1.FileName()
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-
-        End Try
-    End Function
-
-    Private Sub finestreMDI_Showing(ByVal sender As Object, ByVal e As EventArgs)
-        Try
-            For Each button As ToggleButton In FinestreMDI.Items
-                If button.Tag Is ActiveMdiChild Then
-                    button.Pressed = True
-                    Exit For
-                End If
-            Next button
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-
-        End Try
-    End Sub
-
-    Private Sub FormMenuSeleziona_PressedChanged(ByVal sender As Object, e As System.EventArgs)
-        Try
-            Dim tb As ToggleButton = TryCast(sender, ToggleButton)
-            If tb Is Nothing Then
-                Return
-            End If
-
-            If tb.Pressed Then
-                For Each frm As Form In MdiChildren
-                    If EstraiNomeFinestra(frm.Text) = tb.Text Then
-                        frm.Focus()
-                    End If
-                Next
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-
-        End Try
-    End Sub
-
-    Public Function EstraiNomeFinestra(ByVal nomeFinestra As String) As String
-        Try
-            Dim carattere As Char
-            Dim i As Integer
-            For i = 0 To nomeFinestra.Length - 1
-                carattere = nomeFinestra.Substring(i, 1)
-                If carattere = "(" Then
-                    Return nomeFinestra.Substring(0, i - 1)
-                    Exit For
-                End If
+         If tb.Pressed Then
+            For Each frm As Form In MdiChildren
+               If EstraiNomeFinestra(frm.Text) = tb.Text Then
+                  frm.Focus()
+               End If
             Next
+         End If
 
-            Return nomeFinestra
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
 
-            Return nomeFinestra
-        End Try
+   Public Function EstraiNomeFinestra(ByVal nomeFinestra As String) As String
+      Try
+         Dim carattere As Char
+         Dim i As Integer
+         For i = 0 To nomeFinestra.Length - 1
+            carattere = nomeFinestra.Substring(i, 1)
+            If carattere = "(" Then
+               Return nomeFinestra.Substring(0, i - 1)
+               Exit For
+            End If
+         Next
 
-    End Function
+         Return nomeFinestra
 
-    Private Sub AggiungiFormMenuSeleziona()
-        Try
-            Dim tb As ToggleButton = New ToggleButton()
-            Dim titoloFinestra As String = EstraiNomeFinestra(ActiveMdiChild.Text)
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-            tb.Text = titoloFinestra
-            tb.Tag = ActiveMdiChild
-            tb.KeyTip = FinestreMDI.Items.Count + 1
-            tb.ScreenTip.Caption = "Seleziona Finestra"
-            tb.ScreenTip.Text = "Seleziona la finestra " & titoloFinestra
-            tb.RadioGroupName = "MDISwitcher"
+         Return nomeFinestra
+      End Try
 
-            AddHandler tb.PressedChanged, AddressOf FormMenuSeleziona_PressedChanged
+   End Function
 
-            FinestreMDI.Items.Add(tb)
+   Private Sub AggiungiFormMenuSeleziona()
+      Try
+         Dim tb As ToggleButton = New ToggleButton()
+         Dim titoloFinestra As String = EstraiNomeFinestra(ActiveMdiChild.Text)
 
-            If FinestreMDI.Items.Count <> 0 Then
-                ' Attiva tutti i comandi.
-                eui_cmdFinestraSovrapponi.Enabled = True
-                eui_cmdFinestraAffianca.Enabled = True
-                eui_cmdFinestraDisponi.Enabled = True
-                eui_cmdFinestraChiudi.Enabled = True
-                eui_cmdFinestraChiudiTutto.Enabled = True
-                eui_drpFinestraSel.Enabled = True
+         tb.Text = titoloFinestra
+         tb.Tag = ActiveMdiChild
+         tb.KeyTip = FinestreMDI.Items.Count + 1
+         tb.ScreenTip.Caption = "Seleziona Finestra"
+         tb.ScreenTip.Text = "Seleziona la finestra " & titoloFinestra
+         tb.RadioGroupName = "MDISwitcher"
+
+         AddHandler tb.PressedChanged, AddressOf FormMenuSeleziona_PressedChanged
+
+         FinestreMDI.Items.Add(tb)
+
+         If FinestreMDI.Items.Count <> 0 Then
+            ' Attiva tutti i comandi.
+            eui_cmdFinestraSovrapponi.Enabled = True
+            eui_cmdFinestraAffianca.Enabled = True
+            eui_cmdFinestraDisponi.Enabled = True
+            eui_cmdFinestraChiudi.Enabled = True
+            eui_cmdFinestraChiudiTutto.Enabled = True
+            eui_drpFinestraSel.Enabled = True
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
+   End Sub
+
+   Public Sub RimuoviFormMenuSeleziona(ByVal frm As Form)
+      Try
+         Dim titoloFinestra As String = EstraiNomeFinestra(frm.Text)
+
+         For Each button As ToggleButton In FinestreMDI.Items
+            If button.Text = titoloFinestra Then
+               FinestreMDI.Items.Remove(button)
+
+               If FinestreMDI.Items.Count = 0 Then
+                  ' Disattiva tutti i comandi.
+                  eui_cmdFinestraSovrapponi.Enabled = False
+                  eui_cmdFinestraAffianca.Enabled = False
+                  eui_cmdFinestraDisponi.Enabled = False
+                  eui_cmdFinestraChiudi.Enabled = False
+                  eui_cmdFinestraChiudiTutto.Enabled = False
+                  eui_drpFinestraSel.Enabled = False
+               End If
+
+               Exit For
             End If
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+         Next button
 
-        End Try
-    End Sub
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-    Public Sub RimuoviFormMenuSeleziona(ByVal frm As Form)
-        Try
-            Dim titoloFinestra As String = EstraiNomeFinestra(frm.Text)
-
-            For Each button As ToggleButton In FinestreMDI.Items
-                If button.Text = titoloFinestra Then
-                    FinestreMDI.Items.Remove(button)
-
-                    If FinestreMDI.Items.Count = 0 Then
-                        ' Disattiva tutti i comandi.
-                        eui_cmdFinestraSovrapponi.Enabled = False
-                        eui_cmdFinestraAffianca.Enabled = False
-                        eui_cmdFinestraDisponi.Enabled = False
-                        eui_cmdFinestraChiudi.Enabled = False
-                        eui_cmdFinestraChiudiTutto.Enabled = False
-                        eui_drpFinestraSel.Enabled = False
-                    End If
-
-                    Exit For
-                End If
-
-            Next button
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-
-        End Try
-    End Sub
+      End Try
+   End Sub
 
 #End Region
 
@@ -9950,199 +9981,199 @@ Friend Class frmMain
 
 #Region "Pos"
 
-    Private Sub eui_cmdGestionePosCassa_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdGestionePosCassa.Click
-        ' Apre il punto cassa.
-        ApriPos(0, String.Empty, String.Empty, String.Empty)
-    End Sub
+   Private Sub eui_cmdGestionePosCassa_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdGestionePosCassa.Click
+      ' Apre il punto cassa.
+      ApriPos(0, String.Empty, String.Empty, String.Empty)
+   End Sub
 
-    Private Sub eui_cmdGestionePosTavoli_Click(sender As Object, e As System.EventArgs) Handles eui_cmdGestionePosTavoli.Click
-        ' Apre Visual Chef per la gestione dei tavoli e del conto.
-        ApriVCTavoli()
-    End Sub
+   Private Sub eui_cmdGestionePosTavoli_Click(sender As Object, e As System.EventArgs) Handles eui_cmdGestionePosTavoli.Click
+      ' Apre Visual Chef per la gestione dei tavoli e del conto.
+      ApriVCTavoli()
+   End Sub
 
 #End Region
 
 #Region "Prenotazioni"
 
-    Private Sub eui_cmdGestionePrenCamere_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdGestionePrenCamere.Click
-        ' Apre l'elenco prenotazioni Camere.
-        ApriPrenCamere()
+   Private Sub eui_cmdGestionePrenCamere_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdGestionePrenCamere.Click
+      ' Apre l'elenco prenotazioni Camere.
+      ApriPrenCamere()
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
 
-    End Sub
+   End Sub
 
-    Private Sub eui_cmdGestionePrenTavoli_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdGestionePrenTavoli.Click
-        ' Apre l'elenco prenotazioni tavoli.
-        ApriPrenTavoli()
+   Private Sub eui_cmdGestionePrenTavoli_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdGestionePrenTavoli.Click
+      ' Apre l'elenco prenotazioni tavoli.
+      ApriPrenTavoli()
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
-    Private Sub eui_cmdGestionePrenSale_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdGestionePrenSale.Click
-        ' Apre l'elenco prenotazioni sale.
-        ApriPrenSale()
+   Private Sub eui_cmdGestionePrenSale_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdGestionePrenSale.Click
+      ' Apre l'elenco prenotazioni sale.
+      ApriPrenSale()
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
-    Private Sub eui_cmdGestionePrenRisorse_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdGestionePrenRisorse.Click
-        ' Apre l'elenco prenotazioni sale.
-        ApriPrenRisorse()
+   Private Sub eui_cmdGestionePrenRisorse_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdGestionePrenRisorse.Click
+      ' Apre l'elenco prenotazioni sale.
+      ApriPrenRisorse()
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
-    Private Sub eui_cmdGestionePlanningRisorseApriTutti_Click(sender As Object, e As EventArgs) Handles eui_cmdGestionePlanningRisorseApriTutti.Click
-        Try
-            ' Apre tutti i Planning insieme e li affianca verticalmente.
-            eui_cmdGestionePlanningRisorseSport4.PerformClick()
+   Private Sub eui_cmdGestionePlanningRisorseApriTutti_Click(sender As Object, e As EventArgs) Handles eui_cmdGestionePlanningRisorseApriTutti.Click
+      Try
+         ' Apre tutti i Planning insieme e li affianca verticalmente.
+         eui_cmdGestionePlanningRisorseSport4.PerformClick()
 
-            eui_cmdGestionePlanningRisorseSport3.PerformClick()
+         eui_cmdGestionePlanningRisorseSport3.PerformClick()
 
-            eui_cmdGestionePlanningRisorseSport2.PerformClick()
+         eui_cmdGestionePlanningRisorseSport2.PerformClick()
 
-            eui_cmdFinestraAffiancaVert.PerformClick()
+         eui_cmdFinestraAffiancaVert.PerformClick()
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-        End Try
-    End Sub
+      End Try
+   End Sub
 
-    Private Sub eui_cmdGestionePlanningRisorseSport1_Click(sender As Object, e As EventArgs) Handles eui_cmdGestionePlanningRisorseSport1.Click
-        ' Apre il Planning per le prenotazioni delle risorse.
-        ApriPlanningSport1()
+   Private Sub eui_cmdGestionePlanningRisorseSport1_Click(sender As Object, e As EventArgs) Handles eui_cmdGestionePlanningRisorseSport1.Click
+      ' Apre il Planning per le prenotazioni delle risorse.
+      ApriPlanningSport1()
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
-    Private Sub eui_cmdGestionePlanningRisorseSport2_Click(sender As Object, e As EventArgs) Handles eui_cmdGestionePlanningRisorseSport2.Click
-        ' Apre il Planning per le prenotazioni delle risorse.
-        ApriPlanningSport2()
+   Private Sub eui_cmdGestionePlanningRisorseSport2_Click(sender As Object, e As EventArgs) Handles eui_cmdGestionePlanningRisorseSport2.Click
+      ' Apre il Planning per le prenotazioni delle risorse.
+      ApriPlanningSport2()
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
-    Private Sub eui_cmdGestionePlanningRisorseSport3_Click(sender As Object, e As EventArgs) Handles eui_cmdGestionePlanningRisorseSport3.Click
-        ' Apre il Planning per le prenotazioni delle risorse.
-        ApriPlanningSport3()
+   Private Sub eui_cmdGestionePlanningRisorseSport3_Click(sender As Object, e As EventArgs) Handles eui_cmdGestionePlanningRisorseSport3.Click
+      ' Apre il Planning per le prenotazioni delle risorse.
+      ApriPlanningSport3()
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
-    Private Sub eui_cmdGestionePlanningRisorseSport4_Click(sender As Object, e As EventArgs) Handles eui_cmdGestionePlanningRisorseSport4.Click
-        ' Apre il Planning per le prenotazioni delle risorse.
-        ApriPlanningSport4()
+   Private Sub eui_cmdGestionePlanningRisorseSport4_Click(sender As Object, e As EventArgs) Handles eui_cmdGestionePlanningRisorseSport4.Click
+      ' Apre il Planning per le prenotazioni delle risorse.
+      ApriPlanningSport4()
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
-    Private Sub eui_cmdGestionePlanningCamere_Click_1(sender As System.Object, e As System.EventArgs) Handles eui_cmdGestionePlanningCamere.Click
-        ' Apre il Planning per le prenotazioni delle camere.
-        ApriPlanningCamere()
+   Private Sub eui_cmdGestionePlanningCamere_Click_1(sender As System.Object, e As System.EventArgs) Handles eui_cmdGestionePlanningCamere.Click
+      ' Apre il Planning per le prenotazioni delle camere.
+      ApriPlanningCamere()
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 #End Region
 
 #Region "Gestione"
 
-    Private Sub eui_cmdGestioneAcquisti_Click(sender As Object, e As System.EventArgs) Handles eui_cmdGestioneAcquisti.Click
-        ' Apre la finestra elenco acquisti.
-        ApriAcquisti()
+   Private Sub eui_cmdGestioneAcquisti_Click(sender As Object, e As System.EventArgs) Handles eui_cmdGestioneAcquisti.Click
+      ' Apre la finestra elenco acquisti.
+      ApriAcquisti()
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
-    Private Sub eui_cmdGestioneStatistiche_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdGestioneStatistiche.Click
-        ' Apre la finestra statistiche di vendita per il Bar / Ristorante.
-        ApriStatistiche()
+   Private Sub eui_cmdGestioneStatistiche_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdGestioneStatistiche.Click
+      ' Apre la finestra statistiche di vendita per il Bar / Ristorante.
+      ApriStatistiche()
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
-    Private Sub eui_cmdGestioneStatisticheRisorse_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdGestioneStatisticheRisorse.Click
-        ' Apre la finestra statistiche di vendita per il Centro sportivo.
-        ApriStatisticheRisorse()
+   Private Sub eui_cmdGestioneStatisticheRisorse_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdGestioneStatisticheRisorse.Click
+      ' Apre la finestra statistiche di vendita per il Centro sportivo.
+      ApriStatisticheRisorse()
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
 #End Region
 
 #Region "Operatori"
 
-    Private Sub eui_cmdGestioneOperatori_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdGestioneOperatori.Click
-        ' Apre l'elenco degli operatori.
-        ApriOperatori()
+   Private Sub eui_cmdGestioneOperatori_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdGestioneOperatori.Click
+      ' Apre l'elenco degli operatori.
+      ApriOperatori()
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
-    Private Sub eui_cmdGestioneGruppiOp_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdGestioneGruppiOp.Click
-        ' Apre l'elenco dei gruppi.
-        ApriGruppi()
+   Private Sub eui_cmdGestioneGruppiOp_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdGestioneGruppiOp.Click
+      ' Apre l'elenco dei gruppi.
+      ApriGruppi()
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
-    Private Sub eui_cmdGestioneCambiaOp_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdGestioneCambiaOp.Click
-        Try
-            Dim risposta As MsgBoxResult
-            risposta = MessageBox.Show("Si desidera disconnettersi dal software e cambiare operatore? Tutte le finestre aperte verranno chiuse.",
+   Private Sub eui_cmdGestioneCambiaOp_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdGestioneCambiaOp.Click
+      Try
+         Dim risposta As MsgBoxResult
+         risposta = MessageBox.Show("Si desidera disconnettersi dal software e cambiare operatore? Tutte le finestre aperte verranno chiuse.",
                                     NOME_PRODOTTO, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1)
 
-            If risposta = MsgBoxResult.Yes Then
-                ' Se ci sono finestre aperte le chiude.
-                eui_cmdFinestraChiudiTutto.PerformClick()
+         If risposta = MsgBoxResult.Yes Then
+            ' Se ci sono finestre aperte le chiude.
+            eui_cmdFinestraChiudiTutto.PerformClick()
 
-                If IsNothing(g_frmPos) = False Then
-                    g_frmPos.Tag = "OPERATORE"
-                    g_frmPos.Close()
-                End If
-
-                If IsNothing(g_frmVCTavoli) = False Then
-                    g_frmVCTavoli.Tag = "OPERATORE"
-                    g_frmVCTavoli.Close()
-                End If
-
-                ' Registra loperazione efettuata dall'operatore identificato.
-                g_frmMain.RegistraOperazione(TipoOperazione.Logout, String.Empty, MODULO_ACCESSO_OPERATORE)
-
-                ' Apre il dialogo per l'identificazione degli operatori.
-                Dim frmAccesso As New frmAccesso
-                If frmAccesso.ShowDialog() = DialogResult.Cancel Then
-                    Application.Exit()
-                Else
-                    Exit Sub
-                End If
-
-            Else
-                Exit Sub
+            If IsNothing(g_frmPos) = False Then
+               g_frmPos.Tag = "OPERATORE"
+               g_frmPos.Close()
             End If
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+            If IsNothing(g_frmVCTavoli) = False Then
+               g_frmVCTavoli.Tag = "OPERATORE"
+               g_frmVCTavoli.Close()
+            End If
 
-        End Try
-    End Sub
+            ' Registra loperazione efettuata dall'operatore identificato.
+            g_frmMain.RegistraOperazione(TipoOperazione.Logout, String.Empty, MODULO_ACCESSO_OPERATORE)
+
+            ' Apre il dialogo per l'identificazione degli operatori.
+            Dim frmAccesso As New frmAccesso
+            If frmAccesso.ShowDialog() = DialogResult.Cancel Then
+               Application.Exit()
+            Else
+               Exit Sub
+            End If
+
+         Else
+            Exit Sub
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
+   End Sub
 
 #End Region
 
@@ -10152,428 +10183,428 @@ Friend Class frmMain
 
 #Region "Anagrafiche"
 
-    Private Sub eui_cmdArchiviAnagraficheClienti_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviAnagraficheClienti.Click
-        ' Apre l'anagrafica Clienti.
-        ApriClienti()
+   Private Sub eui_cmdArchiviAnagraficheClienti_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviAnagraficheClienti.Click
+      ' Apre l'anagrafica Clienti.
+      ApriClienti()
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
 
-    End Sub
+   End Sub
 
-    Private Sub eui_cmdArchiviAnagraficheFornitori_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviAnagraficheFornitori.Click
-        ' Apre l'anagrafica Risorse.
-        ApriFornitori()
+   Private Sub eui_cmdArchiviAnagraficheFornitori_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviAnagraficheFornitori.Click
+      ' Apre l'anagrafica Risorse.
+      ApriFornitori()
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
-    Private Sub eui_cmdArchiviAnagraficheCamerieri_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviAnagraficheCamerieri.Click
-        ' Apre l'anagrafica Camerieri.
-        ApriCamerieri()
+   Private Sub eui_cmdArchiviAnagraficheCamerieri_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviAnagraficheCamerieri.Click
+      ' Apre l'anagrafica Camerieri.
+      ApriCamerieri()
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
-    Private Sub eui_cmdArchiviAnagraficheAziende_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviAnagraficheAziende.Click
-        ' Apre anagrafica Aziende.
-        ApriAziende()
+   Private Sub eui_cmdArchiviAnagraficheAziende_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviAnagraficheAziende.Click
+      ' Apre anagrafica Aziende.
+      ApriAziende()
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
-    Private Sub eui_cmdArchiviAnagraficheSale_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviAnagraficheSale.Click
-        ' Apre l'anagrafica Sale.
-        ApriSale()
+   Private Sub eui_cmdArchiviAnagraficheSale_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviAnagraficheSale.Click
+      ' Apre l'anagrafica Sale.
+      ApriSale()
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
-    Private Sub eui_cmdArchiviAnagraficheTavoli_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviAnagraficheTavoli.Click
-        ' Apre l'elenco Tavoli.
-        ApriTavoli()
+   Private Sub eui_cmdArchiviAnagraficheTavoli_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviAnagraficheTavoli.Click
+      ' Apre l'elenco Tavoli.
+      ApriTavoli()
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
-    Private Sub eui_cmdArchiviAnagraficheCamere_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviAnagraficheCamere.Click
-        ' Apre l'elenco Tavoli.
-        ApriCamere()
+   Private Sub eui_cmdArchiviAnagraficheCamere_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviAnagraficheCamere.Click
+      ' Apre l'elenco Tavoli.
+      ApriCamere()
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
-    Private Sub eui_cmdArchiviAnagrafichePiatti_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviAnagrafichePiatti.Click
-        ' Apre l'anagrafica Piatti.
-        ApriPiatti()
+   Private Sub eui_cmdArchiviAnagrafichePiatti_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviAnagrafichePiatti.Click
+      ' Apre l'anagrafica Piatti.
+      ApriPiatti()
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
-    Private Sub eui_cmdArchiviAnagraficheCategoriePiatti_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviAnagraficheCategoriePiatti.Click
-        ' Apre l'anagrafica Categorie Piatti.
-        ApriCategoriePiatti()
+   Private Sub eui_cmdArchiviAnagraficheCategoriePiatti_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviAnagraficheCategoriePiatti.Click
+      ' Apre l'anagrafica Categorie Piatti.
+      ApriCategoriePiatti()
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
-    Private Sub eui_cmdArchiviAnagraficheRisorse_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviAnagraficheRisorse.Click
-        ' Apre l'anagrafica Risorse per il centro sportivo.
-        ApriRisorse()
+   Private Sub eui_cmdArchiviAnagraficheRisorse_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviAnagraficheRisorse.Click
+      ' Apre l'anagrafica Risorse per il centro sportivo.
+      ApriRisorse()
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
-    Private Sub eui_cmdArchiviAnagraficheUtilizzoRisorse_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviAnagraficheUtilizzoRisorse.Click
-        ' Apre l'anagrafica Risorse per il centro sportivo.
-        ApriTipologieUtilizzoRisorse()
+   Private Sub eui_cmdArchiviAnagraficheUtilizzoRisorse_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviAnagraficheUtilizzoRisorse.Click
+      ' Apre l'anagrafica Risorse per il centro sportivo.
+      ApriTipologieUtilizzoRisorse()
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
 
-    End Sub
+   End Sub
 
-    Private Sub eui_cmdArchiviAnagraficheAccServ_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviAnagraficheAccServ.Click
-        ' Apre l'anagrafica Accessori e Servizi per il centro sportivo.
-        ApriAccessoriServizi()
+   Private Sub eui_cmdArchiviAnagraficheAccServ_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviAnagraficheAccServ.Click
+      ' Apre l'anagrafica Accessori e Servizi per il centro sportivo.
+      ApriAccessoriServizi()
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
-    Private Sub eui_cmdArchiviAnagraficheDatiAzienda_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviAnagraficheDatiAzienda.Click
-        ' Apre anagrafica Azienda.
-        ApriAzienda()
+   Private Sub eui_cmdArchiviAnagraficheDatiAzienda_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviAnagraficheDatiAzienda.Click
+      ' Apre anagrafica Azienda.
+      ApriAzienda()
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
 #End Region
 
 #Region "Tabelle"
 
-    Private Sub eui_cmdArchiviTabelleTitoli_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviTabelleTitoli.Click
-        ' Apre la tabella dati selezionata.
-        ApriTabelle("Qualifiche")
+   Private Sub eui_cmdArchiviTabelleTitoli_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviTabelleTitoli.Click
+      ' Apre la tabella dati selezionata.
+      ApriTabelle("Qualifiche")
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
-    Private Sub eui_cmdArchiviTabelleCategorieCliente_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviTabelleCategorieCliente.Click
-        ' Apre la tabella dati selezionata.
-        ApriTabelle("CategorieClienti")
+   Private Sub eui_cmdArchiviTabelleCategorieCliente_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviTabelleCategorieCliente.Click
+      ' Apre la tabella dati selezionata.
+      ApriTabelle("CategorieClienti")
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
-    Private Sub eui_cmdArchiviTabelleAttività_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviTabelleAttività.Click
-        ' Apre la tabella dati selezionata.
-        ApriTabelle("Attività")
+   Private Sub eui_cmdArchiviTabelleAttività_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviTabelleAttività.Click
+      ' Apre la tabella dati selezionata.
+      ApriTabelle("Attività")
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
-    Private Sub eui_cmdArchiviTabelleNazioni_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviTabelleNazioni.Click
-        ' Apre la tabella dati selezionata.
-        ApriTabelle("Nazioni")
+   Private Sub eui_cmdArchiviTabelleNazioni_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviTabelleNazioni.Click
+      ' Apre la tabella dati selezionata.
+      ApriTabelle("Nazioni")
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
-    Private Sub eui_cmdArchiviTabelleUM_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviTabelleUM.Click
-        ' Apre la tabella dati selezionata.
-        ApriTabelle("UnitàMisura")
+   Private Sub eui_cmdArchiviTabelleUM_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviTabelleUM.Click
+      ' Apre la tabella dati selezionata.
+      ApriTabelle("UnitàMisura")
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
-    Private Sub eui_cmdArchiviTabelleCategorieMerce_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviTabelleCategorieMerce.Click
-        ' Apre la tabella dati selezionata.
-        ApriTabelle("CategorieMerce")
+   Private Sub eui_cmdArchiviTabelleCategorieMerce_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviTabelleCategorieMerce.Click
+      ' Apre la tabella dati selezionata.
+      ApriTabelle("CategorieMerce")
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
-    Private Sub eui_cmdArchiviTabelleMagazzini_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviTabelleMagazzini.Click
-        ' Apre la tabella dati selezionata.
-        ApriTabelle("Magazzini")
+   Private Sub eui_cmdArchiviTabelleMagazzini_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviTabelleMagazzini.Click
+      ' Apre la tabella dati selezionata.
+      ApriTabelle("Magazzini")
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
-    Private Sub eui_cmdArchiviTabelleUbicazioni_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviTabelleUbicazioni.Click
-        ' Apre la tabella dati selezionata.
-        ApriTabelle("Ubicazioni")
+   Private Sub eui_cmdArchiviTabelleUbicazioni_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviTabelleUbicazioni.Click
+      ' Apre la tabella dati selezionata.
+      ApriTabelle("Ubicazioni")
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
-    Private Sub eui_cmdArchiviTabelleScaffali_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviTabelleScaffali.Click
-        ' Apre la tabella dati selezionata.
-        ApriTabelle("Scaffali")
+   Private Sub eui_cmdArchiviTabelleScaffali_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviTabelleScaffali.Click
+      ' Apre la tabella dati selezionata.
+      ApriTabelle("Scaffali")
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
-    Private Sub eui_cmdArchiviTabelleReparti_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviTabelleReparti.Click
-        ' Apre la tabella dati selezionata.
-        ApriTabelle("Reparti")
+   Private Sub eui_cmdArchiviTabelleReparti_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviTabelleReparti.Click
+      ' Apre la tabella dati selezionata.
+      ApriTabelle("Reparti")
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
-    Private Sub eui_cmdArchiviTabelleMsgReparti_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviTabelleMsgReparti.Click
-        ' Apre la tabella dati selezionata.
-        ApriTabelle("MessaggiReparti")
+   Private Sub eui_cmdArchiviTabelleMsgReparti_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviTabelleMsgReparti.Click
+      ' Apre la tabella dati selezionata.
+      ApriTabelle("MessaggiReparti")
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
-    Private Sub eui_cmdArchiviTabelleCausaliDoc_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviTabelleCausaliDoc.Click
-        ' Apre la tabella dati selezionata.
-        ApriTabelle("CausaliDocumento")
+   Private Sub eui_cmdArchiviTabelleCausaliDoc_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviTabelleCausaliDoc.Click
+      ' Apre la tabella dati selezionata.
+      ApriTabelle("CausaliDocumento")
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
-    Private Sub eui_cmdArchiviTabellePagamenti_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviTabellePagamenti.Click
-        ' Apre la tabella dati selezionata.
-        ApriTabelle("ModPagamento")
+   Private Sub eui_cmdArchiviTabellePagamenti_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviTabellePagamenti.Click
+      ' Apre la tabella dati selezionata.
+      ApriTabelle("ModPagamento")
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
-    Private Sub eui_cmdArchiviTabelleListini_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviTabelleListini.Click
-        ' Apre la tabella dati selezionata.
-        ApriListiniCamere()
+   Private Sub eui_cmdArchiviTabelleListini_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviTabelleListini.Click
+      ' Apre la tabella dati selezionata.
+      ApriListiniCamere()
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
-    Private Sub eui_cmdArchiviTabelleStagioni_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviTabelleStagioni.Click
-        ' Apre la tabella dati selezionata.
-        ApriStagioni()
-    End Sub
+   Private Sub eui_cmdArchiviTabelleStagioni_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviTabelleStagioni.Click
+      ' Apre la tabella dati selezionata.
+      ApriStagioni()
+   End Sub
 
-    Private Sub eui_cmdArchiviTabelleTipologieCamere_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviTabelleTipologieCamere.Click
-        ' Apre la tabella dati selezionata.
-        ApriTabelle("TipologieCamere")
+   Private Sub eui_cmdArchiviTabelleTipologieCamere_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviTabelleTipologieCamere.Click
+      ' Apre la tabella dati selezionata.
+      ApriTabelle("TipologieCamere")
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
-    Private Sub eui_cmdArchiviTabelleUbicazioniCamere_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviTabelleUbicazioniCamere.Click
-        ' Apre la tabella dati selezionata.
-        ApriTabelle("UbicazioniCamere")
+   Private Sub eui_cmdArchiviTabelleUbicazioniCamere_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviTabelleUbicazioniCamere.Click
+      ' Apre la tabella dati selezionata.
+      ApriTabelle("UbicazioniCamere")
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
-    Private Sub eui_cmdArchiviTabellePosizioniCamere_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviTabellePosizioniCamere.Click
-        ' Apre la tabella dati selezionata.
-        ApriTabelle("PosizioniCamere")
+   Private Sub eui_cmdArchiviTabellePosizioniCamere_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviTabellePosizioniCamere.Click
+      ' Apre la tabella dati selezionata.
+      ApriTabelle("PosizioniCamere")
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
-    Private Sub eui_cmdArchiviTabelleStatoPren_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviTabelleStatoPren.Click
-        ' Questa tabella viene caricata nel form ElencoDati perchè ha il campo Colore.
-        ' Apre la tabella dati selezionata. 
-        ApriStatoPrenotazioni()
+   Private Sub eui_cmdArchiviTabelleStatoPren_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviTabelleStatoPren.Click
+      ' Questa tabella viene caricata nel form ElencoDati perchè ha il campo Colore.
+      ' Apre la tabella dati selezionata. 
+      ApriStatoPrenotazioni()
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
 
-    End Sub
+   End Sub
 
-    Private Sub eui_cmdArchiviTabelleDocIdentità_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviTabelleDocIdentità.Click
-        ' Apre la tabella dati selezionata.
-        ApriTabelle("DocIdentità")
+   Private Sub eui_cmdArchiviTabelleDocIdentità_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviTabelleDocIdentità.Click
+      ' Apre la tabella dati selezionata.
+      ApriTabelle("DocIdentità")
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
 
-    Private Sub eui_cmdArchiviTabelleTipoRisorse_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviTabelleTipoRisorse.Click
-        ' Apre la tabella dati selezionata.
-        ApriTabelle("Tipologie")
+   Private Sub eui_cmdArchiviTabelleTipoRisorse_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviTabelleTipoRisorse.Click
+      ' Apre la tabella dati selezionata.
+      ApriTabelle("Tipologie")
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
 #End Region
 
 #Region "Strumenti"
 
-    Private Sub eui_cmdArchiviImporta_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviImporta.Click
-        ' NON FUNZIONA!
-        'Try
-        '   Dim cnDbEsterno As OleDbConnection
-        '   Dim cnDbInterno As OleDbConnection
+   Private Sub eui_cmdArchiviImporta_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviImporta.Click
+      ' NON FUNZIONA!
+      'Try
+      '   Dim cnDbEsterno As OleDbConnection
+      '   Dim cnDbInterno As OleDbConnection
 
-        '   Dim percorsoDbEsterno As String = ApriArchivio()
+      '   Dim percorsoDbEsterno As String = ApriArchivio()
 
-        '   Dim ConnStrDbEsterno As String = CreaConnString(percorsoDbEsterno)
-        '   Dim ConnStrDbInterno As String = CreaConnString(PercorsoDB)
+      '   Dim ConnStrDbEsterno As String = CreaConnString(percorsoDbEsterno)
+      '   Dim ConnStrDbInterno As String = CreaConnString(PercorsoDB)
 
-        '   ' Apertura dati per il database esterno.
-        '   cnDbEsterno = New OleDbConnection(ConnStrDbEsterno)
-        '   cnDbEsterno.Open()
-        '   Dim oleAdapter As New OleDbDataAdapter
-        '   oleAdapter.SelectCommand = New OleDbCommand("SELECT * FROM Clienti", cnDbEsterno)
-        '   Dim ds As New DataSet
-        '   ds.Clear()
-        '   oleAdapter.Fill(ds, "Clienti")
-        '   cnDbEsterno.Close()
+      '   ' Apertura dati per il database esterno.
+      '   cnDbEsterno = New OleDbConnection(ConnStrDbEsterno)
+      '   cnDbEsterno.Open()
+      '   Dim oleAdapter As New OleDbDataAdapter
+      '   oleAdapter.SelectCommand = New OleDbCommand("SELECT * FROM Clienti", cnDbEsterno)
+      '   Dim ds As New DataSet
+      '   ds.Clear()
+      '   oleAdapter.Fill(ds, "Clienti")
+      '   cnDbEsterno.Close()
 
-        '   ' Apertura dati per il database interno.
-        '   cnDbInterno = New OleDbConnection(ConnStrDbInterno)
-        '   cnDbInterno.Open()
-        '   Dim oleAdapter1 As New OleDbDataAdapter
-        '   oleAdapter1.UpdateCommand = New OleDbCommand("SELECT * FROM Clienti", cnDbInterno)
+      '   ' Apertura dati per il database interno.
+      '   cnDbInterno = New OleDbConnection(ConnStrDbInterno)
+      '   cnDbInterno.Open()
+      '   Dim oleAdapter1 As New OleDbDataAdapter
+      '   oleAdapter1.UpdateCommand = New OleDbCommand("SELECT * FROM Clienti", cnDbInterno)
 
-        '   oleAdapter1.Update(ds, "Clienti")
+      '   oleAdapter1.Update(ds, "Clienti")
 
-        '   cnDbInterno.Close()
+      '   cnDbInterno.Close()
 
-        'Catch ex As Exception
-        '   ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-        '   err.GestisciErrore(ex.StackTrace, ex.Message)
-        'End Try
-    End Sub
+      'Catch ex As Exception
+      '   ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+      '   err.GestisciErrore(ex.StackTrace, ex.Message)
+      'End Try
+   End Sub
 
-    Private Sub eui_cmdArchiviBackup_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviBackup.Click
-        Try
-            Dim percorsoArchivio As String = SalvaArchivio()
+   Private Sub eui_cmdArchiviBackup_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviBackup.Click
+      Try
+         Dim percorsoArchivio As String = SalvaArchivio()
 
-            If percorsoArchivio <> String.Empty Then
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.AppStarting
+         If percorsoArchivio <> String.Empty Then
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.AppStarting
 
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = SALVA_BKP
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = SALVA_BKP
 
-                If File.Exists(PercorsoDB) = True Then
-                    File.Copy(PercorsoDB, percorsoArchivio, True)
-                End If
-
-                ' Visualizza un messaggio nella barra di stato.
-                Me.eui_Informazioni.Text = LeggiDatiRivenditore()
-
-                ' Modifica il cursore del mouse.
-                Cursor.Current = Cursors.Default
-
-                MessageBox.Show("Backup eseguito con successo!", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Information)
-
-                ' Registra loperazione effettuata dall'operatore identificato.
-                g_frmMain.RegistraOperazione(TipoOperazione.Backup, String.Empty, MODULO_ARCHIVI_BACKUP)
+            If File.Exists(PercorsoDB) = True Then
+               File.Copy(PercorsoDB, percorsoArchivio, True)
             End If
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+            ' Visualizza un messaggio nella barra di stato.
+            Me.eui_Informazioni.Text = LeggiDatiRivenditore()
 
-        End Try
-    End Sub
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.Default
 
-    Private Sub eui_cmdArchiviPulizia_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviPulizia.Click
-        Try
-            Dim risposta As DialogResult
-            risposta = MessageBox.Show("Attenzione! Per eseguire la pulizia degli archivi tutte le finestre aperte saranno chiuse. Procedere?", NOME_PRODOTTO, MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            MessageBox.Show("Backup eseguito con successo!", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-            If risposta = DialogResult.Yes Then
-                eui_cmdFinestraChiudiTutto.PerformClick()
+            ' Registra loperazione effettuata dall'operatore identificato.
+            g_frmMain.RegistraOperazione(TipoOperazione.Backup, String.Empty, MODULO_ARCHIVI_BACKUP)
+         End If
 
-                If IsNothing(g_frmPos) = False Or IsNothing(g_frmVCTavoli) = False Then
-                    MessageBox.Show("Attenzione! Chiudere il programma Visual POS è ripetere l'operazione. ", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-                    Exit Sub
-                End If
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-                Dim frm As New PuliziaDB
-                frm.ShowDialog()
+      End Try
+   End Sub
+
+   Private Sub eui_cmdArchiviPulizia_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviPulizia.Click
+      Try
+         Dim risposta As DialogResult
+         risposta = MessageBox.Show("Attenzione! Per eseguire la pulizia degli archivi tutte le finestre aperte saranno chiuse. Procedere?", NOME_PRODOTTO, MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+         If risposta = DialogResult.Yes Then
+            eui_cmdFinestraChiudiTutto.PerformClick()
+
+            If IsNothing(g_frmPos) = False Or IsNothing(g_frmVCTavoli) = False Then
+               MessageBox.Show("Attenzione! Chiudere il programma Visual POS è ripetere l'operazione. ", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+               Exit Sub
             End If
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+            Dim frm As New PuliziaDB
+            frm.ShowDialog()
+         End If
 
-        End Try
-    End Sub
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-    Private Sub eui_cmdArchiviCompatta_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviCompatta.Click
-        Try
-            Dim risposta As DialogResult
-            risposta = MessageBox.Show("Il comando Compattazione e ripristino provvede a verificare l'integrità del database e ridurre le sue dimensioni! Procedere?", NOME_PRODOTTO, MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+      End Try
+   End Sub
 
-            If risposta = DialogResult.Yes Then
+   Private Sub eui_cmdArchiviCompatta_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchiviCompatta.Click
+      Try
+         Dim risposta As DialogResult
+         risposta = MessageBox.Show("Il comando Compattazione e ripristino provvede a verificare l'integrità del database e ridurre le sue dimensioni! Procedere?", NOME_PRODOTTO, MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
-                If File.Exists(PercorsoDB) = True Then
-                    ' Modifica il cursore del mouse.
-                    Cursor.Current = Cursors.AppStarting
+         If risposta = DialogResult.Yes Then
 
-                    ' Visualizza un messaggio nella barra di stato.
-                    Me.eui_Informazioni.Text = SALVA_BKP
+            If File.Exists(PercorsoDB) = True Then
+               ' Modifica il cursore del mouse.
+               Cursor.Current = Cursors.AppStarting
 
-                    ' Esegue una copia di backup dell'archivio nella cartella Backup dell'applicazione.
-                    File.Copy(PercorsoDB, Application.StartupPath & PERCORSO_BKP, True)
+               ' Visualizza un messaggio nella barra di stato.
+               Me.eui_Informazioni.Text = SALVA_BKP
 
-                    ' Esegue la compattazione.
-                    CompattaDb(PercorsoDB, Application.StartupPath & "\Backup\ChefTemp.mdb")
+               ' Esegue una copia di backup dell'archivio nella cartella Backup dell'applicazione.
+               File.Copy(PercorsoDB, Application.StartupPath & PERCORSO_BKP, True)
 
-                    ' Elimina il file origine.
-                    File.Delete(PercorsoDB)
+               ' Esegue la compattazione.
+               CompattaDb(PercorsoDB, Application.StartupPath & "\Backup\ChefTemp.mdb")
 
-                    ' Rinomina il file compattato.
-                    File.Move(Application.StartupPath & "\Backup\ChefTemp.mdb", Application.StartupPath & PERCORSO_DB)
+               ' Elimina il file origine.
+               File.Delete(PercorsoDB)
 
-                    ' Visualizza un messaggio nella barra di stato.
-                    Me.eui_Informazioni.Text = LeggiDatiRivenditore()
+               ' Rinomina il file compattato.
+               File.Move(Application.StartupPath & "\Backup\ChefTemp.mdb", Application.StartupPath & PERCORSO_DB)
 
-                    ' Modifica il cursore del mouse.
-                    Cursor.Current = Cursors.Default
+               ' Visualizza un messaggio nella barra di stato.
+               Me.eui_Informazioni.Text = LeggiDatiRivenditore()
 
-                    MessageBox.Show("Compattazione e ripristino eseguito con successo!", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Information)
+               ' Modifica il cursore del mouse.
+               Cursor.Current = Cursors.Default
 
-                    ' Registra loperazione effettuata dall'operatore identificato.
-                    g_frmMain.RegistraOperazione(TipoOperazione.Compatta, String.Empty, MODULO_ARCHIVI_COMPATTA)
-                End If
+               MessageBox.Show("Compattazione e ripristino eseguito con successo!", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+               ' Registra loperazione effettuata dall'operatore identificato.
+               g_frmMain.RegistraOperazione(TipoOperazione.Compatta, String.Empty, MODULO_ARCHIVI_COMPATTA)
             End If
+         End If
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-        End Try
-    End Sub
+      End Try
+   End Sub
 
 #End Region
 
@@ -10581,405 +10612,405 @@ Friend Class frmMain
 
 #Region "Ribbon Menu Contabilità"
 
-    Private Sub eui_ContabilitàChiusura_Click(sender As System.Object, e As System.EventArgs) Handles eui_ContabilitàChiusura.Click
-        ' Apre la finestra per la Chiusura gionaliera.
-        ApriChiusuraGiornaliera()
-    End Sub
+   Private Sub eui_ContabilitàChiusura_Click(sender As System.Object, e As System.EventArgs) Handles eui_ContabilitàChiusura.Click
+      ' Apre la finestra per la Chiusura gionaliera.
+      ApriChiusuraGiornaliera()
+   End Sub
 
-    Private Sub eui_ContabilitàCorrispettivi_Click(sender As System.Object, e As System.EventArgs) Handles eui_ContabilitàCorrispettivi.Click
-        ' Apre l'elenco Corrispettivi.
-        ApriCorrispettivi()
+   Private Sub eui_ContabilitàCorrispettivi_Click(sender As System.Object, e As System.EventArgs) Handles eui_ContabilitàCorrispettivi.Click
+      ' Apre l'elenco Corrispettivi.
+      ApriCorrispettivi()
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
-    Private Sub eui_ContabilitàPrimaNota_Click(sender As System.Object, e As System.EventArgs) Handles eui_ContabilitàPrimaNota.Click
-        ' Apre le statistiche di vendita.
-        ApriPrimaNota()
+   Private Sub eui_ContabilitàPrimaNota_Click(sender As System.Object, e As System.EventArgs) Handles eui_ContabilitàPrimaNota.Click
+      ' Apre le statistiche di vendita.
+      ApriPrimaNota()
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
-    Private Sub eui_ContabilitàElencoDoc_Click(sender As System.Object, e As System.EventArgs) Handles eui_ContabilitàElencoDoc.Click
-        ' Apre l'elenco Documenti.
-        ApriDoc()
+   Private Sub eui_ContabilitàElencoDoc_Click(sender As System.Object, e As System.EventArgs) Handles eui_ContabilitàElencoDoc.Click
+      ' Apre l'elenco Documenti.
+      ApriDoc()
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
 #End Region
 
 #Region "Ribbon Menu Magazzino"
 
-    Private Sub eui_MagazzinoArticoli_Click(sender As System.Object, e As System.EventArgs) Handles eui_MagazzinoArticoli.Click
-        ' Apre le statistiche di vendita.
-        ApriArticoli()
+   Private Sub eui_MagazzinoArticoli_Click(sender As System.Object, e As System.EventArgs) Handles eui_MagazzinoArticoli.Click
+      ' Apre le statistiche di vendita.
+      ApriArticoli()
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
-    Private Sub eui_MagazzinoMovimenti_Click(sender As System.Object, e As System.EventArgs) Handles eui_MagazzinoMovimenti.Click
-        ' Apre lo storico dei Movimenti di magazzino.
-        ApriMovMag()
+   Private Sub eui_MagazzinoMovimenti_Click(sender As System.Object, e As System.EventArgs) Handles eui_MagazzinoMovimenti.Click
+      ' Apre lo storico dei Movimenti di magazzino.
+      ApriMovMag()
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
-    Private Sub eui_MagazzinoInventario_Click(sender As System.Object, e As System.EventArgs) Handles eui_MagazzinoInventario.Click
-        ' Apre l'inventario di magazzino.
-        ApriInventario()
+   Private Sub eui_MagazzinoInventario_Click(sender As System.Object, e As System.EventArgs) Handles eui_MagazzinoInventario.Click
+      ' Apre l'inventario di magazzino.
+      ApriInventario()
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
-    Private Sub eui_MagazzinoScorte_Click(sender As System.Object, e As System.EventArgs) Handles eui_MagazzinoScorte.Click
-        ' Apre l'elenco Situazione Scorte.
-        ApriScorte()
+   Private Sub eui_MagazzinoScorte_Click(sender As System.Object, e As System.EventArgs) Handles eui_MagazzinoScorte.Click
+      ' Apre l'elenco Situazione Scorte.
+      ApriScorte()
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
 #End Region
 
 #Region "Ribbon Menu Visualizza"
 
-    Private Sub eui_VisualizzaRegOperazioni_Click(sender As System.Object, e As System.EventArgs) Handles eui_VisualizzaRegOperazioni.Click
-        ' Apre il registro operazioni.
-        ApriOperazioni()
+   Private Sub eui_VisualizzaRegOperazioni_Click(sender As System.Object, e As System.EventArgs) Handles eui_VisualizzaRegOperazioni.Click
+      ' Apre il registro operazioni.
+      ApriOperazioni()
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
-    Private Sub eui_VisualizzaRegErrori_Click(sender As System.Object, e As System.EventArgs) Handles eui_VisualizzaRegErrori.Click
-        ' Registra loperazione effettuata dall'operatore identificato.
-        g_frmMain.RegistraOperazione(TipoOperazione.Apri, STR_REG_ERRORI, MODULO_REG_ERRORI)
+   Private Sub eui_VisualizzaRegErrori_Click(sender As System.Object, e As System.EventArgs) Handles eui_VisualizzaRegErrori.Click
+      ' Registra loperazione effettuata dall'operatore identificato.
+      g_frmMain.RegistraOperazione(TipoOperazione.Apri, STR_REG_ERRORI, MODULO_REG_ERRORI)
 
-        ApriRegistroErrori(Me.Handle)
-    End Sub
+      ApriRegistroErrori(Me.Handle)
+   End Sub
 
 #End Region
 
 #Region "Ribbon Menu Strumenti"
 
-    Private Sub eui_StrumentiMsgReparti_Click(sender As System.Object, e As System.EventArgs) Handles eui_StrumentiMsgReparti.Click
-        ApriMessaggi()
+   Private Sub eui_StrumentiMsgReparti_Click(sender As System.Object, e As System.EventArgs) Handles eui_StrumentiMsgReparti.Click
+      ApriMessaggi()
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
-    Private Sub eui_StrumentiEtichette_Click(sender As System.Object, e As System.EventArgs) Handles eui_StrumentiEtichette.Click
-        ' Apre l'elenco Etichette.
-        ApriEtichette()
+   Private Sub eui_StrumentiEtichette_Click(sender As System.Object, e As System.EventArgs) Handles eui_StrumentiEtichette.Click
+      ' Apre l'elenco Etichette.
+      ApriEtichette()
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
-    Private Sub eui_StrumentiCap_Click(sender As System.Object, e As System.EventArgs) Handles eui_StrumentiCap.Click
-        ' Apre l'elenco dei CAP.
-        ApriCAP()
+   Private Sub eui_StrumentiCap_Click(sender As System.Object, e As System.EventArgs) Handles eui_StrumentiCap.Click
+      ' Apre l'elenco dei CAP.
+      ApriCAP()
 
-        ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
-        AggiungiFormMenuSeleziona()
-    End Sub
+      ' Aggiunge la finestra aperta al menu Finestra/Seleziona.
+      AggiungiFormMenuSeleziona()
+   End Sub
 
-    Private Sub eui_StrumentiDispTavoli_Click(sender As System.Object, e As System.EventArgs) Handles eui_StrumentiDispTavoli.Click
-        If IsNothing(g_frmVCTavoli) = False Then
-            ' Aggiorna Visual POS
-            MessageBox.Show("Non è possibile cambiare la disposizione dei tavoli perchè Visual POS è in esecuzione." & vbCrLf &
+   Private Sub eui_StrumentiDispTavoli_Click(sender As System.Object, e As System.EventArgs) Handles eui_StrumentiDispTavoli.Click
+      If IsNothing(g_frmVCTavoli) = False Then
+         ' Aggiorna Visual POS
+         MessageBox.Show("Non è possibile cambiare la disposizione dei tavoli perchè Visual POS è in esecuzione." & vbCrLf &
                          "Si consiglia di chiudere Visual POS e ripetere l'operazione.", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Information)
-            Exit Sub
-        End If
+         Exit Sub
+      End If
 
-        ' Modifica il cursore del mouse.
-        Cursor.Current = Cursors.AppStarting
+      ' Modifica il cursore del mouse.
+      Cursor.Current = Cursors.AppStarting
 
-        Dim frm As New frmDisponiTavoli
+      Dim frm As New frmDisponiTavoli
 
-        frm.Tag = Me.Tag
-        frm.ShowDialog()
+      frm.Tag = Me.Tag
+      frm.ShowDialog()
 
-        ' Modifica il cursore del mouse.
-        Cursor.Current = Cursors.Default
-    End Sub
+      ' Modifica il cursore del mouse.
+      Cursor.Current = Cursors.Default
+   End Sub
 
-    Private Sub eui_StrumentiMenù_Click(sender As System.Object, e As System.EventArgs) Handles eui_StrumentiMenù.Click
-        ' Apre il form per la formazione del Menu.
-        ApriMenu()
-    End Sub
+   Private Sub eui_StrumentiMenù_Click(sender As System.Object, e As System.EventArgs) Handles eui_StrumentiMenù.Click
+      ' Apre il form per la formazione del Menu.
+      ApriMenu()
+   End Sub
 
-    Private Sub eui_StrumentiNote_Click(sender As System.Object, e As System.EventArgs) Handles eui_StrumentiNote.Click
-        ' Registra loperazione effettuata dall'operatore identificato.
-        g_frmMain.RegistraOperazione(TipoOperazione.Apri, STR_STRUMENTI_NOTE, MODULO_STRUMENTI_NOTE)
+   Private Sub eui_StrumentiNote_Click(sender As System.Object, e As System.EventArgs) Handles eui_StrumentiNote.Click
+      ' Registra loperazione effettuata dall'operatore identificato.
+      g_frmMain.RegistraOperazione(TipoOperazione.Apri, STR_STRUMENTI_NOTE, MODULO_STRUMENTI_NOTE)
 
-        AvviaWinBloccoNote(Me.Handle)
-    End Sub
+      AvviaWinBloccoNote(Me.Handle)
+   End Sub
 
-    Private Sub eui_StrumentiCalcolatrice_Click(sender As System.Object, e As System.EventArgs) Handles eui_StrumentiCalcolatrice.Click
-        ' Registra loperazione effettuata dall'operatore identificato.
-        g_frmMain.RegistraOperazione(TipoOperazione.Apri, STR_STRUMENTI_CALCOLATRICE, MODULO_STRUMENTI_CALCOLATRICE)
+   Private Sub eui_StrumentiCalcolatrice_Click(sender As System.Object, e As System.EventArgs) Handles eui_StrumentiCalcolatrice.Click
+      ' Registra loperazione effettuata dall'operatore identificato.
+      g_frmMain.RegistraOperazione(TipoOperazione.Apri, STR_STRUMENTI_CALCOLATRICE, MODULO_STRUMENTI_CALCOLATRICE)
 
-        AvviaWinCalc(Me.Handle)
-    End Sub
+      AvviaWinCalc(Me.Handle)
+   End Sub
 
-    Private Sub eui_StrumentiTastiera_Click(sender As System.Object, e As System.EventArgs) Handles eui_StrumentiTastiera.Click
-        ' A_TODO: Inserire il modulo Tastiera virtuale per la registrazione delle operazioni. 
+   Private Sub eui_StrumentiTastiera_Click(sender As System.Object, e As System.EventArgs) Handles eui_StrumentiTastiera.Click
+      ' A_TODO: Inserire il modulo Tastiera virtuale per la registrazione delle operazioni. 
 
-        ' Registra loperazione effettuata dall'operatore identificato.
-        'g_frmMain.RegistraOperazione(TipoOperazione.Apri, STR_STRUMENTI_CALCOLATRICE, MODULO_STRUMENTI_CALCOLATRICE)
+      ' Registra loperazione effettuata dall'operatore identificato.
+      'g_frmMain.RegistraOperazione(TipoOperazione.Apri, STR_STRUMENTI_CALCOLATRICE, MODULO_STRUMENTI_CALCOLATRICE)
 
-        AvviaTastieraVirtuale(Me.Handle)
+      AvviaTastieraVirtuale(Me.Handle)
 
-    End Sub
+   End Sub
 
 #End Region
 
 #Region "Ribbon Menu Finestra"
 
-    Private Sub eui_cmdFinestraSovrapponi_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdFinestraSovrapponi.Click
-        Me.LayoutMdi(System.Windows.Forms.MdiLayout.Cascade)
-    End Sub
+   Private Sub eui_cmdFinestraSovrapponi_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdFinestraSovrapponi.Click
+      Me.LayoutMdi(System.Windows.Forms.MdiLayout.Cascade)
+   End Sub
 
-    Private Sub eui_cmdFinestraAffiancaOrizz_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdFinestraAffiancaOrizz.Click
-        Me.LayoutMdi(System.Windows.Forms.MdiLayout.TileHorizontal)
-    End Sub
+   Private Sub eui_cmdFinestraAffiancaOrizz_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdFinestraAffiancaOrizz.Click
+      Me.LayoutMdi(System.Windows.Forms.MdiLayout.TileHorizontal)
+   End Sub
 
-    Private Sub eui_cmdFinestraAffiancaVert_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdFinestraAffiancaVert.Click
-        Me.LayoutMdi(System.Windows.Forms.MdiLayout.TileVertical)
-    End Sub
+   Private Sub eui_cmdFinestraAffiancaVert_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdFinestraAffiancaVert.Click
+      Me.LayoutMdi(System.Windows.Forms.MdiLayout.TileVertical)
+   End Sub
 
-    Private Sub eui_cmdFinestraDisponi_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdFinestraDisponi.Click
-        Me.LayoutMdi(System.Windows.Forms.MdiLayout.ArrangeIcons)
-    End Sub
+   Private Sub eui_cmdFinestraDisponi_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdFinestraDisponi.Click
+      Me.LayoutMdi(System.Windows.Forms.MdiLayout.ArrangeIcons)
+   End Sub
 
-    Private Sub eui_cmdFinestraChiudi_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdFinestraChiudi.Click
-        Try
-            If IsNothing(Me.ActiveMdiChild) <> True Then
-                ' Ottiene il form attivo.
-                Dim FinestraAttiva As Form = Me.ActiveMdiChild
-
-                ' Chiude il form attivo.
-                FinestraAttiva.Close()
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-
-        End Try
-    End Sub
-
-    Private Sub eui_cmdFinestraChiudiTutto_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdFinestraChiudiTutto.Click
-        Try
+   Private Sub eui_cmdFinestraChiudi_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdFinestraChiudi.Click
+      Try
+         If IsNothing(Me.ActiveMdiChild) <> True Then
             ' Ottiene il form attivo.
             Dim FinestraAttiva As Form = Me.ActiveMdiChild
 
-            ' Il ciclo serve a chiudere tutti i form attivi.
-            Do While (Not FinestraAttiva Is Nothing)
-                ' Chiude il form attivo.
-                FinestraAttiva.Close()
-                ' Ottiene eventuali form attivi.
-                FinestraAttiva = Me.ActiveMdiChild
-            Loop
+            ' Chiude il form attivo.
+            FinestraAttiva.Close()
+         End If
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-        End Try
-    End Sub
+      End Try
+   End Sub
+
+   Private Sub eui_cmdFinestraChiudiTutto_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdFinestraChiudiTutto.Click
+      Try
+         ' Ottiene il form attivo.
+         Dim FinestraAttiva As Form = Me.ActiveMdiChild
+
+         ' Il ciclo serve a chiudere tutti i form attivi.
+         Do While (Not FinestraAttiva Is Nothing)
+            ' Chiude il form attivo.
+            FinestraAttiva.Close()
+            ' Ottiene eventuali form attivi.
+            FinestraAttiva = Me.ActiveMdiChild
+         Loop
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
+   End Sub
 
 #End Region
 
 #Region "Ribbon Planning Camere "
 
 #Region "Prenotazioni "
-    Private Sub eui_PCamere_PrenNuova_Click(sender As System.Object, e As System.EventArgs) Handles eui_PCamere_PrenNuova.Click
-        ' Apre una nuova prenotazione.
-        g_frmPlanningCamere.ApriDatiPrenotazione(PlanningCamere.Name, "")
-    End Sub
+   Private Sub eui_PCamere_PrenNuova_Click(sender As System.Object, e As System.EventArgs) Handles eui_PCamere_PrenNuova.Click
+      ' Apre una nuova prenotazione.
+      g_frmPlanningCamere.ApriDatiPrenotazione(PlanningCamere.Name, "")
+   End Sub
 
-    Private Sub eui_PCamere_PrenModifica_Click(sender As System.Object, e As System.EventArgs) Handles eui_PCamere_PrenModifica.Click
-        ' Modifica la prenotazione selezionata.
-        g_frmPlanningCamere.ApriDatiPrenotazione(PlanningCamere.Name, g_frmPlanningCamere.Tag)
-    End Sub
+   Private Sub eui_PCamere_PrenModifica_Click(sender As System.Object, e As System.EventArgs) Handles eui_PCamere_PrenModifica.Click
+      ' Modifica la prenotazione selezionata.
+      g_frmPlanningCamere.ApriDatiPrenotazione(PlanningCamere.Name, g_frmPlanningCamere.Tag)
+   End Sub
 
-    Private Sub eui_PCamere_PrenElimina_Click(sender As System.Object, e As System.EventArgs) Handles eui_PCamere_PrenElimina.Click
-        ' Elimina la prentazione selezionata.
-        g_frmPlanningCamere.EliminaPrenotazione()
+   Private Sub eui_PCamere_PrenElimina_Click(sender As System.Object, e As System.EventArgs) Handles eui_PCamere_PrenElimina.Click
+      ' Elimina la prentazione selezionata.
+      g_frmPlanningCamere.EliminaPrenotazione()
 
-    End Sub
+   End Sub
 
-    Private Sub eui_PCamere_PrenAggiorna_Click(sender As Object, e As EventArgs) Handles eui_PCamere_PrenAggiorna.Click
-        ' Aggiorna il Planning con eventuali nuove camere e prentazioni..
-        g_frmPlanningCamere.AggiornaPlanning()
+   Private Sub eui_PCamere_PrenAggiorna_Click(sender As Object, e As EventArgs) Handles eui_PCamere_PrenAggiorna.Click
+      ' Aggiorna il Planning con eventuali nuove camere e prentazioni..
+      g_frmPlanningCamere.AggiornaPlanning()
 
-    End Sub
+   End Sub
 
-    Private Sub eui_PCamere_PrenListini_Click(sender As Object, e As EventArgs) Handles eui_PCamere_PrenListini.Click
-        ' Apre l'elenco Listini camere.
-        eui_cmdArchiviTabelleListini.PerformClick()
+   Private Sub eui_PCamere_PrenListini_Click(sender As Object, e As EventArgs) Handles eui_PCamere_PrenListini.Click
+      ' Apre l'elenco Listini camere.
+      eui_cmdArchiviTabelleListini.PerformClick()
 
-    End Sub
+   End Sub
 
-    Private Sub eui_PCamere_PrenStagioni_Click(sender As Object, e As EventArgs) Handles eui_PCamere_PrenStagioni.Click
-        ' Apre l'elenco Listini camere.
-        eui_cmdArchiviTabelleStagioni.PerformClick()
+   Private Sub eui_PCamere_PrenStagioni_Click(sender As Object, e As EventArgs) Handles eui_PCamere_PrenStagioni.Click
+      ' Apre l'elenco Listini camere.
+      eui_cmdArchiviTabelleStagioni.PerformClick()
 
-    End Sub
+   End Sub
 
-    Private Sub eui_PCamere_PrenElencoCamere_Click(sender As System.Object, e As System.EventArgs) Handles eui_PCamere_PrenElencoCamere.Click
-        ' Apre l'elenco Prenotazioni camere.
-        eui_cmdGestionePrenCamere.PerformClick()
+   Private Sub eui_PCamere_PrenElencoCamere_Click(sender As System.Object, e As System.EventArgs) Handles eui_PCamere_PrenElencoCamere.Click
+      ' Apre l'elenco Prenotazioni camere.
+      eui_cmdGestionePrenCamere.PerformClick()
 
-    End Sub
+   End Sub
 
-    Private Sub eui_PCamere_PrenCamere_Click(sender As System.Object, e As System.EventArgs) Handles eui_PCamere_PrenCamere.Click
-        ' Apre l'anagrafica Camere.
-        eui_cmdArchiviAnagraficheCamere.PerformClick()
+   Private Sub eui_PCamere_PrenCamere_Click(sender As System.Object, e As System.EventArgs) Handles eui_PCamere_PrenCamere.Click
+      ' Apre l'anagrafica Camere.
+      eui_cmdArchiviAnagraficheCamere.PerformClick()
 
-    End Sub
+   End Sub
 
-    Private Sub eui_PCamere_PrenClienti_Click(sender As System.Object, e As System.EventArgs) Handles eui_PCamere_PrenClienti.Click
-        ' Apre l'anagrafica Clienti.
-        eui_cmdArchiviAnagraficheClienti.PerformClick()
+   Private Sub eui_PCamere_PrenClienti_Click(sender As System.Object, e As System.EventArgs) Handles eui_PCamere_PrenClienti.Click
+      ' Apre l'anagrafica Clienti.
+      eui_cmdArchiviAnagraficheClienti.PerformClick()
 
-    End Sub
+   End Sub
 
 #End Region
 
 #Region "Visualizza "
 
-    Private Sub eui_PCamere_VisIndieto_Click(sender As System.Object, e As System.EventArgs) Handles eui_PCamere_VisIndieto.Click
-        Try
-            If g_frmPlanningCamere.HorizontalScrollBar1.Value >= g_frmPlanningCamere.HorizontalScrollBar1.Maximum Then
-                Exit Sub
-            Else
-                g_frmPlanningCamere.HorizontalScrollBar1.Value -= 40
+   Private Sub eui_PCamere_VisIndieto_Click(sender As System.Object, e As System.EventArgs) Handles eui_PCamere_VisIndieto.Click
+      Try
+         If g_frmPlanningCamere.HorizontalScrollBar1.Value >= g_frmPlanningCamere.HorizontalScrollBar1.Maximum Then
+            Exit Sub
+         Else
+            g_frmPlanningCamere.HorizontalScrollBar1.Value -= 40
 
-            End If
+         End If
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-        End Try
-    End Sub
+      End Try
+   End Sub
 
-    Private Sub eui_PCamere_VisAvanti_Click(sender As System.Object, e As System.EventArgs) Handles eui_PCamere_VisAvanti.Click
-        Try
-            If g_frmPlanningCamere.HorizontalScrollBar1.Value >= g_frmPlanningCamere.HorizontalScrollBar1.Maximum - 1200 Then
-                Exit Sub
-            Else
-                g_frmPlanningCamere.HorizontalScrollBar1.Value += 40
+   Private Sub eui_PCamere_VisAvanti_Click(sender As System.Object, e As System.EventArgs) Handles eui_PCamere_VisAvanti.Click
+      Try
+         If g_frmPlanningCamere.HorizontalScrollBar1.Value >= g_frmPlanningCamere.HorizontalScrollBar1.Maximum - 1200 Then
+            Exit Sub
+         Else
+            g_frmPlanningCamere.HorizontalScrollBar1.Value += 40
 
-            End If
+         End If
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-        End Try
-    End Sub
+      End Try
+   End Sub
 
-    Private Sub eui_PCamere_VisMeseAvanti_Click(sender As Object, e As System.EventArgs) Handles eui_PCamere_VisMeseAvanti.Click
-        Try
-            If g_frmPlanningCamere.HorizontalScrollBar1.Value >= g_frmPlanningCamere.HorizontalScrollBar1.Maximum - 2000 Then
-                Exit Sub
-            Else
-                With g_frmPlanningCamere
+   Private Sub eui_PCamere_VisMeseAvanti_Click(sender As Object, e As System.EventArgs) Handles eui_PCamere_VisMeseAvanti.Click
+      Try
+         If g_frmPlanningCamere.HorizontalScrollBar1.Value >= g_frmPlanningCamere.HorizontalScrollBar1.Maximum - 2000 Then
+            Exit Sub
+         Else
+            With g_frmPlanningCamere
 
-                    Dim numGiorniMese As Integer
-                    numGiorniMese = .dtpCalendario.Value.DaysInMonth(.dtpCalendario.Value.Year, .dtpCalendario.Value.Month)
+               Dim numGiorniMese As Integer
+               numGiorniMese = .dtpCalendario.Value.DaysInMonth(.dtpCalendario.Value.Year, .dtpCalendario.Value.Month)
 
-                    Dim larghezzaMese As Integer = numGiorniMese * 40
+               Dim larghezzaMese As Integer = numGiorniMese * 40
 
-                    .HorizontalScrollBar1.Value += larghezzaMese
+               .HorizontalScrollBar1.Value += larghezzaMese
 
-                    .dtpCalendario.Value = .dtpCalendario.Value.AddMonths(1)
-                    .dtpDataPlanning.Value = .dtpDataPlanning.Value.GetValueOrDefault.AddMonths(1)
+               .dtpCalendario.Value = .dtpCalendario.Value.AddMonths(1)
+               .dtpDataPlanning.Value = .dtpDataPlanning.Value.GetValueOrDefault.AddMonths(1)
 
-                    ' Salva la riga (Camera) corrente.
-                    Dim rigaCorrente As Integer = .dgvPrenotazioni.CurrentRow.Index
+               ' Salva la riga (Camera) corrente.
+               Dim rigaCorrente As Integer = .dgvPrenotazioni.CurrentRow.Index
 
-                    ' Aggiorna il calendario con il nuovo anno.
-                    Dim dataSel As String = .dtpDataPlanning.Value.GetValueOrDefault.ToShortDateString
+               ' Aggiorna il calendario con il nuovo anno.
+               Dim dataSel As String = .dtpDataPlanning.Value.GetValueOrDefault.ToShortDateString
 
-                    ' Seleziona la cella prenotazione corrispondende.
-                    .dgvPrenotazioni.Rows(rigaCorrente).Cells(dataSel).Selected = True
+               ' Seleziona la cella prenotazione corrispondende.
+               .dgvPrenotazioni.Rows(rigaCorrente).Cells(dataSel).Selected = True
 
-                End With
-            End If
+            End With
+         End If
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-        End Try
+      End Try
 
-    End Sub
+   End Sub
 
-    Private Sub eui_PCamere_VisMeseIndietro_Click(sender As Object, e As System.EventArgs) Handles eui_PCamere_VisMeseIndietro.Click
-        Try
-            If g_frmPlanningCamere.HorizontalScrollBar1.Value <= g_frmPlanningCamere.HorizontalScrollBar1.Minimum Then
-                Exit Sub
-            Else
-                With g_frmPlanningCamere
-                    .dtpCalendario.Value = .dtpCalendario.Value.AddMonths(-1)
-                    .dtpDataPlanning.Value = .dtpDataPlanning.Value.GetValueOrDefault.AddMonths(-1)
+   Private Sub eui_PCamere_VisMeseIndietro_Click(sender As Object, e As System.EventArgs) Handles eui_PCamere_VisMeseIndietro.Click
+      Try
+         If g_frmPlanningCamere.HorizontalScrollBar1.Value <= g_frmPlanningCamere.HorizontalScrollBar1.Minimum Then
+            Exit Sub
+         Else
+            With g_frmPlanningCamere
+               .dtpCalendario.Value = .dtpCalendario.Value.AddMonths(-1)
+               .dtpDataPlanning.Value = .dtpDataPlanning.Value.GetValueOrDefault.AddMonths(-1)
 
-                    Dim numGiorniMese As Integer
-                    numGiorniMese = .dtpCalendario.Value.DaysInMonth(.dtpCalendario.Value.Year, .dtpCalendario.Value.Month)
+               Dim numGiorniMese As Integer
+               numGiorniMese = .dtpCalendario.Value.DaysInMonth(.dtpCalendario.Value.Year, .dtpCalendario.Value.Month)
 
-                    Dim larghezzaMese As Integer = numGiorniMese * 40
+               Dim larghezzaMese As Integer = numGiorniMese * 40
 
-                    .HorizontalScrollBar1.Value -= larghezzaMese
+               .HorizontalScrollBar1.Value -= larghezzaMese
 
-                    ' Salva la riga (Camera) corrente.
-                    Dim rigaCorrente As Integer = .dgvPrenotazioni.CurrentRow.Index
+               ' Salva la riga (Camera) corrente.
+               Dim rigaCorrente As Integer = .dgvPrenotazioni.CurrentRow.Index
 
-                    ' Aggiorna il calendario con il nuovo anno.
-                    Dim dataSel As String = .dtpDataPlanning.Value.GetValueOrDefault.ToShortDateString
+               ' Aggiorna il calendario con il nuovo anno.
+               Dim dataSel As String = .dtpDataPlanning.Value.GetValueOrDefault.ToShortDateString
 
-                    ' Seleziona la cella prenotazione corrispondende.
-                    .dgvPrenotazioni.Rows(rigaCorrente).Cells(dataSel).Selected = True
+               ' Seleziona la cella prenotazione corrispondende.
+               .dgvPrenotazioni.Rows(rigaCorrente).Cells(dataSel).Selected = True
 
-                End With
-            End If
+            End With
+         End If
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-        End Try
+      End Try
 
-    End Sub
+   End Sub
 
-    Private Sub eui_PCamere_VisAnnoIndietro_Click(sender As Object, e As EventArgs) Handles eui_PCamere_VisAnnoIndietro.Click
-        ' False = Indietro.
-        g_frmPlanningCamere.ScorriAnno(False)
-        g_frmMain.eui_PCamere_VisAnnoAvanti.Enabled = True
-    End Sub
+   Private Sub eui_PCamere_VisAnnoIndietro_Click(sender As Object, e As EventArgs) Handles eui_PCamere_VisAnnoIndietro.Click
+      ' False = Indietro.
+      g_frmPlanningCamere.ScorriAnno(False)
+      g_frmMain.eui_PCamere_VisAnnoAvanti.Enabled = True
+   End Sub
 
-    Private Sub eui_PCamere_VisAnnoAvanti_Click(sender As Object, e As EventArgs) Handles eui_PCamere_VisAnnoAvanti.Click
-        ' True = Avanti.
-        g_frmPlanningCamere.ScorriAnno(True)
-        g_frmMain.eui_PCamere_VisAnnoIndietro.Enabled = True
-    End Sub
+   Private Sub eui_PCamere_VisAnnoAvanti_Click(sender As Object, e As EventArgs) Handles eui_PCamere_VisAnnoAvanti.Click
+      ' True = Avanti.
+      g_frmPlanningCamere.ScorriAnno(True)
+      g_frmMain.eui_PCamere_VisAnnoIndietro.Enabled = True
+   End Sub
 
-    Private Sub eui_PCamere_VisOggi_Click(sender As Object, e As EventArgs) Handles eui_PCamere_VisOggi.Click
-        ' Visualizza il giorno corrente sul planning.
-        g_frmPlanningCamere.VisualizzaOggi()
-    End Sub
+   Private Sub eui_PCamere_VisOggi_Click(sender As Object, e As EventArgs) Handles eui_PCamere_VisOggi.Click
+      ' Visualizza il giorno corrente sul planning.
+      g_frmPlanningCamere.VisualizzaOggi()
+   End Sub
 
 #End Region
 
@@ -10989,172 +11020,172 @@ Friend Class frmMain
 
 #Region "Modifica "
 
-    Private Sub eui_Strumenti_Nuovo_Click(sender As System.Object, e As System.EventArgs) Handles eui_Strumenti_Nuovo.Click
-        Try
-            ' Ottiene il form attivo.
-            Dim frmAttivo As String = EstraiNomeFinestra(Me.ActiveMdiChild.Text)
+   Private Sub eui_Strumenti_Nuovo_Click(sender As System.Object, e As System.EventArgs) Handles eui_Strumenti_Nuovo.Click
+      Try
+         ' Ottiene il form attivo.
+         Dim frmAttivo As String = EstraiNomeFinestra(Me.ActiveMdiChild.Text)
 
-            ' Richiama la procedura per la modifica dei dati del form attivo.
-            Select Case frmAttivo
-                Case TITOLO_FINESTRA_ELENCO_PREN_CAMERE
-                    g_frmPrenCamere.Nuovo()
+         ' Richiama la procedura per la modifica dei dati del form attivo.
+         Select Case frmAttivo
+            Case TITOLO_FINESTRA_ELENCO_PREN_CAMERE
+               g_frmPrenCamere.Nuovo()
 
-                Case TITOLO_FINESTRA_ELENCO_LISTINI_CAMERE
-                    g_frmListiniCamere.Nuovo()
+            Case TITOLO_FINESTRA_ELENCO_LISTINI_CAMERE
+               g_frmListiniCamere.Nuovo()
 
-                Case TITOLO_FINESTRA_ELENCO_DOCUMENTI
-                    ' Modifica il cursore del mouse.
-                    Cursor.Current = Cursors.AppStarting
+            Case TITOLO_FINESTRA_ELENCO_DOCUMENTI
+               ' Modifica il cursore del mouse.
+               Cursor.Current = Cursors.AppStarting
 
-                    g_frmDocumento = New frmDocumento("ElencoDoc", "Conto", String.Empty)
-                    g_frmDocumento.ShowDialog()
+               g_frmDocumento = New frmDocumento("ElencoDoc", "Conto", String.Empty)
+               g_frmDocumento.ShowDialog()
 
-                    ' Inserire qui il codice per gestire le altre finestre.
+               ' Inserire qui il codice per gestire le altre finestre.
 
-            End Select
+         End Select
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-        End Try
-    End Sub
+      End Try
+   End Sub
 
-    Private Sub eui_Strumenti_Modifica_Click(sender As System.Object, e As System.EventArgs) Handles eui_Strumenti_Modifica.Click
-        Try
-            ' Ottiene il form attivo.
-            Dim frmAttivo As String = EstraiNomeFinestra(Me.ActiveMdiChild.Text)
+   Private Sub eui_Strumenti_Modifica_Click(sender As System.Object, e As System.EventArgs) Handles eui_Strumenti_Modifica.Click
+      Try
+         ' Ottiene il form attivo.
+         Dim frmAttivo As String = EstraiNomeFinestra(Me.ActiveMdiChild.Text)
 
-            ' Richiama la procedura per la modifica dei dati del form attivo.
-            Select Case frmAttivo
-                Case TITOLO_FINESTRA_ELENCO_PREN_CAMERE
-                    g_frmPrenCamere.Modifica()
+         ' Richiama la procedura per la modifica dei dati del form attivo.
+         Select Case frmAttivo
+            Case TITOLO_FINESTRA_ELENCO_PREN_CAMERE
+               g_frmPrenCamere.Modifica()
 
-                Case TITOLO_FINESTRA_ELENCO_LISTINI_CAMERE
-                    g_frmListiniCamere.Modifica()
+            Case TITOLO_FINESTRA_ELENCO_LISTINI_CAMERE
+               g_frmListiniCamere.Modifica()
 
-                Case TITOLO_FINESTRA_ELENCO_DOCUMENTI
-                    ' Modifica il cursore del mouse.
-                    Cursor.Current = Cursors.AppStarting
+            Case TITOLO_FINESTRA_ELENCO_DOCUMENTI
+               ' Modifica il cursore del mouse.
+               Cursor.Current = Cursors.AppStarting
 
-                    g_frmDocumento = New frmDocumento("ElencoDoc", g_frmDocumenti.DataGrid1.Item(g_frmDocumenti.DataGrid1.CurrentCell.RowNumber, 4), g_frmDocumenti.DataGrid1.Item(g_frmDocumenti.DataGrid1.CurrentCell.RowNumber, 0))
-                    g_frmDocumento.ShowDialog()
+               g_frmDocumento = New frmDocumento("ElencoDoc", g_frmDocumenti.DataGrid1.Item(g_frmDocumenti.DataGrid1.CurrentCell.RowNumber, 4), g_frmDocumenti.DataGrid1.Item(g_frmDocumenti.DataGrid1.CurrentCell.RowNumber, 0))
+               g_frmDocumento.ShowDialog()
 
-                    ' Inserire qui il codice per gestire le altre finestre.
+               ' Inserire qui il codice per gestire le altre finestre.
 
-            End Select
+         End Select
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-        End Try
-    End Sub
+      End Try
+   End Sub
 
-    Private Sub eui_Strumenti_Duplica_Click(sender As System.Object, e As System.EventArgs) Handles eui_Strumenti_Duplica.Click
-        Try
-            ' Ottiene il form attivo.
-            Dim frmAttivo As String = EstraiNomeFinestra(Me.ActiveMdiChild.Text)
+   Private Sub eui_Strumenti_Duplica_Click(sender As System.Object, e As System.EventArgs) Handles eui_Strumenti_Duplica.Click
+      Try
+         ' Ottiene il form attivo.
+         Dim frmAttivo As String = EstraiNomeFinestra(Me.ActiveMdiChild.Text)
 
-            ' Richiama la procedura per la modifica dei dati del form attivo.
-            Select Case frmAttivo
-                Case TITOLO_FINESTRA_ELENCO_LISTINI_CAMERE
-                    g_frmListiniCamere.DuplicaDati()
+         ' Richiama la procedura per la modifica dei dati del form attivo.
+         Select Case frmAttivo
+            Case TITOLO_FINESTRA_ELENCO_LISTINI_CAMERE
+               g_frmListiniCamere.DuplicaDati()
 
-                Case TITOLO_FINESTRA_ELENCO_DOCUMENTI
-                    g_frmDocumenti.DuplicaDocumento()
+            Case TITOLO_FINESTRA_ELENCO_DOCUMENTI
+               g_frmDocumenti.DuplicaDocumento()
 
-                    ' Inserire qui il codice per gestire le altre finestre.
+               ' Inserire qui il codice per gestire le altre finestre.
 
-            End Select
+         End Select
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-        End Try
+      End Try
 
-    End Sub
+   End Sub
 
-    Private Sub eui_Strumenti_Elimina_Click(sender As System.Object, e As System.EventArgs) Handles eui_Strumenti_Elimina.Click
-        Try
-            ' Ottiene il form attivo.
-            Dim frmAttivo As String = EstraiNomeFinestra(Me.ActiveMdiChild.Text)
+   Private Sub eui_Strumenti_Elimina_Click(sender As System.Object, e As System.EventArgs) Handles eui_Strumenti_Elimina.Click
+      Try
+         ' Ottiene il form attivo.
+         Dim frmAttivo As String = EstraiNomeFinestra(Me.ActiveMdiChild.Text)
 
-            ' Richiama la procedura per la modifica dei dati del form attivo.
-            Select Case frmAttivo
-                Case TITOLO_FINESTRA_ELENCO_PREN_CAMERE
-                    g_frmPrenCamere.EliminaDati(ElencoPrenCamere.TAB_PRENOTAZIONI, g_frmPrenCamere.DataGrid1.Item(g_frmPrenCamere.DataGrid1.CurrentCell.RowNumber, 0))
+         ' Richiama la procedura per la modifica dei dati del form attivo.
+         Select Case frmAttivo
+            Case TITOLO_FINESTRA_ELENCO_PREN_CAMERE
+               g_frmPrenCamere.EliminaDati(ElencoPrenCamere.TAB_PRENOTAZIONI, g_frmPrenCamere.DataGrid1.Item(g_frmPrenCamere.DataGrid1.CurrentCell.RowNumber, 0))
 
-                Case TITOLO_FINESTRA_ELENCO_LISTINI_CAMERE
-                    g_frmListiniCamere.EliminaDati(ElencoListiniCamere.TAB_LISTINI, g_frmListiniCamere.DataGrid1.Item(g_frmListiniCamere.DataGrid1.CurrentCell.RowNumber, 0))
+            Case TITOLO_FINESTRA_ELENCO_LISTINI_CAMERE
+               g_frmListiniCamere.EliminaDati(ElencoListiniCamere.TAB_LISTINI, g_frmListiniCamere.DataGrid1.Item(g_frmListiniCamere.DataGrid1.CurrentCell.RowNumber, 0))
 
-                Case TITOLO_FINESTRA_ELENCO_DOCUMENTI
-                    g_frmDocumenti.EliminaDatiDocumento()
+            Case TITOLO_FINESTRA_ELENCO_DOCUMENTI
+               g_frmDocumenti.EliminaDatiDocumento()
 
-                    ' Inserire qui il codice per gestire le altre finestre.
+               ' Inserire qui il codice per gestire le altre finestre.
 
-            End Select
+         End Select
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-        End Try
-    End Sub
+      End Try
+   End Sub
 
-    Private Sub eui_Strumenti_Annulla_Click(sender As Object, e As EventArgs) Handles eui_Strumenti_Annulla.Click
-        Try
-            ' Ottiene il form attivo.
-            Dim frmAttivo As String = EstraiNomeFinestra(Me.ActiveMdiChild.Text)
+   Private Sub eui_Strumenti_Annulla_Click(sender As Object, e As EventArgs) Handles eui_Strumenti_Annulla.Click
+      Try
+         ' Ottiene il form attivo.
+         Dim frmAttivo As String = EstraiNomeFinestra(Me.ActiveMdiChild.Text)
 
-            ' Richiama la procedura per la modifica dei dati del form attivo.
-            Select Case frmAttivo
+         ' Richiama la procedura per la modifica dei dati del form attivo.
+         Select Case frmAttivo
 
-                Case TITOLO_FINESTRA_ELENCO_DOCUMENTI
-                    g_frmDocumenti.AnnullaDocumento()
+            Case TITOLO_FINESTRA_ELENCO_DOCUMENTI
+               g_frmDocumenti.AnnullaDocumento()
 
-                    ' Inserire qui il codice per gestire le altre finestre.
+               ' Inserire qui il codice per gestire le altre finestre.
 
-            End Select
+         End Select
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-        End Try
+      End Try
 
-    End Sub
+   End Sub
 
-    Private Sub eui_Strumenti_Aggiorna_Click(sender As System.Object, e As System.EventArgs) Handles eui_Strumenti_Aggiorna.Click
-        Try
-            ' Ottiene il form attivo.
-            Dim frmAttivo As String = EstraiNomeFinestra(Me.ActiveMdiChild.Text)
+   Private Sub eui_Strumenti_Aggiorna_Click(sender As System.Object, e As System.EventArgs) Handles eui_Strumenti_Aggiorna.Click
+      Try
+         ' Ottiene il form attivo.
+         Dim frmAttivo As String = EstraiNomeFinestra(Me.ActiveMdiChild.Text)
 
-            ' Richiama la procedura per la modifica dei dati del form attivo.
-            Select Case frmAttivo
-                Case TITOLO_FINESTRA_ELENCO_PREN_CAMERE
-                    g_frmPrenCamere.AggiornaDati()
+         ' Richiama la procedura per la modifica dei dati del form attivo.
+         Select Case frmAttivo
+            Case TITOLO_FINESTRA_ELENCO_PREN_CAMERE
+               g_frmPrenCamere.AggiornaDati()
 
-                Case TITOLO_FINESTRA_ELENCO_LISTINI_CAMERE
-                    g_frmListiniCamere.AggiornaDati()
+            Case TITOLO_FINESTRA_ELENCO_LISTINI_CAMERE
+               g_frmListiniCamere.AggiornaDati()
 
-                Case TITOLO_FINESTRA_ELENCO_DOCUMENTI
-                    g_frmDocumenti.AggiornaDati()
+            Case TITOLO_FINESTRA_ELENCO_DOCUMENTI
+               g_frmDocumenti.AggiornaDati()
 
-                    ' Inserire qui il codice per gestire le altre finestre.
+               ' Inserire qui il codice per gestire le altre finestre.
 
-            End Select
+         End Select
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-        End Try
+      End Try
 
-    End Sub
+   End Sub
 
-    Private Sub eui_Strumenti_Esporta_Click(sender As System.Object, e As System.EventArgs) Handles eui_Strumenti_Esporta.Click
+   Private Sub eui_Strumenti_Esporta_Click(sender As System.Object, e As System.EventArgs) Handles eui_Strumenti_Esporta.Click
       Try
          ' Ottiene il form attivo.
          Dim frmAttivo As String = EstraiNomeFinestra(Me.ActiveMdiChild.Text)
@@ -11184,282 +11215,282 @@ Friend Class frmMain
 
    End Sub
 
-    Private Sub eui_Strumenti_Stampa_Anteprima_Click(sender As System.Object, e As System.EventArgs) Handles eui_Strumenti_Stampa_Anteprima.Click
-        Try
-            ' Ottiene il form attivo.
-            Dim frmAttivo As String = EstraiNomeFinestra(Me.ActiveMdiChild.Text)
+   Private Sub eui_Strumenti_Stampa_Anteprima_Click(sender As System.Object, e As System.EventArgs) Handles eui_Strumenti_Stampa_Anteprima.Click
+      Try
+         ' Ottiene il form attivo.
+         Dim frmAttivo As String = EstraiNomeFinestra(Me.ActiveMdiChild.Text)
 
-            ' Richiama la procedura per la modifica dei dati del form attivo.
-            Select Case frmAttivo
-                Case TITOLO_FINESTRA_ELENCO_PREN_CAMERE
+         ' Richiama la procedura per la modifica dei dati del form attivo.
+         Select Case frmAttivo
+            Case TITOLO_FINESTRA_ELENCO_PREN_CAMERE
 
-                Case TITOLO_FINESTRA_ELENCO_LISTINI_CAMERE
+            Case TITOLO_FINESTRA_ELENCO_LISTINI_CAMERE
 
-                Case TITOLO_FINESTRA_ELENCO_DOCUMENTI
-                    ' Registra loperazione effettuata dall'operatore identificato.
-                    RegistraOperazione(TipoOperazione.Anteprima, STR_CONTABILITA_DOCUMENTI, MODULO_CONTABILITA_DOCUMENTI)
+            Case TITOLO_FINESTRA_ELENCO_DOCUMENTI
+               ' Registra loperazione effettuata dall'operatore identificato.
+               RegistraOperazione(TipoOperazione.Anteprima, STR_CONTABILITA_DOCUMENTI, MODULO_CONTABILITA_DOCUMENTI)
 
-                    ' Apre il documento selezionato nell'elenco in anteprima di stampa.
-                    ApriReports(g_frmDocumenti.repSql, g_frmDocumenti.TAB_DOCUMENTI, PERCORSO_REP_DOC)
+               ' Apre il documento selezionato nell'elenco in anteprima di stampa.
+               ApriReports(g_frmDocumenti.repSql, g_frmDocumenti.TAB_DOCUMENTI, PERCORSO_REP_DOC)
 
-                    ' Inserire qui il codice per gestire le altre finestre.
+               ' Inserire qui il codice per gestire le altre finestre.
 
-            End Select
+         End Select
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-        End Try
-    End Sub
+      End Try
+   End Sub
 
-    Private Sub eui_Strumenti_Stampa_Elenco_Click(sender As System.Object, e As System.EventArgs) Handles eui_Strumenti_Stampa_Elenco.Click
-        Try
-            ' Ottiene il form attivo.
-            Dim frmAttivo As String = EstraiNomeFinestra(Me.ActiveMdiChild.Text)
+   Private Sub eui_Strumenti_Stampa_Elenco_Click(sender As System.Object, e As System.EventArgs) Handles eui_Strumenti_Stampa_Elenco.Click
+      Try
+         ' Ottiene il form attivo.
+         Dim frmAttivo As String = EstraiNomeFinestra(Me.ActiveMdiChild.Text)
 
-            ' Richiama la procedura per la modifica dei dati del form attivo.
-            Select Case frmAttivo
-                Case TITOLO_FINESTRA_ELENCO_PREN_CAMERE
+         ' Richiama la procedura per la modifica dei dati del form attivo.
+         Select Case frmAttivo
+            Case TITOLO_FINESTRA_ELENCO_PREN_CAMERE
 
-                Case TITOLO_FINESTRA_ELENCO_LISTINI_CAMERE
+            Case TITOLO_FINESTRA_ELENCO_LISTINI_CAMERE
 
-                Case TITOLO_FINESTRA_ELENCO_DOCUMENTI
+            Case TITOLO_FINESTRA_ELENCO_DOCUMENTI
 
-                    ' Registra loperazione effettuata dall'operatore identificato.
-                    RegistraOperazione(TipoOperazione.Stampa, STR_CONTABILITA_DOCUMENTI, MODULO_CONTABILITA_DOCUMENTI)
+               ' Registra loperazione effettuata dall'operatore identificato.
+               RegistraOperazione(TipoOperazione.Stampa, STR_CONTABILITA_DOCUMENTI, MODULO_CONTABILITA_DOCUMENTI)
 
-                    ' Stampa il documento selezionato nell'elenco.
-                    g_frmDocumenti.StampaDocumento(PERCORSO_REP_DOC, g_frmDocumenti.TAB_DOCUMENTI, g_frmDocumenti.repSql)
+               ' Stampa il documento selezionato nell'elenco.
+               g_frmDocumenti.StampaDocumento(PERCORSO_REP_DOC, g_frmDocumenti.TAB_DOCUMENTI, g_frmDocumenti.repSql)
 
-                    ' Inserire qui il codice per gestire le altre finestre.
+               ' Inserire qui il codice per gestire le altre finestre.
 
-            End Select
+         End Select
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-        End Try
-    End Sub
+      End Try
+   End Sub
 
 #End Region
 
 #Region "Periodo "
 
-    Private Sub eui_Strumenti_Periodo_Tutte_Click(sender As Object, e As EventArgs) Handles eui_Strumenti_Periodo_Tutte.Click
-        Try
-            ' Ottiene il form attivo.
-            Dim frmAttivo As String = EstraiNomeFinestra(Me.ActiveMdiChild.Text)
+   Private Sub eui_Strumenti_Periodo_Tutte_Click(sender As Object, e As EventArgs) Handles eui_Strumenti_Periodo_Tutte.Click
+      Try
+         ' Ottiene il form attivo.
+         Dim frmAttivo As String = EstraiNomeFinestra(Me.ActiveMdiChild.Text)
 
-            ' Richiama la procedura per la modifica dei dati del form attivo.
-            Select Case frmAttivo
-                Case TITOLO_FINESTRA_ELENCO_PREN_CAMERE
+         ' Richiama la procedura per la modifica dei dati del form attivo.
+         Select Case frmAttivo
+            Case TITOLO_FINESTRA_ELENCO_PREN_CAMERE
 
-                    sender.Pressed = True
-                    eui_Strumenti_Periodo_Mese.Pressed = False
-                    eui_Strumenti_Periodo_Anno.Pressed = False
-                    eui_Strumenti_Periodo_Arrivo.Pressed = False
-                    eui_Strumenti_Periodo_Partenza.Pressed = False
-                    eui_Strumenti_Periodo_DalAl.Pressed = False
-                    eui_Strumenti_Periodo_DalAl.Text = TESTO_FILTRO_PERIODO
-                    g_frmPrenCamere.AggiornaDatiTutte()
+               sender.Pressed = True
+               eui_Strumenti_Periodo_Mese.Pressed = False
+               eui_Strumenti_Periodo_Anno.Pressed = False
+               eui_Strumenti_Periodo_Arrivo.Pressed = False
+               eui_Strumenti_Periodo_Partenza.Pressed = False
+               eui_Strumenti_Periodo_DalAl.Pressed = False
+               eui_Strumenti_Periodo_DalAl.Text = TESTO_FILTRO_PERIODO
+               g_frmPrenCamere.AggiornaDatiTutte()
 
-                Case TITOLO_FINESTRA_ELENCO_DOCUMENTI
+            Case TITOLO_FINESTRA_ELENCO_DOCUMENTI
 
-                    sender.Pressed = True
-                    eui_Strumenti_Periodo_DalAl.Pressed = False
-                    eui_Strumenti_Periodo_DalAl.Text = TESTO_FILTRO_PERIODO
-                    eui_Strumenti_Periodo_Mese.Pressed = False
-                    eui_Strumenti_Periodo_Anno.Pressed = False
-                    eui_Strumenti_Sospesi_Filtra.Pressed = False
-                    g_frmDocumenti.filtroDati = "Tutti"
-                    g_frmDocumenti.eui_txtTestoRicerca.Text = String.Empty
-                    g_frmDocumenti.FiltraDati(g_frmDocumenti.eui_txtTestoRicerca.Text, g_frmDocumenti.eui_cmbCampoRicerca.Text)
+               sender.Pressed = True
+               eui_Strumenti_Periodo_DalAl.Pressed = False
+               eui_Strumenti_Periodo_DalAl.Text = TESTO_FILTRO_PERIODO
+               eui_Strumenti_Periodo_Mese.Pressed = False
+               eui_Strumenti_Periodo_Anno.Pressed = False
+               eui_Strumenti_Sospesi_Filtra.Pressed = False
+               g_frmDocumenti.filtroDati = "Tutti"
+               g_frmDocumenti.eui_txtTestoRicerca.Text = String.Empty
+               g_frmDocumenti.FiltraDati(g_frmDocumenti.eui_txtTestoRicerca.Text, g_frmDocumenti.eui_cmbCampoRicerca.Text)
 
-                    ' Inserire qui il codice per gestire le altre finestre.
+               ' Inserire qui il codice per gestire le altre finestre.
 
-            End Select
+         End Select
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-        End Try
-    End Sub
+      End Try
+   End Sub
 
-    Private Sub eui_Strumenti_Periodo_Anno_Click(sender As Object, e As EventArgs) Handles eui_Strumenti_Periodo_Anno.Click
-        Try
-            ' Ottiene il form attivo.
-            Dim frmAttivo As String = EstraiNomeFinestra(Me.ActiveMdiChild.Text)
+   Private Sub eui_Strumenti_Periodo_Anno_Click(sender As Object, e As EventArgs) Handles eui_Strumenti_Periodo_Anno.Click
+      Try
+         ' Ottiene il form attivo.
+         Dim frmAttivo As String = EstraiNomeFinestra(Me.ActiveMdiChild.Text)
 
-            ' Richiama la procedura per la modifica dei dati del form attivo.
-            Select Case frmAttivo
-                Case TITOLO_FINESTRA_ELENCO_PREN_CAMERE
-                    sender.Pressed = True
-                    eui_Strumenti_Periodo_Tutte.Pressed = False
-                    eui_Strumenti_Periodo_Mese.Pressed = False
-                    eui_Strumenti_Periodo_Arrivo.Pressed = False
-                    eui_Strumenti_Periodo_Partenza.Pressed = False
-                    eui_Strumenti_Periodo_DalAl.Pressed = False
-                    eui_Strumenti_Periodo_DalAl.Text = TESTO_FILTRO_PERIODO
-                    g_frmPrenCamere.AggiornaDatiAnno()
+         ' Richiama la procedura per la modifica dei dati del form attivo.
+         Select Case frmAttivo
+            Case TITOLO_FINESTRA_ELENCO_PREN_CAMERE
+               sender.Pressed = True
+               eui_Strumenti_Periodo_Tutte.Pressed = False
+               eui_Strumenti_Periodo_Mese.Pressed = False
+               eui_Strumenti_Periodo_Arrivo.Pressed = False
+               eui_Strumenti_Periodo_Partenza.Pressed = False
+               eui_Strumenti_Periodo_DalAl.Pressed = False
+               eui_Strumenti_Periodo_DalAl.Text = TESTO_FILTRO_PERIODO
+               g_frmPrenCamere.AggiornaDatiAnno()
 
-                Case TITOLO_FINESTRA_ELENCO_DOCUMENTI
-                    sender.Pressed = True
-                    eui_Strumenti_Periodo_DalAl.Pressed = False
-                    eui_Strumenti_Periodo_DalAl.Text = TESTO_FILTRO_PERIODO
-                    eui_Strumenti_Periodo_Tutte.Pressed = False
-                    eui_Strumenti_Periodo_Mese.Pressed = False
-                    eui_Strumenti_Sospesi_Filtra.Pressed = False
-                    g_frmDocumenti.filtroDati = "Anno"
-                    g_frmDocumenti.eui_txtTestoRicerca.Text = String.Empty
-                    g_frmDocumenti.AggiornaDatiAnno()
+            Case TITOLO_FINESTRA_ELENCO_DOCUMENTI
+               sender.Pressed = True
+               eui_Strumenti_Periodo_DalAl.Pressed = False
+               eui_Strumenti_Periodo_DalAl.Text = TESTO_FILTRO_PERIODO
+               eui_Strumenti_Periodo_Tutte.Pressed = False
+               eui_Strumenti_Periodo_Mese.Pressed = False
+               eui_Strumenti_Sospesi_Filtra.Pressed = False
+               g_frmDocumenti.filtroDati = "Anno"
+               g_frmDocumenti.eui_txtTestoRicerca.Text = String.Empty
+               g_frmDocumenti.AggiornaDatiAnno()
 
-                    ' Inserire qui il codice per gestire le altre finestre.
+               ' Inserire qui il codice per gestire le altre finestre.
 
-            End Select
+         End Select
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-        End Try
-    End Sub
+      End Try
+   End Sub
 
-    Private Sub eui_Strumenti_Periodo_Mese_Click(sender As Object, e As EventArgs) Handles eui_Strumenti_Periodo_Mese.Click
-        Try
-            ' Ottiene il form attivo.
-            Dim frmAttivo As String = EstraiNomeFinestra(Me.ActiveMdiChild.Text)
+   Private Sub eui_Strumenti_Periodo_Mese_Click(sender As Object, e As EventArgs) Handles eui_Strumenti_Periodo_Mese.Click
+      Try
+         ' Ottiene il form attivo.
+         Dim frmAttivo As String = EstraiNomeFinestra(Me.ActiveMdiChild.Text)
 
-            ' Richiama la procedura per la modifica dei dati del form attivo.
-            Select Case frmAttivo
-                Case TITOLO_FINESTRA_ELENCO_PREN_CAMERE
-                    sender.Pressed = True
-                    eui_Strumenti_Periodo_Tutte.Pressed = False
-                    eui_Strumenti_Periodo_Anno.Pressed = False
-                    eui_Strumenti_Periodo_Arrivo.Pressed = False
-                    eui_Strumenti_Periodo_Partenza.Pressed = False
-                    eui_Strumenti_Periodo_DalAl.Pressed = False
-                    eui_Strumenti_Periodo_DalAl.Text = TESTO_FILTRO_PERIODO
-                    g_frmPrenCamere.AggiornaDatiMese()
+         ' Richiama la procedura per la modifica dei dati del form attivo.
+         Select Case frmAttivo
+            Case TITOLO_FINESTRA_ELENCO_PREN_CAMERE
+               sender.Pressed = True
+               eui_Strumenti_Periodo_Tutte.Pressed = False
+               eui_Strumenti_Periodo_Anno.Pressed = False
+               eui_Strumenti_Periodo_Arrivo.Pressed = False
+               eui_Strumenti_Periodo_Partenza.Pressed = False
+               eui_Strumenti_Periodo_DalAl.Pressed = False
+               eui_Strumenti_Periodo_DalAl.Text = TESTO_FILTRO_PERIODO
+               g_frmPrenCamere.AggiornaDatiMese()
 
-                Case TITOLO_FINESTRA_ELENCO_DOCUMENTI
-                    sender.Pressed = True
-                    eui_Strumenti_Periodo_DalAl.Pressed = False
-                    eui_Strumenti_Periodo_DalAl.Text = TESTO_FILTRO_PERIODO
-                    eui_Strumenti_Periodo_Tutte.Pressed = False
-                    eui_Strumenti_Periodo_Anno.Pressed = False
-                    eui_Strumenti_Sospesi_Filtra.Pressed = False
-                    g_frmDocumenti.filtroDati = "Mese"
-                    g_frmDocumenti.eui_txtTestoRicerca.Text = String.Empty
-                    g_frmDocumenti.AggiornaDatiMese()
+            Case TITOLO_FINESTRA_ELENCO_DOCUMENTI
+               sender.Pressed = True
+               eui_Strumenti_Periodo_DalAl.Pressed = False
+               eui_Strumenti_Periodo_DalAl.Text = TESTO_FILTRO_PERIODO
+               eui_Strumenti_Periodo_Tutte.Pressed = False
+               eui_Strumenti_Periodo_Anno.Pressed = False
+               eui_Strumenti_Sospesi_Filtra.Pressed = False
+               g_frmDocumenti.filtroDati = "Mese"
+               g_frmDocumenti.eui_txtTestoRicerca.Text = String.Empty
+               g_frmDocumenti.AggiornaDatiMese()
 
-                    ' Inserire qui il codice per gestire le altre finestre.
+               ' Inserire qui il codice per gestire le altre finestre.
 
-            End Select
+         End Select
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-        End Try
-    End Sub
+      End Try
+   End Sub
 
-    Private Sub eui_Strumenti_Periodo_DalAl_Click(sender As Object, e As EventArgs) Handles eui_Strumenti_Periodo_DalAl.Click
-        Try
-            ' Ottiene il form attivo.
-            Dim frmAttivo As String = EstraiNomeFinestra(Me.ActiveMdiChild.Text)
+   Private Sub eui_Strumenti_Periodo_DalAl_Click(sender As Object, e As EventArgs) Handles eui_Strumenti_Periodo_DalAl.Click
+      Try
+         ' Ottiene il form attivo.
+         Dim frmAttivo As String = EstraiNomeFinestra(Me.ActiveMdiChild.Text)
 
-            ' Richiama la procedura per la modifica dei dati del form attivo.
-            Select Case frmAttivo
-                Case TITOLO_FINESTRA_ELENCO_PREN_CAMERE
-                    sender.Pressed = True
-                    eui_Strumenti_Periodo_Tutte.Pressed = False
-                    eui_Strumenti_Periodo_Anno.Pressed = False
-                    eui_Strumenti_Periodo_Mese.Pressed = False
-                    eui_Strumenti_Periodo_Arrivo.Pressed = False
-                    eui_Strumenti_Periodo_Partenza.Pressed = False
-                    g_frmPrenCamere.AggiornaDatiPeriodo()
+         ' Richiama la procedura per la modifica dei dati del form attivo.
+         Select Case frmAttivo
+            Case TITOLO_FINESTRA_ELENCO_PREN_CAMERE
+               sender.Pressed = True
+               eui_Strumenti_Periodo_Tutte.Pressed = False
+               eui_Strumenti_Periodo_Anno.Pressed = False
+               eui_Strumenti_Periodo_Mese.Pressed = False
+               eui_Strumenti_Periodo_Arrivo.Pressed = False
+               eui_Strumenti_Periodo_Partenza.Pressed = False
+               g_frmPrenCamere.AggiornaDatiPeriodo()
 
-                Case TITOLO_FINESTRA_ELENCO_DOCUMENTI
-                    sender.Pressed = True
-                    eui_Strumenti_Periodo_Tutte.Pressed = False
-                    eui_Strumenti_Periodo_Mese.Pressed = False
-                    eui_Strumenti_Periodo_Anno.Pressed = False
-                    eui_Strumenti_Sospesi_Filtra.Pressed = False
-                    g_frmDocumenti.filtroDati = "Periodo"
-                    g_frmDocumenti.eui_txtTestoRicerca.Text = String.Empty
-                    g_frmDocumenti.AggiornaDatiPeriodo()
+            Case TITOLO_FINESTRA_ELENCO_DOCUMENTI
+               sender.Pressed = True
+               eui_Strumenti_Periodo_Tutte.Pressed = False
+               eui_Strumenti_Periodo_Mese.Pressed = False
+               eui_Strumenti_Periodo_Anno.Pressed = False
+               eui_Strumenti_Sospesi_Filtra.Pressed = False
+               g_frmDocumenti.filtroDati = "Periodo"
+               g_frmDocumenti.eui_txtTestoRicerca.Text = String.Empty
+               g_frmDocumenti.AggiornaDatiPeriodo()
 
-                    ' Inserire qui il codice per gestire le altre finestre.
+               ' Inserire qui il codice per gestire le altre finestre.
 
-            End Select
+         End Select
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-        End Try
-    End Sub
+      End Try
+   End Sub
 
-    Private Sub eui_Strumenti_Periodo_Arrivo_Click(sender As Object, e As EventArgs) Handles eui_Strumenti_Periodo_Arrivo.Click
-        Try
-            ' Ottiene il form attivo.
-            Dim frmAttivo As String = EstraiNomeFinestra(Me.ActiveMdiChild.Text)
+   Private Sub eui_Strumenti_Periodo_Arrivo_Click(sender As Object, e As EventArgs) Handles eui_Strumenti_Periodo_Arrivo.Click
+      Try
+         ' Ottiene il form attivo.
+         Dim frmAttivo As String = EstraiNomeFinestra(Me.ActiveMdiChild.Text)
 
-            ' Richiama la procedura per la modifica dei dati del form attivo.
-            Select Case frmAttivo
-                Case TITOLO_FINESTRA_ELENCO_PREN_CAMERE
-                    sender.Pressed = True
-                    eui_Strumenti_Periodo_Tutte.Pressed = False
-                    eui_Strumenti_Periodo_Anno.Pressed = False
-                    eui_Strumenti_Periodo_Mese.Pressed = False
-                    eui_Strumenti_Periodo_Partenza.Pressed = False
-                    eui_Strumenti_Periodo_DalAl.Pressed = False
-                    eui_Strumenti_Periodo_DalAl.Text = TESTO_FILTRO_PERIODO
+         ' Richiama la procedura per la modifica dei dati del form attivo.
+         Select Case frmAttivo
+            Case TITOLO_FINESTRA_ELENCO_PREN_CAMERE
+               sender.Pressed = True
+               eui_Strumenti_Periodo_Tutte.Pressed = False
+               eui_Strumenti_Periodo_Anno.Pressed = False
+               eui_Strumenti_Periodo_Mese.Pressed = False
+               eui_Strumenti_Periodo_Partenza.Pressed = False
+               eui_Strumenti_Periodo_DalAl.Pressed = False
+               eui_Strumenti_Periodo_DalAl.Text = TESTO_FILTRO_PERIODO
 
-                    g_frmPrenCamere.AggiornaDatiArrivoOggi()
+               g_frmPrenCamere.AggiornaDatiArrivoOggi()
 
-                    ' Inserire qui il codice per gestire le altre finestre.
+               ' Inserire qui il codice per gestire le altre finestre.
 
-            End Select
+         End Select
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-        End Try
-    End Sub
+      End Try
+   End Sub
 
-    Private Sub eui_Strumenti_Periodo_Partenza_Click(sender As Object, e As EventArgs) Handles eui_Strumenti_Periodo_Partenza.Click
-        Try
-            ' Ottiene il form attivo.
-            Dim frmAttivo As String = EstraiNomeFinestra(Me.ActiveMdiChild.Text)
+   Private Sub eui_Strumenti_Periodo_Partenza_Click(sender As Object, e As EventArgs) Handles eui_Strumenti_Periodo_Partenza.Click
+      Try
+         ' Ottiene il form attivo.
+         Dim frmAttivo As String = EstraiNomeFinestra(Me.ActiveMdiChild.Text)
 
-            ' Richiama la procedura per la modifica dei dati del form attivo.
-            Select Case frmAttivo
-                Case TITOLO_FINESTRA_ELENCO_PREN_CAMERE
-                    sender.Pressed = True
-                    eui_Strumenti_Periodo_Tutte.Pressed = False
-                    eui_Strumenti_Periodo_Anno.Pressed = False
-                    eui_Strumenti_Periodo_Mese.Pressed = False
-                    eui_Strumenti_Periodo_Arrivo.Pressed = False
-                    eui_Strumenti_Periodo_DalAl.Pressed = False
-                    eui_Strumenti_Periodo_DalAl.Text = TESTO_FILTRO_PERIODO
+         ' Richiama la procedura per la modifica dei dati del form attivo.
+         Select Case frmAttivo
+            Case TITOLO_FINESTRA_ELENCO_PREN_CAMERE
+               sender.Pressed = True
+               eui_Strumenti_Periodo_Tutte.Pressed = False
+               eui_Strumenti_Periodo_Anno.Pressed = False
+               eui_Strumenti_Periodo_Mese.Pressed = False
+               eui_Strumenti_Periodo_Arrivo.Pressed = False
+               eui_Strumenti_Periodo_DalAl.Pressed = False
+               eui_Strumenti_Periodo_DalAl.Text = TESTO_FILTRO_PERIODO
 
-                    g_frmPrenCamere.AggiornaDatiPartenzaOggi()
+               g_frmPrenCamere.AggiornaDatiPartenzaOggi()
 
-                    ' Inserire qui il codice per gestire le altre finestre.
+               ' Inserire qui il codice per gestire le altre finestre.
 
-            End Select
+         End Select
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-        End Try
-    End Sub
+      End Try
+   End Sub
 
 #End Region
 
@@ -11469,133 +11500,133 @@ Friend Class frmMain
 
 #Region "Sospesi / Buoni pasto "
 
-    Private Sub eui_Strumenti_Sospesi_Filtra_Click(sender As Object, e As EventArgs) Handles eui_Strumenti_Sospesi_Filtra.Click
-        Try
-            ' Ottiene il form attivo.
-            Dim frmAttivo As String = EstraiNomeFinestra(Me.ActiveMdiChild.Text)
+   Private Sub eui_Strumenti_Sospesi_Filtra_Click(sender As Object, e As EventArgs) Handles eui_Strumenti_Sospesi_Filtra.Click
+      Try
+         ' Ottiene il form attivo.
+         Dim frmAttivo As String = EstraiNomeFinestra(Me.ActiveMdiChild.Text)
 
 
-            ' Richiama la procedura per la modifica dei dati del form attivo.
-            Select Case frmAttivo
+         ' Richiama la procedura per la modifica dei dati del form attivo.
+         Select Case frmAttivo
 
-                Case TITOLO_FINESTRA_ELENCO_DOCUMENTI
-                    sender.Pressed = True
-                    eui_Strumenti_Periodo_Tutte.Pressed = False
-                    eui_Strumenti_Periodo_DalAl.Pressed = False
-                    eui_Strumenti_Periodo_Mese.Pressed = False
-                    eui_Strumenti_Periodo_Anno.Pressed = False
-                    g_frmDocumenti.filtroDati = "Tutti"
-                    g_frmDocumenti.NascondiDate()
-                    g_frmDocumenti.eui_txtTestoRicerca.Text = String.Empty
-                    g_frmDocumenti.AggiornaDatiSospesi()
+            Case TITOLO_FINESTRA_ELENCO_DOCUMENTI
+               sender.Pressed = True
+               eui_Strumenti_Periodo_Tutte.Pressed = False
+               eui_Strumenti_Periodo_DalAl.Pressed = False
+               eui_Strumenti_Periodo_Mese.Pressed = False
+               eui_Strumenti_Periodo_Anno.Pressed = False
+               g_frmDocumenti.filtroDati = "Tutti"
+               g_frmDocumenti.NascondiDate()
+               g_frmDocumenti.eui_txtTestoRicerca.Text = String.Empty
+               g_frmDocumenti.AggiornaDatiSospesi()
 
-                    ' Inserire qui il codice per gestire le altre finestre.
+               ' Inserire qui il codice per gestire le altre finestre.
 
-            End Select
+         End Select
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-        End Try
+      End Try
 
-    End Sub
+   End Sub
 
-    Private Sub eui_Strumenti_Sospesi_Incassa_Click(sender As Object, e As EventArgs) Handles eui_Strumenti_Sospesi_Incassa.Click
-        Try
-            ' Ottiene il form attivo.
-            Dim frmAttivo As String = EstraiNomeFinestra(Me.ActiveMdiChild.Text)
+   Private Sub eui_Strumenti_Sospesi_Incassa_Click(sender As Object, e As EventArgs) Handles eui_Strumenti_Sospesi_Incassa.Click
+      Try
+         ' Ottiene il form attivo.
+         Dim frmAttivo As String = EstraiNomeFinestra(Me.ActiveMdiChild.Text)
 
-            ' Richiama la procedura per la modifica dei dati del form attivo.
-            Select Case frmAttivo
+         ' Richiama la procedura per la modifica dei dati del form attivo.
+         Select Case frmAttivo
 
-                Case TITOLO_FINESTRA_ELENCO_DOCUMENTI
-                    ' Apre la finestra per l'incasso del sospeso.
-                    g_frmDocumenti.IncassaSospeso()
+            Case TITOLO_FINESTRA_ELENCO_DOCUMENTI
+               ' Apre la finestra per l'incasso del sospeso.
+               g_frmDocumenti.IncassaSospeso()
 
-                    ' Inserire qui il codice per gestire le altre finestre.
+               ' Inserire qui il codice per gestire le altre finestre.
 
-            End Select
+         End Select
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-        End Try
+      End Try
 
-    End Sub
+   End Sub
 
-    Private Sub eui_Strumenti_Sospesi_Annulla_Click(sender As Object, e As EventArgs) Handles eui_Strumenti_Sospesi_Annulla.Click
-        Try
-            ' Ottiene il form attivo.
-            Dim frmAttivo As String = EstraiNomeFinestra(Me.ActiveMdiChild.Text)
+   Private Sub eui_Strumenti_Sospesi_Annulla_Click(sender As Object, e As EventArgs) Handles eui_Strumenti_Sospesi_Annulla.Click
+      Try
+         ' Ottiene il form attivo.
+         Dim frmAttivo As String = EstraiNomeFinestra(Me.ActiveMdiChild.Text)
 
-            ' Richiama la procedura per la modifica dei dati del form attivo.
-            Select Case frmAttivo
+         ' Richiama la procedura per la modifica dei dati del form attivo.
+         Select Case frmAttivo
 
-                Case TITOLO_FINESTRA_ELENCO_DOCUMENTI
-                    ' Annulla l'importo sospeso del documento selezionato.
-                    g_frmDocumenti.AnnullaSospeso(g_frmDocumenti.DataGrid1.Item(g_frmDocumenti.DataGrid1.CurrentCell.RowNumber, 0))
+            Case TITOLO_FINESTRA_ELENCO_DOCUMENTI
+               ' Annulla l'importo sospeso del documento selezionato.
+               g_frmDocumenti.AnnullaSospeso(g_frmDocumenti.DataGrid1.Item(g_frmDocumenti.DataGrid1.CurrentCell.RowNumber, 0))
 
-                    ' Inserire qui il codice per gestire le altre finestre.
+               ' Inserire qui il codice per gestire le altre finestre.
 
-            End Select
+         End Select
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-        End Try
+      End Try
 
-    End Sub
+   End Sub
 
-    Private Sub eui_Strumenti_Sospesi_Passa_Click(sender As Object, e As EventArgs) Handles eui_Strumenti_Sospesi_Passa.Click
-        Try
-            ' Ottiene il form attivo.
-            Dim frmAttivo As String = EstraiNomeFinestra(Me.ActiveMdiChild.Text)
+   Private Sub eui_Strumenti_Sospesi_Passa_Click(sender As Object, e As EventArgs) Handles eui_Strumenti_Sospesi_Passa.Click
+      Try
+         ' Ottiene il form attivo.
+         Dim frmAttivo As String = EstraiNomeFinestra(Me.ActiveMdiChild.Text)
 
-            ' Richiama la procedura per la modifica dei dati del form attivo.
-            Select Case frmAttivo
+         ' Richiama la procedura per la modifica dei dati del form attivo.
+         Select Case frmAttivo
 
-                Case TITOLO_FINESTRA_ELENCO_DOCUMENTI
-                    ' Passa l'importo del documento selezionato in sospeso.
-                    g_frmDocumenti.PassaSospeso(g_frmDocumenti.DataGrid1.Item(g_frmDocumenti.DataGrid1.CurrentCell.RowNumber, 0), g_frmDocumenti.DataGrid1.Item(g_frmDocumenti.DataGrid1.CurrentCell.RowNumber, 9))
+            Case TITOLO_FINESTRA_ELENCO_DOCUMENTI
+               ' Passa l'importo del documento selezionato in sospeso.
+               g_frmDocumenti.PassaSospeso(g_frmDocumenti.DataGrid1.Item(g_frmDocumenti.DataGrid1.CurrentCell.RowNumber, 0), g_frmDocumenti.DataGrid1.Item(g_frmDocumenti.DataGrid1.CurrentCell.RowNumber, 9))
 
-                    ' Inserire qui il codice per gestire le altre finestre.
+               ' Inserire qui il codice per gestire le altre finestre.
 
-            End Select
+         End Select
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-        End Try
+      End Try
 
-    End Sub
+   End Sub
 
-    Private Sub eui_Strumenti_Buoni_Pasto_Click(sender As Object, e As EventArgs) Handles eui_Strumenti_Buoni_Pasto.Click
-        Try
-            ' Ottiene il form attivo.
-            Dim frmAttivo As String = EstraiNomeFinestra(Me.ActiveMdiChild.Text)
+   Private Sub eui_Strumenti_Buoni_Pasto_Click(sender As Object, e As EventArgs) Handles eui_Strumenti_Buoni_Pasto.Click
+      Try
+         ' Ottiene il form attivo.
+         Dim frmAttivo As String = EstraiNomeFinestra(Me.ActiveMdiChild.Text)
 
-            ' Richiama la procedura per la modifica dei dati del form attivo.
-            Select Case frmAttivo
+         ' Richiama la procedura per la modifica dei dati del form attivo.
+         Select Case frmAttivo
 
-                Case TITOLO_FINESTRA_ELENCO_DOCUMENTI
-                    ' Apre l'elenco dei buoni contenuti nel documento selezionato.
-                    g_frmDocumenti.ApriElencoBuoni()
+            Case TITOLO_FINESTRA_ELENCO_DOCUMENTI
+               ' Apre l'elenco dei buoni contenuti nel documento selezionato.
+               g_frmDocumenti.ApriElencoBuoni()
 
-                    ' Inserire qui il codice per gestire le altre finestre.
+               ' Inserire qui il codice per gestire le altre finestre.
 
-            End Select
+         End Select
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-        End Try
+      End Try
 
-    End Sub
+   End Sub
 
 #End Region
 
@@ -11604,866 +11635,925 @@ Friend Class frmMain
 
 #Region "Procedure per i Moduli "
 
-    Public Function AttivaProdotto(ByVal chiaveAttivazione As String, ByVal codice1 As String, ByVal codice2 As String,
+   Public Function AttivaProdotto(ByVal chiaveAttivazione As String, ByVal codice1 As String, ByVal codice2 As String,
                                    ByVal codice3 As String, ByVal codice4 As String, ByVal codice5 As String, ByVal nomeChiaveConfig As String) As Boolean
-        Try
-            ' Modifica il cursore del mouse.
-            Cursor.Current = Cursors.AppStarting
+      Try
+         ' Modifica il cursore del mouse.
+         Cursor.Current = Cursors.AppStarting
 
-            Dim chiaveDigitata As String = UCase(codice1.ToUpper & codice2.ToUpper & codice3.ToUpper & codice4.ToUpper & codice5.ToUpper)
+         Dim chiaveDigitata As String = UCase(codice1.ToUpper & codice2.ToUpper & codice3.ToUpper & codice4.ToUpper & codice5.ToUpper)
 
-            DatiConfig = New AppConfig
-            DatiConfig.ConfigType = ConfigFileType.AppConfig
+         DatiConfig = New AppConfig
+         DatiConfig.ConfigType = ConfigFileType.AppConfig
 
-            If DatiConfig.GetValue(nomeChiaveConfig).ToUpper = chiaveAttivazione Then
-                Dim risposta As DialogResult
-                risposta = MessageBox.Show("La licenza per questo modulo o prodotto è già attiva!", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1)
-                Return False
-            Else
-                If chiaveDigitata = chiaveAttivazione Then
-
-                    ' Salva la chiave ne file di configurazione.
-                    DatiConfig.SetValue(nomeChiaveConfig, chiaveAttivazione)
-
-                    Dim risposta As DialogResult
-                    risposta = MessageBox.Show("La licenza per questo modulo o prodotto è stata attivata con successo!", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1)
-                    Return True
-                Else
-                    Dim risposta As DialogResult
-                    risposta = MessageBox.Show("Il codice di attivazione inserito non è corretto. Richiedere un codice valido!", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1)
-                    Return False
-                End If
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-
+         If DatiConfig.GetValue(nomeChiaveConfig).ToUpper = chiaveAttivazione Then
+            Dim risposta As DialogResult
+            risposta = MessageBox.Show("La licenza per questo modulo o prodotto è già attiva!", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1)
             Return False
+         Else
+            If chiaveDigitata = chiaveAttivazione Then
 
-        Finally
-            ' Modifica il cursore del mouse.
-            Cursor.Current = Cursors.Default
+               ' Salva la chiave ne file di configurazione.
+               DatiConfig.SetValue(nomeChiaveConfig, chiaveAttivazione)
 
-        End Try
-    End Function
-
-    Private Function DisattivaProdotto(ByVal nomeChiaveConfig As String) As Boolean
-        Try
-            ' Modifica il cursore del mouse.
-            Cursor.Current = Cursors.AppStarting
-
-            DatiConfig = New AppConfig
-            DatiConfig.ConfigType = ConfigFileType.AppConfig
-
-            DatiConfig.SetValue(nomeChiaveConfig, "")
-
-            Return True
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-
-            Return False
-
-        Finally
-            ' Modifica il cursore del mouse.
-            Cursor.Current = Cursors.Default
-
-        End Try
-    End Function
-
-    Private Sub ImpostaModuli()
-        Try
-            ' Modifica il cursore del mouse.
-            Cursor.Current = Cursors.AppStarting
-
-            ' Verifica la presenza della chiave di attivazione.
-            DatiConfig = New AppConfig
-            DatiConfig.ConfigType = ConfigFileType.AppConfig
-
-            If DatiConfig.GetValue(Modulo.NOME_PENDRIVE_PORTABLE_CONFIG) = String.Empty Then
-
-                ' Installazione su computer - La chiave di attivazione viene generata dal PC e confrontata con quella salvata nel file di configurazione.
-                If DatiConfig.GetValue(Modulo.NOME_HOSPITALITY_CONFIG) = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_HOSPITALITY) Then
-                    moduloAttivo.Hospitality = True
-                Else
-                    moduloAttivo.Hospitality = False
-                End If
-                If DatiConfig.GetValue(Modulo.NOME_MAGAZZINO_CONFIG) = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_MAGAZZINO) Then
-                    moduloAttivo.Magazzino = True
-                Else
-                    moduloAttivo.Magazzino = False
-                End If
-                If DatiConfig.GetValue(Modulo.NOME_ETICHETTE_CONFIG) = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_ETICHETTE) Then
-                    moduloAttivo.Etichette = True
-                Else
-                    moduloAttivo.Etichette = False
-                End If
-                If DatiConfig.GetValue(Modulo.NOME_PENDRIVE_RECOVERY_CONFIG) = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_PENDRIVE_RECOVERY) Then
-                    moduloAttivo.PenDriveRecovery = True
-                Else
-                    moduloAttivo.PenDriveRecovery = False
-                End If
-                If DatiConfig.GetValue(Modulo.NOME_PENDRIVE_PORTABLE_CONFIG) = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_PENDRIVE_PORTABLE) Then
-                    moduloAttivo.PenDrivePortable = True
-                Else
-                    moduloAttivo.PenDrivePortable = False
-                End If
-                If DatiConfig.GetValue(Modulo.NOME_REG_CASSA_CONFIG) = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_REG_CASSA) Then
-                    moduloAttivo.RegCassa = True
-                Else
-                    moduloAttivo.RegCassa = False
-                End If
-                If DatiConfig.GetValue(Modulo.NOME_BAR_CONFIG) = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_BAR) Then
-                    moduloAttivo.Bar = True
-                Else
-                    moduloAttivo.Bar = False
-                End If
-                If DatiConfig.GetValue(Modulo.NOME_CHEF_CONFIG) = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_RISTORANTE) Then
-                    moduloAttivo.Ristorante = True
-                Else
-                    moduloAttivo.Ristorante = False
-                End If
-                If DatiConfig.GetValue(Modulo.NOME_PALMARI_CONFIG) = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_PALMARI) Then
-                    moduloAttivo.Palmari = True
-                Else
-                    moduloAttivo.Palmari = False
-                End If
-                If DatiConfig.GetValue(Modulo.NOME_PREN_ONLINE_CONFIG) = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_PREN_ONLINE) Then
-                    moduloAttivo.PrenOnLine = True
-                Else
-                    moduloAttivo.PrenOnLine = False
-                End If
-                If DatiConfig.GetValue(Modulo.NOME_SPORTING_CONFIG) = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_CENTRO_SPORTIVO) Then
-                    moduloAttivo.CentroSportivo = True
-                Else
-                    moduloAttivo.CentroSportivo = False
-                End If
-                If DatiConfig.GetValue(Modulo.NOME_HOTEL_CONFIG) = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_HOTEL) Then
-                    moduloAttivo.Hotel = True
-                Else
-                    moduloAttivo.Hotel = False
-                End If
-
+               Dim risposta As DialogResult
+               risposta = MessageBox.Show("La licenza per questo modulo o prodotto è stata attivata con successo!", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1)
+               Return True
             Else
-
-                ' Installazione su USB Pen Drive - La chiave di attivazione non viene generata dal PC ma viene controllata la sua esistenza nel file di configurazione.
-                If DatiConfig.GetValue(Modulo.NOME_HOSPITALITY_CONFIG) <> String.Empty And DatiConfig.GetValue(Modulo.NOME_HOSPITALITY_CONFIG).Length = 25 Then
-                    moduloAttivo.Hospitality = True
-                Else
-                    moduloAttivo.Hospitality = False
-                End If
-                If DatiConfig.GetValue(Modulo.NOME_MAGAZZINO_CONFIG) <> String.Empty And DatiConfig.GetValue(Modulo.NOME_MAGAZZINO_CONFIG).Length = 25 Then
-                    moduloAttivo.Magazzino = True
-                Else
-                    moduloAttivo.Magazzino = False
-                End If
-                If DatiConfig.GetValue(Modulo.NOME_ETICHETTE_CONFIG) <> String.Empty And DatiConfig.GetValue(Modulo.NOME_ETICHETTE_CONFIG).Length = 25 Then
-                    moduloAttivo.Etichette = True
-                Else
-                    moduloAttivo.Etichette = False
-                End If
-                If DatiConfig.GetValue(Modulo.NOME_PENDRIVE_RECOVERY_CONFIG) <> String.Empty And DatiConfig.GetValue(Modulo.NOME_PENDRIVE_RECOVERY_CONFIG).Length = 25 Then
-                    moduloAttivo.PenDriveRecovery = True
-                Else
-                    moduloAttivo.PenDriveRecovery = False
-                End If
-                If DatiConfig.GetValue(Modulo.NOME_PENDRIVE_PORTABLE_CONFIG) <> String.Empty And DatiConfig.GetValue(Modulo.NOME_PENDRIVE_PORTABLE_CONFIG).Length = 25 Then
-                    moduloAttivo.PenDrivePortable = True
-                Else
-                    moduloAttivo.PenDrivePortable = False
-                End If
-                If DatiConfig.GetValue(Modulo.NOME_REG_CASSA_CONFIG) <> String.Empty And DatiConfig.GetValue(Modulo.NOME_REG_CASSA_CONFIG).Length = 25 Then
-                    moduloAttivo.RegCassa = True
-                Else
-                    moduloAttivo.RegCassa = False
-                End If
-                If DatiConfig.GetValue(Modulo.NOME_BAR_CONFIG) <> String.Empty And DatiConfig.GetValue(Modulo.NOME_BAR_CONFIG).Length = 25 Then
-                    moduloAttivo.Bar = True
-                Else
-                    moduloAttivo.Bar = False
-                End If
-                If DatiConfig.GetValue(Modulo.NOME_CHEF_CONFIG) <> String.Empty And DatiConfig.GetValue(Modulo.NOME_CHEF_CONFIG).Length = 25 Then
-                    moduloAttivo.Ristorante = True
-                Else
-                    moduloAttivo.Ristorante = False
-                End If
-                If DatiConfig.GetValue(Modulo.NOME_PALMARI_CONFIG) <> String.Empty And DatiConfig.GetValue(Modulo.NOME_PALMARI_CONFIG).Length = 25 Then
-                    moduloAttivo.Palmari = True
-                Else
-                    moduloAttivo.Palmari = False
-                End If
-                If DatiConfig.GetValue(Modulo.NOME_PREN_ONLINE_CONFIG) <> String.Empty And DatiConfig.GetValue(Modulo.NOME_PREN_ONLINE_CONFIG).Length = 25 Then
-                    moduloAttivo.PrenOnLine = True
-                Else
-                    moduloAttivo.PrenOnLine = False
-                End If
-                If DatiConfig.GetValue(Modulo.NOME_SPORTING_CONFIG) <> String.Empty And DatiConfig.GetValue(Modulo.NOME_SPORTING_CONFIG).Length = 25 Then
-                    moduloAttivo.CentroSportivo = True
-                Else
-                    moduloAttivo.CentroSportivo = False
-                End If
-                If DatiConfig.GetValue(Modulo.NOME_HOTEL_CONFIG) <> String.Empty And DatiConfig.GetValue(Modulo.NOME_HOTEL_CONFIG).Length = 25 Then
-                    moduloAttivo.Hotel = True
-                Else
-                    moduloAttivo.Hotel = False
-                End If
-
+               Dim risposta As DialogResult
+               risposta = MessageBox.Show("Il codice di attivazione inserito non è corretto. Richiedere un codice valido!", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1)
+               Return False
             End If
+         End If
 
-            Dim i As Integer = 0
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-            If moduloAttivo.Hospitality = True Then
-                eui_File.ApplicationButtonStyle = Elegant.Ui.RibbonApplicationButtonStyle.Default
-                NOME_PRODOTTO = NOME_PRODOTTO_HOSPITALITY_SUITE
-                ImpostaIcona(Me)
-                Me.Text = NOME_PRODOTTO
-                AttivaDisattivaTutto(True)
+         Return False
+
+      Finally
+         ' Modifica il cursore del mouse.
+         Cursor.Current = Cursors.Default
+
+      End Try
+   End Function
+
+   Private Function DisattivaProdotto(ByVal nomeChiaveConfig As String) As Boolean
+      Try
+         ' Modifica il cursore del mouse.
+         Cursor.Current = Cursors.AppStarting
+
+         DatiConfig = New AppConfig
+         DatiConfig.ConfigType = ConfigFileType.AppConfig
+
+         DatiConfig.SetValue(nomeChiaveConfig, "")
+
+         Return True
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+         Return False
+
+      Finally
+         ' Modifica il cursore del mouse.
+         Cursor.Current = Cursors.Default
+
+      End Try
+   End Function
+
+   Private Sub ImpostaModuli()
+      Try
+         ' Modifica il cursore del mouse.
+         Cursor.Current = Cursors.AppStarting
+
+         ' Verifica la presenza della chiave di attivazione.
+         DatiConfig = New AppConfig
+         DatiConfig.ConfigType = ConfigFileType.AppConfig
+
+         If DatiConfig.GetValue(Modulo.NOME_PENDRIVE_PORTABLE_CONFIG) = String.Empty Then
+
+            ' Installazione su computer - La chiave di attivazione viene generata dal PC e confrontata con quella salvata nel file di configurazione.
+            If DatiConfig.GetValue(Modulo.NOME_HOSPITALITY_CONFIG) = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_HOSPITALITY) Then
+               moduloAttivo.Hospitality = True
             Else
-                If moduloAttivo.Bar = True And moduloAttivo.Ristorante = False Then
-                    eui_File.ApplicationButtonStyle = Elegant.Ui.RibbonApplicationButtonStyle.Office2010Olive
-                    NOME_PRODOTTO = NOME_PRODOTTO_BAR
-                    i = i + 1
-                End If
-
-                If moduloAttivo.Ristorante = True Then
-                    eui_File.ApplicationButtonStyle = Elegant.Ui.RibbonApplicationButtonStyle.Office2010Green
-                    NOME_PRODOTTO = NOME_PRODOTTO_CHEF
-                    i = i + 1
-                End If
-
-                If moduloAttivo.CentroSportivo = True Then
-                    eui_File.ApplicationButtonStyle = Elegant.Ui.RibbonApplicationButtonStyle.Office2010Cyan
-                    NOME_PRODOTTO = NOME_PRODOTTO_SPORTING
-                    i = i + 1
-                End If
-
-                If moduloAttivo.Hotel = True Then
-                    eui_File.ApplicationButtonStyle = Elegant.Ui.RibbonApplicationButtonStyle.Office2010Rust
-                    NOME_PRODOTTO = NOME_PRODOTTO_HOTEL
-                    i = i + 1
-                End If
-
-                If i = 1 Then
-                    AttivaDisattivaTutto(True)
-
-                ElseIf i > 1 Then
-                    eui_File.ApplicationButtonStyle = Elegant.Ui.RibbonApplicationButtonStyle.Default
-                    NOME_PRODOTTO = NOME_PRODOTTO_HOSPITALITY
-                    AttivaDisattivaTutto(True)
-
-                ElseIf i = 0 Then
-                    eui_File.ApplicationButtonStyle = Elegant.Ui.RibbonApplicationButtonStyle.Default
-                    NOME_PRODOTTO = NOME_PRODOTTO_HOSPITALITY_SUITE
-
-                    If moduloAttivo.Magazzino = True Then
-                        If DisattivaProdotto(Modulo.NOME_MAGAZZINO_CONFIG) = True Then
-                            ImpostaDatiListaModuli(Modulo.NOME_MAGAZZINO, "", Color.Gray, False)
-                            moduloAttivo.Magazzino = False
-                        End If
-                    End If
-                    If moduloAttivo.Etichette = True Then
-                        If DisattivaProdotto(Modulo.NOME_ETICHETTE_CONFIG) = True Then
-                            ImpostaDatiListaModuli(Modulo.NOME_ETICHETTE, "", Color.Gray, False)
-                            moduloAttivo.Etichette = False
-                        End If
-                    End If
-                    If moduloAttivo.PenDrivePortable = True Then
-                        If DisattivaProdotto(Modulo.NOME_PENDRIVE_PORTABLE_CONFIG) = True Then
-                            ImpostaDatiListaModuli(Modulo.NOME_PENDRIVE_PORTABLE, "", Color.Gray, False)
-                            moduloAttivo.PenDrivePortable = False
-                        End If
-                    End If
-                    If moduloAttivo.PenDriveRecovery = True Then
-                        If DisattivaProdotto(Modulo.NOME_PENDRIVE_RECOVERY_CONFIG) = True Then
-                            ImpostaDatiListaModuli(Modulo.NOME_PENDRIVE_RECOVERY, "", Color.Gray, False)
-                            moduloAttivo.PenDriveRecovery = False
-                        End If
-                    End If
-                    If moduloAttivo.RegCassa = True Then
-                        If DisattivaProdotto(Modulo.NOME_REG_CASSA_CONFIG) = True Then
-                            ImpostaDatiListaModuli(Modulo.NOME_REG_CASSA, "", Color.Gray, False)
-                            moduloAttivo.RegCassa = False
-                        End If
-                    End If
-
-                    AttivaDisattivaTutto(False)
-
-                    MessageBox.Show(MSG_RIMOSSI_TUTTI_PRODOTTI, NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1)
-                End If
-
-                ' Imposta l'icona della finestra in base al prodotto installato.
-                ImpostaIcona(Me)
-                Me.Text = NOME_PRODOTTO
+               moduloAttivo.Hospitality = False
+            End If
+            If DatiConfig.GetValue(Modulo.NOME_MAGAZZINO_CONFIG) = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_MAGAZZINO) Then
+               moduloAttivo.Magazzino = True
+            Else
+               moduloAttivo.Magazzino = False
+            End If
+            If DatiConfig.GetValue(Modulo.NOME_ETICHETTE_CONFIG) = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_ETICHETTE) Then
+               moduloAttivo.Etichette = True
+            Else
+               moduloAttivo.Etichette = False
+            End If
+            If DatiConfig.GetValue(Modulo.NOME_PENDRIVE_RECOVERY_CONFIG) = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_PENDRIVE_RECOVERY) Then
+               moduloAttivo.PenDriveRecovery = True
+            Else
+               moduloAttivo.PenDriveRecovery = False
+            End If
+            If DatiConfig.GetValue(Modulo.NOME_PENDRIVE_PORTABLE_CONFIG) = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_PENDRIVE_PORTABLE) Then
+               moduloAttivo.PenDrivePortable = True
+            Else
+               moduloAttivo.PenDrivePortable = False
+            End If
+            If DatiConfig.GetValue(Modulo.NOME_REG_CASSA_CONFIG) = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_REG_CASSA) Then
+               moduloAttivo.RegCassa = True
+            Else
+               moduloAttivo.RegCassa = False
+            End If
+            If DatiConfig.GetValue(Modulo.NOME_BAR_CONFIG) = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_BAR) Then
+               moduloAttivo.Bar = True
+            Else
+               moduloAttivo.Bar = False
+            End If
+            If DatiConfig.GetValue(Modulo.NOME_CHEF_CONFIG) = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_RISTORANTE) Then
+               moduloAttivo.Ristorante = True
+            Else
+               moduloAttivo.Ristorante = False
+            End If
+            If DatiConfig.GetValue(Modulo.NOME_PALMARI_CONFIG) = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_PALMARI) Then
+               moduloAttivo.Palmari = True
+            Else
+               moduloAttivo.Palmari = False
+            End If
+            If DatiConfig.GetValue(Modulo.NOME_PREN_ONLINE_CONFIG) = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_PREN_ONLINE) Then
+               moduloAttivo.PrenOnLine = True
+            Else
+               moduloAttivo.PrenOnLine = False
+            End If
+            If DatiConfig.GetValue(Modulo.NOME_SPORTING_CONFIG) = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_CENTRO_SPORTIVO) Then
+               moduloAttivo.CentroSportivo = True
+            Else
+               moduloAttivo.CentroSportivo = False
+            End If
+            If DatiConfig.GetValue(Modulo.NOME_HOTEL_CONFIG) = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_HOTEL) Then
+               moduloAttivo.Hotel = True
+            Else
+               moduloAttivo.Hotel = False
             End If
 
-            ' Per i prodotti mantenere questo ordine di esecuzione
-            ' 1.
-            AttivaDisattivaModuloHotel(moduloAttivo.Hotel)
-            ' 2.
-            AttivaDisattivaModuloRistorante(moduloAttivo.Ristorante)
-            ' 3.
-            AttivaDisattivaModuloBar(moduloAttivo.Bar)
-            ' 4.
-            AttivaDisattivaModuloCentroSportivo(moduloAttivo.CentroSportivo)
+         Else
 
-            ' Per i moduli non è necessario un ordine di esecuzione.
-            AttivaDisattivaModuloMagazzino(moduloAttivo.Magazzino)
-            AttivaDisattivaModuloEtichette(moduloAttivo.Etichette)
-            AttivaDisattivaModuloPalmari(moduloAttivo.Palmari)
-            AttivaDisattivaModuloPrenOnLine(moduloAttivo.PrenOnLine)
-            AttivaDisattivaModuloPenDriveRecovery(moduloAttivo.PenDriveRecovery)
-            AttivaDisattivaModuloPenDrivePortable(moduloAttivo.PenDrivePortable)
-            AttivaDisattivaModuloRegCassa(moduloAttivo.RegCassa)
-
-
-            VerificaVisibilitàGruppiModuli()
-
-            ' Aggiorna le informazioni dei prodotti installati.
-            CaricaInfoProdottiAttivi()
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-
-        Finally
-            ' Modifica il cursore del mouse.
-            Cursor.Current = Cursors.Default
-
-        End Try
-    End Sub
-
-    Private Sub CaricaListaModuli()
-        Try
-            ' HOSPITALITY SOLUTION SUITE.
-            If moduloAttivo.Hospitality = True Then
-                ImpostaDatiListaModuli(Modulo.NOME_HOSPITALITY, CHIAVE_ATTIVAZIONE_HOSPITALITY, Color.MidnightBlue, True)
+            ' Installazione su USB Pen Drive - La chiave di attivazione non viene generata dal PC ma viene controllata la sua esistenza nel file di configurazione.
+            If DatiConfig.GetValue(Modulo.NOME_HOSPITALITY_CONFIG) <> String.Empty And DatiConfig.GetValue(Modulo.NOME_HOSPITALITY_CONFIG).Length = 25 Then
+               moduloAttivo.Hospitality = True
+            Else
+               moduloAttivo.Hospitality = False
+            End If
+            If DatiConfig.GetValue(Modulo.NOME_MAGAZZINO_CONFIG) <> String.Empty And DatiConfig.GetValue(Modulo.NOME_MAGAZZINO_CONFIG).Length = 25 Then
+               moduloAttivo.Magazzino = True
+            Else
+               moduloAttivo.Magazzino = False
+            End If
+            If DatiConfig.GetValue(Modulo.NOME_ETICHETTE_CONFIG) <> String.Empty And DatiConfig.GetValue(Modulo.NOME_ETICHETTE_CONFIG).Length = 25 Then
+               moduloAttivo.Etichette = True
+            Else
+               moduloAttivo.Etichette = False
+            End If
+            If DatiConfig.GetValue(Modulo.NOME_PENDRIVE_RECOVERY_CONFIG) <> String.Empty And DatiConfig.GetValue(Modulo.NOME_PENDRIVE_RECOVERY_CONFIG).Length = 25 Then
+               moduloAttivo.PenDriveRecovery = True
+            Else
+               moduloAttivo.PenDriveRecovery = False
+            End If
+            If DatiConfig.GetValue(Modulo.NOME_PENDRIVE_PORTABLE_CONFIG) <> String.Empty And DatiConfig.GetValue(Modulo.NOME_PENDRIVE_PORTABLE_CONFIG).Length = 25 Then
+               moduloAttivo.PenDrivePortable = True
+            Else
+               moduloAttivo.PenDrivePortable = False
+            End If
+            If DatiConfig.GetValue(Modulo.NOME_REG_CASSA_CONFIG) <> String.Empty And DatiConfig.GetValue(Modulo.NOME_REG_CASSA_CONFIG).Length = 25 Then
+               moduloAttivo.RegCassa = True
+            Else
+               moduloAttivo.RegCassa = False
+            End If
+            If DatiConfig.GetValue(Modulo.NOME_BAR_CONFIG) <> String.Empty And DatiConfig.GetValue(Modulo.NOME_BAR_CONFIG).Length = 25 Then
+               moduloAttivo.Bar = True
+            Else
+               moduloAttivo.Bar = False
+            End If
+            If DatiConfig.GetValue(Modulo.NOME_CHEF_CONFIG) <> String.Empty And DatiConfig.GetValue(Modulo.NOME_CHEF_CONFIG).Length = 25 Then
+               moduloAttivo.Ristorante = True
+            Else
+               moduloAttivo.Ristorante = False
+            End If
+            If DatiConfig.GetValue(Modulo.NOME_PALMARI_CONFIG) <> String.Empty And DatiConfig.GetValue(Modulo.NOME_PALMARI_CONFIG).Length = 25 Then
+               moduloAttivo.Palmari = True
+            Else
+               moduloAttivo.Palmari = False
+            End If
+            If DatiConfig.GetValue(Modulo.NOME_PREN_ONLINE_CONFIG) <> String.Empty And DatiConfig.GetValue(Modulo.NOME_PREN_ONLINE_CONFIG).Length = 25 Then
+               moduloAttivo.PrenOnLine = True
+            Else
+               moduloAttivo.PrenOnLine = False
+            End If
+            If DatiConfig.GetValue(Modulo.NOME_SPORTING_CONFIG) <> String.Empty And DatiConfig.GetValue(Modulo.NOME_SPORTING_CONFIG).Length = 25 Then
+               moduloAttivo.CentroSportivo = True
+            Else
+               moduloAttivo.CentroSportivo = False
+            End If
+            If DatiConfig.GetValue(Modulo.NOME_HOTEL_CONFIG) <> String.Empty And DatiConfig.GetValue(Modulo.NOME_HOTEL_CONFIG).Length = 25 Then
+               moduloAttivo.Hotel = True
+            Else
+               moduloAttivo.Hotel = False
             End If
 
-            ' HOTEL SOLUTION.
-            If moduloAttivo.Hotel = True Then
-                ImpostaDatiListaModuli(Modulo.NOME_HOTEL, CHIAVE_ATTIVAZIONE_HOTEL, Color.Brown, True)
+         End If
+
+         Dim i As Integer = 0
+
+         If moduloAttivo.Hospitality = True Then
+            eui_File.ApplicationButtonStyle = Elegant.Ui.RibbonApplicationButtonStyle.Default
+            NOME_PRODOTTO = NOME_PRODOTTO_HOSPITALITY_SUITE
+            ImpostaIcona(Me)
+            Me.Text = NOME_PRODOTTO
+            AttivaDisattivaTutto(True)
+         Else
+            If moduloAttivo.Bar = True And moduloAttivo.Ristorante = False Then
+               eui_File.ApplicationButtonStyle = Elegant.Ui.RibbonApplicationButtonStyle.Office2010Olive
+               NOME_PRODOTTO = NOME_PRODOTTO_BAR
+               i = i + 1
             End If
 
-            ' BAR SOLUTION.
-            If moduloAttivo.Bar = True Then
-                ImpostaDatiListaModuli(Modulo.NOME_BAR, CHIAVE_ATTIVAZIONE_BAR, Color.Green, True)
-            End If
-
-            ' CHEF SOLUTION.
             If moduloAttivo.Ristorante = True Then
-                ImpostaDatiListaModuli(Modulo.NOME_CHEF, CHIAVE_ATTIVAZIONE_RISTORANTE, Color.Green, True)
+               eui_File.ApplicationButtonStyle = Elegant.Ui.RibbonApplicationButtonStyle.Office2010Green
+               NOME_PRODOTTO = NOME_PRODOTTO_CHEF
+               i = i + 1
             End If
 
-            ' SPORTING CLUB SOLUTION.
             If moduloAttivo.CentroSportivo = True Then
-                ImpostaDatiListaModuli(Modulo.NOME_SPORTING, CHIAVE_ATTIVAZIONE_CENTRO_SPORTIVO, Color.DarkCyan, True)
+               eui_File.ApplicationButtonStyle = Elegant.Ui.RibbonApplicationButtonStyle.Office2010Cyan
+               NOME_PRODOTTO = NOME_PRODOTTO_SPORTING
+               i = i + 1
             End If
 
-            ' MODULO MAGAZZINO.
-            If moduloAttivo.Magazzino = True Then
-                ImpostaDatiListaModuli(Modulo.NOME_MAGAZZINO, CHIAVE_ATTIVAZIONE_MAGAZZINO, Color.MidnightBlue, True)
+            If moduloAttivo.Hotel = True Then
+               eui_File.ApplicationButtonStyle = Elegant.Ui.RibbonApplicationButtonStyle.Office2010Rust
+               NOME_PRODOTTO = NOME_PRODOTTO_HOTEL
+               i = i + 1
             End If
 
-            ' MODULO ETICHETTE.
-            If moduloAttivo.Etichette = True Then
-                ImpostaDatiListaModuli(Modulo.NOME_ETICHETTE, CHIAVE_ATTIVAZIONE_ETICHETTE, Color.MidnightBlue, True)
+            If i = 1 Then
+               AttivaDisattivaTutto(True)
+
+            ElseIf i > 1 Then
+               eui_File.ApplicationButtonStyle = Elegant.Ui.RibbonApplicationButtonStyle.Default
+               NOME_PRODOTTO = NOME_PRODOTTO_HOSPITALITY
+               AttivaDisattivaTutto(True)
+
+            ElseIf i = 0 Then
+               eui_File.ApplicationButtonStyle = Elegant.Ui.RibbonApplicationButtonStyle.Default
+               NOME_PRODOTTO = NOME_PRODOTTO_HOSPITALITY_SUITE
+
+               If moduloAttivo.Magazzino = True Then
+                  If DisattivaProdotto(Modulo.NOME_MAGAZZINO_CONFIG) = True Then
+                     ImpostaDatiListaModuli(Modulo.NOME_MAGAZZINO, "", Color.Gray, False)
+                     moduloAttivo.Magazzino = False
+                  End If
+               End If
+               If moduloAttivo.Etichette = True Then
+                  If DisattivaProdotto(Modulo.NOME_ETICHETTE_CONFIG) = True Then
+                     ImpostaDatiListaModuli(Modulo.NOME_ETICHETTE, "", Color.Gray, False)
+                     moduloAttivo.Etichette = False
+                  End If
+               End If
+               If moduloAttivo.PenDrivePortable = True Then
+                  If DisattivaProdotto(Modulo.NOME_PENDRIVE_PORTABLE_CONFIG) = True Then
+                     ImpostaDatiListaModuli(Modulo.NOME_PENDRIVE_PORTABLE, "", Color.Gray, False)
+                     moduloAttivo.PenDrivePortable = False
+                  End If
+               End If
+               If moduloAttivo.PenDriveRecovery = True Then
+                  If DisattivaProdotto(Modulo.NOME_PENDRIVE_RECOVERY_CONFIG) = True Then
+                     ImpostaDatiListaModuli(Modulo.NOME_PENDRIVE_RECOVERY, "", Color.Gray, False)
+                     moduloAttivo.PenDriveRecovery = False
+                  End If
+               End If
+               If moduloAttivo.RegCassa = True Then
+                  If DisattivaProdotto(Modulo.NOME_REG_CASSA_CONFIG) = True Then
+                     ImpostaDatiListaModuli(Modulo.NOME_REG_CASSA, "", Color.Gray, False)
+                     moduloAttivo.RegCassa = False
+                  End If
+               End If
+
+               AttivaDisattivaTutto(False)
+
+               MessageBox.Show(MSG_RIMOSSI_TUTTI_PRODOTTI, NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1)
             End If
 
-            ' MODULO PALMARI.
-            If moduloAttivo.Palmari = True Then
-                ImpostaDatiListaModuli(Modulo.NOME_PALMARI, CHIAVE_ATTIVAZIONE_PALMARI, Color.Green, True)
+            ' Imposta l'icona della finestra in base al prodotto installato.
+            ImpostaIcona(Me)
+            Me.Text = NOME_PRODOTTO
+         End If
+
+         ' Per i prodotti mantenere questo ordine di esecuzione
+         ' 1.
+         AttivaDisattivaModuloHotel(moduloAttivo.Hotel)
+         ' 2.
+         AttivaDisattivaModuloRistorante(moduloAttivo.Ristorante)
+         ' 3.
+         AttivaDisattivaModuloBar(moduloAttivo.Bar)
+         ' 4.
+         AttivaDisattivaModuloCentroSportivo(moduloAttivo.CentroSportivo)
+
+         ' Per i moduli non è necessario un ordine di esecuzione.
+         AttivaDisattivaModuloMagazzino(moduloAttivo.Magazzino)
+         AttivaDisattivaModuloEtichette(moduloAttivo.Etichette)
+         AttivaDisattivaModuloPalmari(moduloAttivo.Palmari)
+         AttivaDisattivaModuloPrenOnLine(moduloAttivo.PrenOnLine)
+         AttivaDisattivaModuloPenDriveRecovery(moduloAttivo.PenDriveRecovery)
+         AttivaDisattivaModuloPenDrivePortable(moduloAttivo.PenDrivePortable)
+         AttivaDisattivaModuloRegCassa(moduloAttivo.RegCassa)
+
+
+         VerificaVisibilitàGruppiModuli()
+
+         ' Aggiorna le informazioni dei prodotti installati.
+         CaricaInfoProdottiAttivi()
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      Finally
+         ' Modifica il cursore del mouse.
+         Cursor.Current = Cursors.Default
+
+      End Try
+   End Sub
+
+   Private Sub CaricaListaModuli()
+      Try
+         ' HOSPITALITY SOLUTION SUITE.
+         If moduloAttivo.Hospitality = True Then
+            ImpostaDatiListaModuli(Modulo.NOME_HOSPITALITY, CHIAVE_ATTIVAZIONE_HOSPITALITY, Color.MidnightBlue, True)
+         End If
+
+         ' HOTEL SOLUTION.
+         If moduloAttivo.Hotel = True Then
+            ImpostaDatiListaModuli(Modulo.NOME_HOTEL, CHIAVE_ATTIVAZIONE_HOTEL, Color.Brown, True)
+         End If
+
+         ' BAR SOLUTION.
+         If moduloAttivo.Bar = True Then
+            ImpostaDatiListaModuli(Modulo.NOME_BAR, CHIAVE_ATTIVAZIONE_BAR, Color.Green, True)
+         End If
+
+         ' CHEF SOLUTION.
+         If moduloAttivo.Ristorante = True Then
+            ImpostaDatiListaModuli(Modulo.NOME_CHEF, CHIAVE_ATTIVAZIONE_RISTORANTE, Color.Green, True)
+         End If
+
+         ' SPORTING CLUB SOLUTION.
+         If moduloAttivo.CentroSportivo = True Then
+            ImpostaDatiListaModuli(Modulo.NOME_SPORTING, CHIAVE_ATTIVAZIONE_CENTRO_SPORTIVO, Color.DarkCyan, True)
+         End If
+
+         ' MODULO MAGAZZINO.
+         If moduloAttivo.Magazzino = True Then
+            ImpostaDatiListaModuli(Modulo.NOME_MAGAZZINO, CHIAVE_ATTIVAZIONE_MAGAZZINO, Color.MidnightBlue, True)
+         End If
+
+         ' MODULO ETICHETTE.
+         If moduloAttivo.Etichette = True Then
+            ImpostaDatiListaModuli(Modulo.NOME_ETICHETTE, CHIAVE_ATTIVAZIONE_ETICHETTE, Color.MidnightBlue, True)
+         End If
+
+         ' MODULO PALMARI.
+         If moduloAttivo.Palmari = True Then
+            ImpostaDatiListaModuli(Modulo.NOME_PALMARI, CHIAVE_ATTIVAZIONE_PALMARI, Color.Green, True)
+         End If
+
+         ' MODULO PRENOTAZIONI ON-LINE.
+         If moduloAttivo.PrenOnLine = True Then
+            ImpostaDatiListaModuli(Modulo.NOME_PREN_ONLINE, CHIAVE_ATTIVAZIONE_PREN_ONLINE, Color.Green, True)
+         End If
+
+         ' MODULO PEN DRIVE RECOVERY.
+         If moduloAttivo.PenDriveRecovery = True Then
+            ImpostaDatiListaModuli(Modulo.NOME_PENDRIVE_RECOVERY, CHIAVE_ATTIVAZIONE_PENDRIVE_RECOVERY, Color.MidnightBlue, True)
+         End If
+
+         ' MODULO PEN DRIVE PORTABLE.
+         If moduloAttivo.PenDrivePortable = True Then
+            ImpostaDatiListaModuli(Modulo.NOME_PENDRIVE_PORTABLE, CHIAVE_ATTIVAZIONE_PENDRIVE_PORTABLE, Color.MidnightBlue, True)
+         End If
+
+         ' MODULO REGISTATORI DI CASSA.
+         If moduloAttivo.RegCassa = True Then
+            ImpostaDatiListaModuli(Modulo.NOME_REG_CASSA, CHIAVE_ATTIVAZIONE_REG_CASSA, Color.MidnightBlue, True)
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
+   End Sub
+
+   Private Sub ImpostaDatiListaModuli(ByVal nomeModulo As String, ByVal chiaveAttivazioneModulo As String, ByVal colore As Color, ByVal stato As Boolean)
+      Try
+         ' Modifica il cursore del mouse.
+         Cursor.Current = Cursors.AppStarting
+
+         For Each Item As ListViewItem In lvwGestioneModuli.Items
+            If Item.Text = nomeModulo Then
+               impostaListaModuli = True
+               Item.SubItems(3).ForeColor = colore
+
+               If stato = True Then
+                  Item.SubItems(3).Text = "ATTIVO"
+                  Dim codice As String = CodAttivazioneInserisciTrattini(GeneraChiaveLicenza(chiaveAttivazioneModulo))
+                  Item.SubItems(2).Text = codice
+               Else
+                  Item.SubItems(3).Text = "NON ATTIVO"
+                  Item.SubItems(2).Text = String.Empty
+               End If
+
+               Item.Checked = stato
+
+               impostaListaModuli = False
+               Exit For
             End If
+         Next
 
-            ' MODULO PRENOTAZIONI ON-LINE.
-            If moduloAttivo.PrenOnLine = True Then
-                ImpostaDatiListaModuli(Modulo.NOME_PREN_ONLINE, CHIAVE_ATTIVAZIONE_PREN_ONLINE, Color.Green, True)
-            End If
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-            ' MODULO PEN DRIVE RECOVERY.
-            If moduloAttivo.PenDriveRecovery = True Then
-                ImpostaDatiListaModuli(Modulo.NOME_PENDRIVE_RECOVERY, CHIAVE_ATTIVAZIONE_PENDRIVE_RECOVERY, Color.MidnightBlue, True)
-            End If
+      Finally
+         ' Modifica il cursore del mouse.
+         Cursor.Current = Cursors.Default
 
-            ' MODULO PEN DRIVE PORTABLE.
-            If moduloAttivo.PenDrivePortable = True Then
-                ImpostaDatiListaModuli(Modulo.NOME_PENDRIVE_PORTABLE, CHIAVE_ATTIVAZIONE_PENDRIVE_PORTABLE, Color.MidnightBlue, True)
-            End If
+      End Try
+   End Sub
 
-            ' MODULO REGISTATORI DI CASSA.
-            If moduloAttivo.RegCassa = True Then
-                ImpostaDatiListaModuli(Modulo.NOME_REG_CASSA, CHIAVE_ATTIVAZIONE_REG_CASSA, Color.MidnightBlue, True)
-            End If
+   Public Sub AttivaDisattivaTutto(ByVal stato As Boolean)
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+      eui_File.CurrentTabPage = eui_File.TabPages(0)
+      eui_Gestione.Enabled = stato
+      eui_Archivi.Enabled = stato
+      eui_Contabilità.Enabled = stato
+      eui_Magazzino.Enabled = stato
+      eui_Visualizza.Enabled = stato
+      eui_Strumenti.Enabled = stato
+      eui_Finestra.Enabled = stato
 
-        End Try
-    End Sub
+      cmdBackup.Enabled = stato
+      cmdPulizia.Enabled = stato
+      cmdCompatta.Enabled = stato
+      cmdApriPercorso.Enabled = stato
+      picProg.Enabled = stato
+      eui_cmdOpzioni.Enabled = stato
+      eui_Opzioni.Enabled = stato
 
-    Private Sub ImpostaDatiListaModuli(ByVal nomeModulo As String, ByVal chiaveAttivazioneModulo As String, ByVal colore As Color, ByVal stato As Boolean)
-        Try
-            ' Modifica il cursore del mouse.
-            Cursor.Current = Cursors.AppStarting
+   End Sub
 
-            For Each Item As ListViewItem In lvwGestioneModuli.Items
-                If Item.Text = nomeModulo Then
-                    impostaListaModuli = True
-                    Item.SubItems(3).ForeColor = colore
+   Private Function VerificaProdottoAttivo() As Boolean
+      Try
+         If DatiConfig.GetValue(Modulo.NOME_HOSPITALITY_CONFIG) <> String.Empty Then
+            Return True
+         End If
+         If DatiConfig.GetValue(Modulo.NOME_HOTEL) <> String.Empty Then
+            Return True
+         End If
+         If DatiConfig.GetValue(Modulo.NOME_BAR_CONFIG) <> String.Empty Then
+            Return True
+         End If
+         If DatiConfig.GetValue(Modulo.NOME_CHEF_CONFIG) <> String.Empty Then
+            Return True
+         End If
+         If DatiConfig.GetValue(Modulo.NOME_SPORTING_CONFIG) <> String.Empty Then
+            Return True
+         End If
 
-                    If stato = True Then
-                        Item.SubItems(3).Text = "ATTIVO"
-                        Dim codice As String = CodAttivazioneInserisciTrattini(GeneraChiaveLicenza(chiaveAttivazioneModulo))
-                        Item.SubItems(2).Text = codice
-                    Else
-                        Item.SubItems(3).Text = "NON ATTIVO"
-                        Item.SubItems(2).Text = String.Empty
-                    End If
+         Return False
 
-                    Item.Checked = stato
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-                    impostaListaModuli = False
-                    Exit For
-                End If
-            Next
+         Return False
+      End Try
+   End Function
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+   Private Sub AttivaDisattivaModuloHotel(ByVal stato As Boolean)
+      Try
+         ' Prenotazioni.
+         If moduloAttivo.Ristorante = False And moduloAttivo.CentroSportivo = False Then
+            eui_GruppoPrenotazioni.Visible = stato ' Comune
+            eui_ddwnGestionePrenotazioni.Visible = stato ' Comune
+         End If
 
-        Finally
-            ' Modifica il cursore del mouse.
-            Cursor.Current = Cursors.Default
+         eui_cmdGestionePlanningCamere.Visible = stato
+         sepPlannigCamere.Visible = stato
+         eui_cmdGestionePrenCamere.Visible = stato
+         sepPrenCamere.Visible = stato
+         ' Archivi / Anagrafiche.
+         eui_cmdArchiviAnagraficheCamere.Visible = stato
+         sepCamere.Visible = stato
+         ' Archivi / Tabelle.
+         eui_cmdArchiviTabelleListini.Visible = stato
+         eui_cmdArchiviTabelleStagioni.Visible = stato
+         eui_cmdArchiviTabelleTipologieCamere.Visible = stato
+         eui_cmdArchiviTabelleUbicazioniCamere.Visible = stato
+         eui_cmdArchiviTabellePosizioniCamere.Visible = stato
+         sepListini.Visible = stato
+         eui_cmdArchiviTabelleStatoPren.Visible = stato
+         sepStatoPren.Visible = stato
 
-        End Try
-    End Sub
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-    Public Sub AttivaDisattivaTutto(ByVal stato As Boolean)
+      End Try
+   End Sub
 
-        eui_File.CurrentTabPage = eui_File.TabPages(0)
-        eui_Gestione.Enabled = stato
-        eui_Archivi.Enabled = stato
-        eui_Contabilità.Enabled = stato
-        eui_Magazzino.Enabled = stato
-        eui_Visualizza.Enabled = stato
-        eui_Strumenti.Enabled = stato
-        eui_Finestra.Enabled = stato
+   Private Sub AttivaDisattivaModuloRistorante(ByVal stato As Boolean)
+      Try
+         ' Gruppo POS.
+         If moduloAttivo.Bar = False Then
+            eui_GruppoPos.Visible = stato
+         Else
+            eui_GruppoPos.Visible = True
+         End If
 
-        cmdBackup.Enabled = stato
-        cmdPulizia.Enabled = stato
-        cmdCompatta.Enabled = stato
-        cmdApriPercorso.Enabled = stato
-        picProg.Enabled = stato
-        eui_cmdOpzioni.Enabled = stato
-        eui_Opzioni.Enabled = stato
+         ' POS.
+         eui_cmdGestionePosCassa.Visible = stato ' Comune
+         eui_cmdGestionePosTavoli.Visible = stato
 
-    End Sub
+         ' Prenotazioni.
+         If moduloAttivo.CentroSportivo = False And moduloAttivo.Hotel = False Then
+            eui_GruppoPrenotazioni.Visible = stato ' Comune
+            eui_ddwnGestionePrenotazioni.Visible = stato ' Comune
+         End If
 
-    Private Function VerificaProdottoAttivo() As Boolean
-        Try
-            If DatiConfig.GetValue(Modulo.NOME_HOSPITALITY_CONFIG) <> String.Empty Then
-                Return True
-            End If
-            If DatiConfig.GetValue(Modulo.NOME_HOTEL) <> String.Empty Then
-                Return True
-            End If
-            If DatiConfig.GetValue(Modulo.NOME_BAR_CONFIG) <> String.Empty Then
-                Return True
-            End If
-            If DatiConfig.GetValue(Modulo.NOME_CHEF_CONFIG) <> String.Empty Then
-                Return True
-            End If
-            If DatiConfig.GetValue(Modulo.NOME_SPORTING_CONFIG) <> String.Empty Then
-                Return True
-            End If
-
-            Return False
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-
-            Return False
-        End Try
-    End Function
-
-    Private Sub AttivaDisattivaModuloHotel(ByVal stato As Boolean)
-        Try
-            ' Prenotazioni.
-            If moduloAttivo.Ristorante = False And moduloAttivo.CentroSportivo = False Then
-                eui_GruppoPrenotazioni.Visible = stato ' Comune
-                eui_ddwnGestionePrenotazioni.Visible = stato ' Comune
-            End If
-
-            eui_cmdGestionePlanningCamere.Visible = stato
-            sepPlannigCamere.Visible = stato
-            eui_cmdGestionePrenCamere.Visible = stato
-            sepPrenCamere.Visible = stato
-            ' Archivi / Anagrafiche.
-            eui_cmdArchiviAnagraficheCamere.Visible = stato
-            sepCamere.Visible = stato
-            ' Archivi / Tabelle.
-            eui_cmdArchiviTabelleListini.Visible = stato
-            eui_cmdArchiviTabelleStagioni.Visible = stato
-            eui_cmdArchiviTabelleTipologieCamere.Visible = stato
-            eui_cmdArchiviTabelleUbicazioniCamere.Visible = stato
-            eui_cmdArchiviTabellePosizioniCamere.Visible = stato
-            sepListini.Visible = stato
+         eui_cmdGestionePrenTavoli.Visible = stato
+         eui_cmdGestionePrenSale.Visible = stato
+         sepPrenRisorse.Visible = stato
+         ' Tavoli
+         eui_GruppoTavoli.Visible = stato
+         ' Reparti.
+         eui_GruppoReparti.Visible = stato
+         eui_cmdArchiviTabelleReparti.Visible = stato
+         sepReparti.Visible = stato
+         ' Menu
+         eui_GruppoMenu.Visible = stato ' Comune
+         ' Archivi / Anagrafiche.
+         eui_cmdArchiviAnagrafichePiatti.Visible = stato ' Comune
+         eui_cmdArchiviAnagraficheCategoriePiatti.Visible = stato ' Comune
+         sepBar.Visible = stato
+         eui_cmdArchiviAnagraficheCamerieri.Visible = stato
+         eui_cmdArchiviAnagraficheTavoli.Visible = stato
+         eui_cmdArchiviAnagraficheSale.Visible = stato
+         sepRistorante.Visible = stato
+         ' Archivi / Tabelle.
+         eui_cmdArchiviTabelleMsgReparti.Visible = stato
+         sepReparti.Visible = stato
+         If moduloAttivo.Hotel = False Then
             eui_cmdArchiviTabelleStatoPren.Visible = stato
             sepStatoPren.Visible = stato
+         Else
+            eui_cmdArchiviTabelleStatoPren.Visible = True
+            sepStatoPren.Visible = True
+         End If
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+         ' Gestione.
+         eui_cmdGestioneStatistiche.Visible = stato ' Comune
+         sepBarRistorante.Visible = stato
 
-        End Try
-    End Sub
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-    Private Sub AttivaDisattivaModuloRistorante(ByVal stato As Boolean)
-        Try
+      End Try
+   End Sub
+
+   Private Sub AttivaDisattivaModuloBar(ByVal stato As Boolean)
+      Try
+         If moduloAttivo.Ristorante = False Then
             ' Gruppo POS.
-            If moduloAttivo.Bar = False Then
-                eui_GruppoPos.Visible = stato
-            Else
-                eui_GruppoPos.Visible = True
-            End If
-
+            eui_GruppoPos.Visible = stato
             ' POS.
             eui_cmdGestionePosCassa.Visible = stato ' Comune
-            eui_cmdGestionePosTavoli.Visible = stato
-
-            ' Prenotazioni.
-            If moduloAttivo.CentroSportivo = False And moduloAttivo.Hotel = False Then
-                eui_GruppoPrenotazioni.Visible = stato ' Comune
-                eui_ddwnGestionePrenotazioni.Visible = stato ' Comune
-            End If
-
-            eui_cmdGestionePrenTavoli.Visible = stato
-            eui_cmdGestionePrenSale.Visible = stato
-            sepPrenRisorse.Visible = stato
-            ' Tavoli
-            eui_GruppoTavoli.Visible = stato
-            ' Reparti.
-            eui_GruppoReparti.Visible = stato
-            eui_cmdArchiviTabelleReparti.Visible = stato
-            sepReparti.Visible = stato
-            ' Menu
+            ' Menu.
             eui_GruppoMenu.Visible = stato ' Comune
             ' Archivi / Anagrafiche.
             eui_cmdArchiviAnagrafichePiatti.Visible = stato ' Comune
             eui_cmdArchiviAnagraficheCategoriePiatti.Visible = stato ' Comune
             sepBar.Visible = stato
-            eui_cmdArchiviAnagraficheCamerieri.Visible = stato
-            eui_cmdArchiviAnagraficheTavoli.Visible = stato
-            eui_cmdArchiviAnagraficheSale.Visible = stato
-            sepRistorante.Visible = stato
             ' Archivi / Tabelle.
-            eui_cmdArchiviTabelleMsgReparti.Visible = stato
+            eui_cmdArchiviTabelleReparti.Visible = stato
             sepReparti.Visible = stato
-            If moduloAttivo.Hotel = False Then
-                eui_cmdArchiviTabelleStatoPren.Visible = stato
-                sepStatoPren.Visible = stato
-            Else
-                eui_cmdArchiviTabelleStatoPren.Visible = True
-                sepStatoPren.Visible = True
-            End If
-
             ' Gestione.
             eui_cmdGestioneStatistiche.Visible = stato ' Comune
             sepBarRistorante.Visible = stato
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+         End If
 
-        End Try
-    End Sub
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-    Private Sub AttivaDisattivaModuloBar(ByVal stato As Boolean)
-        Try
-            If moduloAttivo.Ristorante = False Then
-                ' Gruppo POS.
-                eui_GruppoPos.Visible = stato
-                ' POS.
-                eui_cmdGestionePosCassa.Visible = stato ' Comune
-                ' Menu.
-                eui_GruppoMenu.Visible = stato ' Comune
-                ' Archivi / Anagrafiche.
-                eui_cmdArchiviAnagrafichePiatti.Visible = stato ' Comune
-                eui_cmdArchiviAnagraficheCategoriePiatti.Visible = stato ' Comune
-                sepBar.Visible = stato
-                ' Archivi / Tabelle.
-                eui_cmdArchiviTabelleReparti.Visible = stato
-                sepReparti.Visible = stato
-                ' Gestione.
-                eui_cmdGestioneStatistiche.Visible = stato ' Comune
-                sepBarRistorante.Visible = stato
+      End Try
+   End Sub
+
+   Private Sub AttivaDisattivaModuloCentroSportivo(ByVal stato As Boolean)
+      Try
+         ' A_TODO: MODIFICHE ASD AGON
+
+         ' Prenotazioni.
+         If moduloAttivo.Ristorante = False And moduloAttivo.Hotel = False Then
+            eui_GruppoPrenotazioni.Visible = stato ' Comune
+            eui_ddwnGestionePrenotazioni.Visible = stato ' Comune
+         End If
+
+         ' Planning.
+         If moduloAttivo.Hotel = False Then
+            eui_ddwnGestionePlanningRisorse.Visible = stato ' Comune
+         Else
+            eui_ddwnGestionePlanningRisorse.Visible = True ' Comune
+         End If
+
+         eui_cmdGestionePlanningRisorseSport.Visible = stato
+         eui_cmdGestionePrenRisorse.Visible = stato
+         ' Statistiche
+         eui_cmdGestioneStatisticheRisorse.Visible = stato
+         ' Archivi / Anagrafiche.
+         eui_cmdArchiviAnagraficheRisorse.Visible = stato
+         eui_cmdArchiviAnagraficheAccServ.Visible = stato
+         eui_cmdArchiviAnagraficheUtilizzoRisorse.Visible = stato
+         ' Archivi / Tabelle.
+         eui_cmdArchiviTabelleTipoRisorse.Visible = stato
+         sepRisorse.Visible = stato
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
+   End Sub
+
+   Private Sub AttivaDisattivaModuloEtichette(ByVal stato As Boolean)
+      Try
+         eui_GruppoEtichette.Visible = stato
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
+   End Sub
+
+   Private Sub AttivaDisattivaModuloMagazzino(ByVal stato As Boolean)
+      Try
+         eui_Magazzino.Visible = stato
+         eui_cmdArchiviTabelleUM.Visible = stato
+         eui_cmdArchiviTabelleCategorieMerce.Visible = stato
+         eui_cmdArchiviTabelleMagazzini.Visible = stato
+         eui_cmdArchiviTabelleUbicazioni.Visible = stato
+         eui_cmdArchiviTabelleScaffali.Visible = stato
+         sepMagazzino.Visible = stato
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
+   End Sub
+
+   Private Sub AttivaDisattivaModuloPalmari(ByVal stato As Boolean)
+      Try
+         ' Inserire qui eventuali istruzioni.
+         Exit Sub
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
+   End Sub
+
+   Private Sub AttivaDisattivaModuloPrenOnLine(ByVal stato As Boolean)
+      Try
+         ' Inserire qui eventuali istruzioni.
+         Exit Sub
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
+   End Sub
+
+   Private Sub AttivaDisattivaModuloPenDriveRecovery(ByVal stato As Boolean)
+      Try
+         ' Inserire qui eventuali istruzioni.
+         Exit Sub
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
+   End Sub
+
+   Private Sub AttivaDisattivaModuloPenDrivePortable(ByVal stato As Boolean)
+      Try
+         ' Inserire qui eventuali istruzioni.
+         Exit Sub
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
+   End Sub
+
+   Private Sub AttivaDisattivaModuloRegCassa(ByVal stato As Boolean)
+      Try
+         ' Inserire qui eventuali istruzioni.
+         Exit Sub
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
+   End Sub
+
+   Private Sub VerificaVisibilitàGruppiModuli()
+      Try
+         ' Gruppo POS.
+         If eui_cmdGestionePosCassa.Visible = False And eui_cmdGestionePosTavoli.Visible = False Then
+            eui_GruppoPos.Visible = False
+         Else
+            eui_GruppoPos.Visible = True
+         End If
+
+         ' Gruppo Prenotazioni / Planning.
+         If eui_ddwnGestionePlanningRisorse.Visible = False And eui_ddwnGestionePrenotazioni.Visible = False Then
+            eui_GruppoPrenotazioni.Visible = False
+         Else
+            eui_GruppoPrenotazioni.Visible = True
+         End If
+
+         eui_Gestione.Refresh()
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
+   End Sub
+
+   Public Sub VerificaAggiornamenti()
+      Try
+         If WebCommunication.VerificaConnessione = True Then
+
+            Dim percorsoFileRemoto As String = "Http://www.montanasoftware.it/Aggiornamenti.aspx"
+            Dim percorsoFileLocale As String = Application.StartupPath & "\Dati\Aggiornamenti.dat"
+
+            WebCommunication.LeggiFile(percorsoFileRemoto, percorsoFileLocale)
+
+            If File.Exists(percorsoFileLocale) = True Then
+               Dim valFile As String
+
+               ' Crea o apre il file.
+               FileOpen(1, percorsoFileLocale, OpenMode.Input)
+
+               ' Legge il valore.
+               Input(1, valFile)
+
+               ' Chiude il file.
+               FileClose(1)
+
+               ' Se il file non contiene un valore numerico lo cancella.
+               If IsNumeric(valFile) = False Then
+                  File.Delete(percorsoFileLocale)
+                  Exit Sub
+               End If
+
+               ' legge la versione installata.
+               Dim valVersione As Integer = Convert.ToInt32(Application.ProductVersion.ToString.Replace(".", String.Empty))
+               Dim valNuovaVersione As Integer = Convert.ToInt32(valFile.ToString.Replace(".", String.Empty))
+
+               ' Verifica se la nuova versione è un aggiornamento.
+               If valNuovaVersione > valVersione Then
+
+                  ' Visualizza un'immagine sulla barra di stato.
+                  eui_picAggiornamenti.Visible = True
+
+                  MessageBox.Show("E' disponibile una nuova versione del software!" & vbNewLine & vbNewLine &
+                                  "Versione installata: " & Application.ProductVersion & vbNewLine & vbNewLine &
+                                  "Versione aggiornamento: " & valFile & vbNewLine & vbNewLine &
+                                  "E' possibile fare il download della nuova versione del programma dal sito Internet 'Http://www.montanasoftware.it'." & vbNewLine &
+                                  "Per informazioni rivolgersi a: 'assistenza@montanasoftware.it'", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+                  ' Cancella il file.
+                  File.Delete(percorsoFileLocale)
+               Else
+                  Exit Sub
+               End If
 
             End If
+         End If
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-        End Try
-    End Sub
+      End Try
+   End Sub
 
-    Private Sub AttivaDisattivaModuloCentroSportivo(ByVal stato As Boolean)
-        Try
-            ' A_TODO: MODIFICHE ASD AGON
+   ' DA_FARE_B: Non funziona!!! - Versione che scrive sul server remoto -  NON UTILIZZATA.
+   Public Sub ScriviDatiLicenza()
+      Try
+         If WebCommunication.VerificaConnessione = True Then
 
-            ' Prenotazioni.
-            If moduloAttivo.Ristorante = False And moduloAttivo.Hotel = False Then
-                eui_GruppoPrenotazioni.Visible = stato ' Comune
-                eui_ddwnGestionePrenotazioni.Visible = stato ' Comune
+            Dim percorsoFileRemoto As String = "ftp: //ftp.montanasoftware.it/htdocs/www/" & GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_HOSPITALITY & ".dat")
+            Dim percorsoFileLocale As String = Application.StartupPath & "\Dati\" & GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_HOSPITALITY & ".dat")
+
+            DatiConfig = New AppConfig
+            DatiConfig.ConfigType = ConfigFileType.AppConfig
+
+            ' Crea o apre il file e registra i dati dell'errore.
+            FileOpen(1, percorsoFileLocale, OpenMode.Output)
+
+            WriteLine(1, Date.Now.ToString)
+            WriteLine(1, String.Empty)
+            WriteLine(1, GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_HOSPITALITY))
+            WriteLine(1, GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_BAR))
+            WriteLine(1, GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_RISTORANTE))
+            WriteLine(1, GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_PALMARI))
+            WriteLine(1, GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_PREN_ONLINE))
+            WriteLine(1, GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_MAGAZZINO))
+            WriteLine(1, GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_ETICHETTE))
+            WriteLine(1, GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_PENDRIVE_PORTABLE))
+            WriteLine(1, GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_PENDRIVE_RECOVERY))
+            WriteLine(1, GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_REG_CASSA))
+            WriteLine(1, String.Empty)
+            WriteLine(1, DatiConfig.GetValue("RagioneSociale"))
+            WriteLine(1, DatiConfig.GetValue("Nome"))
+            WriteLine(1, DatiConfig.GetValue("Via"))
+            WriteLine(1, DatiConfig.GetValue("Città"))
+            WriteLine(1, DatiConfig.GetValue("Cap"))
+            WriteLine(1, DatiConfig.GetValue("Provincia"))
+            WriteLine(1, DatiConfig.GetValue("Telefono"))
+            WriteLine(1, DatiConfig.GetValue("Fax"))
+            WriteLine(1, DatiConfig.GetValue("Email"))
+            WriteLine(1, DatiConfig.GetValue("Piva"))
+            WriteLine(1, String.Empty)
+            WriteLine(1, DatiConfig.GetValue(Modulo.NOME_HOSPITALITY_CONFIG))
+            WriteLine(1, DatiConfig.GetValue(Modulo.NOME_BAR_CONFIG))
+            WriteLine(1, DatiConfig.GetValue(Modulo.NOME_CHEF_CONFIG))
+            WriteLine(1, DatiConfig.GetValue(Modulo.NOME_PALMARI_CONFIG))
+            WriteLine(1, DatiConfig.GetValue(Modulo.NOME_PREN_ONLINE_CONFIG))
+            WriteLine(1, DatiConfig.GetValue(Modulo.NOME_MAGAZZINO_CONFIG))
+            WriteLine(1, DatiConfig.GetValue(Modulo.NOME_ETICHETTE_CONFIG))
+            WriteLine(1, DatiConfig.GetValue(Modulo.NOME_PENDRIVE_PORTABLE_CONFIG))
+            WriteLine(1, DatiConfig.GetValue(Modulo.NOME_PENDRIVE_RECOVERY_CONFIG))
+            WriteLine(1, DatiConfig.GetValue(Modulo.NOME_REG_CASSA_CONFIG))
+
+            ' Chiude il file.
+            FileClose(1)
+
+            WebCommunication.ScriviFile("ftp://ftp.montanasoftware.it/", "luigim74@montanasoftware.it", "Lu200774lu_", percorsoFileRemoto, percorsoFileLocale)
+
+            If File.Exists(percorsoFileLocale) = True Then
+               File.Delete(percorsoFileLocale)
             End If
 
-            ' Planning.
-            If moduloAttivo.Hotel = False Then
-                eui_ddwnGestionePlanningRisorse.Visible = stato ' Comune
+         End If
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
+   End Sub
+
+   Public Sub InviaDatiLicenza()
+      Try
+         If WebCommunication.VerificaConnessione = True Then
+
+            DatiConfig = New AppConfig
+            DatiConfig.ConfigType = ConfigFileType.AppConfig
+
+            Dim versioneOS As String
+            If Environment.Is64BitOperatingSystem = True Then
+               versioneOS = "64 Bit"
             Else
-                eui_ddwnGestionePlanningRisorse.Visible = True ' Comune
+               versioneOS = "32 Bit"
             End If
 
-            eui_cmdGestionePlanningRisorseSport.Visible = stato
-            eui_cmdGestionePrenRisorse.Visible = stato
-            ' Statistiche
-            eui_cmdGestioneStatisticheRisorse.Visible = stato
-            ' Archivi / Anagrafiche.
-            eui_cmdArchiviAnagraficheRisorse.Visible = stato
-            eui_cmdArchiviAnagraficheAccServ.Visible = stato
-            eui_cmdArchiviAnagraficheUtilizzoRisorse.Visible = stato
-            ' Archivi / Tabelle.
-            eui_cmdArchiviTabelleTipoRisorse.Visible = stato
-            sepRisorse.Visible = stato
+            Dim nomeMailServer As String = NOME_MAIL_SERVER_SMTP
+            Dim eMailDestinatario As String = EMAIL_DATI_LICENZA_A
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-
-        End Try
-    End Sub
-
-    Private Sub AttivaDisattivaModuloEtichette(ByVal stato As Boolean)
-        Try
-            eui_GruppoEtichette.Visible = stato
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-
-        End Try
-    End Sub
-
-    Private Sub AttivaDisattivaModuloMagazzino(ByVal stato As Boolean)
-        Try
-            eui_Magazzino.Visible = stato
-            eui_cmdArchiviTabelleUM.Visible = stato
-            eui_cmdArchiviTabelleCategorieMerce.Visible = stato
-            eui_cmdArchiviTabelleMagazzini.Visible = stato
-            eui_cmdArchiviTabelleUbicazioni.Visible = stato
-            eui_cmdArchiviTabelleScaffali.Visible = stato
-            sepMagazzino.Visible = stato
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-
-        End Try
-    End Sub
-
-    Private Sub AttivaDisattivaModuloPalmari(ByVal stato As Boolean)
-        Try
-            ' Inserire qui eventuali istruzioni.
-            Exit Sub
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-
-        End Try
-    End Sub
-
-    Private Sub AttivaDisattivaModuloPrenOnLine(ByVal stato As Boolean)
-        Try
-            ' Inserire qui eventuali istruzioni.
-            Exit Sub
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-
-        End Try
-    End Sub
-
-    Private Sub AttivaDisattivaModuloPenDriveRecovery(ByVal stato As Boolean)
-        Try
-            ' Inserire qui eventuali istruzioni.
-            Exit Sub
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-
-        End Try
-    End Sub
-
-    Private Sub AttivaDisattivaModuloPenDrivePortable(ByVal stato As Boolean)
-        Try
-            ' Inserire qui eventuali istruzioni.
-            Exit Sub
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-
-        End Try
-    End Sub
-
-    Private Sub AttivaDisattivaModuloRegCassa(ByVal stato As Boolean)
-        Try
-            ' Inserire qui eventuali istruzioni.
-            Exit Sub
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-
-        End Try
-    End Sub
-
-    Private Sub VerificaVisibilitàGruppiModuli()
-        Try
-            ' Gruppo POS.
-            If eui_cmdGestionePosCassa.Visible = False And eui_cmdGestionePosTavoli.Visible = False Then
-                eui_GruppoPos.Visible = False
-            Else
-                eui_GruppoPos.Visible = True
+            Dim eMailMittente As String = DatiConfig.GetValue("Email")
+            If eMailMittente.IsInterned("@") = "" Or eMailMittente = String.Empty Then
+               eMailMittente = EMAIL_DATI_LICENZA_A
             End If
 
-            ' Gruppo Prenotazioni / Planning.
-            If eui_ddwnGestionePlanningRisorse.Visible = False And eui_ddwnGestionePrenotazioni.Visible = False Then
-                eui_GruppoPrenotazioni.Visible = False
-            Else
-                eui_GruppoPrenotazioni.Visible = True
-            End If
+            Dim hospitality As String = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_HOSPITALITY)
+            Dim bar As String = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_BAR)
+            Dim ristorante As String = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_RISTORANTE)
+            Dim centroSportivo As String = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_CENTRO_SPORTIVO)
+            Dim hotel As String = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_HOTEL)
+            Dim palmari As String = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_PALMARI)
+            Dim prenOnLine As String = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_PREN_ONLINE)
+            Dim magazzino As String = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_MAGAZZINO)
+            Dim etichette As String = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_ETICHETTE)
+            Dim penDrivePortable As String = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_PENDRIVE_PORTABLE)
+            Dim penDriveRecovery As String = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_PENDRIVE_RECOVERY)
+            Dim regCassa As String = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_REG_CASSA)
 
-            eui_Gestione.Refresh()
+            Dim oggetto As String = "HOSPITALITY SOLUTION 3 - " & GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_HOSPITALITY)
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-
-        End Try
-    End Sub
-
-    ' DA_FARE_B: Non funziona!!! - Versione che scrive sul server remoto -  NON UTILIZZATA.
-    Public Sub ScriviDatiLicenza()
-        Try
-            If WebCommunication.VerificaConnessione = True Then
-
-                Dim percorsoFileRemoto As String = "ftp://ftp.montanasoftware.it/htdocs/www/" & GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_HOSPITALITY & ".dat")
-                Dim percorsoFileLocale As String = Application.StartupPath & "\Dati\" & GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_HOSPITALITY & ".dat")
-
-                DatiConfig = New AppConfig
-                DatiConfig.ConfigType = ConfigFileType.AppConfig
-
-                ' Crea o apre il file e registra i dati dell'errore.
-                FileOpen(1, percorsoFileLocale, OpenMode.Output)
-
-                WriteLine(1, Date.Now.ToString)
-                WriteLine(1, String.Empty)
-                WriteLine(1, GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_HOSPITALITY))
-                WriteLine(1, GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_BAR))
-                WriteLine(1, GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_RISTORANTE))
-                WriteLine(1, GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_PALMARI))
-                WriteLine(1, GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_PREN_ONLINE))
-                WriteLine(1, GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_MAGAZZINO))
-                WriteLine(1, GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_ETICHETTE))
-                WriteLine(1, GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_PENDRIVE_PORTABLE))
-                WriteLine(1, GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_PENDRIVE_RECOVERY))
-                WriteLine(1, GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_REG_CASSA))
-                WriteLine(1, String.Empty)
-                WriteLine(1, DatiConfig.GetValue("RagioneSociale"))
-                WriteLine(1, DatiConfig.GetValue("Nome"))
-                WriteLine(1, DatiConfig.GetValue("Via"))
-                WriteLine(1, DatiConfig.GetValue("Città"))
-                WriteLine(1, DatiConfig.GetValue("Cap"))
-                WriteLine(1, DatiConfig.GetValue("Provincia"))
-                WriteLine(1, DatiConfig.GetValue("Telefono"))
-                WriteLine(1, DatiConfig.GetValue("Fax"))
-                WriteLine(1, DatiConfig.GetValue("Email"))
-                WriteLine(1, DatiConfig.GetValue("Piva"))
-                WriteLine(1, String.Empty)
-                WriteLine(1, DatiConfig.GetValue(Modulo.NOME_HOSPITALITY_CONFIG))
-                WriteLine(1, DatiConfig.GetValue(Modulo.NOME_BAR_CONFIG))
-                WriteLine(1, DatiConfig.GetValue(Modulo.NOME_CHEF_CONFIG))
-                WriteLine(1, DatiConfig.GetValue(Modulo.NOME_PALMARI_CONFIG))
-                WriteLine(1, DatiConfig.GetValue(Modulo.NOME_PREN_ONLINE_CONFIG))
-                WriteLine(1, DatiConfig.GetValue(Modulo.NOME_MAGAZZINO_CONFIG))
-                WriteLine(1, DatiConfig.GetValue(Modulo.NOME_ETICHETTE_CONFIG))
-                WriteLine(1, DatiConfig.GetValue(Modulo.NOME_PENDRIVE_PORTABLE_CONFIG))
-                WriteLine(1, DatiConfig.GetValue(Modulo.NOME_PENDRIVE_RECOVERY_CONFIG))
-                WriteLine(1, DatiConfig.GetValue(Modulo.NOME_REG_CASSA_CONFIG))
-
-                ' Chiude il file.
-                FileClose(1)
-
-                WebCommunication.ScriviFile("ftp://ftp.montanasoftware.it/", "luigim74@montanasoftware.it", "Lu200774lu_", percorsoFileRemoto, percorsoFileLocale)
-
-                If File.Exists(percorsoFileLocale) = True Then
-                    File.Delete(percorsoFileLocale)
-                End If
-
-            End If
-
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-
-        End Try
-    End Sub
-
-    Public Sub InviaDatiLicenza()
-        Try
-            If WebCommunication.VerificaConnessione = True Then
-
-                DatiConfig = New AppConfig
-                DatiConfig.ConfigType = ConfigFileType.AppConfig
-
-                Dim versioneOS As String
-                If Environment.Is64BitOperatingSystem = True Then
-                    versioneOS = "64 Bit"
-                Else
-                    versioneOS = "32 Bit"
-                End If
-
-                Dim nomeMailServer As String = NOME_MAIL_SERVER_SMTP
-                Dim eMailDestinatario As String = EMAIL_DATI_LICENZA_A
-
-                Dim eMailMittente As String = DatiConfig.GetValue("Email")
-                If eMailMittente.IsInterned("@") = "" Or eMailMittente = String.Empty Then
-                    eMailMittente = EMAIL_DATI_LICENZA_A
-                End If
-
-                Dim hospitality As String = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_HOSPITALITY)
-                Dim bar As String = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_BAR)
-                Dim ristorante As String = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_RISTORANTE)
-                Dim centroSportivo As String = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_CENTRO_SPORTIVO)
-                Dim hotel As String = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_HOTEL)
-                Dim palmari As String = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_PALMARI)
-                Dim prenOnLine As String = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_PREN_ONLINE)
-                Dim magazzino As String = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_MAGAZZINO)
-                Dim etichette As String = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_ETICHETTE)
-                Dim penDrivePortable As String = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_PENDRIVE_PORTABLE)
-                Dim penDriveRecovery As String = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_PENDRIVE_RECOVERY)
-                Dim regCassa As String = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_REG_CASSA)
-
-                Dim oggetto As String = "HOSPITALITY SOLUTION 3 - " & GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_HOSPITALITY)
-
-                Dim corpoMessaggio As String = "DATI UTENTE: " & vbNewLine & vbNewLine &
+            Dim corpoMessaggio As String = "DATI UTENTE: " & vbNewLine & vbNewLine &
                                            "RAGIONE SOCIALE: " & DatiConfig.GetValue("RagioneSociale") & vbNewLine &
                                            "NOME E COGNOME: " & DatiConfig.GetValue("Nome") & vbNewLine &
                                            "VIA E NUMERO: " & DatiConfig.GetValue("Via") & vbNewLine &
@@ -12511,54 +12601,54 @@ Friend Class frmMain
                                            "INFORMAZIONI DI SISTEMA: " & vbNewLine &
                                            "SISTEMA OPERATIVO: " & My.Computer.Info.OSFullName & " (" & versioneOS & ") - " & My.Computer.Info.OSVersion & " - " & My.Computer.Info.OSPlatform & vbNewLine
 
-                Dim messaggio As System.Net.Mail.MailMessage = New System.Net.Mail.MailMessage(eMailMittente, eMailDestinatario)
-                messaggio.Subject = oggetto
-                messaggio.Body = corpoMessaggio
+            Dim messaggio As System.Net.Mail.MailMessage = New System.Net.Mail.MailMessage(eMailMittente, eMailDestinatario)
+            messaggio.Subject = oggetto
+            messaggio.Body = corpoMessaggio
 
-                Dim smtp As System.Net.Mail.SmtpClient = New System.Net.Mail.SmtpClient(nomeMailServer, 25)
+            Dim smtp As System.Net.Mail.SmtpClient = New System.Net.Mail.SmtpClient(nomeMailServer, 25)
 
-                smtp.Credentials = New System.Net.NetworkCredential(USER_NAME_MAIL_SERVER_SMTP, PWD_MAIL_SERVER_SMTP)
+            smtp.Credentials = New System.Net.NetworkCredential(USER_NAME_MAIL_SERVER_SMTP, PWD_MAIL_SERVER_SMTP)
 
-                smtp.Send(messaggio)
+            smtp.Send(messaggio)
 
+         End If
+
+      Catch ex As Exception
+
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         'err.GestisciErrore(ex.StackTrace, ex.Message)
+         Exit Sub
+
+      End Try
+   End Sub
+
+   Public Sub InviaDatiGiudizio(ByVal votoSemplicità As Decimal, ByVal votoUtilità As Decimal, ByVal votoGrafica As Decimal, ByVal commento As String)
+      Try
+         If WebCommunication.VerificaConnessione = True Then
+
+            DatiConfig = New AppConfig
+            DatiConfig.ConfigType = ConfigFileType.AppConfig
+
+            Dim versioneOS As String
+            If Environment.Is64BitOperatingSystem = True Then
+               versioneOS = "64 Bit"
+            Else
+               versioneOS = "32 Bit"
             End If
 
-        Catch ex As Exception
+            Dim nomeMailServer As String = NOME_MAIL_SERVER_SMTP
+            Dim eMailDestinatario As String = EMAIL_DATI_LICENZA_A
 
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            'err.GestisciErrore(ex.StackTrace, ex.Message)
-            Exit Sub
+            Dim eMailMittente As String = DatiConfig.GetValue("Email")
+            If eMailMittente.IsInterned("@") = "" Or eMailMittente = String.Empty Then
+               eMailMittente = EMAIL_DATI_LICENZA_A
+            End If
 
-        End Try
-    End Sub
+            Dim hospitality As String = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_HOSPITALITY)
 
-    Public Sub InviaDatiGiudizio(ByVal votoSemplicità As Decimal, ByVal votoUtilità As Decimal, ByVal votoGrafica As Decimal, ByVal commento As String)
-        Try
-            If WebCommunication.VerificaConnessione = True Then
+            Dim oggetto As String = "HOSPITALITY SOLUTION 3 - GIUDIZIO DEMO - " & GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_HOSPITALITY)
 
-                DatiConfig = New AppConfig
-                DatiConfig.ConfigType = ConfigFileType.AppConfig
-
-                Dim versioneOS As String
-                If Environment.Is64BitOperatingSystem = True Then
-                    versioneOS = "64 Bit"
-                Else
-                    versioneOS = "32 Bit"
-                End If
-
-                Dim nomeMailServer As String = NOME_MAIL_SERVER_SMTP
-                Dim eMailDestinatario As String = EMAIL_DATI_LICENZA_A
-
-                Dim eMailMittente As String = DatiConfig.GetValue("Email")
-                If eMailMittente.IsInterned("@") = "" Or eMailMittente = String.Empty Then
-                    eMailMittente = EMAIL_DATI_LICENZA_A
-                End If
-
-                Dim hospitality As String = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_HOSPITALITY)
-
-                Dim oggetto As String = "HOSPITALITY SOLUTION 3 - GIUDIZIO DEMO - " & GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_HOSPITALITY)
-
-                Dim corpoMessaggio As String = "DATI UTENTE: " & vbNewLine & vbNewLine &
+            Dim corpoMessaggio As String = "DATI UTENTE: " & vbNewLine & vbNewLine &
                                            "RAGIONE SOCIALE: " & DatiConfig.GetValue("RagioneSociale") & vbNewLine &
                                            "NOME E COGNOME: " & DatiConfig.GetValue("Nome") & vbNewLine &
                                            "VIA E NUMERO: " & DatiConfig.GetValue("Via") & vbNewLine &
@@ -12585,983 +12675,979 @@ Friend Class frmMain
                                            "INFORMAZIONI DI SISTEMA: " & vbNewLine &
                                            "SISTEMA OPERATIVO: " & My.Computer.Info.OSFullName & " (" & versioneOS & ") - " & My.Computer.Info.OSVersion & " - " & My.Computer.Info.OSPlatform & vbNewLine
 
-                Dim messaggio As System.Net.Mail.MailMessage = New System.Net.Mail.MailMessage(eMailMittente, eMailDestinatario)
-                messaggio.Subject = oggetto
-                messaggio.Body = corpoMessaggio
+            Dim messaggio As System.Net.Mail.MailMessage = New System.Net.Mail.MailMessage(eMailMittente, eMailDestinatario)
+            messaggio.Subject = oggetto
+            messaggio.Body = corpoMessaggio
 
-                Dim smtp As System.Net.Mail.SmtpClient = New System.Net.Mail.SmtpClient(nomeMailServer, 25)
+            Dim smtp As System.Net.Mail.SmtpClient = New System.Net.Mail.SmtpClient(nomeMailServer, 25)
 
-                smtp.Credentials = New System.Net.NetworkCredential(USER_NAME_MAIL_SERVER_SMTP, PWD_MAIL_SERVER_SMTP)
+            smtp.Credentials = New System.Net.NetworkCredential(USER_NAME_MAIL_SERVER_SMTP, PWD_MAIL_SERVER_SMTP)
 
-                smtp.Send(messaggio)
+            smtp.Send(messaggio)
 
-            End If
+         End If
 
-        Catch ex As Exception
+      Catch ex As Exception
 
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            'err.GestisciErrore(ex.StackTrace, ex.Message)
-            Exit Sub
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         'err.GestisciErrore(ex.StackTrace, ex.Message)
+         Exit Sub
 
-        End Try
-    End Sub
+      End Try
+   End Sub
 
-    Private Sub CaricaInfoProdottiAttivi()
+   Private Sub CaricaInfoProdottiAttivi()
 
-        ' Pulisce la lista.
-        eui_lstProdottiAttivati.Items.Clear()
+      ' Pulisce la lista.
+      eui_lstProdottiAttivati.Items.Clear()
 
-        ' HOSPITALITY.
-        If moduloAttivo.Hospitality = True Then
-            Dim codice As String = CodAttivazioneInserisciTrattini(DatiConfig.GetValue(Modulo.NOME_HOSPITALITY_CONFIG))
-            Dim item As String = Modulo.NOME_HOSPITALITY & " - " & codice
-            eui_lstProdottiAttivati.Items.Add(item)
-        End If
+      ' HOSPITALITY.
+      If moduloAttivo.Hospitality = True Then
+         Dim codice As String = CodAttivazioneInserisciTrattini(DatiConfig.GetValue(Modulo.NOME_HOSPITALITY_CONFIG))
+         Dim item As String = Modulo.NOME_HOSPITALITY & " - " & codice
+         eui_lstProdottiAttivati.Items.Add(item)
+      End If
 
-        ' MAGAZZINO.
-        If moduloAttivo.Magazzino = True Then
-            Dim codice As String = CodAttivazioneInserisciTrattini(DatiConfig.GetValue(Modulo.NOME_MAGAZZINO_CONFIG))
-            Dim item As String = Modulo.NOME_MAGAZZINO & " - " & codice
-            eui_lstProdottiAttivati.Items.Add(item)
-        End If
+      ' MAGAZZINO.
+      If moduloAttivo.Magazzino = True Then
+         Dim codice As String = CodAttivazioneInserisciTrattini(DatiConfig.GetValue(Modulo.NOME_MAGAZZINO_CONFIG))
+         Dim item As String = Modulo.NOME_MAGAZZINO & " - " & codice
+         eui_lstProdottiAttivati.Items.Add(item)
+      End If
 
-        ' ETICHETTE.
-        If moduloAttivo.Etichette = True Then
-            Dim codice As String = CodAttivazioneInserisciTrattini(DatiConfig.GetValue(Modulo.NOME_ETICHETTE_CONFIG))
-            Dim item As String = Modulo.NOME_ETICHETTE & " - " & codice
-            eui_lstProdottiAttivati.Items.Add(item)
-        End If
+      ' ETICHETTE.
+      If moduloAttivo.Etichette = True Then
+         Dim codice As String = CodAttivazioneInserisciTrattini(DatiConfig.GetValue(Modulo.NOME_ETICHETTE_CONFIG))
+         Dim item As String = Modulo.NOME_ETICHETTE & " - " & codice
+         eui_lstProdottiAttivati.Items.Add(item)
+      End If
 
-        ' PENDRIVE PORTABLE.
-        If moduloAttivo.PenDrivePortable = True Then
-            Dim codice As String = CodAttivazioneInserisciTrattini(DatiConfig.GetValue(Modulo.NOME_PENDRIVE_PORTABLE_CONFIG))
-            Dim item As String = Modulo.NOME_PENDRIVE_PORTABLE & " - " & codice
-            eui_lstProdottiAttivati.Items.Add(item)
-        End If
+      ' PENDRIVE PORTABLE.
+      If moduloAttivo.PenDrivePortable = True Then
+         Dim codice As String = CodAttivazioneInserisciTrattini(DatiConfig.GetValue(Modulo.NOME_PENDRIVE_PORTABLE_CONFIG))
+         Dim item As String = Modulo.NOME_PENDRIVE_PORTABLE & " - " & codice
+         eui_lstProdottiAttivati.Items.Add(item)
+      End If
 
-        ' PENDRIVE RECOVERY.
-        If moduloAttivo.PenDriveRecovery = True Then
-            Dim codice As String = CodAttivazioneInserisciTrattini(DatiConfig.GetValue(Modulo.NOME_PENDRIVE_RECOVERY_CONFIG))
-            Dim item As String = Modulo.NOME_PENDRIVE_RECOVERY & " - " & codice
-            eui_lstProdottiAttivati.Items.Add(item)
-        End If
+      ' PENDRIVE RECOVERY.
+      If moduloAttivo.PenDriveRecovery = True Then
+         Dim codice As String = CodAttivazioneInserisciTrattini(DatiConfig.GetValue(Modulo.NOME_PENDRIVE_RECOVERY_CONFIG))
+         Dim item As String = Modulo.NOME_PENDRIVE_RECOVERY & " - " & codice
+         eui_lstProdottiAttivati.Items.Add(item)
+      End If
 
-        ' REGISTRATORI DI CASSA.
-        If moduloAttivo.RegCassa = True Then
-            Dim codice As String = CodAttivazioneInserisciTrattini(DatiConfig.GetValue(Modulo.NOME_REG_CASSA_CONFIG))
-            Dim item As String = Modulo.NOME_REG_CASSA & " - " & codice
-            eui_lstProdottiAttivati.Items.Add(item)
-        End If
+      ' REGISTRATORI DI CASSA.
+      If moduloAttivo.RegCassa = True Then
+         Dim codice As String = CodAttivazioneInserisciTrattini(DatiConfig.GetValue(Modulo.NOME_REG_CASSA_CONFIG))
+         Dim item As String = Modulo.NOME_REG_CASSA & " - " & codice
+         eui_lstProdottiAttivati.Items.Add(item)
+      End If
 
-        ' BAR.
-        If moduloAttivo.Bar = True Then
-            Dim codice As String = CodAttivazioneInserisciTrattini(DatiConfig.GetValue(Modulo.NOME_BAR_CONFIG))
-            Dim item As String = Modulo.NOME_BAR & " - " & codice
-            eui_lstProdottiAttivati.Items.Add(item)
-        End If
+      ' BAR.
+      If moduloAttivo.Bar = True Then
+         Dim codice As String = CodAttivazioneInserisciTrattini(DatiConfig.GetValue(Modulo.NOME_BAR_CONFIG))
+         Dim item As String = Modulo.NOME_BAR & " - " & codice
+         eui_lstProdottiAttivati.Items.Add(item)
+      End If
 
-        ' RISTORANTE.
-        If moduloAttivo.Ristorante = True Then
-            Dim codice As String = CodAttivazioneInserisciTrattini(DatiConfig.GetValue(Modulo.NOME_CHEF_CONFIG))
-            Dim item As String = Modulo.NOME_CHEF & " - " & codice
-            eui_lstProdottiAttivati.Items.Add(item)
-        End If
+      ' RISTORANTE.
+      If moduloAttivo.Ristorante = True Then
+         Dim codice As String = CodAttivazioneInserisciTrattini(DatiConfig.GetValue(Modulo.NOME_CHEF_CONFIG))
+         Dim item As String = Modulo.NOME_CHEF & " - " & codice
+         eui_lstProdottiAttivati.Items.Add(item)
+      End If
 
-        ' PALMARI.
-        If moduloAttivo.Palmari = True Then
-            Dim codice As String = CodAttivazioneInserisciTrattini(DatiConfig.GetValue(Modulo.NOME_PALMARI_CONFIG))
-            Dim item As String = Modulo.NOME_PALMARI & " - " & codice
-            eui_lstProdottiAttivati.Items.Add(item)
-        End If
+      ' PALMARI.
+      If moduloAttivo.Palmari = True Then
+         Dim codice As String = CodAttivazioneInserisciTrattini(DatiConfig.GetValue(Modulo.NOME_PALMARI_CONFIG))
+         Dim item As String = Modulo.NOME_PALMARI & " - " & codice
+         eui_lstProdottiAttivati.Items.Add(item)
+      End If
 
-        ' PRENOTAZIONI ON-LINE.
-        If moduloAttivo.PrenOnLine = True Then
-            Dim codice As String = CodAttivazioneInserisciTrattini(DatiConfig.GetValue(Modulo.NOME_PREN_ONLINE_CONFIG))
-            Dim item As String = Modulo.NOME_PREN_ONLINE & " - " & codice
-            eui_lstProdottiAttivati.Items.Add(item)
-        End If
+      ' PRENOTAZIONI ON-LINE.
+      If moduloAttivo.PrenOnLine = True Then
+         Dim codice As String = CodAttivazioneInserisciTrattini(DatiConfig.GetValue(Modulo.NOME_PREN_ONLINE_CONFIG))
+         Dim item As String = Modulo.NOME_PREN_ONLINE & " - " & codice
+         eui_lstProdottiAttivati.Items.Add(item)
+      End If
 
-        ' CENTRO SPORTIVO.
-        If moduloAttivo.CentroSportivo = True Then
-            Dim codice As String = CodAttivazioneInserisciTrattini(DatiConfig.GetValue(Modulo.NOME_SPORTING_CONFIG))
-            Dim item As String = Modulo.NOME_SPORTING & " - " & codice
-            eui_lstProdottiAttivati.Items.Add(item)
-        End If
+      ' CENTRO SPORTIVO.
+      If moduloAttivo.CentroSportivo = True Then
+         Dim codice As String = CodAttivazioneInserisciTrattini(DatiConfig.GetValue(Modulo.NOME_SPORTING_CONFIG))
+         Dim item As String = Modulo.NOME_SPORTING & " - " & codice
+         eui_lstProdottiAttivati.Items.Add(item)
+      End If
 
-        ' HOTEL.
-        If moduloAttivo.Hotel = True Then
-            Dim codice As String = CodAttivazioneInserisciTrattini(DatiConfig.GetValue(Modulo.NOME_HOTEL_CONFIG))
-            Dim item As String = Modulo.NOME_HOTEL & " - " & codice
-            eui_lstProdottiAttivati.Items.Add(item)
-        End If
+      ' HOTEL.
+      If moduloAttivo.Hotel = True Then
+         Dim codice As String = CodAttivazioneInserisciTrattini(DatiConfig.GetValue(Modulo.NOME_HOTEL_CONFIG))
+         Dim item As String = Modulo.NOME_HOTEL & " - " & codice
+         eui_lstProdottiAttivati.Items.Add(item)
+      End If
 
-        ' CAMPEGGIO.
-        If moduloAttivo.Campeggio = True Then
-            Dim codice As String = CodAttivazioneInserisciTrattini(DatiConfig.GetValue(Modulo.NOME_CAMPING_CONFIG))
-            Dim item As String = Modulo.NOME_CAMPING & " - " & codice
-            eui_lstProdottiAttivati.Items.Add(item)
-        End If
+      ' CAMPEGGIO.
+      If moduloAttivo.Campeggio = True Then
+         Dim codice As String = CodAttivazioneInserisciTrattini(DatiConfig.GetValue(Modulo.NOME_CAMPING_CONFIG))
+         Dim item As String = Modulo.NOME_CAMPING & " - " & codice
+         eui_lstProdottiAttivati.Items.Add(item)
+      End If
 
-        ' CENTRO BALNEARE.
-        If moduloAttivo.CentroBalneare = True Then
-            Dim codice As String = CodAttivazioneInserisciTrattini(DatiConfig.GetValue(Modulo.NOME_BEACH_CONFIG))
-            Dim item As String = Modulo.NOME_BEACH & " - " & codice
-            eui_lstProdottiAttivati.Items.Add(item)
-        End If
+      ' CENTRO BALNEARE.
+      If moduloAttivo.CentroBalneare = True Then
+         Dim codice As String = CodAttivazioneInserisciTrattini(DatiConfig.GetValue(Modulo.NOME_BEACH_CONFIG))
+         Dim item As String = Modulo.NOME_BEACH & " - " & codice
+         eui_lstProdottiAttivati.Items.Add(item)
+      End If
 
-        ' CENTRO BENESSERE.
-        If moduloAttivo.CentroBenessere = True Then
-            Dim codice As String = CodAttivazioneInserisciTrattini(DatiConfig.GetValue(Modulo.NOME_BEUTY_CONFIG))
-            Dim item As String = Modulo.NOME_BEUTY & " - " & codice
-            eui_lstProdottiAttivati.Items.Add(item)
-        End If
+      ' CENTRO BENESSERE.
+      If moduloAttivo.CentroBenessere = True Then
+         Dim codice As String = CodAttivazioneInserisciTrattini(DatiConfig.GetValue(Modulo.NOME_BEUTY_CONFIG))
+         Dim item As String = Modulo.NOME_BEUTY & " - " & codice
+         eui_lstProdottiAttivati.Items.Add(item)
+      End If
 
-        ' VENDITA AL DETTAGLIO.
-        If moduloAttivo.VenditaDettaglio = True Then
-            Dim codice As String = CodAttivazioneInserisciTrattini(DatiConfig.GetValue(Modulo.NOME_RETAIL_CONFIG))
-            Dim item As String = Modulo.NOME_RETAIL & " - " & codice
-            eui_lstProdottiAttivati.Items.Add(item)
-        End If
+      ' VENDITA AL DETTAGLIO.
+      If moduloAttivo.VenditaDettaglio = True Then
+         Dim codice As String = CodAttivazioneInserisciTrattini(DatiConfig.GetValue(Modulo.NOME_RETAIL_CONFIG))
+         Dim item As String = Modulo.NOME_RETAIL & " - " & codice
+         eui_lstProdottiAttivati.Items.Add(item)
+      End If
 
-        ' TAGLIE E COLORI.
-        If moduloAttivo.TaglieColori = True Then
-            Dim codice As String = CodAttivazioneInserisciTrattini(DatiConfig.GetValue(Modulo.NOME_TAGLIE_COLORI_CONFIG))
-            Dim item As String = Modulo.NOME_TAGLIE_COLORI & " - " & codice
-            eui_lstProdottiAttivati.Items.Add(item)
-        End If
+      ' TAGLIE E COLORI.
+      If moduloAttivo.TaglieColori = True Then
+         Dim codice As String = CodAttivazioneInserisciTrattini(DatiConfig.GetValue(Modulo.NOME_TAGLIE_COLORI_CONFIG))
+         Dim item As String = Modulo.NOME_TAGLIE_COLORI & " - " & codice
+         eui_lstProdottiAttivati.Items.Add(item)
+      End If
 
-        ' Visualizza o nasconde l'etichetta Versione dimostrativa.
-        If eui_lstProdottiAttivati.Items.Count <> 0 Then
-            lblDemo.Visible = False
-            lblGiorniProva.Visible = False
-        End If
-    End Sub
+      ' Visualizza o nasconde l'etichetta Versione dimostrativa.
+      If eui_lstProdottiAttivati.Items.Count <> 0 Then
+         lblDemo.Visible = False
+         lblGiorniProva.Visible = False
+      End If
+   End Sub
 
-    Private Sub VisualizzaInfoProdottiAttivi()
-        Dim item As String = eui_lstProdottiAttivati.SelectedItem
+   Private Sub VisualizzaInfoProdottiAttivi()
+      Dim item As String = eui_lstProdottiAttivati.SelectedItem
 
-        ' Pulisce la casella di testo.
-        eui_txtDettagliProdotto.Text = String.Empty
+      ' Pulisce la casella di testo.
+      eui_txtDettagliProdotto.Text = String.Empty
 
-        ' HOSPITALITY.
-        If item.Contains(Modulo.NOME_HOSPITALITY) = True Then
-            eui_txtDettagliProdotto.Text = "Software per strutture turistiche composto da moduli specifici per soddisfare le esigenze di ogni singola attività." &
+      ' HOSPITALITY.
+      If item.Contains(Modulo.NOME_HOSPITALITY) = True Then
+         eui_txtDettagliProdotto.Text = "Software per strutture turistiche composto da moduli specifici per soddisfare le esigenze di ogni singola attività." &
                                         "Bar, Ristorante, Centro sportivo, Hotel, Campeggio, Centro balneare, Centro benessere e Vendita al detaglio."
-        End If
+      End If
 
-        ' MAGAZZINO.
-        If item.Contains(Modulo.NOME_MAGAZZINO) = True Then
-            eui_txtDettagliProdotto.Text = "Modulo per la gestione del magazzino."
-        End If
+      ' MAGAZZINO.
+      If item.Contains(Modulo.NOME_MAGAZZINO) = True Then
+         eui_txtDettagliProdotto.Text = "Modulo per la gestione del magazzino."
+      End If
 
-        ' ETICHETTE.
-        If item.Contains(Modulo.NOME_ETICHETTE) = True Then
-            eui_txtDettagliProdotto.Text = "Modulo per la gestione di etichette indirizzi e codici a barre."
-        End If
+      ' ETICHETTE.
+      If item.Contains(Modulo.NOME_ETICHETTE) = True Then
+         eui_txtDettagliProdotto.Text = "Modulo per la gestione di etichette indirizzi e codici a barre."
+      End If
 
-        ' PENDRIVE PORTABLE.
-        If item.Contains(Modulo.NOME_PENDRIVE_PORTABLE) = True Then
-            eui_txtDettagliProdotto.Text = "Modulo per l'installazione del software su memoria esterna."
-        End If
+      ' PENDRIVE PORTABLE.
+      If item.Contains(Modulo.NOME_PENDRIVE_PORTABLE) = True Then
+         eui_txtDettagliProdotto.Text = "Modulo per l'installazione del software su memoria esterna."
+      End If
 
-        ' PENDRIVE RECOVERY.
-        If item.Contains(Modulo.NOME_PENDRIVE_RECOVERY) = True Then
-            eui_txtDettagliProdotto.Text = "Modulo per il salvataggio e recupero automatico dei dati del software."
-        End If
+      ' PENDRIVE RECOVERY.
+      If item.Contains(Modulo.NOME_PENDRIVE_RECOVERY) = True Then
+         eui_txtDettagliProdotto.Text = "Modulo per il salvataggio e recupero automatico dei dati del software."
+      End If
 
-        ' REGISTRATORI DI CASSA.
-        If item.Contains(Modulo.NOME_REG_CASSA) = True Then
-            eui_txtDettagliProdotto.Text = "Modulo per il collegamento ai registratori di cassa e stampanti fiscali."
-        End If
+      ' REGISTRATORI DI CASSA.
+      If item.Contains(Modulo.NOME_REG_CASSA) = True Then
+         eui_txtDettagliProdotto.Text = "Modulo per il collegamento ai registratori di cassa e stampanti fiscali."
+      End If
 
-        ' BAR.
-        If item.Contains(Modulo.NOME_BAR) = True Then
-            eui_txtDettagliProdotto.Text = "Software per Bar, Gelaterie e tutte quelle attività che non necessitano di una gestione dei tavoli."
-        End If
+      ' BAR.
+      If item.Contains(Modulo.NOME_BAR) = True Then
+         eui_txtDettagliProdotto.Text = "Software per Bar, Gelaterie e tutte quelle attività che non necessitano di una gestione dei tavoli."
+      End If
 
-        ' RISTORANTE.
-        If item.Contains(Modulo.NOME_CHEF) = True Then
-            eui_txtDettagliProdotto.Text = "Software per strutture ristorative (Ristoranti, Pizzerie, ecc.) che necessitano della gestione dei tavoli."
-        End If
+      ' RISTORANTE.
+      If item.Contains(Modulo.NOME_CHEF) = True Then
+         eui_txtDettagliProdotto.Text = "Software per strutture ristorative (Ristoranti, Pizzerie, ecc.) che necessitano della gestione dei tavoli."
+      End If
 
-        ' PALMARI.
-        If item.Contains(Modulo.NOME_PALMARI) = True Then
-            eui_txtDettagliProdotto.Text = "Modulo per la gestione dei palmari per la presa delle comande ai tavoli."
-        End If
+      ' PALMARI.
+      If item.Contains(Modulo.NOME_PALMARI) = True Then
+         eui_txtDettagliProdotto.Text = "Modulo per la gestione dei palmari per la presa delle comande ai tavoli."
+      End If
 
-        ' PRENOTAZIONI ON-LINE.
-        If item.Contains(Modulo.NOME_PREN_ONLINE) = True Then
-            eui_txtDettagliProdotto.Text = "Modulo per la prenotazione dei tavoli tramite Internet da Pc, Tablet, SmartPhone."
-        End If
+      ' PRENOTAZIONI ON-LINE.
+      If item.Contains(Modulo.NOME_PREN_ONLINE) = True Then
+         eui_txtDettagliProdotto.Text = "Modulo per la prenotazione dei tavoli tramite Internet da Pc, Tablet, SmartPhone."
+      End If
 
-        ' CENTRO SPORTIVO.
-        If item.Contains(Modulo.NOME_SPORTING) = True Then
-            eui_txtDettagliProdotto.Text = "Software per centri sportivi per la gestione di prenotazioni con tipologie diverse di risorse. Campi da tennis, da calcio, Piscina ecc"
-        End If
+      ' CENTRO SPORTIVO.
+      If item.Contains(Modulo.NOME_SPORTING) = True Then
+         eui_txtDettagliProdotto.Text = "Software per centri sportivi per la gestione di prenotazioni con tipologie diverse di risorse. Campi da tennis, da calcio, Piscina ecc"
+      End If
 
-        ' HOTEL.
-        If item.Contains(Modulo.NOME_HOTEL) = True Then
-            eui_txtDettagliProdotto.Text = "Software per Hotel."
-        End If
+      ' HOTEL.
+      If item.Contains(Modulo.NOME_HOTEL) = True Then
+         eui_txtDettagliProdotto.Text = "Software per Hotel."
+      End If
 
-        ' CAMPEGGIO.
-        If item.Contains(Modulo.NOME_CAMPING) = True Then
-            eui_txtDettagliProdotto.Text = "Software per campeggi"
-        End If
+      ' CAMPEGGIO.
+      If item.Contains(Modulo.NOME_CAMPING) = True Then
+         eui_txtDettagliProdotto.Text = "Software per campeggi"
+      End If
 
-        ' CENTRO BALNEARE.
-        If item.Contains(Modulo.NOME_BEACH) = True Then
-            eui_txtDettagliProdotto.Text = "Software per centri balneari"
-        End If
+      ' CENTRO BALNEARE.
+      If item.Contains(Modulo.NOME_BEACH) = True Then
+         eui_txtDettagliProdotto.Text = "Software per centri balneari"
+      End If
 
-        ' CENTRO BENESSERE.
-        If item.Contains(Modulo.NOME_BEUTY) = True Then
-            eui_txtDettagliProdotto.Text = "Software per centri benessere."
-        End If
+      ' CENTRO BENESSERE.
+      If item.Contains(Modulo.NOME_BEUTY) = True Then
+         eui_txtDettagliProdotto.Text = "Software per centri benessere."
+      End If
 
-        ' VENDITA AL DETTAGLIO.
-        If item.Contains(Modulo.NOME_RETAIL) = True Then
-            eui_txtDettagliProdotto.Text = "Software per Negozi di vendita al dettaglio."
-        End If
+      ' VENDITA AL DETTAGLIO.
+      If item.Contains(Modulo.NOME_RETAIL) = True Then
+         eui_txtDettagliProdotto.Text = "Software per Negozi di vendita al dettaglio."
+      End If
 
-        ' TAGLIE E COLORI.
-        If item.Contains(Modulo.NOME_TAGLIE_COLORI) = True Then
-            eui_txtDettagliProdotto.Text = "Modulo per la gestione delle taglie e colori."
-        End If
+      ' TAGLIE E COLORI.
+      If item.Contains(Modulo.NOME_TAGLIE_COLORI) = True Then
+         eui_txtDettagliProdotto.Text = "Modulo per la gestione delle taglie e colori."
+      End If
 
-    End Sub
+   End Sub
 
-    Private Sub lvwGestioneModuli_GotFocus(sender As Object, e As System.EventArgs) Handles lvwGestioneModuli.GotFocus
-        impostaListaModuli = False
-    End Sub
+   Private Sub lvwGestioneModuli_GotFocus(sender As Object, e As System.EventArgs) Handles lvwGestioneModuli.GotFocus
+      impostaListaModuli = False
+   End Sub
 
-    Private Sub lvwGestioneModuli_ItemChecked(sender As Object, e As System.Windows.Forms.ItemCheckedEventArgs) Handles lvwGestioneModuli.ItemChecked
-        Try
-            ' Se è in corso l'impostazione dei dati nella lista non esegue l'attivazione dei moduli.
-            If impostaListaModuli = True Then
-                Exit Sub
+   Private Sub lvwGestioneModuli_ItemChecked(sender As Object, e As System.Windows.Forms.ItemCheckedEventArgs) Handles lvwGestioneModuli.ItemChecked
+      Try
+         ' Se è in corso l'impostazione dei dati nella lista non esegue l'attivazione dei moduli.
+         If impostaListaModuli = True Then
+            Exit Sub
+         End If
+
+         ' ATTIVA IL MODULO.
+         If e.Item.Checked = True Then
+            ' Verifica la presenza della chiave di attivazione.
+            DatiConfig = New AppConfig
+            DatiConfig.ConfigType = ConfigFileType.AppConfig
+
+            Select Case e.Item.Text
+
+               Case Modulo.NOME_CAMPING, Modulo.NOME_BEACH, Modulo.NOME_BEUTY, Modulo.NOME_RETAIL
+                  ' Moduli non disponibili.
+                  MessageBox.Show(MSG_PRODOTTO_NON_DISPONIBILE, NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                  e.Item.Checked = False
+                  Exit Sub
+
+               Case Modulo.NOME_MAGAZZINO, Modulo.NOME_ETICHETTE, Modulo.NOME_PENDRIVE_PORTABLE, Modulo.NOME_PENDRIVE_RECOVERY, Modulo.NOME_REG_CASSA
+                  ' Sotto moduli per tutti i Prodotti.
+                  If VerificaProdottoAttivo() = False Then
+                     MessageBox.Show(MSG_ATTIVARE_UN_PRODOTTO, NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                     e.Item.Checked = False
+                     Exit Sub
+                  End If
+
+               Case Modulo.NOME_PALMARI, Modulo.NOME_PREN_ONLINE
+                  ' Sotto moduli per Ristorante.
+                  If DatiConfig.GetValue(Modulo.NOME_CHEF_CONFIG) = String.Empty Then
+                     MessageBox.Show(MSG_ATTIVARE_IL_PRODOTTO & Modulo.NOME_CHEF, NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                     e.Item.Checked = False
+                     Exit Sub
+                  End If
+
+               Case Modulo.NOME_TAGLIE_COLORI
+                  ' Sotto moduli per la Vendita al dettaglio.
+                  If DatiConfig.GetValue(Modulo.NOME_RETAIL_CONFIG) = String.Empty Then
+                     MessageBox.Show(MSG_ATTIVARE_IL_PRODOTTO & Modulo.NOME_RETAIL, NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                     e.Item.Checked = False
+                     Exit Sub
+                  End If
+
+            End Select
+
+            ' Se non esiste un codice di attivazione apre la finestra per l'inserimento della chiave.
+            If e.Item.SubItems(2).Text = String.Empty Then
+               Dim frm As New CodAccesso
+               ' Passa il nome del modulo alla finestra.
+               frm.Tag = e.Item.Text
+               frm.ShowDialog()
+
+               ' Se non viene attivato rimuove l'impostazione.
+               If frm.DialogResult = DialogResult.Cancel Then
+                  e.Item.Checked = False
+
+               ElseIf frm.DialogResult = DialogResult.OK Then
+                  ' Messaggio sulla barra di stato.
+                  eui_Informazioni.Text = "Caricamento Moduli in corso..."
+
+                  Select Case e.Item.Text
+                     Case Modulo.NOME_HOSPITALITY
+                        e.Item.SubItems(2).Text = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_HOSPITALITY, "-")
+                        e.Item.SubItems(3).ForeColor = Color.MidnightBlue
+
+                        ' Attiva anche il modulo Hotel.
+                        If moduloAttivo.Hotel = False Then
+                           Dim chiaveAttivazioneHotel As String = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_HOTEL)
+                           DatiConfig.SetValue(Modulo.NOME_HOTEL_CONFIG, chiaveAttivazioneHotel)
+                           moduloAttivo.Hotel = True
+                           ImpostaDatiListaModuli(Modulo.NOME_HOTEL, CHIAVE_ATTIVAZIONE_HOTEL, Color.Brown, True)
+                        End If
+
+                        ' Attiva anche il modulo Bar.
+                        If moduloAttivo.Bar = False Then
+                           Dim chiaveAttivazioneBar As String = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_BAR)
+                           DatiConfig.SetValue(Modulo.NOME_BAR_CONFIG, chiaveAttivazioneBar)
+                           moduloAttivo.Bar = True
+                           ImpostaDatiListaModuli(Modulo.NOME_BAR, CHIAVE_ATTIVAZIONE_BAR, Color.Green, True)
+                        End If
+
+                        ' Attiva anche il modulo Ristorante.
+                        If moduloAttivo.Ristorante = False Then
+                           Dim chiaveAttivazioneRistorante As String = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_RISTORANTE)
+                           DatiConfig.SetValue(Modulo.NOME_CHEF_CONFIG, chiaveAttivazioneRistorante)
+                           moduloAttivo.Ristorante = True
+                           ImpostaDatiListaModuli(Modulo.NOME_CHEF, CHIAVE_ATTIVAZIONE_RISTORANTE, Color.Green, True)
+                        End If
+
+                        ' Attiva anche il modulo Centro Sportivo.
+                        If moduloAttivo.CentroSportivo = False Then
+                           Dim chiaveAttivazioneCentroSportivo As String = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_CENTRO_SPORTIVO)
+                           DatiConfig.SetValue(Modulo.NOME_SPORTING_CONFIG, chiaveAttivazioneCentroSportivo)
+                           moduloAttivo.CentroSportivo = True
+                           ImpostaDatiListaModuli(Modulo.NOME_SPORTING, CHIAVE_ATTIVAZIONE_CENTRO_SPORTIVO, Color.DarkCyan, True)
+                        End If
+
+                     Case Modulo.NOME_HOTEL
+                        e.Item.SubItems(2).Text = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_HOTEL, "-")
+                        e.Item.SubItems(3).ForeColor = Color.Brown
+
+                     Case Modulo.NOME_BAR
+                        e.Item.SubItems(2).Text = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_BAR, "-")
+                        e.Item.SubItems(3).ForeColor = Color.Green
+
+                     Case Modulo.NOME_CHEF
+                        e.Item.SubItems(2).Text = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_RISTORANTE, "-")
+                        e.Item.SubItems(3).ForeColor = Color.Green
+
+                        ' Attivando il modulo Ristorante viene attivato anche il modulo Bar.
+                        If moduloAttivo.Bar = False Then
+                           Dim chiaveAttivazioneBar As String = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_BAR)
+                           DatiConfig.SetValue(Modulo.NOME_BAR_CONFIG, chiaveAttivazioneBar)
+                           moduloAttivo.Bar = True
+                           ImpostaDatiListaModuli(Modulo.NOME_BAR, CHIAVE_ATTIVAZIONE_BAR, Color.Green, True)
+                        End If
+
+                     Case Modulo.NOME_SPORTING
+                        e.Item.SubItems(2).Text = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_CENTRO_SPORTIVO, "-")
+                        e.Item.SubItems(3).ForeColor = Color.DarkCyan
+
+                     Case Modulo.NOME_PALMARI
+                        e.Item.SubItems(2).Text = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_PALMARI, "-")
+                        e.Item.SubItems(3).ForeColor = Color.Green
+
+                     Case Modulo.NOME_PREN_ONLINE
+                        e.Item.SubItems(2).Text = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_PREN_ONLINE, "-")
+                        e.Item.SubItems(3).ForeColor = Color.Green
+
+                     Case Modulo.NOME_MAGAZZINO
+                        e.Item.SubItems(2).Text = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_MAGAZZINO, "-")
+                        e.Item.SubItems(3).ForeColor = Color.MidnightBlue
+
+                     Case Modulo.NOME_ETICHETTE
+                        e.Item.SubItems(2).Text = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_ETICHETTE, "-")
+                        e.Item.SubItems(3).ForeColor = Color.MidnightBlue
+
+                     Case Modulo.NOME_PENDRIVE_RECOVERY
+                        e.Item.SubItems(2).Text = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_PENDRIVE_RECOVERY, "-")
+                        e.Item.SubItems(3).ForeColor = Color.MidnightBlue
+
+                     Case Modulo.NOME_PENDRIVE_PORTABLE
+                        e.Item.SubItems(2).Text = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_PENDRIVE_PORTABLE, "-")
+                        e.Item.SubItems(3).ForeColor = Color.MidnightBlue
+
+                     Case Modulo.NOME_REG_CASSA
+                        e.Item.SubItems(2).Text = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_REG_CASSA, "-")
+                        e.Item.SubItems(3).ForeColor = Color.MidnightBlue
+
+                  End Select
+
+                  e.Item.SubItems(3).Text = "ATTIVO"
+
+                  ' Attiva disattiva tutte le funzionalità del software.
+                  ImpostaModuli()
+
+                  ' Messaggio sulla barra di stato.
+                  eui_Informazioni.Text = LeggiDatiRivenditore()
+
+                  g_VerDemo = False
+               End If
             End If
 
-            ' ATTIVA IL MODULO.
-            If e.Item.Checked = True Then
-                ' Verifica la presenza della chiave di attivazione.
-                DatiConfig = New AppConfig
-                DatiConfig.ConfigType = ConfigFileType.AppConfig
+         Else
 
-                Select Case e.Item.Text
+            ' DISATTIVA IL MODULO.
+            If e.Item.SubItems(2).Text = String.Empty Then
+               Exit Sub
+            End If
 
-                    Case Modulo.NOME_CAMPING, Modulo.NOME_BEACH, Modulo.NOME_BEUTY, Modulo.NOME_RETAIL
-                        ' Moduli non disponibili.
-                        MessageBox.Show(MSG_PRODOTTO_NON_DISPONIBILE, NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-                        e.Item.Checked = False
-                        Exit Sub
+            Dim risposta As DialogResult
+            risposta = MessageBox.Show(MSG_DISATTIVA_PRODOTTO, NOME_PRODOTTO, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1)
 
-                    Case Modulo.NOME_MAGAZZINO, Modulo.NOME_ETICHETTE, Modulo.NOME_PENDRIVE_PORTABLE, Modulo.NOME_PENDRIVE_RECOVERY, Modulo.NOME_REG_CASSA
-                        ' Sotto moduli per tutti i Prodotti.
-                        If VerificaProdottoAttivo() = False Then
-                            MessageBox.Show(MSG_ATTIVARE_UN_PRODOTTO, NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-                            e.Item.Checked = False
-                            Exit Sub
-                        End If
-
-                    Case Modulo.NOME_PALMARI, Modulo.NOME_PREN_ONLINE
-                        ' Sotto moduli per Ristorante.
-                        If DatiConfig.GetValue(Modulo.NOME_CHEF_CONFIG) = String.Empty Then
-                            MessageBox.Show(MSG_ATTIVARE_IL_PRODOTTO & Modulo.NOME_CHEF, NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-                            e.Item.Checked = False
-                            Exit Sub
-                        End If
-
-                    Case Modulo.NOME_TAGLIE_COLORI
-                        ' Sotto moduli per la Vendita al dettaglio.
-                        If DatiConfig.GetValue(Modulo.NOME_RETAIL_CONFIG) = String.Empty Then
-                            MessageBox.Show(MSG_ATTIVARE_IL_PRODOTTO & Modulo.NOME_RETAIL, NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-                            e.Item.Checked = False
-                            Exit Sub
-                        End If
-
-                End Select
-
-                ' Se non esiste un codice di attivazione apre la finestra per l'inserimento della chiave.
-                If e.Item.SubItems(2).Text = String.Empty Then
-                    Dim frm As New CodAccesso
-                    ' Passa il nome del modulo alla finestra.
-                    frm.Tag = e.Item.Text
-                    frm.ShowDialog()
-
-                    ' Se non viene attivato rimuove l'impostazione.
-                    If frm.DialogResult = DialogResult.Cancel Then
-                        e.Item.Checked = False
-
-                    ElseIf frm.DialogResult = DialogResult.OK Then
-                        ' Messaggio sulla barra di stato.
-                        eui_Informazioni.Text = "Caricamento Moduli in corso..."
-
-                        Select Case e.Item.Text
-                            Case Modulo.NOME_HOSPITALITY
-                                e.Item.SubItems(2).Text = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_HOSPITALITY, "-")
-                                e.Item.SubItems(3).ForeColor = Color.MidnightBlue
-
-                                ' Attiva anche il modulo Hotel.
-                                If moduloAttivo.Hotel = False Then
-                                    Dim chiaveAttivazioneHotel As String = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_HOTEL)
-                                    DatiConfig.SetValue(Modulo.NOME_HOTEL_CONFIG, chiaveAttivazioneHotel)
-                                    moduloAttivo.Hotel = True
-                                    ImpostaDatiListaModuli(Modulo.NOME_HOTEL, CHIAVE_ATTIVAZIONE_HOTEL, Color.Brown, True)
-                                End If
-
-                                ' Attiva anche il modulo Bar.
-                                If moduloAttivo.Bar = False Then
-                                    Dim chiaveAttivazioneBar As String = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_BAR)
-                                    DatiConfig.SetValue(Modulo.NOME_BAR_CONFIG, chiaveAttivazioneBar)
-                                    moduloAttivo.Bar = True
-                                    ImpostaDatiListaModuli(Modulo.NOME_BAR, CHIAVE_ATTIVAZIONE_BAR, Color.Green, True)
-                                End If
-
-                                ' Attiva anche il modulo Ristorante.
-                                If moduloAttivo.Ristorante = False Then
-                                    Dim chiaveAttivazioneRistorante As String = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_RISTORANTE)
-                                    DatiConfig.SetValue(Modulo.NOME_CHEF_CONFIG, chiaveAttivazioneRistorante)
-                                    moduloAttivo.Ristorante = True
-                                    ImpostaDatiListaModuli(Modulo.NOME_CHEF, CHIAVE_ATTIVAZIONE_RISTORANTE, Color.Green, True)
-                                End If
-
-                                ' Attiva anche il modulo Centro Sportivo.
-                                If moduloAttivo.CentroSportivo = False Then
-                                    Dim chiaveAttivazioneCentroSportivo As String = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_CENTRO_SPORTIVO)
-                                    DatiConfig.SetValue(Modulo.NOME_SPORTING_CONFIG, chiaveAttivazioneCentroSportivo)
-                                    moduloAttivo.CentroSportivo = True
-                                    ImpostaDatiListaModuli(Modulo.NOME_SPORTING, CHIAVE_ATTIVAZIONE_CENTRO_SPORTIVO, Color.DarkCyan, True)
-                                End If
-
-                            Case Modulo.NOME_HOTEL
-                                e.Item.SubItems(2).Text = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_HOTEL, "-")
-                                e.Item.SubItems(3).ForeColor = Color.Brown
-
-                            Case Modulo.NOME_BAR
-                                e.Item.SubItems(2).Text = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_BAR, "-")
-                                e.Item.SubItems(3).ForeColor = Color.Green
-
-                            Case Modulo.NOME_CHEF
-                                e.Item.SubItems(2).Text = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_RISTORANTE, "-")
-                                e.Item.SubItems(3).ForeColor = Color.Green
-
-                                ' Attivando il modulo Ristorante viene attivato anche il modulo Bar.
-                                If moduloAttivo.Bar = False Then
-                                    Dim chiaveAttivazioneBar As String = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_BAR)
-                                    DatiConfig.SetValue(Modulo.NOME_BAR_CONFIG, chiaveAttivazioneBar)
-                                    moduloAttivo.Bar = True
-                                    ImpostaDatiListaModuli(Modulo.NOME_BAR, CHIAVE_ATTIVAZIONE_BAR, Color.Green, True)
-                                End If
-
-                            Case Modulo.NOME_SPORTING
-                                e.Item.SubItems(2).Text = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_CENTRO_SPORTIVO, "-")
-                                e.Item.SubItems(3).ForeColor = Color.DarkCyan
-
-                            Case Modulo.NOME_PALMARI
-                                e.Item.SubItems(2).Text = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_PALMARI, "-")
-                                e.Item.SubItems(3).ForeColor = Color.Green
-
-                            Case Modulo.NOME_PREN_ONLINE
-                                e.Item.SubItems(2).Text = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_PREN_ONLINE, "-")
-                                e.Item.SubItems(3).ForeColor = Color.Green
-
-                            Case Modulo.NOME_MAGAZZINO
-                                e.Item.SubItems(2).Text = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_MAGAZZINO, "-")
-                                e.Item.SubItems(3).ForeColor = Color.MidnightBlue
-
-                            Case Modulo.NOME_ETICHETTE
-                                e.Item.SubItems(2).Text = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_ETICHETTE, "-")
-                                e.Item.SubItems(3).ForeColor = Color.MidnightBlue
-
-                            Case Modulo.NOME_PENDRIVE_RECOVERY
-                                e.Item.SubItems(2).Text = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_PENDRIVE_RECOVERY, "-")
-                                e.Item.SubItems(3).ForeColor = Color.MidnightBlue
-
-                            Case Modulo.NOME_PENDRIVE_PORTABLE
-                                e.Item.SubItems(2).Text = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_PENDRIVE_PORTABLE, "-")
-                                e.Item.SubItems(3).ForeColor = Color.MidnightBlue
-
-                            Case Modulo.NOME_REG_CASSA
-                                e.Item.SubItems(2).Text = GeneraChiaveLicenza(CHIAVE_ATTIVAZIONE_REG_CASSA, "-")
-                                e.Item.SubItems(3).ForeColor = Color.MidnightBlue
-
-                        End Select
-
-                        e.Item.SubItems(3).Text = "ATTIVO"
-
-                        ' Attiva disattiva tutte le funzionalità del software.
-                        ImpostaModuli()
-
-                        ' Messaggio sulla barra di stato.
-                        eui_Informazioni.Text = LeggiDatiRivenditore()
-
-                        g_VerDemo = False
-                    End If
-                End If
-
+            If risposta = Windows.Forms.DialogResult.No Then
+               e.Item.Checked = True
+               Exit Sub
             Else
+               ' Messaggio sulla barra di stato.
+               eui_Informazioni.Text = "Rimozione Moduli in corso..."
 
-                ' DISATTIVA IL MODULO.
-                If e.Item.SubItems(2).Text = String.Empty Then
-                    Exit Sub
-                End If
+               Select Case e.Item.Text
+                  Case Modulo.NOME_HOSPITALITY
+                     If DisattivaProdotto(Modulo.NOME_HOSPITALITY_CONFIG) = True Then
 
-                Dim risposta As DialogResult
-                risposta = MessageBox.Show(MSG_DISATTIVA_PRODOTTO, NOME_PRODOTTO, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1)
+                        If moduloAttivo.Hotel = True Then
+                           If DisattivaProdotto(Modulo.NOME_HOTEL_CONFIG) = True Then
+                              ImpostaDatiListaModuli(Modulo.NOME_HOTEL, "", Color.Gray, False)
+                           End If
+                        End If
 
-                If risposta = Windows.Forms.DialogResult.No Then
-                    e.Item.Checked = True
-                    Exit Sub
-                Else
-                    ' Messaggio sulla barra di stato.
-                    eui_Informazioni.Text = "Rimozione Moduli in corso..."
+                        If moduloAttivo.Bar = True Then
+                           If DisattivaProdotto(Modulo.NOME_BAR_CONFIG) = True Then
+                              ImpostaDatiListaModuli(Modulo.NOME_BAR, "", Color.Gray, False)
+                           End If
+                        End If
 
-                    Select Case e.Item.Text
-                        Case Modulo.NOME_HOSPITALITY
-                            If DisattivaProdotto(Modulo.NOME_HOSPITALITY_CONFIG) = True Then
+                        If moduloAttivo.Ristorante = True Then
+                           If DisattivaProdotto(Modulo.NOME_CHEF_CONFIG) = True Then
+                              ImpostaDatiListaModuli(Modulo.NOME_CHEF, "", Color.Gray, False)
+                           End If
+                        End If
+                        If moduloAttivo.Palmari = True Then
+                           If DisattivaProdotto(Modulo.NOME_PALMARI_CONFIG) = True Then
+                              ImpostaDatiListaModuli(Modulo.NOME_PALMARI, "", Color.Gray, False)
+                           End If
+                        End If
+                        If moduloAttivo.PrenOnLine = True Then
+                           If DisattivaProdotto(Modulo.NOME_PREN_ONLINE_CONFIG) = True Then
+                              ImpostaDatiListaModuli(Modulo.NOME_PREN_ONLINE, "", Color.Gray, False)
+                           End If
+                        End If
 
-                                If moduloAttivo.Hotel = True Then
-                                    If DisattivaProdotto(Modulo.NOME_HOTEL_CONFIG) = True Then
-                                        ImpostaDatiListaModuli(Modulo.NOME_HOTEL, "", Color.Gray, False)
-                                    End If
-                                End If
+                        If moduloAttivo.CentroSportivo = True Then
+                           If DisattivaProdotto(Modulo.NOME_SPORTING_CONFIG) = True Then
+                              ImpostaDatiListaModuli(Modulo.NOME_SPORTING, "", Color.Gray, False)
+                           End If
+                        End If
 
-                                If moduloAttivo.Bar = True Then
-                                    If DisattivaProdotto(Modulo.NOME_BAR_CONFIG) = True Then
-                                        ImpostaDatiListaModuli(Modulo.NOME_BAR, "", Color.Gray, False)
-                                    End If
-                                End If
+                        Exit Select
+                     End If
 
-                                If moduloAttivo.Ristorante = True Then
-                                    If DisattivaProdotto(Modulo.NOME_CHEF_CONFIG) = True Then
-                                        ImpostaDatiListaModuli(Modulo.NOME_CHEF, "", Color.Gray, False)
-                                    End If
-                                End If
-                                If moduloAttivo.Palmari = True Then
-                                    If DisattivaProdotto(Modulo.NOME_PALMARI_CONFIG) = True Then
-                                        ImpostaDatiListaModuli(Modulo.NOME_PALMARI, "", Color.Gray, False)
-                                    End If
-                                End If
-                                If moduloAttivo.PrenOnLine = True Then
-                                    If DisattivaProdotto(Modulo.NOME_PREN_ONLINE_CONFIG) = True Then
-                                        ImpostaDatiListaModuli(Modulo.NOME_PREN_ONLINE, "", Color.Gray, False)
-                                    End If
-                                End If
+                  Case Modulo.NOME_HOTEL
+                     If DisattivaProdotto(Modulo.NOME_HOTEL_CONFIG) = True Then
+                        Exit Select
+                     End If
 
-                                If moduloAttivo.CentroSportivo = True Then
-                                    If DisattivaProdotto(Modulo.NOME_SPORTING_CONFIG) = True Then
-                                        ImpostaDatiListaModuli(Modulo.NOME_SPORTING, "", Color.Gray, False)
-                                    End If
-                                End If
+                  Case Modulo.NOME_BAR
+                     If DisattivaProdotto(Modulo.NOME_BAR_CONFIG) = True Then
+                        Exit Select
+                     End If
 
-                                Exit Select
-                            End If
+                  Case Modulo.NOME_CHEF
+                     If DisattivaProdotto(Modulo.NOME_CHEF_CONFIG) = True Then
 
-                        Case Modulo.NOME_HOTEL
-                            If DisattivaProdotto(Modulo.NOME_HOTEL_CONFIG) = True Then
-                                Exit Select
-                            End If
+                        If DisattivaProdotto(Modulo.NOME_PALMARI_CONFIG) = True Then
+                           ImpostaDatiListaModuli(Modulo.NOME_PALMARI, "", Color.Gray, False)
+                        End If
 
-                        Case Modulo.NOME_BAR
-                            If DisattivaProdotto(Modulo.NOME_BAR_CONFIG) = True Then
-                                Exit Select
-                            End If
+                        If DisattivaProdotto(Modulo.NOME_PREN_ONLINE_CONFIG) = True Then
+                           ImpostaDatiListaModuli(Modulo.NOME_PREN_ONLINE, "", Color.Gray, False)
+                        End If
 
-                        Case Modulo.NOME_CHEF
-                            If DisattivaProdotto(Modulo.NOME_CHEF_CONFIG) = True Then
+                        Exit Select
+                     End If
 
-                                If DisattivaProdotto(Modulo.NOME_PALMARI_CONFIG) = True Then
-                                    ImpostaDatiListaModuli(Modulo.NOME_PALMARI, "", Color.Gray, False)
-                                End If
+                  Case Modulo.NOME_SPORTING
+                     If DisattivaProdotto(Modulo.NOME_SPORTING_CONFIG) = True Then
+                        Exit Select
+                     End If
 
-                                If DisattivaProdotto(Modulo.NOME_PREN_ONLINE_CONFIG) = True Then
-                                    ImpostaDatiListaModuli(Modulo.NOME_PREN_ONLINE, "", Color.Gray, False)
-                                End If
+                  Case Modulo.NOME_PALMARI
+                     If DisattivaProdotto(Modulo.NOME_PALMARI_CONFIG) = True Then
+                        Exit Select
+                     End If
 
-                                Exit Select
-                            End If
+                  Case Modulo.NOME_PREN_ONLINE
+                     If DisattivaProdotto(Modulo.NOME_PREN_ONLINE_CONFIG) = True Then
+                        Exit Select
+                     End If
 
-                        Case Modulo.NOME_SPORTING
-                            If DisattivaProdotto(Modulo.NOME_SPORTING_CONFIG) = True Then
-                                Exit Select
-                            End If
+                  Case Modulo.NOME_MAGAZZINO
+                     If DisattivaProdotto(Modulo.NOME_MAGAZZINO_CONFIG) = True Then
+                        Exit Select
+                     End If
 
-                        Case Modulo.NOME_PALMARI
-                            If DisattivaProdotto(Modulo.NOME_PALMARI_CONFIG) = True Then
-                                Exit Select
-                            End If
+                  Case Modulo.NOME_ETICHETTE
+                     If DisattivaProdotto(Modulo.NOME_ETICHETTE_CONFIG) = True Then
+                        Exit Select
+                     End If
 
-                        Case Modulo.NOME_PREN_ONLINE
-                            If DisattivaProdotto(Modulo.NOME_PREN_ONLINE_CONFIG) = True Then
-                                Exit Select
-                            End If
+                  Case Modulo.NOME_PENDRIVE_RECOVERY
+                     If DisattivaProdotto(Modulo.NOME_PENDRIVE_RECOVERY_CONFIG) = True Then
+                        Exit Select
+                     End If
 
-                        Case Modulo.NOME_MAGAZZINO
-                            If DisattivaProdotto(Modulo.NOME_MAGAZZINO_CONFIG) = True Then
-                                Exit Select
-                            End If
+                  Case Modulo.NOME_PENDRIVE_PORTABLE
+                     If DisattivaProdotto(Modulo.NOME_PENDRIVE_PORTABLE_CONFIG) = True Then
+                        Exit Select
+                     End If
 
-                        Case Modulo.NOME_ETICHETTE
-                            If DisattivaProdotto(Modulo.NOME_ETICHETTE_CONFIG) = True Then
-                                Exit Select
-                            End If
+                  Case Modulo.NOME_REG_CASSA
+                     If DisattivaProdotto(Modulo.NOME_REG_CASSA_CONFIG) = True Then
+                        Exit Select
+                     End If
 
-                        Case Modulo.NOME_PENDRIVE_RECOVERY
-                            If DisattivaProdotto(Modulo.NOME_PENDRIVE_RECOVERY_CONFIG) = True Then
-                                Exit Select
-                            End If
+               End Select
 
-                        Case Modulo.NOME_PENDRIVE_PORTABLE
-                            If DisattivaProdotto(Modulo.NOME_PENDRIVE_PORTABLE_CONFIG) = True Then
-                                Exit Select
-                            End If
+               e.Item.SubItems(2).Text = String.Empty
+               e.Item.SubItems(3).ForeColor = Color.Gray
+               e.Item.SubItems(3).Text = "NON ATTIVO"
 
-                        Case Modulo.NOME_REG_CASSA
-                            If DisattivaProdotto(Modulo.NOME_REG_CASSA_CONFIG) = True Then
-                                Exit Select
-                            End If
+               ' Attiva disattiva tutte le funzionalità del software.
+               ImpostaModuli()
 
-                    End Select
+               ' Messaggio sulla barra di stato.
+               eui_Informazioni.Text = LeggiDatiRivenditore()
 
-                    e.Item.SubItems(2).Text = String.Empty
-                    e.Item.SubItems(3).ForeColor = Color.Gray
-                    e.Item.SubItems(3).Text = "NON ATTIVO"
-
-                    ' Attiva disattiva tutte le funzionalità del software.
-                    ImpostaModuli()
-
-                    ' Messaggio sulla barra di stato.
-                    eui_Informazioni.Text = LeggiDatiRivenditore()
-
-                    MessageBox.Show(MSG_PRODOTTO_DISATTIVATO, NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1)
-                End If
+               MessageBox.Show(MSG_PRODOTTO_DISATTIVATO, NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1)
             End If
+         End If
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-        End Try
-    End Sub
+      End Try
+   End Sub
 
 #End Region
 
 #Region "Amica Gestionale"
 
-    Public Sub VisualizzaRibbonAmica(ByVal visualizzaRibbon As Boolean)
-        ' NON UTILIZZATA!!!
-        Try
+   Public Sub VisualizzaRibbonAmica(ByVal visualizzaRibbon As Boolean)
+      ' NON UTILIZZATA!!!
+      Try
 
-            If visualizzaRibbon = True Then
-                ' Aggiunge il form aperto al contatore.
-                NumFormMdiAperti += 1
+         If visualizzaRibbon = True Then
+            ' Aggiunge il form aperto al contatore.
+            NumFormMdiAperti += 1
 
-                ' Visualizza i comandi sul Ribbon per l'importazione/esportazione dati del Gestionale Amica.
-                rtgGestionaleAmica.Visible = visualizzaRibbon
-            Else
-                ' Rimuove il form aperto dal contatore.
-                NumFormMdiAperti -= 1
+            ' Visualizza i comandi sul Ribbon per l'importazione/esportazione dati del Gestionale Amica.
+            rtgGestionaleAmica.Visible = visualizzaRibbon
+         Else
+            ' Rimuove il form aperto dal contatore.
+            NumFormMdiAperti -= 1
 
-                ' Se non ci sono form aperti...
-                If NumFormMdiAperti = 0 Then
-                    ' Chiude i comandi sul Ribbon per l'importazione/esportazione dati del Gestionale Amica.
-                    rtgGestionaleAmica.Visible = visualizzaRibbon
-                End If
+            ' Se non ci sono form aperti...
+            If NumFormMdiAperti = 0 Then
+               ' Chiude i comandi sul Ribbon per l'importazione/esportazione dati del Gestionale Amica.
+               rtgGestionaleAmica.Visible = visualizzaRibbon
             End If
+         End If
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-        End Try
+      End Try
 
-    End Sub
+   End Sub
 
-    Private Sub eui_cmdAmicaImporta_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdAmicaImporta.Click
-        Try
+   Private Sub eui_cmdAmicaImporta_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdAmicaImporta.Click
+      Try
 
-            If ActiveMdiChild.Text.Contains("Clienti") = True Then
-                AmicaImportaEsporta("Importa", "Elenco Clienti")
-                Exit Sub
-            End If
+         If ActiveMdiChild.Text.Contains("Clienti") = True Then
+            AmicaImportaEsporta("Importa", "Elenco Clienti")
+            Exit Sub
+         End If
 
-            If ActiveMdiChild.Text.Contains("Fornitori") = True Then
-                AmicaImportaEsporta("Importa", "Elenco Fornitori")
-                Exit Sub
-            End If
+         If ActiveMdiChild.Text.Contains("Fornitori") = True Then
+            AmicaImportaEsporta("Importa", "Elenco Fornitori")
+            Exit Sub
+         End If
 
-            If ActiveMdiChild.Text.Contains("Aziende") = True Then
-                AmicaImportaEsporta("Importa", "Elenco Aziende")
-                Exit Sub
-            End If
+         If ActiveMdiChild.Text.Contains("Aziende") = True Then
+            AmicaImportaEsporta("Importa", "Elenco Aziende")
+            Exit Sub
+         End If
 
-            If ActiveMdiChild.Text.Contains("Articoli") = True Then
-                AmicaImportaEsporta("Importa", "Elenco Articoli")
-                Exit Sub
-            End If
+         If ActiveMdiChild.Text.Contains("Articoli") = True Then
+            AmicaImportaEsporta("Importa", "Elenco Articoli")
+            Exit Sub
+         End If
 
-            If ActiveMdiChild.Text.Contains("Prima Nota") = True Then
-                AmicaImportaEsporta("Importa", "Prima Nota")
-                Exit Sub
-            End If
+         If ActiveMdiChild.Text.Contains("Prima Nota") = True Then
+            AmicaImportaEsporta("Importa", "Prima Nota")
+            Exit Sub
+         End If
 
-            If ActiveMdiChild.Text.Contains("Nazioni") = True Then
-                AmicaImportaEsporta("Importa", "Nazioni")
-                Exit Sub
-            End If
+         If ActiveMdiChild.Text.Contains("Nazioni") = True Then
+            AmicaImportaEsporta("Importa", "Nazioni")
+            Exit Sub
+         End If
 
-            If ActiveMdiChild.Text.Contains("Attività") = True Then
-                AmicaImportaEsporta("Importa", "Attività")
-                Exit Sub
-            End If
+         If ActiveMdiChild.Text.Contains("Attività") = True Then
+            AmicaImportaEsporta("Importa", "Attività")
+            Exit Sub
+         End If
 
-            If ActiveMdiChild.Text.Contains("Categorie merceologiche") = True Then
-                AmicaImportaEsporta("Importa", "Categorie merceologiche")
-                Exit Sub
-            End If
+         If ActiveMdiChild.Text.Contains("Categorie merceologiche") = True Then
+            AmicaImportaEsporta("Importa", "Categorie merceologiche")
+            Exit Sub
+         End If
 
-            If ActiveMdiChild.Text.Contains("Tipo pagamento") = True Then
-                AmicaImportaEsporta("Importa", "Tipo pagamento")
-                Exit Sub
-            End If
+         If ActiveMdiChild.Text.Contains("Tipo pagamento") = True Then
+            AmicaImportaEsporta("Importa", "Tipo pagamento")
+            Exit Sub
+         End If
 
-            If ActiveMdiChild.Text.Contains("Magazzini") = True Then
-                AmicaImportaEsporta("Importa", "Magazzini")
-                Exit Sub
-            End If
+         If ActiveMdiChild.Text.Contains("Magazzini") = True Then
+            AmicaImportaEsporta("Importa", "Magazzini")
+            Exit Sub
+         End If
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-        End Try
+      End Try
 
-    End Sub
+   End Sub
 
-    Private Sub eui_cmdAmicaEsporta_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdAmicaEsporta.Click
-        Try
+   Private Sub eui_cmdAmicaEsporta_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdAmicaEsporta.Click
+      Try
 
-            If ActiveMdiChild.Text.Contains("Clienti") = True Then
-                AmicaImportaEsporta("Esporta", "Elenco Clienti")
-                Exit Sub
-            End If
+         If ActiveMdiChild.Text.Contains("Clienti") = True Then
+            AmicaImportaEsporta("Esporta", "Elenco Clienti")
+            Exit Sub
+         End If
 
-            If ActiveMdiChild.Text.Contains("Fornitori") = True Then
-                AmicaImportaEsporta("Esporta", "Elenco Fornitori")
-                Exit Sub
-            End If
+         If ActiveMdiChild.Text.Contains("Fornitori") = True Then
+            AmicaImportaEsporta("Esporta", "Elenco Fornitori")
+            Exit Sub
+         End If
 
-            If ActiveMdiChild.Text.Contains("Aziende") = True Then
-                AmicaImportaEsporta("Esporta", "Elenco Aziende")
-                Exit Sub
-            End If
+         If ActiveMdiChild.Text.Contains("Aziende") = True Then
+            AmicaImportaEsporta("Esporta", "Elenco Aziende")
+            Exit Sub
+         End If
 
-            If ActiveMdiChild.Text.Contains("Articoli") = True Then
-                AmicaImportaEsporta("Esporta", "Elenco Articoli")
-                Exit Sub
-            End If
+         If ActiveMdiChild.Text.Contains("Articoli") = True Then
+            AmicaImportaEsporta("Esporta", "Elenco Articoli")
+            Exit Sub
+         End If
 
-            If ActiveMdiChild.Text.Contains("Prima Nota") = True Then
-                AmicaImportaEsporta("Esporta", "Prima Nota")
-                Exit Sub
-            End If
+         If ActiveMdiChild.Text.Contains("Prima Nota") = True Then
+            AmicaImportaEsporta("Esporta", "Prima Nota")
+            Exit Sub
+         End If
 
-            If ActiveMdiChild.Text.Contains("Nazioni") = True Then
-                AmicaImportaEsporta("Esporta", "Nazioni")
-                Exit Sub
-            End If
+         If ActiveMdiChild.Text.Contains("Nazioni") = True Then
+            AmicaImportaEsporta("Esporta", "Nazioni")
+            Exit Sub
+         End If
 
-            If ActiveMdiChild.Text.Contains("Attività") = True Then
-                AmicaImportaEsporta("Esporta", "Attività")
-                Exit Sub
-            End If
+         If ActiveMdiChild.Text.Contains("Attività") = True Then
+            AmicaImportaEsporta("Esporta", "Attività")
+            Exit Sub
+         End If
 
-            If ActiveMdiChild.Text.Contains("Categorie merceologiche") = True Then
-                AmicaImportaEsporta("Esporta", "Categorie merceologiche")
-                Exit Sub
-            End If
+         If ActiveMdiChild.Text.Contains("Categorie merceologiche") = True Then
+            AmicaImportaEsporta("Esporta", "Categorie merceologiche")
+            Exit Sub
+         End If
 
-            If ActiveMdiChild.Text.Contains("Tipo pagamento") = True Then
-                AmicaImportaEsporta("Esporta", "Tipo pagamento")
-                Exit Sub
-            End If
+         If ActiveMdiChild.Text.Contains("Tipo pagamento") = True Then
+            AmicaImportaEsporta("Esporta", "Tipo pagamento")
+            Exit Sub
+         End If
 
-            If ActiveMdiChild.Text.Contains("Magazzini") = True Then
-                AmicaImportaEsporta("Esporta", "Magazzini")
-                Exit Sub
-            End If
+         If ActiveMdiChild.Text.Contains("Magazzini") = True Then
+            AmicaImportaEsporta("Esporta", "Magazzini")
+            Exit Sub
+         End If
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-        End Try
+      End Try
 
-    End Sub
+   End Sub
 
-    Private Sub AmicaImportaEsporta(ByVal tipoOperazione As String, ByVal tipoDati As String)
-        Try
-            ' Modifica il cursore del mouse.
-            Cursor.Current = Cursors.AppStarting
+   Private Sub AmicaImportaEsporta(ByVal tipoOperazione As String, ByVal tipoDati As String)
+      Try
+         ' Modifica il cursore del mouse.
+         Cursor.Current = Cursors.AppStarting
 
-            Const NOME_AMICA_HOSPITALITY_EXE As String = "Amica.Hospitality.exe"
-            Const NOME_AMICA_HOSPITALITY_CONFIG As String = "Amica.Hospitality.txt"
-            Const NOME_AMICA_HOSPITALITY_IMG As String = "Amica.Img.bmp"
+         Const NOME_AMICA_HOSPITALITY_EXE As String = "Amica.Hospitality.exe"
+         Const NOME_AMICA_HOSPITALITY_CONFIG As String = "Amica.Hospitality.txt"
+         Const NOME_AMICA_HOSPITALITY_IMG As String = "Amica.Img.bmp"
 
-            Dim percorsoAmica As String
+         Dim percorsoAmica As String
 
-            ' Percorso Gestionale Amica.
-            If DatiConfig.GetValue("PercorsoAmica") <> String.Empty Then
-                percorsoAmica = DatiConfig.GetValue("PercorsoAmica")
-            Else
-                MessageBox.Show("Per eseguire l'operazione è necessario impostare il percorso del Gestionale Amica nella finestra Opzioni.", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-                Exit Sub
-            End If
+         ' Percorso Gestionale Amica.
+         If DatiConfig.GetValue("PercorsoAmica") <> String.Empty Then
+            percorsoAmica = DatiConfig.GetValue("PercorsoAmica")
+         Else
+            MessageBox.Show("Per eseguire l'operazione è necessario impostare il percorso del Gestionale Amica nella finestra Opzioni.", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            Exit Sub
+         End If
 
-            ' Verifica l'esistenza del file per l'importazione/esportazione.
-            Dim percorsoFileHospitality As String = Application.StartupPath & "\Amica\" & NOME_AMICA_HOSPITALITY_EXE
-            Dim percorsoFileAmica As String = percorsoAmica & NOME_AMICA_HOSPITALITY_EXE
-            Dim percorsoFileHospitalityConfig As String = Application.StartupPath & "\Amica\" & NOME_AMICA_HOSPITALITY_CONFIG
-            Dim percorsoFileAmicaConfig As String = percorsoAmica & NOME_AMICA_HOSPITALITY_CONFIG
-            Dim percorsoFileHospitalityImg As String = Application.StartupPath & "\Amica\" & NOME_AMICA_HOSPITALITY_IMG
-            Dim percorsoFileAmicaImg As String = percorsoAmica & NOME_AMICA_HOSPITALITY_IMG
+         ' Verifica l'esistenza del file per l'importazione/esportazione.
+         Dim percorsoFileHospitality As String = Application.StartupPath & "\Amica\" & NOME_AMICA_HOSPITALITY_EXE
+         Dim percorsoFileAmica As String = percorsoAmica & NOME_AMICA_HOSPITALITY_EXE
+         Dim percorsoFileHospitalityConfig As String = Application.StartupPath & "\Amica\" & NOME_AMICA_HOSPITALITY_CONFIG
+         Dim percorsoFileAmicaConfig As String = percorsoAmica & NOME_AMICA_HOSPITALITY_CONFIG
+         Dim percorsoFileHospitalityImg As String = Application.StartupPath & "\Amica\" & NOME_AMICA_HOSPITALITY_IMG
+         Dim percorsoFileAmicaImg As String = percorsoAmica & NOME_AMICA_HOSPITALITY_IMG
 
+
+         If File.Exists(percorsoAmica & NOME_AMICA_HOSPITALITY_EXE) = True Then
+            ScriviFileAmicaHospitality(tipoOperazione, tipoDati, percorsoFileAmicaConfig, ConnString)
+
+            AvviaApplicazione(Me.Handle, percorsoAmica & NOME_AMICA_HOSPITALITY_EXE, "")
+         Else
+            File.Copy(percorsoFileHospitality, percorsoFileAmica)
+            File.Copy(percorsoFileHospitalityConfig, percorsoFileAmicaConfig)
+            File.Copy(percorsoFileHospitalityImg, percorsoFileAmicaImg)
 
             If File.Exists(percorsoAmica & NOME_AMICA_HOSPITALITY_EXE) = True Then
-                ScriviFileAmicaHospitality(tipoOperazione, tipoDati, percorsoFileAmicaConfig, ConnString)
+               ScriviFileAmicaHospitality(tipoOperazione, tipoDati, percorsoFileAmicaConfig, ConnString)
 
-                AvviaApplicazione(Me.Handle, percorsoAmica & NOME_AMICA_HOSPITALITY_EXE, "")
+               AvviaApplicazione(Me.Handle, percorsoAmica & NOME_AMICA_HOSPITALITY_EXE, "")
             Else
-                File.Copy(percorsoFileHospitality, percorsoFileAmica)
-                File.Copy(percorsoFileHospitalityConfig, percorsoFileAmicaConfig)
-                File.Copy(percorsoFileHospitalityImg, percorsoFileAmicaImg)
-
-                If File.Exists(percorsoAmica & NOME_AMICA_HOSPITALITY_EXE) = True Then
-                    ScriviFileAmicaHospitality(tipoOperazione, tipoDati, percorsoFileAmicaConfig, ConnString)
-
-                    AvviaApplicazione(Me.Handle, percorsoAmica & NOME_AMICA_HOSPITALITY_EXE, "")
-                Else
-                    MessageBox.Show("Il programma di utilità per l'importazione/esportazione dei dati risulta essere mancante si prega di riporvare. Se il problema persiste contattare l'assistenza.", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-                End If
+               MessageBox.Show("Il programma di utilità per l'importazione/esportazione dei dati risulta essere mancante si prega di riporvare. Se il problema persiste contattare l'assistenza.", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             End If
+         End If
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-        Finally
-            ' Modifica il cursore del mouse.
-            Cursor.Current = Cursors.Default
+      Finally
+         ' Modifica il cursore del mouse.
+         Cursor.Current = Cursors.Default
 
-        End Try
+      End Try
 
-    End Sub
+   End Sub
 
-    Private Sub ScriviFileAmicaHospitality(ByVal tipoOperazione As String, ByVal nomeDati As String, ByVal percorsoFileHospitalityConfig As String, ByVal connString As String)
-        Try
-            If File.Exists(percorsoFileHospitalityConfig) = True Then
+   Private Sub ScriviFileAmicaHospitality(ByVal tipoOperazione As String, ByVal nomeDati As String, ByVal percorsoFileHospitalityConfig As String, ByVal connString As String)
+      Try
+         If File.Exists(percorsoFileHospitalityConfig) = True Then
 
-                FileOpen(1, percorsoFileHospitalityConfig, OpenMode.Output)
-                PrintLine(1, connString)
-                PrintLine(1, tipoOperazione)
-                PrintLine(1, nomeDati)
+            FileOpen(1, percorsoFileHospitalityConfig, OpenMode.Output)
+            PrintLine(1, connString)
+            PrintLine(1, tipoOperazione)
+            PrintLine(1, nomeDati)
 
-            End If
+         End If
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-        Finally
-            FileClose(1)
+      Finally
+         FileClose(1)
 
-        End Try
+      End Try
 
-    End Sub
+   End Sub
 
 #End Region
 
-    Public Sub SalvaDatiPenDriveRecovery()
-        ' Se il modulo Pen Drive Recovery è attivo
-        If moduloAttivo.PenDriveRecovery = True Then
-            PenDriveRecovery("Hospitality Solution Recovery\HsRecovery", "PercorsoRecovery", "DataRecovery", "AttivaRecovery",
+   Public Sub SalvaDatiPenDriveRecovery()
+      ' Se il modulo Pen Drive Recovery è attivo
+      If moduloAttivo.PenDriveRecovery = True Then
+         PenDriveRecovery("Hospitality Solution Recovery\HsRecovery", "PercorsoRecovery", "DataRecovery", "AttivaRecovery",
                           "Hospitality Solution 3.0.exe", "HsPack.msi", "Hospitality Solution Recovery.exe")
-        End If
-    End Sub
+      End If
+   End Sub
 
-    ' NON UTILIZZATA!
-    Private Sub LeggiDati()
-        '   Try
-        '      If WebCommunication.VerificaConnessione = True Then
-        '         WebCommunication.LeggiFile("http://www.montanasoftware.it/Hss/Prova.txt", "C:\File\Prova.txt")
-        '      End If
+   Private Sub ImpostaProprietàArchivio()
+      Try
+         txtPercorso.Text = Application.StartupPath & CARTELLA_ARCHIVI
+         txtPercorso.ScreenTip.Text = Application.StartupPath & CARTELLA_ARCHIVI
+         lblPercorso.Text = Application.StartupPath & CARTELLA_ARCHIVI
+         cmdApriPercorso.ScreenTip.Text = Application.StartupPath & CARTELLA_ARCHIVI
 
-        '   Catch ex As Exception
-        '      ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-        '      err.GestisciErrore(ex.StackTrace, ex.Message)
+         lblAttributi.Text = File.GetAttributes(PercorsoDB).ToString
+         lblDataCreazione.Text = File.GetCreationTime(PercorsoDB).ToString
+         lblDataUltimoAccesso.Text = File.GetLastAccessTime(PercorsoDB).ToString
+         lblDataUltimaScrittura.Text = File.GetLastWriteTime(PercorsoDB).ToString
 
-        '   End Try
-    End Sub
+         Dim di As New DirectoryInfo(Application.StartupPath & CARTELLA_ARCHIVI)
+         Dim fiArr As FileInfo() = di.GetFiles(NomeDB, SearchOption.TopDirectoryOnly)
 
-    Private Sub ImpostaProprietàArchivio()
-        Try
-            txtPercorso.Text = Application.StartupPath & CARTELLA_ARCHIVI
-            txtPercorso.ScreenTip.Text = Application.StartupPath & CARTELLA_ARCHIVI
-            lblPercorso.Text = Application.StartupPath & CARTELLA_ARCHIVI
-            cmdApriPercorso.ScreenTip.Text = Application.StartupPath & CARTELLA_ARCHIVI
+         Dim f As FileInfo
+         For Each f In fiArr
+            Dim B As Long = f.Length
+            Dim KB As Long = B / 1024
+            Dim MB As Long = KB / 1024
 
-            lblAttributi.Text = File.GetAttributes(PercorsoDB).ToString
-            lblDataCreazione.Text = File.GetCreationTime(PercorsoDB).ToString
-            lblDataUltimoAccesso.Text = File.GetLastAccessTime(PercorsoDB).ToString
-            lblDataUltimaScrittura.Text = File.GetLastWriteTime(PercorsoDB).ToString
+            lblDimensioniFile.Text = String.Format("{0:##,##0}", KB) & " KB (" & String.Format("{0:##,##0}", B) & " byte)"
+         Next f
 
-            Dim di As New DirectoryInfo(Application.StartupPath & CARTELLA_ARCHIVI)
-            Dim fiArr As FileInfo() = di.GetFiles(NomeDB, SearchOption.TopDirectoryOnly)
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-            Dim f As FileInfo
-            For Each f In fiArr
-                Dim B As Long = f.Length
-                Dim KB As Long = B / 1024
-                Dim MB As Long = KB / 1024
+      End Try
 
-                lblDimensioniFile.Text = String.Format("{0:##,##0}", KB) & " KB (" & String.Format("{0:##,##0}", B) & " byte)"
-            Next f
+   End Sub
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+   Private Sub ImpostaInfoSu()
+      lblVersione.Text = "Versione " & FileVersionInfo.GetVersionInfo(GetExecutingAssembly.Location).ProductVersion & " (32 Bit)"
+      lblInfo.Text = FileVersionInfo.GetVersionInfo(GetExecutingAssembly.Location).LegalCopyright
+      lblNumSerie.Text = "ID prodotto: " & NUMERO_SERIE
+   End Sub
 
-        End Try
+   Private Sub eui_cmdArchivio_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchivio.Click
+      Dim frm As New frmOpzioni
+      frm.ShowDialog()
+   End Sub
 
-    End Sub
+   Private Sub eui_cmdAzienda_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdAzienda.Click
+      ApriAzienda()
+   End Sub
 
-    Private Sub ImpostaInfoSu()
-        lblVersione.Text = "Versione " & FileVersionInfo.GetVersionInfo(GetExecutingAssembly.Location).ProductVersion & " (32 Bit)"
-        lblInfo.Text = FileVersionInfo.GetVersionInfo(GetExecutingAssembly.Location).LegalCopyright
-        lblNumSerie.Text = "ID prodotto: " & NUMERO_SERIE
-    End Sub
+   Private Sub eui_cmdPostazione_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdPostazione.Click
+      Dim frm As New frmPostazione
+      frm.ShowDialog()
+   End Sub
 
-    Private Sub eui_cmdArchivio_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdArchivio.Click
-        Dim frm As New frmOpzioni
-        frm.ShowDialog()
-    End Sub
+   Private Sub eui_cmdOperatore_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdOperatore.Click
+      ApriOperatori()
+   End Sub
 
-    Private Sub eui_cmdAzienda_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdAzienda.Click
-        ApriAzienda()
-    End Sub
+   Private Sub picProg_Click(sender As System.Object, e As System.EventArgs) Handles picProg.Click
+      eui_File.BackstageViewVisible = False
 
-    Private Sub eui_cmdPostazione_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdPostazione.Click
-        Dim frm As New frmPostazione
-        frm.ShowDialog()
-    End Sub
+   End Sub
 
-    Private Sub eui_cmdOperatore_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdOperatore.Click
-        ApriOperatori()
-    End Sub
+   Private Sub cmdApriPercorso_Click(sender As System.Object, e As System.EventArgs) Handles cmdApriPercorso.Click
+      AvviaEsploraFile(Me.Handle, Application.StartupPath & CARTELLA_ARCHIVI)
+   End Sub
 
-    Private Sub picProg_Click(sender As System.Object, e As System.EventArgs) Handles picProg.Click
-        eui_File.BackstageViewVisible = False
+   Private Sub cmdBackup_Click(sender As System.Object, e As System.EventArgs) Handles cmdBackup.Click
+      eui_cmdArchiviBackup.PerformClick()
+   End Sub
 
-    End Sub
+   Private Sub cmdPulizia_Click(sender As System.Object, e As System.EventArgs) Handles cmdPulizia.Click
+      eui_cmdArchiviPulizia.PerformClick()
+   End Sub
 
-    Private Sub cmdApriPercorso_Click(sender As System.Object, e As System.EventArgs) Handles cmdApriPercorso.Click
-        AvviaEsploraFile(Me.Handle, Application.StartupPath & CARTELLA_ARCHIVI)
-    End Sub
+   Private Sub cmdCompatta_Click(sender As System.Object, e As System.EventArgs) Handles cmdCompatta.Click
+      eui_cmdArchiviCompatta.PerformClick()
+   End Sub
 
-    Private Sub cmdBackup_Click(sender As System.Object, e As System.EventArgs) Handles cmdBackup.Click
-        eui_cmdArchiviBackup.PerformClick()
-    End Sub
+   Private Sub eui_cmdGuida_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdGuida.Click
+      ApriGuida()
+   End Sub
 
-    Private Sub cmdPulizia_Click(sender As System.Object, e As System.EventArgs) Handles cmdPulizia.Click
-        eui_cmdArchiviPulizia.PerformClick()
-    End Sub
+   Private Sub eui_cmdContattaci_Click(sender As Object, e As System.EventArgs) Handles eui_cmdContattaci.Click
+      Try
+         ApriSitoInternet(MS_WEB_CONTATTI)
 
-    Private Sub cmdCompatta_Click(sender As System.Object, e As System.EventArgs) Handles cmdCompatta.Click
-        eui_cmdArchiviCompatta.PerformClick()
-    End Sub
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
 
-    Private Sub eui_cmdGuida_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdGuida.Click
-        ApriGuida()
-    End Sub
+   End Sub
 
-    Private Sub eui_cmdContattaci_Click(sender As Object, e As System.EventArgs) Handles eui_cmdContattaci.Click
-        Try
-            ApriSitoInternet(MS_WEB_CONTATTI)
+   Private Sub lnkMsWeb_LinkClicked(sender As System.Object, e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles lnkMsWeb.LinkClicked
+      Try
+         ApriSitoInternet(MS_WEB)
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
 
-    End Sub
+   Private Sub eui_cmdOpzioni_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdOpzioni.Click
+      Try
+         Dim frm As New frmOpzioni
+         frm.ShowDialog()
 
-    Private Sub lnkMsWeb_LinkClicked(sender As System.Object, e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles lnkMsWeb.LinkClicked
-        Try
-            ApriSitoInternet(MS_WEB)
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
+   Private Sub lnkInfoSu_LinkClicked(sender As System.Object, e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles lnkInfoSu.LinkClicked
+      Try
+         ApriInfo()
 
-    Private Sub eui_cmdOpzioni_Click(sender As System.Object, e As System.EventArgs) Handles eui_cmdOpzioni.Click
-        Try
-            Dim frm As New frmOpzioni
-            frm.ShowDialog()
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+      End Try
+   End Sub
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
+   Private Sub lnkSupporto_Click(sender As Object, e As System.EventArgs) Handles lnkSupporto.Click
+      Try
+         ' Modifica il cursore del mouse.
+         Cursor.Current = Cursors.AppStarting
 
-    Private Sub lnkInfoSu_LinkClicked(sender As System.Object, e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles lnkInfoSu.LinkClicked
-        Try
-            ApriInfo()
+         Dim Web As New Varie.WebSolution
+         Dim allegato(-1) As String
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
-        End Try
-    End Sub
+         Web.createEmail(Application.StartupPath & "\Documenti\" & EMAIL_NOME_FILE, EMAIL_DA, EMAIL_A, EMAIL_OGGETTO & NOME_PRODOTTO, EMAIL_TESTO, allegato)
+         Process.Start(Application.StartupPath & "\Documenti\" & EMAIL_NOME_FILE)
 
-    Private Sub lnkSupporto_Click(sender As Object, e As System.EventArgs) Handles lnkSupporto.Click
-        Try
-            ' Modifica il cursore del mouse.
-            Cursor.Current = Cursors.AppStarting
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-            Dim Web As New Varie.WebSolution
-            Dim allegato(-1) As String
+      Finally
+         ' Modifica il cursore del mouse.
+         Cursor.Current = Cursors.Default
 
-            Web.createEmail(Application.StartupPath & "\Documenti\" & EMAIL_NOME_FILE, EMAIL_DA, EMAIL_A, EMAIL_OGGETTO & NOME_PRODOTTO, EMAIL_TESTO, allegato)
-            Process.Start(Application.StartupPath & "\Documenti\" & EMAIL_NOME_FILE)
+      End Try
 
-        Catch ex As Exception
-            ' Visualizza un messaggio di errore e lo registra nell'apposito file.
-            err.GestisciErrore(ex.StackTrace, ex.Message)
+   End Sub
 
-        Finally
-            ' Modifica il cursore del mouse.
-            Cursor.Current = Cursors.Default
+   Private Sub lnkLicenza_Click(sender As Object, e As System.EventArgs) Handles lnkLicenza.Click
+      AvviaLicenzaRtf(Me.Handle, Application.StartupPath & PERCORSO_LICENZA_RTF)
+   End Sub
 
-        End Try
+   Private Sub eui_lstProdottiAttivati_SelectionChanged(sender As Object, e As System.EventArgs) Handles eui_lstProdottiAttivati.SelectionChanged
+      VisualizzaInfoProdottiAttivi()
+   End Sub
 
-    End Sub
+   Private Sub Timer2_Tick(sender As System.Object, e As System.EventArgs) Handles Timer2.Tick
+      ' Legge eventuali file di prenotazioni per Tavoloso.
+      LeggiFilePrenTavoloso(True)
 
-    Private Sub lnkLicenza_Click(sender As Object, e As System.EventArgs) Handles lnkLicenza.Click
-        AvviaLicenzaRtf(Me.Handle, Application.StartupPath & PERCORSO_LICENZA_RTF)
-    End Sub
+   End Sub
 
-    Private Sub eui_lstProdottiAttivati_SelectionChanged(sender As Object, e As System.EventArgs) Handles eui_lstProdottiAttivati.SelectionChanged
-        VisualizzaInfoProdottiAttivi()
-    End Sub
+   Private Sub eui_cmdAggiornamenti_Click(sender As Object, e As EventArgs) Handles eui_cmdAggiornamenti.Click
+      Try
+         VerificaAggiornamenti()
 
-    Private Sub Timer2_Tick(sender As System.Object, e As System.EventArgs) Handles Timer2.Tick
-        ' Legge eventuali file di prenotazioni per Tavoloso.
-        LeggiFilePrenTavoloso(True)
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
 
-    End Sub
-
+      End Try
+   End Sub
 End Class
