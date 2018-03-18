@@ -77,8 +77,8 @@ ExtraDestFolderReadOnly = False
 |$AppPath$|\Reports/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Reports\Inventario.rpt/False/False/False/True///1/0/default/1113029614
 |$AppPath$|\Reports/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Reports\CatPiatti.rpt/False/False/False/True///1/0/default/1113021651
 |$AppPath$|\Piantine/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Piantine\Piantina20.jpg/False/False/False/True///1/0/default/985249253
-|$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Threading.xml/False/False/False/True///1/0/default/1281464796
 |$AppPath$|\Immagini\Dolci/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Dolci\Dolci27.ico/False/False/False/True///1/0/default/886994967
+|$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Threading.xml/False/False/False/True///1/0/default/1281464796
 |$AppPath$|\Immagini\Panini/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Panini\Panini4.ico/False/False/False/True///1/0/default/886798193
 |$AppPath$|\Immagini\Secondi Contorni/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Secondi Contorni\Secondi4.ico/False/False/False/True///1/0/default/886797594
 |$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Elegant.Ui.NavigationBar.Theme.Office2010Black.dll/False/False/False/True///1/0/default/1052337368
@@ -92,8 +92,8 @@ ExtraDestFolderReadOnly = False
 |$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Data.Framework.dll/False/False/False/True///1/0/default/1268274417
 |$AppPath$|\Immagini\Dolci/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Dolci\Dolci19.ico/False/False/False/True///1/0/default/886994301
 |$AppPath$|\Immagini\Bevande/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Bevande\Bevande41.ico/False/False/False/True///1/0/default/886997617
-|$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Interop.JRO.dll/False/False/False/True///1/0/default/1281506059
 |$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.DataTools.dll/False/False/False/True///1/0/default/1268274417
+|$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Interop.JRO.dll/False/False/False/True///1/0/default/1282572964
 |$AppPath$|\Immagini\Frutta Verdura/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Frutta Verdura\FruttaVerdura15.ico/False/False/False/True///1/0/default/886993173
 |$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Elegant.Ui.Ribbon.Design.dll/False/False/False/True///1/0/default/1052337678
 |$AppPath$|\Immagini\Frutta Verdura/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Frutta Verdura\FruttaVerdura9.ico/False/False/False/True///1/0/default/886992724
@@ -109,10 +109,10 @@ ExtraDestFolderReadOnly = False
 |$AppPath$|\Reports/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Reports\Gruppi.rpt/False/False/False/True///1/0/default/1113029605
 |$AppPath$|\Reports\Etichette/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Reports\Etichette\EtichetteArt635_381.rpt/False/False/False/True///1/0/default/966493657
 |$AppPath$|\Immagini\Panini/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Panini\Panini16.ico/False/False/False/True///1/0/default/886798644
-|$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Hospitality Solution 3.exe/False/False/False/True///1/0/default/1282374003
-|$AppPath$|\Immagini\Bevande/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Bevande\Bevande11.ico/False/False/False/True///1/0/default/886998447
 |$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.Data.ConnectionUI.Dialog.dll/False/False/False/True///1/0/default/1268274417
+|$AppPath$|\Immagini\Bevande/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Bevande\Bevande11.ico/False/False/False/True///1/0/default/886998447
 |$AppPath$|\Reports/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Reports\RFiscale A5.rdlc/False/False/False/True///1/0/default/1282045730
+|$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Hospitality Solution 3.exe/False/False/False/True///1/0/default/1282572968
 |$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Elegant.Ui.Common.xml/False/False/False/True///1/0/default/1052337666
 |$AppPath$|\Immagini\Panini/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Panini\Panini12.ico/False/False/False/True///1/0/default/886798537
 |$AppPath$|\Immagini\Secondi Contorni/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Secondi Contorni\Secondi2.ico/False/False/False/True///1/0/default/886797564
@@ -123,7 +123,6 @@ ExtraDestFolderReadOnly = False
 |$AppPath$|\Immagini\Dolci/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Dolci\Dolci28.ico/False/False/False/True///1/0/default/886994954
 |$AppPath$|\Immagini\Panini/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Panini\Panini7.ico/False/False/False/True///1/0/default/886798406
 |$AppPath$|\Reports/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Reports\StatRisorse.rpt/False/False/False/True///1/0/default/1113085104
-|$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Designer.Interfaces.xml/False/False/False/True///1/0/default/1281464796
 |$AppPath$|\Immagini\Dolci/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Dolci\Dolci6.ico/False/False/False/True///1/0/default/886994548
 |$AppPath$|\Reports\Etichette/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Reports\Etichette\EtichetteArt991_677.rpt/False/False/False/True///1/0/default/966494842
 |$AppPath$|\Immagini\Bevande/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Bevande\Bevande3.ico/False/False/False/True///1/0/default/886998854
@@ -162,7 +161,6 @@ ExtraDestFolderReadOnly = False
 |$AppPath$|\Reports/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Reports\Scorte.rpt/False/False/False/True///1/0/default/1113029799
 |$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\EnvDTE80.dll/False/False/False/True///1/0/default/1268274417
 |$AppPath$|\Immagini\Bevande/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Bevande\Bevande6.ico/False/False/False/True///1/0/default/886998531
-|$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Shell.Immutable.12.0.dll/False/False/False/True///1/0/default/1198762984
 |$AppPath$|\Piantine/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Piantine\Piantina9.jpg/False/False/False/True///1/0/default/985248060
 |$AppPath$|\Immagini\Secondi Contorni/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Secondi Contorni\Secondi9.ico/False/False/False/True///1/0/default/886797699
 |$AppPath$|\Reports/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Reports\Proforma - Rist. La Forchetta D'Oro.rpt/False/False/False/True///1/0/default/1113029711
@@ -198,7 +196,6 @@ ExtraDestFolderReadOnly = False
 |$AppPath$|\Reports/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Reports\Pren.rpt/False/False/False/True///1/0/default/1113030450
 |$AppPath$|\Immagini\Bevande/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Bevande\Bevande42.ico/False/False/False/True///1/0/default/886997596
 |$AppPath$|\Immagini\Bevande/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Bevande\Bevande25.ico/False/False/False/True///1/0/default/886998049
-|$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.AnalysisServices.dll/False/False/False/True///1/0/default/1221725768
 |$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Imaging.dll/False/False/False/True///1/0/default/1281464796
 |$AppPath$|\Piantine/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Piantine\Piantina6.jpg/False/False/False/True///1/0/default/985247491
 |$AppPath$|\Immagini\Pesce/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Pesce\Pesce1.ico/False/False/False/True///1/0/default/886796715
@@ -234,16 +231,12 @@ ExtraDestFolderReadOnly = False
 |$AppPath$|\Immagini\Frutta Verdura/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Frutta Verdura\FruttaVerdura22.ico/False/False/False/True///1/0/default/886993508
 |$AppPath$|\Immagini\Pesce/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Pesce\Pesce3.ico/False/False/False/True///1/0/default/886796774
 |$AppPath$|\Recovery/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Recovery\Hospitality Solution Recovery.exe/False/False/False/True///1/0/default/1114075872
-|$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Shell.Immutable.11.0.xml/False/False/False/True///1/0/default/1194623984
 |$AppPath$|\Reports/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Reports\Proforma - Rist. Celide.rpt/False/False/False/True///1/0/default/1047958466
 |$AppPath$|\Immagini\Pesce/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Pesce\Pesce4.ico/False/False/False/True///1/0/default/886796806
 |$AppPath$|\Reports/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Reports\AccessoriServizi.rpt/False/False/False/True///1/0/default/1113030325
 |$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Debugger.Interop.dll/False/False/False/True///1/0/default/1281464796
 |$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Thumbs.db/False/False/False/True///1/0/default/1015237744
-|$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Shell.14.0.dll/False/False/False/True///1/0/default/1198762984
-|$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Shell.Immutable.10.0.xml/False/False/False/True///1/0/default/1194623984
 |$AppPath$|\Immagini\Bevande/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Bevande\Bevande12.ico/False/False/False/True///1/0/default/886998409
-|$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Shell.Design.xml/False/False/False/True///1/0/default/1194623984
 |$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Utilities.dll/False/False/False/True///1/0/default/1281464796
 |$AppPath$|\Piantine/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Piantine\Piantina14.jpg/False/False/False/True///1/0/default/985249312
 |$AppPath$|\Immagini\Bevande/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Bevande\Bevande30.ico/False/False/False/True///1/0/default/886997927
@@ -263,7 +256,7 @@ ExtraDestFolderReadOnly = False
 |$AppPath$|\Reports/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Reports\Tavoli.rpt/False/False/False/True///1/0/default/1113029810
 |$AppPath$|\Reports/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Reports\RFiscale - Rist. Celide.rpt/False/False/False/True///1/0/default/1047958432
 |$AppPath$|\Immagini\Panini/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Panini\Panini9.ico/False/False/False/True///1/0/default/886798453
-|$AppPath$|\Dati/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Dati\Registro degli errori.log/False/False/False/True///1/0/default/1282367594
+|$AppPath$|\Dati/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Dati\Registro degli errori.log/False/False/False/True///1/0/default/1282512634
 |$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.WCFReference.Interop.dll/False/False/False/True///1/0/default/1281464796
 |$AppPath$|\Immagini\Dolci/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Dolci\Dolci10.ico/False/False/False/True///1/0/default/886994475
 |$AppPath$|\Immagini\Secondi Contorni/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Secondi Contorni\Secondi7.ico/False/False/False/True///1/0/default/886797650
@@ -274,9 +267,8 @@ ExtraDestFolderReadOnly = False
 |$AppPath$|\Reports/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Reports\Acquisti.rpt/False/False/False/True///1/0/default/1113021606
 |$AppPath$|\Immagini\Frutta Verdura/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Frutta Verdura\FruttaVerdura31.ico/False/False/False/True///1/0/default/886993713
 |$AppPath$|\Immagini\Bevande/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Bevande\Bevande31.ico/False/False/False/True///1/0/default/886997901
-|$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Shell.14.0.xml/False/False/False/True///1/0/default/1194623984
-|$AppPath$|\Reports/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Reports\Fattura A4.rdlc/False/False/False/True///1/0/default/1282045968
 |$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.TextManager.Interop.8.0.dll/False/False/False/True///1/0/default/1268274417
+|$AppPath$|\Reports/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Reports\Fattura A4.rdlc/False/False/False/True///1/0/default/1282045968
 |$AppPath$|\Immagini\Secondi Contorni/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Secondi Contorni\Secondi1.ico/False/False/False/True///1/0/default/886797538
 |$AppPath$|\Piantine/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Piantine\Piantina8.jpg/False/False/False/True///1/0/default/985247832
 |$AppPath$|\Immagini\Panini/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Panini\Panini2.ico/False/False/False/True///1/0/default/886798124
@@ -286,7 +278,6 @@ ExtraDestFolderReadOnly = False
 |$AppPath$|\Immagini\Bevande/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Bevande\Bevande23.ico/False/False/False/True///1/0/default/886998083
 |$AppPath$|\Amica/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Amica\Amica.Img.bmp/False/False/False/True///1/0/default/886788231
 |$AppPath$|\Immagini\Dolci/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Dolci\Dolci23.ico/False/False/False/True///1/0/default/886995031
-|$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Shell.Immutable.11.0.dll/False/False/False/True///1/0/default/1198762984
 |$AppPath$|\Immagini\Bevande/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Bevande\Bevande40.ico/False/False/False/True///1/0/default/886997629
 |$AppPath$|\Reports/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Reports\RFiscale - Rist. La Forchetta D'Oro.rpt/False/False/False/True///1/0/default/1164211370
 |$AppPath$|\Reports/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Reports\Fattura A4_Iva_Multipla.rdlc/False/False/False/True///1/0/default/1282045558
@@ -306,7 +297,6 @@ ExtraDestFolderReadOnly = False
 |$AppPath$|\Immagini\Bevande/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Bevande\Bevande9.ico/False/False/False/True///1/0/default/886998479
 |$AppPath$|\Immagini\Bevande/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Bevande\Bevande5.ico/False/False/False/True///1/0/default/886998729
 |$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Shell.Interop.10.0.dll/False/False/False/True///1/0/default/1268274417
-|$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Shell.Immutable.14.0.dll/False/False/False/True///1/0/default/1198762984
 |$AppPath$|\Immagini\Pizze/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Pizze\Pizze2.ico/False/False/False/True///1/0/default/886796042
 |$AppPath$|\Immagini\Dolci/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Dolci\Dolci29.ico/False/False/False/True///1/0/default/886994811
 |$AppPath$|\Immagini\Frutta Verdura/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Frutta Verdura\FruttaVerdura28.ico/False/False/False/True///1/0/default/886993651
@@ -320,7 +310,6 @@ ExtraDestFolderReadOnly = False
 |$AppPath$|\Piantine/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Piantine\Piantina10.jpg/False/False/False/True///1/0/default/985248225
 |$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Shell.Interop.11.0.dll/False/False/False/True///1/0/default/1268274417
 |$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Interop.OposPOSPrinter_1_9_Lib.dll/False/False/False/True///1/0/default/1114344316
-|$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Shell.Immutable.12.0.xml/False/False/False/True///1/0/default/1194623984
 |$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.vspGridControl.dll/False/False/False/True///1/0/default/1281464796
 |$AppPath$|\Amica/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Amica\Amica.Hospitality.txt/False/False/False/True///1/0/default/1153922327
 |$AppPath$|\Immagini\Bevande/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Bevande\Bevande2.ico/False/False/False/True///1/0/default/886998867
@@ -340,14 +329,13 @@ ExtraDestFolderReadOnly = False
 |$AppPath$|\Reports\Etichette/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Reports\Etichette\Etichette991_677.rpt/False/False/False/True///1/0/default/964529944
 |$AppPath$|\Immagini\Bevande/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Bevande\Bevande22.ico/False/False/False/True///1/0/default/886998104
 |$AppPath$|\Reports/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Reports\Scontrino.rdlc/False/False/False/True///1/0/default/1282045060
-|$AppPath$|\Backup/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Backup\Hospitality.mdb/False/False/False/True///1/0/default/1282191101
 |$AppPath$|\Reports/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Reports\Proforma - Pizz. Bella Napoli.rpt/False/False/False/True///1/0/default/1113029703
 |$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Elegant.Ui.Ribbon.resources.dll/False/False/False/True///1/0/default/1046770162
 |$AppPath$|\Immagini\Frutta Verdura/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Frutta Verdura\FruttaVerdura8.ico/False/False/False/True///1/0/default/886993563
 |$AppPath$|\Piantine/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Piantine\Piantina11.jpg/False/False/False/True///1/0/default/985248245
 |$AppPath$|\Immagini\Secondi Contorni/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Secondi Contorni\Secondi6.ico/False/False/False/True///1/0/default/886797632
 |$AppPath$|\Immagini\Secondi Contorni/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Secondi Contorni\Secondi8.ico/False/False/False/True///1/0/default/886797675
-|$AppPath$|\Archivi/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Archivi\Hospitality.mdb/False/False/False/True///1/0/default/1282373745
+|$AppPath$|\Archivi/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Archivi\Hospitality.mdb/False/False/False/True///1/0/default/1282571512
 |$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Softgroup.NetButton.dll/False/False/False/True///1/0/default/952782026
 |$AppPath$|\Reports/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Reports\ComandaRepartiKubeII.rpt.txt/False/False/False/True///1/0/default/1114346828
 |$AppPath$|\Android/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Android\CHS_CMD.DB/False/False/False/True///1/0/default/1215328275
@@ -362,7 +350,6 @@ ExtraDestFolderReadOnly = False
 |$AppPath$|\Immagini\Varie/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Varie\Varie1.ico/False/False/False/True///1/0/default/883330100
 |$AppPath$|\Immagini\Frutta Verdura/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Frutta Verdura\FruttaVerdura5.ico/False/False/False/True///1/0/default/886992412
 |$AppPath$|\Immagini\Bevande/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Bevande\Bevande27.ico/False/False/False/True///1/0/default/886997999
-|$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Shell.Immutable.10.0.dll/False/False/False/True///1/0/default/1198762984
 |$AppPath$|\Reports/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Reports\Proforma - Centro sportivo.rpt/False/False/False/True///1/0/default/1113029689
 |$AppPath$|\Reports/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Reports\Risorse.rpt/False/False/False/True///1/0/default/1113029780
 |$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Elegant.Ui.Grid.dll/False/False/False/True///1/0/default/1052337675
@@ -377,8 +364,8 @@ ExtraDestFolderReadOnly = False
 |$AppPath$|\Immagini\Dolci/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Dolci\Dolci11.ico/False/False/False/True///1/0/default/886994459
 |$AppPath$|\Immagini\Frutta Verdura/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Frutta Verdura\FruttaVerdura17.ico/False/False/False/True///1/0/default/886993233
 |$AppPath$|\Reports\Etichette/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Reports\Etichette\EtichetteArt635_339.rpt/False/False/False/True///1/0/default/966494362
-|$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Hospitality Solution 3.xml/False/False/False/True///1/0/default/1282374002
-|$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Shell.Design.dll/False/False/False/True///1/0/default/1198762984
+|$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Hospitality Solution 3.xml/False/False/False/True///1/0/default/1282572967
+|$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Shell.Design.dll/False/False/False/True///1/0/default/1281464796
 |$AppPath$|\Reports\Etichette/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Reports\Etichette\Etichette635_339.rpt/False/False/False/True///1/0/default/964529317
 |$AppPath$|\Immagini\Bevande/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Bevande\Bevande113.ico/False/False/False/True///1/0/default/886998354
 |$AppPath$|\Immagini\Varie/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Varie\Varie6.ico/False/False/False/True///1/0/default/883330733
@@ -445,7 +432,6 @@ ExtraDestFolderReadOnly = False
 |$AppPath$|\Reports/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Reports\Aziende.rpt/False/False/False/True///1/0/default/1113021632
 |$AppPath$|\Immagini\Panini/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Panini\Panini15.ico/False/False/False/True///1/0/default/886798626
 |$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Shell.Interop.9.0.dll/False/False/False/True///1/0/default/1268274417
-|$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Shell.Immutable.14.0.xml/False/False/False/True///1/0/default/1194623984
 |$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\System.Data.SQLite.dll/False/False/False/True///1/0/default/1180981112
 |$AppPath$|\Immagini\Bevande/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Bevande\Bevande18.ico/False/False/False/True///1/0/default/886998242
 |$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.TemplateWizardInterface.dll/False/False/False/True///1/0/default/1281464796
@@ -4873,4 +4859,6 @@ Aggiunta collegamento: Hospitality Solution 3*15/03/2018*19:01:03
 Eliminazione collegamento: Hospitality Solution 3*15/03/2018*19:01:17
 Aggiunta collegamento: Hospitality Solution 3*15/03/2018*19:01:17
 Eliminazione collegamento: Hospitality Solution 3*15/03/2018*19:15:55
+Attivazione aggiornamento on-line: no*18/03/2018*15:48:11
+Attivazione aggiornamento on-line: no*18/03/2018*15:48:11
 <

@@ -413,10 +413,11 @@ Friend Class frmMain
     Friend WithEvents eui_Strumenti_Sospesi_Filtra As ToggleButton
    Friend WithEvents StatusBarPane2 As StatusBarPane
    Friend WithEvents eui_picAggiornamenti As PictureBox
+   Friend WithEvents eui_cmdNuovoAgg As Button
    Friend WithEvents eui_cmdGestionePrenRisorse As Elegant.Ui.Button
 
    <System.Diagnostics.DebuggerStepThrough()>
-    Private Sub InitializeComponent()
+   Private Sub InitializeComponent()
       Me.components = New System.ComponentModel.Container()
       Dim themeSelector As Elegant.Ui.ThemeSelector
       Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
@@ -797,6 +798,7 @@ Friend Class frmMain
       Me.eui_cmdData = New Elegant.Ui.Button()
       Me.StatusBarPane2 = New Elegant.Ui.StatusBarPane()
       Me.eui_picAggiornamenti = New Elegant.Ui.PictureBox()
+      Me.eui_cmdNuovoAgg = New Elegant.Ui.Button()
       Me.NavigationBarItem6 = New Elegant.Ui.NavigationBarItem()
       Me.CheckBox7 = New Elegant.Ui.CheckBox()
       Me.PopupMenu7 = New Elegant.Ui.PopupMenu(Me.components)
@@ -1166,19 +1168,19 @@ Friend Class frmMain
       Me.eui_File.Name = "eui_File"
       Me.eui_File.QuickAccessToolbarCustomizationDialogEnabled = False
       Me.eui_File.QuickAccessToolbarCustomizationEnabled = False
-      Me.eui_File.Size = New System.Drawing.Size(1356, 154)
+      Me.eui_File.Size = New System.Drawing.Size(1380, 154)
       Me.eui_File.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_File.SmallImages.Images"), System.Drawing.Image))})
       Me.eui_File.TabIndex = 15
       Me.eui_File.TabPages.AddRange(New Elegant.Ui.RibbonTabPage() {Me.eui_Gestione, Me.eui_Archivi, Me.eui_Contabilità, Me.eui_Magazzino, Me.eui_Visualizza, Me.eui_Strumenti, Me.eui_Finestra})
       '
       'eui_BackstageView1
       '
-      Me.eui_BackstageView1.CurrentPage = Me.eui_Guida
+      Me.eui_BackstageView1.CurrentPage = Me.eui_Info
       Me.eui_BackstageView1.Id = "26b6ed12-6b3d-4104-bf29-d19f8880bdff"
       Me.eui_BackstageView1.Items.AddRange(New System.Windows.Forms.Control() {Me.eui_Info, Me.eui_GestioneModuli, Me.BackstageViewSeparator1, Me.eui_Guida, Me.eui_Opzioni, Me.eui_Esci})
       Me.eui_BackstageView1.Location = New System.Drawing.Point(0, 55)
       Me.eui_BackstageView1.Name = "eui_BackstageView1"
-      Me.eui_BackstageView1.Size = New System.Drawing.Size(1332, 663)
+      Me.eui_BackstageView1.Size = New System.Drawing.Size(1380, 681)
       Me.eui_BackstageView1.Style = Elegant.Ui.BackstageViewStyle.Office2010DarkBlue
       Me.eui_BackstageView1.TabIndex = 16
       '
@@ -1195,7 +1197,7 @@ Friend Class frmMain
       Me.eui_Guida.Location = New System.Drawing.Point(0, 0)
       Me.eui_Guida.Name = "eui_Guida"
       Me.eui_Guida.Padding = New System.Windows.Forms.Padding(0, 1, 2, 1)
-      Me.eui_Guida.Size = New System.Drawing.Size(1247, 661)
+      Me.eui_Guida.Size = New System.Drawing.Size(1237, 679)
       Me.eui_Guida.TabIndex = 0
       Me.eui_Guida.Text = "Guida"
       '
@@ -1236,7 +1238,7 @@ Friend Class frmMain
       Me.BackstageViewPage1.Location = New System.Drawing.Point(0, 1)
       Me.BackstageViewPage1.Name = "BackstageViewPage1"
       Me.BackstageViewPage1.Padding = New System.Windows.Forms.Padding(0, 1, 2, 1)
-      Me.BackstageViewPage1.Size = New System.Drawing.Size(1245, 659)
+      Me.BackstageViewPage1.Size = New System.Drawing.Size(1235, 677)
       Me.BackstageViewPage1.TabIndex = 6
       Me.BackstageViewPage1.Text = "Guida"
       '
@@ -1732,7 +1734,7 @@ Friend Class frmMain
       Me.eui_Info.Location = New System.Drawing.Point(0, 0)
       Me.eui_Info.Name = "eui_Info"
       Me.eui_Info.Padding = New System.Windows.Forms.Padding(0, 1, 2, 1)
-      Me.eui_Info.Size = New System.Drawing.Size(1165, 472)
+      Me.eui_Info.Size = New System.Drawing.Size(1237, 679)
       Me.eui_Info.TabIndex = 0
       Me.eui_Info.Text = "Informazioni"
       '
@@ -3207,7 +3209,7 @@ Friend Class frmMain
       Me.eui_Gestione.KeyTip = "G"
       Me.eui_Gestione.Location = New System.Drawing.Point(0, 0)
       Me.eui_Gestione.Name = "eui_Gestione"
-      Me.eui_Gestione.Size = New System.Drawing.Size(1356, 99)
+      Me.eui_Gestione.Size = New System.Drawing.Size(1380, 99)
       Me.eui_Gestione.TabIndex = 0
       Me.eui_Gestione.Text = "Gestione"
       '
@@ -4975,10 +4977,10 @@ Friend Class frmMain
       Me.eui_sbrMain.ControlsArea = Me.StatusBarControlsArea1
       Me.eui_sbrMain.Dock = System.Windows.Forms.DockStyle.Bottom
       Me.eui_sbrMain.ForeColor = System.Drawing.SystemColors.ControlText
-      Me.eui_sbrMain.Location = New System.Drawing.Point(0, 727)
+      Me.eui_sbrMain.Location = New System.Drawing.Point(0, 736)
       Me.eui_sbrMain.Name = "eui_sbrMain"
       Me.eui_sbrMain.NotificationsArea = Me.StatusBarNotificationsArea1
-      Me.eui_sbrMain.Size = New System.Drawing.Size(1356, 22)
+      Me.eui_sbrMain.Size = New System.Drawing.Size(1380, 22)
       Me.eui_sbrMain.TabIndex = 20
       '
       'StatusBarNotificationsArea1
@@ -4990,7 +4992,7 @@ Friend Class frmMain
       Me.StatusBarNotificationsArea1.MaximumSize = New System.Drawing.Size(0, 22)
       Me.StatusBarNotificationsArea1.MinimumSize = New System.Drawing.Size(0, 22)
       Me.StatusBarNotificationsArea1.Name = "StatusBarNotificationsArea1"
-      Me.StatusBarNotificationsArea1.Size = New System.Drawing.Size(892, 22)
+      Me.StatusBarNotificationsArea1.Size = New System.Drawing.Size(841, 22)
       Me.StatusBarNotificationsArea1.TabIndex = 1
       Me.StatusBarNotificationsArea1.Text = "Prova 2"
       '
@@ -5066,11 +5068,11 @@ Friend Class frmMain
       Me.StatusBarControlsArea1.Controls.Add(Me.StatusBarPane6)
       Me.StatusBarControlsArea1.Controls.Add(Me.StatusBarPane2)
       Me.StatusBarControlsArea1.Dock = System.Windows.Forms.DockStyle.Right
-      Me.StatusBarControlsArea1.Location = New System.Drawing.Point(892, 0)
+      Me.StatusBarControlsArea1.Location = New System.Drawing.Point(841, 0)
       Me.StatusBarControlsArea1.MaximumSize = New System.Drawing.Size(0, 22)
       Me.StatusBarControlsArea1.MinimumSize = New System.Drawing.Size(0, 22)
       Me.StatusBarControlsArea1.Name = "StatusBarControlsArea1"
-      Me.StatusBarControlsArea1.Size = New System.Drawing.Size(464, 22)
+      Me.StatusBarControlsArea1.Size = New System.Drawing.Size(539, 22)
       Me.StatusBarControlsArea1.TabIndex = 0
       Me.StatusBarControlsArea1.Text = "Prova"
       '
@@ -5215,11 +5217,12 @@ Friend Class frmMain
       'StatusBarPane2
       '
       Me.StatusBarPane2.Controls.Add(Me.eui_picAggiornamenti)
+      Me.StatusBarPane2.Controls.Add(Me.eui_cmdNuovoAgg)
       Me.StatusBarPane2.Location = New System.Drawing.Point(368, 0)
       Me.StatusBarPane2.MaximumSize = New System.Drawing.Size(0, 22)
       Me.StatusBarPane2.MinimumSize = New System.Drawing.Size(0, 22)
       Me.StatusBarPane2.Name = "StatusBarPane2"
-      Me.StatusBarPane2.Size = New System.Drawing.Size(44, 22)
+      Me.StatusBarPane2.Size = New System.Drawing.Size(119, 22)
       Me.StatusBarPane2.TabIndex = 4
       '
       'eui_picAggiornamenti
@@ -5227,15 +5230,23 @@ Friend Class frmMain
       Me.eui_picAggiornamenti.Image = CType(resources.GetObject("eui_picAggiornamenti.Image"), System.Drawing.Image)
       Me.eui_picAggiornamenti.Location = New System.Drawing.Point(2, 3)
       Me.eui_picAggiornamenti.Name = "eui_picAggiornamenti"
-      Me.eui_picAggiornamenti.ScreenTip.Caption = "Aggiornamenti"
-      Me.eui_picAggiornamenti.ScreenTip.Text = "E' disponibile una nuova versione del software. Visitare il sito Internet www.mon" &
-    "tanasoftware.it." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
       Me.eui_picAggiornamenti.Size = New System.Drawing.Size(16, 16)
       Me.eui_picAggiornamenti.SizeMode = Elegant.Ui.PictureBoxSizeMode.StretchImage
       Me.eui_picAggiornamenti.TabIndex = 2
       Me.eui_picAggiornamenti.TabStop = False
-      Me.eui_picAggiornamenti.Text = "PictureBox20"
-      Me.eui_picAggiornamenti.Visible = False
+      '
+      'eui_cmdNuovoAgg
+      '
+      Me.eui_cmdNuovoAgg.AutoSize = True
+      Me.eui_cmdNuovoAgg.Id = "33555ba9-8ada-4f17-824a-83f91c734fe2"
+      Me.eui_cmdNuovoAgg.Location = New System.Drawing.Point(19, 2)
+      Me.eui_cmdNuovoAgg.Name = "eui_cmdNuovoAgg"
+      Me.eui_cmdNuovoAgg.ScreenTip.Caption = "Aaggiornamenti"
+      Me.eui_cmdNuovoAgg.ScreenTip.Text = "Premi sul pulsante per verificare se ci sono aggiornamenti disponibili. Oppure vi" &
+    "sita il sito Internet www.montanasoftware.it." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+      Me.eui_cmdNuovoAgg.Size = New System.Drawing.Size(73, 19)
+      Me.eui_cmdNuovoAgg.TabIndex = 3
+      Me.eui_cmdNuovoAgg.Text = "Agg. Nessuno"
       '
       'NavigationBarItem6
       '
@@ -5321,7 +5332,7 @@ Friend Class frmMain
       '
       Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
       Me.BackColor = System.Drawing.Color.White
-      Me.ClientSize = New System.Drawing.Size(1356, 749)
+      Me.ClientSize = New System.Drawing.Size(1380, 758)
       Me.Controls.Add(Me.eui_BackstageView1)
       Me.Controls.Add(Me.eui_File)
       Me.Controls.Add(Me.eui_sbrMain)
@@ -5528,6 +5539,7 @@ Friend Class frmMain
       Me.StatusBarPane6.ResumeLayout(False)
       Me.StatusBarPane6.PerformLayout()
       Me.StatusBarPane2.ResumeLayout(False)
+      Me.StatusBarPane2.PerformLayout()
       CType(Me.PopupMenu7, System.ComponentModel.ISupportInitialize).EndInit()
       CType(Me.PopupMenu8, System.ComponentModel.ISupportInitialize).EndInit()
       CType(Me.PopupMenu9, System.ComponentModel.ISupportInitialize).EndInit()
@@ -9755,6 +9767,9 @@ Friend Class frmMain
             Timer2.Enabled = AbilitaRicezionePren
          End If
 
+         ' Verifica senza messaggio a video!
+         VerificaAggiornamenti(False)
+
          Me.Focus()
 
       Catch ex As Exception
@@ -12390,9 +12405,11 @@ Friend Class frmMain
       End Try
    End Sub
 
-   Public Sub VerificaAggiornamenti()
+   Public Sub VerificaAggiornamenti(ByVal msg As Boolean)
       Try
          If WebCommunication.VerificaConnessione = True Then
+            ' Modifica il cursore del mouse.
+            Cursor.Current = Cursors.AppStarting
 
             Dim percorsoFileRemoto As String = "Http://www.montanasoftware.it/Aggiornamenti.aspx"
             Dim percorsoFileLocale As String = Application.StartupPath & "\Dati\Aggiornamenti.dat"
@@ -12424,27 +12441,46 @@ Friend Class frmMain
                ' Verifica se la nuova versione è un aggiornamento.
                If valNuovaVersione > valVersione Then
 
-                  ' Visualizza un'immagine sulla barra di stato.
-                  eui_picAggiornamenti.Visible = True
-
-                  MessageBox.Show("E' disponibile una nuova versione del software!" & vbNewLine & vbNewLine &
-                                  "Versione installata: " & Application.ProductVersion & vbNewLine & vbNewLine &
-                                  "Versione aggiornamento: " & valFile & vbNewLine & vbNewLine &
-                                  "E' possibile fare il download della nuova versione del programma dal sito Internet 'Http://www.montanasoftware.it'." & vbNewLine &
-                                  "Per informazioni rivolgersi a: 'assistenza@montanasoftware.it'", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Information)
+                  ' Visualizza la versione del software sulla barra di stato.
+                  eui_cmdNuovoAgg.Text = "Agg. Ver. " & valFile
+                  eui_cmdNuovoAgg.ScreenTip.Text = "E' disponibile una nuova versione del software! Visita il sito Internet www.montanasoftware.it."
 
                   ' Cancella il file.
                   File.Delete(percorsoFileLocale)
-               Else
-                  Exit Sub
-               End If
 
+                  If msg = True Then
+                     ' Modifica il cursore del mouse.
+                     Cursor.Current = Cursors.Default
+
+                     MessageBox.Show("E' disponibile una nuova versione del software!" & vbNewLine & vbNewLine &
+                                     "Versione installata: " & Application.ProductVersion & vbNewLine & vbNewLine &
+                                     "Versione aggiornamento: " & valFile & vbNewLine & vbNewLine &
+                                     "E' possibile fare il download della nuova versione del programma dal sito Internet 'Http://www.montanasoftware.it'." & vbNewLine &
+                                     "Per informazioni rivolgersi a: 'assistenza@montanasoftware.it'", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Information)
+                  End If
+               Else
+                  ' Visualizza la versione del software sulla barra di stato.
+                  eui_cmdNuovoAgg.Text = "Agg. Nessuno"
+                  eui_cmdNuovoAgg.ScreenTip.Text = "Premi sul pulsante per verificare se ci sono aggiornamenti disponibili. Oppure visita il sito Internet www.montanasoftware.it."
+
+                  If msg = True Then
+                     ' Modifica il cursore del mouse.
+                     Cursor.Current = Cursors.Default
+
+                     MessageBox.Show("Non ci sono nuove versioni del software!" & vbNewLine & vbNewLine &
+                                     "Per informazioni rivolgersi a: 'assistenza@montanasoftware.it'", NOME_PRODOTTO, MessageBoxButtons.OK, MessageBoxIcon.Information)
+                  End If
+               End If
             End If
          End If
 
       Catch ex As Exception
          ' Visualizza un messaggio di errore e lo registra nell'apposito file.
          err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      Finally
+         ' Modifica il cursore del mouse.
+         Cursor.Current = Cursors.Default
 
       End Try
    End Sub
@@ -13642,7 +13678,20 @@ Friend Class frmMain
 
    Private Sub eui_cmdAggiornamenti_Click(sender As Object, e As EventArgs) Handles eui_cmdAggiornamenti.Click
       Try
-         VerificaAggiornamenti()
+         ' Verifica con messaggio a video!
+         VerificaAggiornamenti(True)
+
+      Catch ex As Exception
+         ' Visualizza un messaggio di errore e lo registra nell'apposito file.
+         err.GestisciErrore(ex.StackTrace, ex.Message)
+
+      End Try
+   End Sub
+
+   Private Sub eui_cmdNuovoAgg_Click(sender As Object, e As EventArgs) Handles eui_cmdNuovoAgg.Click
+      Try
+         ' Verifica con messaggio a video!
+         VerificaAggiornamenti(True)
 
       Catch ex As Exception
          ' Visualizza un messaggio di errore e lo registra nell'apposito file.
