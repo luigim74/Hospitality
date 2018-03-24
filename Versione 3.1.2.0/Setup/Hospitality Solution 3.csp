@@ -93,7 +93,7 @@ ExtraDestFolderReadOnly = False
 |$AppPath$|\Immagini\Dolci/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Dolci\Dolci19.ico/False/False/False/True///1/0/default/886994301
 |$AppPath$|\Immagini\Bevande/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Bevande\Bevande41.ico/False/False/False/True///1/0/default/886997617
 |$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.DataTools.dll/False/False/False/True///1/0/default/1268274417
-|$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Interop.JRO.dll/False/False/False/True///1/0/default/1282572964
+|$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Interop.JRO.dll/False/False/False/True///1/0/default/1282962496
 |$AppPath$|\Immagini\Frutta Verdura/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Frutta Verdura\FruttaVerdura15.ico/False/False/False/True///1/0/default/886993173
 |$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Elegant.Ui.Ribbon.Design.dll/False/False/False/True///1/0/default/1052337678
 |$AppPath$|\Immagini\Frutta Verdura/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Frutta Verdura\FruttaVerdura9.ico/False/False/False/True///1/0/default/886992724
@@ -112,7 +112,7 @@ ExtraDestFolderReadOnly = False
 |$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.Data.ConnectionUI.Dialog.dll/False/False/False/True///1/0/default/1268274417
 |$AppPath$|\Immagini\Bevande/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Bevande\Bevande11.ico/False/False/False/True///1/0/default/886998447
 |$AppPath$|\Reports/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Reports\RFiscale A5.rdlc/False/False/False/True///1/0/default/1282045730
-|$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Hospitality Solution 3.exe/False/False/False/True///1/0/default/1282572968
+|$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Hospitality Solution 3.exe/False/False/False/True///1/0/default/1282962500
 |$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Elegant.Ui.Common.xml/False/False/False/True///1/0/default/1052337666
 |$AppPath$|\Immagini\Panini/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Panini\Panini12.ico/False/False/False/True///1/0/default/886798537
 |$AppPath$|\Immagini\Secondi Contorni/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Secondi Contorni\Secondi2.ico/False/False/False/True///1/0/default/886797564
@@ -335,7 +335,7 @@ ExtraDestFolderReadOnly = False
 |$AppPath$|\Piantine/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Piantine\Piantina11.jpg/False/False/False/True///1/0/default/985248245
 |$AppPath$|\Immagini\Secondi Contorni/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Secondi Contorni\Secondi6.ico/False/False/False/True///1/0/default/886797632
 |$AppPath$|\Immagini\Secondi Contorni/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Secondi Contorni\Secondi8.ico/False/False/False/True///1/0/default/886797675
-|$AppPath$|\Archivi/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Archivi\Hospitality.mdb/False/False/False/True///1/0/default/1282571512
+|$AppPath$|\Archivi/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Archivi\Hospitality.mdb/False/False/False/True///1/0/default/1282962386
 |$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Softgroup.NetButton.dll/False/False/False/True///1/0/default/952782026
 |$AppPath$|\Reports/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Reports\ComandaRepartiKubeII.rpt.txt/False/False/False/True///1/0/default/1114346828
 |$AppPath$|\Android/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Android\CHS_CMD.DB/False/False/False/True///1/0/default/1215328275
@@ -364,7 +364,7 @@ ExtraDestFolderReadOnly = False
 |$AppPath$|\Immagini\Dolci/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Dolci\Dolci11.ico/False/False/False/True///1/0/default/886994459
 |$AppPath$|\Immagini\Frutta Verdura/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Frutta Verdura\FruttaVerdura17.ico/False/False/False/True///1/0/default/886993233
 |$AppPath$|\Reports\Etichette/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Reports\Etichette\EtichetteArt635_339.rpt/False/False/False/True///1/0/default/966494362
-|$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Hospitality Solution 3.xml/False/False/False/True///1/0/default/1282572967
+|$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Hospitality Solution 3.xml/False/False/False/True///1/0/default/1282962499
 |$AppPath$|/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Microsoft.VisualStudio.Shell.Design.dll/False/False/False/True///1/0/default/1281464796
 |$AppPath$|\Reports\Etichette/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Reports\Etichette\Etichette635_339.rpt/False/False/False/True///1/0/default/964529317
 |$AppPath$|\Immagini\Bevande/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\bin\Immagini\Bevande\Bevande113.ico/False/False/False/True///1/0/default/886998354
@@ -520,9 +520,8 @@ IT:Notes =
 <
 
 >AppsToRunAfter
-Report Viewer 2015 Runtime/C:\WINDOWS\system32\msiexec.exe/|$SystemPath$|/sincrona/<|!|>/{/i "|$AppsToRunPath$|\ReportViewer.msi"}/sì/5.0.16299.15 (WinBuild.160101.0800)
 SQL Server 2014 System CLR Types/C:\WINDOWS\system32\msiexec.exe/|$SystemPath$|/sincrona/<|!|>/{/i "|$AppsToRunPath$|\SQLSysClrTypes.msi"}/sì/5.0.16299.15 (WinBuild.160101.0800)
-NDP46-KB3045557-x86-x64-AllOS-ITA/D:\Montana Software - Repositoy\Hospitality\Versione 3.1.2.0\Pacchetto ver. WEB\Framework .NET 4.6 Language Pack\NDP46-KB3045557-x86-x64-AllOS-ITA.exe/|$AppsToRunPath$|/sincrona/<|!|>/<|!|>/sì/4.6.00081.00
+Report Viewer 2015 Runtime/C:\WINDOWS\system32\msiexec.exe/|$SystemPath$|/sincrona/<|!|>/{/i "|$AppsToRunPath$|\ReportViewer.msi"}/sì/5.0.16299.15 (WinBuild.160101.0800)
 <
 
 >WindowsInstaller
@@ -4861,4 +4860,19 @@ Aggiunta collegamento: Hospitality Solution 3*15/03/2018*19:01:17
 Eliminazione collegamento: Hospitality Solution 3*15/03/2018*19:15:55
 Attivazione aggiornamento on-line: no*18/03/2018*15:48:11
 Attivazione aggiornamento on-line: no*18/03/2018*15:48:11
+Eliminazione applicazione da eseguire dopo: NDP46-KB3045557-x86-x64-AllOS-ITA*18/03/2018*17:20:05
+Aggiunta applicazione da eseguire dopo: AAAA*18/03/2018*17:22:38
+Eliminazione applicazione da eseguire dopo: AAAA*18/03/2018*17:23:26
+Aggiunta applicazione da eseguire dopo: AAAA*18/03/2018*17:23:26
+Eliminazione applicazione da eseguire dopo: AAAA*18/03/2018*17:23:56
+Aggiunta applicazione da eseguire dopo: Report Viewer 2015 Runtim*18/03/2018*17:24:47
+Eliminazione applicazione da eseguire dopo: Report Viewer 2015 Runtim*18/03/2018*17:25:05
+Aggiunta applicazione da eseguire dopo: Report Viewer 2015 Runtim*18/03/2018*17:25:05
+Eliminazione applicazione da eseguire dopo: Report Viewer 2015 Runtim*18/03/2018*17:25:25
+Aggiunta applicazione da eseguire dopo: Report Viewer 2015 Runtim*18/03/2018*17:25:25
+Eliminazione applicazione da eseguire dopo: Report Viewer 2015 Runtime*18/03/2018*17:25:40
+Aggiunta applicazione da eseguire dopo: Report Viewer 2015*18/03/2018*17:25:40
+Eliminazione applicazione da eseguire dopo: Report Viewer 2015 Runtim*18/03/2018*17:26:00
+Aggiunta applicazione da eseguire dopo: Report Viewer 2015 Runtime*18/03/2018*17:26:00
+Eliminazione applicazione da eseguire dopo: Report Viewer 2015*18/03/2018*17:26:23
 <

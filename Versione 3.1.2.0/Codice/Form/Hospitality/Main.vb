@@ -464,43 +464,6 @@ Friend Class frmMain
       Me.formFrameSkinner = New Elegant.Ui.FormFrameSkinner()
       Me.eui_File = New Elegant.Ui.Ribbon()
       Me.eui_BackstageView1 = New Elegant.Ui.BackstageView()
-      Me.eui_Guida = New Elegant.Ui.BackstageViewPage()
-      Me.BackstageViewPage1 = New Elegant.Ui.BackstageViewPage()
-      Me.lblGiorniProva = New System.Windows.Forms.Label()
-      Me.lblDemo = New System.Windows.Forms.Label()
-      Me.PictureBox18 = New System.Windows.Forms.PictureBox()
-      Me.lnkMsWeb = New System.Windows.Forms.LinkLabel()
-      Me.lnkLicenza = New System.Windows.Forms.LinkLabel()
-      Me.lblNumSerie = New System.Windows.Forms.Label()
-      Me.lnkSupporto = New System.Windows.Forms.LinkLabel()
-      Me.lblInfo = New System.Windows.Forms.Label()
-      Me.lnkInfoSu = New System.Windows.Forms.LinkLabel()
-      Me.lblVersione = New System.Windows.Forms.Label()
-      Me.Label24 = New System.Windows.Forms.Label()
-      Me.PictureBox17 = New System.Windows.Forms.PictureBox()
-      Me.Label26 = New System.Windows.Forms.Label()
-      Me.eui_txtDettagliProdotto = New Elegant.Ui.TextBox()
-      Me.eui_lstProdottiAttivati = New Elegant.Ui.ListBox()
-      Me.Label23 = New System.Windows.Forms.Label()
-      Me.PictureBox16 = New System.Windows.Forms.PictureBox()
-      Me.Label22 = New System.Windows.Forms.Label()
-      Me.PictureBox15 = New System.Windows.Forms.PictureBox()
-      Me.PictureBox14 = New System.Windows.Forms.PictureBox()
-      Me.PictureBox13 = New System.Windows.Forms.PictureBox()
-      Me.PictureBox12 = New System.Windows.Forms.PictureBox()
-      Me.PictureBox10 = New System.Windows.Forms.PictureBox()
-      Me.Label21 = New System.Windows.Forms.Label()
-      Me.Label20 = New System.Windows.Forms.Label()
-      Me.eui_cmdAggiornamenti = New Elegant.Ui.Button()
-      Me.eui_cmdMobile = New Elegant.Ui.Button()
-      Me.eui_cmdOpzioni = New Elegant.Ui.Button()
-      Me.eui_cmdContattaci = New Elegant.Ui.Button()
-      Me.eui_cmdGuida = New Elegant.Ui.Button()
-      Me.Button6 = New Elegant.Ui.Button()
-      Me.Button5 = New Elegant.Ui.Button()
-      Me.Button3 = New Elegant.Ui.Button()
-      Me.Button2 = New Elegant.Ui.Button()
-      Me.Button34 = New Elegant.Ui.Button()
       Me.eui_Info = New Elegant.Ui.BackstageViewPage()
       Me.Label1 = New System.Windows.Forms.Label()
       Me.lblPercorso = New System.Windows.Forms.Label()
@@ -539,6 +502,43 @@ Friend Class frmMain
       Me.cmdApriPercorso = New Elegant.Ui.Button()
       Me.eui_GestioneModuli = New Elegant.Ui.BackstageViewPage()
       Me.BackstageViewSeparator1 = New Elegant.Ui.BackstageViewSeparator()
+      Me.eui_Guida = New Elegant.Ui.BackstageViewPage()
+      Me.BackstageViewPage1 = New Elegant.Ui.BackstageViewPage()
+      Me.lblGiorniProva = New System.Windows.Forms.Label()
+      Me.lblDemo = New System.Windows.Forms.Label()
+      Me.PictureBox18 = New System.Windows.Forms.PictureBox()
+      Me.lnkMsWeb = New System.Windows.Forms.LinkLabel()
+      Me.lnkLicenza = New System.Windows.Forms.LinkLabel()
+      Me.lblNumSerie = New System.Windows.Forms.Label()
+      Me.lnkSupporto = New System.Windows.Forms.LinkLabel()
+      Me.lblInfo = New System.Windows.Forms.Label()
+      Me.lnkInfoSu = New System.Windows.Forms.LinkLabel()
+      Me.lblVersione = New System.Windows.Forms.Label()
+      Me.Label24 = New System.Windows.Forms.Label()
+      Me.PictureBox17 = New System.Windows.Forms.PictureBox()
+      Me.Label26 = New System.Windows.Forms.Label()
+      Me.eui_txtDettagliProdotto = New Elegant.Ui.TextBox()
+      Me.eui_lstProdottiAttivati = New Elegant.Ui.ListBox()
+      Me.Label23 = New System.Windows.Forms.Label()
+      Me.PictureBox16 = New System.Windows.Forms.PictureBox()
+      Me.Label22 = New System.Windows.Forms.Label()
+      Me.PictureBox15 = New System.Windows.Forms.PictureBox()
+      Me.PictureBox14 = New System.Windows.Forms.PictureBox()
+      Me.PictureBox13 = New System.Windows.Forms.PictureBox()
+      Me.PictureBox12 = New System.Windows.Forms.PictureBox()
+      Me.PictureBox10 = New System.Windows.Forms.PictureBox()
+      Me.Label21 = New System.Windows.Forms.Label()
+      Me.Label20 = New System.Windows.Forms.Label()
+      Me.eui_cmdAggiornamenti = New Elegant.Ui.Button()
+      Me.eui_cmdMobile = New Elegant.Ui.Button()
+      Me.eui_cmdOpzioni = New Elegant.Ui.Button()
+      Me.eui_cmdContattaci = New Elegant.Ui.Button()
+      Me.eui_cmdGuida = New Elegant.Ui.Button()
+      Me.Button6 = New Elegant.Ui.Button()
+      Me.Button5 = New Elegant.Ui.Button()
+      Me.Button3 = New Elegant.Ui.Button()
+      Me.Button2 = New Elegant.Ui.Button()
+      Me.Button34 = New Elegant.Ui.Button()
       Me.eui_Opzioni = New Elegant.Ui.BackstageViewButton()
       Me.eui_Esci = New Elegant.Ui.BackstageViewButton()
       Me.rtgStrumentiModifica = New Elegant.Ui.RibbonContextualTabGroup(Me.components)
@@ -813,6 +813,13 @@ Friend Class frmMain
       CType(Me.picProg, System.ComponentModel.ISupportInitialize).BeginInit()
       CType(Me.eui_File, System.ComponentModel.ISupportInitialize).BeginInit()
       CType(Me.eui_BackstageView1, System.ComponentModel.ISupportInitialize).BeginInit()
+      Me.eui_Info.SuspendLayout()
+      CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
+      CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
+      CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
+      CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
+      CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
+      Me.eui_GestioneModuli.SuspendLayout()
       Me.eui_Guida.SuspendLayout()
       Me.BackstageViewPage1.SuspendLayout()
       CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -824,13 +831,6 @@ Friend Class frmMain
       CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
       CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
       CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
-      Me.eui_Info.SuspendLayout()
-      CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
-      CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
-      CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
-      CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
-      CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
-      Me.eui_GestioneModuli.SuspendLayout()
       CType(Me.eui_StrumentiModifica, System.ComponentModel.ISupportInitialize).BeginInit()
       Me.eui_StrumentiModifica.SuspendLayout()
       CType(Me.RibbonGroup21, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1168,7 +1168,7 @@ Friend Class frmMain
       Me.eui_File.Name = "eui_File"
       Me.eui_File.QuickAccessToolbarCustomizationDialogEnabled = False
       Me.eui_File.QuickAccessToolbarCustomizationEnabled = False
-      Me.eui_File.Size = New System.Drawing.Size(1380, 154)
+      Me.eui_File.Size = New System.Drawing.Size(1015, 154)
       Me.eui_File.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("eui_File.SmallImages.Images"), System.Drawing.Image))})
       Me.eui_File.TabIndex = 15
       Me.eui_File.TabPages.AddRange(New Elegant.Ui.RibbonTabPage() {Me.eui_Gestione, Me.eui_Archivi, Me.eui_Contabilità, Me.eui_Magazzino, Me.eui_Visualizza, Me.eui_Strumenti, Me.eui_Finestra})
@@ -1180,9 +1180,450 @@ Friend Class frmMain
       Me.eui_BackstageView1.Items.AddRange(New System.Windows.Forms.Control() {Me.eui_Info, Me.eui_GestioneModuli, Me.BackstageViewSeparator1, Me.eui_Guida, Me.eui_Opzioni, Me.eui_Esci})
       Me.eui_BackstageView1.Location = New System.Drawing.Point(0, 55)
       Me.eui_BackstageView1.Name = "eui_BackstageView1"
-      Me.eui_BackstageView1.Size = New System.Drawing.Size(1380, 681)
+      Me.eui_BackstageView1.Size = New System.Drawing.Size(1007, 558)
       Me.eui_BackstageView1.Style = Elegant.Ui.BackstageViewStyle.Office2010DarkBlue
       Me.eui_BackstageView1.TabIndex = 16
+      '
+      'eui_Info
+      '
+      Me.eui_Info.Controls.Add(Me.Label1)
+      Me.eui_Info.Controls.Add(Me.txtPercorso)
+      Me.eui_Info.Controls.Add(Me.lblPercorso)
+      Me.eui_Info.Controls.Add(Me.Label19)
+      Me.eui_Info.Controls.Add(Me.Label18)
+      Me.eui_Info.Controls.Add(Me.Label17)
+      Me.eui_Info.Controls.Add(Me.Label16)
+      Me.eui_Info.Controls.Add(Me.Label11)
+      Me.eui_Info.Controls.Add(Me.Label12)
+      Me.eui_Info.Controls.Add(Me.Label13)
+      Me.eui_Info.Controls.Add(Me.Label14)
+      Me.eui_Info.Controls.Add(Me.Label15)
+      Me.eui_Info.Controls.Add(Me.lblDimensioniFile)
+      Me.eui_Info.Controls.Add(Me.lblDataUltimaScrittura)
+      Me.eui_Info.Controls.Add(Me.lblDataUltimoAccesso)
+      Me.eui_Info.Controls.Add(Me.lblDataCreazione)
+      Me.eui_Info.Controls.Add(Me.lblAttributi)
+      Me.eui_Info.Controls.Add(Me.Label10)
+      Me.eui_Info.Controls.Add(Me.PictureBox11)
+      Me.eui_Info.Controls.Add(Me.picProg)
+      Me.eui_Info.Controls.Add(Me.PictureBox9)
+      Me.eui_Info.Controls.Add(Me.PictureBox8)
+      Me.eui_Info.Controls.Add(Me.PictureBox7)
+      Me.eui_Info.Controls.Add(Me.PictureBox6)
+      Me.eui_Info.Controls.Add(Me.Label8)
+      Me.eui_Info.Controls.Add(Me.Label9)
+      Me.eui_Info.Controls.Add(Me.Label6)
+      Me.eui_Info.Controls.Add(Me.Label7)
+      Me.eui_Info.Controls.Add(Me.Label4)
+      Me.eui_Info.Controls.Add(Me.Label5)
+      Me.eui_Info.Controls.Add(Me.cmdCompatta)
+      Me.eui_Info.Controls.Add(Me.cmdPulizia)
+      Me.eui_Info.Controls.Add(Me.cmdBackup)
+      Me.eui_Info.Controls.Add(Me.Label3)
+      Me.eui_Info.Controls.Add(Me.Label2)
+      Me.eui_Info.Controls.Add(Me.cmdAttivaModuli)
+      Me.eui_Info.Controls.Add(Me.cmdApriPercorso)
+      Me.eui_Info.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+      Me.eui_Info.KeyTip = "I"
+      Me.eui_Info.Location = New System.Drawing.Point(0, 0)
+      Me.eui_Info.Name = "eui_Info"
+      Me.eui_Info.Padding = New System.Windows.Forms.Padding(0, 1, 2, 1)
+      Me.eui_Info.Size = New System.Drawing.Size(922, 556)
+      Me.eui_Info.TabIndex = 0
+      Me.eui_Info.Text = "Informazioni"
+      '
+      'Label1
+      '
+      Me.Label1.AutoSize = True
+      Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+      Me.Label1.Location = New System.Drawing.Point(24, 24)
+      Me.Label1.Name = "Label1"
+      Me.Label1.Size = New System.Drawing.Size(229, 20)
+      Me.Label1.TabIndex = 39
+      Me.Label1.Text = "Informazioni su Hospitality.mdb"
+      '
+      'lblPercorso
+      '
+      Me.lblPercorso.AutoSize = True
+      Me.lblPercorso.ForeColor = System.Drawing.Color.DimGray
+      Me.lblPercorso.Location = New System.Drawing.Point(633, 256)
+      Me.lblPercorso.Name = "lblPercorso"
+      Me.lblPercorso.Size = New System.Drawing.Size(49, 13)
+      Me.lblPercorso.TabIndex = 37
+      Me.lblPercorso.Text = "Proprietà"
+      '
+      'Label19
+      '
+      Me.Label19.AutoSize = True
+      Me.Label19.ForeColor = System.Drawing.Color.DimGray
+      Me.Label19.Location = New System.Drawing.Point(513, 256)
+      Me.Label19.Name = "Label19"
+      Me.Label19.Size = New System.Drawing.Size(52, 13)
+      Me.Label19.TabIndex = 36
+      Me.Label19.Text = "Percorso:"
+      '
+      'Label18
+      '
+      Me.Label18.AutoSize = True
+      Me.Label18.Location = New System.Drawing.Point(513, 344)
+      Me.Label18.Name = "Label18"
+      Me.Label18.Size = New System.Drawing.Size(30, 13)
+      Me.Label18.TabIndex = 35
+      Me.Label18.Text = "Date"
+      '
+      'Label17
+      '
+      Me.Label17.AutoSize = True
+      Me.Label17.ForeColor = System.Drawing.Color.DimGray
+      Me.Label17.Location = New System.Drawing.Point(633, 232)
+      Me.Label17.Name = "Label17"
+      Me.Label17.Size = New System.Drawing.Size(214, 13)
+      Me.Label17.TabIndex = 34
+      Me.Label17.Text = "Applicazione Microsoft Office Access (.mdb)"
+      '
+      'Label16
+      '
+      Me.Label16.AutoSize = True
+      Me.Label16.ForeColor = System.Drawing.Color.DimGray
+      Me.Label16.Location = New System.Drawing.Point(513, 232)
+      Me.Label16.Name = "Label16"
+      Me.Label16.Size = New System.Drawing.Size(47, 13)
+      Me.Label16.TabIndex = 33
+      Me.Label16.Text = "Tipo file:"
+      '
+      'Label11
+      '
+      Me.Label11.AutoSize = True
+      Me.Label11.ForeColor = System.Drawing.Color.DimGray
+      Me.Label11.Location = New System.Drawing.Point(513, 280)
+      Me.Label11.Name = "Label11"
+      Me.Label11.Size = New System.Drawing.Size(61, 13)
+      Me.Label11.TabIndex = 32
+      Me.Label11.Text = "Dimensioni:"
+      '
+      'Label12
+      '
+      Me.Label12.AutoSize = True
+      Me.Label12.ForeColor = System.Drawing.Color.DimGray
+      Me.Label12.Location = New System.Drawing.Point(513, 392)
+      Me.Label12.Name = "Label12"
+      Me.Label12.Size = New System.Drawing.Size(105, 13)
+      Me.Label12.TabIndex = 31
+      Me.Label12.Text = "Data ultima modifica:"
+      '
+      'Label13
+      '
+      Me.Label13.AutoSize = True
+      Me.Label13.ForeColor = System.Drawing.Color.DimGray
+      Me.Label13.Location = New System.Drawing.Point(513, 416)
+      Me.Label13.Name = "Label13"
+      Me.Label13.Size = New System.Drawing.Size(106, 13)
+      Me.Label13.TabIndex = 30
+      Me.Label13.Text = "Data ultimo accesso:"
+      '
+      'Label14
+      '
+      Me.Label14.AutoSize = True
+      Me.Label14.ForeColor = System.Drawing.Color.DimGray
+      Me.Label14.Location = New System.Drawing.Point(513, 368)
+      Me.Label14.Name = "Label14"
+      Me.Label14.Size = New System.Drawing.Size(82, 13)
+      Me.Label14.TabIndex = 29
+      Me.Label14.Text = "Data creazione:"
+      '
+      'Label15
+      '
+      Me.Label15.AutoSize = True
+      Me.Label15.ForeColor = System.Drawing.Color.DimGray
+      Me.Label15.Location = New System.Drawing.Point(513, 304)
+      Me.Label15.Name = "Label15"
+      Me.Label15.Size = New System.Drawing.Size(45, 13)
+      Me.Label15.TabIndex = 28
+      Me.Label15.Text = "Attributi:"
+      '
+      'lblDimensioniFile
+      '
+      Me.lblDimensioniFile.AutoSize = True
+      Me.lblDimensioniFile.ForeColor = System.Drawing.Color.DimGray
+      Me.lblDimensioniFile.Location = New System.Drawing.Point(633, 280)
+      Me.lblDimensioniFile.Name = "lblDimensioniFile"
+      Me.lblDimensioniFile.Size = New System.Drawing.Size(52, 13)
+      Me.lblDimensioniFile.TabIndex = 27
+      Me.lblDimensioniFile.Text = "Proprietà:"
+      '
+      'lblDataUltimaScrittura
+      '
+      Me.lblDataUltimaScrittura.AutoSize = True
+      Me.lblDataUltimaScrittura.ForeColor = System.Drawing.Color.DimGray
+      Me.lblDataUltimaScrittura.Location = New System.Drawing.Point(633, 392)
+      Me.lblDataUltimaScrittura.Name = "lblDataUltimaScrittura"
+      Me.lblDataUltimaScrittura.Size = New System.Drawing.Size(52, 13)
+      Me.lblDataUltimaScrittura.TabIndex = 26
+      Me.lblDataUltimaScrittura.Text = "Proprietà:"
+      '
+      'lblDataUltimoAccesso
+      '
+      Me.lblDataUltimoAccesso.AutoSize = True
+      Me.lblDataUltimoAccesso.ForeColor = System.Drawing.Color.DimGray
+      Me.lblDataUltimoAccesso.Location = New System.Drawing.Point(633, 416)
+      Me.lblDataUltimoAccesso.Name = "lblDataUltimoAccesso"
+      Me.lblDataUltimoAccesso.Size = New System.Drawing.Size(52, 13)
+      Me.lblDataUltimoAccesso.TabIndex = 25
+      Me.lblDataUltimoAccesso.Text = "Proprietà:"
+      '
+      'lblDataCreazione
+      '
+      Me.lblDataCreazione.AutoSize = True
+      Me.lblDataCreazione.ForeColor = System.Drawing.Color.DimGray
+      Me.lblDataCreazione.Location = New System.Drawing.Point(633, 368)
+      Me.lblDataCreazione.Name = "lblDataCreazione"
+      Me.lblDataCreazione.Size = New System.Drawing.Size(52, 13)
+      Me.lblDataCreazione.TabIndex = 24
+      Me.lblDataCreazione.Text = "Proprietà:"
+      '
+      'lblAttributi
+      '
+      Me.lblAttributi.AutoSize = True
+      Me.lblAttributi.ForeColor = System.Drawing.Color.DimGray
+      Me.lblAttributi.Location = New System.Drawing.Point(633, 304)
+      Me.lblAttributi.Name = "lblAttributi"
+      Me.lblAttributi.Size = New System.Drawing.Size(52, 13)
+      Me.lblAttributi.TabIndex = 23
+      Me.lblAttributi.Text = "Proprietà:"
+      '
+      'Label10
+      '
+      Me.Label10.AutoSize = True
+      Me.Label10.Location = New System.Drawing.Point(513, 208)
+      Me.Label10.Name = "Label10"
+      Me.Label10.Size = New System.Drawing.Size(49, 13)
+      Me.Label10.TabIndex = 22
+      Me.Label10.Text = "Proprietà"
+      '
+      'PictureBox11
+      '
+      Me.PictureBox11.Image = CType(resources.GetObject("PictureBox11.Image"), System.Drawing.Image)
+      Me.PictureBox11.Location = New System.Drawing.Point(8, 88)
+      Me.PictureBox11.Name = "PictureBox11"
+      Me.PictureBox11.Size = New System.Drawing.Size(465, 16)
+      Me.PictureBox11.TabIndex = 21
+      Me.PictureBox11.TabStop = False
+      '
+      'PictureBox9
+      '
+      Me.PictureBox9.Image = CType(resources.GetObject("PictureBox9.Image"), System.Drawing.Image)
+      Me.PictureBox9.Location = New System.Drawing.Point(488, -16)
+      Me.PictureBox9.Name = "PictureBox9"
+      Me.PictureBox9.Size = New System.Drawing.Size(8, 823)
+      Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+      Me.PictureBox9.TabIndex = 19
+      Me.PictureBox9.TabStop = False
+      '
+      'PictureBox8
+      '
+      Me.PictureBox8.Image = CType(resources.GetObject("PictureBox8.Image"), System.Drawing.Image)
+      Me.PictureBox8.Location = New System.Drawing.Point(8, 512)
+      Me.PictureBox8.Name = "PictureBox8"
+      Me.PictureBox8.Size = New System.Drawing.Size(465, 11)
+      Me.PictureBox8.TabIndex = 18
+      Me.PictureBox8.TabStop = False
+      '
+      'PictureBox7
+      '
+      Me.PictureBox7.Image = CType(resources.GetObject("PictureBox7.Image"), System.Drawing.Image)
+      Me.PictureBox7.Location = New System.Drawing.Point(8, 376)
+      Me.PictureBox7.Name = "PictureBox7"
+      Me.PictureBox7.Size = New System.Drawing.Size(465, 11)
+      Me.PictureBox7.TabIndex = 17
+      Me.PictureBox7.TabStop = False
+      '
+      'PictureBox6
+      '
+      Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
+      Me.PictureBox6.Location = New System.Drawing.Point(8, 240)
+      Me.PictureBox6.Name = "PictureBox6"
+      Me.PictureBox6.Size = New System.Drawing.Size(465, 11)
+      Me.PictureBox6.TabIndex = 16
+      Me.PictureBox6.TabStop = False
+      '
+      'Label8
+      '
+      Me.Label8.Location = New System.Drawing.Point(144, 568)
+      Me.Label8.Name = "Label8"
+      Me.Label8.Size = New System.Drawing.Size(316, 72)
+      Me.Label8.TabIndex = 15
+      Me.Label8.Text = "Consente di effettuare la compattazione e il ripristino degli archivi. " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Riduce" &
+    " le dimensioni dell'archivio." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Corregge eventuali errori sul file." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Aumenta le p" &
+    "restazioni di accesso ai dati."
+      '
+      'Label9
+      '
+      Me.Label9.AutoSize = True
+      Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
+      Me.Label9.ForeColor = System.Drawing.Color.DimGray
+      Me.Label9.Location = New System.Drawing.Point(144, 544)
+      Me.Label9.Name = "Label9"
+      Me.Label9.Size = New System.Drawing.Size(201, 16)
+      Me.Label9.TabIndex = 14
+      Me.Label9.Text = "Compatta e ripristina archivi"
+      '
+      'Label6
+      '
+      Me.Label6.Location = New System.Drawing.Point(144, 432)
+      Me.Label6.Name = "Label6"
+      Me.Label6.Size = New System.Drawing.Size(308, 64)
+      Me.Label6.TabIndex = 13
+      Me.Label6.Text = "Consente di effettuare l'eliminazione dei dati per singola tabella presenti negli" &
+    " archivi."
+      '
+      'Label7
+      '
+      Me.Label7.AutoSize = True
+      Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
+      Me.Label7.ForeColor = System.Drawing.Color.DimGray
+      Me.Label7.Location = New System.Drawing.Point(144, 408)
+      Me.Label7.Name = "Label7"
+      Me.Label7.Size = New System.Drawing.Size(143, 16)
+      Me.Label7.TabIndex = 12
+      Me.Label7.Text = "Pulizia degli archivi"
+      '
+      'Label4
+      '
+      Me.Label4.Location = New System.Drawing.Point(144, 304)
+      Me.Label4.Name = "Label4"
+      Me.Label4.Size = New System.Drawing.Size(308, 56)
+      Me.Label4.TabIndex = 11
+      Me.Label4.Text = "Consente di effettuare copie di sicurezza degli archivi specificando il percorso " &
+    "desiderato."
+      '
+      'Label5
+      '
+      Me.Label5.AutoSize = True
+      Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
+      Me.Label5.ForeColor = System.Drawing.Color.DimGray
+      Me.Label5.Location = New System.Drawing.Point(144, 280)
+      Me.Label5.Name = "Label5"
+      Me.Label5.Size = New System.Drawing.Size(116, 16)
+      Me.Label5.TabIndex = 10
+      Me.Label5.Text = "Backup dei dati"
+      '
+      'cmdCompatta
+      '
+      Me.cmdCompatta.Id = "3beaa235-1cf2-428b-bc5f-a89ca116578d"
+      Me.cmdCompatta.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+      Me.cmdCompatta.KeyTip = "C"
+      Me.cmdCompatta.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("cmdCompatta.LargeImages.Images"), System.Drawing.Image))})
+      Me.cmdCompatta.Location = New System.Drawing.Point(24, 544)
+      Me.cmdCompatta.Name = "cmdCompatta"
+      Me.cmdCompatta.Size = New System.Drawing.Size(96, 88)
+      Me.cmdCompatta.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("cmdCompatta.SmallImages.Images"), System.Drawing.Image))})
+      Me.cmdCompatta.TabIndex = 4
+      Me.cmdCompatta.Text = "&Compatta e ripristina archivi"
+      Me.cmdCompatta.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+      Me.cmdCompatta.WordWrap = True
+      '
+      'cmdPulizia
+      '
+      Me.cmdPulizia.Id = "a26273e3-99b4-4aef-bfc7-06a038020054"
+      Me.cmdPulizia.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+      Me.cmdPulizia.KeyTip = "P"
+      Me.cmdPulizia.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("cmdPulizia.LargeImages.Images"), System.Drawing.Image))})
+      Me.cmdPulizia.Location = New System.Drawing.Point(24, 408)
+      Me.cmdPulizia.Name = "cmdPulizia"
+      Me.cmdPulizia.Size = New System.Drawing.Size(96, 88)
+      Me.cmdPulizia.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("cmdPulizia.SmallImages.Images"), System.Drawing.Image))})
+      Me.cmdPulizia.TabIndex = 3
+      Me.cmdPulizia.Text = "&Pulizia degli archivi"
+      Me.cmdPulizia.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+      Me.cmdPulizia.WordWrap = True
+      '
+      'cmdBackup
+      '
+      Me.cmdBackup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+      Me.cmdBackup.Id = "0a083b69-95e9-4f3d-9bdb-3e7a42c9a4f4"
+      Me.cmdBackup.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+      Me.cmdBackup.KeyTip = "B"
+      Me.cmdBackup.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Default", CType(resources.GetObject("cmdBackup.LargeImages.Images"), System.Drawing.Image)), New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("cmdBackup.LargeImages.Images1"), System.Drawing.Image))})
+      Me.cmdBackup.Location = New System.Drawing.Point(24, 280)
+      Me.cmdBackup.Name = "cmdBackup"
+      Me.cmdBackup.Size = New System.Drawing.Size(96, 80)
+      Me.cmdBackup.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("cmdBackup.SmallImages.Images"), System.Drawing.Image))})
+      Me.cmdBackup.TabIndex = 2
+      Me.cmdBackup.Text = "&Backup dati archivi"
+      Me.cmdBackup.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+      Me.cmdBackup.WordWrap = True
+      '
+      'Label3
+      '
+      Me.Label3.Location = New System.Drawing.Point(144, 152)
+      Me.Label3.Name = "Label3"
+      Me.Label3.Size = New System.Drawing.Size(300, 72)
+      Me.Label3.TabIndex = 5
+      Me.Label3.Text = resources.GetString("Label3.Text")
+      '
+      'Label2
+      '
+      Me.Label2.AutoSize = True
+      Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
+      Me.Label2.ForeColor = System.Drawing.Color.DimGray
+      Me.Label2.Location = New System.Drawing.Point(144, 128)
+      Me.Label2.Name = "Label2"
+      Me.Label2.Size = New System.Drawing.Size(232, 16)
+      Me.Label2.TabIndex = 4
+      Me.Label2.Text = "Che cosa è Hospitality Solution?"
+      '
+      'cmdAttivaModuli
+      '
+      Me.cmdAttivaModuli.Enabled = False
+      Me.cmdAttivaModuli.Id = "47bd6e8b-ff32-4fe7-8d53-cb2317e0671a"
+      Me.cmdAttivaModuli.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+      Me.cmdAttivaModuli.KeyTip = "G"
+      Me.cmdAttivaModuli.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("cmdAttivaModuli.LargeImages.Images"), System.Drawing.Image))})
+      Me.cmdAttivaModuli.Location = New System.Drawing.Point(24, 128)
+      Me.cmdAttivaModuli.Name = "cmdAttivaModuli"
+      Me.cmdAttivaModuli.Size = New System.Drawing.Size(96, 88)
+      Me.cmdAttivaModuli.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("cmdAttivaModuli.SmallImages.Images"), System.Drawing.Image))})
+      Me.cmdAttivaModuli.TabIndex = 1
+      Me.cmdAttivaModuli.Text = "&Vai a Gestione Moduli"
+      Me.cmdAttivaModuli.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+      Me.cmdAttivaModuli.WordWrap = True
+      '
+      'cmdApriPercorso
+      '
+      Me.cmdApriPercorso.Id = "9aa60f9d-9ffb-4c55-a5eb-f497a2e91e6b"
+      Me.cmdApriPercorso.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+      Me.cmdApriPercorso.KeyTip = "A"
+      Me.cmdApriPercorso.Location = New System.Drawing.Point(513, 464)
+      Me.cmdApriPercorso.Name = "cmdApriPercorso"
+      Me.cmdApriPercorso.ScreenTip.Caption = "Apri percorso archivio"
+      Me.cmdApriPercorso.ScreenTip.Text = "Apre il percorso archivio in Esplora file."
+      Me.cmdApriPercorso.Size = New System.Drawing.Size(248, 40)
+      Me.cmdApriPercorso.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("cmdApriPercorso.SmallImages.Images"), System.Drawing.Image))})
+      Me.cmdApriPercorso.TabIndex = 5
+      Me.cmdApriPercorso.Text = "Apri percorso archivio"
+      Me.cmdApriPercorso.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+      Me.cmdApriPercorso.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+      '
+      'eui_GestioneModuli
+      '
+      Me.eui_GestioneModuli.AutoScroll = True
+      Me.eui_GestioneModuli.Controls.Add(Me.lvwGestioneModuli)
+      Me.eui_GestioneModuli.KeyTip = "G"
+      Me.eui_GestioneModuli.Location = New System.Drawing.Point(0, 0)
+      Me.eui_GestioneModuli.Name = "eui_GestioneModuli"
+      Me.eui_GestioneModuli.Padding = New System.Windows.Forms.Padding(0, 1, 2, 1)
+      Me.eui_GestioneModuli.Size = New System.Drawing.Size(1181, 478)
+      Me.eui_GestioneModuli.TabIndex = 0
+      Me.eui_GestioneModuli.Text = "Gestione Moduli    "
+      '
+      'BackstageViewSeparator1
+      '
+      Me.BackstageViewSeparator1.Id = "c365ef30-7323-4c13-8726-3d28dd1304d8"
+      Me.BackstageViewSeparator1.Location = New System.Drawing.Point(1, 83)
+      Me.BackstageViewSeparator1.Name = "BackstageViewSeparator1"
+      Me.BackstageViewSeparator1.Size = New System.Drawing.Size(142, 2)
+      Me.BackstageViewSeparator1.TabIndex = 4
+      Me.BackstageViewSeparator1.Text = "BackstageViewSeparator1"
       '
       'eui_Guida
       '
@@ -1689,447 +2130,6 @@ Friend Class frmMain
       Me.Button34.TextAlign = System.Drawing.ContentAlignment.TopLeft
       Me.Button34.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
       Me.Button34.WordWrap = True
-      '
-      'eui_Info
-      '
-      Me.eui_Info.Controls.Add(Me.Label1)
-      Me.eui_Info.Controls.Add(Me.txtPercorso)
-      Me.eui_Info.Controls.Add(Me.lblPercorso)
-      Me.eui_Info.Controls.Add(Me.Label19)
-      Me.eui_Info.Controls.Add(Me.Label18)
-      Me.eui_Info.Controls.Add(Me.Label17)
-      Me.eui_Info.Controls.Add(Me.Label16)
-      Me.eui_Info.Controls.Add(Me.Label11)
-      Me.eui_Info.Controls.Add(Me.Label12)
-      Me.eui_Info.Controls.Add(Me.Label13)
-      Me.eui_Info.Controls.Add(Me.Label14)
-      Me.eui_Info.Controls.Add(Me.Label15)
-      Me.eui_Info.Controls.Add(Me.lblDimensioniFile)
-      Me.eui_Info.Controls.Add(Me.lblDataUltimaScrittura)
-      Me.eui_Info.Controls.Add(Me.lblDataUltimoAccesso)
-      Me.eui_Info.Controls.Add(Me.lblDataCreazione)
-      Me.eui_Info.Controls.Add(Me.lblAttributi)
-      Me.eui_Info.Controls.Add(Me.Label10)
-      Me.eui_Info.Controls.Add(Me.PictureBox11)
-      Me.eui_Info.Controls.Add(Me.picProg)
-      Me.eui_Info.Controls.Add(Me.PictureBox9)
-      Me.eui_Info.Controls.Add(Me.PictureBox8)
-      Me.eui_Info.Controls.Add(Me.PictureBox7)
-      Me.eui_Info.Controls.Add(Me.PictureBox6)
-      Me.eui_Info.Controls.Add(Me.Label8)
-      Me.eui_Info.Controls.Add(Me.Label9)
-      Me.eui_Info.Controls.Add(Me.Label6)
-      Me.eui_Info.Controls.Add(Me.Label7)
-      Me.eui_Info.Controls.Add(Me.Label4)
-      Me.eui_Info.Controls.Add(Me.Label5)
-      Me.eui_Info.Controls.Add(Me.cmdCompatta)
-      Me.eui_Info.Controls.Add(Me.cmdPulizia)
-      Me.eui_Info.Controls.Add(Me.cmdBackup)
-      Me.eui_Info.Controls.Add(Me.Label3)
-      Me.eui_Info.Controls.Add(Me.Label2)
-      Me.eui_Info.Controls.Add(Me.cmdAttivaModuli)
-      Me.eui_Info.Controls.Add(Me.cmdApriPercorso)
-      Me.eui_Info.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-      Me.eui_Info.KeyTip = "I"
-      Me.eui_Info.Location = New System.Drawing.Point(0, 0)
-      Me.eui_Info.Name = "eui_Info"
-      Me.eui_Info.Padding = New System.Windows.Forms.Padding(0, 1, 2, 1)
-      Me.eui_Info.Size = New System.Drawing.Size(1237, 679)
-      Me.eui_Info.TabIndex = 0
-      Me.eui_Info.Text = "Informazioni"
-      '
-      'Label1
-      '
-      Me.Label1.AutoSize = True
-      Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-      Me.Label1.Location = New System.Drawing.Point(24, 24)
-      Me.Label1.Name = "Label1"
-      Me.Label1.Size = New System.Drawing.Size(229, 20)
-      Me.Label1.TabIndex = 39
-      Me.Label1.Text = "Informazioni su Hospitality.mdb"
-      '
-      'lblPercorso
-      '
-      Me.lblPercorso.AutoSize = True
-      Me.lblPercorso.ForeColor = System.Drawing.Color.DimGray
-      Me.lblPercorso.Location = New System.Drawing.Point(633, 256)
-      Me.lblPercorso.Name = "lblPercorso"
-      Me.lblPercorso.Size = New System.Drawing.Size(49, 13)
-      Me.lblPercorso.TabIndex = 37
-      Me.lblPercorso.Text = "Proprietà"
-      '
-      'Label19
-      '
-      Me.Label19.AutoSize = True
-      Me.Label19.ForeColor = System.Drawing.Color.DimGray
-      Me.Label19.Location = New System.Drawing.Point(513, 256)
-      Me.Label19.Name = "Label19"
-      Me.Label19.Size = New System.Drawing.Size(52, 13)
-      Me.Label19.TabIndex = 36
-      Me.Label19.Text = "Percorso:"
-      '
-      'Label18
-      '
-      Me.Label18.AutoSize = True
-      Me.Label18.Location = New System.Drawing.Point(513, 344)
-      Me.Label18.Name = "Label18"
-      Me.Label18.Size = New System.Drawing.Size(30, 13)
-      Me.Label18.TabIndex = 35
-      Me.Label18.Text = "Date"
-      '
-      'Label17
-      '
-      Me.Label17.AutoSize = True
-      Me.Label17.ForeColor = System.Drawing.Color.DimGray
-      Me.Label17.Location = New System.Drawing.Point(633, 232)
-      Me.Label17.Name = "Label17"
-      Me.Label17.Size = New System.Drawing.Size(214, 13)
-      Me.Label17.TabIndex = 34
-      Me.Label17.Text = "Applicazione Microsoft Office Access (.mdb)"
-      '
-      'Label16
-      '
-      Me.Label16.AutoSize = True
-      Me.Label16.ForeColor = System.Drawing.Color.DimGray
-      Me.Label16.Location = New System.Drawing.Point(513, 232)
-      Me.Label16.Name = "Label16"
-      Me.Label16.Size = New System.Drawing.Size(47, 13)
-      Me.Label16.TabIndex = 33
-      Me.Label16.Text = "Tipo file:"
-      '
-      'Label11
-      '
-      Me.Label11.AutoSize = True
-      Me.Label11.ForeColor = System.Drawing.Color.DimGray
-      Me.Label11.Location = New System.Drawing.Point(513, 280)
-      Me.Label11.Name = "Label11"
-      Me.Label11.Size = New System.Drawing.Size(61, 13)
-      Me.Label11.TabIndex = 32
-      Me.Label11.Text = "Dimensioni:"
-      '
-      'Label12
-      '
-      Me.Label12.AutoSize = True
-      Me.Label12.ForeColor = System.Drawing.Color.DimGray
-      Me.Label12.Location = New System.Drawing.Point(513, 392)
-      Me.Label12.Name = "Label12"
-      Me.Label12.Size = New System.Drawing.Size(105, 13)
-      Me.Label12.TabIndex = 31
-      Me.Label12.Text = "Data ultima modifica:"
-      '
-      'Label13
-      '
-      Me.Label13.AutoSize = True
-      Me.Label13.ForeColor = System.Drawing.Color.DimGray
-      Me.Label13.Location = New System.Drawing.Point(513, 416)
-      Me.Label13.Name = "Label13"
-      Me.Label13.Size = New System.Drawing.Size(106, 13)
-      Me.Label13.TabIndex = 30
-      Me.Label13.Text = "Data ultimo accesso:"
-      '
-      'Label14
-      '
-      Me.Label14.AutoSize = True
-      Me.Label14.ForeColor = System.Drawing.Color.DimGray
-      Me.Label14.Location = New System.Drawing.Point(513, 368)
-      Me.Label14.Name = "Label14"
-      Me.Label14.Size = New System.Drawing.Size(82, 13)
-      Me.Label14.TabIndex = 29
-      Me.Label14.Text = "Data creazione:"
-      '
-      'Label15
-      '
-      Me.Label15.AutoSize = True
-      Me.Label15.ForeColor = System.Drawing.Color.DimGray
-      Me.Label15.Location = New System.Drawing.Point(513, 304)
-      Me.Label15.Name = "Label15"
-      Me.Label15.Size = New System.Drawing.Size(45, 13)
-      Me.Label15.TabIndex = 28
-      Me.Label15.Text = "Attributi:"
-      '
-      'lblDimensioniFile
-      '
-      Me.lblDimensioniFile.AutoSize = True
-      Me.lblDimensioniFile.ForeColor = System.Drawing.Color.DimGray
-      Me.lblDimensioniFile.Location = New System.Drawing.Point(633, 280)
-      Me.lblDimensioniFile.Name = "lblDimensioniFile"
-      Me.lblDimensioniFile.Size = New System.Drawing.Size(52, 13)
-      Me.lblDimensioniFile.TabIndex = 27
-      Me.lblDimensioniFile.Text = "Proprietà:"
-      '
-      'lblDataUltimaScrittura
-      '
-      Me.lblDataUltimaScrittura.AutoSize = True
-      Me.lblDataUltimaScrittura.ForeColor = System.Drawing.Color.DimGray
-      Me.lblDataUltimaScrittura.Location = New System.Drawing.Point(633, 392)
-      Me.lblDataUltimaScrittura.Name = "lblDataUltimaScrittura"
-      Me.lblDataUltimaScrittura.Size = New System.Drawing.Size(52, 13)
-      Me.lblDataUltimaScrittura.TabIndex = 26
-      Me.lblDataUltimaScrittura.Text = "Proprietà:"
-      '
-      'lblDataUltimoAccesso
-      '
-      Me.lblDataUltimoAccesso.AutoSize = True
-      Me.lblDataUltimoAccesso.ForeColor = System.Drawing.Color.DimGray
-      Me.lblDataUltimoAccesso.Location = New System.Drawing.Point(633, 416)
-      Me.lblDataUltimoAccesso.Name = "lblDataUltimoAccesso"
-      Me.lblDataUltimoAccesso.Size = New System.Drawing.Size(52, 13)
-      Me.lblDataUltimoAccesso.TabIndex = 25
-      Me.lblDataUltimoAccesso.Text = "Proprietà:"
-      '
-      'lblDataCreazione
-      '
-      Me.lblDataCreazione.AutoSize = True
-      Me.lblDataCreazione.ForeColor = System.Drawing.Color.DimGray
-      Me.lblDataCreazione.Location = New System.Drawing.Point(633, 368)
-      Me.lblDataCreazione.Name = "lblDataCreazione"
-      Me.lblDataCreazione.Size = New System.Drawing.Size(52, 13)
-      Me.lblDataCreazione.TabIndex = 24
-      Me.lblDataCreazione.Text = "Proprietà:"
-      '
-      'lblAttributi
-      '
-      Me.lblAttributi.AutoSize = True
-      Me.lblAttributi.ForeColor = System.Drawing.Color.DimGray
-      Me.lblAttributi.Location = New System.Drawing.Point(633, 304)
-      Me.lblAttributi.Name = "lblAttributi"
-      Me.lblAttributi.Size = New System.Drawing.Size(52, 13)
-      Me.lblAttributi.TabIndex = 23
-      Me.lblAttributi.Text = "Proprietà:"
-      '
-      'Label10
-      '
-      Me.Label10.AutoSize = True
-      Me.Label10.Location = New System.Drawing.Point(513, 208)
-      Me.Label10.Name = "Label10"
-      Me.Label10.Size = New System.Drawing.Size(49, 13)
-      Me.Label10.TabIndex = 22
-      Me.Label10.Text = "Proprietà"
-      '
-      'PictureBox11
-      '
-      Me.PictureBox11.Image = CType(resources.GetObject("PictureBox11.Image"), System.Drawing.Image)
-      Me.PictureBox11.Location = New System.Drawing.Point(8, 88)
-      Me.PictureBox11.Name = "PictureBox11"
-      Me.PictureBox11.Size = New System.Drawing.Size(465, 16)
-      Me.PictureBox11.TabIndex = 21
-      Me.PictureBox11.TabStop = False
-      '
-      'PictureBox9
-      '
-      Me.PictureBox9.Image = CType(resources.GetObject("PictureBox9.Image"), System.Drawing.Image)
-      Me.PictureBox9.Location = New System.Drawing.Point(488, -16)
-      Me.PictureBox9.Name = "PictureBox9"
-      Me.PictureBox9.Size = New System.Drawing.Size(8, 823)
-      Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-      Me.PictureBox9.TabIndex = 19
-      Me.PictureBox9.TabStop = False
-      '
-      'PictureBox8
-      '
-      Me.PictureBox8.Image = CType(resources.GetObject("PictureBox8.Image"), System.Drawing.Image)
-      Me.PictureBox8.Location = New System.Drawing.Point(8, 512)
-      Me.PictureBox8.Name = "PictureBox8"
-      Me.PictureBox8.Size = New System.Drawing.Size(465, 11)
-      Me.PictureBox8.TabIndex = 18
-      Me.PictureBox8.TabStop = False
-      '
-      'PictureBox7
-      '
-      Me.PictureBox7.Image = CType(resources.GetObject("PictureBox7.Image"), System.Drawing.Image)
-      Me.PictureBox7.Location = New System.Drawing.Point(8, 376)
-      Me.PictureBox7.Name = "PictureBox7"
-      Me.PictureBox7.Size = New System.Drawing.Size(465, 11)
-      Me.PictureBox7.TabIndex = 17
-      Me.PictureBox7.TabStop = False
-      '
-      'PictureBox6
-      '
-      Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
-      Me.PictureBox6.Location = New System.Drawing.Point(8, 240)
-      Me.PictureBox6.Name = "PictureBox6"
-      Me.PictureBox6.Size = New System.Drawing.Size(465, 11)
-      Me.PictureBox6.TabIndex = 16
-      Me.PictureBox6.TabStop = False
-      '
-      'Label8
-      '
-      Me.Label8.Location = New System.Drawing.Point(144, 568)
-      Me.Label8.Name = "Label8"
-      Me.Label8.Size = New System.Drawing.Size(316, 72)
-      Me.Label8.TabIndex = 15
-      Me.Label8.Text = "Consente di effettuare la compattazione e il ripristino degli archivi. " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Riduce" &
-    " le dimensioni dell'archivio." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Corregge eventuali errori sul file." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Aumenta le p" &
-    "restazioni di accesso ai dati."
-      '
-      'Label9
-      '
-      Me.Label9.AutoSize = True
-      Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
-      Me.Label9.ForeColor = System.Drawing.Color.DimGray
-      Me.Label9.Location = New System.Drawing.Point(144, 544)
-      Me.Label9.Name = "Label9"
-      Me.Label9.Size = New System.Drawing.Size(201, 16)
-      Me.Label9.TabIndex = 14
-      Me.Label9.Text = "Compatta e ripristina archivi"
-      '
-      'Label6
-      '
-      Me.Label6.Location = New System.Drawing.Point(144, 432)
-      Me.Label6.Name = "Label6"
-      Me.Label6.Size = New System.Drawing.Size(308, 64)
-      Me.Label6.TabIndex = 13
-      Me.Label6.Text = "Consente di effettuare l'eliminazione dei dati per singola tabella presenti negli" &
-    " archivi."
-      '
-      'Label7
-      '
-      Me.Label7.AutoSize = True
-      Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
-      Me.Label7.ForeColor = System.Drawing.Color.DimGray
-      Me.Label7.Location = New System.Drawing.Point(144, 408)
-      Me.Label7.Name = "Label7"
-      Me.Label7.Size = New System.Drawing.Size(143, 16)
-      Me.Label7.TabIndex = 12
-      Me.Label7.Text = "Pulizia degli archivi"
-      '
-      'Label4
-      '
-      Me.Label4.Location = New System.Drawing.Point(144, 304)
-      Me.Label4.Name = "Label4"
-      Me.Label4.Size = New System.Drawing.Size(308, 56)
-      Me.Label4.TabIndex = 11
-      Me.Label4.Text = "Consente di effettuare copie di sicurezza degli archivi specificando il percorso " &
-    "desiderato."
-      '
-      'Label5
-      '
-      Me.Label5.AutoSize = True
-      Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
-      Me.Label5.ForeColor = System.Drawing.Color.DimGray
-      Me.Label5.Location = New System.Drawing.Point(144, 280)
-      Me.Label5.Name = "Label5"
-      Me.Label5.Size = New System.Drawing.Size(116, 16)
-      Me.Label5.TabIndex = 10
-      Me.Label5.Text = "Backup dei dati"
-      '
-      'cmdCompatta
-      '
-      Me.cmdCompatta.Id = "3beaa235-1cf2-428b-bc5f-a89ca116578d"
-      Me.cmdCompatta.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-      Me.cmdCompatta.KeyTip = "C"
-      Me.cmdCompatta.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("cmdCompatta.LargeImages.Images"), System.Drawing.Image))})
-      Me.cmdCompatta.Location = New System.Drawing.Point(24, 544)
-      Me.cmdCompatta.Name = "cmdCompatta"
-      Me.cmdCompatta.Size = New System.Drawing.Size(96, 88)
-      Me.cmdCompatta.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("cmdCompatta.SmallImages.Images"), System.Drawing.Image))})
-      Me.cmdCompatta.TabIndex = 4
-      Me.cmdCompatta.Text = "&Compatta e ripristina archivi"
-      Me.cmdCompatta.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-      Me.cmdCompatta.WordWrap = True
-      '
-      'cmdPulizia
-      '
-      Me.cmdPulizia.Id = "a26273e3-99b4-4aef-bfc7-06a038020054"
-      Me.cmdPulizia.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-      Me.cmdPulizia.KeyTip = "P"
-      Me.cmdPulizia.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("cmdPulizia.LargeImages.Images"), System.Drawing.Image))})
-      Me.cmdPulizia.Location = New System.Drawing.Point(24, 408)
-      Me.cmdPulizia.Name = "cmdPulizia"
-      Me.cmdPulizia.Size = New System.Drawing.Size(96, 88)
-      Me.cmdPulizia.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("cmdPulizia.SmallImages.Images"), System.Drawing.Image))})
-      Me.cmdPulizia.TabIndex = 3
-      Me.cmdPulizia.Text = "&Pulizia degli archivi"
-      Me.cmdPulizia.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-      Me.cmdPulizia.WordWrap = True
-      '
-      'cmdBackup
-      '
-      Me.cmdBackup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-      Me.cmdBackup.Id = "0a083b69-95e9-4f3d-9bdb-3e7a42c9a4f4"
-      Me.cmdBackup.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-      Me.cmdBackup.KeyTip = "B"
-      Me.cmdBackup.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Default", CType(resources.GetObject("cmdBackup.LargeImages.Images"), System.Drawing.Image)), New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("cmdBackup.LargeImages.Images1"), System.Drawing.Image))})
-      Me.cmdBackup.Location = New System.Drawing.Point(24, 280)
-      Me.cmdBackup.Name = "cmdBackup"
-      Me.cmdBackup.Size = New System.Drawing.Size(96, 80)
-      Me.cmdBackup.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("cmdBackup.SmallImages.Images"), System.Drawing.Image))})
-      Me.cmdBackup.TabIndex = 2
-      Me.cmdBackup.Text = "&Backup dati archivi"
-      Me.cmdBackup.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-      Me.cmdBackup.WordWrap = True
-      '
-      'Label3
-      '
-      Me.Label3.Location = New System.Drawing.Point(144, 152)
-      Me.Label3.Name = "Label3"
-      Me.Label3.Size = New System.Drawing.Size(300, 72)
-      Me.Label3.TabIndex = 5
-      Me.Label3.Text = resources.GetString("Label3.Text")
-      '
-      'Label2
-      '
-      Me.Label2.AutoSize = True
-      Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
-      Me.Label2.ForeColor = System.Drawing.Color.DimGray
-      Me.Label2.Location = New System.Drawing.Point(144, 128)
-      Me.Label2.Name = "Label2"
-      Me.Label2.Size = New System.Drawing.Size(232, 16)
-      Me.Label2.TabIndex = 4
-      Me.Label2.Text = "Che cosa è Hospitality Solution?"
-      '
-      'cmdAttivaModuli
-      '
-      Me.cmdAttivaModuli.Enabled = False
-      Me.cmdAttivaModuli.Id = "47bd6e8b-ff32-4fe7-8d53-cb2317e0671a"
-      Me.cmdAttivaModuli.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-      Me.cmdAttivaModuli.KeyTip = "G"
-      Me.cmdAttivaModuli.LargeImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("cmdAttivaModuli.LargeImages.Images"), System.Drawing.Image))})
-      Me.cmdAttivaModuli.Location = New System.Drawing.Point(24, 128)
-      Me.cmdAttivaModuli.Name = "cmdAttivaModuli"
-      Me.cmdAttivaModuli.Size = New System.Drawing.Size(96, 88)
-      Me.cmdAttivaModuli.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("cmdAttivaModuli.SmallImages.Images"), System.Drawing.Image))})
-      Me.cmdAttivaModuli.TabIndex = 1
-      Me.cmdAttivaModuli.Text = "&Vai a Gestione Moduli"
-      Me.cmdAttivaModuli.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-      Me.cmdAttivaModuli.WordWrap = True
-      '
-      'cmdApriPercorso
-      '
-      Me.cmdApriPercorso.Id = "9aa60f9d-9ffb-4c55-a5eb-f497a2e91e6b"
-      Me.cmdApriPercorso.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-      Me.cmdApriPercorso.KeyTip = "A"
-      Me.cmdApriPercorso.Location = New System.Drawing.Point(513, 464)
-      Me.cmdApriPercorso.Name = "cmdApriPercorso"
-      Me.cmdApriPercorso.ScreenTip.Caption = "Apri percorso archivio"
-      Me.cmdApriPercorso.ScreenTip.Text = "Apre il percorso archivio in Esplora file."
-      Me.cmdApriPercorso.Size = New System.Drawing.Size(248, 40)
-      Me.cmdApriPercorso.SmallImages.Images.AddRange(New Elegant.Ui.ControlImage() {New Elegant.Ui.ControlImage("Normal", CType(resources.GetObject("cmdApriPercorso.SmallImages.Images"), System.Drawing.Image))})
-      Me.cmdApriPercorso.TabIndex = 5
-      Me.cmdApriPercorso.Text = "Apri percorso archivio"
-      Me.cmdApriPercorso.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-      Me.cmdApriPercorso.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-      '
-      'eui_GestioneModuli
-      '
-      Me.eui_GestioneModuli.AutoScroll = True
-      Me.eui_GestioneModuli.Controls.Add(Me.lvwGestioneModuli)
-      Me.eui_GestioneModuli.KeyTip = "G"
-      Me.eui_GestioneModuli.Location = New System.Drawing.Point(0, 0)
-      Me.eui_GestioneModuli.Name = "eui_GestioneModuli"
-      Me.eui_GestioneModuli.Padding = New System.Windows.Forms.Padding(0, 1, 2, 1)
-      Me.eui_GestioneModuli.Size = New System.Drawing.Size(1181, 478)
-      Me.eui_GestioneModuli.TabIndex = 0
-      Me.eui_GestioneModuli.Text = "Gestione Moduli    "
-      '
-      'BackstageViewSeparator1
-      '
-      Me.BackstageViewSeparator1.Id = "c365ef30-7323-4c13-8726-3d28dd1304d8"
-      Me.BackstageViewSeparator1.Location = New System.Drawing.Point(1, 83)
-      Me.BackstageViewSeparator1.Name = "BackstageViewSeparator1"
-      Me.BackstageViewSeparator1.Size = New System.Drawing.Size(142, 2)
-      Me.BackstageViewSeparator1.TabIndex = 4
-      Me.BackstageViewSeparator1.Text = "BackstageViewSeparator1"
       '
       'eui_Opzioni
       '
@@ -3209,7 +3209,7 @@ Friend Class frmMain
       Me.eui_Gestione.KeyTip = "G"
       Me.eui_Gestione.Location = New System.Drawing.Point(0, 0)
       Me.eui_Gestione.Name = "eui_Gestione"
-      Me.eui_Gestione.Size = New System.Drawing.Size(1380, 99)
+      Me.eui_Gestione.Size = New System.Drawing.Size(1015, 99)
       Me.eui_Gestione.TabIndex = 0
       Me.eui_Gestione.Text = "Gestione"
       '
@@ -4977,10 +4977,10 @@ Friend Class frmMain
       Me.eui_sbrMain.ControlsArea = Me.StatusBarControlsArea1
       Me.eui_sbrMain.Dock = System.Windows.Forms.DockStyle.Bottom
       Me.eui_sbrMain.ForeColor = System.Drawing.SystemColors.ControlText
-      Me.eui_sbrMain.Location = New System.Drawing.Point(0, 736)
+      Me.eui_sbrMain.Location = New System.Drawing.Point(0, 616)
       Me.eui_sbrMain.Name = "eui_sbrMain"
       Me.eui_sbrMain.NotificationsArea = Me.StatusBarNotificationsArea1
-      Me.eui_sbrMain.Size = New System.Drawing.Size(1380, 22)
+      Me.eui_sbrMain.Size = New System.Drawing.Size(1015, 22)
       Me.eui_sbrMain.TabIndex = 20
       '
       'StatusBarNotificationsArea1
@@ -4992,7 +4992,7 @@ Friend Class frmMain
       Me.StatusBarNotificationsArea1.MaximumSize = New System.Drawing.Size(0, 22)
       Me.StatusBarNotificationsArea1.MinimumSize = New System.Drawing.Size(0, 22)
       Me.StatusBarNotificationsArea1.Name = "StatusBarNotificationsArea1"
-      Me.StatusBarNotificationsArea1.Size = New System.Drawing.Size(841, 22)
+      Me.StatusBarNotificationsArea1.Size = New System.Drawing.Size(476, 22)
       Me.StatusBarNotificationsArea1.TabIndex = 1
       Me.StatusBarNotificationsArea1.Text = "Prova 2"
       '
@@ -5068,7 +5068,7 @@ Friend Class frmMain
       Me.StatusBarControlsArea1.Controls.Add(Me.StatusBarPane6)
       Me.StatusBarControlsArea1.Controls.Add(Me.StatusBarPane2)
       Me.StatusBarControlsArea1.Dock = System.Windows.Forms.DockStyle.Right
-      Me.StatusBarControlsArea1.Location = New System.Drawing.Point(841, 0)
+      Me.StatusBarControlsArea1.Location = New System.Drawing.Point(476, 0)
       Me.StatusBarControlsArea1.MaximumSize = New System.Drawing.Size(0, 22)
       Me.StatusBarControlsArea1.MinimumSize = New System.Drawing.Size(0, 22)
       Me.StatusBarControlsArea1.Name = "StatusBarControlsArea1"
@@ -5208,8 +5208,8 @@ Friend Class frmMain
       Me.eui_cmdData.Id = "1885e60f-1bbc-49cd-baca-bb73905d713a"
       Me.eui_cmdData.Location = New System.Drawing.Point(19, 2)
       Me.eui_cmdData.Name = "eui_cmdData"
-      Me.eui_cmdData.ScreenTip.Caption = "Data di sistema"
-      Me.eui_cmdData.ScreenTip.Text = "Data odierna di gestione"
+      Me.eui_cmdData.ScreenTip.Caption = "Data odierna di gestione"
+      Me.eui_cmdData.ScreenTip.Text = "Data"
       Me.eui_cmdData.Size = New System.Drawing.Size(29, 19)
       Me.eui_cmdData.TabIndex = 0
       Me.eui_cmdData.Text = "Data"
@@ -5332,7 +5332,7 @@ Friend Class frmMain
       '
       Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
       Me.BackColor = System.Drawing.Color.White
-      Me.ClientSize = New System.Drawing.Size(1380, 758)
+      Me.ClientSize = New System.Drawing.Size(1015, 638)
       Me.Controls.Add(Me.eui_BackstageView1)
       Me.Controls.Add(Me.eui_File)
       Me.Controls.Add(Me.eui_sbrMain)
@@ -5346,6 +5346,14 @@ Friend Class frmMain
       CType(Me.picProg, System.ComponentModel.ISupportInitialize).EndInit()
       CType(Me.eui_File, System.ComponentModel.ISupportInitialize).EndInit()
       CType(Me.eui_BackstageView1, System.ComponentModel.ISupportInitialize).EndInit()
+      Me.eui_Info.ResumeLayout(False)
+      Me.eui_Info.PerformLayout()
+      CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
+      CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
+      CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
+      CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
+      CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
+      Me.eui_GestioneModuli.ResumeLayout(False)
       Me.eui_Guida.ResumeLayout(False)
       Me.BackstageViewPage1.ResumeLayout(False)
       Me.BackstageViewPage1.PerformLayout()
@@ -5358,14 +5366,6 @@ Friend Class frmMain
       CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
       CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
       CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
-      Me.eui_Info.ResumeLayout(False)
-      Me.eui_Info.PerformLayout()
-      CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
-      CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
-      CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
-      CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
-      CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
-      Me.eui_GestioneModuli.ResumeLayout(False)
       CType(Me.eui_StrumentiModifica, System.ComponentModel.ISupportInitialize).EndInit()
       Me.eui_StrumentiModifica.ResumeLayout(False)
       Me.eui_StrumentiModifica.PerformLayout()
@@ -9836,7 +9836,8 @@ Friend Class frmMain
    Private Sub Timer1_Tick(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Timer1.Tick
       Try
          ' Visualizza la data estesa sulla barra di stato.
-         g_frmMain.eui_cmdData.Text = Now.Date.ToLongDateString
+         eui_cmdData.Text = Now.Date.ToShortDateString
+         eui_cmdData.ScreenTip.Text = Now.Date.ToLongDateString
 
       Catch ex As Exception
          ' Visualizza un messaggio di errore e lo registra nell'apposito file.
